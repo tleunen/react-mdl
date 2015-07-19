@@ -1,0 +1,28 @@
+{
+  "name": "react-mdl",
+  "version": "0.0.0",
+  "description": "React Components for the Material Design Lite UI framework",
+  "main": "index.js",
+  "repository": "tleunen/react-mdl",
+  "keywords": [
+    "react",
+    "react-component",
+    "mdl",
+    "material-design",
+    "checkbox",
+    "table",
+    "data-table"
+  ],
+  "author": {
+    "name": "Tommy Leunen",
+    "email": "tommy.leunen@gmail.com",
+    "url": "http://tommyleunen.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.1.3"
+  },
+  "peerDependencies": {
+    "react": ">=0.13"
+  }
+}
