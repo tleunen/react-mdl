@@ -1,4 +1,5 @@
 module.exports = {
-    MDLCheckbox: require('./lib/MDLCheckbox'),
-    MDLTable: require('./lib/MDLTable')
+    Checkbox: require('./lib/Checkbox'),
+    DataTable: require('./lib/DataTable'),
+    FABButton: require('./lib/FABButton')
 };

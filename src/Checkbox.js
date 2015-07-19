@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class MDLCheckbox extends React.Component {
+class Checkbox extends React.Component {
     constructor(props) {
         super(props);
 
@@ -48,7 +48,7 @@ class MDLCheckbox extends React.Component {
     }
 }
 
-MDLCheckbox.propTypes = {
+Checkbox.propTypes = {
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     id: PropTypes.string,
@@ -56,4 +56,4 @@ MDLCheckbox.propTypes = {
     onChange: PropTypes.func.isRequired
 };
 
-export default MDLCheckbox;
+export default Checkbox;

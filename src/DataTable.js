@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import MDLCheckbox from './MDLCheckbox';
+import Checkbox from './Checkbox';
 
-class MDLTable extends React.Component {
+class DataTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,7 +58,7 @@ class MDLTable extends React.Component {
         if(isSelectable) {
             headers.unshift(
                 <th key="header_selectable">
-                    <MDLCheckbox id='select_all' checked={this.state.allRowsSelected} onChange={this._handleSelectAll} />
+                    <Checkbox id='select_all' checked={this.state.allRowsSelected} onChange={this._handleSelectAll} />
                 </th>
             );
         }
@@ -67,7 +67,7 @@ class MDLTable extends React.Component {
             var isSelected = isSelectable && this.state.checkedRows[i] ? 'is-selected' : '';
             return (
                 <tr key={i} className={isSelected}>
-                    {isSelectable ? <td><MDLCheckbox id={'select_'+i} checked={this.state.checkedRows[i]} onChange={this._handleSelect(i)} /></td> : null}
+                    {isSelectable ? <td><Checkbox id={'select_'+i} checked={this.state.checkedRows[i]} onChange={this._handleSelect(i)} /></td> : null}
                     {e.map((a, j) => {
                         var className = !this.props.headers[j].numeric ? 'mdl-data-table__cell--non-numeric' : '';
                         return <td key={j} className={className}>{a}</td>;
@@ -91,7 +91,7 @@ class MDLTable extends React.Component {
     }
 }
 
-MDLTable.propTypes = {
+DataTable.propTypes = {
     content: PropTypes.arrayOf(
         PropTypes.array
     ).isRequired,
@@ -104,4 +104,4 @@ MDLTable.propTypes = {
     selectable: PropTypes.bool
 };
 
-export default MDLTable;
+export default DataTable;
