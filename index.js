@@ -1,4 +1,4 @@
 module.exports = {
-    MDLCheckbox: require('./MDLCheckbox'),
-    MDLTable: require('./MDLTable')
+    MDLCheckbox: require('./lib/MDLCheckbox'),
+    MDLTable: require('./lib/MDLTable')
 };
