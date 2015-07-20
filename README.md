@@ -11,4 +11,26 @@ Here are the list of components in this repo:
 - [FABButton](/src/FABButton.js)
 - [Textfield](/src/Textfield.js)
 
-Feel free to submit PRs with others components or fixes. I'm building them while I develop another project so it depends on my needs. Currently, these components doesn't have the ripple effect.
+## How to use the components
+
+### import the entire library
+```
+import ReactMDL from 'react-mdl';
+
+var Button = ReactMDL.Button;
+var Card = ReactMDL.Card
+
+// or
+import { Button, Card } from 'react-mdl';
+```
+
+### import a specific component
+```
+import Button from 'react-mdl/lib/Button';
+import Card from 'react-mdl/lib/Card';
+```
+
+
+#### Notes
+
+These components doesn't have the ripple effect, yet.
