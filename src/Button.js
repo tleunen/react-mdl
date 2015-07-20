@@ -19,7 +19,7 @@ class Button extends React.Component {
             'mdl-button--primary': this.props.primary,
             'mdl-button--accent': this.props.accent,
             'mdl-button--icon': !!this.props.icon
-        });
+        }, this.props.className);
 
         var icon = this.props.icon;
 
@@ -41,6 +41,7 @@ class Button extends React.Component {
 
 Button.propTypes = {
     accent: PropTypes.bool,
+    className: PropTypes.string,
     colored: PropTypes.bool,
     disabled: PropTypes.bool,
     icon: PropTypes.string,

@@ -1,33 +1,20 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import Button from './Button';
 
-class FABButton extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this._handleBlur = this._handleBlur.bind(this);
-    }
-
-    _handleBlur(e) {
-        React.findDOMNode(this.refs.button).blur();
-    }
-
+class FABButton extends Button {
     render() {
-        var classes = classNames('mdl-button', 'mdl-button--fab', {
-            'mdl-button--colored': this.props.colored,
+        var classes = classNames('mdl-button--fab', {
             'mdl-button--mini-fab': this.props.mini
         });
 
         return (
-            <button
-                ref="button"
+            <Button
                 className={classes}
+                icon={this.props.icon}
+                colored={this.props.colored}
                 disabled={this.props.disabled}
-                onMouseUp={this._handleBlur}
-                onMouseLeave={this._handleBlur}
-            >
-              <i className="material-icons">{this.props.icon}</i>
-            </button>
+            />
         );
     }
 }
