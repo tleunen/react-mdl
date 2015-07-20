@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 class FABButton extends React.Component {
-
     constructor(props) {
         super(props);
 
