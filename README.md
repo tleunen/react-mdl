@@ -9,5 +9,6 @@ Here are the list of components in this repo:
 - [Checkbox](/src/Checkbox.js)
 - [DataTable](/src/DataTable.js)
 - [FABButton](/src/FABButton.js)
+- [Textfield](/src/Textfield.js)
 
 Feel free to submit PRs with others components or fixes. I'm building them while I develop another project so it depends on my needs. Currently, these components doesn't have the ripple effect.

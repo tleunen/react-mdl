@@ -11,7 +11,10 @@
     "material-design",
     "checkbox",
     "table",
-    "data-table"
+    "data-table",
+    "button",
+    "card",
+    "textfield"
   ],
   "author": {
     "name": "Tommy Leunen",
