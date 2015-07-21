@@ -8,7 +8,7 @@ class Button extends React.Component {
         this._handleBlur = this._handleBlur.bind(this);
     }
 
-    _handleBlur(e) {
+    _handleBlur() {
         React.findDOMNode(this.refs.button).blur();
     }
 
@@ -20,8 +20,6 @@ class Button extends React.Component {
             'mdl-button--accent': this.props.accent,
             'mdl-button--icon': !!this.props.icon
         }, this.props.className);
-
-        var icon = this.props.icon;
 
         return (
             <button
@@ -45,7 +43,7 @@ Button.propTypes = {
     colored: PropTypes.bool,
     disabled: PropTypes.bool,
     icon: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     primary: PropTypes.bool,
     raised: PropTypes.bool
 };

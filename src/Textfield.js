@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import ObjectAssign from 'object-assign';
+import objectAssign from 'object-assign';
 
 class Textfield extends React.Component {
     constructor(props) {
@@ -35,8 +35,8 @@ class Textfield extends React.Component {
         });
     }
 
-    _handleKeyDown(e) {
-        if(!!this.props.maxRows) {
+    _handleKeyDown() {
+        if(this.props.maxRows) {
             var currentRowCount = event.target.value.split('\n').length;
             if(event.keyCode === 13) {
                 if(currentRowCount >= this.props.maxRows) {
@@ -49,8 +49,7 @@ class Textfield extends React.Component {
     _getField(id) {
         var type = this.props.type || 'text';
         var hasRows = !!this.props.rows;
-        var rows = this.props.rows || 1;
-        if(rows < 1) rows = 1;
+        var rows = Math.abs(this.props.rows) || 1;
 
         var genericProps = {
             key: 'input',
@@ -65,12 +64,12 @@ class Textfield extends React.Component {
         };
 
         return (hasRows || this.props.maxRows > 1) ? (
-            React.createElement('textarea', ObjectAssign(genericProps, {
+            React.createElement('textarea', objectAssign(genericProps, {
                 rows: rows,
                 onKeyDown: this._handleKeyDown
             }))
         ) : (
-            React.createElement('input', ObjectAssign(genericProps, {
+            React.createElement('input', objectAssign(genericProps, {
                 type: type
             }, this.props.pattern ? {
                 pattern: this.props.pattern

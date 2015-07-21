@@ -12,7 +12,7 @@ var shadows = [
 
 class Card extends React.Component {
     render() {
-        var shadowLevel = clamp(this.props.shadowLevel || 0, 0, shadows.length-1);
+        var shadowLevel = clamp(this.props.shadowLevel || 0, 0, shadows.length - 1);
         var expandTitle = !!this.props.expandTitle;
 
         var cardClasses = classNames('mdl-card', shadows[shadowLevel]);

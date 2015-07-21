@@ -6,7 +6,7 @@ class DataTable extends React.Component {
         super(props);
         this.state = {
             allRowsSelected: false,
-            checkedRows: this.props.content.map(e => {
+            checkedRows: this.props.content.map(() => {
                 return false;
             })
         };
@@ -14,17 +14,17 @@ class DataTable extends React.Component {
         this._handleSelectAll = this._handleSelectAll.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(/*nextProps*/) {
         this.setState({
             allRowsSelected: false,
-            checkedRows: this.props.content.map(e => {
+            checkedRows: this.props.content.map(() => {
                 return false;
             })
         });
     }
 
     _handleSelectAll(checked) {
-        var checkedRows = this.state.checkedRows.map(e => {
+        var checkedRows = this.state.checkedRows.map(() => {
             return checked;
         });
 
@@ -67,7 +67,7 @@ class DataTable extends React.Component {
             var isSelected = isSelectable && this.state.checkedRows[i] ? 'is-selected' : '';
             return (
                 <tr key={i} className={isSelected}>
-                    {isSelectable ? <td><Checkbox id={'select_'+i} checked={this.state.checkedRows[i]} onChange={this._handleSelect(i)} /></td> : null}
+                    {isSelectable ? <td><Checkbox id={'select_' + i} checked={this.state.checkedRows[i]} onChange={this._handleSelect(i)} /></td> : null}
                     {e.map((a, j) => {
                         var className = !this.props.headers[j].numeric ? 'mdl-data-table__cell--non-numeric' : '';
                         return <td key={j} className={className}>{a}</td>;
