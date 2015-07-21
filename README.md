@@ -11,6 +11,13 @@ Here are the list of components in this repo:
 - [FABButton](/src/FABButton.js)
 - [Textfield](/src/Textfield.js)
 
+## Requirements
+The `CSS` and fonts from MDL are required.
+```
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+```
+
 ## How to use the components
 
 ### import the entire library
