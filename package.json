@@ -1,6 +1,6 @@
 {
   "name": "react-mdl",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Components for the Material Design Lite UI framework",
   "main": "index.js",
   "repository": "tleunen/react-mdl",
