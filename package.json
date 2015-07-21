@@ -14,7 +14,8 @@
     "data-table",
     "button",
     "card",
-    "textfield"
+    "textfield",
+    "icon"
   ],
   "author": {
     "name": "Tommy Leunen",
