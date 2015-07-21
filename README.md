@@ -9,6 +9,7 @@ Here are the list of components in this repo:
 - [Checkbox](/src/Checkbox.js)
 - [DataTable](/src/DataTable.js)
 - [FABButton](/src/FABButton.js)
+- [IconButton](/src/IconButton.js)
 - [Textfield](/src/Textfield.js)
 
 ## Requirements

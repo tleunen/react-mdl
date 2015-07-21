@@ -1,16 +1,11 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import Button from './Button';
 
-class FABButton extends React.Component {
+class IconButton extends React.Component {
     render() {
-        var classes = classNames('mdl-button--fab', {
-            'mdl-button--mini-fab': this.props.mini
-        });
-
         return (
             <Button
-                className={classes}
+                className="mdl-button--icon"
                 icon={this.props.icon}
                 colored={this.props.colored}
                 disabled={this.props.disabled}
@@ -19,11 +14,10 @@ class FABButton extends React.Component {
     }
 }
 
-FABButton.propTypes = {
+IconButton.propTypes = {
     colored: PropTypes.bool,
     disabled: PropTypes.bool,
-    icon: PropTypes.string.isRequired,
-    mini: PropTypes.bool
+    icon: PropTypes.string.isRequired
 };
 
-export default FABButton;
+export default IconButton;
