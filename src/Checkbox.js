@@ -1,11 +1,25 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
+import MaterialCheckbox from 'material-design-lite/lib/checkbox/checkbox';
+import RippleEffect from 'material-design-lite/lib/ripple/ripple';
+componentHandler.register(MaterialCheckbox);
+componentHandler.register(RippleEffect);
+
 class Checkbox extends React.Component {
     constructor(props) {
         super(props);
 
         this._handleChange = this._handleChange.bind(this);
+    }
+
+    componentDidMount(){
+        componentHandler.upgradeElement(React.findDOMNode(this));
+    }
+
+    componentWillUnmount(){
+        componentHandler.downgradeElements(React.findDOMNode(this));
     }
 
     _handleChange(event) {
@@ -15,23 +29,8 @@ class Checkbox extends React.Component {
     render() {
         var id = 'checkbox-' + (this.props.label || this.props.id).replace(/\s+/g, '');
 
-        var tickContainer = <span className="mdl-checkbox__focus-helper" />;
-        var boxOutline = (
-            <span className="mdl-checkbox__box-outline">
-                <span className="mdl-checkbox__tick-outline" />
-            </span>
-        );
-
-        var checked = !!this.props.checked;
-        var disabled = !!this.props.disabled;
-
-        var elementClasses = classNames('mdl-checkbox', 'is-upgraded', {
-            'is-disabled': disabled,
-            'is-checked': checked
-        });
-
         return (
-            <label className={elementClasses} htmlFor={id}>
+            <label className="mdl-checkbox mdl-js-checkbox" htmlFor={id}>
                 <input
                     type="checkbox"
                     id={id}
@@ -41,8 +40,6 @@ class Checkbox extends React.Component {
                     onChange={this._handleChange}
                 />
                 {this.props.label ? <span className="mdl-checkbox__label">{this.props.label}</span> : null}
-                {tickContainer}
-                {boxOutline}
             </label>
         );
     }

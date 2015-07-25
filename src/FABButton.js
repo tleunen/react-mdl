@@ -4,24 +4,20 @@ import Button from './Button';
 
 class FABButton extends React.Component {
     render() {
+        var { mini, className, ...otherProps } = this.props;
+
         var classes = classNames('mdl-button--fab', {
-            'mdl-button--mini-fab': this.props.mini
-        });
+            'mdl-button--mini-fab': mini
+        }, className);
 
         return (
-            <Button
-                className={classes}
-                icon={this.props.icon}
-                colored={this.props.colored}
-                disabled={this.props.disabled}
-            />
+            <Button className={classes} {...otherProps} />
         );
     }
 }
 
 FABButton.propTypes = {
-    colored: PropTypes.bool,
-    disabled: PropTypes.bool,
+    className: PropTypes.string,
     icon: PropTypes.string.isRequired,
     mini: PropTypes.bool
 };

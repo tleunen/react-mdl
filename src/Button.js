@@ -1,37 +1,42 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Button extends React.Component {
-    constructor(props) {
-        super(props);
+import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
+import MaterialButton from 'material-design-lite/lib/button/button';
+import RippleEffect from 'material-design-lite/lib/ripple/ripple';
+componentHandler.register(MaterialButton);
+componentHandler.register(RippleEffect);
 
-        this._handleBlur = this._handleBlur.bind(this);
+class Button extends React.Component {
+    componentDidMount(){
+        componentHandler.upgradeElement(React.findDOMNode(this));
     }
 
-    _handleBlur() {
-        React.findDOMNode(this.refs.button).blur();
+    componentWillUnmount(){
+        componentHandler.downgradeElements(React.findDOMNode(this));
     }
 
     render() {
-        var buttonClasses = classNames('mdl-button', {
-            'mdl-button--raised': this.props.raised,
-            'mdl-button--colored': this.props.colored,
-            'mdl-button--primary': this.props.primary,
-            'mdl-button--accent': this.props.accent,
-            'mdl-button--icon': !!this.props.icon
-        }, this.props.className);
+        var { accent, className, colored, icon,
+            primary, raised, ripple, ...otherProps } = this.props;
+
+        // enable ripple by default
+        ripple = ripple !== false;
+
+        var buttonClasses = classNames('mdl-button mdl-js-button', {
+            'mdl-js-ripple-effect': ripple,
+            'mdl-button--raised': raised,
+            'mdl-button--colored': colored,
+            'mdl-button--primary': primary,
+            'mdl-button--accent': accent,
+            'mdl-button--icon': !!icon
+        }, className);
 
         return (
-            <button
-                ref="button"
-                className={buttonClasses}
-                disabled={this.props.disabled}
-                onMouseUp={this._handleBlur}
-                onMouseLeave={this._handleBlur}
-            >
-                {this.props.icon ? (
-                    <i className="material-icons">{this.props.icon}</i>
-                ) : this.props.label }
+            <button className={buttonClasses} {...otherProps}>
+                { icon ? (
+                    <i className="material-icons">{icon}</i>
+                ) : this.props.children }
             </button>
         );
     }
@@ -41,11 +46,10 @@ Button.propTypes = {
     accent: PropTypes.bool,
     className: PropTypes.string,
     colored: PropTypes.bool,
-    disabled: PropTypes.bool,
     icon: PropTypes.string,
-    label: PropTypes.string,
     primary: PropTypes.bool,
-    raised: PropTypes.bool
+    raised: PropTypes.bool,
+    ripple: PropTypes.bool
 };
 
 export default Button;

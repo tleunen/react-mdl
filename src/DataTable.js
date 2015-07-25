@@ -1,73 +1,31 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
+
+import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
+import MaterialDataTable from 'material-design-lite/lib/data-table/data-table';
+componentHandler.register(MaterialDataTable);
 import Checkbox from './Checkbox';
 
 class DataTable extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            allRowsSelected: false,
-            checkedRows: this.props.content.map(() => {
-                return false;
-            })
-        };
-
-        this._handleSelectAll = this._handleSelectAll.bind(this);
+    componentDidMount(){
+        componentHandler.upgradeElement(React.findDOMNode(this));
     }
 
-    componentWillReceiveProps(/*nextProps*/) {
-        this.setState({
-            allRowsSelected: false,
-            checkedRows: this.props.content.map(() => {
-                return false;
-            })
-        });
-    }
-
-    _handleSelectAll(checked) {
-        var checkedRows = this.state.checkedRows.map(() => {
-            return checked;
-        });
-
-        this.setState({
-            allRowsSelected: checked,
-            checkedRows: checkedRows
-        });
-    }
-
-    _handleSelect(idx) {
-        return (checked) => {
-            var checkedRows = this.state.checkedRows;
-            checkedRows[idx] = checked;
-            var allSelected = checkedRows.every(e => e);
-
-            this.setState({
-                allRowsSelected: allSelected,
-                checkedRows: checkedRows
-            });
-        };
+    componentWillUnmount(){
+        componentHandler.downgradeElements(React.findDOMNode(this));
     }
 
     render() {
-        var isSelectable = !!this.props.selectable;
+        var isSelectable = this.props.selectable;
 
         var headers = this.props.headers.map((e, i) => {
             var className = !e.numeric ? 'mdl-data-table__cell--non-numeric' : '';
             return <th key={i} className={className}>{e.label}</th>;
         });
 
-        if(isSelectable) {
-            headers.unshift(
-                <th key="header_selectable">
-                    <Checkbox id='select_all' checked={this.state.allRowsSelected} onChange={this._handleSelectAll} />
-                </th>
-            );
-        }
-
         var content = this.props.content.map((e, i) => {
-            var isSelected = isSelectable && this.state.checkedRows[i] ? 'is-selected' : '';
             return (
-                <tr key={i} className={isSelected}>
-                    {isSelectable ? <td><Checkbox id={'select_' + i} checked={this.state.checkedRows[i]} onChange={this._handleSelect(i)} /></td> : null}
+                <tr key={i}>
                     {e.map((a, j) => {
                         var className = !this.props.headers[j].numeric ? 'mdl-data-table__cell--non-numeric' : '';
                         return <td key={j} className={className}>{a}</td>;
@@ -76,8 +34,12 @@ class DataTable extends React.Component {
             );
         });
 
+        var classes = classNames('mdl-data-table mdl-js-data-table', {
+            'mdl-data-table--selectable': isSelectable
+        });
+
         return (
-            <table className="mdl-data-table">
+            <table className={classes}>
                 <thead>
                     <tr>
                         {headers}
