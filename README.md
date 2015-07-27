@@ -4,6 +4,7 @@ React-MDL is a set of React components build on top of the [Material Design Lite
 
 Here are the list of components in this repo:
 
+- [Badge](/src/Badge.js)
 - [Button](/src/Button.js)
 - [Card](/src/Card.js)
 - [Checkbox](/src/Checkbox.js)
