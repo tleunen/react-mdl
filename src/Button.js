@@ -11,7 +11,7 @@ class Button extends React.Component {
     }
 
     render() {
-        var { accent, className, colored, icon,
+        var { accent, className, colored,
             primary, raised, ripple, ...otherProps } = this.props;
 
         // enable ripple by default
@@ -22,15 +22,12 @@ class Button extends React.Component {
             'mdl-button--raised': raised,
             'mdl-button--colored': colored,
             'mdl-button--primary': primary,
-            'mdl-button--accent': accent,
-            'mdl-button--icon': !!icon
+            'mdl-button--accent': accent
         }, className);
 
         return (
             <button className={buttonClasses} {...otherProps}>
-                { icon ? (
-                    <i className="material-icons">{icon}</i>
-                ) : this.props.children }
+                {this.props.children}
             </button>
         );
     }
@@ -40,7 +37,6 @@ Button.propTypes = {
     accent: PropTypes.bool,
     className: PropTypes.string,
     colored: PropTypes.bool,
-    icon: PropTypes.string,
     primary: PropTypes.bool,
     raised: PropTypes.bool,
     ripple: PropTypes.bool

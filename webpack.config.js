@@ -2,7 +2,8 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        badge: './demo/badge/badge.js'
+        badge: './demo/badge/badge.js',
+        button: './demo/button/button.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

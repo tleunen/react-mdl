@@ -11,14 +11,13 @@ class FABButton extends React.Component {
         }, className);
 
         return (
-            <Button className={classes} {...otherProps} />
+            <Button className={classes} {...otherProps}>{this.props.children}</Button>
         );
     }
 }
 
 FABButton.propTypes = {
     className: PropTypes.string,
-    icon: PropTypes.string.isRequired,
     mini: PropTypes.bool
 };
 
