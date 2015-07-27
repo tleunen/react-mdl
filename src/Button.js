@@ -1,12 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
-import MaterialButton from 'material-design-lite/lib/button/button';
-import RippleEffect from 'material-design-lite/lib/ripple/ripple';
-componentHandler.register(MaterialButton);
-componentHandler.register(RippleEffect);
-
 class Button extends React.Component {
     componentDidMount(){
         componentHandler.upgradeElement(React.findDOMNode(this));

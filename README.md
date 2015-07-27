@@ -11,12 +11,16 @@ Here are the list of components in this repo:
 - [FABButton](/src/FABButton.js)
 - [Icon](/src/Icon.js)
 - [IconButton](/src/IconButton.js)
+- [Radio](/src/Radio.js)
+- [RadioGroup](/src/RadioGroup.js)
+- [Switch](/src/Switch.js)
 - [Textfield](/src/Textfield.js)
 
 ## Requirements
-The `CSS` and fonts from MDL are required.
+You have to include the CSS, JS and the Material Icons in your project in order to use `react-mdl`.
 ```
-<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
@@ -38,8 +42,3 @@ import { Button, Card } from 'react-mdl';
 import Button from 'react-mdl/lib/Button';
 import Card from 'react-mdl/lib/Card';
 ```
-
-
-#### Notes
-
-These components doesn't have the ripple effect, yet.

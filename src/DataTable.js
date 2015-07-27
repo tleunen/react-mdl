@@ -1,11 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
-import MaterialDataTable from 'material-design-lite/lib/data-table/data-table';
-componentHandler.register(MaterialDataTable);
-import Checkbox from './Checkbox';
-
 class DataTable extends React.Component {
     componentDidMount(){
         componentHandler.upgradeElement(React.findDOMNode(this));

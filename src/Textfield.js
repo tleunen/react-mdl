@@ -2,10 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import objectAssign from 'object-assign';
 
-import componentHandler from 'material-design-lite/lib/mdlComponentHandler';
-import MaterialTextfield from 'material-design-lite/lib/textfield/textfield';
-componentHandler.register(MaterialTextfield);
-
 class Textfield extends React.Component {
     constructor(props) {
         super(props);
@@ -105,7 +101,10 @@ Textfield.propTypes = {
     pattern: PropTypes.string,
     rows: PropTypes.number,
     type: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ])
 };
 
 export default Textfield;

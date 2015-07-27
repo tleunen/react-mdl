@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
-class Checkbox extends React.Component {
+class Switch extends React.Component {
     constructor(props) {
         super(props);
 
@@ -20,32 +21,39 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        var { checked, disabled, id, label } = this.props;
+        var { checked, className, disabled, id, ripple } = this.props;
+        var inputId = 'switch-' + id;
 
-        var inputId = 'checkbox-' + (label || id).replace(/\s+/g, '');
+        // enable ripple by default
+        ripple = ripple !== false;
+
+        var classes = classNames('mdl-switch mdl-js-switch', {
+            'mdl-js-ripple-effect': ripple
+        }, className);
 
         return (
-            <label className="mdl-checkbox mdl-js-checkbox" htmlFor={id}>
+            <label className={classes} htmlFor={inputId}>
                 <input
                     type="checkbox"
                     id={inputId}
-                    className='mdl-checkbox__input'
+                    className="mdl-switch__input"
                     checked={checked}
                     disabled={disabled}
                     onChange={this._handleChange}
                 />
-                {this.props.label ? <span className="mdl-checkbox__label">{label}</span> : null}
+                <span className="mdl-switch__label">{this.props.children}</span>
             </label>
         );
     }
 }
 
-Checkbox.propTypes = {
+Switch.propTypes = {
     checked: PropTypes.bool,
+    className: PropTypes.string,
     disabled: PropTypes.bool,
-    id: PropTypes.string,
-    label: PropTypes.string,
-    onChange: PropTypes.func.isRequired
+    id: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    ripple: PropTypes.bool
 };
 
-export default Checkbox;
+export default Switch;

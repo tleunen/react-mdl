@@ -47,5 +47,8 @@
     },
     "plugins": [
         "react"
-    ]
+    ],
+    "globals": {
+        "componentHandler": true
+    }
 }
