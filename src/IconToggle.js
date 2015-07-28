@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import Icon from './Icon';
 
-class Radio extends React.Component {
+class IconToggle extends React.Component {
     constructor(props) {
         super(props);
 
@@ -17,49 +18,44 @@ class Radio extends React.Component {
     }
 
     _handleChange(event) {
-        this.props.onChange(event.target.value);
+        this.props.onChange(event.target.checked);
     }
 
     render() {
-        var { checked, className, disabled, name, ripple, value } = this.props;
-        var inputId = 'radio-' + name.replace(/\s+/g, '') + '-' + value.replace(/\s+/g, '');
+        var { className, checked, disabled, id, name, ripple, ...otherProps } = this.props;
+        var inputId = 'icon-toggle-' + id;
 
         // enable ripple by default
         ripple = ripple !== false;
 
-        var classes = classNames('mdl-radio mdl-js-radio', {
+        var classes = classNames('mdl-icon-toggle mdl-js-icon-toggle', {
             'mdl-js-ripple-effect': ripple
         }, className);
 
         return (
             <label className={classes} htmlFor={inputId}>
                 <input
-                    type="radio"
+                    type="checkbox"
                     id={inputId}
-                    className="mdl-radio__button"
-                    name={name}
-                    value={value}
+                    className="mdl-icon-toggle__input"
                     checked={checked}
                     disabled={disabled}
                     onChange={this._handleChange}
                 />
-                <span className="mdl-radio__label">{this.props.children}</span>
+                <Icon className="mdl-icon-toggle__label" name={name} />
             </label>
         );
     }
 }
 
-Radio.propTypes = {
+IconToggle.propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    ripple: PropTypes.bool,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]).isRequired
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    ripple: PropTypes.bool
 };
 
-export default Radio;
+export default IconToggle;

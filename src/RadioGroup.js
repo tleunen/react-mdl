@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Radio from './Radio';
 
 class RadioGroup extends React.Component {
     constructor(props) {
@@ -27,6 +28,12 @@ class RadioGroup extends React.Component {
 }
 
 RadioGroup.propTypes = {
+    children: PropTypes.arrayOf(function(props, propName, componentName) {
+        var prop = props[propName];
+        if(prop.type !== Radio) {
+            return new Error('`' + componentName + '` only accepts `Radio` as children.');
+        }
+    }),
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     value: PropTypes.oneOfType([

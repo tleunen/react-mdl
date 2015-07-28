@@ -4,7 +4,8 @@ module.exports = {
     entry: {
         badge: './demo/badge/badge.js',
         button: './demo/button/button.js',
-        card: './demo/card/card.js'
+        card: './demo/card/card.js',
+        toggle: './demo/toggle/toggle.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),
