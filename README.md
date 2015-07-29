@@ -23,7 +23,7 @@ Here are the list of components in this repo:
 - [x] [Radio](/src/Radio.js)
 - [x] [RadioGroup](/src/RadioGroup.js)
 - [ ] Slider
-- [ ] Spinner
+- [x] [Spinner](/src/Spinner.js)
 - [x] [Switch](/src/Switch.js)
 - [x] [Textfield](/src/Textfield.js)
 - [ ] Tooltip

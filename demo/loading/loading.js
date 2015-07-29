@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressBar from '../../src/ProgressBar';
+import Spinner from '../../src/Spinner';
 
 class Demo extends React.Component {
     render() {
@@ -13,6 +14,12 @@ class Demo extends React.Component {
 
                 <p>MDL Progress Bar with Buffering</p>
                 <ProgressBar progress={33} buffer={87} />
+
+                <p>MDL Spinner Component</p>
+                <Spinner />
+
+                <p>MDL Spinner Component with Single Color</p>
+                <Spinner singleColor={true} />
             </div>
         );
     }
