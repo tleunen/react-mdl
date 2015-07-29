@@ -13,8 +13,6 @@ function linkToState(target, property) {
     };
 }
 
-
-
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -28,6 +26,7 @@ class Demo extends React.Component {
             switch2: false
         };
     }
+
     render() {
         return (
             <div>

@@ -20,69 +20,54 @@ class Textfield extends React.Component {
         this.props.onChange(e.target.value);
     }
 
-    _getField(id) {
-        var type = this.props.type || 'text';
-        var hasRows = !!this.props.rows;
-        var rows = Math.abs(this.props.rows) || 1;
-
-        var genericProps = {
-            key: 'input',
-            ref: 'input',
-            className: 'mdl-textfield__input',
-            id: id,
-            value: this.props.value,
-            disabled: this.props.disabled,
-            onChange: this._handleChange
-        };
-
-        return (hasRows || this.props.maxRows > 1) ? (
-            React.createElement('textarea', objectAssign(genericProps, {
-                rows: rows
-            }))
-        ) : (
-            React.createElement('input', objectAssign(genericProps, {
-                type: type
-            }, this.props.pattern ? {
-                pattern: this.props.pattern
-            } : null))
-        );
-    }
-
-    _getFullField(id) {
-        return [
-            this._getField(id),
-            <label key="label" className="mdl-textfield__label" htmlFor={id}>{this.props.label}</label>,
-            this.props.error ? (
-                <span key="error" className="mdl-textfield__error">{this.props.error}</span>
-            ) : null
-        ];
-    }
-
     render() {
-        var id = 'textfield-' + this.props.label.replace(/\s+/g, '');
-        var isExpandable = this.props.expandable;
-        var elemClasses = classNames('mdl-textfield mdl-js-textfield', {
-            'mdl-textfield--floating-label': this.props.floatingLabel,
-            'mdl-textfield--expandable': isExpandable
+        var { className, disabled, error, expandable, expandableIcon,
+              floatingLabel, label, maxRows, onChange, pattern, rows,
+              type, value, ...otherProps } = this.props;
+
+        var hasRows = !!rows;
+        var inputId = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
+        var inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
+
+        var input = React.createElement(inputTag, {
+            className: 'mdl-textfield__input',
+            id: inputId,
+            value: value,
+            disabled: disabled,
+            onChange: this._handleChange,
+            rows: rows,
+            type: type,
+            pattern: pattern
         });
 
-        var labelExpandable;
+        var inputAndLabelError = [
+            input,
+            <label key="label" className="mdl-textfield__label" htmlFor={inputId}>{label}</label>,
+            error ? (
+                <span key="error" className="mdl-textfield__error">{error}</span>
+            ) : null
+        ];
+
+        var classes = classNames('mdl-textfield mdl-js-textfield', {
+            'mdl-textfield--floating-label': floatingLabel,
+            'mdl-textfield--expandable': expandable
+        }, className);
+
         var field;
-        if(isExpandable) {
-            labelExpandable = (
-                <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor={id}>
-                    <i className="material-icons">{this.props.expandableIcon}</i>
-                </label>
-            );
-            field = React.createElement('div', {className: 'mdl-textfield__expandable-holder'}, this._getFullField(id));
+        if(expandable) {
+            field = React.createElement('div', {className: 'mdl-textfield__expandable-holder'}, inputAndLabelError);
         }
         else {
-            field = this._getFullField(id);
+            field = inputAndLabelError;
         }
 
         return (
-            <div className={elemClasses}>
-                {labelExpandable}
+            <div className={classes} {...otherProps}>
+                {expandable ? (
+                    <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor={inputId}>
+                        <i className="material-icons">{expandableIcon}</i>
+                    </label>
+                ) : null}
                 {field}
             </div>
         );
@@ -90,6 +75,7 @@ class Textfield extends React.Component {
 }
 
 Textfield.propTypes = {
+    className: PropTypes.string,
     disabled: PropTypes.bool,
     error: PropTypes.string,
     expandable: PropTypes.bool,
