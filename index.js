@@ -8,6 +8,7 @@ module.exports = {
     Icon: require('./lib/Icon'),
     IconButton: require('./lib/IconButton'),
     IconToggle: require('./lib/IconToggle'),
+    ProgressBar: require('./lib/ProgressBar'),
     Radio: require('./lib/Radio'),
     RadioGroup: require('./lib/RadioGroup'),
     Switch: require('./lib/Switch'),

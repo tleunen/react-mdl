@@ -21,7 +21,9 @@
     "radio",
     "radio-group",
     "switch",
-    "textfield"
+    "textfield",
+    "progress",
+    "progress-bar"
   ],
   "author": {
     "name": "Tommy Leunen",
