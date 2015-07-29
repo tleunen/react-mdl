@@ -4,18 +4,29 @@ React-MDL is a set of React components build on top of the [Material Design Lite
 
 Here are the list of components in this repo:
 
-- [Badge](/src/Badge.js)
-- [Button](/src/Button.js)
-- [Card](/src/Card.js)
-- [Checkbox](/src/Checkbox.js)
-- [DataTable](/src/DataTable.js)
-- [FABButton](/src/FABButton.js)
-- [Icon](/src/Icon.js)
-- [IconButton](/src/IconButton.js)
-- [Radio](/src/Radio.js)
-- [RadioGroup](/src/RadioGroup.js)
-- [Switch](/src/Switch.js)
-- [Textfield](/src/Textfield.js)
+- [x] [Badge](/src/Badge.js)
+- [x] [Button](/src/Button.js)
+- [x] [Card](/src/Card.js)
+- [x] [Checkbox](/src/Checkbox.js)
+- [x] [DataTable](/src/DataTable.js)
+- [x] [FABButton](/src/FABButton.js)
+- [x] [Icon](/src/Icon.js)
+- [x] [IconButton](/src/IconButton.js)
+- [x] [IconToggle](/src/IconToggle.js)
+- Layout
+    - [ ] Footer
+    - [ ] Grid
+    - [ ] Navigation Layout
+    - [ ] Tabs
+- [ ] Menu
+- [ ] ProgressBar
+- [x] [Radio](/src/Radio.js)
+- [x] [RadioGroup](/src/RadioGroup.js)
+- [ ] Slider
+- [ ] Spinner
+- [x] [Switch](/src/Switch.js)
+- [x] [Textfield](/src/Textfield.js)
+- [ ] Tooltip
 
 ## Requirements
 You have to include the CSS, JS and the Material Icons in your project in order to use `react-mdl`.
