@@ -20,8 +20,8 @@ Here are the list of components in this repo:
 ## Requirements
 You have to include the CSS, JS and the Material Icons in your project in order to use `react-mdl`.
 ```
-<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
