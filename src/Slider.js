@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Spinner extends React.Component {
+class Slider extends React.Component {
     componentDidMount(){
         componentHandler.upgradeElement(React.findDOMNode(this));
     }
@@ -34,7 +34,7 @@ class Spinner extends React.Component {
     }
 }
 
-Spinner.propTypes = {
+Slider.propTypes = {
     className: PropTypes.string,
     max: PropTypes.number.isRequired,
     min: PropTypes.number.isRequired,
@@ -42,4 +42,4 @@ Spinner.propTypes = {
     value: PropTypes.number
 };
 
-export default Spinner;
+export default Slider;
