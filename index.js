@@ -14,5 +14,6 @@ module.exports = {
     Slider: require('./lib/Slider'),
     Spinner: require('./lib/Spinner'),
     Switch: require('./lib/Switch'),
-    Textfield: require('./lib/Textfield')
+    Textfield: require('./lib/Textfield'),
+    Tooltip: require('./lib/Tooltip')
 };

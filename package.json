@@ -25,7 +25,8 @@
     "progress",
     "progress-bar",
     "spinner",
-    "slider"
+    "slider",
+    "tooltip"
   ],
   "author": {
     "name": "Tommy Leunen",

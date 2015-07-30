@@ -9,7 +9,8 @@ module.exports = {
         datatable: './demo/datatable/datatable.js',
         textfield: './demo/textfield/textfield.js',
         loading: './demo/loading/loading.js',
-        slider: './demo/slider/slider.js'
+        slider: './demo/slider/slider.js',
+        tooltip: './demo/tooltip/tooltip.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

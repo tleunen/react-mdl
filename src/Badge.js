@@ -5,7 +5,7 @@ class Badge extends React.Component {
         var { children } = this.props;
         var element;
         if(typeof children === 'string') {
-            element = <span>{children}</span>
+            element = <span>{children}</span>;
         }
         else {
             element = React.Children.only(this.props.children);

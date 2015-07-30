@@ -26,7 +26,7 @@ Here are the list of components in this repo:
 - [x] [Spinner](/src/Spinner.js)
 - [x] [Switch](/src/Switch.js)
 - [x] [Textfield](/src/Textfield.js)
-- [ ] Tooltip
+- [x] [Tooltip](/src/Tooltip.js)
 
 ## Requirements
 You have to include the CSS, JS and the Material Icons in your project in order to use `react-mdl`.
