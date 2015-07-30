@@ -10,13 +10,6 @@ class Tooltip extends React.Component {
         componentHandler.downgradeElements(React.findDOMNode(this));
     }
 
-    _getElem(elem) {
-        if(typeof elem === 'string') {
-            elem = <span>{elem}</span>;
-        }
-        return elem;
-    }
-
     render() {
         var { label, large, children, ...otherProps } = this.props;
         var id = Math.random().toString(36).substr(2);
