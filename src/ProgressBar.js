@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 class ProgressBar extends React.Component {
-
     componentDidMount(){
         componentHandler.upgradeElement(React.findDOMNode(this));
         this.setProgress(this.props.progress);

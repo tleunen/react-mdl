@@ -8,7 +8,8 @@ module.exports = {
         toggle: './demo/toggle/toggle.js',
         datatable: './demo/datatable/datatable.js',
         textfield: './demo/textfield/textfield.js',
-        loading: './demo/loading/loading.js'
+        loading: './demo/loading/loading.js',
+        slider: './demo/slider/slider.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

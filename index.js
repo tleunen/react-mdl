@@ -11,6 +11,7 @@ module.exports = {
     ProgressBar: require('./lib/ProgressBar'),
     Radio: require('./lib/Radio'),
     RadioGroup: require('./lib/RadioGroup'),
+    Slider: require('./lib/Slider'),
     Spinner: require('./lib/Spinner'),
     Switch: require('./lib/Switch'),
     Textfield: require('./lib/Textfield')

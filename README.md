@@ -22,7 +22,7 @@ Here are the list of components in this repo:
 - [x] [ProgressBar](/src/ProgressBar.js)
 - [x] [Radio](/src/Radio.js)
 - [x] [RadioGroup](/src/RadioGroup.js)
-- [ ] Slider
+- [x] [Slider](/src/Slider.js)
 - [x] [Spinner](/src/Spinner.js)
 - [x] [Switch](/src/Switch.js)
 - [x] [Textfield](/src/Textfield.js)

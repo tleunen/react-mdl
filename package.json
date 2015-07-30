@@ -24,7 +24,8 @@
     "textfield",
     "progress",
     "progress-bar",
-    "spinner"
+    "spinner",
+    "slider"
   ],
   "author": {
     "name": "Tommy Leunen",

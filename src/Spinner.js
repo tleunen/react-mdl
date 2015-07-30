@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 class Spinner extends React.Component {
-
     componentDidMount(){
         componentHandler.upgradeElement(React.findDOMNode(this));
     }
