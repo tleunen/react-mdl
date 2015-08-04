@@ -10,7 +10,8 @@ module.exports = {
         textfield: './demo/textfield/textfield.js',
         loading: './demo/loading/loading.js',
         slider: './demo/slider/slider.js',
-        tooltip: './demo/tooltip/tooltip.js'
+        tooltip: './demo/tooltip/tooltip.js',
+        menu: './demo/menu/menu.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

@@ -18,7 +18,7 @@ Here are the list of components in this repo:
     - [ ] Grid
     - [ ] Navigation Layout
     - [ ] Tabs
-- [ ] Menu
+- [x] [Menu](/src/Menu.js)
 - [x] [ProgressBar](/src/ProgressBar.js)
 - [x] [Radio](/src/Radio.js)
 - [x] [RadioGroup](/src/RadioGroup.js)
