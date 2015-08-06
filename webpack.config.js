@@ -11,7 +11,8 @@ module.exports = {
         loading: './demo/loading/loading.js',
         slider: './demo/slider/slider.js',
         tooltip: './demo/tooltip/tooltip.js',
-        menu: './demo/menu/menu.js'
+        menu: './demo/menu/menu.js',
+        layout: './demo/layout/layout.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

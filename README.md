@@ -16,7 +16,7 @@ Here are the list of components in this repo:
 - Layout
     - [ ] Footer
     - [ ] Grid
-    - [ ] Navigation Layout
+    - [x] [Navigation Layout](/src/Layout.js) in progress
     - [ ] Tabs
 - [x] [Menu](/src/Menu.js)
 - [x] [ProgressBar](/src/ProgressBar.js)

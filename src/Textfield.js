@@ -42,7 +42,9 @@ class Textfield extends React.Component {
 
         var inputAndLabelError = [
             input,
-            <label key="label" className="mdl-textfield__label" htmlFor={inputId}>{label}</label>,
+            !expandable ? (
+                <label key="label" className="mdl-textfield__label" htmlFor={inputId}>{label}</label>
+            ) : null,
             error ? (
                 <span key="error" className="mdl-textfield__error">{error}</span>
             ) : null
