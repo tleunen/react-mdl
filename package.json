@@ -28,7 +28,10 @@
     "slider",
     "tooltip",
     "menu",
-    "dropdown"
+    "dropdown",
+    "Layout",
+    "Drawer",
+    "Grid"
   ],
   "author": {
     "name": "Tommy Leunen",

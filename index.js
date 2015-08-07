@@ -5,6 +5,7 @@ module.exports = {
     Checkbox: require('./lib/Checkbox'),
     DataTable: require('./lib/DataTable'),
     FABButton: require('./lib/FABButton'),
+    Grid: require('./lib/Grid'),
     Icon: require('./lib/Icon'),
     IconButton: require('./lib/IconButton'),
     IconToggle: require('./lib/IconToggle'),

@@ -12,7 +12,8 @@ module.exports = {
         slider: './demo/slider/slider.js',
         tooltip: './demo/tooltip/tooltip.js',
         menu: './demo/menu/menu.js',
-        layout: './demo/layout/layout.js'
+        layout: './demo/layout/layout.js',
+        grid: './demo/grid/grid.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

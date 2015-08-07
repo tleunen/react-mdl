@@ -15,7 +15,7 @@ Here are the list of components in this repo:
 - [x] [IconToggle](/src/IconToggle.js)
 - Layout
     - [ ] Footer
-    - [ ] Grid
+    - [x] [Grid](/src/Grid.js)
     - [x] [Navigation Layout](/src/Layout.js) in progress
     - [ ] Tabs
 - [x] [Menu](/src/Menu.js)
