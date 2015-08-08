@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Button extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
+    static propTypes = {
+        accent: PropTypes.bool,
+        className: PropTypes.string,
+        colored: PropTypes.bool,
+        primary: PropTypes.bool,
+        raised: PropTypes.bool,
+        ripple: PropTypes.bool
     }
 
     render() {
@@ -33,13 +35,4 @@ class Button extends React.Component {
     }
 }
 
-Button.propTypes = {
-    accent: PropTypes.bool,
-    className: PropTypes.string,
-    colored: PropTypes.bool,
-    primary: PropTypes.bool,
-    raised: PropTypes.bool,
-    ripple: PropTypes.bool
-};
-
-export default Button;
+export default mdlUpgrade(Button);

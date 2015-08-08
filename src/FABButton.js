@@ -3,6 +3,11 @@ import classNames from 'classnames';
 import Button from './Button';
 
 class FABButton extends React.Component {
+    static propTypes = {
+        className: PropTypes.string,
+        mini: PropTypes.bool
+    }
+
     render() {
         var { mini, className, ...otherProps } = this.props;
 
@@ -15,10 +20,5 @@ class FABButton extends React.Component {
         );
     }
 }
-
-FABButton.propTypes = {
-    className: PropTypes.string,
-    mini: PropTypes.bool
-};
 
 export default FABButton;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer, { Section, DropDownSection, LinkList } from '../../src/Footer';
+import Footer, { Section, DropDownSection, LinkList } from '../../src/footer/Footer';
 
 class Demo extends React.Component {
     render() {

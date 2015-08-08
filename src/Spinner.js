@@ -1,13 +1,11 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Spinner extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
+    static propTypes = {
+        className: PropTypes.string,
+        singleColor: PropTypes.bool
     }
 
     render() {
@@ -21,9 +19,4 @@ class Spinner extends React.Component {
     }
 }
 
-Spinner.propTypes = {
-    className: PropTypes.string,
-    singleColor: PropTypes.bool
-};
-
-export default Spinner;
+export default mdlUpgrade(Spinner);

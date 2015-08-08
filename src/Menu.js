@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
+import basicClassCreator from './utils/BasicClassCreator';
 
 class Menu extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
+    static propTypes = {
+        align: PropTypes.oneOf(['left', 'right']),
+        className: PropTypes.string,
+        ripple: PropTypes.bool,
+        target: PropTypes.string.isRequired,
+        valign: PropTypes.oneOf(['bottom', 'top'])
     }
 
     render() {
@@ -31,31 +33,5 @@ class Menu extends React.Component {
     }
 }
 
-Menu.propTypes = {
-    align: PropTypes.oneOf(['left', 'right']),
-    className: PropTypes.string,
-    ripple: PropTypes.bool,
-    target: PropTypes.string.isRequired,
-    valign: PropTypes.oneOf(['bottom', 'top'])
-};
-
-export default Menu;
-
-
-export class MenuItem extends React.Component {
-    render() {
-        var { className, ...otherProps } = this.props;
-
-        var classes = classNames('mdl-menu__item', className);
-
-        return (
-            <li className={classes} {...otherProps}>
-                {this.props.children}
-            </li>
-        );
-    }
-}
-
-MenuItem.propTypes = {
-    className: PropTypes.string
-};
+export default mdlUpgrade(Menu);
+export var MenuItem = basicClassCreator('mdl-menu__item', 'li');

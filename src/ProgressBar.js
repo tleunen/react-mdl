@@ -2,7 +2,15 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 class ProgressBar extends React.Component {
+    static propTypes = {
+        buffer: PropTypes.number,
+        className: PropTypes.string,
+        indeterminate: PropTypes.bool,
+        progress: PropTypes.number
+    }
+
     componentDidMount(){
+        // Can't use the mdlUpgrade component because we need access to the Material internal object
         componentHandler.upgradeElement(React.findDOMNode(this));
         this.setProgress(this.props.progress);
         this.setBuffer(this.props.buffer);
@@ -39,12 +47,5 @@ class ProgressBar extends React.Component {
         return <div className={classes} {...otherProps}></div>;
     }
 }
-
-ProgressBar.propTypes = {
-    buffer: PropTypes.number,
-    className: PropTypes.string,
-    indeterminate: PropTypes.bool,
-    progress: PropTypes.number
-};
 
 export default ProgressBar;

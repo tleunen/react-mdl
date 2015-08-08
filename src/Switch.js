@@ -1,22 +1,18 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Switch extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this._handleChange = this._handleChange.bind(this);
+    static propTypes = {
+        checked: PropTypes.bool,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        id: PropTypes.string.isRequired,
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
     }
 
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(event) {
+    _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }
 
@@ -47,13 +43,4 @@ class Switch extends React.Component {
     }
 }
 
-Switch.propTypes = {
-    checked: PropTypes.bool,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    id: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    ripple: PropTypes.bool
-};
-
-export default Switch;
+export default mdlUpgrade(Switch);

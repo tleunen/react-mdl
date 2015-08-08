@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs, { Tab } from '../../src/Tabs';
+import Tabs, { Tab } from '../../src/tabs/Tabs';
 
 class Demo extends React.Component {
     constructor(props) {

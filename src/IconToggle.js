@@ -1,23 +1,20 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Icon from './Icon';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class IconToggle extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this._handleChange = this._handleChange.bind(this);
+    static propTypes = {
+        checked: PropTypes.bool,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
     }
 
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(event) {
+    _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }
 
@@ -48,14 +45,4 @@ class IconToggle extends React.Component {
     }
 }
 
-IconToggle.propTypes = {
-    checked: PropTypes.bool,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    ripple: PropTypes.bool
-};
-
-export default IconToggle;
+export default mdlUpgrade(IconToggle);

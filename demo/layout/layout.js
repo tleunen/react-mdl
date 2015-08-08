@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout, { Header, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/Layout';
+import Layout, { Header, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/layout/Layout';
 import Textfield from '../../src/Textfield';
 
 class Demo extends React.Component {

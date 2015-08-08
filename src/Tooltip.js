@@ -1,13 +1,18 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Tooltip extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
+    static propTypes = {
+        children: PropTypes.oneOfType([
+            PropTypes.element,
+            PropTypes.string
+        ]).isRequired,
+        label: PropTypes.oneOfType([
+            PropTypes.element,
+            PropTypes.string
+        ]).isRequired,
+        large: PropTypes.bool
     }
 
     render() {
@@ -40,16 +45,4 @@ class Tooltip extends React.Component {
     }
 }
 
-Tooltip.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]).isRequired,
-    label: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]).isRequired,
-    large: PropTypes.bool
-};
-
-export default Tooltip;
+export default mdlUpgrade(Tooltip);

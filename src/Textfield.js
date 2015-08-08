@@ -1,21 +1,28 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Textfield extends React.Component {
-    constructor(props) {
-        super(props);
-        this._handleChange = this._handleChange.bind(this);
+    static propTypes = {
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        error: PropTypes.string,
+        expandable: PropTypes.bool,
+        expandableIcon: PropTypes.string,
+        floatingLabel: PropTypes.bool,
+        label: PropTypes.string.isRequired,
+        maxRows: PropTypes.number,
+        onChange: PropTypes.func.isRequired,
+        pattern: PropTypes.string,
+        rows: PropTypes.number,
+        type: PropTypes.string,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ])
     }
 
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(e) {
+    _handleChange = (e) => {
         this.props.onChange(e.target.value);
     }
 
@@ -76,23 +83,4 @@ class Textfield extends React.Component {
     }
 }
 
-Textfield.propTypes = {
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    error: PropTypes.string,
-    expandable: PropTypes.bool,
-    expandableIcon: PropTypes.string,
-    floatingLabel: PropTypes.bool,
-    label: PropTypes.string.isRequired,
-    maxRows: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
-    pattern: PropTypes.string,
-    rows: PropTypes.number,
-    type: PropTypes.string,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ])
-};
-
-export default Textfield;
+export default mdlUpgrade(Textfield);

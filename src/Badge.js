@@ -1,6 +1,14 @@
 import React, { PropTypes } from 'react';
 
 class Badge extends React.Component {
+    static propTypes = {
+        children: PropTypes.oneOfType([
+            PropTypes.element,
+            PropTypes.string
+        ]).isRequired,
+        text: PropTypes.string.isRequired
+    }
+
     render() {
         var { children } = this.props;
         var element;
@@ -17,13 +25,5 @@ class Badge extends React.Component {
         });
     }
 }
-
-Badge.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]).isRequired,
-    text: PropTypes.string.isRequired
-};
 
 export default Badge;

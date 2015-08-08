@@ -1,21 +1,16 @@
 import React, { PropTypes } from 'react';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Checkbox extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this._handleChange = this._handleChange.bind(this);
+    static propTypes = {
+        checked: PropTypes.bool,
+        disabled: PropTypes.bool,
+        id: PropTypes.string,
+        label: PropTypes.string,
+        onChange: PropTypes.func.isRequired
     }
 
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(event) {
+    _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }
 
@@ -40,12 +35,4 @@ class Checkbox extends React.Component {
     }
 }
 
-Checkbox.propTypes = {
-    checked: PropTypes.bool,
-    disabled: PropTypes.bool,
-    id: PropTypes.string,
-    label: PropTypes.string,
-    onChange: PropTypes.func.isRequired
-};
-
-export default Checkbox;
+export default mdlUpgrade(Checkbox);

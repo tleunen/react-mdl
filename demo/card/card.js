@@ -1,5 +1,5 @@
 import React from 'react';
-import Card, { CardTitle, CardText, CardActions, CardMenu } from '../../src/Card';
+import Card, { CardTitle, CardText, CardActions, CardMenu } from '../../src/card/Card';
 import Button from '../../src/Button';
 import IconButton from '../../src/IconButton';
 import Icon from '../../src/Icon';

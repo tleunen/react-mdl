@@ -1,17 +1,18 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Slider extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
+    static propTypes = {
+        className: PropTypes.string,
+        max: PropTypes.number.isRequired,
+        min: PropTypes.number.isRequired,
+        onChange: PropTypes.func.isRequired,
+        value: PropTypes.number
     }
 
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(event) {
-        this.props.onChange(event.target.value);
+    _handleChange = (event) => {
+        this.props.onChange(parseFloat(event.target.value));
     }
 
     render() {
@@ -34,12 +35,4 @@ class Slider extends React.Component {
     }
 }
 
-Slider.propTypes = {
-    className: PropTypes.string,
-    max: PropTypes.number.isRequired,
-    min: PropTypes.number.isRequired,
-    onChange: PropTypes.func.isRequired,
-    value: PropTypes.number
-};
-
-export default Slider;
+export default mdlUpgrade(Slider);

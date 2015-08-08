@@ -1,13 +1,21 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class DataTable extends React.Component {
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
+    static propTypes = {
+        className: PropTypes.string,
+        columns: PropTypes.arrayOf(
+            PropTypes.shape({
+                label: PropTypes.string,
+                name: PropTypes.string,
+                numeric: PropTypes.bool
+            })
+        ).isRequired,
+        data: PropTypes.arrayOf(
+            PropTypes.object
+        ).isRequired,
+        selectable: PropTypes.bool
     }
 
     _getCellClass(column) {
@@ -46,19 +54,4 @@ class DataTable extends React.Component {
     }
 }
 
-DataTable.propTypes = {
-    className: PropTypes.string,
-    columns: PropTypes.arrayOf(
-        PropTypes.shape({
-            label: PropTypes.string,
-            name: PropTypes.string,
-            numeric: PropTypes.bool
-        })
-    ).isRequired,
-    data: PropTypes.arrayOf(
-        PropTypes.object
-    ).isRequired,
-    selectable: PropTypes.bool
-};
-
-export default DataTable;
+export default mdlUpgrade(DataTable);

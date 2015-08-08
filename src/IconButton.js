@@ -4,6 +4,11 @@ import Button from './Button';
 import Icon from './Icon';
 
 class IconButton extends React.Component {
+    static propTypes = {
+        className: PropTypes.string,
+        name: PropTypes.string.isRequired
+    }
+
     render() {
         var { className, name, ...otherProps } = this.props;
 
@@ -16,10 +21,5 @@ class IconButton extends React.Component {
         );
     }
 }
-
-IconButton.propTypes = {
-    className: PropTypes.string,
-    name: PropTypes.string.isRequired
-};
 
 export default IconButton;

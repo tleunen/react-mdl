@@ -1,22 +1,22 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class Radio extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this._handleChange = this._handleChange.bind(this);
+    static propTypes = {
+        checked: PropTypes.bool,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        name: PropTypes.string,
+        onChange: PropTypes.func,
+        ripple: PropTypes.bool,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ]).isRequired
     }
 
-    componentDidMount(){
-        componentHandler.upgradeElement(React.findDOMNode(this));
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
-    }
-
-    _handleChange(event) {
+    _handleChange = (event) => {
         this.props.onChange(event.target.value);
     }
 
@@ -49,17 +49,4 @@ class Radio extends React.Component {
     }
 }
 
-Radio.propTypes = {
-    checked: PropTypes.bool,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    ripple: PropTypes.bool,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]).isRequired
-};
-
-export default Radio;
+export default mdlUpgrade(Radio);

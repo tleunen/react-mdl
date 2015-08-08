@@ -1,16 +1,16 @@
 module.exports = {
     Badge: require('./lib/Badge'),
     Button: require('./lib/Button'),
-    Card: require('./lib/Card'),
+    Card: require('./lib/card/Card'),
     Checkbox: require('./lib/Checkbox'),
     DataTable: require('./lib/DataTable'),
     FABButton: require('./lib/FABButton'),
-    Footer: require('./lib/Footer'),
+    Footer: require('./lib/footer/Footer'),
     Grid: require('./lib/Grid'),
     Icon: require('./lib/Icon'),
     IconButton: require('./lib/IconButton'),
     IconToggle: require('./lib/IconToggle'),
-    Layout: require('./lib/Layout'),
+    Layout: require('./lib/layout/Layout'),
     Menu: require('./lib/Menu'),
     ProgressBar: require('./lib/ProgressBar'),
     Radio: require('./lib/Radio'),
@@ -18,7 +18,7 @@ module.exports = {
     Slider: require('./lib/Slider'),
     Spinner: require('./lib/Spinner'),
     Switch: require('./lib/Switch'),
-    Tabs: require('./lib/Tabs'),
+    Tabs: require('./lib/tabs/Tabs'),
     Textfield: require('./lib/Textfield'),
     Tooltip: require('./lib/Tooltip')
 };

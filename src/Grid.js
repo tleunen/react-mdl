@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 export default class Grid extends React.Component {
+    static propTypes = {
+        className: PropTypes.string
+    }
+
     render() {
         var { className, ...otherProps } = this.props;
 
@@ -15,11 +19,14 @@ export default class Grid extends React.Component {
     }
 }
 
-Grid.propTypes = {
-    className: PropTypes.string
-};
+class Cell extends React.Component {
+    static propTypes = {
+        className: PropTypes.string,
+        col: PropTypes.number.isRequired,
+        phone: PropTypes.number,
+        tablet: PropTypes.number
+    }
 
-export class Cell extends React.Component {
     render() {
         var { className, col, phone, tablet, ...otherProps } = this.props;
 
@@ -37,9 +44,5 @@ export class Cell extends React.Component {
     }
 }
 
-Cell.propTypes = {
-    className: PropTypes.string,
-    col: PropTypes.number.isRequired,
-    phone: PropTypes.number,
-    tablet: PropTypes.number
-};
+export default Grid;
+export { Cell };
