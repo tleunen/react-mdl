@@ -13,8 +13,8 @@ Here are the list of components in this repo:
 - [x] [Icon](/src/Icon.js)
 - [x] [IconButton](/src/IconButton.js)
 - [x] [IconToggle](/src/IconToggle.js)
-- Layout
-    - [ ] Footer
+- [x] Layout
+    - [x] [Footer](/src/Footer.js)
     - [x] [Grid](/src/Grid.js)
     - [x] [Navigation Layout](/src/Layout.js) in progress
     - [x] [Tabs](/src/Tabs.js)

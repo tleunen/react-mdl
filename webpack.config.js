@@ -14,7 +14,8 @@ module.exports = {
         menu: './demo/menu/menu.js',
         layout: './demo/layout/layout.js',
         grid: './demo/grid/grid.js',
-        tabs: './demo/tabs/tabs.js'
+        tabs: './demo/tabs/tabs.js',
+        footer: './demo/footer/footer.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),
