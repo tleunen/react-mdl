@@ -13,7 +13,8 @@ module.exports = {
         tooltip: './demo/tooltip/tooltip.js',
         menu: './demo/menu/menu.js',
         layout: './demo/layout/layout.js',
-        grid: './demo/grid/grid.js'
+        grid: './demo/grid/grid.js',
+        tabs: './demo/tabs/tabs.js'
     },
     output: {
         path: path.join(__dirname, 'demo'),

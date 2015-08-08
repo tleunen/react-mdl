@@ -31,7 +31,8 @@
     "dropdown",
     "Layout",
     "Drawer",
-    "Grid"
+    "Grid",
+    "Tabs"
   ],
   "author": {
     "name": "Tommy Leunen",
