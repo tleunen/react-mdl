@@ -68,7 +68,7 @@ class Demo extends React.Component {
                     value={this.state.textfield5}
                     onChange={linkToState(this, 'textfield5')}
                     label="Text lines..."
-                    rows="3"
+                    rows={3}
                     style={{width: '200px'}}
                 />
 

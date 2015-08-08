@@ -31,6 +31,7 @@ class Textfield extends React.Component {
         var input = React.createElement(inputTag, {
             className: 'mdl-textfield__input',
             id: inputId,
+            key: inputId,
             value: value,
             disabled: disabled,
             onChange: this._handleChange,
