@@ -21,13 +21,13 @@ class Demo extends React.Component {
         switch(this.state.activeTab) {
             case 1:
                 list.push('Tywin', 'Cersei', 'Jamie', 'Tyrion');
-            break;
+                break;
             case 2:
                 list.push('Viserys', 'Daenerys');
-            break;
+                break;
             default:
                 list.push('Eddard', 'Catelyn', 'Robb', 'Sansa', 'Brandon', 'Arya', 'Rickon');
-            break;
+                break;
         }
 
         return (

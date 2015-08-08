@@ -13,7 +13,7 @@
         "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
         "camelcase": [2, {"properties": "never"}],
         "comma-style": [2, "last"],
-        "indent": 2,
+        "indent": [2, 4, {"SwitchCase": 1}],
         "no-underscore-dangle": 0,
         "quotes": [2, "single", "avoid-escape"],
         "semi": [2, "always"],
