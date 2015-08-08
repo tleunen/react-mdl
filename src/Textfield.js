@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import objectAssign from 'object-assign';
 
 class Textfield extends React.Component {
     constructor(props) {
