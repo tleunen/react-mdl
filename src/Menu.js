@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
-import basicClassCreator from './utils/BasicClassCreator';
+import basicClassCreator from './utils/basicClassCreator';
 
 class Menu extends React.Component {
     static propTypes = {

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
-import basicClassCreator from '../utils/BasicClassCreator';
+import basicClassCreator from '../utils/basicClassCreator';
 
 var shadows = [
     'mdl-shadow--2dp',
