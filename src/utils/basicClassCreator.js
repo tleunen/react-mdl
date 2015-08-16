@@ -6,8 +6,6 @@ export default function(defaultClassName, element = 'div') {
         render() {
             var { className, ...otherProps } = this.props;
 
-            var classes = classNames(defaultClassName, className);
-
             return React.createElement(element, {
                 className: classNames(defaultClassName, className),
                 ...otherProps
@@ -20,4 +18,4 @@ export default function(defaultClassName, element = 'div') {
     };
 
     return BasicClass;
-};
+}
