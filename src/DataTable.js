@@ -33,17 +33,17 @@ class DataTable extends React.Component {
             <table className={classes} {...otherProps}>
                 <thead>
                     <tr>
-                        {columns.map((column, i) => {
-                            return <th key={i} className={this._getCellClass(column)}>{column.label}</th>;
+                        {columns.map((column) => {
+                            return <th key={column.name} className={this._getCellClass(column)}>{column.label}</th>;
                         })}
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((e, i) => {
                         return (
-                            <tr key={i}>
-                                {columns.map((column, j) => {
-                                    return <td key={j} className={this._getCellClass(column)}>{e[column.name]}</td>;
+                            <tr key={e.key ? e.key : i}>
+                                {columns.map((column) => {
+                                    return <td key={column.name} className={this._getCellClass(column)}>{e[column.name]}</td>;
                                 })}
                             </tr>
                         );

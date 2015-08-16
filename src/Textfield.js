@@ -7,6 +7,7 @@ class Textfield extends React.Component {
         className: PropTypes.string,
         containerClassName: PropTypes.string,
         containerStyle: PropTypes.string,
+        disabled: PropTypes.bool,
         error: PropTypes.string,
         expandable: PropTypes.bool,
         expandableIcon: PropTypes.string,
@@ -14,11 +15,25 @@ class Textfield extends React.Component {
         label: PropTypes.string.isRequired,
         maxRows: PropTypes.number,
         onChange: PropTypes.func.isRequired,
+        pattern: PropTypes.string,
+        required: PropTypes.bool,
         rows: PropTypes.number,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number
         ])
+    }
+
+    componentDidUpdate(prevProps) {
+        if(
+            this.props.required !== prevProps.required ||
+            this.props.pattern !== prevProps.pattern
+        ) {
+            React.findDOMNode(this).MaterialTextfield.checkValidity();
+        }
+        if(this.props.disabled !== prevProps.disabled) {
+            React.findDOMNode(this).MaterialTextfield.checkDisabled();
+        }
     }
 
     _handleChange = (e) => {
