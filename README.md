@@ -1,12 +1,14 @@
 # React-MDL
 
-React-MDL is a set of React components build on top of [Material Design Lite](https://github.com/google/material-design-lite). It's based on their version 1.0.2.
+React-MDL is a set of React components build on top of [Material Design Lite](https://github.com/google/material-design-lite). It's based on their version 1.0.4.
 
 ## Requirements
-You have to include the CSS, JS and the Material Icons in your project in order to use `react-mdl`.
+Because of an issue with the original Layout component from MDL that makes it incompatible with React (a fix is already submitted and should land in MDL 2.0), you can't use the original .js and .css files. Instead, I provide you the files with my the fix. ([Read this for more information on the issue](https://github.com/google/material-design-lite/issues/1356)).
+
+The files are available in this repository inside the `/demo/`: [material.css](/demo/material.css) and [material.js](/demo/material.js)
 ```
-<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+<link rel="stylesheet" href="material.css">
+<script src="material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
@@ -20,13 +22,13 @@ var Button = ReactMDL.Button;
 var Card = ReactMDL.Card
 
 // or
-import { Button, Card } from 'react-mdl';
+import { Button, Card, CardText } from 'react-mdl';
 ```
 
 ### import a specific component
 ```
 import Button from 'react-mdl/lib/Button';
-import Card from 'react-mdl/lib/Card';
+import Card, { CardText, CardActions } from 'react-mdl/lib/card/Card';
 ```
 
 ## How to run the demos
