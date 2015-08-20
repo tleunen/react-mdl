@@ -3,6 +3,7 @@ var Footer = require('./lib/footer/Footer');
 var Layout = require('./lib/layout/Layout');
 var Grid = require('./lib/Grid');
 var Menu = require('./lib/Menu');
+var Tabs = require('./lib/tabs/Tabs');
 
 module.exports = {
     Badge: require('./lib/Badge'),
@@ -38,8 +39,8 @@ module.exports = {
     Slider: require('./lib/Slider'),
     Spinner: require('./lib/Spinner'),
     Switch: require('./lib/Switch'),
-    Tab: require('./lib/tabs/Tab'),
-    Tabs: require('./lib/tabs/Tabs'),
+    Tab: Tabs.Tab,
+    Tabs: Tabs.default,
     Textfield: require('./lib/Textfield'),
     Tooltip: require('./lib/Tooltip')
 };

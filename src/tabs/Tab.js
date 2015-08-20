@@ -6,6 +6,7 @@ class Tab extends React.Component {
         active: PropTypes.bool,
         className: PropTypes.string,
         onTabClick: PropTypes.func,
+        style: PropTypes.object,
         tabId: PropTypes.number
     }
 
@@ -14,13 +15,16 @@ class Tab extends React.Component {
     }
 
     render() {
-        var { active, className, tabId, onTabClick, ...otherProps } = this.props;
+        var { active, className, tabId, onTabClick, style, ...otherProps } = this.props;
 
         var classes = classNames('mdl-tabs__tab', {
             'is-active': active
         }, className);
 
-        return <a className={classes} onClick={this._handleClick} {...otherProps}>{this.props.children}</a>;
+        style = style || {};
+        style.cursor = 'pointer';
+
+        return <a className={classes} onClick={this._handleClick} style={style} {...otherProps}>{this.props.children}</a>;
     }
 }
 
