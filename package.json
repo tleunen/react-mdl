@@ -56,6 +56,6 @@
   "scripts": {
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
-    "demo": "webpack-dev-server --content-base demo/"
+    "demo": "webpack-dev-server --content-base ."
   }
 }
