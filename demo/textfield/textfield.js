@@ -60,7 +60,6 @@ class Demo extends React.Component {
                     error="Input is not a number!"
                     label="Number..."
                     floatingLabel={true}
-                    style={{width: '200px'}}
                 />
 
                 <p>Floating Multiline Textfield</p>
@@ -79,7 +78,6 @@ class Demo extends React.Component {
                     label="Expandable Input"
                     expandable={true}
                     expandableIcon="search"
-                    style={{width: '200px'}}
                 />
 
 
