@@ -5,7 +5,7 @@ React-MDL is a set of React components build on top of [Material Design Lite](ht
 ## Requirements
 Because of an issue with the original Layout component from MDL that makes it incompatible with React (a fix is already submitted and should land in MDL 2.0), you can't use the original .js and .css files. Instead, I provide you the files with my the fix. ([Read this for more information on the issue](https://github.com/google/material-design-lite/issues/1356)).
 
-The files are available in this repository inside the `/demo/`: [material.css](/demo/material.css) and [material.js](/demo/material.js)
+The files are available in this repository inside the `/extra/` folder: [material.css](/extra/material.css) and [material.js](/extra/material.js)
 ```
 <link rel="stylesheet" href="material.css">
 <script src="material.js"></script>
