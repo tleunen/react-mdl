@@ -1,22 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import Navigation from './Navigation';
 
 class HeaderRow extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         title: PropTypes.string
-    }
-
-    _renderNav() {
-        var hasChildren = React.Children.count(this.props.children);
-        if(!hasChildren) return;
-
-        return (
-            <Navigation>
-                {this.props.children}
-            </Navigation>
-        );
     }
 
     render() {
@@ -28,7 +16,7 @@ class HeaderRow extends React.Component {
             <div className={classes} {...otherProps}>
                 {title ? <span className="mdl-layout-title">{title}</span> : null}
                 <div className="mdl-layout-spacer"></div>
-                {this._renderNav()}
+                {this.props.children}
             </div>
         );
     }
