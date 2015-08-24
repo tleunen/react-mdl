@@ -72,7 +72,13 @@
     "react-addons-test-utils": "^0.14.2",
     "react-dom": "^0.14.2",
     "webpack": "^1.12.6",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.6",
+    "open": "0.0.5",
+    "react-router": "^1.0.0-beta3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
   },
   "peerDependencies": {
     "react": "0.14.x",

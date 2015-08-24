@@ -11,6 +11,7 @@
         "react/prop-types": [2, { ignore: ["children"] }]
     },
     "globals": {
-        "componentHandler": true
+        "componentHandler": true,
+        "Prism": true
     }
 }
