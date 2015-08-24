@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
-import Spacer from './Spacer.js';
+import Spacer from './Spacer';
 
 class Navigation extends React.Component {
     render() {
