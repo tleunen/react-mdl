@@ -33,5 +33,5 @@ export Header from './Header';
 export Drawer from './Drawer';
 export HeaderRow from './HeaderRow';
 export HeaderTabs from './HeaderTabs';
-export Spacer from './Spacer.js';
+export var Spacer = basicClassCreator('mdl-layout-spacer');
 export var Content = basicClassCreator('mdl-layout__content', 'main');
