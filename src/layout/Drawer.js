@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import Navigation from './Navigation';
 
 class Drawer extends React.Component {
     static propTypes = {
@@ -16,9 +15,7 @@ class Drawer extends React.Component {
         return (
             <div className={classes} {...otherProps}>
                 {title ? <span className="mdl-layout-title">{title}</span> : null}
-                <Navigation>
-                    {this.props.children}
-                </Navigation>
+                {this.props.children}
             </div>
         );
     }
