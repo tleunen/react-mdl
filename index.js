@@ -30,11 +30,7 @@ module.exports = {
     Drawer: Layout.Drawer,
     HeaderRow: Layout.HeaderRow,
     HeaderTabs: Layout.HeaderTabs,
-<<<<<<< HEAD
-=======
-    Navigation: Layout.Navigation,
     Spacer: Layout.Spacer,
->>>>>>> 2e5be7d... Add Spacer component
     Content: Layout.Content,
     Menu: Menu.default,
     MenuItem: Menu.MenuItem,
