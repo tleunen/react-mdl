@@ -21,6 +21,7 @@ export default class Grid extends React.Component {
 
 class Cell extends React.Component {
     static propTypes = {
+        align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
         className: PropTypes.string,
         col: PropTypes.number.isRequired,
         phone: PropTypes.number,
@@ -28,12 +29,13 @@ class Cell extends React.Component {
     }
 
     render() {
-        var { className, col, phone, tablet, ...otherProps } = this.props;
+        var { align, className, col, phone, tablet, ...otherProps } = this.props;
 
         var classes = classNames('mdl-cell', {
             [`mdl-cell--${col}-col`]: true,
             [`mdl-cell--${phone}-col-tablet`]: typeof phone !== 'undefined',
-            [`mdl-cell--${tablet}-col-tablet`]: typeof tablet !== 'undefined'
+            [`mdl-cell--${tablet}-col-tablet`]: typeof tablet !== 'undefined',
+            [`mdl-cell--${align}`]: typeof align !== 'undefined'
         }, className);
 
         return (
