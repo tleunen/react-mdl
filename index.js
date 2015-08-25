@@ -30,6 +30,7 @@ module.exports = {
     Drawer: Layout.Drawer,
     HeaderRow: Layout.HeaderRow,
     HeaderTabs: Layout.HeaderTabs,
+    Navigation: Layout.Navigation,
     Spacer: Layout.Spacer,
     Navigation: Layout.Navigation,
     Content: Layout.Content,
