@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 
 class Navigation extends React.Component {
-	static propTypes = {
+    static propTypes = {
         className: PropTypes.string
     }
 
     render() {
-    	var { className, ...otherProps } = this.props;
+        var { className, ...otherProps } = this.props;
 
         var classes = classNames('mdl-navigation', className);
 
