@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import Spacer from './Spacer';
 
 class HeaderRow extends React.Component {
     static propTypes = {
@@ -15,7 +16,7 @@ class HeaderRow extends React.Component {
         return (
             <div className={classes} {...otherProps}>
                 {title ? <span className="mdl-layout-title">{title}</span> : null}
-                <div className="mdl-layout-spacer"></div>
+                <Spacer />
                 {this.props.children}
             </div>
         );

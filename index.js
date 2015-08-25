@@ -31,6 +31,7 @@ module.exports = {
     HeaderRow: Layout.HeaderRow,
     HeaderTabs: Layout.HeaderTabs,
     Navigation: Layout.Navigation,
+    Spacer: Layout.Spacer,
     Content: Layout.Content,
     Menu: Menu.default,
     MenuItem: Menu.MenuItem,

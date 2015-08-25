@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
+import Spacer from './Spacer';
 
 class Navigation extends React.Component {
     static propTypes = {
@@ -15,7 +16,7 @@ class Navigation extends React.Component {
         return (
             <nav className={classes} {...otherProps}>
                 {cloneChildren(this.props.children, (child) => ({
-                    className: classNames('mdl-navigation__link', child.props.className)
+                    className: classNames({ 'mdl-navigation__link': child.type !== Spacer }, child.props.className)
                 }))}
             </nav>
         );
