@@ -23,7 +23,7 @@ class Header extends React.Component {
 
         var isRowOrTab = false;
         React.Children.forEach(this.props.children, child => {
-            if(child.type === HeaderRow || child.type === HeaderTabs) {
+            if(child && (child.type === HeaderRow || child.type === HeaderTabs)) {
                 isRowOrTab = true;
             }
         });
