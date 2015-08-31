@@ -57,7 +57,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "eslint .",
     "compile": "babel src --out-dir lib",
-    "prepublish": "npm run compile",
+    "postinstall": "npm run compile",
     "demo": "webpack-dev-server --content-base ."
   }
 }
