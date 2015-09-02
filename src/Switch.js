@@ -18,7 +18,6 @@ class Switch extends React.Component {
 
     render() {
         var { checked, className, disabled, id, ripple } = this.props;
-        var inputId = 'switch-' + id;
 
         // enable ripple by default
         ripple = ripple !== false;
@@ -28,10 +27,10 @@ class Switch extends React.Component {
         }, className);
 
         return (
-            <label className={classes} htmlFor={inputId}>
+            <label className={classes} htmlFor={id}>
                 <input
                     type="checkbox"
-                    id={inputId}
+                    id={id}
                     className="mdl-switch__input"
                     checked={checked}
                     disabled={disabled}
