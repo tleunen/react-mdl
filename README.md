@@ -1,5 +1,10 @@
 # React-MDL
 
+[![Build Status](https://travis-ci.org/tleunen/react-mdl.svg?branch=master)](https://travis-ci.org/tleunen/react-mdl)
+[![Dependency Status](https://david-dm.org/tleunen/react-mdl.svg?style=flat-square)](https://david-dm.org/tleunen/react-mdl)
+[![devDependency Status](https://david-dm.org/tleunen/react-mdl/dev-status.svg?style=flat-square)](https://david-dm.org/tleunen/react-mdl#info=devDependencies)
+[![peerDependency Status](https://david-dm.org/tleunen/react-mdl/peer-status.svg?style=flat-square)](https://david-dm.org/tleunen/react-mdl#info=peerDependencies)
+
 React-MDL is a set of React components build on top of [Material Design Lite](https://github.com/google/material-design-lite). It's based on their version 1.0.4.
 
 ## Requirements
