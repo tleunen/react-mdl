@@ -13,7 +13,7 @@ class Switch extends React.Component {
     }
 
     _handleChange = (event) => {
-        this.props.onChange(event.target.checked);
+        this.props.onChange(event);
     }
 
     render() {
