@@ -21,12 +21,12 @@ class Card extends React.Component {
     render() {
         var { className, shadowLevel, ...otherProps } = this.props;
 
-        var noShadow = shadowLevel <0;
+        var showShadow = typeof shadowLevel !== 'undefined';
 
         shadowLevel = clamp(shadowLevel || 0, 0, shadows.length - 1);
 
         var shadow = {};
-        shadow[shadows[shadowLevel]] = !noShadow;
+        shadow[shadows[shadowLevel]] = showShadow;
 
         var classes = classNames('mdl-card',shadow, className);
 
