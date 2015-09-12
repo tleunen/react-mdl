@@ -51,7 +51,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "peerDependencies": {
-    "react": "0.13.x || 0.14.0-beta3"
+    "react": "0.13.x || ^0.14.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
