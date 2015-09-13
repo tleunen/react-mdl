@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout, { Header, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/layout/Layout';
+import Layout, { Header, Navigation, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/layout/Layout';
 import Textfield from '../../src/Textfield';
 
 class Demo extends React.Component {
@@ -10,16 +10,20 @@ class Demo extends React.Component {
                 <div style={{height: '300px', position: 'relative'}}>
                     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
                         <Header transparent={true} title="Title" style={{color: 'white'}}>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Header>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content />
                     </Layout>
@@ -29,10 +33,12 @@ class Demo extends React.Component {
                 <div style={{height: '300px', position: 'relative'}}>
                     <Layout fixedDrawer={true}>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content />
                     </Layout>
@@ -42,16 +48,20 @@ class Demo extends React.Component {
                 <div style={{height: '300px', position: 'relative'}}>
                     <Layout fixedHeader={true}>
                         <Header title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Header>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content />
                     </Layout>
@@ -71,10 +81,12 @@ class Demo extends React.Component {
                             />
                         </Header>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content />
                     </Layout>
@@ -85,16 +97,20 @@ class Demo extends React.Component {
                 <div className="big-content" style={{height: '300px', position: 'relative'}}>
                     <Layout>
                         <Header title="Title" scroll={true}>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Header>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content>
                             <div className="page-content" />
@@ -116,17 +132,21 @@ class Demo extends React.Component {
                                 />
                             </HeaderRow>
                             <HeaderRow>
-                                <a href="">Link</a>
-                                <a href="">Link</a>
-                                <a href="">Link</a>
-                                <a href="">Link</a>
+                                <Navigation>
+                                    <a href="">Link</a>
+                                    <a href="">Link</a>
+                                    <a href="">Link</a>
+                                    <a href="">Link</a>
+                                </Navigation>
                             </HeaderRow>
                         </Header>
                         <Drawer title="Title">
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Navigation>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                                <a href="">Link</a>
+                            </Navigation>
                         </Drawer>
                         <Content>
                             <div className="page-content" />
