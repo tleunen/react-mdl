@@ -8,7 +8,8 @@ var shadows = [
     'mdl-shadow--3dp',
     'mdl-shadow--4dp',
     'mdl-shadow--6dp',
-    'mdl-shadow--8dp'
+    'mdl-shadow--8dp',
+    'mdl-shadow--16dp'
 ];
 
 class Card extends React.Component {
@@ -19,9 +20,15 @@ class Card extends React.Component {
 
     render() {
         var { className, shadowLevel, ...otherProps } = this.props;
+
+        var showShadow = typeof shadowLevel !== 'undefined';
+
         shadowLevel = clamp(shadowLevel || 0, 0, shadows.length - 1);
 
-        var classes = classNames('mdl-card', shadows[shadowLevel], className);
+        var shadow = {};
+        shadow[shadows[shadowLevel]] = showShadow;
+
+        var classes = classNames('mdl-card',shadow, className);
 
         return (
             <div className={classes} {...otherProps}>
