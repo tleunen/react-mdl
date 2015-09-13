@@ -40,6 +40,12 @@ class Demo extends React.Component {
                     <Radio value="opt2">Option 2</Radio>
                 </RadioGroup>
 
+                <p>Radio Button with custom containers</p>
+                <RadioGroup container="ul" childContainer="li" name="demo2" value={this.state.radio} onChange={linkToState(this, 'radio')}>
+                    <Radio value="opt1">Option 1</Radio>
+                    <Radio value="opt2">Option 2</Radio>
+                </RadioGroup>
+
                 <p>Icon toggle</p>
                 <IconToggle id="bold" name="format_bold" checked={this.state.icon1} onChange={linkToState(this, 'icon1')} />
                 <IconToggle id="italic" name="format_italic" checked={this.state.icon2} onChange={linkToState(this, 'icon2')} />
