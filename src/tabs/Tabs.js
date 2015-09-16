@@ -13,7 +13,8 @@ class Tabs extends React.Component {
             }
         }),
         className: PropTypes.string,
-        onChange: PropTypes.func.isRequired
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
     }
 
     _handleClickTab = (tabId) => {
@@ -27,7 +28,7 @@ class Tabs extends React.Component {
         ripple = ripple !== false;
 
         var classes = classNames('mdl-tabs mdl-js-tabs', {
-            'mdl-js-ripple-effect': ripple,
+            'mdl-js-ripple-effect': ripple
         }, className);
 
         return (

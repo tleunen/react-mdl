@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Tabs, { Tab } from '../../src/tabs/Tabs';
 
 class TabsDemo extends React.Component {
+    static propTypes = {
+        ripple: PropTypes.bool
+    }
+
     constructor(props) {
         super(props);
         this.state = {
