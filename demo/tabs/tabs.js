@@ -1,7 +1,7 @@
 import React from 'react';
 import Tabs, { Tab } from '../../src/tabs/Tabs';
 
-class Demo extends React.Component {
+class TabsDemo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +40,7 @@ class Demo extends React.Component {
     render() {
         return (
             <div style={{display: 'inline-block', paddingLeft: '30%'}}>
-                <Tabs activeTab={this.state.activeTab} onChange={this._handleChange}>
+                <Tabs activeTab={this.state.activeTab} onChange={this._handleChange} ripple={this.props.ripple}>
                     <Tab>Starks</Tab>
                     <Tab>Lannisters</Tab>
                     <Tab>Targaryens</Tab>
@@ -48,6 +48,22 @@ class Demo extends React.Component {
                 <section>
                     {this._getTabContent()}
                 </section>
+            </div>
+        );
+    }
+}
+
+
+class Demo extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <p>With ripple</p>
+                <TabsDemo ripple={true} />
+
+                <p>Without ripple</p>
+                <TabsDemo ripple={false} />
             </div>
         );
     }
