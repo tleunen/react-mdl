@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tab from './Tab';
+import mdlUpgrade from '../utils/mdlUpgrade';
 
 class Tabs extends React.Component {
     static propTypes = {
@@ -12,11 +13,13 @@ class Tabs extends React.Component {
             }
         }),
         className: PropTypes.string,
-        onChange: PropTypes.func.isRequired
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
     }
 
     static defaultProps = {
-        activeTab: 0
+        activeTab: 0,
+        ripple: true
     }
 
     _handleClickTab = (tabId) => {
@@ -24,9 +27,11 @@ class Tabs extends React.Component {
     }
 
     render() {
-        var { activeTab, className, onChange, ...otherProps } = this.props;
+        var { activeTab, className, onChange, ripple, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-tabs is-upgraded', className);
+        var classes = classNames('mdl-tabs mdl-js-tabs', {
+            'mdl-js-ripple-effect': ripple
+        }, className);
 
         return (
             <div className={classes} {...otherProps}>
@@ -39,10 +44,11 @@ class Tabs extends React.Component {
                         });
                     })}
                 </div>
+                <div className="react-mdl-hack" id="undefined" />
             </div>
         );
     }
 }
 
-export default Tabs;
+export default mdlUpgrade(Tabs);
 export { Tab };
