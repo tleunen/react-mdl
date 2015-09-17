@@ -11,6 +11,7 @@ class Textfield extends React.Component {
         expandableIcon: PropTypes.string,
         floatingLabel: PropTypes.bool,
         inputClassName: PropTypes.string,
+        invalid: PropTypes.bool,
         label: PropTypes.string.isRequired,
         maxRows: PropTypes.number,
         onChange: PropTypes.func.isRequired,
@@ -33,6 +34,12 @@ class Textfield extends React.Component {
         }
         if(this.props.disabled !== prevProps.disabled) {
             React.findDOMNode(this).MaterialTextfield.checkDisabled();
+        }
+        if(this.props.invalid !== null) {
+            // At every re-render, mdl will set 'is-invalid' class according to the pattern props validity
+            // If we want to use our own invalid flag, we have to override mdl is-invalid value.
+            React.findDOMNode(this).className = 
+                classNames(React.findDOMNode(this).className, {'is-invalid': this.props.invalid});
         }
     }
 
