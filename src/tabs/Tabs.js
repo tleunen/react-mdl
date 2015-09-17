@@ -42,6 +42,7 @@ class Tabs extends React.Component {
                         });
                     })}
                 </div>
+                <div className="react-mdl-hack" id="undefined" />
             </div>
         );
     }
