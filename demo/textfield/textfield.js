@@ -24,7 +24,7 @@ class Demo extends React.Component {
 
     render() {
         return (
-            <form action='#'>
+            <form action="#">
                 <p>Simple textfield</p>
                 <Textfield
                     value={this.state.textfield1}
