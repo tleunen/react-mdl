@@ -10,10 +10,12 @@ class Section extends React.Component {
         type: PropTypes.oneOf(['top', 'middle', 'bottom', 'left', 'right'])
     }
 
+    static defaultProps = {
+        type: 'mega'
+    }
+
     render() {
         var { className, logo, size, type, ...otherProps } = this.props;
-
-        type = type || 'mega';
 
         var classes = classNames({
             [`mdl-${size}-footer__${type}-section`]: true

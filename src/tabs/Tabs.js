@@ -15,6 +15,10 @@ class Tabs extends React.Component {
         onChange: PropTypes.func.isRequired
     }
 
+    static defaultProps = {
+        activeTab: 0
+    }
+
     _handleClickTab = (tabId) => {
         this.props.onChange(tabId);
     }
@@ -30,7 +34,7 @@ class Tabs extends React.Component {
                     {React.Children.map(this.props.children, (child, index) => {
                         return React.cloneElement(child, {
                             tabId: index,
-                            active: index === (activeTab || 0),
+                            active: index === activeTab,
                             onTabClick: this._handleClickTab
                         });
                     })}

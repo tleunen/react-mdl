@@ -16,6 +16,10 @@ class Radio extends React.Component {
         ]).isRequired
     }
 
+    static defaultProps = {
+        ripple: true
+    }
+
     _handleChange = (event) => {
         this.props.onChange(event.target.value);
     }
@@ -23,9 +27,6 @@ class Radio extends React.Component {
     render() {
         var { checked, className, disabled, name, ripple, value } = this.props;
         var inputId = 'radio-' + name.replace(/\s+/g, '') + '-' + value.replace(/\s+/g, '');
-
-        // enable ripple by default
-        ripple = ripple !== false;
 
         var classes = classNames('mdl-radio mdl-js-radio', {
             'mdl-js-ripple-effect': ripple

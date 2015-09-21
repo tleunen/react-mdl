@@ -14,6 +14,10 @@ class IconToggle extends React.Component {
         ripple: PropTypes.bool
     }
 
+    static defaultProps = {
+        ripple: true
+    }
+
     _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }
@@ -21,9 +25,6 @@ class IconToggle extends React.Component {
     render() {
         var { className, checked, disabled, id, name, ripple, ...otherProps } = this.props;
         var inputId = 'icon-toggle-' + id;
-
-        // enable ripple by default
-        ripple = ripple !== false;
 
         var classes = classNames('mdl-icon-toggle mdl-js-icon-toggle', {
             'mdl-js-ripple-effect': ripple

@@ -12,12 +12,13 @@ class Button extends React.Component {
         ripple: PropTypes.bool
     }
 
+    static defaultProps = {
+        ripple: true
+    }
+
     render() {
         var { accent, className, colored,
             primary, raised, ripple, ...otherProps } = this.props;
-
-        // enable ripple by default
-        ripple = ripple !== false;
 
         var buttonClasses = classNames('mdl-button mdl-js-button', {
             'mdl-js-ripple-effect': ripple,

@@ -8,10 +8,12 @@ class Footer extends React.Component {
         size: PropTypes.oneOf(['mini', 'mega'])
     }
 
+    static defaultProps = {
+        size: 'mega'
+    }
+
     render() {
         var { className, size, ...otherProps } = this.props;
-
-        size = size || 'mega';
 
         var classes = classNames({
             [`mdl-${size}-footer`]: true
