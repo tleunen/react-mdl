@@ -10,6 +10,10 @@ class Tab extends React.Component {
         tabId: PropTypes.number
     }
 
+    static defaultProps = {
+        style: {}
+    }
+
     _handleClick = () => {
         this.props.onTabClick(this.props.tabId);
     }
@@ -21,7 +25,6 @@ class Tab extends React.Component {
             'is-active': active
         }, className);
 
-        style = style || {};
         style.cursor = 'pointer';
 
         return <a className={classes} onClick={this._handleClick} style={style} {...otherProps}>{this.props.children}</a>;

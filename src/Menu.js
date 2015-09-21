@@ -12,13 +12,14 @@ class Menu extends React.Component {
         valign: PropTypes.oneOf(['bottom', 'top'])
     }
 
+    static defaultProps = {
+        align: 'left',
+        valign: 'bottom',
+        ripple: true
+    }
+
     render() {
         var { align, className, ripple, target, valign, ...otherProps} = this.props;
-
-        align = align || 'left';
-        valign = valign || 'bottom';
-        // enable ripple by default
-        ripple = ripple !== false;
 
         var classes = classNames('mdl-menu mdl-js-menu', {
             [`mdl-menu--${valign}-${align}`]: true,

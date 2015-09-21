@@ -12,6 +12,10 @@ class Switch extends React.Component {
         ripple: PropTypes.bool
     }
 
+    static defaultProps = {
+        ripple: true
+    }
+
     _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }
@@ -19,9 +23,6 @@ class Switch extends React.Component {
     render() {
         var { checked, className, disabled, id, ripple } = this.props;
         var inputId = 'switch-' + id;
-
-        // enable ripple by default
-        ripple = ripple !== false;
 
         var classes = classNames('mdl-switch mdl-js-switch', {
             'mdl-js-ripple-effect': ripple
