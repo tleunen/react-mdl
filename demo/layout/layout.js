@@ -73,7 +73,7 @@ class Demo extends React.Component {
                     <Layout fixedHeader={true} fixedDrawer={true}>
                         <Header title="Title">
                             <Textfield
-                                value=''
+                                value=""
                                 onChange={() => {}}
                                 label="Search"
                                 expandable={true}
@@ -124,7 +124,7 @@ class Demo extends React.Component {
                         <Header waterfall={true}>
                             <HeaderRow title="Title">
                                 <Textfield
-                                    value=''
+                                    value=""
                                     onChange={() => {}}
                                     label="Search"
                                     expandable={true}

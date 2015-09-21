@@ -24,7 +24,7 @@ class Checkbox extends React.Component {
                 <input
                     type="checkbox"
                     id={inputId}
-                    className='mdl-checkbox__input'
+                    className="mdl-checkbox__input"
                     checked={checked}
                     disabled={disabled}
                     onChange={this._handleChange}
