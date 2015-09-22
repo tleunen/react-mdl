@@ -36,7 +36,7 @@ class Textfield extends React.Component {
         }
         if(this.props.error && !this.props.pattern) {
             // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
-            // If we want to for the error display, we have to override mdl 'is-invalid' value.
+            // If we want to force the error display, we have to override mdl 'is-invalid' value.
             React.findDOMNode(this).className = 
                 classNames(React.findDOMNode(this).className, {'is-invalid': true});
         }
