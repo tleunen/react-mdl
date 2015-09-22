@@ -18,8 +18,14 @@ class Demo extends React.Component {
             textfield3: '',
             textfield4: '',
             textfield5: '',
-            textfield6: ''
+            textfield6: '',
+            textfield7a: '',
+            textfield7b: ''
         };
+    }
+
+    checkPasswordConfirmation() {
+        return this.state.textfield7b != this.state.textfield7a;
     }
 
     render() {
@@ -78,6 +84,20 @@ class Demo extends React.Component {
                     label="Expandable Input"
                     expandable={true}
                     expandableIcon="search"
+                />
+
+                <p>Password confirmation textfields</p>
+                <Textfield
+                    value={this.state.textfield7a}
+                    onChange={linkToState(this, 'textfield7a')}
+                    label="Enter password"
+                />
+                <Textfield
+                    value={this.state.textfield7b}
+                    onChange={linkToState(this, 'textfield7b')}
+                    label="Enter password again"
+                    error="Passwords don't match!"
+                    invalid={this.checkPasswordConfirmation()}
                 />
 
 
