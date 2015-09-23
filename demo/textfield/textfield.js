@@ -18,8 +18,14 @@ class Demo extends React.Component {
             textfield3: '',
             textfield4: '',
             textfield5: '',
-            textfield6: ''
+            textfield6: '',
+            textfield7a: '',
+            textfield7b: ''
         };
+    }
+
+    checkPasswordConfirmation() {
+        return this.state.textfield7b != this.state.textfield7a ? 'Passwords don\'t match!' : null;
     }
 
     render() {
@@ -78,6 +84,22 @@ class Demo extends React.Component {
                     label="Expandable Input"
                     expandable={true}
                     expandableIcon="search"
+                />
+
+                {/* Note: this is a naive implementation of checking passwords, solely for demo purpose.
+                  * A more robust implementation would maybe store the error check result in the state 
+                  * and share it with both textfields */}
+                <p>Password confirmation textfields</p>
+                <Textfield
+                    value={this.state.textfield7a}
+                    onChange={linkToState(this, 'textfield7a')}
+                    label="Enter password"
+                />
+                <Textfield
+                    value={this.state.textfield7b}
+                    onChange={linkToState(this, 'textfield7b')}
+                    label="Enter password again"
+                    error={this.checkPasswordConfirmation()}
                 />
 
 
