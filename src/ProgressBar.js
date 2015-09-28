@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import mdlUpgrade from './utils/mdlUpgrade';
 
 class ProgressBar extends React.Component {
     static propTypes = {
@@ -10,8 +11,6 @@ class ProgressBar extends React.Component {
     }
 
     componentDidMount(){
-        // Can't use the mdlUpgrade component because we need access to the Material internal object
-        componentHandler.upgradeElement(React.findDOMNode(this));
         this.setProgress(this.props.progress);
         this.setBuffer(this.props.buffer);
     }
@@ -19,10 +18,6 @@ class ProgressBar extends React.Component {
     componentDidUpdate() {
         this.setProgress(this.props.progress);
         this.setBuffer(this.props.buffer);
-    }
-
-    componentWillUnmount(){
-        componentHandler.downgradeElements(React.findDOMNode(this));
     }
 
     setProgress(progress) {
@@ -48,4 +43,4 @@ class ProgressBar extends React.Component {
     }
 }
 
-export default ProgressBar;
+export default mdlUpgrade(ProgressBar);

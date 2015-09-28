@@ -1,19 +1,12 @@
 import React from 'react';
+import MDLComponent from './MDLComponent';
 
-export default (Component) => {
-    class MDLUpgradedComponent extends React.Component {
-        componentDidMount() {
-            componentHandler.upgradeElement(React.findDOMNode(this));
-        }
+export default Component => {
+    const render = Component.prototype.render;
 
-        componentWillUnmount() {
-            componentHandler.downgradeElements(React.findDOMNode(this));
-        }
+    Component.prototype.render = function() {
+        return <MDLComponent>{this::render()}</MDLComponent>;
+    };
 
-        render() {
-            return <Component {...this.props} />;
-        }
-    }
-
-    return MDLUpgradedComponent;
+    return Component;
 };

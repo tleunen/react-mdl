@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDLComponent from './utils/MDLComponent';
 
-class Tooltip extends React.Component {
+export default class Tooltip extends React.Component {
     static propTypes = {
         children: PropTypes.oneOfType([
             PropTypes.element,
@@ -33,16 +33,16 @@ class Tooltip extends React.Component {
 
         return (
             <div style={{display: 'inline-block'}} {...otherProps}>
-                {React.cloneElement(element, {
-                    id: id
-                })}
-                {React.cloneElement(label, {
-                    htmlFor: id,
-                    className: classNames('mdl-tooltip', { 'mdl-tooltip--large': large })
-                })}
+                {React.cloneElement(element, { id })}
+                <MDLComponent>
+                    {React.cloneElement(label, {
+                        htmlFor: id,
+                        className: classNames('mdl-tooltip', {
+                            'mdl-tooltip--large': large
+                        })
+                    })}
+                </MDLComponent>
             </div>
         );
     }
 }
-
-export default mdlUpgrade(Tooltip);
