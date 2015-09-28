@@ -7,7 +7,7 @@ class Header extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         scroll: PropTypes.bool,
-        title: PropTypes.string,
+        title: PropTypes.any,
         transparent: PropTypes.bool,
         waterfall: PropTypes.bool
     }

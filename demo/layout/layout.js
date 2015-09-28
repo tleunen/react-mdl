@@ -47,7 +47,7 @@ class Demo extends React.Component {
                 <p>Always shows a header, even in smaller screens.</p>
                 <div style={{height: '300px', position: 'relative'}}>
                     <Layout fixedHeader={true}>
-                        <Header title="Title">
+                        <Header title={<span><span style={{ color: '#ddd' }}>Area / </span><strong>The Title</strong></span>}>
                             <Navigation>
                                 <a href="">Link</a>
                                 <a href="">Link</a>
