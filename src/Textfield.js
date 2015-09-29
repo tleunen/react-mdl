@@ -24,10 +24,6 @@ class Textfield extends React.Component {
         ])
     }
 
-    static defaultProps = {
-        onChange: function() {}
-    }
-
     componentDidUpdate(prevProps) {
         if(
             this.props.required !== prevProps.required ||
@@ -60,15 +56,18 @@ class Textfield extends React.Component {
         var inputId = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
         var inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
-        var input = React.createElement(inputTag, {
+        var inputProps = {
             className: classNames('mdl-textfield__input', inputClassName),
             id: inputId,
             key: inputId,
             value: value,
-            onChange: this._handleChange,
             rows: rows,
             ...otherProps
-        });
+        };
+
+        if (onChange) inputProps.onChange = this._handleChange;
+
+        var input = React.createElement(inputTag, inputProps);
 
         var inputAndLabelError = [
             input,
