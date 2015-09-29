@@ -28,7 +28,8 @@ class Textfield extends React.Component {
     componentDidUpdate(prevProps) {
         if(
             this.props.required !== prevProps.required ||
-            this.props.pattern !== prevProps.pattern
+            this.props.pattern !== prevProps.pattern ||
+            this.props.value !== prevProps.value
         ) {
             findDOMNode(this).MaterialTextfield.checkValidity();
         }
@@ -40,6 +41,9 @@ class Textfield extends React.Component {
             // If we want to force the error display, we have to override mdl 'is-invalid' value.
             var elt = findDOMNode(this);
             elt.className = classNames(elt.className, 'is-invalid');
+        }
+        if (this.props.value !== prevProps.value) {
+            findDOMNode(this).MaterialTextfield.checkDirty();
         }
     }
 
