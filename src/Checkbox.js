@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
 class Checkbox extends React.Component {
@@ -7,7 +8,12 @@ class Checkbox extends React.Component {
         disabled: PropTypes.bool,
         id: PropTypes.string,
         label: PropTypes.string,
-        onChange: PropTypes.func.isRequired
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
+    }
+
+    static defaultProps = {
+        ripple: true
     }
 
     _handleChange = (event) => {
@@ -15,12 +21,15 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        var { checked, disabled, id, label } = this.props;
+        var { checked, disabled, id, label, ripple } = this.props;
 
         var inputId = 'checkbox-' + (label || id).replace(/\s+/g, '');
+        var classes = classNames('mdl-checkbox mdl-js-checkbox', {
+            'mdl-js-ripple-effect': ripple
+        });
 
         return (
-            <label className="mdl-checkbox mdl-js-checkbox" htmlFor={id}>
+            <label className={classes} htmlFor={id}>
                 <input
                     type="checkbox"
                     id={inputId}
