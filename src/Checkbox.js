@@ -8,8 +8,8 @@ class Checkbox extends React.Component {
         disabled: PropTypes.bool,
         id: PropTypes.string,
         label: PropTypes.string,
-        ripple: PropTypes.bool,
-        onChange: PropTypes.func.isRequired
+        onChange: PropTypes.func.isRequired,
+        ripple: PropTypes.bool
     }
 
     static defaultProps = {
