@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Textfield from '../../src/Textfield';
 
 function linkToState(target, property) {
@@ -87,7 +88,7 @@ class Demo extends React.Component {
                 />
 
                 {/* Note: this is a naive implementation of checking passwords, solely for demo purpose.
-                  * A more robust implementation would maybe store the error check result in the state 
+                  * A more robust implementation would maybe store the error check result in the state
                   * and share it with both textfields */}
                 <p>Password confirmation textfields</p>
                 <Textfield
@@ -109,4 +110,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

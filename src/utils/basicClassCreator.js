@@ -1,21 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 export default function(defaultClassName, element = 'div') {
-    class BasicClass extends React.Component {
-        render() {
-            var { className, ...otherProps } = this.props;
+    return (props) => {
+        var { className, children, ...otherProps } = props;
 
-            return React.createElement(element, {
-                className: classNames(defaultClassName, className),
-                ...otherProps
-            }, this.props.children);
-        }
-    }
-
-    BasicClass.propTypes = {
-        className: PropTypes.string
+        return React.createElement(element, {
+            className: classNames(defaultClassName, className),
+            ...otherProps
+        }, children);
     };
-
-    return BasicClass;
 }

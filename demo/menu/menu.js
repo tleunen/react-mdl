@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import IconButton from '../../src/IconButton';
 import Menu, { MenuItem } from '../../src/Menu';
 
@@ -47,4 +48,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

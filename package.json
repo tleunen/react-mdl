@@ -47,12 +47,14 @@
   "devDependencies": {
     "babel": "5.8.23",
     "babel-loader": "5.3.2",
-    "react": "0.13.3",
+    "react": "0.14.0",
+    "react-dom": "0.14.0",
     "webpack": "1.12.2",
     "webpack-dev-server": "1.12.0"
   },
   "peerDependencies": {
-    "react": "0.13.x || ^0.14.0-alpha1"
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",

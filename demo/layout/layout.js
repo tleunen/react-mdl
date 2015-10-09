@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Layout, { Header, Navigation, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/layout/Layout';
 import Textfield from '../../src/Textfield';
 
@@ -224,4 +225,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
@@ -29,15 +30,15 @@ class Textfield extends React.Component {
             this.props.required !== prevProps.required ||
             this.props.pattern !== prevProps.pattern
         ) {
-            React.findDOMNode(this).MaterialTextfield.checkValidity();
+            findDOMNode(this).MaterialTextfield.checkValidity();
         }
         if(this.props.disabled !== prevProps.disabled) {
-            React.findDOMNode(this).MaterialTextfield.checkDisabled();
+            findDOMNode(this).MaterialTextfield.checkDisabled();
         }
         if(this.props.error && !this.props.pattern) {
             // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
             // If we want to force the error display, we have to override mdl 'is-invalid' value.
-            var elt = React.findDOMNode(this);
+            var elt = findDOMNode(this);
             elt.className = classNames(elt.className, 'is-invalid');
         }
     }
