@@ -35,4 +35,4 @@ export HeaderRow from './HeaderRow';
 export Navigation from './Navigation';
 export HeaderTabs from './HeaderTabs';
 export Spacer from './Spacer';
-export var Content = basicClassCreator('mdl-layout__content', 'main');
+export var Content = basicClassCreator('Content', 'mdl-layout__content', 'main');
