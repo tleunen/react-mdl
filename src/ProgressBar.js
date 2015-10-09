@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
@@ -22,13 +23,13 @@ class ProgressBar extends React.Component {
 
     setProgress(progress) {
         if(!this.props.indeterminate && progress !== undefined) {
-            React.findDOMNode(this).MaterialProgress.setProgress(progress);
+            findDOMNode(this).MaterialProgress.setProgress(progress);
         }
     }
 
     setBuffer(buffer) {
         if(buffer !== undefined) {
-            React.findDOMNode(this).MaterialProgress.setBuffer(buffer);
+            findDOMNode(this).MaterialProgress.setBuffer(buffer);
         }
     }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Icon from '../../src/Icon';
 import Tooltip from '../../src/Tooltip';
 
@@ -32,4 +33,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

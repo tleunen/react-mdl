@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Button from '../../src/Button';
 import FABButton from '../../src/FABButton';
 import IconButton from '../../src/IconButton';
@@ -84,4 +85,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

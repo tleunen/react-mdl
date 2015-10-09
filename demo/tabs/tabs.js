@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 import Tabs, { Tab } from '../../src/tabs/Tabs';
 
 class TabsDemo extends React.Component {
@@ -74,4 +75,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

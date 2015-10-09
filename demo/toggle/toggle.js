@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Checkbox from '../../src/Checkbox';
 import RadioGroup from '../../src/RadioGroup';
 import Radio from '../../src/Radio';
@@ -59,4 +60,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

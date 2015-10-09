@@ -1,4 +1,5 @@
-import { Children, Component, findDOMNode } from 'react';
+import { Children, Component } from 'react';
+import { findDOMNode } from 'react-dom';
 
 export default class MDLComponent extends Component {
     componentDidMount() {

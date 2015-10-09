@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Slider from '../../src/Slider';
 
 function linkToState(target, property) {
@@ -32,4 +33,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

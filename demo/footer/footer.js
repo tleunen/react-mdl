@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Footer, { Section, DropDownSection, LinkList } from '../../src/footer/Footer';
 
 class Demo extends React.Component {
@@ -64,4 +65,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));

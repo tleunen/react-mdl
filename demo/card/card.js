@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Card, { CardTitle, CardText, CardActions, CardMenu } from '../../src/card/Card';
 import Button from '../../src/Button';
 import IconButton from '../../src/IconButton';
@@ -67,4 +68,4 @@ class Demo extends React.Component {
 }
 
 
-React.render(<Demo />, document.getElementById('app'));
+ReactDOM.render(<Demo />, document.getElementById('app'));
