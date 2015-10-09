@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export default function(defaultClassName, element = 'div') {
-    return (props) => {
+export default function(displayName, defaultClassName, element = 'div') {
+    const fn = (props) => {
         var { className, children, ...otherProps } = props;
 
         return React.createElement(element, {
@@ -10,4 +10,8 @@ export default function(defaultClassName, element = 'div') {
             ...otherProps
         }, children);
     };
+
+    fn.displayName = displayName;
+
+    return fn;
 }

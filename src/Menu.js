@@ -35,4 +35,4 @@ class Menu extends React.Component {
 }
 
 export default mdlUpgrade(Menu);
-export var MenuItem = basicClassCreator('mdl-menu__item', 'li');
+export var MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');
