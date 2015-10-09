@@ -7,16 +7,18 @@ class Header extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         scroll: PropTypes.bool,
+        seamed: PropTypes.bool,
         title: PropTypes.any,
         transparent: PropTypes.bool,
         waterfall: PropTypes.bool
     }
 
     render() {
-        var { className, scroll, title, transparent, waterfall, ...otherProps } = this.props;
+        var { className, scroll, seamed, title, transparent, waterfall, ...otherProps } = this.props;
 
         var classes = classNames('mdl-layout__header', {
             'mdl-layout__header--scroll': scroll,
+            'mdl-layout__header--seamed': seamed,
             'mdl-layout__header--transparent': transparent,
             'mdl-layout__header--waterfall': waterfall
         }, className);
