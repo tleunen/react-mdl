@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 import basicClassCreator from './utils/basicClassCreator';
 
-class Menu extends React.Component {
+class Menu extends MDL.UpgradedComponent {
     static propTypes = {
         align: PropTypes.oneOf(['left', 'right']),
         className: PropTypes.string,
@@ -34,5 +34,5 @@ class Menu extends React.Component {
     }
 }
 
-export default mdlUpgrade(Menu);
+export default Menu;
 export var MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');

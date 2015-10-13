@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from '../utils/mdlUpgrade';
+import MDL from '../mdlbase';
 import basicClassCreator from '../utils/basicClassCreator';
 
-class Layout extends React.Component {
+class Layout extends MDL.UpgradedComponent {
     static propTypes = {
         className: PropTypes.string,
         fixedDrawer: PropTypes.bool,
@@ -28,7 +28,7 @@ class Layout extends React.Component {
     }
 }
 
-export default mdlUpgrade(Layout);
+export default Layout;
 export Header from './Header';
 export Drawer from './Drawer';
 export HeaderRow from './HeaderRow';

@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class ProgressBar extends React.Component {
+class ProgressBar extends MDL.UpgradedComponent {
     static propTypes = {
         buffer: PropTypes.number,
         className: PropTypes.string,
@@ -44,4 +44,4 @@ class ProgressBar extends React.Component {
     }
 }
 
-export default mdlUpgrade(ProgressBar);
+export default ProgressBar;

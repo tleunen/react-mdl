@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class DataTable extends React.Component {
+class DataTable extends MDL.UpgradedComponent {
     static propTypes = {
         className: PropTypes.string,
         columns: PropTypes.arrayOf(
@@ -54,4 +54,4 @@ class DataTable extends React.Component {
     }
 }
 
-export default mdlUpgrade(DataTable);
+export default DataTable;

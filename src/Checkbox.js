@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Checkbox extends React.Component {
+class Checkbox extends MDL.UpgradedComponent {
     static propTypes = {
         checked: PropTypes.bool,
         disabled: PropTypes.bool,
@@ -44,4 +44,4 @@ class Checkbox extends React.Component {
     }
 }
 
-export default mdlUpgrade(Checkbox);
+export default Checkbox;

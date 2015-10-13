@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Radio extends React.Component {
+class Radio extends MDL.UpgradedComponent {
     static propTypes = {
         checked: PropTypes.bool,
         className: PropTypes.string,
@@ -50,4 +50,4 @@ class Radio extends React.Component {
     }
 }
 
-export default mdlUpgrade(Radio);
+export default Radio;

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Slider extends React.Component {
+class Slider extends MDL.UpgradedComponent {
     static propTypes = {
         className: PropTypes.string,
         max: PropTypes.number.isRequired,
@@ -35,4 +35,4 @@ class Slider extends React.Component {
     }
 }
 
-export default mdlUpgrade(Slider);
+export default Slider;
