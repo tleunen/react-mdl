@@ -4,8 +4,11 @@ var Layout = require('./lib/layout/Layout');
 var Grid = require('./lib/Grid');
 var Menu = require('./lib/Menu');
 var Tabs = require('./lib/tabs/Tabs');
+var MDL = require('./lib/mdlbase');
 
 module.exports = {
+    MDLComponent: MDL.Component,
+    MDLUpgradedComponent: MDL.UpgradedComponent,
     Badge: require('./lib/Badge'),
     Button: require('./lib/Button'),
     Card: Card.default,

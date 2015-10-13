@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Textfield extends React.Component {
+class Textfield extends MDL.UpgradedComponent {
     static propTypes = {
         className: PropTypes.string,
         disabled: PropTypes.bool,
@@ -104,4 +104,4 @@ class Textfield extends React.Component {
     }
 }
 
-export default mdlUpgrade(Textfield);
+export default Textfield;

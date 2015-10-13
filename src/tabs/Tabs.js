@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tab from './Tab';
-import mdlUpgrade from '../utils/mdlUpgrade';
+import MDL from '../mdlbase';
 
-class Tabs extends React.Component {
+class Tabs extends MDL.UpgradedComponent {
     static propTypes = {
         activeTab: PropTypes.number,
         children: PropTypes.arrayOf(function(props, propName, componentName) {
@@ -50,5 +50,5 @@ class Tabs extends React.Component {
     }
 }
 
-export default mdlUpgrade(Tabs);
+export default Tabs;
 export { Tab };

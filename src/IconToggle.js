@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Icon from './Icon';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class IconToggle extends React.Component {
+class IconToggle extends MDL.UpgradedComponent {
     static propTypes = {
         checked: PropTypes.bool,
         className: PropTypes.string,
@@ -46,4 +46,4 @@ class IconToggle extends React.Component {
     }
 }
 
-export default mdlUpgrade(IconToggle);
+export default IconToggle;

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Button extends React.Component {
+class Button extends MDL.UpgradedComponent {
     static propTypes = {
         accent: PropTypes.bool,
         className: PropTypes.string,
@@ -41,4 +41,4 @@ class Button extends React.Component {
     }
 }
 
-export default mdlUpgrade(Button);
+export default Button;

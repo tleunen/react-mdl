@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import MDL from './mdlbase';
 
-class Spinner extends React.Component {
+class Spinner extends MDL.UpgradedComponent {
     static propTypes = {
         className: PropTypes.string,
         singleColor: PropTypes.bool
@@ -19,4 +19,4 @@ class Spinner extends React.Component {
     }
 }
 
-export default mdlUpgrade(Spinner);
+export default Spinner;
