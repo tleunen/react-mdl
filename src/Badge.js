@@ -5,12 +5,16 @@ class Badge extends React.Component {
         children: PropTypes.oneOfType([
             PropTypes.element,
             PropTypes.string
-        ]).isRequired,
+        ]),
         text: PropTypes.string.isRequired
     }
 
     render() {
         var { children } = this.props;
+
+        // No badge if no children
+        if(!React.Children.count(children)) return null;
+
         var element;
         if(typeof children === 'string') {
             element = <span>{children}</span>;
