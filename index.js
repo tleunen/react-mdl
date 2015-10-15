@@ -6,6 +6,8 @@ var Menu = require('./lib/Menu');
 var Tabs = require('./lib/tabs/Tabs');
 
 module.exports = {
+    mdlUpgrade: require('./lib/utils/mdlUpgrade'),
+    MDLComponent: require('./lib/utils/MDLComponent'),
     Badge: require('./lib/Badge'),
     Button: require('./lib/Button'),
     Card: Card.default,
