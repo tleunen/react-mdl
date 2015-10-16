@@ -6,7 +6,7 @@ class Badge extends React.Component {
             PropTypes.element,
             PropTypes.string
         ]),
-        text: PropTypes.string.isRequired
+        text: PropTypes.string
     }
 
     render() {
@@ -25,7 +25,7 @@ class Badge extends React.Component {
 
         return React.cloneElement(element, {
             className: 'mdl-badge',
-            'data-badge': this.props.text
+            'data-badge': this.props.text || undefined
         });
     }
 }
