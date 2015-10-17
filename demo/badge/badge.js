@@ -8,7 +8,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <p>Number badge on icon</p>
-                <Badge text="1">
+                <Badge text={1}>
                     <Icon name="account_box" />
                 </Badge>
                 <p>Icon badge on icon</p>
@@ -17,7 +17,7 @@ class Demo extends React.Component {
                 </Badge>
 
                 <p>Number badge</p>
-                <Badge text="4">Inbox</Badge>
+                <Badge text={4}>Inbox</Badge>
                 <p>Icon badge</p>
                 <Badge text="♥">Mood</Badge>
             </div>
