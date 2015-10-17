@@ -33,7 +33,7 @@ import { Button, Card, CardText } from 'react-mdl';
 ### import a specific component
 ```
 import Button from 'react-mdl/lib/Button';
-import Card, { CardText, CardActions } from 'react-mdl/lib/card/Card';
+import Card, { CardText, CardActions } from 'react-mdl/lib/Card';
 ```
 
 ## How to run the demos
