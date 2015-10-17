@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Footer, { Section, DropDownSection, LinkList } from '../../src/footer/Footer';
+import Footer, { Section, DropDownSection, LinkList } from '../../src/Footer';
 
 class Demo extends React.Component {
     render() {
