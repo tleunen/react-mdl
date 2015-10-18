@@ -1,4 +1,4 @@
-/*eslint-env mocha */
+/* eslint-env mocha */
 var expect = require('expect');
 var ReactTestUtils = require('react-addons-test-utils');
 var React = require('react');
