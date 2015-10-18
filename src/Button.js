@@ -35,8 +35,4 @@ Button.propTypes = {
     ripple: PropTypes.bool
 };
 
-Button.defaultProps = {
-    ripple: true
-};
-
 export default mdlUpgrade(Button);

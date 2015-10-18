@@ -18,8 +18,7 @@ class Tabs extends React.Component {
     }
 
     static defaultProps = {
-        activeTab: 0,
-        ripple: true
+        activeTab: 0
     }
 
     _handleClickTab = (tabId) => {

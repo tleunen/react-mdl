@@ -14,10 +14,6 @@ class IconToggle extends React.Component {
         ripple: PropTypes.bool
     }
 
-    static defaultProps = {
-        ripple: true
-    }
-
     _handleChange = (event) => {
         this.props.onChange(event.target.checked);
     }

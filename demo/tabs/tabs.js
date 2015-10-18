@@ -68,7 +68,7 @@ class Demo extends React.Component {
                 <TabsDemo ripple />
 
                 <p>Without ripple</p>
-                <TabsDemo ripple={false} />
+                <TabsDemo />
             </div>
         );
     }

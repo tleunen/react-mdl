@@ -14,8 +14,7 @@ class Menu extends React.Component {
 
     static defaultProps = {
         align: 'left',
-        valign: 'bottom',
-        ripple: true
+        valign: 'bottom'
     }
 
     render() {

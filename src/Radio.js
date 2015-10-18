@@ -16,10 +16,6 @@ class Radio extends React.Component {
         ]).isRequired
     }
 
-    static defaultProps = {
-        ripple: true
-    }
-
     _handleChange = (event) => {
         this.props.onChange(event.target.value);
     }
