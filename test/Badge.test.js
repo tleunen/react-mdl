@@ -59,7 +59,10 @@ describe('Badge', function() {
             shallowRenderer.render(<Badge text={null}>Inbox</Badge>);
             var output = shallowRenderer.getRenderOutput();
 
-            expect(output).toBe('Inbox');
+            expect(output.type).toBe('span');
+            expect(output.props.className).toNotBe('mdl-badge');
+            expect(output.props['data-badge']).toNotExist();
+            expect(output.props.children).toBe('Inbox');
         });
 
         it('badge text is null on complex child', function() {
