@@ -20,6 +20,8 @@ class Demo extends React.Component {
                 <Badge text={4}>Inbox</Badge>
                 <p>Icon badge</p>
                 <Badge text="♥">Mood</Badge>
+                <p>Badge text is undefined</p>
+                <Badge>Mood</Badge>
             </div>
         );
     }
