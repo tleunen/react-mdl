@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="refresh" content="2;" /> -->
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="../extra/material.css">
+    <script src="../extra/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+    .components > * ~ * {
+      margin-left: 16px;
+    }
+    .example {
+      margin-bottom: 16px;
+    }
+    .example .components {
+      margin-bottom: 16px;
+    }
+    .collapse-icon {
+      transition-duration: 0.15s;
+      transition-property: transform;
+      will-change: transition;
+    }
+    .code-samples {
+      transform: scaleY( 1 );
+      transition-duration: 0.15s;
+      transform-origin: top;
+      transition-property: transform, max-height;
+      will-change: transform, max-height;
+      max-height: 200px;
+      overflow-y: scroll;
+      overflow-x: auto;
+      border-radius: 2px;
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 1em;
+    }
+    .code-samples.collapsed {
+      max-height: 0;
+      overflow-y: hidden;
+      transform: scaleY( 0 );
+    }
+    .code-sample ~ .code-sample {
+      border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="/node_modules/react/dist/react.js"></script>
+    <script src="/node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="/demo.bundle.js"></script>
+</body>
+</html>
