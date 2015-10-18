@@ -6,40 +6,6 @@ import Button from '../../lib/Button';
 import IconButton from '../../lib/IconButton';
 import FABButton from '../../lib/FABButton';
 
-function xCode ( props ) {
-    let { children } = props;
-
-    return (
-    <div>
-    { React.Children.map( children, child => {
-        let type = child.type.name;
-        let childCount = React.Children.count( child.props.children );
-
-        return (
-            <code>
-            { /* opening tag */ }
-            { `<${ type }` }
-            { /* props */ }
-            <Props { ...child.props } />
-            { childCount === 0 ?
-                ` />` :
-                /* children */
-                React.Children.map( child.props.children, childchild =>
-                    <div style={{ marginLeft: '1em' }}>
-                        <Code>{ childchild }</Code>
-                    </div>
-                )
-            }
-            </code>
-        );
-        // <Props { ...other } />
-        // { `>` }
-        // { `</${ type }>` }
-    } ) }
-    </div>
-    );
-};
-
 let Colored = ( props ) => (
     <Example>
         <FABButton colored>
