@@ -6,9 +6,6 @@ var Badge = (props) => {
     // No badge if no children
     if(!React.Children.count(children)) return null;
 
-    // No text -> No need of badge
-    if(text === null || typeof text === 'undefined') return children;
-
     var element;
     if(typeof children === 'string') {
         element = <span>{children}</span>;
