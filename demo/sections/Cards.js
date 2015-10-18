@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Example from './Example';
-import Card, { CardMenu, CardText } from '../../lib/Card';
-import CardActions from '../../lib/Card/CardActions';
-import CardTitle from '../../lib/Card/CardTitle';
-import Button from '../../lib/Button';
-import Icon from '../../lib/Icon';
-import IconButton from '../../lib/IconButton';
-import { Spacer } from '../../lib/Layout';
+import Card, { CardMenu, CardText } from '../../src/Card';
+import CardActions from '../../src/Card/CardActions';
+import CardTitle from '../../src/Card/CardTitle';
+import Button from '../../src/Button';
+import Icon from '../../src/Icon';
+import IconButton from '../../src/IconButton';
+import { Spacer } from '../../src/Layout';
 
 export default ( props ) => (
     <section { ...props }>

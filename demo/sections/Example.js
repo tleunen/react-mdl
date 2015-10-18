@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import Button from '../../lib/Button';
-import Icon from '../../lib/Icon';
+import Button from '../../src/Button';
+import Icon from '../../src/Icon';
 
 function getJSON ( value ) {
     let json = JSON.stringify( value, 0, 2 );

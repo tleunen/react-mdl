@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Example from './Example';
-import Icon from '../../lib/Icon';
-import Button from '../../lib/Button';
-import IconButton from '../../lib/IconButton';
-import FABButton from '../../lib/FABButton';
+import Icon from '../../src/Icon';
+import Button from '../../src/Button';
+import IconButton from '../../src/IconButton';
+import FABButton from '../../src/FABButton';
 
 let Colored = ( props ) => (
     <Example>

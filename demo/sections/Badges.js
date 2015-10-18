@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Example from './Example';
-import Badge from '../../lib/Badge';
-import Icon from '../../lib/Icon';
+import Badge from '../../src/Badge';
+import Icon from '../../src/Icon';
 
 export default ( props ) => (
     <section { ...props }>
