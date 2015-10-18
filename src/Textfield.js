@@ -35,6 +35,9 @@ class Textfield extends React.Component {
         if(this.props.disabled !== prevProps.disabled) {
             findDOMNode(this).MaterialTextfield.checkDisabled();
         }
+        if(this.props.value !== prevProps.value && this.refs.input !== document.activeElement) {
+            findDOMNode(this).MaterialTextfield.change(this.props.value);
+        }
         if(this.props.error && !this.props.pattern) {
             // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
             // If we want to force the error display, we have to override mdl 'is-invalid' value.
@@ -63,6 +66,7 @@ class Textfield extends React.Component {
             key: inputId,
             value: value,
             rows: rows,
+            ref: 'input',
             ...otherProps
         };
 
