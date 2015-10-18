@@ -18,7 +18,7 @@ class DropDownSection extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                <input className={`mdl-${size}-footer__heading-checkbox`} type="checkbox" defaultChecked={true} />
+                <input className={`mdl-${size}-footer__heading-checkbox`} type="checkbox" defaultChecked />
                 <h1 className={`mdl-${size}-footer__heading`}>{title}</h1>
                 {cloneChildren(this.props.children, { size: size })}
             </div>

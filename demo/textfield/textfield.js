@@ -55,7 +55,7 @@ class Demo extends React.Component {
                     value={this.state.textfield3}
                     onChange={linkToState(this, 'textfield3')}
                     label="Text..."
-                    floatingLabel={true}
+                    floatingLabel
                     style={{width: '200px'}}
                 />
 
@@ -66,7 +66,7 @@ class Demo extends React.Component {
                     pattern="-?[0-9]*(\.[0-9]+)?"
                     error="Input is not a number!"
                     label="Number..."
-                    floatingLabel={true}
+                    floatingLabel
                 />
 
                 <p>Floating Multiline Textfield</p>
@@ -83,7 +83,7 @@ class Demo extends React.Component {
                     value={this.state.textfield6}
                     onChange={linkToState(this, 'textfield6')}
                     label="Expandable Input"
-                    expandable={true}
+                    expandable
                     expandableIcon="search"
                 />
 

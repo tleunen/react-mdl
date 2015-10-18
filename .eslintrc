@@ -23,7 +23,7 @@
         "strict": [2, "global"],
 
         "react/display-name": 0,
-        "react/jsx-boolean-value": [2, "always"],
+        "react/jsx-boolean-value": [2, "never"],
         "react/jsx-no-undef": 2,
         "react/jsx-sort-props": 0,
         "react/jsx-sort-prop-types": 2,

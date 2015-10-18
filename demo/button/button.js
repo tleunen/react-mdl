@@ -11,11 +11,11 @@ class Demo extends React.Component {
             <div>
                 <h1>Colored FAB Button</h1>
                 <p>Colored FAB button</p>
-                <FABButton colored={true} ripple={false}>
+                <FABButton colored ripple={false}>
                     <Icon name="add" />
                 </FABButton>
                 <p>Colored FAB button with ripple</p>
-                <FABButton colored={true}>
+                <FABButton colored>
                     <Icon name="add" />
                 </FABButton>
 
@@ -29,26 +29,26 @@ class Demo extends React.Component {
                     <Icon name="add" />
                 </FABButton>
                 <p>Disabled FAB Button</p>
-                <FABButton disabled={true}>
+                <FABButton disabled>
                     <Icon name="add" />
                 </FABButton>
 
 
                 <h1>Raised Button</h1>
                 <p>Raised button</p>
-                <Button raised={true} ripple={false}>Button</Button>
+                <Button raised ripple={false}>Button</Button>
                 <p>Raised button with ripple</p>
-                <Button raised={true}>Button</Button>
+                <Button raised>Button</Button>
                 <p>Raised disabled button</p>
-                <Button raised={true} disabled={true}>Button</Button>
+                <Button raised disabled>Button</Button>
 
                 <h1>Colored Raised Button</h1>
                 <p>Raised button</p>
-                <Button raised={true} colored={true} ripple={false}>Button</Button>
+                <Button raised colored ripple={false}>Button</Button>
                 <p>Accent-colored raised button</p>
-                <Button raised={true} accent={true} ripple={false}>Button</Button>
+                <Button raised accent ripple={false}>Button</Button>
                 <p>Accent-colored raised button with ripple</p>
-                <Button raised={true} accent={true}>Button</Button>
+                <Button raised accent>Button</Button>
 
                 <h1>Flat button</h1>
                 <p>Flat button</p>
@@ -56,27 +56,27 @@ class Demo extends React.Component {
                 <p>Flat button with ripple</p>
                 <Button>Button</Button>
                 <p>Disabled Flat button</p>
-                <Button disabled={true}>Button</Button>
+                <Button disabled>Button</Button>
 
                 <h1>Colored Flat button</h1>
                 <p>Primary-colored Flat button</p>
-                <Button primary={true} ripple={false}>Button</Button>
+                <Button primary ripple={false}>Button</Button>
                 <p>Accent-colored flat button</p>
-                <Button accent={true} ripple={false}>Button</Button>
+                <Button accent ripple={false}>Button</Button>
 
                 <h1>Icon Button</h1>
                 <p>Icon button</p>
                 <IconButton name="mood" ripple={false} />
                 <p>Colored Icon button</p>
-                <IconButton name="mood" colored={true} ripple={false} />
+                <IconButton name="mood" colored ripple={false} />
 
                 <h1>Mini FAB Button</h1>
                 <p>Mini FAB Button</p>
-                <FABButton mini={true}>
+                <FABButton mini>
                     <Icon name="add" />
                 </FABButton>
                 <p>Colored Mini FAB Button</p>
-                <FABButton mini={true} colored={true}>
+                <FABButton mini colored>
                     <Icon name="add" />
                 </FABButton>
             </div>

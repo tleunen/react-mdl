@@ -10,7 +10,7 @@ class Demo extends React.Component {
                 <p>Uses a transparent header that draws on top of the layout's background</p>
                 <div style={{height: '300px', position: 'relative'}}>
                     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
-                        <Header transparent={true} title="Title" style={{color: 'white'}}>
+                        <Header transparent title="Title" style={{color: 'white'}}>
                             <Navigation>
                                 <a href="">Link</a>
                                 <a href="">Link</a>
@@ -32,7 +32,7 @@ class Demo extends React.Component {
 
                 <p>No header, and the drawer stays open on larger screens (fixed drawer).</p>
                 <div style={{height: '300px', position: 'relative'}}>
-                    <Layout fixedDrawer={true}>
+                    <Layout fixedDrawer>
                         <Drawer title="Title">
                             <Navigation>
                                 <a href="">Link</a>
@@ -47,7 +47,7 @@ class Demo extends React.Component {
 
                 <p>Always shows a header, even in smaller screens.</p>
                 <div style={{height: '300px', position: 'relative'}}>
-                    <Layout fixedHeader={true}>
+                    <Layout fixedHeader>
                         <Header title={<span><span style={{ color: '#ddd' }}>Area / </span><strong>The Title</strong></span>}>
                             <Navigation>
                                 <a href="">Link</a>
@@ -71,13 +71,13 @@ class Demo extends React.Component {
                 <p>The drawer is always open in large screens. The header is always shown,
   even in small screens.</p>
                 <div style={{height: '300px', position: 'relative'}}>
-                    <Layout fixedHeader={true} fixedDrawer={true}>
+                    <Layout fixedHeader fixedDrawer>
                         <Header title="Title">
                             <Textfield
                                 value=""
                                 onChange={() => {}}
                                 label="Search"
-                                expandable={true}
+                                expandable
                                 expandableIcon="search"
                             />
                         </Header>
@@ -97,7 +97,7 @@ class Demo extends React.Component {
   locked at the top</p>
                 <div className="big-content" style={{height: '300px', position: 'relative'}}>
                     <Layout>
-                        <Header title="Title" scroll={true}>
+                        <Header title="Title" scroll>
                             <Navigation>
                                 <a href="">Link</a>
                                 <a href="">Link</a>
@@ -122,13 +122,13 @@ class Demo extends React.Component {
                 <p>Uses a header that contracts as the page scrolls down.</p>
                 <div className="big-content" style={{height: '300px', position: 'relative'}}>
                     <Layout>
-                        <Header waterfall={true}>
+                        <Header waterfall>
                             <HeaderRow title="Title">
                                 <Textfield
                                     value=""
                                     onChange={() => {}}
                                     label="Search"
-                                    expandable={true}
+                                    expandable
                                     expandableIcon="search"
                                 />
                             </HeaderRow>
@@ -157,7 +157,7 @@ class Demo extends React.Component {
 
                 <p>Simple header with scrollable tabs.</p>
                 <div style={{height: '300px', position: 'relative'}}>
-                    <Layout fixedHeader={true}>
+                    <Layout fixedHeader>
                         <Header>
                             <HeaderRow title="Title" />
                             <HeaderTabs>
@@ -195,7 +195,7 @@ class Demo extends React.Component {
 
                 <p>Simple header with fixed tabs.</p>
                 <div style={{height: '300px', position: 'relative'}}>
-                    <Layout fixedHeader={true} fixedTabs={true}>
+                    <Layout fixedHeader fixedTabs>
                         <Header>
                             <HeaderRow title="Title" />
                             <HeaderTabs>

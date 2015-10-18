@@ -65,7 +65,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <p>With ripple</p>
-                <TabsDemo ripple={true} />
+                <TabsDemo ripple />
 
                 <p>Without ripple</p>
                 <TabsDemo ripple={false} />

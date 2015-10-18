@@ -16,7 +16,7 @@ describe('Button', function() {
     });
 
     it('disabled', function() {
-        shallowRenderer.render(<Button disabled={true}>Button</Button>);
+        shallowRenderer.render(<Button disabled>Button</Button>);
         var output = shallowRenderer.getRenderOutput();
 
         expect(output.type).toBe('button');
@@ -72,7 +72,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button colored={true}>Button</Button>);
+                shallowRenderer.render(<Button colored>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -80,7 +80,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button ripple={false} colored={true}>Button</Button>);
+                shallowRenderer.render(<Button ripple={false} colored>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -99,7 +99,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button primary={true}>Button</Button>);
+                shallowRenderer.render(<Button primary>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -107,7 +107,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button ripple={false} primary={true}>Button</Button>);
+                shallowRenderer.render(<Button ripple={false} primary>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -126,7 +126,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button accent={true}>Button</Button>);
+                shallowRenderer.render(<Button accent>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -134,7 +134,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button ripple={false} accent={true}>Button</Button>);
+                shallowRenderer.render(<Button ripple={false} accent>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -165,7 +165,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button raised={true}>Button</Button>);
+                shallowRenderer.render(<Button raised>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -173,7 +173,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button raised={true} ripple={false}>Button</Button>);
+                shallowRenderer.render(<Button raised ripple={false}>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -192,7 +192,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button raised={true} colored={true}>Button</Button>);
+                shallowRenderer.render(<Button raised colored>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -200,7 +200,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button raised={true} ripple={false} colored={true}>Button</Button>);
+                shallowRenderer.render(<Button raised ripple={false} colored>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -219,7 +219,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button raised={true} primary={true}>Button</Button>);
+                shallowRenderer.render(<Button raised primary>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -227,7 +227,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button raised={true} ripple={false} primary={true}>Button</Button>);
+                shallowRenderer.render(<Button raised ripple={false} primary>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -246,7 +246,7 @@ describe('Button', function() {
             });
 
             it('with ripple', function() {
-                shallowRenderer.render(<Button raised={true} accent={true}>Button</Button>);
+                shallowRenderer.render(<Button raised accent>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)
@@ -254,7 +254,7 @@ describe('Button', function() {
             });
 
             it('without ripple', function() {
-                shallowRenderer.render(<Button raised={true} ripple={false} accent={true}>Button</Button>);
+                shallowRenderer.render(<Button raised ripple={false} accent>Button</Button>);
                 var output = shallowRenderer.getRenderOutput();
 
                 expect(output.props.className)

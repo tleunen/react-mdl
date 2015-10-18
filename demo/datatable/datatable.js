@@ -18,7 +18,7 @@ class Demo extends React.Component {
 
         return (
             <div>
-                <DataTable columns={columns} data={data} selectable={true} />
+                <DataTable columns={columns} data={data} selectable />
             </div>
         );
     }

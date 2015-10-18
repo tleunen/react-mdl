@@ -13,7 +13,7 @@ class Demo extends React.Component {
                 </Tooltip>
 
                 <p>Large Tooltip</p>
-                <Tooltip label="Print" large={true}>
+                <Tooltip label="Print" large>
                     <Icon name="print" />
                 </Tooltip>
 

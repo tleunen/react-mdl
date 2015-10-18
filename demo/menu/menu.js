@@ -12,7 +12,7 @@ class Demo extends React.Component {
                 <Menu target="demo-menu-lower-left">
                     <MenuItem>Some Action</MenuItem>
                     <MenuItem>Another Action</MenuItem>
-                    <MenuItem disabled={true}>Disabled Action</MenuItem>
+                    <MenuItem disabled>Disabled Action</MenuItem>
                     <MenuItem>Yet Another Action</MenuItem>
                 </Menu>
 
@@ -21,7 +21,7 @@ class Demo extends React.Component {
                 <Menu target="demo-menu-lower-right" align="right">
                     <MenuItem>Some Action</MenuItem>
                     <MenuItem>Another Action</MenuItem>
-                    <MenuItem disabled={true}>Disabled Action</MenuItem>
+                    <MenuItem disabled>Disabled Action</MenuItem>
                     <MenuItem>Yet Another Action</MenuItem>
                 </Menu>
 
@@ -30,7 +30,7 @@ class Demo extends React.Component {
                 <Menu target="demo-menu-top-left" valign="top">
                     <MenuItem>Some Action</MenuItem>
                     <MenuItem>Another Action</MenuItem>
-                    <MenuItem disabled={true}>Disabled Action</MenuItem>
+                    <MenuItem disabled>Disabled Action</MenuItem>
                     <MenuItem>Yet Another Action</MenuItem>
                 </Menu>
 
@@ -39,7 +39,7 @@ class Demo extends React.Component {
                 <Menu target="demo-menu-top-right" valign="top" align="right">
                     <MenuItem>Some Action</MenuItem>
                     <MenuItem>Another Action</MenuItem>
-                    <MenuItem disabled={true}>Disabled Action</MenuItem>
+                    <MenuItem disabled>Disabled Action</MenuItem>
                     <MenuItem>Yet Another Action</MenuItem>
                 </Menu>
             </div>

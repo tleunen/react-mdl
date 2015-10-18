@@ -11,7 +11,7 @@ class Demo extends React.Component {
                 <ProgressBar progress={44} />
 
                 <p>MDL Progress Bar with Indeterminate Progress</p>
-                <ProgressBar indeterminate={true} />
+                <ProgressBar indeterminate />
 
                 <p>MDL Progress Bar with Buffering</p>
                 <ProgressBar progress={33} buffer={87} />
@@ -20,7 +20,7 @@ class Demo extends React.Component {
                 <Spinner />
 
                 <p>MDL Spinner Component with Single Color</p>
-                <Spinner singleColor={true} />
+                <Spinner singleColor />
             </div>
         );
     }
