@@ -121,23 +121,29 @@ class Example extends Component {
                 <section className="components">
                     { children }
                 </section>
-                <section className="code">
+                <section
+                    className={ classnames( {
+                        collapsed
+                    }, 'code' ) }
+                >
                     <Button
                         className="code-collapse"
-
-                        onClick={ this.toggle }>
+                        onClick={ this.toggle }
+                    >
                         <Icon
                             name="add"
                             className="collapse-icon"
-                            style={{
-                                transform: collapsed ? '' : 'rotateZ( 45deg )'
-                            }}
                         />
                         Code
                     </Button>
-                    <article className={ classnames( { collapsed }, 'code-samples' ) }>
+
+                    <article className="code-samples">
                     { React.Children.map( children, ( child, i ) =>
-                        <Code className="code-sample" key={ i } el={ child } />
+                        <Code
+                            className="code-sample"
+                            el={ child }
+                            key={ i }
+                        />
                     ) }
                     </article>
                 </section>

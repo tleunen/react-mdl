@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../extra/material.css">
     <script src="../extra/material.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="//cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/solarized_light.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+
     <style>
     .components > * ~ * {
       margin-left: 16px;
@@ -17,11 +21,16 @@
     .example .components {
       margin-bottom: 16px;
     }
-    .collapse-icon {
+    .code .collapse-icon {
+      transform: rotateZ( 45deg );
       transition-duration: 0.15s;
       transition-property: transform;
       will-change: transition;
     }
+    .code.collapsed .collapse-icon {
+      transform: rotateZ( 0 );
+    }
+
     .code-samples {
       transform: scaleY( 1 );
       transition-duration: 0.15s;
@@ -35,7 +44,7 @@
       border: 1px solid rgba(0,0,0,0.2);
       padding: 1em;
     }
-    .code-samples.collapsed {
+    .code.collapsed .code-samples {
       max-height: 0;
       overflow-y: hidden;
       transform: scaleY( 0 );
@@ -50,5 +59,9 @@
     <script src="/node_modules/react/dist/react.js"></script>
     <script src="/node_modules/react-dom/dist/react-dom.js"></script>
     <script src="/demo.bundle.js"></script>
+    <script>
+      var samples = [].slice.call( document.querySelectorAll('.code-samples'), 0 );
+      samples.forEach( hljs.highlightBlock );
+    </script>
 </body>
 </html>
