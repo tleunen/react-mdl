@@ -47,11 +47,14 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-loader": "^5.3.2",
-    "expect": "^1.12.2",
-    "mocha": "^2.3.3",
+    "glob": "^5.0.15",
+    "isparta": "^3.1.0",
+    "nodemon": "^1.7.1",
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0",
+    "tap-difflet": "^0.4.0",
+    "tape": "^4.2.1",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
@@ -60,7 +63,9 @@
     "react-dom": "0.14.x"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel/register --recursive",
+    "test": "babel-node test | tap-difflet -",
+    "test:cov": "babel-node node_modules/.bin/isparta cover test",
+    "test:watch": "nodemon -x 'babel-node test | tap-difflet -' -w src -w test",
     "lint": "eslint .",
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
