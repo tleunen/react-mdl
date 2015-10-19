@@ -114,13 +114,16 @@ class Example extends Component {
         e.preventDefault();
     }
     render () {
-        let { children } = this.props;
+        let { children, description, ...other } = this.props;
         let { collapsed } = this.state;
         return (
-            <article className="example">
+            <article className="example" { ...other }>
                 <section className="components">
                     { children }
                 </section>
+                <p className="description">
+                    { description }
+                </p>
                 <section
                     className={ classnames( {
                         collapsed
