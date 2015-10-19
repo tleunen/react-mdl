@@ -14,6 +14,14 @@ function linkToState(target, property) {
     };
 }
 
+function linkToChechedState(target, property) {
+    return e => {
+        target.setState({
+            [property]: e.target.checked
+        });
+    };
+}
+
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -32,8 +40,8 @@ class Demo extends React.Component {
         return (
             <div>
                 <p>Checkbox</p>
-                <Checkbox label="With ripple" ripple checked={this.state.checkbox1} onChange={linkToState(this, 'checkbox1')} />
-                <Checkbox label="Without ripple" checked={this.state.checkbox2} onChange={linkToState(this, 'checkbox2')} />
+                <Checkbox label="With ripple" ripple checked={this.state.checkbox1} onChange={linkToChechedState(this, 'checkbox1')} />
+                <Checkbox label="Without ripple" checked={this.state.checkbox2} onChange={linkToChechedState(this, 'checkbox2')} />
 
                 <p>Radio Button</p>
                 <RadioGroup name="demo" value={this.state.radio} onChange={linkToState(this, 'radio')}>

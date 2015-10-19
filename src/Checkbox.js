@@ -2,42 +2,33 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Checkbox extends React.Component {
-    static propTypes = {
-        checked: PropTypes.bool,
-        disabled: PropTypes.bool,
-        id: PropTypes.string,
-        label: PropTypes.string,
-        onChange: PropTypes.func.isRequired,
-        ripple: PropTypes.bool
-    }
+var Checkbox = (props) => {
+    var { checked, disabled, label, ripple, onChange } = props;
 
-    _handleChange = (event) => {
-        this.props.onChange(event.target.checked);
-    }
+    var classes = classNames('mdl-checkbox mdl-js-checkbox', {
+        'mdl-js-ripple-effect': ripple
+    });
 
-    render() {
-        var { checked, disabled, id, label, ripple } = this.props;
+    return (
+        <label className={classes}>
+            <input
+                type="checkbox"
+                className="mdl-checkbox__input"
+                checked={checked}
+                disabled={disabled}
+                onChange={onChange}
+            />
+            {label && <span className="mdl-checkbox__label">{label}</span>}
+        </label>
+    );
+};
 
-        var inputId = 'checkbox-' + (label || id).replace(/\s+/g, '');
-        var classes = classNames('mdl-checkbox mdl-js-checkbox', {
-            'mdl-js-ripple-effect': ripple
-        });
-
-        return (
-            <label className={classes} htmlFor={id}>
-                <input
-                    type="checkbox"
-                    id={inputId}
-                    className="mdl-checkbox__input"
-                    checked={checked}
-                    disabled={disabled}
-                    onChange={this._handleChange}
-                />
-                {this.props.label ? <span className="mdl-checkbox__label">{label}</span> : null}
-            </label>
-        );
-    }
-}
+Checkbox.propTypes = {
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool,
+    label: PropTypes.string,
+    onChange: PropTypes.func.isRequired,
+    ripple: PropTypes.bool
+};
 
 export default mdlUpgrade(Checkbox);
