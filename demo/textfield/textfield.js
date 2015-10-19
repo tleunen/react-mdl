@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import Textfield from '../../src/Textfield';
 
 function linkToState(target, property) {
-    return value => {
+    return event => {
         target.setState({
-            [property]: value
+            [property]: event.target.value
         });
     };
 }

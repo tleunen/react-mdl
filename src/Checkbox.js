@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
 var Checkbox = (props) => {
-    var { checked, disabled, label, ripple, onChange } = props;
+    var { label, ripple, ...inputProps } = props;
 
     var classes = classNames('mdl-checkbox mdl-js-checkbox', {
         'mdl-js-ripple-effect': ripple
@@ -14,9 +14,7 @@ var Checkbox = (props) => {
             <input
                 type="checkbox"
                 className="mdl-checkbox__input"
-                checked={checked}
-                disabled={disabled}
-                onChange={onChange}
+                { ...inputProps }
             />
             {label && <span className="mdl-checkbox__label">{label}</span>}
         </label>
@@ -27,7 +25,7 @@ Checkbox.propTypes = {
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     label: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
     ripple: PropTypes.bool
 };
 

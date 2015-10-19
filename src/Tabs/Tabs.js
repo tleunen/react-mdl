@@ -13,7 +13,7 @@ class Tabs extends React.Component {
             }
         }),
         className: PropTypes.string,
-        onChange: PropTypes.func.isRequired,
+        onChange: PropTypes.func,
         ripple: PropTypes.bool
     }
 
@@ -22,7 +22,9 @@ class Tabs extends React.Component {
     }
 
     _handleClickTab = (tabId) => {
-        this.props.onChange(tabId);
+        if (this.props.onChange) {
+            this.props.onChange(tabId);
+        }
     }
 
     render() {

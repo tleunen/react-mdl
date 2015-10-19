@@ -46,15 +46,11 @@ class Textfield extends React.Component {
         }
     }
 
-    _handleChange = (e) => {
-        this.props.onChange(e.target.value);
-    }
-
     render() {
         var { className, inputClassName,
               error, expandable, expandableIcon,
-              floatingLabel, label, maxRows, onChange,
-              rows, style, value, ...otherProps } = this.props;
+              floatingLabel, label, maxRows,
+              rows, style, ...otherProps } = this.props;
 
         var hasRows = !!rows;
         var inputId = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
@@ -64,13 +60,10 @@ class Textfield extends React.Component {
             className: classNames('mdl-textfield__input', inputClassName),
             id: inputId,
             key: inputId,
-            value: value,
             rows: rows,
             ref: 'input',
             ...otherProps
         };
-
-        if (onChange) inputProps.onChange = this._handleChange;
 
         var input = React.createElement(inputTag, inputProps);
 
