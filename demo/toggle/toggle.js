@@ -6,18 +6,17 @@ import Radio from '../../src/Radio';
 import IconToggle from '../../src/IconToggle';
 import Switch from '../../src/Switch';
 
-function linkToState(target, property) {
-    return value => {
+function linkValueToState(target, property) {
+    return event => {
         target.setState({
-            [property]: value
+            [property]: event.target.value
         });
     };
 }
-
-function linkToChechedState(target, property) {
-    return e => {
+function linkCheckedToState(target, property) {
+    return event => {
         target.setState({
-            [property]: e.target.checked
+            [property]: event.target.checked
         });
     };
 }
@@ -29,6 +28,7 @@ class Demo extends React.Component {
             checkbox1: true,
             checkbox2: false,
             radio: 'opt1',
+            radio2: 'opt2',
             icon1: true,
             icon2: false,
             switch1: true,
@@ -40,28 +40,28 @@ class Demo extends React.Component {
         return (
             <div>
                 <p>Checkbox</p>
-                <Checkbox label="With ripple" ripple checked={this.state.checkbox1} onChange={linkToChechedState(this, 'checkbox1')} />
-                <Checkbox label="Without ripple" checked={this.state.checkbox2} onChange={linkToChechedState(this, 'checkbox2')} />
+                <Checkbox label="With ripple" ripple checked={this.state.checkbox1} onChange={linkCheckedToState(this, 'checkbox1')} />
+                <Checkbox label="Without ripple" checked={this.state.checkbox2} onChange={linkCheckedToState(this, 'checkbox2')} />
 
                 <p>Radio Button</p>
-                <RadioGroup name="demo" value={this.state.radio} onChange={linkToState(this, 'radio')}>
-                    <Radio value="opt1">Option 1</Radio>
-                    <Radio value="opt2">Option 2</Radio>
+                <RadioGroup name="demo" value={this.state.radio} onChange={linkValueToState(this, 'radio')}>
+                    <Radio value="opt1" ripple>Ripple option</Radio>
+                    <Radio value="opt2">Other option</Radio>
                 </RadioGroup>
 
                 <p>Radio Button with custom containers</p>
-                <RadioGroup container="ul" childContainer="li" name="demo2" value={this.state.radio} onChange={linkToState(this, 'radio')}>
-                    <Radio value="opt1">Option 1</Radio>
-                    <Radio value="opt2">Option 2</Radio>
+                <RadioGroup container="ul" childContainer="li" name="demo2" value={this.state.radio2} onChange={linkValueToState(this, 'radio2')}>
+                    <Radio value="opt1" ripple>Ripple option</Radio>
+                    <Radio value="opt2">Other option</Radio>
                 </RadioGroup>
 
                 <p>Icon toggle</p>
-                <IconToggle id="bold" name="format_bold" checked={this.state.icon1} onChange={linkToState(this, 'icon1')} />
-                <IconToggle id="italic" name="format_italic" checked={this.state.icon2} onChange={linkToState(this, 'icon2')} />
+                <IconToggle ripple id="bold" name="format_bold" checked={this.state.icon1} onChange={linkCheckedToState(this, 'icon1')} />
+                <IconToggle id="italic" name="format_italic" checked={this.state.icon2} onChange={linkCheckedToState(this, 'icon2')} />
 
                 <p>Switch</p>
-                <Switch id="switch1" checked={this.state.switch1} onChange={linkToState(this, 'switch1')}>Enable this</Switch>
-                <Switch id="switch2" checked={this.state.switch2} onChange={linkToState(this, 'switch2')}>Enable that</Switch>
+                <Switch ripple id="switch1" checked={this.state.switch1} onChange={linkCheckedToState(this, 'switch1')}>Ripple switch</Switch>
+                <Switch id="switch2" checked={this.state.switch2} onChange={linkCheckedToState(this, 'switch2')}>Switch</Switch>
             </div>
         );
     }

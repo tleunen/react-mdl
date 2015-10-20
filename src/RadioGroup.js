@@ -12,7 +12,7 @@ class RadioGroup extends React.Component {
         }),
         container: PropTypes.string,
         name: PropTypes.string.isRequired,
-        onChange: PropTypes.func.isRequired,
+        onChange: PropTypes.func,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number
@@ -23,20 +23,16 @@ class RadioGroup extends React.Component {
         container: 'div'
     }
 
-    _handleChange = (value) => {
-        this.props.onChange(value);
-    }
-
     render() {
-        var { name, onChange, value, children,
+        var { name, value, children,
             container, childContainer, ...otherProps} = this.props;
 
         return React.createElement(container, otherProps,
             React.Children.map(children, child => {
                 var clonedChild = React.cloneElement(child, {
-                    name: name,
                     checked: child.props.value === value,
-                    onChange: this._handleChange
+                    name,
+                    ...otherProps
                 });
 
                 return childContainer ? React.createElement(childContainer, {}, clonedChild) : clonedChild;
