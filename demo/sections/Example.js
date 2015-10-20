@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Button from '../../src/Button';
 import Icon from '../../src/Icon';
 
-function getJSON ( value ) {
+function getJSON( value ) {
     let json = JSON.stringify( value, 0, 2 );
     return json.replace( /"([^"]+)":/g, '$1:' ).trim();
 }
@@ -23,11 +23,6 @@ let Prop = ( props ) => {
             value = <span style={{ whiteSpace: 'pre' }}>{`{`}{ getJSON( value ) }{`}`}</span>;
             break;
         case 'function':
-            let args = ( '' + value )
-                .match( /^[\S\s]*?function\s*\(([^)]+?)\)/ )[ 1 ]
-                .trim()
-                .split( /\s*,\s*/ )
-                .join( ', ' );
             value = `{ this._${ props.attr } }`;
             break;
         case 'boolean':
@@ -60,13 +55,13 @@ let Props = ( { el } ) => {
         </span>
     );
 };
-function getTag ( el ) {
+function getTag( el ) {
     if ( typeof el.type === 'string' ) {
         return el.type;
     }
     return el.type.displayName || el.type.name;
 }
-function OpenTag ( props ) {
+function OpenTag( props ) {
     let child = props.el;
     let tag = getTag( child );
     let childCount = React.Children.count( child.props.children );
@@ -78,7 +73,7 @@ function OpenTag ( props ) {
         </code>
     );
 }
-function CloseTag ( props ) {
+function CloseTag( props ) {
     let child = props.el;
     let tag = getTag( child );
     let childCount = React.Children.count( child.props.children );
@@ -92,7 +87,7 @@ function CloseTag ( props ) {
         </code>
     );
 }
-function Code ( props ) {
+function Code( props ) {
     let { el, ...other } = props;
 
     if ( !React.isValidElement( el ) ) {
@@ -114,6 +109,10 @@ function Code ( props ) {
 }
 
 class Example extends Component {
+    static propTypes = {
+        description: React.PropTypes.string
+    }
+
     state = { collapsed: true };
     toggle = ( e ) => {
         this.setState( {
@@ -121,7 +120,7 @@ class Example extends Component {
         } );
         e.preventDefault();
     }
-    render () {
+    render() {
         let { children, description, ...other } = this.props;
         let { collapsed } = this.state;
         return (

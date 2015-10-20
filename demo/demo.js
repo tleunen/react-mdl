@@ -16,9 +16,8 @@ import Textfields from './sections/Textfields';
 import Tooltips from './sections/Tooltips';
 
 const App = ( props ) => (
-    <Layout fixedHeader fixedDrawer>
-        <Header title="react-mdl">
-        </Header>
+    <Layout fixedHeader fixedDrawer { ...props }>
+        <Header title="react-mdl" />
         <Drawer>
             <Navigation>
                 <a href="#badges">Badges</a>

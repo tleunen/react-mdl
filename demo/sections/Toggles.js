@@ -10,10 +10,10 @@ import IconToggle from '../../src/IconToggle';
 
 class RadioGroupExample extends React.Component {
     state = {
-        value: 'opt1',
+        value: 'opt1'
     };
     _changed = ( e ) => this.setState( { value: e.target.value } );
-    render () {
+    render() {
         let { value } = this.state;
         return (
             <Example>

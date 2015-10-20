@@ -8,11 +8,11 @@ export default ( props ) => (
         <h3>Layout</h3>
         <code>// TODO</code>
         <Example description="Transparent header">
-          <Layout style={{
+        <Layout style={{
             background: 'url(//getmdl.io/assets/demos/transparent.jpg) center / cover'
-          }}>
+        }}>
             <Header transparent title="Title" style={{
-              color: 'white'
+                color: 'white'
             }}>
               <Navigation>
                 <a href="#">Link</a>
@@ -30,7 +30,7 @@ export default ( props ) => (
               </Navigation>
             </Drawer>
             <Content />
-          </Layout>
+        </Layout>
         </Example>
         <Example description="Fixed drawer, no header">
           <Layout fixedDrawer>

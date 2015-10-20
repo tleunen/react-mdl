@@ -58,7 +58,7 @@ export default ( props ) => (
             <Card shadowLevel={ 0 } style={{
                 height: 256,
                 width: 256,
-                background: `url('assets/images/jump.jpg') center / cover`,
+                background: `url('assets/images/jump.jpg') center / cover`
             }}>
                 <CardTitle expand />
                 <CardActions style={{ color: '#fff', background: 'rgba(0, 0, 0, 0.2)' }}>
@@ -91,10 +91,10 @@ export default ( props ) => (
                     borderColor: 'rgba(255, 255, 255, 0.2)',
                     display: 'flex',
                     boxSizing: 'border-box',
-                    alignItems: 'center',
+                    alignItems: 'center'
                 }}>
                     <Button colored style={{
-                    color: '#fff'
+                        color: '#fff'
                     }}>
                        Add to Calendar
                     </Button>
