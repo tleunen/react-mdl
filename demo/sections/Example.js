@@ -32,6 +32,10 @@ let Prop = ( props ) => {
     }
     return <span>{ attr }={ value }</span>;
 };
+Prop.propTypes = {
+    attr: React.PropTypes.string,
+    value: React.PropTypes.any
+};
 
 let Props = ( { el } ) => {
     let { props } = el;
