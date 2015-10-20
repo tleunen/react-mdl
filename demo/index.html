@@ -16,11 +16,19 @@
       margin-left: 16px;
     }
     .example {
-      margin-bottom: 16px;
+        margin-bottom: 16px;
+        text-align: center;
     }
     .example .components {
-      margin-bottom: 16px;
+        position: relative;
+        /*text-align: center;*/
+        margin: 0 auto 16px;
     }
+    .code,
+    .example .components > * {
+        text-align: left;
+    }
+
     .code .collapse-icon {
       transform: rotateZ( 45deg );
       transition-duration: 0.15s;
