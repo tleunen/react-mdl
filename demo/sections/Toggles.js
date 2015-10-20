@@ -8,6 +8,20 @@ import Radio from '../../src/Radio';
 import Switch from '../../src/Switch';
 import IconToggle from '../../src/IconToggle';
 
+class RadioGroupExample extends React.Component {
+    state = {
+        value: 'opt1',
+    };
+    _changed = ( e ) => this.setState( { value: e.target.value } );
+    render () {
+        let { value } = this.state;
+        return (
+            <Example>
+                <RadioGroup value={ value } onChange={ this._changed } { ...this.props } />
+            </Example>
+        );
+    }
+}
 export default ( props ) => (
     <section { ...props }>
         <h3>Toggles</h3>
@@ -17,35 +31,36 @@ export default ( props ) => (
         </Example>
 
         <p>Radio Button</p>
-        <Example>
-            <RadioGroup name="radio-group-demo">
-                <Radio value="opt1">Option</Radio>
-                <Radio value="opt2" ripple>Option with ripple</Radio>
-            </RadioGroup>
-        </Example>
+        <RadioGroupExample
+            name="radio-group-demo"
+            defaultValue="opt1"
+        >
+            <Radio value="opt1">Option</Radio>
+            <br />
+            <Radio value="opt2" ripple>Option with ripple</Radio>
+        </RadioGroupExample>
 
         <p>Radio Button with custom containers</p>
-        <Example>
-            <RadioGroup
-                container="ul"
-                childContainer="li"
-                name="radio-group-demo2"
-            >
-                <Radio value="opt1">Option</Radio>
-                <Radio value="opt2">Option with ripple</Radio>
-            </RadioGroup>
-        </Example>
+        <RadioGroupExample
+            container="ul"
+            childContainer="li"
+            name="radio-group-demo2"
+            defaultValue="opt1"
+        >
+            <Radio value="opt1">Option</Radio>
+            <Radio value="opt2" ripple>Option with ripple</Radio>
+        </RadioGroupExample>
 
         <p>Icon toggle</p>
         <Example>
             <IconToggle id="bold" name="format_bold" />
-            <IconToggle id="italic" name="format_italic" />
+            <IconToggle id="italic" name="format_italic" ripple />
         </Example>
 
         <p>Switch</p>
         <Example>
-            <Switch id="switch1">Enable this</Switch>
-            <Switch id="switch2">Enable that</Switch>
+            <Switch id="switch1">Switch</Switch>
+            <Switch id="switch2" ripple>Ripple switch</Switch>
         </Example>
 
     </section>

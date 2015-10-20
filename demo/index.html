@@ -12,8 +12,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
 
     <style>
-    .components > * ~ * {
+/*    .components > * + * {
       margin-left: 16px;
+    }
+*/
+    .components > * {
+      margin: 8px 16px;
+    }
+    .components > *:last-child {
+      /*margin-right: 0;*/
     }
     .example {
         margin-bottom: 16px;

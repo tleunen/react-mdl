@@ -22,6 +22,14 @@ let Prop = ( props ) => {
             // value = `{${ getJSON( value ) }}`;
             value = <span style={{ whiteSpace: 'pre' }}>{`{`}{ getJSON( value ) }{`}`}</span>;
             break;
+        case 'function':
+            let args = ( '' + value )
+                .match( /^[\S\s]*?function\s*\(([^)]+?)\)/ )[ 1 ]
+                .trim()
+                .split( /\s*,\s*/ )
+                .join( ', ' );
+            value = `{ this._${ props.attr } }`;
+            break;
         case 'boolean':
         case 'number':
         default:
