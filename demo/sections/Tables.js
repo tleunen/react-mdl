@@ -5,9 +5,7 @@ import DataTable from '../../src/DataTable';
 
 export default ( props ) => (
     <section { ...props }>
-        <h1 className="mdl-typography--display-2">Data Tables</h1>
-
-        <h5 className="mdl-typography--headline">Demo</h5>
+        <h3>Tables</h3>
 
         <Example>
         <DataTable

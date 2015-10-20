@@ -11,7 +11,7 @@ let Colored = () => (
         <FABButton colored>
             <Icon name="add" />
         </FABButton>
-        <FABButton colored ripple={ false }>
+        <FABButton colored ripple>
             <Icon name="add" />
         </FABButton>
     </Example>
@@ -21,7 +21,7 @@ let FAB = () => (
         <FABButton>
             <Icon name="add" />
         </FABButton>
-        <FABButton ripple={ false }>
+        <FABButton ripple>
             <Icon name="add" />
         </FABButton>
         <FABButton disabled>
@@ -33,7 +33,7 @@ let FAB = () => (
 let Raised = () => (
     <Example>
         <Button raised>Button</Button>
-        <Button raised ripple={ false }>Button</Button>
+        <Button raised ripple>Button</Button>
         <Button raised disabled>Button</Button>
     </Example>
 );
@@ -42,14 +42,14 @@ let RaisedColors = () => (
     <Example>
         <Button raised colored>Button</Button>
         <Button raised accent>Button</Button>
-        <Button raised accent ripple={ false }>Button</Button>
+        <Button raised accent ripple>Button</Button>
     </Example>
 );
 
 let Flat = () => (
     <Example>
         <Button>Button</Button>
-        <Button ripple={ false }>Button</Button>
+        <Button ripple>Button</Button>
         <Button disabled>Button</Button>
     </Example>
 );
