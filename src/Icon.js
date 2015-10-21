@@ -1,18 +1,16 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Icon extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        name: PropTypes.string.isRequired
-    }
+var Icon = (props) => {
+    var { className, name, ...otherProps } = props;
+    var classes = classNames('material-icons', className);
 
-    render() {
-        var { className, name, ...otherProps } = this.props;
-        var classes = classNames('material-icons', className);
+    return <i className={classes} {...otherProps}>{name}</i>;
+};
 
-        return <i className={classes} {...otherProps}>{name}</i>;
-    }
-}
+Icon.propTypes = {
+    className: PropTypes.string,
+    name: PropTypes.string.isRequired
+};
 
 export default Icon;
