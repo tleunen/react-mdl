@@ -3,7 +3,6 @@ node_js:
   - "node"
   - "0.12"
 script:
-  - npm run lint
   - npm test
 after_script:
   - "npm run test:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"

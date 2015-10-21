@@ -67,7 +67,8 @@
   },
   "scripts": {
     "test": "mocha --compilers js:babel/register --recursive",
-    "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha --report lcovonly -- -R spec --recursive",
+    "posttest": "npm run lint",
+    "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha --report html --report lcovonly -- -R spec --recursive",
     "lint": "eslint .",
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
