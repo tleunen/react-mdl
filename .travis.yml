@@ -5,4 +5,4 @@ node_js:
 script:
   - npm test
 after_script:
-  - "npm run test:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  - "npm run test:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"

@@ -1,16 +1,13 @@
 /* eslint-env mocha */
-var expect = require('expect');
-var ReactTestUtils = require('react-addons-test-utils');
-var React = require('react');
-var Badge = require('../src/Badge');
-var Icon = require('../src/Icon');
+import expect from 'expect';
+import React from 'react';
+import render from './render';
+import Badge from '../src/Badge';
+import Icon from '../src/Icon';
 
-describe('Badge', function() {
-    var shallowRenderer = ReactTestUtils.createRenderer();
-
-    it('render a span around text child', function() {
-        shallowRenderer.render(<Badge text="4">Inbox</Badge>);
-        var output = shallowRenderer.getRenderOutput();
+describe('Badge', () => {
+    it('should render span with data-badge on text child', () => {
+        var output = render(<Badge text="4">Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -18,18 +15,16 @@ describe('Badge', function() {
         expect(output.props.children).toBe('Inbox');
     });
 
-    it('append badge data/class to existing complex child', function() {
-        shallowRenderer.render(<Badge text="8"><Icon name="account_box" /></Badge>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should append badge data/class to existing complex child', () => {
+        var output = render(<Badge text="8"><Icon name="account_box" /></Badge>);
 
         expect(output.type).toBe(Icon);
         expect(output.props.className).toBe('mdl-badge');
         expect(output.props['data-badge']).toBe('8');
     });
 
-    it('render empty badge', function() {
-        shallowRenderer.render(<Badge text="">Inbox</Badge>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should render empty badge when text is empty', () => {
+        var output = render(<Badge text="">Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -37,9 +32,8 @@ describe('Badge', function() {
         expect(output.props.children).toBe('Inbox');
     });
 
-    it('allow number as badge text', function() {
-        shallowRenderer.render(<Badge text={4}>Inbox</Badge>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should allow number as badge text', () => {
+        var output = render(<Badge text={4}>Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -47,40 +41,49 @@ describe('Badge', function() {
         expect(output.props.children).toBe('Inbox');
     });
 
-    describe('does not render badge when', function() {
-        it('no children', function() {
-            shallowRenderer.render(<Badge text="4" />);
-            var output = shallowRenderer.getRenderOutput();
+    describe('should not render badge', () => {
+        it('when no children', () => {
+            var output = render(<Badge text="4" />);
 
             expect(output).toNotExist();
         });
 
-        it('badge text is on text child', function() {
-            shallowRenderer.render(<Badge text={null}>Inbox</Badge>);
-            var output = shallowRenderer.getRenderOutput();
+        describe('when badge text is null', () => {
+            it('and the child is text', () => {
+                var output = render(<Badge text={null}>Inbox</Badge>);
 
-            expect(output.type).toBe('span');
-            expect(output.props.className).toNotBe('mdl-badge');
-            expect(output.props['data-badge']).toNotExist();
-            expect(output.props.children).toBe('Inbox');
+                expect(output.type).toBe('span');
+                expect(output.props.className).toNotBe('mdl-badge');
+                expect(output.props['data-badge']).toNotExist();
+                expect(output.props.children).toBe('Inbox');
+            });
+
+            it('and the child is a complex object', () => {
+                var output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
+
+                expect(output.type).toBe(Icon);
+                expect(output.props.className).toNotBe('mdl-badge');
+                expect(output.props['data-badge']).toNotExist();
+            });
         });
 
-        it('badge text is null on complex child', function() {
-            shallowRenderer.render(<Badge text={null}><Icon name="account_box" /></Badge>);
-            var output = shallowRenderer.getRenderOutput();
+        describe('when badge text is undefined', () => {
+            it('and the child is text', () => {
+                var output = render(<Badge text={null}>Inbox</Badge>);
 
-            expect(output.type).toBe(Icon);
-            expect(output.props.className).toNotBe('mdl-badge');
-            expect(output.props['data-badge']).toNotExist();
-        });
+                expect(output.type).toBe('span');
+                expect(output.props.className).toNotBe('mdl-badge');
+                expect(output.props['data-badge']).toNotExist();
+                expect(output.props.children).toBe('Inbox');
+            });
 
-        it('it does not have any text', function() {
-            shallowRenderer.render(<Badge><Icon name="account_box" /></Badge>);
-            var output = shallowRenderer.getRenderOutput();
+            it('and the child is a complex object', () => {
+                var output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
 
-            expect(output.type).toBe(Icon);
-            expect(output.props.className).toNotBe('mdl-badge');
-            expect(output.props['data-badge']).toNotExist();
+                expect(output.type).toBe(Icon);
+                expect(output.props.className).toNotBe('mdl-badge');
+                expect(output.props['data-badge']).toNotExist();
+            });
         });
     });
 });

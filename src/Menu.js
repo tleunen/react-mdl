@@ -18,7 +18,7 @@ class Menu extends React.Component {
     }
 
     render() {
-        var { align, className, ripple, target, valign, ...otherProps} = this.props;
+        var { align, children, className, ripple, target, valign, ...otherProps} = this.props;
 
         var classes = classNames('mdl-menu mdl-js-menu', {
             [`mdl-menu--${valign}-${align}`]: true,
@@ -27,7 +27,7 @@ class Menu extends React.Component {
 
         return (
             <ul className={classes} htmlFor={target} {...otherProps}>
-                {this.props.children}
+                {children}
             </ul>
         );
     }

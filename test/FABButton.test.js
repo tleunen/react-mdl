@@ -1,75 +1,40 @@
 /* eslint-env mocha */
-var expect = require('expect');
-var ReactTestUtils = require('react-addons-test-utils');
-var React = require('react');
-var FABButton = require('../src/FABButton');
-var Button = require('../src/Button');
-var Icon = require('../src/Icon');
+import expect from 'expect';
+import React from 'react';
+import render from './render';
+import Button from '../src/Button';
+import FABButton from '../src/FABButton';
+import Icon from '../src/Icon';
 
-describe('FAB Button', function() {
-    var shallowRenderer = ReactTestUtils.createRenderer();
-
-    it('should render a fab button with a text', function() {
-        shallowRenderer.render(<FABButton>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
+describe('FAB Button', () => {
+    it('should render a Button component', () => {
+        var output = render(<FABButton>A</FABButton>);
 
         expect(output.type).toBe(Button);
+    });
+
+    it('should have mdl fab css class', () => {
+        var output = render(<FABButton>A</FABButton>);
+
         expect(output.props.className).toInclude('mdl-button--fab');
+    });
+
+    it('should allow text child', () => {
+        var output = render(<FABButton>A</FABButton>);
+
         expect(output.props.children).toBe('A');
     });
 
-    it('should render a fab button with an icon', function() {
-        shallowRenderer.render(<FABButton><Icon name="add" /></FABButton>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should allow complex child', () => {
+        var output = render(<FABButton><Icon name="add" /></FABButton>);
 
-        expect(output.type).toBe(Button);
-        expect(output.props.className).toInclude('mdl-button--fab');
         expect(output.props.children.type).toBe(Icon);
     });
 
-    it('should render a disabled fab button', function() {
-        shallowRenderer.render(<FABButton disabled>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should be mini when specified', () => {
+        var output = render(<FABButton mini>A</FABButton>);
 
-        expect(output.type).toBe(Button);
-        expect(output.props.className).toInclude('mdl-button--fab');
-        expect(output.props.disabled).toBe(true);
-    });
-
-    it('should render a fab button with ripple', function() {
-        shallowRenderer.render(<FABButton ripple>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
-
-        expect(output.type).toBe(Button);
-        expect(output.props.className).toInclude('mdl-button--fab');
-        expect(output.props.ripple).toBe(true);
-    });
-
-    it('should render a fab button without ripple', function() {
-        shallowRenderer.render(<FABButton>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
-
-        expect(output.type).toBe(Button);
-        expect(output.props.className).toInclude('mdl-button--fab');
-        expect(output.props.ripple).toNotExist();
-    });
-
-    it('should render a colored fab button', function() {
-        shallowRenderer.render(<FABButton colored>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
-
-        expect(output.type).toBe(Button);
-        expect(output.props.className).toInclude('mdl-button--fab');
-        expect(output.props.colored).toBe(true);
-    });
-
-    it('should render a mini fab button', function() {
-        shallowRenderer.render(<FABButton mini>A</FABButton>);
-        var output = shallowRenderer.getRenderOutput();
-
-        expect(output.type).toBe(Button);
         expect(output.props.className)
-            .toInclude('mdl-button--fab')
             .toInclude('mdl-button--mini-fab');
     });
 });

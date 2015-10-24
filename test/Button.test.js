@@ -1,292 +1,147 @@
 /* eslint-env mocha */
-var expect = require('expect');
-var ReactTestUtils = require('react-addons-test-utils');
-var React = require('react');
-var Button = require('../src/Button');
+import expect from 'expect';
+import React from 'react';
+import render from './render';
+import Button from '../src/Button';
 
-describe('Button', function() {
-    var shallowRenderer = ReactTestUtils.createRenderer();
-
-    it('enabled', function() {
-        shallowRenderer.render(<Button>Button</Button>);
-        var output = shallowRenderer.getRenderOutput();
-
+describe('Button', () => {
+    it('should be a <button>', () => {
+        var output = render(<Button>Button</Button>);
         expect(output.type).toBe('button');
+    });
+
+    it('should be a <a> when "href" is provided', () => {
+        var output = render(<Button href="#">Button</Button>);
+
+        expect(output.type).toBe('a');
+        expect(output.props.href).toBe('#');
+    });
+
+    it('should be a custom component when "component" is provided', () => {
+        var MyCustomComponent = (props) => <button {...props} />;
+        var output = render(<Button component={MyCustomComponent}>Button</Button>);
+
+        expect(output.type).toBe(MyCustomComponent);
+    });
+
+    it('should be enabled', () => {
+        var output = render(<Button>Button</Button>);
+
         expect(output.props.disabled).toNotExist();
     });
 
-    it('disabled', function() {
-        shallowRenderer.render(<Button disabled>Button</Button>);
-        var output = shallowRenderer.getRenderOutput();
+    it('should be disabled when specified', () => {
+        var output = render(<Button disabled>Button</Button>);
 
-        expect(output.type).toBe('button');
         expect(output.props.disabled).toBe(true);
     });
 
-    describe('flat button', function() {
-        afterEach(function() {
-            var output = shallowRenderer.getRenderOutput();
+    it('should have mdl css classes', () => {
+        var output = render(<Button>Button</Button>);
 
-            expect(output.type).toBe('button');
-            expect(output.props.className)
-                .toInclude('mdl-button')
-                .toInclude('mdl-js-button')
-                .toExclude('mdl-button--raised');
-        });
-
-        describe('normal', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('colored', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button colored ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button colored>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('primary', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toInclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button primary ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button primary>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('accent-colored', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toInclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button accent ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button accent>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
+        expect(output.props.className)
+            .toInclude('mdl-button')
+            .toInclude('mdl-js-button');
     });
 
-    describe('raised button', function() {
-        afterEach(function() {
-            var output = shallowRenderer.getRenderOutput();
+    it('should allow custom css classes', () => {
+        var output = render(<Button className="my-button">Button</Button>);
 
-            expect(output.type).toBe('button');
-            expect(output.props.className)
-                .toInclude('mdl-button')
-                .toInclude('mdl-js-button')
-                .toInclude('mdl-button--raised');
-        });
-
-        describe('normal', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button raised ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button raised>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('colored', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button raised colored ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button raised colored>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('primary', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toInclude('mdl-button--primary')
-                    .toExclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button raised primary ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button raised primary>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
-
-        describe('accent-colored', function() {
-            afterEach(function() {
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-button--colored')
-                    .toExclude('mdl-button--primary')
-                    .toInclude('mdl-button--accent');
-            });
-
-            it('with ripple', function() {
-                shallowRenderer.render(<Button raised accent ripple>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toInclude('mdl-js-ripple-effect');
-            });
-
-            it('without ripple', function() {
-                shallowRenderer.render(<Button raised accent>Button</Button>);
-                var output = shallowRenderer.getRenderOutput();
-
-                expect(output.props.className)
-                    .toExclude('mdl-js-ripple-effect');
-            });
-        });
+        expect(output.props.className)
+            .toInclude('my-button');
     });
 
-    describe('custom types', function() {
-        it('<a> using href', function() {
-            shallowRenderer.render(<Button href="#">Button</Button>);
-            var output = shallowRenderer.getRenderOutput();
+    it('should not have ripple by default', () => {
+        var output = render(<Button>Button</Button>);
 
-            expect(output.type).toBe('a');
-            expect(output.props.className)
-                .toInclude('mdl-button')
-                .toInclude('mdl-js-button');
-            expect(output.props.href).toBe('#');
-        });
+        expect(output.props.className)
+            .toExclude('mdl-js-ripple-effect');
+    });
 
-        it('custom component', function() {
-            var MyCustomComponent = (props) => {
-                return <button {...props} />;
-            };
+    it('should have ripple when specified', () => {
+        var output = render(<Button ripple>Button</Button>);
 
-            shallowRenderer.render(<Button component={MyCustomComponent}>Button</Button>);
-            var output = shallowRenderer.getRenderOutput();
+        expect(output.props.className)
+            .toInclude('mdl-js-ripple-effect');
+    });
 
-            expect(output.type).toBe(MyCustomComponent);
-            expect(output.props.className)
-                .toInclude('mdl-button')
-                .toInclude('mdl-js-button');
-        });
+    it('should be flat', () => {
+        var output = render(<Button>Button</Button>);
+
+        expect(output.props.className)
+            .toExclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be flat colored when specified', () => {
+        var output = render(<Button colored>Button</Button>);
+
+        expect(output.props.className)
+            .toExclude('mdl-button--raised')
+            .toInclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be flat primary when specified', () => {
+        var output = render(<Button primary>Button</Button>);
+
+        expect(output.props.className)
+            .toExclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toInclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be flat accent-colored when specified', () => {
+        var output = render(<Button accent>Button</Button>);
+
+        expect(output.props.className)
+            .toExclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toInclude('mdl-button--accent');
+    });
+
+    it('should be raised', () => {
+        var output = render(<Button raised>Button</Button>);
+
+        expect(output.props.className)
+            .toInclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be raised colored when specified', () => {
+        var output = render(<Button raised colored>Button</Button>);
+
+        expect(output.props.className)
+            .toInclude('mdl-button--raised')
+            .toInclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be raised primary when specified', () => {
+        var output = render(<Button raised primary>Button</Button>);
+
+        expect(output.props.className)
+            .toInclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toInclude('mdl-button--primary')
+            .toExclude('mdl-button--accent');
+    });
+
+    it('should be raised accent-colored when specified', () => {
+        var output = render(<Button raised accent>Button</Button>);
+
+        expect(output.props.className)
+            .toInclude('mdl-button--raised')
+            .toExclude('mdl-button--colored')
+            .toExclude('mdl-button--primary')
+            .toInclude('mdl-button--accent');
     });
 });
