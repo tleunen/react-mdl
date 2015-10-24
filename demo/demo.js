@@ -44,7 +44,7 @@ const App = ( props ) => (
             <Sliders id="sliders" />
             <Toggles id="toggles" />
             <Tables id="tables" />
-            <Textfields id="textfields" />
+            <Textfields id="text-fields" />
             <Tooltips id="tooltips" />
         </Content>
     </Layout>
