@@ -14,6 +14,10 @@ let Prop = ( props ) => {
     if ( value === true ) {
         return <span>{ attr }</span>;
     }
+    if ( React.isValidElement( value ) ) {
+        return <span>{ attr }={`{ `}<Code el={ value } />{` }`}</span>;
+    }
+
     switch ( typeof value ) {
         case 'string':
             value = `"${ value }"`;
