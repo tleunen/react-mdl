@@ -1,7 +1,11 @@
-import { createRenderer } from 'react-addons-test-utils';
+import { createRenderer, renderIntoDocument } from 'react-addons-test-utils';
 import MDLComponent from '../src/utils/MDLComponent';
 
-export default element => {
+export default (element, needDom) => {
+    if(needDom) {
+        return renderIntoDocument(element);
+    }
+
     const renderer = createRenderer();
     renderer.render(element);
 
