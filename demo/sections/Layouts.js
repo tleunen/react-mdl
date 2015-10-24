@@ -6,7 +6,6 @@ import Layout, { Content, Drawer, Header, Spacer, Navigation } from '../../src/L
 export default ( props ) => (
     <section { ...props }>
         <h3>Layout</h3>
-        <code>// TODO</code>
         <Example description="Transparent header">
         <Layout style={{
             background: 'url(//getmdl.io/assets/demos/transparent.jpg) center / cover'

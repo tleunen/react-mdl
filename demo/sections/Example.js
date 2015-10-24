@@ -7,7 +7,6 @@ function getJSON( value ) {
     let json = JSON.stringify( value, 0, 2 );
     return json.replace( /"([^"]+)":/g, '$1:' ).trim();
 }
-
 let Prop = ( props ) => {
     let { attr, value } = props;
     attr = ` ${ attr }`;
@@ -15,7 +14,7 @@ let Prop = ( props ) => {
         return <span>{ attr }</span>;
     }
     if ( React.isValidElement( value ) ) {
-        return <span>{ attr }={`{ `}<Code el={ value } />{` }`}</span>;
+        return <span>{ attr }={`{ `}<Code el={ value } style={{ marginLeft: '1em' }} />{` }`}</span>;
     }
 
     switch ( typeof value ) {
