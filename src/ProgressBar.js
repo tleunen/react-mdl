@@ -12,22 +12,22 @@ class ProgressBar extends React.Component {
     }
 
     componentDidMount(){
-        this.setProgress(this.props.progress);
-        this.setBuffer(this.props.buffer);
+        this._setProgress(this.props.progress);
+        this._setBuffer(this.props.buffer);
     }
 
     componentDidUpdate() {
-        this.setProgress(this.props.progress);
-        this.setBuffer(this.props.buffer);
+        this._setProgress(this.props.progress);
+        this._setBuffer(this.props.buffer);
     }
 
-    setProgress(progress) {
+    _setProgress(progress) {
         if(!this.props.indeterminate && progress !== undefined) {
             findDOMNode(this).MaterialProgress.setProgress(progress);
         }
     }
 
-    setBuffer(buffer) {
+    _setBuffer(buffer) {
         if(buffer !== undefined) {
             findDOMNode(this).MaterialProgress.setBuffer(buffer);
         }

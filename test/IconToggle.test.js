@@ -2,41 +2,38 @@
 import expect from 'expect';
 import React from 'react';
 import render from './render';
-import Checkbox from '../src/Checkbox';
+import IconToggle from '../src/IconToggle';
+import Icon from '../src/Icon';
 
-describe('Checkbox', () => {
+describe('IconToggle', () => {
     it('should render an input checkbox inside a <label> ', () => {
-        var output = render(<Checkbox />);
+        var output = render(<IconToggle name="add" />);
 
         expect(output.type).toBe('label');
         expect(output.props.className)
-            .toInclude('mdl-checkbox')
-            .toInclude('mdl-js-checkbox');
+            .toInclude('mdl-icon-toggle')
+            .toInclude('mdl-js-icon-toggle');
 
         var input = output.props.children[0];
         expect(input.type).toBe('input');
         expect(input.props.type).toBe('checkbox');
     });
 
-    it('should not render the checkbox label when not provided', () => {
-        var output = render(<Checkbox />);
+    it('should render an Icon inside the <label> ', () => {
+        var output = render(<IconToggle name="add" />);
 
-        expect(output.props.children[1]).toNotExist();
-    });
+        expect(output.type).toBe('label');
+        expect(output.props.className)
+            .toInclude('mdl-icon-toggle')
+            .toInclude('mdl-js-icon-toggle');
 
-    it('should render the label when provided', () => {
-        var output = render(<Checkbox label="My checkbox" />);
-
-        expect(output.props.children.length).toBe(2);
-
-        var checkboxLabel = output.props.children[1];
-        expect(checkboxLabel.type).toBe('span');
-        expect(checkboxLabel.props.className).toBe('mdl-checkbox__label');
-        expect(checkboxLabel.props.children).toBe('My checkbox');
+        var icon = output.props.children[1];
+        expect(icon.type).toBe(Icon);
+        expect(icon.props.name).toBe('add');
     });
 
     it('should be unchecked by default', () => {
-        var output = render(<Checkbox />);
+        var output = render(<IconToggle name="add" />);
 
         var input = output.props.children[0];
         expect(input.type).toBe('input');
@@ -44,7 +41,7 @@ describe('Checkbox', () => {
     });
 
     it('should be checked when specified', () => {
-        var output = render(<Checkbox checked />);
+        var output = render(<IconToggle name="add" checked />);
 
         var input = output.props.children[0];
         expect(input.type).toBe('input');
@@ -52,7 +49,7 @@ describe('Checkbox', () => {
     });
 
     it('should be disabled when specified', () => {
-        var output = render(<Checkbox disabled />);
+        var output = render(<IconToggle name="add" disabled />);
 
         var input = output.props.children[0];
         expect(input.type).toBe('input');
@@ -60,7 +57,7 @@ describe('Checkbox', () => {
     });
 
     it('should add ripple when specified', () => {
-        var output = render(<Checkbox ripple />);
+        var output = render(<IconToggle name="add" ripple />);
 
         expect(output.type).toBe('label');
         expect(output.props.className).toInclude('mdl-js-ripple-effect');

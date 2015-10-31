@@ -4,17 +4,15 @@ import mdlUpgrade from './utils/mdlUpgrade';
 
 function Radio( props ) {
     var { children, className, name, ripple, value, ...inputProps } = props;
-    var inputId = 'radio-' + name.replace(/\s+/g, '') + '-' + value.replace(/\s+/g, '');
 
     var classes = classNames('mdl-radio mdl-js-radio', {
         'mdl-js-ripple-effect': ripple
     }, className);
 
     return (
-        <label className={classes} htmlFor={inputId}>
+        <label className={classes}>
             <input
                 type="radio"
-                id={inputId}
                 className="mdl-radio__button"
                 value={value}
                 name={name}

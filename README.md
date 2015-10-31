@@ -11,7 +11,7 @@ React-MDL is a set of React components build on top of [Material Design Lite](ht
 Because of an issue with the original Layout component from MDL that makes it incompatible with React (a fix is already submitted and should land in MDL 2.0), you can't use the original .js and .css files. Instead, I provide you the files with my the fix. ([Read this for more information on the issue](https://github.com/google/material-design-lite/issues/1356)).
 
 The files are available in this repository inside the `/extra/` folder: [material.css](/extra/material.css) and [material.js](/extra/material.js)
-```
+```html
 <link rel="stylesheet" href="material.css">
 <script src="material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -20,7 +20,7 @@ The files are available in this repository inside the `/extra/` folder: [materia
 ## How to use the components
 
 ### import the entire library
-```
+```js
 import ReactMDL from 'react-mdl';
 
 var Button = ReactMDL.Button;
@@ -31,7 +31,7 @@ import { Button, Card, CardText } from 'react-mdl';
 ```
 
 ### import a specific component
-```
+```js
 import Button from 'react-mdl/lib/Button';
 import Card, { CardText, CardActions } from 'react-mdl/lib/Card';
 ```
