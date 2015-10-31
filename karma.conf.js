@@ -46,8 +46,8 @@ module.exports = function karma(config) {
             module: {
                 preLoaders: [
                     {
-                        test: /\.jsx?$/,
-                        exclude: /(test|node_modules)/,
+                        test: /\.js$/,
+                        exclude: /(__tests__|node_modules)\//,
                         loader: 'isparta-instrumenter-loader'
                     }
                 ],

@@ -15,7 +15,13 @@ class Tab extends React.Component {
         style: {}
     }
 
-    _handleClick = () => {
+    constructor(props) {
+        super(props);
+
+        this._handleClick = this._handleClick.bind(this);
+    }
+
+    _handleClick() {
         this.props.onTabClick(this.props.tabId);
     }
 
