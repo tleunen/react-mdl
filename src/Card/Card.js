@@ -39,7 +39,5 @@ class Card extends React.Component {
 }
 
 export default Card;
-export CardTitle from './CardTitle';
-export CardActions from './CardActions';
 export var CardText = basicClassCreator('CardText', 'mdl-card__supporting-text');
 export var CardMenu = basicClassCreator('CardMenu', 'mdl-card__menu');

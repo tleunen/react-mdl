@@ -52,4 +52,3 @@ class Tabs extends React.Component {
 }
 
 export default mdlUpgrade(Tabs);
-export { Tab };

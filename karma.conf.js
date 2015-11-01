@@ -34,7 +34,8 @@ module.exports = function(config) {
             reporters: [
                 { type: 'html', subdir: 'html' },
                 { type: 'lcovonly', subdir: '.' },
-                { type: 'json', subdir: '.' }
+                { type: 'json', subdir: '.' },
+                { type: 'text' }
             ]
         },
         singleRun: false,

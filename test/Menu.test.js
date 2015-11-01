@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import render from './render';
+import { render } from './render';
 import Menu from '../src/Menu';
 
 describe('Menu', () => {

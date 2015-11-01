@@ -10,5 +10,4 @@ before_install:
 script:
   - npm test
 after_script:
-#  - "npm run test:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"

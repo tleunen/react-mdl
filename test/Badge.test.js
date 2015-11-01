@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import render from './render';
+import { render } from './render';
 import Badge from '../src/Badge';
 import Icon from '../src/Icon';
 

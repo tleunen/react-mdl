@@ -2,33 +2,33 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-function Switch( props ) {
-    var { className, id, ripple, children, ...inputProps } = props;
-    var inputId = 'switch-' + id;
+class Switch extends React.Component {
+    static propTypes = {
+        checked: PropTypes.bool,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        onChange: PropTypes.func,
+        ripple: PropTypes.bool
+    }
 
-    var classes = classNames('mdl-switch mdl-js-switch', {
-        'mdl-js-ripple-effect': ripple
-    }, className);
+    render() {
+        var { className, ripple, children, ...inputProps } = this.props;
 
-    return (
-        <label className={classes} htmlFor={inputId}>
-            <input
-                type="checkbox"
-                id={inputId}
-                className="mdl-switch__input"
-                { ...inputProps }
-            />
-            <span className="mdl-switch__label">{children}</span>
-        </label>
-    );
+        var classes = classNames('mdl-switch mdl-js-switch', {
+            'mdl-js-ripple-effect': ripple
+        }, className);
+
+        return (
+            <label className={classes}>
+                <input
+                    type="checkbox"
+                    className="mdl-switch__input"
+                    { ...inputProps }
+                />
+                <span className="mdl-switch__label">{children}</span>
+            </label>
+        );
+    }
 }
-Switch.propTypes = {
-    checked: PropTypes.bool,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    id: PropTypes.string.isRequired,
-    onChange: PropTypes.func,
-    ripple: PropTypes.bool
-};
 
 export default mdlUpgrade(Switch);

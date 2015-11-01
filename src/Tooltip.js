@@ -15,7 +15,7 @@ var Tooltip = (props) => {
         element = <span>{children}</span>;
     }
     else {
-        element = React.Children.only(this.props.children);
+        element = React.Children.only(children);
     }
 
     return (

@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import render from './render';
+import { render } from './render';
 import Button from '../src/Button';
 import FABButton from '../src/FABButton';
 import Icon from '../src/Icon';

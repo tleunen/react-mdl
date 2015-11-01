@@ -1,3 +1,4 @@
 demo/
 webpack.config.js
 test/
+karma.conf.js
