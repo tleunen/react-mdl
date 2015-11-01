@@ -12,31 +12,26 @@ var shadows = [
     'mdl-shadow--16dp'
 ];
 
-class Card extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        shadowLevel: PropTypes.number
-    }
+var Card = (props) => {
+    var { className, shadow, children, ...otherProps } = props;
 
-    render() {
-        var { className, shadowLevel, ...otherProps } = this.props;
+    var hasShadow = typeof shadow !== 'undefined';
+    var shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
-        var showShadow = typeof shadowLevel !== 'undefined';
+    var classes = classNames('mdl-card', {
+        [shadows[shadowLevel]]: hasShadow
+    }, className);
 
-        shadowLevel = clamp(shadowLevel || 0, 0, shadows.length - 1);
-
-        var shadow = {};
-        shadow[shadows[shadowLevel]] = showShadow;
-
-        var classes = classNames('mdl-card',shadow, className);
-
-        return (
-            <div className={classes} {...otherProps}>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+    return (
+        <div className={classes} {...otherProps}>
+            {children}
+        </div>
+    );
+};
+Card.propTypes = {
+    className: PropTypes.string,
+    shadow: PropTypes.number
+};
 
 export default Card;
 export var CardText = basicClassCreator('CardText', 'mdl-card__supporting-text');
