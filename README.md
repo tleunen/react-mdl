@@ -1,6 +1,8 @@
-# React-MDL [![Build Status](https://travis-ci.org/tleunen/react-mdl.svg?branch=master)](https://travis-ci.org/tleunen/react-mdl) [![Coverage Status](https://coveralls.io/repos/tleunen/react-mdl/badge.svg?branch=master&service=github)](https://coveralls.io/github/tleunen/react-mdl?branch=master)
+# React-MDL [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
-React-MDL is a set of React components build on top of [Material Design Lite](https://github.com/google/material-design-lite). It's based on their version 1.0.4.
+React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url]. It's based on their version 1.0.4.
+
+Join the #react-mdl channel of the [Reactiflux Discord][discord-url] community.
 
 ## Requirements
 Because of an issue with the original Layout component from MDL that makes it incompatible with React (a fix is already submitted and should land in MDL 2.0), you can't use the original .js and .css files. Instead, I provide you the files with my the fix. ([Read this for more information on the issue](https://github.com/google/material-design-lite/issues/1356)).
@@ -42,3 +44,10 @@ npm run demo
 ## License
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
+
+[travis-image]: https://travis-ci.org/tleunen/react-mdl.svg?branch=master
+[travis-url]: https://travis-ci.org/tleunen/react-mdl
+[coveralls-image]: https://coveralls.io/repos/tleunen/react-mdl/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/tleunen/react-mdl?branch=master
+[google-mdl-url]: https://github.com/google/material-design-lite
+[discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
