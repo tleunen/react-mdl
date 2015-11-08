@@ -3,24 +3,21 @@ import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 import Spacer from './Spacer';
 
-class Navigation extends React.Component {
-    static propTypes = {
-        className: PropTypes.string
-    }
+var Navigation = props => {
+    var { className, children, ...otherProps } = props;
 
-    render() {
-        var { className, ...otherProps } = this.props;
+    var classes = classNames('mdl-navigation', className);
 
-        var classes = classNames('mdl-navigation', className);
-
-        return (
-            <nav className={classes} {...otherProps}>
-                {cloneChildren(this.props.children, (child) => ({
-                    className: classNames({ 'mdl-navigation__link': child.type !== Spacer }, child.props.className)
-                }))}
-            </nav>
-        );
-    }
-}
+    return (
+        <nav className={classes} {...otherProps}>
+            {cloneChildren(children, (child) => ({
+                className: classNames({ 'mdl-navigation__link': child.type !== Spacer }, child.props.className)
+            }))}
+        </nav>
+    );
+};
+Navigation.propTypes = {
+    className: PropTypes.string
+};
 
 export default Navigation;

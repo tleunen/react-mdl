@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import Tabs, { Tab } from '../../src/Tabs';
+import { Tabs, Tab } from '../../src/Tabs';
 
 class TabsDemo extends React.Component {
     static propTypes = {

@@ -13,7 +13,7 @@ module.exports = function(config) {
         frameworks: [ 'mocha' ],
         files: [
             'extra/material.js',
-            'test/**/*.test.js'
+            'src/**/*-test.js'
         ],
 
         plugins: [
@@ -26,7 +26,7 @@ module.exports = function(config) {
         ],
 
         preprocessors: {
-            'test/**/*.test.js': ['webpack']
+            'src/**/*-test.js': ['webpack']
         },
 
         reporters: [ 'mocha', 'coverage' ],

@@ -1,24 +1,21 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Drawer extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        title: PropTypes.string
-    }
+var Drawer = props => {
+    var { className, title, children, ...otherProps } = props;
 
-    render() {
-        var { className, title, ...otherProps } = this.props;
+    var classes = classNames('mdl-layout__drawer', className);
 
-        var classes = classNames('mdl-layout__drawer', className);
-
-        return (
-            <div className={classes} {...otherProps}>
-                {title ? <span className="mdl-layout-title">{title}</span> : null}
-                {this.props.children}
-            </div>
-        );
-    }
-}
+    return (
+        <div className={classes} {...otherProps}>
+            {title ? <span className="mdl-layout-title">{title}</span> : null}
+            {children}
+        </div>
+    );
+};
+Drawer.propTypes = {
+    className: PropTypes.string,
+    title: PropTypes.string
+};
 
 export default Drawer;

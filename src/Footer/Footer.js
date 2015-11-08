@@ -2,29 +2,26 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 
-class Footer extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        size: PropTypes.oneOf(['mini', 'mega'])
-    }
+var Footer = (props) => {
+    var { className, size, children, ...otherProps } = props;
 
-    static defaultProps = {
-        size: 'mega'
-    }
+    var classes = classNames({
+        [`mdl-${size}-footer`]: true
+    }, className);
 
-    render() {
-        var { className, size, ...otherProps } = this.props;
+    return (
+        <footer className={classes} {...otherProps}>
+            {cloneChildren(children, { size: size })}
+        </footer>
+    );
+};
 
-        var classes = classNames({
-            [`mdl-${size}-footer`]: true
-        }, className);
-
-        return (
-            <footer className={classes} {...otherProps}>
-                {cloneChildren(this.props.children, { size: size })}
-            </footer>
-        );
-    }
-}
+Footer.propTypes = {
+    className: PropTypes.string,
+    size: PropTypes.oneOf(['mini', 'mega'])
+};
+Footer.defaultProps = {
+    size: 'mega'
+};
 
 export default Footer;

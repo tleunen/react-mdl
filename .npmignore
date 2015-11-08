@@ -1,4 +1,4 @@
 demo/
 webpack.config.js
-test/
+__tests__/
 karma.conf.js

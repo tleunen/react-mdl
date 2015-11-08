@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
-import basicClassCreator from '../utils/basicClassCreator';
 
 var shadows = [
     'mdl-shadow--2dp',
@@ -34,5 +33,3 @@ Card.propTypes = {
 };
 
 export default Card;
-export var CardText = basicClassCreator('CardText', 'mdl-card__supporting-text');
-export var CardMenu = basicClassCreator('CardMenu', 'mdl-card__menu');

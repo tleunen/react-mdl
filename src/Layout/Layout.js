@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from '../utils/mdlUpgrade';
-import basicClassCreator from '../utils/basicClassCreator';
 
 class Layout extends React.Component {
     static propTypes = {
@@ -29,4 +28,3 @@ class Layout extends React.Component {
 }
 
 export default mdlUpgrade(Layout);
-export var Content = basicClassCreator('Content', 'mdl-layout__content', 'main');

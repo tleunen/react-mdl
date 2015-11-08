@@ -1,6 +1,7 @@
+import basicClassCreator from '../utils/basicClassCreator';
 
-export default from './Layout';
-export { Content } from './Layout';
+export Layout from './Layout';
+export var Content = basicClassCreator('Content', 'mdl-layout__content', 'main');
 export Drawer from './Drawer';
 export Header from './Header';
 export HeaderRow from './HeaderRow';
