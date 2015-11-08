@@ -1,6 +1,6 @@
 # React-MDL [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
-React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url]. It's based on their version 1.0.4.
+React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url]. It's based on their version 1.0.6.
 
 Join the #react-mdl channel of the [Reactiflux Discord][discord-url] community.
 
@@ -30,7 +30,7 @@ import { Button, Card, CardText } from 'react-mdl';
 ### import a specific component
 ```js
 import Button from 'react-mdl/lib/Button';
-import Card, { CardText, CardActions } from 'react-mdl/lib/Card';
+import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 ```
 
 ## How to run the demos
