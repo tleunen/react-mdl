@@ -6,7 +6,7 @@ import Slider from '../Slider';
 
 describe('Slider', () => {
     it('should render an input with the slider css classes', () => {
-        var output = render(<Slider value={1} />);
+        const output = render(<Slider value={1} />);
 
         expect(output.type).toBe('input');
         expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Slider', () => {
     });
 
     it('should allow custom css classes', () => {
-        var output = render(<Slider className="my-slider" />);
+        const output = render(<Slider className="my-slider" />);
 
         expect(output.props.className).toInclude('my-slider');
     });

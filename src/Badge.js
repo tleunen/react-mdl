@@ -13,18 +13,14 @@ class Badge extends React.Component {
     };
 
     render() {
-        var { children, text } = this.props;
+        const { children, text } = this.props;
 
         // No badge if no children
         if(!React.Children.count(children)) return null;
 
-        var element;
-        if(typeof children === 'string') {
-            element = <span>{children}</span>;
-        }
-        else {
-            element = React.Children.only(children);
-        }
+        const element = typeof children === 'string'
+            ? <span>{children}</span>
+            : React.Children.only(children);
 
         // No text -> No need of badge
         if(text === null || typeof text === 'undefined') return element;

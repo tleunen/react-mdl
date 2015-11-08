@@ -9,9 +9,9 @@ class Spinner extends React.Component {
     }
 
     render() {
-        var { className, singleColor, ...otherProps } = this.props;
+        const { className, singleColor, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-spinner mdl-js-spinner is-active', {
+        const classes = classNames('mdl-spinner mdl-js-spinner is-active', {
             'mdl-spinner--single-color': singleColor
         }, className);
 

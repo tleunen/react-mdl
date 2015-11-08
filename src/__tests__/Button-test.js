@@ -6,38 +6,38 @@ import Button from '../Button';
 
 describe('Button', () => {
     it('should be a <button>', () => {
-        var output = render(<Button>Button</Button>);
+        const output = render(<Button>Button</Button>);
         expect(output.type).toBe('button');
     });
 
     it('should be a <a> when "href" is provided', () => {
-        var output = render(<Button href="#">Button</Button>);
+        const output = render(<Button href="#">Button</Button>);
 
         expect(output.type).toBe('a');
         expect(output.props.href).toBe('#');
     });
 
     it('should be a custom component when "component" is provided', () => {
-        var MyCustomComponent = (props) => <button {...props} />;
-        var output = render(<Button component={MyCustomComponent}>Button</Button>);
+        const MyCustomComponent = (props) => <button {...props} />;
+        const output = render(<Button component={MyCustomComponent}>Button</Button>);
 
         expect(output.type).toBe(MyCustomComponent);
     });
 
     it('should be enabled', () => {
-        var output = render(<Button>Button</Button>);
+        const output = render(<Button>Button</Button>);
 
         expect(output.props.disabled).toNotExist();
     });
 
     it('should be disabled when specified', () => {
-        var output = render(<Button disabled>Button</Button>);
+        const output = render(<Button disabled>Button</Button>);
 
         expect(output.props.disabled).toBe(true);
     });
 
     it('should have mdl css classes', () => {
-        var output = render(<Button>Button</Button>);
+        const output = render(<Button>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-button')
@@ -45,28 +45,28 @@ describe('Button', () => {
     });
 
     it('should allow custom css classes', () => {
-        var output = render(<Button className="my-button">Button</Button>);
+        const output = render(<Button className="my-button">Button</Button>);
 
         expect(output.props.className)
             .toInclude('my-button');
     });
 
     it('should not have ripple by default', () => {
-        var output = render(<Button>Button</Button>);
+        const output = render(<Button>Button</Button>);
 
         expect(output.props.className)
             .toExclude('mdl-js-ripple-effect');
     });
 
     it('should have ripple when specified', () => {
-        var output = render(<Button ripple>Button</Button>);
+        const output = render(<Button ripple>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-js-ripple-effect');
     });
 
     it('should be flat', () => {
-        var output = render(<Button>Button</Button>);
+        const output = render(<Button>Button</Button>);
 
         expect(output.props.className)
             .toExclude('mdl-button--raised')
@@ -76,7 +76,7 @@ describe('Button', () => {
     });
 
     it('should be flat colored when specified', () => {
-        var output = render(<Button colored>Button</Button>);
+        const output = render(<Button colored>Button</Button>);
 
         expect(output.props.className)
             .toExclude('mdl-button--raised')
@@ -86,7 +86,7 @@ describe('Button', () => {
     });
 
     it('should be flat primary when specified', () => {
-        var output = render(<Button primary>Button</Button>);
+        const output = render(<Button primary>Button</Button>);
 
         expect(output.props.className)
             .toExclude('mdl-button--raised')
@@ -96,7 +96,7 @@ describe('Button', () => {
     });
 
     it('should be flat accent-colored when specified', () => {
-        var output = render(<Button accent>Button</Button>);
+        const output = render(<Button accent>Button</Button>);
 
         expect(output.props.className)
             .toExclude('mdl-button--raised')
@@ -106,7 +106,7 @@ describe('Button', () => {
     });
 
     it('should be raised', () => {
-        var output = render(<Button raised>Button</Button>);
+        const output = render(<Button raised>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-button--raised')
@@ -116,7 +116,7 @@ describe('Button', () => {
     });
 
     it('should be raised colored when specified', () => {
-        var output = render(<Button raised colored>Button</Button>);
+        const output = render(<Button raised colored>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-button--raised')
@@ -126,7 +126,7 @@ describe('Button', () => {
     });
 
     it('should be raised primary when specified', () => {
-        var output = render(<Button raised primary>Button</Button>);
+        const output = render(<Button raised primary>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-button--raised')
@@ -136,7 +136,7 @@ describe('Button', () => {
     });
 
     it('should be raised accent-colored when specified', () => {
-        var output = render(<Button raised accent>Button</Button>);
+        const output = render(<Button raised accent>Button</Button>);
 
         expect(output.props.className)
             .toInclude('mdl-button--raised')

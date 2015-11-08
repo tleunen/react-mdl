@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-var LinkList = (props) => {
-    var { className, size, children, ...otherProps } = props;
+const LinkList = (props) => {
+    const { className, size, children, ...otherProps } = props;
 
-    var classes = classNames({
+    const classes = classNames({
         [`mdl-${size}-footer__link-list`]: true
     }, className);
 

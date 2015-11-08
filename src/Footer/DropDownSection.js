@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 
-var DropDownSection = (props) => {
-    var { className, size, title, children, ...otherProps } = props;
+const DropDownSection = (props) => {
+    const { className, size, title, children, ...otherProps } = props;
 
-    var classes = classNames({
+    const classes = classNames({
         [`mdl-${size}-footer__drop-down-section`]: true
     }, className);
 

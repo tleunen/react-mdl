@@ -7,7 +7,7 @@ import { Navigation, Spacer } from '../';
 describe('Layout', () => {
     describe('Navigation', () => {
         it('should render a nav with the specific css class', () => {
-            var output = render(<Navigation />);
+            const output = render(<Navigation />);
 
             expect(output.type).toBe('nav');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Layout', () => {
         });
 
         it('should allow custom css classes', () => {
-            var output = render(<Navigation className="my-nav" />);
+            const output = render(<Navigation className="my-nav" />);
 
             expect(output.props.className)
                 .toInclude('mdl-navigation')
@@ -23,14 +23,14 @@ describe('Layout', () => {
         });
 
         it('should apply a specific css class on children but spacers', () => {
-            var element = (
+            const element = (
                 <Navigation>
                     <a href="#"></a>
                     <Spacer />
                     <a href="#"></a>
                 </Navigation>
             );
-            var output = render(element);
+            const output = render(element);
 
             expect(output.props.children[0].props.className)
                 .toInclude('mdl-navigation__link');

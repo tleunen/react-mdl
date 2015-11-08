@@ -6,7 +6,7 @@ import { Footer } from '../';
 
 describe('Footer', () => {
     it('should render a footer with the specific css class', () => {
-        var output = render(<Footer />);
+        const output = render(<Footer />);
 
         expect(output.type).toBe('footer');
         expect(output.props.className)
@@ -14,7 +14,7 @@ describe('Footer', () => {
     });
 
     it('should allow custom css classes', () => {
-        var output = render(<Footer className="my-footer" />);
+        const output = render(<Footer className="my-footer" />);
 
         expect(output.props.className)
             .toInclude('mdl-mega-footer')
@@ -22,19 +22,19 @@ describe('Footer', () => {
     });
 
     it('should render with a mini size if specified', () => {
-        var output = render(<Footer size="mini" />);
+        const output = render(<Footer size="mini" />);
 
         expect(output.props.className)
             .toInclude('mdl-mini-footer');
     });
 
     it('should pass the size to children', () => {
-        var element = (
+        const element = (
             <Footer>
                 <div>Allo</div>
             </Footer>
         );
-        var output = render(element);
+        const output = render(element);
 
         expect(output.props.children[0].props.size).toBe('mega');
     });

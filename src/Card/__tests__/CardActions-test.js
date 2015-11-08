@@ -7,14 +7,14 @@ import { CardActions } from '../';
 describe('Card', () => {
     describe('CardActions', () => {
         it('should render a div with the action css class', () => {
-            var output = render(<CardActions />);
+            const output = render(<CardActions />);
 
             expect(output.type).toBe('div');
             expect(output.props.className).toInclude('mdl-card__actions');
         });
 
         it('should allow custom css classes', () => {
-            var output = render(<CardActions className="my-actions" />);
+            const output = render(<CardActions className="my-actions" />);
 
             expect(output.props.className)
                 .toInclude('mdl-card__actions')
@@ -22,26 +22,26 @@ describe('Card', () => {
         });
 
         it('should not have a border by default', () => {
-            var output = render(<CardActions />);
+            const output = render(<CardActions />);
 
             expect(output.props.className)
                 .toExclude('mdl-card--border');
         });
 
         it('should have a border when specified', () => {
-            var output = render(<CardActions border />);
+            const output = render(<CardActions border />);
 
             expect(output.props.className)
                 .toInclude('mdl-card--border');
         });
 
         it('should render with the children', () => {
-            var element = (
+            const element = (
                 <CardActions>
                     <div className="inner">Inner text</div>
                 </CardActions>
             );
-            var output = render(element);
+            const output = render(element);
 
             expect(output.props.children)
                 .toEqual(<div className="inner">Inner text</div>);

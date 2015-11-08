@@ -15,11 +15,11 @@ class Button extends React.Component {
     }
 
     render() {
-        var { accent, className, colored,
+        const { accent, className, colored,
             primary, raised, ripple, component, href,
             children, ...otherProps } = this.props;
 
-        var buttonClasses = classNames('mdl-button mdl-js-button', {
+        const buttonClasses = classNames('mdl-button mdl-js-button', {
             'mdl-js-ripple-effect': ripple,
             'mdl-button--raised': raised,
             'mdl-button--colored': colored,
@@ -27,9 +27,7 @@ class Button extends React.Component {
             'mdl-button--accent': accent
         }, className);
 
-        component = component || (href ? 'a' : 'button');
-
-        return React.createElement(component, {
+        return React.createElement(component || (href ? 'a' : 'button'), {
             className: buttonClasses,
             href,
             ...otherProps

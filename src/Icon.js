@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-var Icon = (props) => {
-    var { className, name, ...otherProps } = props;
-    var classes = classNames('material-icons', className);
+const Icon = (props) => {
+    const { className, name, ...otherProps } = props;
+    const classes = classNames('material-icons', className);
 
     return <i className={classes} {...otherProps}>{name}</i>;
 };

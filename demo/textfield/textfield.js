@@ -26,7 +26,7 @@ class Demo extends React.Component {
     }
 
     checkPasswordConfirmation() {
-        return this.state.textfield7b != this.state.textfield7a ? 'Passwords don\'t match!' : null;
+        return this.state.textfield7b !== this.state.textfield7a ? 'Passwords don\'t match!' : null;
     }
 
     render() {

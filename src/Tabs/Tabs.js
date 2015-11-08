@@ -6,8 +6,8 @@ import mdlUpgrade from '../utils/mdlUpgrade';
 class Tabs extends React.Component {
     static propTypes = {
         activeTab: PropTypes.number,
-        children: PropTypes.arrayOf(function(props, propName, componentName) {
-            var prop = props[propName];
+        children: PropTypes.arrayOf((props, propName, componentName) => {
+            const prop = props[propName];
             if(prop.type !== Tab) {
                 return new Error('`' + componentName + '` only accepts `Tab` as children.');
             }
@@ -28,9 +28,9 @@ class Tabs extends React.Component {
     }
 
     render() {
-        var { activeTab, className, onChange, ripple, ...otherProps } = this.props;
+        const { activeTab, className, onChange, ripple, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-tabs mdl-js-tabs', {
+        const classes = classNames('mdl-tabs mdl-js-tabs', {
             'mdl-js-ripple-effect': ripple
         }, className);
 

@@ -2,15 +2,15 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import MDLComponent from './utils/MDLComponent';
 
-var Tooltip = (props) => {
-    var { label, large, children, ...otherProps } = props;
-    var id = Math.random().toString(36).substr(2);
+const Tooltip = (props) => {
+    const { label, large, children, ...otherProps } = props;
+    const id = Math.random().toString(36).substr(2);
 
-    if(typeof label === 'string') {
-        label = <span>{label}</span>;
-    }
+    const newLabel = (typeof label === 'string')
+        ? <span>{label}</span>
+        : label;
 
-    var element;
+    let element;
     if(typeof children === 'string') {
         element = <span>{children}</span>;
     }
@@ -22,7 +22,7 @@ var Tooltip = (props) => {
         <div style={{display: 'inline-block'}} {...otherProps}>
             {React.cloneElement(element, { id })}
             <MDLComponent>
-                {React.cloneElement(label, {
+                {React.cloneElement(newLabel, {
                     htmlFor: id,
                     className: classNames('mdl-tooltip', {
                         'mdl-tooltip--large': large

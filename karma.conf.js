@@ -1,6 +1,6 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
-module.exports = function(config) {
+module.exports = function karma(config) {
     config.set({
         customLaunchers: {
             Chrome_travis_ci: {
@@ -71,7 +71,7 @@ module.exports = function(config) {
         }
     });
 
-    if (process.env.TRAVIS) {
+    if(process.env.TRAVIS) {
         config.browsers = ['Chrome_travis_ci'];
     }
 };

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
 
-var shadows = [
+const shadows = [
     'mdl-shadow--2dp',
     'mdl-shadow--3dp',
     'mdl-shadow--4dp',
@@ -11,13 +11,13 @@ var shadows = [
     'mdl-shadow--16dp'
 ];
 
-var Card = (props) => {
-    var { className, shadow, children, ...otherProps } = props;
+const Card = (props) => {
+    const { className, shadow, children, ...otherProps } = props;
 
-    var hasShadow = typeof shadow !== 'undefined';
-    var shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
+    const hasShadow = typeof shadow !== 'undefined';
+    const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
-    var classes = classNames('mdl-card', {
+    const classes = classNames('mdl-card', {
         [shadows[shadowLevel]]: hasShadow
     }, className);
 

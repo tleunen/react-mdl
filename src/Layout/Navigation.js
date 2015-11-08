@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 import Spacer from './Spacer';
 
-var Navigation = props => {
-    var { className, children, ...otherProps } = props;
+const Navigation = props => {
+    const { className, children, ...otherProps } = props;
 
-    var classes = classNames('mdl-navigation', className);
+    const classes = classNames('mdl-navigation', className);
 
     return (
         <nav className={classes} {...otherProps}>

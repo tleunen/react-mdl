@@ -3,18 +3,18 @@ import classNames from 'classnames';
 import HeaderRow from './HeaderRow';
 import HeaderTabs from './HeaderTabs';
 
-var Header = props => {
-    var { className, scroll, seamed, title, transparent,
+const Header = props => {
+    const { className, scroll, seamed, title, transparent,
             waterfall, children, ...otherProps } = props;
 
-    var classes = classNames('mdl-layout__header', {
+    const classes = classNames('mdl-layout__header', {
         'mdl-layout__header--scroll': scroll,
         'mdl-layout__header--seamed': seamed,
         'mdl-layout__header--transparent': transparent,
         'mdl-layout__header--waterfall': waterfall
     }, className);
 
-    var isRowOrTab = false;
+    let isRowOrTab = false;
     React.Children.forEach(children, child => {
         if(child && (child.type === HeaderRow || child.type === HeaderTabs)) {
             isRowOrTab = true;

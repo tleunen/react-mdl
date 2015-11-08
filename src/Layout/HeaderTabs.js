@@ -9,9 +9,9 @@ class HeaderTabs extends React.Component {
     }
 
     render() {
-        var { className, ripple, ...otherProps } = this.props;
+        const { className, ripple, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-layout__tab-bar', {
+        const classes = classNames('mdl-layout__tab-bar', {
             'mdl-js-ripple-effect': ripple !== false
         }, className);
 

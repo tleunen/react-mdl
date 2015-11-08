@@ -1,9 +1,9 @@
-var Card = require('./lib/Card');
-var Footer = require('./lib/Footer');
-var Layout = require('./lib/Layout');
-var Grid = require('./lib/Grid');
-var Menu = require('./lib/Menu');
-var Tabs = require('./lib/Tabs');
+const Card = require('./lib/Card');
+const Footer = require('./lib/Footer');
+const Layout = require('./lib/Layout');
+const Grid = require('./lib/Grid');
+const Menu = require('./lib/Menu');
+const Tabs = require('./lib/Tabs');
 
 module.exports = {
     mdlUpgrade: require('./lib/utils/mdlUpgrade'),

@@ -23,9 +23,9 @@ class DataTable extends React.Component {
     }
 
     render() {
-        var { className, columns, data, selectable, ...otherProps } = this.props;
+        const { className, columns, data, selectable, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-data-table mdl-js-data-table', {
+        const classes = classNames('mdl-data-table mdl-js-data-table', {
             'mdl-data-table--selectable': selectable
         }, className);
 
@@ -39,11 +39,11 @@ class DataTable extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((e, i) => {
+                    {data.map((elt, idx) => {
                         return (
-                            <tr key={e.key ? e.key : i}>
+                            <tr key={elt.key ? elt.key : idx}>
                                 {columns.map((column) => {
-                                    return <td key={column.name} className={this._getCellClass(column)}>{e[column.name]}</td>;
+                                    return <td key={column.name} className={this._getCellClass(column)}>{elt[column.name]}</td>;
                                 })}
                             </tr>
                         );

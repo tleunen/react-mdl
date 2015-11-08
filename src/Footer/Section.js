@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import cloneChildren from '../utils/cloneChildren';
 
-var Section = (props) => {
-    var { className, logo, size, type, children, ...otherProps } = props;
+const Section = (props) => {
+    const { className, logo, size, type, children, ...otherProps } = props;
 
-    var classes = classNames({
+    const classes = classNames({
         [`mdl-${size}-footer__${type}-section`]: true
     }, className);
 

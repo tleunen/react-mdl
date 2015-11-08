@@ -11,9 +11,9 @@ class Layout extends React.Component {
     }
 
     render() {
-        var { className, fixedDrawer, fixedHeader, fixedTabs, ...otherProps } = this.props;
+        const { className, fixedDrawer, fixedHeader, fixedTabs, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-layout mdl-js-layout', {
+        const classes = classNames('mdl-layout mdl-js-layout', {
             'mdl-layout--fixed-drawer': fixedDrawer,
             'mdl-layout--fixed-header': fixedHeader,
             'mdl-layout--fixed-tabs': fixedTabs

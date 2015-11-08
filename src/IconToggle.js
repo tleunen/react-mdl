@@ -13,9 +13,9 @@ class IconToggle extends React.Component {
         ripple: PropTypes.bool
     }
     render() {
-        var { className, name, ripple, ...inputProps } = this.props;
+        const { className, name, ripple, ...inputProps } = this.props;
 
-        var classes = classNames('mdl-icon-toggle mdl-js-icon-toggle', {
+        const classes = classNames('mdl-icon-toggle mdl-js-icon-toggle', {
             'mdl-js-ripple-effect': ripple
         }, className);
 

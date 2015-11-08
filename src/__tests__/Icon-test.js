@@ -6,20 +6,20 @@ import Icon from '../Icon';
 
 describe('Icon', () => {
     it('should be a <i>', () => {
-        var output = render(<Icon name="add" />);
+        const output = render(<Icon name="add" />);
 
         expect(output.type).toBe('i');
         expect(output.props.children).toBe('add');
     });
 
     it('should have material-icons css class', () => {
-        var output = render(<Icon name="add" />);
+        const output = render(<Icon name="add" />);
 
         expect(output.props.className).toInclude('material-icons');
     });
 
     it('should allow custom css classes', () => {
-        var output = render(<Icon name="mood" className="myCustomClass" />);
+        const output = render(<Icon name="mood" className="myCustomClass" />);
 
         expect(output.props.className)
             .toInclude('myCustomClass');

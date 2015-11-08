@@ -12,9 +12,9 @@ class Slider extends React.Component {
     }
 
     render() {
-        var { className, ...otherProps } = this.props;
+        const { className, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-slider mdl-js-slider', className);
+        const classes = classNames('mdl-slider mdl-js-slider', className);
 
         return (
             <input

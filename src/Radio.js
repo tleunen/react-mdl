@@ -17,9 +17,9 @@ class Radio extends React.Component {
     };
 
     render() {
-        var { children, className, name, ripple, value, ...inputProps } = this.props;
+        const { children, className, name, ripple, value, ...inputProps } = this.props;
 
-        var classes = classNames('mdl-radio mdl-js-radio', {
+        const classes = classNames('mdl-radio mdl-js-radio', {
             'mdl-js-ripple-effect': ripple
         }, className);
 

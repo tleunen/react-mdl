@@ -7,7 +7,7 @@ import Icon from '../Icon';
 
 describe('Badge', () => {
     it('should render span with data-badge on text child', () => {
-        var output = render(<Badge text="4">Inbox</Badge>);
+        const output = render(<Badge text="4">Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -16,7 +16,7 @@ describe('Badge', () => {
     });
 
     it('should append badge data/class to existing complex child', () => {
-        var output = render(<Badge text="8"><Icon name="account_box" /></Badge>);
+        const output = render(<Badge text="8"><Icon name="account_box" /></Badge>);
 
         expect(output.type).toBe(Icon);
         expect(output.props.className).toBe('mdl-badge');
@@ -24,7 +24,7 @@ describe('Badge', () => {
     });
 
     it('should render empty badge when text is empty', () => {
-        var output = render(<Badge text="">Inbox</Badge>);
+        const output = render(<Badge text="">Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -33,7 +33,7 @@ describe('Badge', () => {
     });
 
     it('should allow number as badge text', () => {
-        var output = render(<Badge text={4}>Inbox</Badge>);
+        const output = render(<Badge text={4}>Inbox</Badge>);
 
         expect(output.type).toBe('span');
         expect(output.props.className).toBe('mdl-badge');
@@ -43,14 +43,14 @@ describe('Badge', () => {
 
     describe('should not render badge', () => {
         it('when no children', () => {
-            var output = render(<Badge text="4" />);
+            const output = render(<Badge text="4" />);
 
             expect(output).toNotExist();
         });
 
         describe('when badge text is null', () => {
             it('and the child is text', () => {
-                var output = render(<Badge text={null}>Inbox</Badge>);
+                const output = render(<Badge text={null}>Inbox</Badge>);
 
                 expect(output.type).toBe('span');
                 expect(output.props.className).toNotBe('mdl-badge');
@@ -59,7 +59,7 @@ describe('Badge', () => {
             });
 
             it('and the child is a complex object', () => {
-                var output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
+                const output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
 
                 expect(output.type).toBe(Icon);
                 expect(output.props.className).toNotBe('mdl-badge');
@@ -69,7 +69,7 @@ describe('Badge', () => {
 
         describe('when badge text is undefined', () => {
             it('and the child is text', () => {
-                var output = render(<Badge text={null}>Inbox</Badge>);
+                const output = render(<Badge text={null}>Inbox</Badge>);
 
                 expect(output.type).toBe('span');
                 expect(output.props.className).toNotBe('mdl-badge');
@@ -78,7 +78,7 @@ describe('Badge', () => {
             });
 
             it('and the child is a complex object', () => {
-                var output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
+                const output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
 
                 expect(output.type).toBe(Icon);
                 expect(output.props.className).toNotBe('mdl-badge');

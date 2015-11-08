@@ -41,22 +41,22 @@ class Textfield extends React.Component {
         if(this.props.error && !this.props.pattern) {
             // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
             // If we want to force the error display, we have to override mdl 'is-invalid' value.
-            var elt = findDOMNode(this);
+            const elt = findDOMNode(this);
             elt.className = classNames(elt.className, 'is-invalid');
         }
     }
 
     render() {
-        var { className, inputClassName,
+        const { className, inputClassName,
               error, expandable, expandableIcon,
               floatingLabel, label, maxRows,
               rows, style, ...otherProps } = this.props;
 
-        var hasRows = !!rows;
-        var inputId = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
-        var inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
+        const hasRows = !!rows;
+        const inputId = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
+        const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
-        var inputProps = {
+        const inputProps = {
             className: classNames('mdl-textfield__input', inputClassName),
             id: inputId,
             key: inputId,
@@ -65,9 +65,9 @@ class Textfield extends React.Component {
             ...otherProps
         };
 
-        var input = React.createElement(inputTag, inputProps);
+        const input = React.createElement(inputTag, inputProps);
 
-        var inputAndLabelError = [
+        const inputAndLabelError = [
             input,
             <label key="label" className="mdl-textfield__label" htmlFor={inputId}>{label}</label>,
             error ? (
@@ -75,18 +75,14 @@ class Textfield extends React.Component {
             ) : null
         ];
 
-        var containerClasses = classNames('mdl-textfield mdl-js-textfield', {
+        const containerClasses = classNames('mdl-textfield mdl-js-textfield', {
             'mdl-textfield--floating-label': floatingLabel,
             'mdl-textfield--expandable': expandable
         }, className);
 
-        var field;
-        if(expandable) {
-            field = React.createElement('div', {className: 'mdl-textfield__expandable-holder'}, inputAndLabelError);
-        }
-        else {
-            field = inputAndLabelError;
-        }
+        const field = expandable
+            ? React.createElement('div', {className: 'mdl-textfield__expandable-holder'}, inputAndLabelError)
+            : inputAndLabelError;
 
         return (
             <div className={containerClasses} style={style}>

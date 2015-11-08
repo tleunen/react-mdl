@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-var Grid = (props) => {
-    var { className, children, ...otherProps } = props;
+const Grid = (props) => {
+    const { className, children, ...otherProps } = props;
 
-    var classes = classNames('mdl-grid', className);
+    const classes = classNames('mdl-grid', className);
 
     return (
         <div className={classes} {...otherProps}>
@@ -17,10 +17,11 @@ Grid.propTypes = {
     className: PropTypes.string
 };
 
-var Cell = (props) => {
-    var { align, className, children, col, phone, tablet, ...otherProps } = props;
+/* eslint-disable react/no-multi-comp */
+const Cell = (props) => {
+    const { align, className, children, col, phone, tablet, ...otherProps } = props;
 
-    var classes = classNames('mdl-cell', {
+    const classes = classNames('mdl-cell', {
         [`mdl-cell--${col}-col`]: true,
         [`mdl-cell--${phone}-col-phone`]: typeof phone !== 'undefined',
         [`mdl-cell--${tablet}-col-tablet`]: typeof tablet !== 'undefined',

@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-var CardActions = (props) => {
-    var { className, border, children, ...otherProps } = props;
+const CardActions = (props) => {
+    const { className, border, children, ...otherProps } = props;
 
-    var classes = classNames('mdl-card__actions', {
+    const classes = classNames('mdl-card__actions', {
         'mdl-card--border': border
     }, className);
 

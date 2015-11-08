@@ -7,7 +7,7 @@ import { Section } from '../';
 describe('Footer', () => {
     describe('Section', () => {
         it('should render a div with the specific css class', () => {
-            var output = render(<Section />);
+            const output = render(<Section />);
 
             expect(output.type).toBe('div');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Footer', () => {
         });
 
         it('should allow custom css classes', () => {
-            var output = render(<Section className="my-list" />);
+            const output = render(<Section className="my-list" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mega-footer__left-section')
@@ -23,7 +23,7 @@ describe('Footer', () => {
         });
 
         it('should render with a mini size if specified', () => {
-            var output = render(<Section size="mini" />);
+            const output = render(<Section size="mini" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mini-footer__left-section');
@@ -31,7 +31,7 @@ describe('Footer', () => {
 
         it('should apply the specified section type', () => {
             ['top', 'middle', 'bottom', 'left', 'right'].forEach(type => {
-                var output = render(<Section type={type} />);
+                const output = render(<Section type={type} />);
 
                 expect(output.props.className)
                     .toInclude(`mdl-mega-footer__${type}-section`);
@@ -39,19 +39,19 @@ describe('Footer', () => {
         });
 
         it('should pass the size to children', () => {
-            var element = (
+            const element = (
                 <Section size="mega">
                     <div>Allo</div>
                 </Section>
             );
-            var output = render(element);
+            const output = render(element);
 
             expect(output.props.children[1][0].props.size)
                 .toBe('mega');
         });
 
         it('should render a logo if specified', () => {
-            var output = render(<Section logo="React-MDL" />);
+            const output = render(<Section logo="React-MDL" />);
 
             expect(output.props.children[0]).toExist();
             expect(output.props.children[0].props.className)

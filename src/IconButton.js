@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import Button from './Button';
 import Icon from './Icon';
 
-var IconButton = (props) => {
-    var { className, name, ...otherProps } = props;
+const IconButton = (props) => {
+    const { className, name, ...otherProps } = props;
 
-    var classes = classNames('mdl-button--icon', className);
+    const classes = classNames('mdl-button--icon', className);
 
     return (
         <Button className={classes} {...otherProps}>

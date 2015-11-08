@@ -6,11 +6,11 @@ import cloneChildren from '../cloneChildren';
 describe('utils', () => {
     describe('cloneChildren', () => {
         it('should take the children and the map of props in params', () => {
-            var children = [
+            const children = [
                 <div>Child</div>,
                 <div>Child</div>
             ];
-            var clonedChildren = cloneChildren(children, {
+            const clonedChildren = cloneChildren(children, {
                 size: 'mega'
             });
 
@@ -19,12 +19,12 @@ describe('utils', () => {
         });
 
         it('should take the children and a fn(child) in params', () => {
-            var children = [
+            const children = [
                 <div className="my-class">Child</div>,
                 <div className="my-class">Child</div>
             ];
 
-            var clonedChildren = cloneChildren(children, child => ({
+            const clonedChildren = cloneChildren(children, child => ({
                 className: child.props.className + ' new-class'
             }));
 

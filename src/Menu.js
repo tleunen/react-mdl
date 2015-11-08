@@ -18,9 +18,10 @@ class Menu extends React.Component {
     }
 
     render() {
-        var { align, children, className, ripple, target, valign, ...otherProps} = this.props;
+        const { align, children, className, ripple,
+            target, valign, ...otherProps} = this.props;
 
-        var classes = classNames('mdl-menu mdl-js-menu', {
+        const classes = classNames('mdl-menu mdl-js-menu', {
             [`mdl-menu--${valign}-${align}`]: true,
             'mdl-js-ripple-effect': ripple
         }, className);
@@ -34,4 +35,4 @@ class Menu extends React.Component {
 }
 
 export default mdlUpgrade(Menu);
-export var MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');
+export const MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');

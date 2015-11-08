@@ -19,9 +19,9 @@ class Tab extends React.Component {
     }
 
     render() {
-        var { active, className, tabId, onTabClick, style, ...otherProps } = this.props;
+        const { active, className, tabId, onTabClick, style, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-tabs__tab', {
+        const classes = classNames('mdl-tabs__tab', {
             'is-active': active
         }, className);
 

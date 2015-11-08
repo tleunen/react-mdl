@@ -8,25 +8,25 @@ import MDLComponent from '../MDLComponent';
 describe('utils', () => {
     describe('MDLComponent', () => {
         it('should upgrade the element', () => {
-            var element = (
+            const element = (
                 <MDLComponent>
                     <button className="mdl-button mdl-js-button" />
                 </MDLComponent>
             );
 
-            var el = renderDOM(element);
+            const el = renderDOM(element);
 
             expect(el.dataset.upgraded).toInclude('MaterialButton');
         });
 
         it('should downgrade the element', () => {
-            var element = (
+            const element = (
                 <MDLComponent>
                     <button className="mdl-button mdl-js-button" />
                 </MDLComponent>
             );
 
-            var el = renderDOM(element);
+            const el = renderDOM(element);
 
             ReactDOM.render(<div>Nothing</div>, el.parentNode);
 

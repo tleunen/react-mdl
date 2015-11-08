@@ -7,7 +7,7 @@ import { LinkList } from '../';
 describe('Footer', () => {
     describe('LinkList', () => {
         it('should render a ul with the specific css class', () => {
-            var output = render(<LinkList />);
+            const output = render(<LinkList />);
 
             expect(output.type).toBe('ul');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Footer', () => {
         });
 
         it('should allow custom css classes', () => {
-            var output = render(<LinkList className="my-list" />);
+            const output = render(<LinkList className="my-list" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mega-footer__link-list')
@@ -23,20 +23,20 @@ describe('Footer', () => {
         });
 
         it('should render with a mini size if specified', () => {
-            var output = render(<LinkList size="mini" />);
+            const output = render(<LinkList size="mini" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mini-footer__link-list');
         });
 
         it('should wrap the children inside <li>', () => {
-            var element = (
+            const element = (
                 <LinkList>
                     <a href="#">Link1</a>
                     <a href="#">Link2</a>
                 </LinkList>
             );
-            var output = render(element);
+            const output = render(element);
 
             expect(output.props.children[0].type).toBe('li');
             expect(output.props.children[0].props.children)

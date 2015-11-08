@@ -12,9 +12,9 @@ class Switch extends React.Component {
     }
 
     render() {
-        var { className, ripple, children, ...inputProps } = this.props;
+        const { className, ripple, children, ...inputProps } = this.props;
 
-        var classes = classNames('mdl-switch mdl-js-switch', {
+        const classes = classNames('mdl-switch mdl-js-switch', {
             'mdl-js-ripple-effect': ripple
         }, className);
 

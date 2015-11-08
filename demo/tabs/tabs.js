@@ -22,7 +22,7 @@ class TabsDemo extends React.Component {
     }
 
     _getTabContent() {
-        var list = [];
+        const list = [];
         switch(this.state.activeTab) {
             case 1:
                 list.push('Tywin', 'Cersei', 'Jamie', 'Tyrion');
@@ -58,7 +58,7 @@ class TabsDemo extends React.Component {
     }
 }
 
-
+/* eslint-disable react/no-multi-comp */
 class Demo extends React.Component {
 
     render() {

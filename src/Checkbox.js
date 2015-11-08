@@ -12,9 +12,9 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        var { label, ripple, ...inputProps } = this.props;
+        const { label, ripple, ...inputProps } = this.props;
 
-        var classes = classNames('mdl-checkbox mdl-js-checkbox', {
+        const classes = classNames('mdl-checkbox mdl-js-checkbox', {
             'mdl-js-ripple-effect': ripple
         });
 

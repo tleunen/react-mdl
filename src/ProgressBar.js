@@ -11,7 +11,7 @@ class ProgressBar extends React.Component {
         progress: PropTypes.number
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this._setProgress(this.props.progress);
         this._setBuffer(this.props.buffer);
     }
@@ -34,9 +34,10 @@ class ProgressBar extends React.Component {
     }
 
     render() {
-        var { buffer, className, indeterminate, progress, ...otherProps } = this.props;
+        const { buffer, className, indeterminate,
+            progress, ...otherProps } = this.props;
 
-        var classes = classNames('mdl-progress mdl-js-progress', {
+        const classes = classNames('mdl-progress mdl-js-progress', {
             'mdl-progress__indeterminate': indeterminate
         }, className);
 
