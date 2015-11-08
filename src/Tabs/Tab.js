@@ -5,6 +5,7 @@ class Tab extends React.Component {
     static propTypes = {
         active: PropTypes.bool,
         className: PropTypes.string,
+        cssPrefix: PropTypes.string,
         onTabClick: PropTypes.func,
         style: PropTypes.object,
         tabId: PropTypes.number
@@ -19,9 +20,11 @@ class Tab extends React.Component {
     }
 
     render() {
-        const { active, className, tabId, onTabClick, style, ...otherProps } = this.props;
+        const { active, className, cssPrefix, tabId,
+            onTabClick, style, ...otherProps } = this.props;
 
-        const classes = classNames('mdl-tabs__tab', {
+        const classes = classNames({
+            [`${cssPrefix}__tab`]: true,
             'is-active': active
         }, className);
 

@@ -3,7 +3,7 @@ import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import { render, renderDOM } from '../../__tests__/render';
-import { Tabs, Tab } from '../';
+import { Tabs, Tab, TabBar } from '../';
 
 describe('Tabs', () => {
     it('should render a div with the specific css classes', () => {
@@ -23,11 +23,10 @@ describe('Tabs', () => {
             .toInclude('my-tabs');
     });
 
-    it('should define a child .mdl-tabs__tab-bar', () => {
+    it('should define a child TabBar', () => {
         const output = render(<Tabs />);
 
-        expect(output.props.children[0].props.className)
-            .toInclude('mdl-tabs__tab-bar');
+        expect(output.props.children[0].type).toBe(TabBar);
     });
 
     it('should not have a ripple by default', () => {
@@ -44,30 +43,16 @@ describe('Tabs', () => {
             .toInclude('mdl-js-ripple-effect');
     });
 
-    it('should pass the active prop on the activa tab', () => {
-        const element = (
-            <Tabs activetab={1}>
-                <Tab>Tab1</Tab>
-                <Tab>Tab2</Tab>
-                <Tab>Tab3</Tab>
-            </Tabs>
-        );
+    it('should pass the active prop to the tab bar', () => {
+        const output = render(<Tabs activetab={1} />);
 
-        const el = renderDOM(element);
-        const tabBar = el.querySelector('.mdl-tabs__tab');
-        Array.prototype.slice.call(tabBar.children).forEach( (tab, i) => {
-            if(i === 1) {
-                expect(tab.className).toInclude('is-active');
-            }
-            else {
-                expect(tab.className).toExclude('is-active');
-            }
-        });
+        expect(output.props.activetab).toBe(1);
     });
 
-    it('should be notified when a tab is clicked', () => {
+    it('should be notified when a tab is clicked', (done) => {
         const cb = (tabId) => {
             expect(tabId).toBe(1);
+            done();
         };
 
         const element = (

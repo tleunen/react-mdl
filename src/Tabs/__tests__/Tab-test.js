@@ -7,7 +7,7 @@ import { Tab } from '../';
 describe('Tabs', () => {
     describe('Tab', () => {
         it('should render a link with the specific css classes', () => {
-            const output = render(<Tab />);
+            const output = render(<Tab cssPrefix="mdl-tabs" />);
 
             expect(output.type).toBe('a');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Tabs', () => {
         });
 
         it('should allow custom css classes', () => {
-            const output = render(<Tab className="my-tab" />);
+            const output = render(<Tab cssPrefix="mdl-tabs" className="my-tab" />);
 
             expect(output.props.className)
                 .toInclude('mdl-tabs__tab')

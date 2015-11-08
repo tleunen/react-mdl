@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tab from './Tab';
+import TabBar from './TabBar';
 import mdlUpgrade from '../utils/mdlUpgrade';
 
 class Tabs extends React.Component {
@@ -17,18 +18,9 @@ class Tabs extends React.Component {
         ripple: PropTypes.bool
     }
 
-    static defaultProps = {
-        activeTab: 0
-    }
-
-    _handleClickTab = (tabId) => {
-        if (this.props.onChange) {
-            this.props.onChange(tabId);
-        }
-    }
-
     render() {
-        const { activeTab, className, onChange, ripple, ...otherProps } = this.props;
+        const { activeTab, className, onChange, ripple,
+            children, ...otherProps } = this.props;
 
         const classes = classNames('mdl-tabs mdl-js-tabs', {
             'mdl-js-ripple-effect': ripple
@@ -36,15 +28,9 @@ class Tabs extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                <div className="mdl-tabs__tab-bar">
-                    {React.Children.map(this.props.children, (child, index) => {
-                        return React.cloneElement(child, {
-                            tabId: index,
-                            active: index === activeTab,
-                            onTabClick: this._handleClickTab
-                        });
-                    })}
-                </div>
+                <TabBar cssPrefix="mdl-tabs" activeTab={activeTab} onChange={onChange}>
+                    {children}
+                </TabBar>
                 <div className="react-mdl-hack" id="undefined" />
             </div>
         );

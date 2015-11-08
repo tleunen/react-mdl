@@ -1,28 +1,32 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import cloneChildren from '../utils/cloneChildren';
+import Tab from '../Tabs/Tab';
+import TabBar from '../Tabs/TabBar';
 
-class HeaderTabs extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        ripple: PropTypes.string
-    }
+const HeaderTabs = props => {
+    const { className, ripple, children, ...otherProps } = props;
 
-    render() {
-        const { className, ripple, ...otherProps } = this.props;
+    const classes = classNames({
+        'mdl-js-ripple-effect': ripple
+    }, className);
 
-        const classes = classNames('mdl-layout__tab-bar', {
-            'mdl-js-ripple-effect': ripple !== false
-        }, className);
-
-        return (
-            <div className={classes} {...otherProps}>
-                {cloneChildren(this.props.children, child => ({
-                    className: classNames('mdl-layout__tab', child.props.className)
-                }))}
-            </div>
-        );
-    }
-}
+    return (
+        <TabBar cssPrefix="mdl-layout" className={classes} {...otherProps}>
+            {children}
+        </TabBar>
+    );
+};
+HeaderTabs.propTypes = {
+    activeTab: PropTypes.number,
+    children: PropTypes.arrayOf((props, propName, componentName) => {
+        const prop = props[propName];
+        if(prop.type !== Tab) {
+            return new Error('`' + componentName + '` only accepts `Tab` as children.');
+        }
+    }),
+    className: PropTypes.string,
+    onChange: PropTypes.func,
+    ripple: PropTypes.bool
+};
 
 export default HeaderTabs;

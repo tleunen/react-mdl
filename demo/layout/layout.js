@@ -1,9 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layout, Header, Navigation, HeaderRow, HeaderTabs, Drawer, Content } from '../../src/Layout';
+import { Tab } from '../../src/Tabs';
 import Textfield from '../../src/Textfield';
 
 class Demo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeTabDemo1: 3,
+            activeTabDemo2: 0
+        };
+        this._handleChangeDemo1 = this._handleChangeDemo1.bind(this);
+        this._handleChangeDemo2 = this._handleChangeDemo2.bind(this);
+    }
+
+    _handleChangeDemo1(tabId) {
+        this.setState({
+            activeTabDemo1: tabId
+        });
+    }
+
+    _handleChangeDemo2(tabId) {
+        this.setState({
+            activeTabDemo2: tabId
+        });
+    }
+
+    _getTabContentDemo1() {
+        const text = 'Your content goes here ' + (this.state.activeTabDemo1 + 1);
+        return <div className="page-content">{text}</div>;
+    }
+
+    _getTabContentDemo2() {
+        const text = 'Your content goes here ' + (this.state.activeTabDemo2 + 1);
+        return <div className="page-content">{text}</div>;
+    }
+
     render() {
         return (
             <div>
@@ -160,35 +193,18 @@ class Demo extends React.Component {
                     <Layout fixedHeader>
                         <Header>
                             <HeaderRow title="Title" />
-                            <HeaderTabs>
-                                <a href="#scroll-tab-1" className="is-active">Tab1</a>
-                                <a href="#scroll-tab-2">Tab2</a>
-                                <a href="#scroll-tab-3">Tab3</a>
-                                <a href="#scroll-tab-4">Tab4</a>
-                                <a href="#scroll-tab-5">Tab5</a>
-                                <a href="#scroll-tab-6">Tab6</a>
+                            <HeaderTabs activeTab={this.state.activeTabDemo1} onChange={this._handleChangeDemo1}>
+                                <Tab>Tab1</Tab>
+                                <Tab>Tab2</Tab>
+                                <Tab>Tab3</Tab>
+                                <Tab>Tab4</Tab>
+                                <Tab>Tab5</Tab>
+                                <Tab>Tab6</Tab>
                             </HeaderTabs>
                         </Header>
                         <Drawer title="Title" />
                         <Content>
-                            <section className="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-                              <div className="page-content">Your content goes here 1</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="scroll-tab-2">
-                              <div className="page-content">Your content goes here 2</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="scroll-tab-3">
-                              <div className="page-content">Your content goes here 3</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="scroll-tab-4">
-                              <div className="page-content">Your content goes here 4</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="scroll-tab-5">
-                              <div className="page-content">Your content goes here 5</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="scroll-tab-6">
-                              <div className="page-content">Your content goes here 6</div>
-                            </section>
+                            {this._getTabContentDemo1()}
                         </Content>
                     </Layout>
                 </div>
@@ -198,23 +214,15 @@ class Demo extends React.Component {
                     <Layout fixedHeader fixedTabs>
                         <Header>
                             <HeaderRow title="Title" />
-                            <HeaderTabs>
-                                <a href="#fixed-tab-1" className="is-active">Tab1</a>
-                                <a href="#fixed-tab-2">Tab2</a>
-                                <a href="#fixed-tab-3">Tab3</a>
+                            <HeaderTabs activeTab={this.state.activeTabDemo2} onChange={this._handleChangeDemo2}>
+                                <Tab>Tab1</Tab>
+                                <Tab>Tab2</Tab>
+                                <Tab>Tab3</Tab>
                             </HeaderTabs>
                         </Header>
                         <Drawer title="Title" />
                         <Content>
-                            <section className="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-                              <div className="page-content">Your content goes here 1</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="fixed-tab-2">
-                              <div className="page-content">Your content goes here 2</div>
-                            </section>
-                            <section className="mdl-layout__tab-panel" id="fixed-tab-3">
-                              <div className="page-content">Your content goes here 3</div>
-                            </section>
+                            {this._getTabContentDemo2()}
                         </Content>
                     </Layout>
                 </div>

@@ -1,7 +1,5 @@
-import basicClassCreator from '../utils/basicClassCreator';
-
 export Layout from './Layout';
-export const Content = basicClassCreator('Content', 'mdl-layout__content', 'main');
+export Content from './Content';
 export Drawer from './Drawer';
 export Header from './Header';
 export HeaderRow from './HeaderRow';
