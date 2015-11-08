@@ -108,4 +108,19 @@ describe('DataTable', () => {
             });
         });
     });
+
+    it('should set the key for each row data element if provided', () => {
+        data.forEach( (elt, idx) => {
+            elt.key = 'elt' + idx;
+        });
+
+        const output = render(<DataTable columns={columns} data={data} />);
+
+        const tbody = output.props.children[1];
+        const rows = tbody.props.children;
+
+        rows.forEach((row, i) => {
+            expect(row.key).toBe('elt' + i);
+        });
+    });
 });

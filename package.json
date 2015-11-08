@@ -50,7 +50,7 @@
     "babel-loader": "^5.3.2",
     "coveralls": "^2.11.4",
     "eslint": "^1.7.1",
-    "eslint-config-airbnb": "^0.1.0",
+    "eslint-config-airbnb": "^0.1.1",
     "eslint-plugin-react": "^3.5.1",
     "expect": "^1.12.2",
     "isparta": "^3.1.0",
