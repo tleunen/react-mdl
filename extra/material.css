@@ -1,6 +1,6 @@
 /**
  * material-design-lite - Material Design Components in CSS, JS and HTML
- * @version v1.0.4
+ * @version v1.0.6
  * @license Apache-2.0
  * @copyright 2015 Google, Inc.
  * @link https://github.com/google/material-design-lite
@@ -113,6 +113,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -301,6 +302,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -711,6 +713,7 @@ main {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -1266,6 +1269,7 @@ ul, ol {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -3101,6 +3105,7 @@ ul, ol {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -3276,6 +3281,7 @@ ul, ol {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -3447,6 +3453,7 @@ ul, ol {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -3543,7 +3550,7 @@ ul, ol {
       right: -5px; }
   .mdl-badge.mdl-badge--no-background[data-badge]:after {
     color: rgb(255,64,129);
-    background: rgba(255,255,255,0.2);
+    background: rgb(255,255,255);
     box-shadow: 0 0 1px gray; }
 
 /**
@@ -3652,6 +3659,7 @@ ul, ol {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -3727,7 +3735,7 @@ ul, ol {
   position: relative;
   height: 36px;
   min-width: 64px;
-  padding: 0 8px;
+  padding: 0 16px;
   display: inline-block;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
@@ -3890,26 +3898,22 @@ input.mdl-button[type="submit"] {
     color: rgb(255,255,255);
     background-color: rgb(255,64,129); }
 
-.mdl-button[disabled][disabled],
-.mdl-button.mdl-button--disabled.mdl-button--disabled {
+.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
   color: rgba(0,0,0, 0.26);
-  cursor: auto;
+  cursor: default;
   background-color: transparent; }
 
-.mdl-button--fab[disabled][disabled],
-.mdl-button--fab.mdl-button--disabled.mdl-button--disabled {
+.mdl-button--fab[disabled][disabled], .mdl-button--fab.mdl-button--disabled.mdl-button--disabled {
   background-color: rgba(0,0,0, 0.12);
   color: rgba(0,0,0, 0.26);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 
-.mdl-button--raised[disabled][disabled],
-.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
+.mdl-button--raised[disabled][disabled], .mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
   background-color: rgba(0,0,0, 0.12);
   color: rgba(0,0,0, 0.26);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 
-.mdl-button--colored[disabled][disabled],
-.mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
+.mdl-button--colored[disabled][disabled], .mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
   color: rgba(0,0,0, 0.26); }
 
 .mdl-button .material-icons {
@@ -4021,6 +4025,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -4147,7 +4152,7 @@ input.mdl-button[type="submit"] {
 
 .mdl-card__subtitle-text {
   font-size: 14px;
-  color: grey;
+  color: rgba(0,0,0, 0.54);
   margin: 0; }
 
 .mdl-card__supporting-text {
@@ -4285,6 +4290,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -4572,6 +4578,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -4812,6 +4819,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -4986,21 +4994,27 @@ input.mdl-button[type="submit"] {
   cursor: pointer;
   z-index: 1;
   opacity: 0; }
-  .mdl-mega-footer--heading-checkbox ~ .mdl-mega-footer--heading:after,
-  .mdl-mega-footer--heading-checkbox ~ .mdl-mega-footer__heading:after,
-  .mdl-mega-footer__heading-checkbox ~ .mdl-mega-footer--heading:after,
-  .mdl-mega-footer__heading-checkbox ~ .mdl-mega-footer__heading:after {
+  .mdl-mega-footer--heading-checkbox + .mdl-mega-footer--heading:after,
+  .mdl-mega-footer--heading-checkbox + .mdl-mega-footer__heading:after,
+  .mdl-mega-footer__heading-checkbox + .mdl-mega-footer--heading:after,
+  .mdl-mega-footer__heading-checkbox + .mdl-mega-footer__heading:after {
     font-family: 'Material Icons';
     content: '\E5CE'; }
 
-.mdl-mega-footer--heading-checkbox:checked ~ ul,
-.mdl-mega-footer__heading-checkbox:checked ~ ul {
+.mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer--link-list,
+.mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer__link-list,
+.mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer--heading + .mdl-mega-footer--link-list,
+.mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer__heading + .mdl-mega-footer__link-list,
+.mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer--link-list,
+.mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer__link-list,
+.mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer--heading + .mdl-mega-footer--link-list,
+.mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer__heading + .mdl-mega-footer__link-list {
   display: none; }
 
-.mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer--heading:after,
-.mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer__heading:after,
-.mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer--heading:after,
-.mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer__heading:after {
+.mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer--heading:after,
+.mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer__heading:after,
+.mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer--heading:after,
+.mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer__heading:after {
   font-family: 'Material Icons';
   content: '\E5CF'; }
 
@@ -5060,18 +5074,24 @@ input.mdl-button[type="submit"] {
   .mdl-mega-footer--heading-checkbox,
   .mdl-mega-footer__heading-checkbox {
     display: none; }
-    .mdl-mega-footer--heading-checkbox ~ .mdl-mega-footer--heading:after,
-    .mdl-mega-footer--heading-checkbox ~ .mdl-mega-footer__heading:after,
-    .mdl-mega-footer__heading-checkbox ~ .mdl-mega-footer--heading:after,
-    .mdl-mega-footer__heading-checkbox ~ .mdl-mega-footer__heading:after {
+    .mdl-mega-footer--heading-checkbox + .mdl-mega-footer--heading:after,
+    .mdl-mega-footer--heading-checkbox + .mdl-mega-footer__heading:after,
+    .mdl-mega-footer__heading-checkbox + .mdl-mega-footer--heading:after,
+    .mdl-mega-footer__heading-checkbox + .mdl-mega-footer__heading:after {
       background-image: none; }
-  .mdl-mega-footer--heading-checkbox:checked ~ ul,
-  .mdl-mega-footer__heading-checkbox:checked ~ ul {
+  .mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer--link-list,
+  .mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer__link-list,
+  .mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer__heading + .mdl-mega-footer__link-list,
+  .mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer--heading + .mdl-mega-footer--link-list,
+  .mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer--link-list,
+  .mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer__link-list,
+  .mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer__heading + .mdl-mega-footer__link-list,
+  .mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer--heading + .mdl-mega-footer--link-list {
     display: block; }
-  .mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer--heading:after,
-  .mdl-mega-footer--heading-checkbox:checked ~ .mdl-mega-footer__heading:after,
-  .mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer--heading:after,
-  .mdl-mega-footer__heading-checkbox:checked ~ .mdl-mega-footer__heading:after {
+  .mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer--heading:after,
+  .mdl-mega-footer--heading-checkbox:checked + .mdl-mega-footer__heading:after,
+  .mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer--heading:after,
+  .mdl-mega-footer__heading-checkbox:checked + .mdl-mega-footer__heading:after {
     content: ''; } }
 
 .mdl-mega-footer--bottom-section,
@@ -5201,6 +5221,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -5428,6 +5449,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -5658,6 +5680,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -5736,8 +5759,7 @@ input.mdl-button[type="submit"] {
   width: 0;
   visibility: hidden;
   z-index: -1; }
-  .mdl-menu__container.is-visible,
-  .mdl-menu__container.is-animating {
+  .mdl-menu__container.is-visible, .mdl-menu__container.is-animating {
     z-index: 999;
     visibility: visible; }
 
@@ -5982,6 +6004,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -6250,6 +6273,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -6362,6 +6386,7 @@ input.mdl-button[type="submit"] {
   position: relative;
   -webkit-overflow-scrolling: touch; }
 
+.mdl-layout__title,
 .mdl-layout-title {
   display: block;
   position: relative;
@@ -6422,14 +6447,18 @@ input.mdl-button[type="submit"] {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0); }
+    .mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
+      overflow: hidden; }
   .mdl-layout__drawer > * {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0; }
+  .mdl-layout__drawer > .mdl-layout__title,
   .mdl-layout__drawer > .mdl-layout-title {
     line-height: 64px;
     padding-left: 40px; }
     @media screen and (max-width: 1024px) {
+      .mdl-layout__drawer > .mdl-layout__title,
       .mdl-layout__drawer > .mdl-layout-title {
         line-height: 56px;
         padding-left: 16px; } }
@@ -6459,7 +6488,7 @@ input.mdl-button[type="submit"] {
         background-color: rgb(224,224,224); }
       .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
         background-color: rgb(0,0,0);
-        color: rgb(63,81,181); }
+        color: rgb(224,224,224); }
   @media screen and (min-width: 1025px) {
     .mdl-layout--fixed-drawer > .mdl-layout__inner-container > .mdl-layout__drawer {
       -webkit-transform: translateX(0);
@@ -6544,7 +6573,7 @@ input.mdl-button[type="submit"] {
   .mdl-layout--fixed-drawer:not(.is-small-screen) > .mdl-layout__inner-container > .mdl-layout__header {
     margin-left: 240px;
     width: calc(100% - 240px); }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     .mdl-layout--fixed-drawer > .mdl-layout__inner-container > .mdl-layout__header .mdl-layout__header-row {
       padding-left: 40px; } }
   .mdl-layout__header > .mdl-layout-icon {
@@ -6675,7 +6704,7 @@ input.mdl-button[type="submit"] {
           transition-duration: 0.2s;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-  .mdl-layout__drawer.is-visible ~ .mdl-layout__obfuscator {
+  .mdl-layout__obfuscator.is-visible {
     background-color: rgba(0, 0, 0, 0.5);
     visibility: visible; }
 
@@ -6704,7 +6733,7 @@ input.mdl-button[type="submit"] {
 .mdl-layout__tab-bar {
   height: 96px;
   margin: 0;
-  width: calc(100% -         112px);
+  width: calc(100% - 112px);
   padding: 0 0 0 56px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6717,7 +6746,7 @@ input.mdl-button[type="submit"] {
     display: none; }
   @media screen and (max-width: 1024px) {
     .mdl-layout__tab-bar {
-      width: calc(100% -           60px);
+      width: calc(100% - 60px);
       padding: 0 0 0 60px; } }
   .mdl-layout--fixed-tabs .mdl-layout__tab-bar {
     padding: 0;
@@ -6949,6 +6978,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -7221,6 +7251,7 @@ input.mdl-button[type="submit"] {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -7376,7 +7407,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     .mdl-slider.is-upgraded.is-lowest-value::-moz-range-thumb {
       border: 2px solid rgba(0,0,0, 0.26);
       background: transparent; }
-    .mdl-slider.is-upgraded.is-lowest-value ~
+    .mdl-slider.is-upgraded.is-lowest-value +
 .mdl-slider__background-flex > .mdl-slider__background-upper {
       left: 6px; }
     .mdl-slider.is-upgraded.is-lowest-value:focus:not(:active)::-webkit-slider-thumb {
@@ -7389,7 +7420,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       border: 1.6px solid rgba(0,0,0, 0.26);
       -webkit-transform: scale(1.5);
               transform: scale(1.5); }
-    .mdl-slider.is-upgraded.is-lowest-value:active ~
+    .mdl-slider.is-upgraded.is-lowest-value:active +
 .mdl-slider__background-flex > .mdl-slider__background-upper {
       left: 9px; }
     .mdl-slider.is-upgraded.is-lowest-value:active::-moz-range-thumb {
@@ -7411,49 +7442,37 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       margin-left: 6px; }
     .mdl-slider.is-upgraded.is-lowest-value:active::-ms-fill-upper {
       margin-left: 9px; }
-    .mdl-slider.is-upgraded:disabled:focus::-webkit-slider-thumb,
-    .mdl-slider.is-upgraded:disabled:active::-webkit-slider-thumb,
-    .mdl-slider.is-upgraded:disabled::-webkit-slider-thumb {
+    .mdl-slider.is-upgraded:disabled:focus::-webkit-slider-thumb, .mdl-slider.is-upgraded:disabled:active::-webkit-slider-thumb, .mdl-slider.is-upgraded:disabled::-webkit-slider-thumb {
       -webkit-transform: scale(0.667);
               transform: scale(0.667);
       background: rgba(0,0,0, 0.26); }
-    .mdl-slider.is-upgraded:disabled:focus::-moz-range-thumb,
-    .mdl-slider.is-upgraded:disabled:active::-moz-range-thumb,
-    .mdl-slider.is-upgraded:disabled::-moz-range-thumb {
+    .mdl-slider.is-upgraded:disabled:focus::-moz-range-thumb, .mdl-slider.is-upgraded:disabled:active::-moz-range-thumb, .mdl-slider.is-upgraded:disabled::-moz-range-thumb {
       transform: scale(0.667);
       background: rgba(0,0,0, 0.26); }
-    .mdl-slider.is-upgraded:disabled ~
+    .mdl-slider.is-upgraded:disabled +
 .mdl-slider__background-flex > .mdl-slider__background-lower {
       background-color: rgba(0,0,0, 0.26);
       left: -6px; }
-    .mdl-slider.is-upgraded:disabled ~
+    .mdl-slider.is-upgraded:disabled +
 .mdl-slider__background-flex > .mdl-slider__background-upper {
       left: 6px; }
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-webkit-slider-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-webkit-slider-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled::-webkit-slider-thumb {
+    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-webkit-slider-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-webkit-slider-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled::-webkit-slider-thumb {
       border: 3px solid rgba(0,0,0, 0.26);
       background: transparent;
       -webkit-transform: scale(0.667);
               transform: scale(0.667); }
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-moz-range-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-moz-range-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled::-moz-range-thumb {
+    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-moz-range-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-moz-range-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled::-moz-range-thumb {
       border: 3px solid rgba(0,0,0, 0.26);
       background: transparent;
       transform: scale(0.667); }
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:active ~
+    .mdl-slider.is-upgraded.is-lowest-value:disabled:active +
 .mdl-slider__background-flex > .mdl-slider__background-upper {
       left: 6px; }
-    .mdl-slider.is-upgraded:disabled:focus::-ms-thumb,
-    .mdl-slider.is-upgraded:disabled:active::-ms-thumb,
-    .mdl-slider.is-upgraded:disabled::-ms-thumb {
+    .mdl-slider.is-upgraded:disabled:focus::-ms-thumb, .mdl-slider.is-upgraded:disabled:active::-ms-thumb, .mdl-slider.is-upgraded:disabled::-ms-thumb {
       -ms-transform: scale(0.25);
           transform: scale(0.25);
       background: rgba(0,0,0, 0.26); }
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-ms-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-ms-thumb,
-    .mdl-slider.is-upgraded.is-lowest-value:disabled::-ms-thumb {
+    .mdl-slider.is-upgraded.is-lowest-value:disabled:focus::-ms-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled:active::-ms-thumb, .mdl-slider.is-upgraded.is-lowest-value:disabled::-ms-thumb {
       -ms-transform: scale(0.25);
           transform: scale(0.25);
       background: radial-gradient(circle closest-side, transparent 0%, transparent 50%, rgba(0,0,0, 0.26) 50%, rgba(0,0,0, 0.26) 100%); }
@@ -7633,6 +7652,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -8115,6 +8135,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -8420,6 +8441,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -8672,6 +8694,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -8973,6 +8996,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -9188,6 +9212,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -9384,6 +9409,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* ==========  IMAGES  ========== */
 /* ==========  Color & Themes  ========== */
 /* ==========  Typography  ========== */
 /* ==========  Components  ========== */
@@ -9488,74 +9514,74 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   .mdl-cell--1-col,
   .mdl-cell--1-col-phone.mdl-cell--1-col-phone {
     width: calc(25% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--1-col,
-    .mdl-grid--no-spacing > .mdl-cell--1-col-phone.mdl-cell--1-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--1-col, .mdl-grid--no-spacing >
+    .mdl-cell--1-col-phone.mdl-cell--1-col-phone {
       width: 25%; }
   .mdl-cell--2-col,
   .mdl-cell--2-col-phone.mdl-cell--2-col-phone {
     width: calc(50% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--2-col,
-    .mdl-grid--no-spacing > .mdl-cell--2-col-phone.mdl-cell--2-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--2-col, .mdl-grid--no-spacing >
+    .mdl-cell--2-col-phone.mdl-cell--2-col-phone {
       width: 50%; }
   .mdl-cell--3-col,
   .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
     width: calc(75% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--3-col,
-    .mdl-grid--no-spacing > .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--3-col, .mdl-grid--no-spacing >
+    .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
       width: 75%; }
   .mdl-cell--4-col,
   .mdl-cell--4-col-phone.mdl-cell--4-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--4-col,
-    .mdl-grid--no-spacing > .mdl-cell--4-col-phone.mdl-cell--4-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--4-col, .mdl-grid--no-spacing >
+    .mdl-cell--4-col-phone.mdl-cell--4-col-phone {
       width: 100%; }
   .mdl-cell--5-col,
   .mdl-cell--5-col-phone.mdl-cell--5-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--5-col,
-    .mdl-grid--no-spacing > .mdl-cell--5-col-phone.mdl-cell--5-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--5-col, .mdl-grid--no-spacing >
+    .mdl-cell--5-col-phone.mdl-cell--5-col-phone {
       width: 100%; }
   .mdl-cell--6-col,
   .mdl-cell--6-col-phone.mdl-cell--6-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--6-col,
-    .mdl-grid--no-spacing > .mdl-cell--6-col-phone.mdl-cell--6-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--6-col, .mdl-grid--no-spacing >
+    .mdl-cell--6-col-phone.mdl-cell--6-col-phone {
       width: 100%; }
   .mdl-cell--7-col,
   .mdl-cell--7-col-phone.mdl-cell--7-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--7-col,
-    .mdl-grid--no-spacing > .mdl-cell--7-col-phone.mdl-cell--7-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--7-col, .mdl-grid--no-spacing >
+    .mdl-cell--7-col-phone.mdl-cell--7-col-phone {
       width: 100%; }
   .mdl-cell--8-col,
   .mdl-cell--8-col-phone.mdl-cell--8-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--8-col,
-    .mdl-grid--no-spacing > .mdl-cell--8-col-phone.mdl-cell--8-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--8-col, .mdl-grid--no-spacing >
+    .mdl-cell--8-col-phone.mdl-cell--8-col-phone {
       width: 100%; }
   .mdl-cell--9-col,
   .mdl-cell--9-col-phone.mdl-cell--9-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--9-col,
-    .mdl-grid--no-spacing > .mdl-cell--9-col-phone.mdl-cell--9-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--9-col, .mdl-grid--no-spacing >
+    .mdl-cell--9-col-phone.mdl-cell--9-col-phone {
       width: 100%; }
   .mdl-cell--10-col,
   .mdl-cell--10-col-phone.mdl-cell--10-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--10-col,
-    .mdl-grid--no-spacing > .mdl-cell--10-col-phone.mdl-cell--10-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--10-col, .mdl-grid--no-spacing >
+    .mdl-cell--10-col-phone.mdl-cell--10-col-phone {
       width: 100%; }
   .mdl-cell--11-col,
   .mdl-cell--11-col-phone.mdl-cell--11-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--11-col,
-    .mdl-grid--no-spacing > .mdl-cell--11-col-phone.mdl-cell--11-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--11-col, .mdl-grid--no-spacing >
+    .mdl-cell--11-col-phone.mdl-cell--11-col-phone {
       width: 100%; }
   .mdl-cell--12-col,
   .mdl-cell--12-col-phone.mdl-cell--12-col-phone {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--12-col,
-    .mdl-grid--no-spacing > .mdl-cell--12-col-phone.mdl-cell--12-col-phone {
+    .mdl-grid--no-spacing > .mdl-cell--12-col, .mdl-grid--no-spacing >
+    .mdl-cell--12-col-phone.mdl-cell--12-col-phone {
       width: 100%; } }
 
 @media (min-width: 480px) and (max-width: 839px) {
@@ -9571,74 +9597,74 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   .mdl-cell--1-col,
   .mdl-cell--1-col-tablet.mdl-cell--1-col-tablet {
     width: calc(12.5% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--1-col,
-    .mdl-grid--no-spacing > .mdl-cell--1-col-tablet.mdl-cell--1-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--1-col, .mdl-grid--no-spacing >
+    .mdl-cell--1-col-tablet.mdl-cell--1-col-tablet {
       width: 12.5%; }
   .mdl-cell--2-col,
   .mdl-cell--2-col-tablet.mdl-cell--2-col-tablet {
     width: calc(25% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--2-col,
-    .mdl-grid--no-spacing > .mdl-cell--2-col-tablet.mdl-cell--2-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--2-col, .mdl-grid--no-spacing >
+    .mdl-cell--2-col-tablet.mdl-cell--2-col-tablet {
       width: 25%; }
   .mdl-cell--3-col,
   .mdl-cell--3-col-tablet.mdl-cell--3-col-tablet {
     width: calc(37.5% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--3-col,
-    .mdl-grid--no-spacing > .mdl-cell--3-col-tablet.mdl-cell--3-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--3-col, .mdl-grid--no-spacing >
+    .mdl-cell--3-col-tablet.mdl-cell--3-col-tablet {
       width: 37.5%; }
   .mdl-cell--4-col,
   .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
     width: calc(50% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--4-col,
-    .mdl-grid--no-spacing > .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--4-col, .mdl-grid--no-spacing >
+    .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
       width: 50%; }
   .mdl-cell--5-col,
   .mdl-cell--5-col-tablet.mdl-cell--5-col-tablet {
     width: calc(62.5% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--5-col,
-    .mdl-grid--no-spacing > .mdl-cell--5-col-tablet.mdl-cell--5-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--5-col, .mdl-grid--no-spacing >
+    .mdl-cell--5-col-tablet.mdl-cell--5-col-tablet {
       width: 62.5%; }
   .mdl-cell--6-col,
   .mdl-cell--6-col-tablet.mdl-cell--6-col-tablet {
     width: calc(75% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--6-col,
-    .mdl-grid--no-spacing > .mdl-cell--6-col-tablet.mdl-cell--6-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--6-col, .mdl-grid--no-spacing >
+    .mdl-cell--6-col-tablet.mdl-cell--6-col-tablet {
       width: 75%; }
   .mdl-cell--7-col,
   .mdl-cell--7-col-tablet.mdl-cell--7-col-tablet {
     width: calc(87.5% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--7-col,
-    .mdl-grid--no-spacing > .mdl-cell--7-col-tablet.mdl-cell--7-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--7-col, .mdl-grid--no-spacing >
+    .mdl-cell--7-col-tablet.mdl-cell--7-col-tablet {
       width: 87.5%; }
   .mdl-cell--8-col,
   .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--8-col,
-    .mdl-grid--no-spacing > .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--8-col, .mdl-grid--no-spacing >
+    .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
       width: 100%; }
   .mdl-cell--9-col,
   .mdl-cell--9-col-tablet.mdl-cell--9-col-tablet {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--9-col,
-    .mdl-grid--no-spacing > .mdl-cell--9-col-tablet.mdl-cell--9-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--9-col, .mdl-grid--no-spacing >
+    .mdl-cell--9-col-tablet.mdl-cell--9-col-tablet {
       width: 100%; }
   .mdl-cell--10-col,
   .mdl-cell--10-col-tablet.mdl-cell--10-col-tablet {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--10-col,
-    .mdl-grid--no-spacing > .mdl-cell--10-col-tablet.mdl-cell--10-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--10-col, .mdl-grid--no-spacing >
+    .mdl-cell--10-col-tablet.mdl-cell--10-col-tablet {
       width: 100%; }
   .mdl-cell--11-col,
   .mdl-cell--11-col-tablet.mdl-cell--11-col-tablet {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--11-col,
-    .mdl-grid--no-spacing > .mdl-cell--11-col-tablet.mdl-cell--11-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--11-col, .mdl-grid--no-spacing >
+    .mdl-cell--11-col-tablet.mdl-cell--11-col-tablet {
       width: 100%; }
   .mdl-cell--12-col,
   .mdl-cell--12-col-tablet.mdl-cell--12-col-tablet {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--12-col,
-    .mdl-grid--no-spacing > .mdl-cell--12-col-tablet.mdl-cell--12-col-tablet {
+    .mdl-grid--no-spacing > .mdl-cell--12-col, .mdl-grid--no-spacing >
+    .mdl-cell--12-col-tablet.mdl-cell--12-col-tablet {
       width: 100%; } }
 
 @media (min-width: 840px) {
@@ -9654,72 +9680,72 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   .mdl-cell--1-col,
   .mdl-cell--1-col-desktop.mdl-cell--1-col-desktop {
     width: calc(8.3333333333% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--1-col,
-    .mdl-grid--no-spacing > .mdl-cell--1-col-desktop.mdl-cell--1-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--1-col, .mdl-grid--no-spacing >
+    .mdl-cell--1-col-desktop.mdl-cell--1-col-desktop {
       width: 8.3333333333%; }
   .mdl-cell--2-col,
   .mdl-cell--2-col-desktop.mdl-cell--2-col-desktop {
     width: calc(16.6666666667% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--2-col,
-    .mdl-grid--no-spacing > .mdl-cell--2-col-desktop.mdl-cell--2-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--2-col, .mdl-grid--no-spacing >
+    .mdl-cell--2-col-desktop.mdl-cell--2-col-desktop {
       width: 16.6666666667%; }
   .mdl-cell--3-col,
   .mdl-cell--3-col-desktop.mdl-cell--3-col-desktop {
     width: calc(25% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--3-col,
-    .mdl-grid--no-spacing > .mdl-cell--3-col-desktop.mdl-cell--3-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--3-col, .mdl-grid--no-spacing >
+    .mdl-cell--3-col-desktop.mdl-cell--3-col-desktop {
       width: 25%; }
   .mdl-cell--4-col,
   .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
     width: calc(33.3333333333% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--4-col,
-    .mdl-grid--no-spacing > .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--4-col, .mdl-grid--no-spacing >
+    .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
       width: 33.3333333333%; }
   .mdl-cell--5-col,
   .mdl-cell--5-col-desktop.mdl-cell--5-col-desktop {
     width: calc(41.6666666667% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--5-col,
-    .mdl-grid--no-spacing > .mdl-cell--5-col-desktop.mdl-cell--5-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--5-col, .mdl-grid--no-spacing >
+    .mdl-cell--5-col-desktop.mdl-cell--5-col-desktop {
       width: 41.6666666667%; }
   .mdl-cell--6-col,
   .mdl-cell--6-col-desktop.mdl-cell--6-col-desktop {
     width: calc(50% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--6-col,
-    .mdl-grid--no-spacing > .mdl-cell--6-col-desktop.mdl-cell--6-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--6-col, .mdl-grid--no-spacing >
+    .mdl-cell--6-col-desktop.mdl-cell--6-col-desktop {
       width: 50%; }
   .mdl-cell--7-col,
   .mdl-cell--7-col-desktop.mdl-cell--7-col-desktop {
     width: calc(58.3333333333% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--7-col,
-    .mdl-grid--no-spacing > .mdl-cell--7-col-desktop.mdl-cell--7-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--7-col, .mdl-grid--no-spacing >
+    .mdl-cell--7-col-desktop.mdl-cell--7-col-desktop {
       width: 58.3333333333%; }
   .mdl-cell--8-col,
   .mdl-cell--8-col-desktop.mdl-cell--8-col-desktop {
     width: calc(66.6666666667% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--8-col,
-    .mdl-grid--no-spacing > .mdl-cell--8-col-desktop.mdl-cell--8-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--8-col, .mdl-grid--no-spacing >
+    .mdl-cell--8-col-desktop.mdl-cell--8-col-desktop {
       width: 66.6666666667%; }
   .mdl-cell--9-col,
   .mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {
     width: calc(75% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--9-col,
-    .mdl-grid--no-spacing > .mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--9-col, .mdl-grid--no-spacing >
+    .mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {
       width: 75%; }
   .mdl-cell--10-col,
   .mdl-cell--10-col-desktop.mdl-cell--10-col-desktop {
     width: calc(83.3333333333% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--10-col,
-    .mdl-grid--no-spacing > .mdl-cell--10-col-desktop.mdl-cell--10-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--10-col, .mdl-grid--no-spacing >
+    .mdl-cell--10-col-desktop.mdl-cell--10-col-desktop {
       width: 83.3333333333%; }
   .mdl-cell--11-col,
   .mdl-cell--11-col-desktop.mdl-cell--11-col-desktop {
     width: calc(91.6666666667% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--11-col,
-    .mdl-grid--no-spacing > .mdl-cell--11-col-desktop.mdl-cell--11-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--11-col, .mdl-grid--no-spacing >
+    .mdl-cell--11-col-desktop.mdl-cell--11-col-desktop {
       width: 91.6666666667%; }
   .mdl-cell--12-col,
   .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
     width: calc(100% - 16px); }
-    .mdl-grid--no-spacing > .mdl-cell--12-col,
-    .mdl-grid--no-spacing > .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
+    .mdl-grid--no-spacing > .mdl-cell--12-col, .mdl-grid--no-spacing >
+    .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
       width: 100%; } }
