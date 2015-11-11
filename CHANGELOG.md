@@ -15,13 +15,13 @@ All notable changes to the project will be documented in this file.
 - Fixes `Badge` won't be rendered when the prop `text` is null or undefined. ([#84])
 - Fixes `HeaderTabs` to work the same way as `Tabs` ([#66])
 
-[1.0.0]: /compare/v0.15.0...v1.0.0
-[#77]: /issues/77
-[#106]: /issues/106
-[#85]: /issues/85
-[#90]: /issues/90
-[#83]: /issues/83
-[#79]: /issues/79
-[#78]: /issues/78
-[#84]: /issues/84
-[#66]: /issues/66
+[1.0.0]: https://github.com/tleunen/react-mdl/compare/v0.15.0...v1.0.0
+[#77]: https://github.com/tleunen/react-mdl/issues/77
+[#106]: https://github.com/tleunen/react-mdl/issues/106
+[#85]: https://github.com/tleunen/react-mdl/issues/85
+[#90]: https://github.com/tleunen/react-mdl/issues/90
+[#83]: https://github.com/tleunen/react-mdl/issues/83
+[#79]: https://github.com/tleunen/react-mdl/issues/79
+[#78]: https://github.com/tleunen/react-mdl/issues/78
+[#84]: https://github.com/tleunen/react-mdl/issues/84
+[#66]: https://github.com/tleunen/react-mdl/issues/66
