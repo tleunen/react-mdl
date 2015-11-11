@@ -12,7 +12,7 @@ class DataTablesPage extends React.Component {
 
                 <DataTable
                     style={{margin: 'auto'}}
-                    selectable={true}
+                    selectable
                     columns={[
                         {name: 'material', label: 'Material'},
                         {name: 'quantity', label: 'Quantity', numeric: true},
@@ -28,7 +28,7 @@ class DataTablesPage extends React.Component {
                 <pre><code className="language-jsx">
                 {`
 <DataTable
-    selectable={true}
+    selectable
     columns={[
         {name: 'material', label: 'Material'},
         {name: 'quantity', label: 'Quantity', numeric: true},
@@ -48,10 +48,10 @@ class DataTablesPage extends React.Component {
                 <DataTable
                     style={{margin: 'auto'}}
                     columns={[
-                        { name: 'prop',  label: 'Prop' },
-                        { name: 'type',  label: 'Type' },
-                        { name: 'effect',  label: 'Effect' },
-                        { name: 'remarks',  label: 'Remarks' }
+                        { name: 'prop', label: 'Prop' },
+                        { name: 'type', label: 'Type' },
+                        { name: 'effect', label: 'Effect' },
+                        { name: 'remarks', label: 'Remarks' }
                     ]}
                     data={[
                         { prop: 'columns', type: 'Array of {label, name, numeric}', effect: 'Set the columns', remarks: 'Required' },

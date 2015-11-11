@@ -2,12 +2,12 @@
 import expect from 'expect';
 import React from 'react';
 import { render } from '../../__tests__/render';
-import { LinkList } from '../';
+import { FooterLinkList } from '../';
 
 describe('Footer', () => {
-    describe('LinkList', () => {
+    describe('FooterLinkList', () => {
         it('should render a ul with the specific css class', () => {
-            const output = render(<LinkList />);
+            const output = render(<FooterLinkList />);
 
             expect(output.type).toBe('ul');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Footer', () => {
         });
 
         it('should allow custom css classes', () => {
-            const output = render(<LinkList className="my-list" />);
+            const output = render(<FooterLinkList className="my-list" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mega-footer__link-list')
@@ -23,7 +23,7 @@ describe('Footer', () => {
         });
 
         it('should render with a mini size if specified', () => {
-            const output = render(<LinkList size="mini" />);
+            const output = render(<FooterLinkList size="mini" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mini-footer__link-list');
@@ -31,10 +31,10 @@ describe('Footer', () => {
 
         it('should wrap the children inside <li>', () => {
             const element = (
-                <LinkList>
+                <FooterLinkList>
                     <a href="#">Link1</a>
                     <a href="#">Link2</a>
-                </LinkList>
+                </FooterLinkList>
             );
             const output = render(element);
 

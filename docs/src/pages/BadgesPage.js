@@ -4,7 +4,7 @@ import { Icon, Badge, DataTable, Grid, Cell } from '../../../';
 
 class BadgesPage extends React.Component {
     render() {
-        var gridStyle = {
+        const gridStyle = {
             width: '40%',
             margin: 'auto',
             textAlign: 'center'
@@ -64,9 +64,9 @@ class BadgesPage extends React.Component {
                 <DataTable
                     style={{margin: 'auto'}}
                     columns={[
-                        { name: 'prop',  label: 'Prop' },
-                        { name: 'effect',  label: 'Effect' },
-                        { name: 'remarks',  label: 'Remarks' }
+                        { name: 'prop', label: 'Prop' },
+                        { name: 'effect', label: 'Effect' },
+                        { name: 'remarks', label: 'Remarks' }
                     ]}
                     data={[
                         { prop: 'text', effect: 'Assign string value to badge', remarks: 'Required' }

@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import {
-    Layout, Header, Drawer, Content,
+    Layout, Header, Drawer, Content, Navigation,
     Icon, Grid, Cell
 } from '../../';
 
 class DocApp extends React.Component {
     render() {
-        var componentSections = [
+        const componentSections = [
             { id: 'badges', label: 'Badges'},
             { id: 'buttons', label: 'Buttons'},
             { id: 'cards', label: 'Cards'},
@@ -23,15 +23,19 @@ class DocApp extends React.Component {
         ];
 
         return (
-            <Layout fixedHeader={true} fixedDrawer={true}>
+            <Layout fixedHeader fixedDrawer>
                 <Header title="React-MDL">
-                    <a href="https://github.com/tleunen/react-mdl">
-                        <Icon name="link" style={{marginRight: '8px', verticalAlign: 'middle'}} />
-                        GitHub
-                    </a>
+                    <Navigation>
+                        <a href="https://github.com/tleunen/react-mdl">
+                            <Icon name="link" style={{marginRight: '8px', verticalAlign: 'middle'}} />
+                            GitHub
+                        </a>
+                    </Navigation>
                 </Header>
                 <Drawer title="Components">
-                    {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
+                    <Navigation>
+                        {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
+                    </Navigation>
                 </Drawer>
                 <Content className="mdl-color-text--grey-600">
                     <Grid>

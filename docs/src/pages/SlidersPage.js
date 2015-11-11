@@ -20,7 +20,7 @@ class SlidersPage extends React.Component {
     }
 
     render() {
-        var gridStyle = {
+        const gridStyle = {
             width: '40%',
             margin: 'auto',
             textAlign: 'center'
@@ -58,10 +58,10 @@ class SlidersPage extends React.Component {
                 <DataTable
                     style={{margin: 'auto'}}
                     columns={[
-                        { name: 'prop',  label: 'Prop' },
-                        { name: 'type',  label: 'Type' },
-                        { name: 'effect',  label: 'Effect' },
-                        { name: 'remarks',  label: 'Remarks' }
+                        { name: 'prop', label: 'Prop' },
+                        { name: 'type', label: 'Type' },
+                        { name: 'effect', label: 'Effect' },
+                        { name: 'remarks', label: 'Remarks' }
                     ]}
                     data={[
                         { prop: 'max', type: 'Number', effect: 'Set the maximum value', remarks: 'Required' },

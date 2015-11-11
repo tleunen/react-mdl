@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var gutil = require('gulp-util');
-var open = require('open');
+import gulp from 'gulp';
+import webpack from 'webpack';
+import WebpackDevServer from 'webpack-dev-server';
+import gutil from 'gulp-util';
+import open from 'open';
 
-var webpackConfig = require('./webpack.config.js');
+import webpackConfig from './webpack.config.js';
 
-gulp.task('webpack:docs', function(done) {
-    webpack(webpackConfig, function(err, stats) {
+gulp.task('webpack:docs', done => {
+    webpack(webpackConfig, (err, stats) => {
         if(err) {
             throw new gutil.PluginError('webpack:build', err);
         }
@@ -19,8 +19,8 @@ gulp.task('webpack:docs', function(done) {
     });
 });
 
-gulp.task('serve:docs', function(/*done*/) {
-    var compiler = webpack(webpackConfig);
+gulp.task('serve:docs', () => {
+    const compiler = webpack(webpackConfig);
 
     new WebpackDevServer(compiler, {
         contentBase: '_ghpages',
@@ -28,14 +28,14 @@ gulp.task('serve:docs', function(/*done*/) {
             colors: true,
             chunks: false
         }
-    }).listen(8080, 'localhost', function(err) {
+    }).listen(8080, 'localhost', (err) => {
         if(err) throw new gutil.PluginError('webpack-dev-server', err);
         open('http://localhost:8080/webpack-dev-server/');
     });
 });
 
 
-gulp.task('copy:docs', function() {
+gulp.task('copy:docs', () => {
     return gulp.src([
         './extra/material.*',
         './docs/*'
@@ -44,3 +44,4 @@ gulp.task('copy:docs', function() {
 });
 
 gulp.task('docs', ['copy:docs', 'webpack:docs']);
+gulp.task('docs:dev', ['copy:docs', 'serve:docs']);

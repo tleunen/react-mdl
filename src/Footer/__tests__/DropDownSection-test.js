@@ -2,12 +2,12 @@
 import expect from 'expect';
 import React from 'react';
 import { render } from '../../__tests__/render';
-import { DropDownSection } from '../';
+import { FooterDropDownSection } from '../';
 
 describe('Footer', () => {
-    describe('DropDownSection', () => {
+    describe('FooterDropDownSection', () => {
         it('should render a div with the dropdown section css class', () => {
-            const output = render(<DropDownSection title="Section" />);
+            const output = render(<FooterDropDownSection title="Section" />);
 
             expect(output.type).toBe('div');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Footer', () => {
         });
 
         it('should allow custom css classes', () => {
-            const output = render(<DropDownSection className="my-dropdown" title="Section" />);
+            const output = render(<FooterDropDownSection className="my-dropdown" title="Section" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mega-footer__drop-down-section')
@@ -23,7 +23,7 @@ describe('Footer', () => {
         });
 
         it('should render with a mini size if specified', () => {
-            const output = render(<DropDownSection size="mini" title="Section" />);
+            const output = render(<FooterDropDownSection size="mini" title="Section" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mini-footer__drop-down-section');
@@ -31,9 +31,9 @@ describe('Footer', () => {
 
         it('should pass the size to children', () => {
             const element = (
-                <DropDownSection title="Section">
+                <FooterDropDownSection title="Section">
                     <div>Allo</div>
-                </DropDownSection>
+                </FooterDropDownSection>
             );
             const output = render(element);
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
-import { history } from 'react-router/lib/HashHistory';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute } from 'react-router';
+import { createHistory } from 'history';
 
 import DocApp from './DocApp';
 import {
@@ -8,10 +9,10 @@ import {
     DataTablesPage, SlidersPage
 } from './pages/';
 
-React.render((
-    <Router history={history}>
-        <Route component={DocApp}>
-            <Route path="/" component={HomePage} />
+render((
+    <Router history={createHistory()}>
+        <Route path="/" component={DocApp}>
+            <IndexRoute component={HomePage} />
             <Route path="badges" component={BadgesPage} />
             <Route path="buttons" component={ButtonsPage} />
             <Route path="cards" component={CardsPage} />

@@ -3,7 +3,9 @@ import React from 'react';
 export default (Component) => {
     return class PrismComponent extends React.Component {
         componentDidMount() {
-            Prism && Prism.highlightAll();
+            if(Prism) {
+                Prism.highlightAll();
+            }
         }
 
         render() {
