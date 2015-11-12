@@ -1,4 +1,6 @@
+.*
+coverage/
 demo/
 webpack.config.js
-__tests__/
+src/**/__tests__
 karma.conf.js

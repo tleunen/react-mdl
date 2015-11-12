@@ -78,7 +78,7 @@
     "test": "karma start --single-run",
     "posttest": "npm run lint",
     "lint": "eslint .",
-    "compile": "babel src --ignore __tests__ --out-dir lib",
+    "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "prepublish": "npm run compile",
     "demo": "webpack-dev-server --content-base ."
   }
