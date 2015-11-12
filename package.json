@@ -52,7 +52,7 @@
     "eslint": "^1.7.1",
     "eslint-config-airbnb": "^0.1.1",
     "eslint-plugin-react": "^3.5.1",
-    "expect": "^1.12.2",
+    "expect": "^1.13.0",
     "isparta": "^3.1.0",
     "isparta-instrumenter-loader": "^0.2.1",
     "karma": "^0.13.14",
