@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Card, CardTitle, CardText, CardActions, CardMenu } from '../../src/Card';
+import { Card, CardTitle, CardText, CardActions, CardMenu, CardMedia } from '../../src/Card';
 import Button from '../../src/Button';
 import IconButton from '../../src/IconButton';
 import Icon from '../../src/Icon';
@@ -61,6 +61,17 @@ class Demo extends React.Component {
                         <div className="mdl-layout-spacer"></div>
                         <Icon name="event" />
                     </CardActions>
+                </Card>
+
+                <p>Media card</p>
+                <Card shadow={0} style={{width: '256px'}}>
+                    <CardTitle>Media card</CardTitle>
+                    <CardMedia>
+                        <img src="http://www.getmdl.io/assets/demos/image_card.jpg" width="256" height="256" />
+                    </CardMedia>
+                    <CardText>
+                        This card contains media.
+                    </CardText>
                 </Card>
             </div>
         );

@@ -13,6 +13,7 @@ module.exports = {
     Card: Card.Card,
     CardTitle: Card.CardTitle,
     CardActions: Card.CardActions,
+    CardMedia: Card.CardMedia,
     CardText: Card.CardText,
     CardMenu: Card.CardMenu,
     Checkbox: require('./lib/Checkbox'),
