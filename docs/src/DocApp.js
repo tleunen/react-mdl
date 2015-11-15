@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-
+import Pages from '../pages/html';
 import {
     Layout, Header, Drawer, Content, Navigation,
     Icon, Grid, Cell
@@ -8,19 +8,10 @@ import {
 
 class DocApp extends React.Component {
     render() {
-        const componentSections = [
-            { id: 'badges', label: 'Badges'},
-            { id: 'buttons', label: 'Buttons'},
-            { id: 'cards', label: 'Cards'},
-            { id: 'Layout', label: 'Layout'},
-            { id: 'loading', label: 'Loading'},
-            { id: 'menus', label: 'Menus'},
-            { id: 'sliders', label: 'Sliders'},
-            { id: 'toggles', label: 'Toggles'},
-            { id: 'tables', label: 'Tables'},
-            { id: 'textfields', label: 'Textfields'},
-            { id: 'tooltips', label: 'Tooltips'}
-        ];
+        const componentSections = Object.keys(Pages).filter(e => e !== 'home').map(page => ({
+            id: page,
+            label: page[0].toUpperCase() + page.slice(1)
+        }));
 
         return (
             <Layout fixedHeader fixedDrawer>
