@@ -51,7 +51,7 @@
     "coveralls": "^2.11.4",
     "eslint": "^1.7.1",
     "eslint-config-airbnb": "^0.1.1",
-    "eslint-plugin-react": "^3.5.1",
+    "eslint-plugin-react": "^3.9.0",
     "expect": "^1.13.0",
     "isparta": "^3.1.0",
     "isparta-instrumenter-loader": "^0.2.1",
