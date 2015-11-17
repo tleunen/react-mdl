@@ -30,45 +30,51 @@ function enhanceRenderer(renderer) {
 
 
     renderer.code = function(code, lang, escaped) {
-        if(lang !== 'jsx') {
-            return '<pre><code>'
+        if(lang === 'jsx') return convertJSX(code);
+        if(lang === 'css_demo') return convertCSS(code);
+        return '<pre><code>'
               + (escaped ? code : escape(code, true))
               + '\n</code></pre>';
-        }
-
-        var highlightedCode = Prism.highlight(code, Prism.languages.jsx);
-
-        // remove {/* comments */}
-        var code = code.replace(/{\/\*.*\*\/}\n/g, '');
-
-        var codeSplit = code.split('\n\n');
-        var columns = codeSplit.length;
-        if(columns > 1) {
-            var code = '<Grid>';
-
-            codeSplit.forEach(function(c) {
-                code += (
-                    `<Cell col={${12/columns}}>
-                        ${c}
-                    </Cell>`
-                );
-            });
-
-            code += '</Grid>';
-        }
-
-        var transformedCode = babel.transform(code).code;
-        transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
-        code = ReactDOMServer.renderToStaticMarkup(eval(transformedCode));
-
-        return code +
-            '<pre class="language-jsx">' +
-            '<code class="language-jsx">' +
-            highlightedCode +
-            '</code></pre>\n';
     };
 
     return renderer;
+}
+
+function convertJSX(code) {
+    var highlightedCode = Prism.highlight(code, Prism.languages.jsx);
+
+    // remove {/* comments */}
+    var code = code.replace(/{\/\*.*\*\/}\n/g, '');
+
+    var codeSplit = code.split('\n\n');
+    var columns = codeSplit.length;
+    if(columns > 1) {
+        var code = '<Grid>';
+
+        codeSplit.forEach(function(c) {
+            code += (
+                `<Cell col={${12/columns}}>
+                    ${c}
+                </Cell>`
+            );
+        });
+
+        code += '</Grid>';
+    }
+
+    var transformedCode = babel.transform(code).code;
+    transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
+    code = ReactDOMServer.renderToStaticMarkup(eval(transformedCode));
+
+    return code +
+        '<pre class="language-jsx">' +
+        '<code class="language-jsx">' +
+        highlightedCode +
+        '</code></pre>\n';
+}
+
+function convertCSS(code) {
+    return '<style>' + code + '</style>';
 }
 
 function convertPages() {
