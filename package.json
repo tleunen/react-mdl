@@ -54,7 +54,7 @@
     "eslint-plugin-react": "^3.5.1",
     "expect": "^1.13.0",
     "isparta": "^3.1.0",
-    "isparta-instrumenter-loader": "0.2.1",
+    "isparta-instrumenter-loader": "1.0.0",
     "karma": "^0.13.14",
     "karma-chrome-launcher": "^0.2.1",
     "karma-cli": "^0.1.1",
