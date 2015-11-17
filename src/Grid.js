@@ -2,9 +2,11 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const Grid = (props) => {
-    const { className, children, ...otherProps } = props;
+    const { noSpacing, className, children, ...otherProps } = props;
 
-    const classes = classNames('mdl-grid', className);
+    const classes = classNames('mdl-grid', {
+        'mdl-grid--no-spacing': noSpacing,
+    }, className);
 
     return (
         <div className={classes} {...otherProps}>
@@ -14,7 +16,8 @@ const Grid = (props) => {
 };
 
 Grid.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    noSpacing: PropTypes.bool
 };
 
 /* eslint-disable react/no-multi-comp */
