@@ -13,7 +13,13 @@ class TabBar extends React.Component {
         activeTab: 0
     }
 
-    _handleClickTab = (tabId) => {
+    constructor(props) {
+        super(props);
+
+        this._handleClickTab = this._handleClickTab.bind(this);
+    }
+
+    _handleClickTab(tabId) {
         if (this.props.onChange) {
             this.props.onChange(tabId);
         }

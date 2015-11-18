@@ -1,5 +1,6 @@
 {
     "extends": "airbnb",
+    "parser": "babel-eslint",
     "rules": {
         "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
         "comma-dangle": 0,
