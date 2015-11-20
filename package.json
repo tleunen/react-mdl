@@ -71,7 +71,7 @@
     "react": "^0.14.2",
     "react-addons-test-utils": "^0.14.2",
     "react-dom": "^0.14.2",
-    "webpack": "^1.12.6",
+    "webpack": "^1.12.7",
     "webpack-dev-server": "^1.12.1"
   },
   "peerDependencies": {
