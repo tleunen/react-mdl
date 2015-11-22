@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Example from './Example';
-import Card, { CardMenu, CardText } from '../../src/Card';
+import { Card, CardMenu, CardText } from '../../src/Card';
 import CardActions from '../../src/Card/CardActions';
 import CardTitle from '../../src/Card/CardTitle';
 import Button from '../../src/Button';

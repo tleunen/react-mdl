@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Layout, { Drawer, Header, Navigation, Content } from '../lib/Layout';
+import { Drawer, Header, Layout, Navigation, Content } from '../lib/Layout';
 
 import Badges from './sections/Badges';
 import Buttons from './sections/Buttons';
@@ -16,7 +16,7 @@ import Textfields from './sections/Textfields';
 import Tooltips from './sections/Tooltips';
 
 const App = ( props ) => (
-    <Layout fixedHeader fixedDrawer { ...props }>
+    <Layout fixedDrawer { ...props }>
         <Header title="react-mdl" />
         <Drawer>
             <Navigation>

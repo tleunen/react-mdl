@@ -9,15 +9,19 @@ import Switch from '../../src/Switch';
 import IconToggle from '../../src/IconToggle';
 
 class RadioGroupExample extends React.Component {
+    constructor ( ...args ) {
+        super( ...args );
+    }
     state = {
         value: 'opt1'
     };
     _changed = ( e ) => this.setState( { value: e.target.value } );
     render() {
-        let { value } = this.state;
+        const { value } = this.state;
+        const { children, ...props } = this.props;
         return (
             <Example>
-                <RadioGroup value={ value } onChange={ this._changed } { ...this.props } />
+                <RadioGroup value={ value } onChange={ this._changed } { ...props } />
             </Example>
         );
     }

@@ -1,13 +1,13 @@
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import Button from '../../src/Button';
-import Icon from '../../src/Icon';
+import Button from '../../lib/Button';
+import Icon from '../../lib/Icon';
 
 function getJSON( value ) {
-    let json = JSON.stringify( value, 0, 2 );
+    const json = JSON.stringify( value, 0, 2 );
     return json.replace( /"([^"]+)":/g, '$1:' ).trim();
 }
-let Prop = ( props ) => {
+const Prop = ( props ) => {
     let { attr, value } = props;
     attr = ` ${ attr }`;
     if ( value === true ) {
@@ -40,12 +40,12 @@ Prop.propTypes = {
     value: React.PropTypes.any
 };
 
-let Props = ( { el } ) => {
-    let { props } = el;
+const Props = ( { el } ) => {
+    const { props } = el;
     let { defaultProps } = el.type;
     defaultProps = defaultProps || {};
 
-    let keys = Object
+    const keys = Object
         .keys( props )
         .filter( key => key !== 'children' )
         .filter( key => defaultProps[ key ] !== props[ key ] )
@@ -115,9 +115,12 @@ function Code( props ) {
     );
 }
 
-class Example extends Component {
+class Example extends React.Component {
     static propTypes = {
         description: React.PropTypes.string
+    }
+    constructor ( ...args ) {
+        super( ...args );
     }
 
     state = { collapsed: true };

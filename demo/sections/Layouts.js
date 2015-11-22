@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Example from './Example';
-import Layout, { Content, Drawer, Header, Spacer, Navigation } from '../../src/Layout';
+import { Layout, Content, Drawer, Header, Spacer, Navigation } from '../../src/Layout';
 
 export default ( props ) => (
     <section { ...props }>
