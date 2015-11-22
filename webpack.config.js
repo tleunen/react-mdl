@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
+        demo: './demo/demo.js',
         badge: './demo/badge/badge.js',
         button: './demo/button/button.js',
         card: './demo/card/card.js',
@@ -21,6 +22,10 @@ module.exports = {
         path: path.join(__dirname, 'demo'),
         filename: '[name].bundle.js',
         chumkFilename: '[id].bundle.js'
+    },
+    externals: {
+        react: 'React',
+        'react-dom': 'ReactDOM'
     },
     devtool: 'sourcemap',
     module: {

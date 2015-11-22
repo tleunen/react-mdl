@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="refresh" content="2;" /> -->
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="../extra/material.css">
+    <script src="../extra/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <style>
+/*    .components > * + * {
+      margin-left: 16px;
+    }
+*/
+    .components > * {
+      margin: 8px 16px;
+    }
+    .components > *:last-child {
+      /*margin-right: 0;*/
+    }
+    .example {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .example .components {
+        position: relative;
+        /*text-align: center;*/
+        margin: 0 auto 16px;
+    }
+    .code,
+    .example .components > * {
+        text-align: left;
+    }
+
+    .code .collapse-icon {
+      transform: rotateZ( 45deg );
+      transition-duration: 0.15s;
+      transition-property: transform;
+      will-change: transition;
+    }
+    .code.collapsed .collapse-icon {
+      transform: rotateZ( 0 );
+    }
+
+    .code-samples {
+      transform: scaleY( 1 );
+      transition-duration: 0.15s;
+      transform-origin: top;
+      transition-property: transform, max-height;
+      will-change: transform, max-height;
+      max-height: 200px;
+      overflow-y: scroll;
+      overflow-x: auto;
+      border-radius: 2px;
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 1em;
+    }
+    .code.collapsed .code-samples {
+      max-height: 0;
+      overflow-y: hidden;
+      transform: scaleY( 0 );
+    }
+    .code-sample ~ .code-sample {
+      border-top: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .components > .mdl-layout {
+      position: relative;
+      height: 300px;
+      overflow-y: auto;
+    }
+    .example > .description {
+      background-color: white;
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="/node_modules/react/dist/react.js"></script>
+    <script src="/node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="/demo.bundle.js"></script>
+    <script>
+      var samples = [].slice.call( document.querySelectorAll('.code-samples'), 0 );
+      samples.forEach( hljs.highlightBlock );
+    </script>
+</body>
+</html>
