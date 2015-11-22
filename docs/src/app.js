@@ -9,7 +9,6 @@ import Pages from '../pages/html';
 
 const home = !!Pages.home
     ? (
-
         <IndexRoute component={() => (
             <section dangerouslySetInnerHTML={{__html: Pages.home}} />
         )} />
@@ -29,7 +28,7 @@ const routes = Object.keys(Pages).filter(e => e !== 'home').map(page => {
             return <section dangerouslySetInnerHTML={{__html: Pages[page]}} />;
         }
     }
-    return <Route path={page} component={PageComponent} />;
+    return <Route key={page} path={page} component={PageComponent} />;
 });
 
 render((

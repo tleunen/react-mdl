@@ -1,6 +1,6 @@
 .*
 coverage/
-demo/
+docs/
 webpack.config.js
 src/**/__tests__
 karma.conf.js

@@ -62,7 +62,8 @@ function convertJSX(code) {
         code += '</Grid>';
     }
 
-    var transformedCode = babel.transform(code).code;
+
+    var transformedCode = babel.transform(code, {"presets": ["react"]}).code;
     transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
     code = ReactDOMServer.renderToStaticMarkup(eval(transformedCode));
 

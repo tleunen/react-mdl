@@ -1,4 +1,4 @@
 export Footer from './Footer';
-export Section from './Section';
-export DropDownSection from './DropDownSection';
-export LinkList from './LinkList';
+export FooterSection from './Section';
+export FooterDropDownSection from './DropDownSection';
+export FooterLinkList from './LinkList';
