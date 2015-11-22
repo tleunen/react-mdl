@@ -29,10 +29,10 @@ export default ( props ) => (
         <DataTable
             style={{margin: 'auto'}}
             columns={[
-                { name: 'prop',  label: 'Prop' },
-                { name: 'type',  label: 'Type' },
-                { name: 'effect',  label: 'Effect' },
-                { name: 'remarks',  label: 'Remarks' }
+                { name: 'prop', label: 'Prop' },
+                { name: 'type', label: 'Type' },
+                { name: 'effect', label: 'Effect' },
+                { name: 'remarks', label: 'Remarks' }
             ]}
             data={[
                 { prop: 'columns', type: 'Array of {label, name, numeric}', effect: 'Set the columns', remarks: 'Required' },

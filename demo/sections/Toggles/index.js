@@ -1,32 +1,14 @@
 import React from 'react';
+import Example from '../Example';
 
-import Example from './Example';
+import Checkbox from '../../../lib/Checkbox';
+import Radio from '../../../lib/Radio';
+import Switch from '../../../lib/Switch';
+import IconToggle from '../../../lib/IconToggle';
 
-import Checkbox from '../../src/Checkbox';
-import RadioGroup from '../../src/RadioGroup';
-import Radio from '../../src/Radio';
-import Switch from '../../src/Switch';
-import IconToggle from '../../src/IconToggle';
+import RadioGroupExample from './RadioGroupExample';
 
-class RadioGroupExample extends React.Component {
-    constructor ( ...args ) {
-        super( ...args );
-    }
-    state = {
-        value: 'opt1'
-    };
-    _changed = ( e ) => this.setState( { value: e.target.value } );
-    render() {
-        const { value } = this.state;
-        const { children, ...props } = this.props;
-        return (
-            <Example>
-                <RadioGroup value={ value } onChange={ this._changed } { ...props } />
-            </Example>
-        );
-    }
-}
-export default ( props ) => (
+export default( props ) => (
     <section { ...props }>
         <h3>Toggles</h3>
         <Example>

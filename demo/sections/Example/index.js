@@ -1,125 +1,15 @@
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import Button from '../../lib/Button';
-import Icon from '../../lib/Icon';
+import Button from '../../../lib/Button';
+import Icon from '../../../lib/Icon';
 
-function getJSON( value ) {
-    const json = JSON.stringify( value, 0, 2 );
-    return json.replace( /"([^"]+)":/g, '$1:' ).trim();
-}
-const Prop = ( props ) => {
-    let { attr, value } = props;
-    attr = ` ${ attr }`;
-    if ( value === true ) {
-        return <span>{ attr }</span>;
-    }
-    if ( React.isValidElement( value ) ) {
-        return <span>{ attr }={`{ `}<Code el={ value } style={{ marginLeft: '1em' }} />{` }`}</span>;
-    }
+import Code from './Code';
 
-    switch ( typeof value ) {
-        case 'string':
-            value = `"${ value }"`;
-            break;
-        case 'object':
-            // value = `{${ getJSON( value ) }}`;
-            value = <span style={{ whiteSpace: 'pre' }}>{`{`}{ getJSON( value ) }{`}`}</span>;
-            break;
-        case 'function':
-            value = `{ this._${ props.attr } }`;
-            break;
-        case 'boolean':
-        case 'number':
-        default:
-            value = `{ ${ value } }`;
-    }
-    return <span>{ attr }={ value }</span>;
-};
-Prop.propTypes = {
-    attr: React.PropTypes.string,
-    value: React.PropTypes.any
-};
-
-const Props = ( { el } ) => {
-    const { props } = el;
-    let { defaultProps } = el.type;
-    defaultProps = defaultProps || {};
-
-    const keys = Object
-        .keys( props )
-        .filter( key => key !== 'children' )
-        .filter( key => defaultProps[ key ] !== props[ key ] )
-        ;
-    return (
-        <span>
-        { keys.map( key =>
-            <Prop
-                key={ key }
-                attr={ key }
-                value={ props[ key ] }
-            />
-        ) }
-        </span>
-    );
-};
-function getTag( el ) {
-    if ( typeof el.type === 'string' ) {
-        return el.type;
-    }
-    return el.type.displayName || el.type.name;
-}
-function OpenTag( props ) {
-    let child = props.el;
-    let tag = getTag( child );
-    let childCount = React.Children.count( child.props.children );
-    return (
-        <code>
-            { `<` }{ tag }
-            <Props el={ child } />
-            { childCount > 0 ? '>' : ' />' }
-        </code>
-    );
-}
-function CloseTag( props ) {
-    let child = props.el;
-    let tag = getTag( child );
-    let childCount = React.Children.count( child.props.children );
-    if ( childCount === 0 ) {
-        return <span />;
-    }
-
-    return (
-        <code>
-        { `</` }{ tag }{ `>` }
-        </code>
-    );
-}
-function Code( props ) {
-    let { el, ...other } = props;
-
-    if ( !React.isValidElement( el ) ) {
-        return <code>{ el }</code>;
-    }
-
-    let { children } = el.props;
-    return (
-    <div { ...other }>
-        <OpenTag el={ el } />
-        { React.Children.map( children, ( child, i ) =>
-            <div style={{ marginLeft: '1em' }} key={ i }>
-                <Code el={ child } />
-            </div>
-        ) }
-        <CloseTag el={ el } />
-    </div>
-    );
-}
-
-class Example extends React.Component {
+class Example extends Component {
     static propTypes = {
         description: React.PropTypes.string
     }
-    constructor ( ...args ) {
+    constructor( ...args ) {
         super( ...args );
     }
 
@@ -131,8 +21,8 @@ class Example extends React.Component {
         e.preventDefault();
     }
     render() {
-        let { children, description, ...other } = this.props;
-        let { collapsed } = this.state;
+        const { children, description, ...other } = this.props;
+        const { collapsed } = this.state;
         return (
             <article className="example" { ...other }>
                 <section className="components">
