@@ -7,6 +7,10 @@ module.exports = {
         publicPath: '/_ghpages/',
         filename: 'app.js'
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
     devtool: 'sourcemap',
     module: {
         loaders: [

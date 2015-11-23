@@ -1,22 +1,64 @@
-var fs = require('fs');
-var path = require('path');
-var execSync = require('child_process').execSync
+/* eslint no-console: 0 */
 
-var marked = require('marked');
-var mdlRenderer = require('marked-renderer-mdl');
-var Prism = require('prismjs');
+const fs = require('fs');
+const path = require('path');
+const execSync = require('child_process').execSync;
+
+const marked = require('marked');
+const mdlRenderer = require('marked-renderer-mdl');
+const Prism = require('prismjs');
 require('prismjs/components/prism-jsx');
 
-var babel = require('babel-core');
-var React = require('react');
-var ReactMDL = require('../');
-for(component in ReactMDL) global[component] = ReactMDL[component];
-var ReactDOMServer = require('react-dom/server');
+const babel = require('babel-core');
 
-var markedOpts = { renderer: enhanceRenderer(mdlRenderer) };
+const DOC_PAGES_DIR = path.join('docs', 'pages');
+const DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
 
-var DOC_PAGES_DIR = path.join('docs', 'pages');
-var DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
+let demoContainerId = 0;
+function convertJSX(jsxCode) {
+    demoContainerId++;
+
+    const highlightedCode = Prism.highlight(jsxCode, Prism.languages.jsx);
+
+    // remove {/* comments */}
+    let code = jsxCode.replace(/{\/\*.*\*\/}\n/g, '');
+
+    const codeSplit = code.split('\n\n');
+    const columns = codeSplit.length;
+    if(columns > 1) {
+        code = '<Grid>';
+
+        codeSplit.forEach(c => {
+            code += (
+                `<Cell col={${12 / columns}}>
+                    ${c}
+                </Cell>`
+            );
+        });
+
+        code += '</Grid>';
+    }
+
+
+    let transformedCode = babel.transform(code, {'presets': ['react']}).code;
+    transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
+    const jsScript = '<script class="demo-js">' +
+            'var elem = ' + transformedCode + '\n' +
+            'var cont = document.getElementById("demo-' + demoContainerId + '");\n' +
+            'ReactDOM.render(elem, cont);\n' +
+        '</script>';
+
+    return '<div id="demo-' + demoContainerId + '"></div>' +
+        jsScript +
+        '<pre class="language-jsx">' +
+        '<code class="language-jsx">' +
+        highlightedCode +
+        '</code></pre>\n';
+}
+
+function convertCSS(code) {
+    return '<style>' + code + '</style>';
+}
 
 function enhanceRenderer(renderer) {
     function escape(html, encode) {
@@ -29,7 +71,7 @@ function enhanceRenderer(renderer) {
     }
 
 
-    renderer.code = function(code, lang, escaped) {
+    renderer.code = (code, lang, escaped) => {
         if(lang === 'jsx') return convertJSX(code);
         if(lang === 'css_demo') return convertCSS(code);
         return '<pre><code>'
@@ -40,59 +82,21 @@ function enhanceRenderer(renderer) {
     return renderer;
 }
 
-function convertJSX(code) {
-    var highlightedCode = Prism.highlight(code, Prism.languages.jsx);
-
-    // remove {/* comments */}
-    var code = code.replace(/{\/\*.*\*\/}\n/g, '');
-
-    var codeSplit = code.split('\n\n');
-    var columns = codeSplit.length;
-    if(columns > 1) {
-        var code = '<Grid>';
-
-        codeSplit.forEach(function(c) {
-            code += (
-                `<Cell col={${12/columns}}>
-                    ${c}
-                </Cell>`
-            );
-        });
-
-        code += '</Grid>';
-    }
-
-
-    var transformedCode = babel.transform(code, {"presets": ["react"]}).code;
-    transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
-    code = ReactDOMServer.renderToStaticMarkup(eval(transformedCode));
-
-    return code +
-        '<pre class="language-jsx">' +
-        '<code class="language-jsx">' +
-        highlightedCode +
-        '</code></pre>\n';
-}
-
-function convertCSS(code) {
-    return '<style>' + code + '</style>';
-}
-
 function convertPages() {
     execSync('mkdir -p ' + DOC_PAGES_DIR_OUTPUT, { stdio: [0, 1, 2] });
 
-    var files = fs.readdirSync(DOC_PAGES_DIR);
-    files.forEach(function(file) {
-        var fileIn = path.join(DOC_PAGES_DIR, file);
-        var fileOut = path.join(DOC_PAGES_DIR_OUTPUT, file + '.html');
+    const files = fs.readdirSync(DOC_PAGES_DIR);
+    files.forEach(file => {
+        const fileIn = path.join(DOC_PAGES_DIR, file);
+        const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, file + '.html');
 
-        var stats = fs.lstatSync(fileIn);
+        const stats = fs.lstatSync(fileIn);
         if(!stats.isFile()) return;
 
-        var data = fs.readFileSync(fileIn);
+        const data = fs.readFileSync(fileIn);
 
-        var content = data.toString('utf8');
-        var html = marked(content, markedOpts);
+        const content = data.toString('utf8');
+        const html = marked(content, { renderer: enhanceRenderer(mdlRenderer) });
 
         fs.writeFileSync(fileOut, html, 'utf8');
         console.log(file + ' converted.');
@@ -100,20 +104,20 @@ function convertPages() {
 }
 
 function generatePageIndex() {
-    var files = fs.readdirSync(DOC_PAGES_DIR_OUTPUT);
-    var content = 'module.exports = {\n';
+    const files = fs.readdirSync(DOC_PAGES_DIR_OUTPUT);
+    let content = 'module.exports = {\n';
 
-    files.forEach(function(file) {
-        var name = file.substring(0, file.indexOf('.'));
+    files.forEach(file => {
+        const name = file.substring(0, file.indexOf('.'));
         if(name === 'index') return;
         content += '\t' + name + ': require(\'./' + file + '\'),\n';
     });
     content += '};';
 
 
-    var fileOut = path.join(DOC_PAGES_DIR_OUTPUT, 'index.js');
+    const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, 'index.js');
     fs.writeFileSync(fileOut, content, 'utf8');
-    console.log('index.js generated.')
+    console.log('index.js generated.');
 }
 
 convertPages();

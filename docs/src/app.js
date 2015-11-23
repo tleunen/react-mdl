@@ -1,3 +1,5 @@
+/* eslint no-eval: 0 */
+
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { render } from 'react-dom';
@@ -6,6 +8,14 @@ import { createHistory } from 'history';
 
 import DocApp from './DocApp';
 import Pages from '../pages/html';
+
+// export all ReactMDL into global so we can generate demos
+import * as ReactMDL from '../../';
+for(const component in ReactMDL) {
+    if(ReactMDL.hasOwnProperty(component)) {
+        global[component] = ReactMDL[component];
+    }
+}
 
 const home = !!Pages.home
     ? (
@@ -19,6 +29,9 @@ const routes = Object.keys(Pages).filter(e => e !== 'home').map(page => {
     class PageComponent extends React.Component {
         componentDidMount() {
             window.componentHandler.upgradeElements(findDOMNode(this));
+
+            const demoJs = document.querySelectorAll('.demo-js');
+            Array.from(demoJs).forEach(code => eval(code.innerHTML));
         }
 
         componentWillUnmount() {

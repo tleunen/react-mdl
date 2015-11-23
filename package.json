@@ -66,10 +66,10 @@
   "scripts": {
     "test": "karma start --single-run",
     "posttest": "npm run lint",
-    "lint": "eslint src",
+    "lint": "eslint docs src scripts",
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "prepublish": "npm run compile",
-    "predocs": "node scripts/docs.js",
+    "predocs": "babel-node scripts/docs.js",
     "docs": "webpack",
     "postdocs": "mkdir -p _ghpages && cp -r extra/material.* docs/* _ghpages",
     "docs:serve": "webpack-dev-server --content-base _ghpages"
