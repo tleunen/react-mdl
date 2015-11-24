@@ -74,4 +74,4 @@
 | required | Boolean | Set the textfield as required | Optional |
 | rows | Number | Defines the number of rows (multiline) | Optional |
 | style | Object | Defines the custom styles for the container | Optional |
-| value | String or Number | Definest the 'current' value | Optional |
+| defaultValue | String or Number | Defines the 'current' value | Optional |
