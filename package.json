@@ -71,7 +71,7 @@
     "prepublish": "npm run compile",
     "predocs": "babel-node scripts/docs.js",
     "docs": "webpack",
-    "postdocs": "mkdir -p _ghpages && cp -r extra/material.* docs/* _ghpages",
+    "postdocs": "mkdir -p _ghpages && cp -r extra/material.min.* docs/* _ghpages",
     "docs:serve": "webpack-dev-server --content-base _ghpages"
   }
 }
