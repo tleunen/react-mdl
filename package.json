@@ -49,7 +49,7 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
     "marked": "^0.3.5",
-    "marked-renderer-mdl": "0.0.2",
+    "marked-renderer-mdl": "^0.0.3",
     "mocha": "^2.3.3",
     "prismjs": "^1.3.0",
     "react": "^0.14.0",
@@ -68,10 +68,13 @@
     "posttest": "npm run lint",
     "lint": "eslint docs src scripts",
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
-    "prepublish": "npm run compile",
-    "predocs": "babel-node scripts/docs.js",
-    "docs": "webpack",
-    "postdocs": "mkdir -p _ghpages && cp -r extra/material.min.* docs/* _ghpages",
-    "docs:serve": "webpack-dev-server --content-base _ghpages"
+    "serve-docs": "npm run build-docs && webpack-dev-server --content-base out/docs/",
+    "prebuild-docs": "babel-node scripts/docs.js",
+    "postbuild-docs": "cp -r extra/material.min.* docs/*.html docs/*.css out/docs/",
+    "build-docs": "webpack docs/src/app.js out/docs/app.js",
+    "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
+    "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
+    "prebuild-all": "rm -rf out",
+    "build-all": "npm run build-docs && npm run build-umd && npm run build-min"
   }
 }

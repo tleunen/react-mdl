@@ -4,4 +4,4 @@ npm-debug.log
 coverage/
 lib/
 /docs/pages/html/
-_ghpages/
+/out

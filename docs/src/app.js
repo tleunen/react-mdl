@@ -4,7 +4,7 @@ import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
-import { createHistory } from 'history';
+import { createHashHistory, useBasename } from 'history';
 
 import DocApp from './DocApp';
 import Pages from '../pages/html';
@@ -44,8 +44,12 @@ const routes = Object.keys(Pages).filter(e => e !== 'home').map(page => {
     return <Route key={page} path={page} component={PageComponent} />;
 });
 
+const history = useBasename(createHashHistory)({
+    queryKey: false
+});
+
 render((
-    <Router history={createHistory()}>
+    <Router history={history}>
         <Route path="/" component={DocApp}>
             {home}
             {routes}

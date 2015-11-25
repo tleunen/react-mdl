@@ -5,3 +5,4 @@ webpack.config.js
 src/**/__tests__
 karma.conf.js
 /scripts
+/out/docs
