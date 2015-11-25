@@ -2,12 +2,12 @@
 import expect from 'expect';
 import React from 'react';
 import { render } from '../../__tests__/render';
-import { Section } from '../';
+import { FooterSection } from '../';
 
 describe('Footer', () => {
-    describe('Section', () => {
+    describe('FooterSection', () => {
         it('should render a div with the specific css class', () => {
-            const output = render(<Section />);
+            const output = render(<FooterSection />);
 
             expect(output.type).toBe('div');
             expect(output.props.className)
@@ -15,7 +15,7 @@ describe('Footer', () => {
         });
 
         it('should allow custom css classes', () => {
-            const output = render(<Section className="my-list" />);
+            const output = render(<FooterSection className="my-list" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mega-footer__left-section')
@@ -23,7 +23,7 @@ describe('Footer', () => {
         });
 
         it('should render with a mini size if specified', () => {
-            const output = render(<Section size="mini" />);
+            const output = render(<FooterSection size="mini" />);
 
             expect(output.props.className)
                 .toInclude('mdl-mini-footer__left-section');
@@ -31,7 +31,7 @@ describe('Footer', () => {
 
         it('should apply the specified section type', () => {
             ['top', 'middle', 'bottom', 'left', 'right'].forEach(type => {
-                const output = render(<Section type={type} />);
+                const output = render(<FooterSection type={type} />);
 
                 expect(output.props.className)
                     .toInclude(`mdl-mega-footer__${type}-section`);
@@ -40,9 +40,9 @@ describe('Footer', () => {
 
         it('should pass the size to children', () => {
             const element = (
-                <Section size="mega">
+                <FooterSection size="mega">
                     <div>Allo</div>
-                </Section>
+                </FooterSection>
             );
             const output = render(element);
 
@@ -51,7 +51,7 @@ describe('Footer', () => {
         });
 
         it('should render a logo if specified', () => {
-            const output = render(<Section logo="React-MDL" />);
+            const output = render(<FooterSection logo="React-MDL" />);
 
             expect(output.props.children[0]).toExist();
             expect(output.props.children[0].props.className)
