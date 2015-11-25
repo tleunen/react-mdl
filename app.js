@@ -132,9 +132,13 @@
 	    return _react2.default.createElement(_reactRouter.Route, { key: page, path: page, component: PageComponent });
 	});
 	
+	var history = (0, _history.useBasename)(_history.createHashHistory)({
+	    queryKey: false
+	});
+	
 	(0, _reactDom.render)(_react2.default.createElement(
 	    _reactRouter.Router,
-	    { history: (0, _history.createHistory)() },
+	    { history: history },
 	    _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: '/', component: _DocApp2.default },
