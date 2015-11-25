@@ -4,10 +4,10 @@
 
 ```jsx
 {/* Default slider */}
-<Slider min={0} max={100} value={0} onChange={() => {}} />
+<Slider min={0} max={100} defaultValue={0} />
 
 {/* Slider with initial value */}
-<Slider min={0} max={100} value={25} onChange={() => {}} />
+<Slider min={0} max={100} defaultValue={25} />
 ```
 
 ## Configuration

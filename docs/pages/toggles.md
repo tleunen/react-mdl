@@ -10,9 +10,9 @@
 ### Checkbox
 
 ```jsx
-<Checkbox label="With ripple" ripple checked onChange={() => {}} />
+<Checkbox label="With ripple" ripple defaultChecked />
 
-<Checkbox label="Without ripple" onChange={() => {}} />
+<Checkbox label="Without ripple" />
 ```
 
 #### Configuration
@@ -55,9 +55,9 @@
 ### Icon Toggle
 
 ```jsx
-<IconToggle ripple id="bold" name="format_bold" checked onChange={() => {}} />
+<IconToggle ripple id="bold" name="format_bold" defaultChecked />
 
-<IconToggle id="italic" name="format_italic" onChange={() => {}} />
+<IconToggle id="italic" name="format_italic" />
 ```
 
 #### Configuration
@@ -74,9 +74,9 @@
 ### Switch
 
 ```jsx
-<Switch ripple id="switch1" checked onChange={() => {}}>Ripple switch</Switch>
+<Switch ripple id="switch1" defaultChecked>Ripple switch</Switch>
 
-<Switch id="switch2" onChange={() => {}}>Switch</Switch>
+<Switch id="switch2">Switch</Switch>
 ```
 
 #### Configuration
