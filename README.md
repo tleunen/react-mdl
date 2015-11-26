@@ -33,14 +33,6 @@ import Button from 'react-mdl/lib/Button';
 import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 ```
 
-## How to run the demos
-Clone the repository, install the dependencies and run the demo server, then hit `http://localhost:8080/demo/` with your favourite browser.
-```
-npm install
-npm run demo
-// go to http://localhost:8080/demo/
-```
-
 ## License
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
