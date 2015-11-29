@@ -55,7 +55,7 @@
     "coveralls": "^2.11.4",
     "eslint": "^1.9.0",
     "eslint-config-airbnb": "^1.0.0",
-    "eslint-plugin-react": "^3.9.0",
+    "eslint-plugin-react": "^3.11.0",
     "expect": "^1.13.0",
     "history": "^1.13.0",
     "html-loader": "^0.3.0",
