@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const Content = props => {
@@ -12,6 +12,10 @@ const Content = props => {
             <div className="react-mdl-header-tabs-hack" id="undefined" />
         </div>
     );
+};
+
+Content.propTypes = {
+    className: PropTypes.string
 };
 
 export default Content;

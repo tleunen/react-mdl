@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 export default function(displayName, defaultClassName, element = 'div') {
@@ -12,6 +12,9 @@ export default function(displayName, defaultClassName, element = 'div') {
     };
 
     fn.displayName = displayName;
+    fn.propTypes = {
+        className: PropTypes.string
+    };
 
     return fn;
 }
