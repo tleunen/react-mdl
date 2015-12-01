@@ -1,7 +1,8 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { render } from './render';
+import ReactDOM from 'react-dom';
+import { render, renderDOM } from './render';
 import Checkbox from '../Checkbox';
 
 describe('Checkbox', () => {
@@ -64,5 +65,28 @@ describe('Checkbox', () => {
 
         expect(output.type).toBe('label');
         expect(output.props.className).toInclude('mdl-js-ripple-effect');
+    });
+
+    describe('should update the Checkbox after the first render', () => {
+        it('when `checked` has changed', () => {
+            const el = renderDOM(<Checkbox />);
+
+            expect(el.className).toExclude('is-checked');
+
+            ReactDOM.render(<Checkbox checked />, el.parentNode);
+            expect(el.className).toInclude('is-checked');
+            ReactDOM.render(<Checkbox />, el.parentNode);
+            expect(el.className).toExclude('is-checked');
+        });
+
+        it('when `disable` has changed', () => {
+            const el = renderDOM(<Checkbox />);
+
+            expect(el.className).toExclude('is-disabled');
+            ReactDOM.render(<Checkbox disabled />, el.parentNode);
+            expect(el.className).toInclude('is-disabled');
+            ReactDOM.render(<Checkbox />, el.parentNode);
+            expect(el.className).toExclude('is-disabled');
+        });
     });
 });
