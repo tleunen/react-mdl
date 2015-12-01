@@ -281,6 +281,7 @@
 
 | Element   | Prop         | Type      | Effect       | Remarks      |
 |:----------|:-------------|:----------|:-------------|:-------------|
+| Grid      | noSpacing    | Boolean    | Removes the margins between the cells. | Optional |
 | Cell      | align        | String[top, middle, bottom, stretch]    | Set the cell alignment | Optional |
 | Cell      | col          | Number[1..12]    | Set the column size | Required |
 | Cell      | phone        | Number[1..12]    | Set the column size in phone mode | Optional |
