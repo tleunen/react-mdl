@@ -7,10 +7,11 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { createHashHistory, useBasename } from 'history';
 
 import DocApp from './DocApp';
+import Dashboard from './Dashboard';
 import Pages from '../pages/html';
 
 // export all ReactMDL into global so we can generate demos
-import * as ReactMDL from '../../';
+import * as ReactMDL from '../../src';
 for(const component in ReactMDL) {
     if(ReactMDL.hasOwnProperty(component)) {
         global[component] = ReactMDL[component];
@@ -54,5 +55,6 @@ render((
             {home}
             {routes}
         </Route>
+        <Route path="/dashboard" component={Dashboard}/>
     </Router>
 ), document.getElementById('app'));
