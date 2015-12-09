@@ -57,7 +57,7 @@
     "eslint-config-airbnb": "^2.0.0",
     "eslint-plugin-react": "^3.11.2",
     "expect": "^1.13.0",
-    "history": "^1.13.0",
+    "history": "~1.13.0",
     "html-loader": "^0.3.0",
     "isparta": "^4.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
@@ -76,7 +76,7 @@
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-router": "^1.0.0",
+    "react-router": "~1.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
