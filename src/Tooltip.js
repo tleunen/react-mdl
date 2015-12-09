@@ -19,7 +19,7 @@ const Tooltip = (props) => {
     }
 
     return (
-        <div style={{display: 'inline-block'}} {...otherProps}>
+        <div style={{ display: 'inline-block' }} {...otherProps}>
             {React.cloneElement(element, { id })}
             <MDLComponent>
                 {React.cloneElement(newLabel, {

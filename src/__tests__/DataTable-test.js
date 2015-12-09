@@ -6,15 +6,15 @@ import DataTable from '../DataTable';
 
 describe('DataTable', () => {
     const columns = [
-        {name: 'material', label: 'Material'},
-        {name: 'quantity', label: 'Quantity', numeric: true},
-        {name: 'price', label: 'Unit Price', numeric: true}
+        { name: 'material', label: 'Material' },
+        { name: 'quantity', label: 'Quantity', numeric: true },
+        { name: 'price', label: 'Unit Price', numeric: true }
     ];
 
     const data = [
-        {material: 'Acrylic (Transparent)', quantity: 25, price: '$2.90'},
-        {material: 'Plywood (Birch)', quantity: 50, price: '$1.25'},
-        {material: 'Laminate (Gold on Blue)', quantity: 10, price: '$2.35'}
+        { material: 'Acrylic (Transparent)', quantity: 25, price: '$2.90' },
+        { material: 'Plywood (Birch)', quantity: 50, price: '$1.25' },
+        { material: 'Laminate (Gold on Blue)', quantity: 10, price: '$2.35' }
     ];
 
     it('should render a <table>', () => {
@@ -84,7 +84,7 @@ describe('DataTable', () => {
 
             tds.forEach((td, j) => {
                 expect(td.key).toBe(columns[j].name);
-                expect(td.props.children).toBe( data[i][columns[j].name] );
+                expect(td.props.children).toBe(data[i][columns[j].name]);
             });
         });
     });
@@ -110,7 +110,7 @@ describe('DataTable', () => {
     });
 
     it('should set the key for each row data element if provided', () => {
-        data.forEach( (elt, idx) => {
+        data.forEach((elt, idx) => {
             elt.key = 'elt' + idx;
         });
 

@@ -40,7 +40,7 @@ function convertJSX(jsxCode) {
     }
 
 
-    let transformedCode = babel.transform(code, {'presets': ['react']}).code;
+    let transformedCode = babel.transform(code, { 'presets': ['react'] }).code;
     transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
     const jsScript = '<script class="demo-js">' +
             'var elem = ' + transformedCode + '\n' +

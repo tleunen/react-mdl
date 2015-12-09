@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-export default function(displayName, defaultClassName, element = 'div') {
+export default (displayName, defaultClassName, element = 'div') => {
     const fn = (props) => {
         const { className, children, ...otherProps } = props;
 
@@ -17,4 +17,4 @@ export default function(displayName, defaultClassName, element = 'div') {
     };
 
     return fn;
-}
+};

@@ -19,7 +19,7 @@ class Menu extends React.Component {
 
     render() {
         const { align, children, className, ripple,
-            target, valign, ...otherProps} = this.props;
+            target, valign, ...otherProps } = this.props;
 
         const classes = classNames('mdl-menu mdl-js-menu', {
             [`mdl-menu--${valign}-${align}`]: true,

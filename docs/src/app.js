@@ -20,7 +20,7 @@ for(const component in ReactMDL) {
 const home = !!Pages.home
     ? (
         <IndexRoute component={() => (
-            <section dangerouslySetInnerHTML={{__html: Pages.home}} />
+            <section dangerouslySetInnerHTML={{ __html: Pages.home }} />
         )} />
     )
     : null;
@@ -38,7 +38,7 @@ const routes = Object.keys(Pages).filter(e => e !== 'home').map(page => {
             window.componentHandler.downgradeElements(findDOMNode(this));
         }
         render() {
-            return <section dangerouslySetInnerHTML={{__html: Pages[page]}} />;
+            return <section dangerouslySetInnerHTML={{ __html: Pages[page] }} />;
         }
     }
     return <Route key={page} path={page} component={PageComponent} />;

@@ -3,7 +3,7 @@ import Radio from './Radio';
 
 const RadioGroup = (props) => {
     const { name, value, children,
-        container, childContainer, ...otherProps} = props;
+        container, childContainer, ...otherProps } = props;
 
     return React.createElement(container, otherProps,
         React.Children.map(children, child => {

@@ -18,7 +18,7 @@ class DocApp extends React.Component {
                 <Header title="React-MDL">
                     <Navigation>
                         <a href="https://github.com/tleunen/react-mdl">
-                            <Icon name="link" style={{marginRight: '8px', verticalAlign: 'middle'}} />
+                            <Icon name="link" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
                             GitHub
                         </a>
                     </Navigation>

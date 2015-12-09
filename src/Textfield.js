@@ -81,7 +81,7 @@ class Textfield extends React.Component {
         }, className);
 
         const field = expandable
-            ? React.createElement('div', {className: 'mdl-textfield__expandable-holder'}, inputAndLabelError)
+            ? React.createElement('div', { className: 'mdl-textfield__expandable-holder' }, inputAndLabelError)
             : inputAndLabelError;
 
         return (
