@@ -21,7 +21,7 @@ const DropDownSection = (props) => {
 DropDownSection.propTypes = {
     className: PropTypes.string,
     size: PropTypes.oneOf(['mini', 'mega']),
-    title: PropTypes.string.isRequired
+    title: PropTypes.node.isRequired
 };
 DropDownSection.defaultProps = {
     size: 'mega'

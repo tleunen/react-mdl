@@ -33,7 +33,7 @@ Header.propTypes = {
     className: PropTypes.string,
     scroll: PropTypes.bool,
     seamed: PropTypes.bool,
-    title: PropTypes.any,
+    title: PropTypes.node,
     transparent: PropTypes.bool,
     waterfall: PropTypes.bool
 };
