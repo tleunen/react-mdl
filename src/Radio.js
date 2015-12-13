@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
@@ -15,6 +16,17 @@ class Radio extends React.Component {
             PropTypes.number
         ]).isRequired
     };
+
+    componentDidUpdate(prevProps) {
+        if(this.props.disabled !== prevProps.disabled) {
+            const fnName = this.props.disabled ? 'disable' : 'enable';
+            findDOMNode(this).MaterialRadio[fnName]();
+        }
+        if(this.props.checked !== prevProps.checked) {
+            const fnName = this.props.checked ? 'check' : 'uncheck';
+            findDOMNode(this).MaterialRadio[fnName]();
+        }
+    }
 
     render() {
         const { children, className, name, ripple, value, ...inputProps } = this.props;

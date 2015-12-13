@@ -1,7 +1,8 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { render } from './render';
+import ReactDOM from 'react-dom';
+import { render, renderDOM } from './render';
 import Radio from '../Radio';
 
 describe('Radio', () => {
@@ -41,5 +42,28 @@ describe('Radio', () => {
 
         expect(label.props.className).toBe('mdl-radio__label');
         expect(label.props.children).toBe('My label');
+    });
+
+    describe('should update the Radio after the first render', () => {
+        it('when `checked` has changed', () => {
+            const el = renderDOM(<Radio />);
+
+            expect(el.className).toExclude('is-checked');
+
+            ReactDOM.render(<Radio checked />, el.parentNode);
+            expect(el.className).toInclude('is-checked');
+            ReactDOM.render(<Radio />, el.parentNode);
+            expect(el.className).toExclude('is-checked');
+        });
+
+        it('when `disable` has changed', () => {
+            const el = renderDOM(<Radio />);
+
+            expect(el.className).toExclude('is-disabled');
+            ReactDOM.render(<Radio disabled />, el.parentNode);
+            expect(el.className).toInclude('is-disabled');
+            ReactDOM.render(<Radio />, el.parentNode);
+            expect(el.className).toExclude('is-disabled');
+        });
     });
 });

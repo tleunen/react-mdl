@@ -1,7 +1,8 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { render } from './render';
+import ReactDOM from 'react-dom';
+import { render, renderDOM } from './render';
 import IconToggle from '../IconToggle';
 import Icon from '../Icon';
 
@@ -61,5 +62,28 @@ describe('IconToggle', () => {
 
         expect(output.type).toBe('label');
         expect(output.props.className).toInclude('mdl-js-ripple-effect');
+    });
+
+    describe('should update the IconToggle after the first render', () => {
+        it('when `checked` has changed', () => {
+            const el = renderDOM(<IconToggle name="add" />);
+
+            expect(el.className).toExclude('is-checked');
+
+            ReactDOM.render(<IconToggle name="add" checked />, el.parentNode);
+            expect(el.className).toInclude('is-checked');
+            ReactDOM.render(<IconToggle name="add" />, el.parentNode);
+            expect(el.className).toExclude('is-checked');
+        });
+
+        it('when `disable` has changed', () => {
+            const el = renderDOM(<IconToggle name="add" />);
+
+            expect(el.className).toExclude('is-disabled');
+            ReactDOM.render(<IconToggle name="add" disabled />, el.parentNode);
+            expect(el.className).toInclude('is-disabled');
+            ReactDOM.render(<IconToggle name="add" />, el.parentNode);
+            expect(el.className).toExclude('is-disabled');
+        });
     });
 });
