@@ -14,6 +14,39 @@ const babel = require('babel-core');
 const DOC_PAGES_DIR = path.join('docs', 'pages');
 const DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
 
+function getCodePenForm(jsx) {
+    const JS = `
+for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }
+
+const Demo = (props) => {
+    return ${jsx};
+}
+
+ReactDOM.render(<Demo />, document.getElementById('demo'))
+    `;
+
+    const data = {
+        title: 'React-MDL example',
+        editors: '001',
+        html: '<div id="demo"></div>',
+        css: '@import url(https://fonts.googleapis.com/icon?family=Material+Icons);',
+        js: JS,
+        js_pre_processor: 'babel',
+        css_external: 'https://npmcdn.com/react-mdl/extra/material.css',
+        js_external: 'https://npmcdn.com/react@0.14.3/dist/react.js;https://npmcdn.com/react-dom/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js'
+    };
+
+    const JSONstring = JSON.stringify(data)
+        .replace(/"/g, '&​quot;')
+        .replace(/'/g, '&apos;');
+
+
+    return '<form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">' +
+        '<input type="hidden" name="data" value=\'' + JSONstring + '\'>' +
+        '<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">' +
+    '</form>';
+}
+
 let demoContainerId = 0;
 function convertJSX(jsxCode) {
     demoContainerId++;
@@ -53,7 +86,9 @@ function convertJSX(jsxCode) {
         '<pre class="language-jsx">' +
         '<code class="language-jsx">' +
         highlightedCode +
-        '</code></pre>\n';
+        '</code>' +
+        getCodePenForm(code) +
+        '</pre>\n';
 }
 
 function convertCSS(code) {
