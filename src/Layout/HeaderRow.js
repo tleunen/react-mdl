@@ -17,7 +17,7 @@ const HeaderRow = props => {
 };
 HeaderRow.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.any
+    title: PropTypes.node
 };
 
 export default HeaderRow;

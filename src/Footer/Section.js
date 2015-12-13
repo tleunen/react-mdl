@@ -19,7 +19,7 @@ const Section = (props) => {
 
 Section.propTypes = {
     className: PropTypes.string,
-    logo: PropTypes.string,
+    logo: PropTypes.node,
     size: PropTypes.oneOf(['mini', 'mega']),
     type: PropTypes.oneOf(['top', 'middle', 'bottom', 'left', 'right'])
 };

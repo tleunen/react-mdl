@@ -15,7 +15,7 @@ const Drawer = props => {
 };
 Drawer.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.node
 };
 
 export default Drawer;
