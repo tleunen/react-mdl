@@ -56,5 +56,5 @@
 |:----------|:-------------|:----------|:-------------|:-------------|
 | Menu      | align        | String (left, right)    | Set the horizontal alignment  | Optional, default "left" |
 | Menu      | ripple       | Boolean   | Apply the ripple effect  | Optional |
-| Menu      | target       | String    | ID of the targeted element. A click on the targeted element wil lopen the menu  | Required |
+| Menu      | target       | String    | ID of the targeted element. A click on the targeted element will open the menu  | Required |
 | Menu      | valign       | String (top, bottom)    | Set the vertical alignment  | Optional, default "bottom" |
