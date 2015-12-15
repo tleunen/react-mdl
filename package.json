@@ -54,7 +54,7 @@
     "babel-preset-stage-0": "^6.2.4",
     "coveralls": "^2.11.4",
     "eslint": "^1.10.2",
-    "eslint-config-airbnb": "^2.0.0",
+    "eslint-config-airbnb": "^2.1.0",
     "eslint-plugin-react": "^3.11.2",
     "expect": "^1.13.0",
     "history": "~1.13.0",
