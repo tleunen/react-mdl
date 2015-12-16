@@ -12,7 +12,7 @@ const Section = (props) => {
     return (
         <div className={classes} {...otherProps}>
             {logo ? <div className="mdl-logo">{logo}</div> : null}
-            {cloneChildren(children, { size: size })}
+            {cloneChildren(children, { size })}
         </div>
     );
 };

@@ -11,7 +11,7 @@ const Footer = (props) => {
 
     return (
         <footer className={classes} {...otherProps}>
-            {cloneChildren(children, { size: size })}
+            {cloneChildren(children, { size })}
         </footer>
     );
 };
