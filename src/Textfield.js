@@ -28,7 +28,8 @@ class Textfield extends React.Component {
     componentDidUpdate(prevProps) {
         if(
             this.props.required !== prevProps.required ||
-            this.props.pattern !== prevProps.pattern
+            this.props.pattern !== prevProps.pattern ||
+            this.props.error !== prevProps.error
         ) {
             findDOMNode(this).MaterialTextfield.checkValidity();
         }

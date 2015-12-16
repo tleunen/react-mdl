@@ -96,6 +96,16 @@ describe('Textfield', () => {
             expect(el.className).toInclude('is-invalid');
         });
 
+        it('when it clears an error', () => {
+            const el = renderDOM(<Textfield label="label"/>);
+
+            ReactDOM.render(<Textfield label="label" error="is now invalid!" />, el.parentNode);
+            expect(el.className).toInclude('is-invalid');
+
+            ReactDOM.render(<Textfield label="label" error={null}/>, el.parentNode);
+            expect(el.className).toExclude('is-invalid');
+        });
+
         it('when it receives a new value', () => {
             const el = renderDOM(<Textfield label="label" />);
 
