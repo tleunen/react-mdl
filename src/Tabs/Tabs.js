@@ -20,12 +20,13 @@ class Tabs extends React.Component {
         ]),
         className: PropTypes.string,
         onChange: PropTypes.func,
-        ripple: PropTypes.bool
+        ripple: PropTypes.bool,
+        tabBarProps: PropTypes.object,
     }
 
     render() {
         const { activeTab, className, onChange, ripple,
-            children, ...otherProps } = this.props;
+            children, tabBarProps, ...otherProps } = this.props;
 
         const classes = classNames('mdl-tabs mdl-js-tabs', {
             'mdl-js-ripple-effect': ripple
@@ -33,7 +34,7 @@ class Tabs extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                <TabBar cssPrefix="mdl-tabs" activeTab={activeTab} onChange={onChange}>
+                <TabBar cssPrefix="mdl-tabs" activeTab={activeTab} onChange={onChange} {...tabBarProps} >
                     {children}
                 </TabBar>
                 <div className="react-mdl-hack" id="undefined" />
