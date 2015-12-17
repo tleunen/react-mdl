@@ -4,15 +4,20 @@ import Tab from './Tab';
 import TabBar from './TabBar';
 import mdlUpgrade from '../utils/mdlUpgrade';
 
+const TabPropType = (props, propName, componentName) => {
+    const prop = props[propName];
+    if(prop.type !== Tab) {
+        return new Error('`' + componentName + '` only accepts `Tab` as children.');
+    }
+};
+
 class Tabs extends React.Component {
     static propTypes = {
         activeTab: PropTypes.number,
-        children: PropTypes.arrayOf((props, propName, componentName) => {
-            const prop = props[propName];
-            if(prop.type !== Tab) {
-                return new Error('`' + componentName + '` only accepts `Tab` as children.');
-            }
-        }),
+        children: PropTypes.oneOfType([
+            TabPropType,
+            PropTypes.arrayOf(TabPropType)
+        ]),
         className: PropTypes.string,
         onChange: PropTypes.func,
         ripple: PropTypes.bool
