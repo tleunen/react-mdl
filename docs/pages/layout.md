@@ -318,6 +318,7 @@
 | Tabs      | activeTab    | Number    | Set the active tab  | Optional, default 0 |
 | Tabs      | onChange     | Function  | Set the change callback | Optional |
 | Tabs      | ripple       | Boolean   | Applies ripples effect on tabs | Optional |
+| Tabs      | tabBarProps  | Object    | Pass Props to the TabBar Element | Optional |
 
 ### Footer
 
