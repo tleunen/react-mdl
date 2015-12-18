@@ -4,7 +4,7 @@ import Pages from '../pages/html';
 import {
     Layout, Header, Drawer, Content, Navigation,
     Icon, Grid, Cell
-} from '../../';
+} from '../../src';
 
 class DocApp extends React.Component {
     render() {
@@ -26,6 +26,9 @@ class DocApp extends React.Component {
                 <Drawer title="Components">
                     <Navigation>
                         {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
+                    </Navigation>
+                    <Navigation>
+                        <Link to={'dashboard'}>Dashboard</Link>
                     </Navigation>
                 </Drawer>
                 <Content className="mdl-color-text--grey-600">

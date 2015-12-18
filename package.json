@@ -91,7 +91,7 @@
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "npm run build-docs && webpack-dev-server --content-base out/docs/",
     "prebuild-docs": "babel-node scripts/docs.js",
-    "postbuild-docs": "cp -r extra/material.min.* docs/*.html docs/*.css out/docs/",
+    "postbuild-docs": "cp -r extra/material.min.* docs/*.html docs/*.css docs/images/* out/docs/",
     "build-docs": "webpack docs/src/app.js out/docs/app.js",
     "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
