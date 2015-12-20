@@ -8,7 +8,7 @@ import Pages from '../pages/html';
 import pageComponentHelper from './PageComponentHelper';
 
 // export all ReactMDL into global so we can generate demos
-import * as ReactMDL from '../../';
+import * as ReactMDL from '../../src/';
 for(const component in ReactMDL) {
     if(ReactMDL.hasOwnProperty(component)) {
         global[component] = ReactMDL[component];
