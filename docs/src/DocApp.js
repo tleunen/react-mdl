@@ -4,7 +4,7 @@ import Pages from '../pages/html';
 import {
     Layout, Header, Drawer, Content, Navigation,
     Icon, Grid, Cell
-} from '../../';
+} from '../../src/';
 
 class DocApp extends React.Component {
     render() {
