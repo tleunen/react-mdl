@@ -82,7 +82,7 @@
   },
   "peerDependencies": {
     "react": "0.14.x",
-    "react-dom": "0.14.x"
+    "react-dom": "0.14.5"
   },
   "scripts": {
     "test": "karma start --single-run",
