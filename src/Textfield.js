@@ -7,7 +7,7 @@ class Textfield extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        error: PropTypes.string,
+        error: PropTypes.node,
         expandable: PropTypes.bool,
         expandableIcon: PropTypes.string,
         floatingLabel: PropTypes.bool,
