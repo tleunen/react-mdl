@@ -7,6 +7,7 @@
         "indent": [2, 4, {"SwitchCase": 1}],
         "no-const-assign": 2,
         "space-after-keywords": 0,
+        "max-len": 0,
 
         "react/prop-types": [2, { "ignore": ["children"] }],
         "react/no-multi-comp": [2, { "ignoreStateless": true }],

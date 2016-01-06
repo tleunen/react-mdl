@@ -73,7 +73,7 @@ function convertJSX(jsxCode) {
     }
 
 
-    let transformedCode = babel.transform(code, { 'presets': ['react'] }).code;
+    let transformedCode = babel.transform(code, { presets: ['react'] }).code;
     transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
     const jsScript = '<script class="demo-js">' +
             'var elem = ' + transformedCode + '\n' +
@@ -106,7 +106,7 @@ function enhanceRenderer(renderer) {
     }
 
 
-    renderer.code = (code, lang, escaped) => {
+    renderer.code = (code, lang, escaped) => { // eslint-disable-line no-param-reassign
         if(lang === 'jsx') return convertJSX(code);
         if(lang === 'css_demo') return convertCSS(code);
         return '<pre><code>'

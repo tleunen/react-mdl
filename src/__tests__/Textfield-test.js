@@ -133,26 +133,26 @@ describe('Textfield', () => {
         });
 
         it('when it gets required with value', () => {
-            const el = renderDOM(<Textfield label="label" value="my value" onChange={() => null} />);
+            const el = renderDOM(<Textfield label="label" value="my value" />);
 
-            ReactDOM.render(<Textfield label="label" value="my value" onChange={() => null} required />, el.parentNode);
+            ReactDOM.render(<Textfield label="label" value="my value" required />, el.parentNode);
 
             expect(el.className).toExclude('is-invalid');
             expect(el.querySelector('.mdl-textfield__input').required).toBe(true);
         });
 
         it('when it receives a pattern with an incorrect value', () => {
-            const el = renderDOM(<Textfield label="label" value="value" onChange={() => null} />);
+            const el = renderDOM(<Textfield label="label" value="value" />);
 
-            ReactDOM.render(<Textfield label="label" value="value" onChange={() => null} pattern="[0-9]+" />, el.parentNode);
+            ReactDOM.render(<Textfield label="label" value="value" pattern="[0-9]+" />, el.parentNode);
 
             expect(el.className).toInclude('is-invalid');
         });
 
         it('when it receives a pattern with correct value', () => {
-            const el = renderDOM(<Textfield label="label" value="17" onChange={() => null} />);
+            const el = renderDOM(<Textfield label="label" value="17" />);
 
-            ReactDOM.render(<Textfield label="label" value="17" onChange={() => null} pattern="[0-9]+" />, el.parentNode);
+            ReactDOM.render(<Textfield label="label" value="17" pattern="[0-9]+" />, el.parentNode);
 
             expect(el.className).toExclude('is-invalid');
         });

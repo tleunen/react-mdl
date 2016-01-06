@@ -17,9 +17,7 @@ for(const component in ReactMDL) {
 
 const home = !!Pages.home
     ? (
-        <IndexRoute component={() => (
-            <section dangerouslySetInnerHTML={{ __html: Pages.home }} />
-        )} />
+        <IndexRoute component={pageComponentHelper(Pages.home)} />
     )
     : null;
 
