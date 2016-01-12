@@ -78,7 +78,7 @@
     "react-dom": "^0.14.0",
     "react-router": "~1.0.3",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+    "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
     "react": "0.14.x",
