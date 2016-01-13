@@ -33,7 +33,7 @@ ReactDOM.render(<Demo />, document.getElementById('demo'))
         js: JS,
         js_pre_processor: 'babel',
         css_external: 'https://npmcdn.com/react-mdl/extra/material.css',
-        js_external: 'https://npmcdn.com/react@0.14.3/dist/react.js;https://npmcdn.com/react-dom/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js'
+        js_external: 'https://npmcdn.com/react@0.14.3/dist/react.js;https://npmcdn.com/react-dom@0.14.3/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js'
     };
 
     const JSONstring = JSON.stringify(data)
