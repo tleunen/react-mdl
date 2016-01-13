@@ -144,7 +144,7 @@ function generatePageIndex() {
 
     files.forEach(file => {
         const name = file.substring(0, file.indexOf('.'));
-        if(name === 'index') return;
+        if(name === 'index' || file[0] === '.') return;
         content += '\t' + name + ': require(\'./' + file + '\'),\n';
     });
     content += '};';
