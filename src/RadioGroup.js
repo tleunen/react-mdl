@@ -8,7 +8,7 @@ const RadioGroup = (props) => {
     return React.createElement(container, otherProps,
         React.Children.map(children, child => {
             const clonedChild = React.cloneElement(child, {
-                checked: child.props.value === value,
+                defaultChecked: child.props.value === value,
                 name,
                 ...otherProps
             });
