@@ -9,7 +9,7 @@ class Slider extends React.Component {
         min: PropTypes.number,
         onChange: PropTypes.func,
         value: PropTypes.number
-    }
+    };
 
     render() {
         const { className, ...otherProps } = this.props;

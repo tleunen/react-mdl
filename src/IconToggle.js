@@ -12,7 +12,7 @@ class IconToggle extends React.Component {
         name: PropTypes.string.isRequired,
         onChange: PropTypes.func,
         ripple: PropTypes.bool
-    }
+    };
 
     componentDidUpdate(prevProps) {
         if(this.props.disabled !== prevProps.disabled) {

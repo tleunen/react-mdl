@@ -10,7 +10,7 @@ class Switch extends React.Component {
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
         ripple: PropTypes.bool
-    }
+    };
 
     componentDidUpdate(prevProps) {
         if(this.props.disabled !== prevProps.disabled) {

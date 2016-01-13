@@ -9,7 +9,7 @@ class ProgressBar extends React.Component {
         className: PropTypes.string,
         indeterminate: PropTypes.bool,
         progress: PropTypes.number
-    }
+    };
 
     componentDidMount() {
         this._setProgress(this.props.progress);

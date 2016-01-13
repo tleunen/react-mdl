@@ -5,7 +5,7 @@ class CardTitle extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         expand: PropTypes.bool
-    }
+    };
 
     render() {
         const { className, children, expand, ...otherProps } = this.props;

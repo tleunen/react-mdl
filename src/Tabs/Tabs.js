@@ -22,7 +22,7 @@ class Tabs extends React.Component {
         onChange: PropTypes.func,
         ripple: PropTypes.bool,
         tabBarProps: PropTypes.object,
-    }
+    };
 
     render() {
         const { activeTab, className, onChange, ripple,

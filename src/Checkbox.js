@@ -10,7 +10,7 @@ class Checkbox extends React.Component {
         label: PropTypes.string,
         onChange: PropTypes.func,
         ripple: PropTypes.bool
-    }
+    };
 
     componentDidUpdate(prevProps) {
         if(this.props.disabled !== prevProps.disabled) {

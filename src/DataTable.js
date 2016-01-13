@@ -16,7 +16,7 @@ class DataTable extends React.Component {
             PropTypes.object
         ).isRequired,
         selectable: PropTypes.bool
-    }
+    };
 
     _getCellClass(column) {
         return !column.numeric ? 'mdl-data-table__cell--non-numeric' : '';

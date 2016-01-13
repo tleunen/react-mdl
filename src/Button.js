@@ -12,7 +12,7 @@ class Button extends React.Component {
         primary: PropTypes.bool,
         raised: PropTypes.bool,
         ripple: PropTypes.bool
-    }
+    };
 
     render() {
         const { accent, className, colored,

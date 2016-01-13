@@ -8,7 +8,7 @@ class Layout extends React.Component {
         fixedDrawer: PropTypes.bool,
         fixedHeader: PropTypes.bool,
         fixedTabs: PropTypes.bool
-    }
+    };
 
     render() {
         const { className, fixedDrawer, fixedHeader, fixedTabs, ...otherProps } = this.props;

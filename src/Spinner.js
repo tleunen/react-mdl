@@ -6,7 +6,7 @@ class Spinner extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         singleColor: PropTypes.bool
-    }
+    };
 
     render() {
         const { className, singleColor, ...otherProps } = this.props;

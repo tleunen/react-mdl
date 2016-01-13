@@ -10,12 +10,12 @@ class Menu extends React.Component {
         ripple: PropTypes.bool,
         target: PropTypes.string.isRequired,
         valign: PropTypes.oneOf(['bottom', 'top'])
-    }
+    };
 
     static defaultProps = {
         align: 'left',
         valign: 'bottom'
-    }
+    };
 
     render() {
         const { align, children, className, ripple,

@@ -23,7 +23,7 @@ class Textfield extends React.Component {
             PropTypes.string,
             PropTypes.number
         ])
-    }
+    };
 
     componentDidUpdate(prevProps) {
         if(
