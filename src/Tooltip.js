@@ -34,14 +34,8 @@ const Tooltip = (props) => {
 };
 
 Tooltip.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]).isRequired,
-    label: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]).isRequired,
+    children: PropTypes.node.isRequired,
+    label: PropTypes.node.isRequired,
     large: PropTypes.bool
 };
 

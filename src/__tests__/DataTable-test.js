@@ -3,6 +3,7 @@ import expect from 'expect';
 import React from 'react';
 import { render } from './render';
 import DataTable from '../DataTable';
+import Tooltip from '../Tooltip';
 
 describe('DataTable', () => {
     const columns = [
@@ -11,20 +12,20 @@ describe('DataTable', () => {
         { name: 'price', label: 'Unit Price', numeric: true }
     ];
 
-    const data = [
+    const rows = [
         { material: 'Acrylic (Transparent)', quantity: 25, price: '$2.90' },
         { material: 'Plywood (Birch)', quantity: 50, price: '$1.25' },
         { material: 'Laminate (Gold on Blue)', quantity: 10, price: '$2.35' }
     ];
 
     it('should render a <table>', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         expect(output.type).toBe('table');
     });
 
     it('should contain mdl css classes', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         expect(output.props.className)
             .toInclude('mdl-data-table')
@@ -32,14 +33,14 @@ describe('DataTable', () => {
     });
 
     it('should allow custom css classes', () => {
-        const output = render(<DataTable className="my-data-table" columns={columns} data={data} />);
+        const output = render(<DataTable className="my-data-table" columns={columns} rows={rows} />);
 
         expect(output.props.className)
             .toInclude('my-data-table');
     });
 
     it('should contain the specific columns', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         const thead = output.props.children[0];
         const headTr = thead.props.children;
@@ -54,7 +55,7 @@ describe('DataTable', () => {
     });
 
     it('should set the non numeric css class on non numeric columns', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         const thead = output.props.children[0];
         const headTr = thead.props.children;
@@ -71,31 +72,31 @@ describe('DataTable', () => {
     });
 
     it('should contain the specific data', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         const tbody = output.props.children[1];
-        const rows = tbody.props.children;
+        const rowsRendered = tbody.props.children;
 
-        expect(rows.length).toBe(data.length);
+        expect(rowsRendered.length).toBe(rows.length);
 
-        rows.forEach((row, i) => {
+        rowsRendered.forEach((row, i) => {
             const tds = row.props.children;
             expect(tds.length).toBe(columns.length);
 
             tds.forEach((td, j) => {
                 expect(td.key).toBe(columns[j].name);
-                expect(td.props.children).toBe(data[i][columns[j].name]);
+                expect(td.props.children).toBe(rows[i][columns[j].name]);
             });
         });
     });
 
     it('should set the non numeric css class on non numeric data cells', () => {
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         const tbody = output.props.children[1];
-        const rows = tbody.props.children;
+        const rowsRendered = tbody.props.children;
 
-        rows.forEach(row => {
+        rowsRendered.forEach(row => {
             const tds = row.props.children;
 
             tds.forEach((td, j) => {
@@ -110,17 +111,31 @@ describe('DataTable', () => {
     });
 
     it('should set the key for each row data element if provided', () => {
-        data.forEach((elt, idx) => {
+        rows.forEach((elt, idx) => {
             elt.key = 'elt' + idx; // eslint-disable-line no-param-reassign
         });
 
-        const output = render(<DataTable columns={columns} data={data} />);
+        const output = render(<DataTable columns={columns} rows={rows} />);
 
         const tbody = output.props.children[1];
-        const rows = tbody.props.children;
+        const rowsRendered = tbody.props.children;
 
-        rows.forEach((row, i) => {
+        rowsRendered.forEach((row, i) => {
             expect(row.key).toBe('elt' + i);
+        });
+    });
+
+    it('should add a tooltip on the labels in the header', () => {
+        const columnsTooltips = columns.map(column => ({ ...column, tooltip: 'this is a tooltip' }));
+
+        const output = render(<DataTable columns={columnsTooltips} rows={rows} />);
+
+        const thead = output.props.children[0];
+        const headTr = thead.props.children;
+        const tds = headTr.props.children;
+
+        tds.forEach((td, i) => {
+            expect(td.props.children).toEqual(<Tooltip label="this is a tooltip">{columns[i].label}</Tooltip>);
         });
     });
 });

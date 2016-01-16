@@ -3,21 +3,32 @@ import classNames from 'classnames';
 import clamp from 'clamp';
 import mdlUpgrade from './utils/mdlUpgrade';
 import shadows from './utils/shadows';
+import Tooltip from './Tooltip';
 
 class DataTable extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         columns: PropTypes.arrayOf(
             PropTypes.shape({
-                label: PropTypes.string,
+                label: PropTypes.node,
                 name: PropTypes.string,
-                numeric: PropTypes.bool
+                numeric: PropTypes.bool,
+                tooltip: PropTypes.node
             })
         ).isRequired,
-        data: PropTypes.arrayOf(
+        data: (props, propName, componentName) => {
+            if(props[propName]) {
+                return new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`);
+            }
+        },
+        rows: PropTypes.arrayOf(
             PropTypes.object
         ).isRequired,
-        selectable: PropTypes.bool,
+        selectable: (props, propName, componentName) => {
+            if(props[propName]) {
+                return new Error(`${componentName}: \`${propName}\` is deprecated. Please manage the checkboxes yourself. An example is available here: http://tleunen.github.io/react-mdl/#/datatables \`${propName}\` will be removed in the next major release.`);
+            }
+        },
         shadow: PropTypes.number
     };
 
@@ -28,6 +39,8 @@ class DataTable extends React.Component {
     render() {
         const { className, columns, data,
             selectable, shadow, ...otherProps } = this.props;
+
+        const rows = this.props.rows || data;
 
         const hasShadow = typeof shadow !== 'undefined';
         const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
@@ -42,16 +55,25 @@ class DataTable extends React.Component {
                 <thead>
                     <tr>
                         {columns.map((column) => {
-                            return <th key={column.name} className={this._getCellClass(column)}>{column.label}</th>;
+                            const columnClasses = classNames(this._getCellClass(column), column.className);
+
+                            const label = (!!column.tooltip)
+                                ? <Tooltip label={column.tooltip}>{column.label}</Tooltip>
+                                : column.label;
+
+                            return <th key={column.name} className={columnClasses}>{label}</th>;
                         })}
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((elt, idx) => {
+                    {rows.map((row, idx) => {
+                        const rowClasses = classNames({
+                            'is-selected': row.selected
+                        }, row.className);
                         return (
-                            <tr key={elt.key ? elt.key : idx}>
+                            <tr key={row.key ? row.key : idx} className={rowClasses}>
                                 {columns.map((column) => {
-                                    return <td key={column.name} className={this._getCellClass(column)}>{elt[column.name]}</td>;
+                                    return <td key={column.name} className={this._getCellClass(column)}>{row[column.name]}</td>;
                                 })}
                             </tr>
                         );

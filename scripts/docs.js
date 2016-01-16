@@ -14,16 +14,17 @@ const babel = require('babel-core');
 const DOC_PAGES_DIR = path.join('docs', 'pages');
 const DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
 
-function getCodePenForm(jsx) {
-    const JS = `
-for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }
-
+function getCodePenForm(jsx, entireClass) {
+    const prefix = 'for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }';
+    const suffix = "ReactDOM.render(<Demo />, document.getElementById('demo'))";
+    const code = (entireClass) ? jsx : `
 const Demo = (props) => {
     return ${jsx};
-}
+}`;
 
-ReactDOM.render(<Demo />, document.getElementById('demo'))
-    `;
+    const JS = `${prefix}
+${code}
+${suffix}`;
 
     const data = {
         title: 'React-MDL example',
@@ -91,6 +92,30 @@ function convertJSX(jsxCode) {
         '</pre>\n';
 }
 
+function convertJSXClass(jsxClass) {
+    demoContainerId++;
+
+    const highlightedCode = Prism.highlight(jsxClass, Prism.languages.js);
+    let transformedCode = babel.transform(jsxClass, { presets: ['es2015', 'stage-0', 'react'] }).code;
+    transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
+
+    const jsScript = '<script class="demo-js">' +
+            transformedCode + '\n' +
+            'var elem = React.createElement(Demo);\n' +
+            'var cont = document.getElementById("demo-' + demoContainerId + '");\n' +
+            'ReactDOM.render(elem, cont);\n' +
+        '</script>';
+
+    return '<div id="demo-' + demoContainerId + '"></div>' +
+        jsScript +
+        '<pre class="language-js">' +
+        '<code class="language-js">' +
+        highlightedCode +
+        '</code>' +
+        getCodePenForm(jsxClass, true) +
+        '</pre>\n';
+}
+
 function convertCSS(code) {
     return '<style>' + code + '</style>';
 }
@@ -109,6 +134,7 @@ function enhanceRenderer(renderer) {
     renderer.code = (code, lang, escaped) => { // eslint-disable-line no-param-reassign
         if(lang === 'jsx') return convertJSX(code);
         if(lang === 'css_demo') return convertCSS(code);
+        if(lang === 'jsx_demo_class') return convertJSXClass(code);
         return '<pre><code>'
               + (escaped ? code : escape(code, true))
               + '\n</code></pre>';

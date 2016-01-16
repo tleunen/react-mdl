@@ -47,7 +47,7 @@ describe('Tooltip', () => {
 
     it('should work with a complex child', () => {
         const element = (
-            <Tooltip label="my tooltip">
+            <Tooltip label={<div>my tooltip</div>}>
                 <Icon name="add" />
             </Tooltip>
         );
