@@ -49,10 +49,30 @@ describe('RadioGroup', () => {
         expect(output.props.children[1].props.children.type).toBe(Radio);
     });
 
-    it('should check the specific radio', () => {
+    it('should check the specific radio (uncontrolled)', () => {
         const value = 1;
         const element = (
             <RadioGroup name="group1" value={value}>
+                <Radio value={0} />
+                <Radio value={1} />
+                <Radio value={2} />
+            </RadioGroup>
+        );
+        const output = render(element);
+
+        for(let i = 0; i < output.props.children.length; i++) {
+            const radio = output.props.children[i];
+            expect(radio.props.defaultChecked).toBe(value === radio.props.value);
+        }
+    });
+
+    it('should check the specific radio (controlled)', () => {
+        let value = 1;
+        const onChange = e => {
+            value = e.target.value;
+        };
+        const element = (
+            <RadioGroup name="group1" value={value} onChange={onChange}>
                 <Radio value={0} />
                 <Radio value={1} />
                 <Radio value={2} />

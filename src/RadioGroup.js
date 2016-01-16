@@ -2,14 +2,18 @@ import React, { PropTypes } from 'react';
 import Radio from './Radio';
 
 const RadioGroup = (props) => {
-    const { name, value, children,
-        container, childContainer, ...otherProps } = props;
+    const { name, value, children, container,
+        childContainer, onChange, ...otherProps } = props;
+
+    const hasOnChange = typeof onChange === 'function';
+    const checked = hasOnChange ? 'checked' : 'defaultChecked';
 
     return React.createElement(container, otherProps,
         React.Children.map(children, child => {
             const clonedChild = React.cloneElement(child, {
-                checked: child.props.value === value,
+                [checked]: child.props.value === value,
                 name,
+                onChange,
                 ...otherProps
             });
 
