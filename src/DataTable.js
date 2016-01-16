@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import clamp from 'clamp';
 import mdlUpgrade from './utils/mdlUpgrade';
+import shadows from './utils/shadows';
 
 class DataTable extends React.Component {
     static propTypes = {
@@ -15,7 +17,8 @@ class DataTable extends React.Component {
         data: PropTypes.arrayOf(
             PropTypes.object
         ).isRequired,
-        selectable: PropTypes.bool
+        selectable: PropTypes.bool,
+        shadow: PropTypes.number
     };
 
     _getCellClass(column) {
@@ -23,10 +26,15 @@ class DataTable extends React.Component {
     }
 
     render() {
-        const { className, columns, data, selectable, ...otherProps } = this.props;
+        const { className, columns, data,
+            selectable, shadow, ...otherProps } = this.props;
+
+        const hasShadow = typeof shadow !== 'undefined';
+        const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
         const classes = classNames('mdl-data-table mdl-js-data-table', {
-            'mdl-data-table--selectable': selectable
+            'mdl-data-table--selectable': selectable,
+            [shadows[shadowLevel]]: hasShadow
         }, className);
 
         return (

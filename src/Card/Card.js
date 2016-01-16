@@ -1,15 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
-
-const shadows = [
-    'mdl-shadow--2dp',
-    'mdl-shadow--3dp',
-    'mdl-shadow--4dp',
-    'mdl-shadow--6dp',
-    'mdl-shadow--8dp',
-    'mdl-shadow--16dp'
-];
+import shadows from '../utils/shadows';
 
 const Card = (props) => {
     const { className, shadow, children, ...otherProps } = props;
