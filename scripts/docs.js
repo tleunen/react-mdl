@@ -166,14 +166,13 @@ function convertPages() {
 
 function generatePageIndex() {
     const files = fs.readdirSync(DOC_PAGES_DIR_OUTPUT);
-    let content = 'module.exports = {\n';
+    let content = '';
 
     files.forEach(file => {
         const name = file.substring(0, file.indexOf('.'));
         if(name === 'index' || file[0] === '.') return;
-        content += '\t' + name + ': require(\'./' + file + '\'),\n';
+        content += `export ${name} from './${file}';\n`;
     });
-    content += '};';
 
 
     const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, 'index.js');

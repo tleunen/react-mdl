@@ -1,18 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Pages from '../pages/html';
+import * as Pages from '../pages/html';
+import * as Templates from './templates';
 import {
     Layout, Header, Drawer, Content, Navigation,
     Icon, Grid, Cell, Spacer
 } from '../../src/';
 
+const componentSections = Object.keys(Pages).filter(e => e !== 'home').map(page => ({
+    id: page,
+    label: page[0].toUpperCase() + page.slice(1)
+}));
+
+const templateSections = Object.keys(Templates).map(template => ({
+    id: 'templates/' + template.toLowerCase(),
+    label: template
+}));
+
 class DocApp extends React.Component {
     render() {
-        const componentSections = Object.keys(Pages).filter(e => e !== 'home').map(page => ({
-            id: page,
-            label: page[0].toUpperCase() + page.slice(1)
-        }));
-
         return (
             <Layout fixedHeader fixedDrawer>
                 <Header title="React-MDL">
@@ -29,8 +35,7 @@ class DocApp extends React.Component {
                         {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
                         <Spacer className="drawer-separator" />
                         <span>Templates</span>
-                        <Link to="templates/article" key="template-article">Article</Link>
-                        <Link to="templates/text" key="template-text">Text only</Link>
+                        {templateSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
                     </Navigation>
                 </Drawer>
                 <Content className="mdl-color-text--grey-600">
