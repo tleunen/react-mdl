@@ -7,7 +7,7 @@ import DocApp from './DocApp';
 import Pages from '../pages/html';
 import pageComponentHelper from './PageComponentHelper';
 
-import { Article } from './templates';
+import { Article, Text } from './templates';
 
 // export all ReactMDL into global so we can generate demos
 import * as ReactMDL from '../../src/';
@@ -39,6 +39,7 @@ render((
         </Route>
         <Route path="templates">
             <Route path="article" component={Article} />
+            <Route path="text" component={Text} />
         </Route>
     </Router>
 ), document.getElementById('app'));

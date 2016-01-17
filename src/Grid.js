@@ -4,27 +4,36 @@ import clamp from 'clamp';
 import shadows from './utils/shadows';
 
 const Grid = (props) => {
-    const { noSpacing, className, children, ...otherProps } = props;
+    const { noSpacing, className, children, component, shadow, ...otherProps } = props;
+
+    const hasShadow = typeof shadow !== 'undefined';
+    const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
     const classes = classNames('mdl-grid', {
         'mdl-grid--no-spacing': noSpacing,
+        [shadows[shadowLevel]]: hasShadow
     }, className);
 
-    return (
-        <div className={classes} {...otherProps}>
-            {children}
-        </div>
-    );
+    return React.createElement(component || 'div', {
+        className: classes,
+        ...otherProps
+    }, children);
 };
 
 Grid.propTypes = {
     className: PropTypes.string,
-    noSpacing: PropTypes.bool
+    component: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.func
+    ]),
+    noSpacing: PropTypes.bool,
+    shadow: PropTypes.number
 };
 
 /* eslint-disable react/no-multi-comp */
 const Cell = (props) => {
-    const { align, className, children, col, phone, tablet,
+    const { align, className, children, col, phone, tablet, component,
         hideDesktop, hidePhone, hideTablet, shadow, ...otherProps } = props;
 
     const hasShadow = typeof shadow !== 'undefined';
@@ -41,17 +50,21 @@ const Cell = (props) => {
         [shadows[shadowLevel]]: hasShadow
     }, className);
 
-    return (
-        <div className={classes} {...otherProps}>
-            {children}
-        </div>
-    );
+    return React.createElement(component || 'div', {
+        className: classes,
+        ...otherProps
+    }, children);
 };
 
 Cell.propTypes = {
     align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
     className: PropTypes.string,
     col: PropTypes.number.isRequired,
+    component: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.func
+    ]),
     phone: PropTypes.number,
     tablet: PropTypes.number,
     hideDesktop: PropTypes.bool,

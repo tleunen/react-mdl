@@ -30,6 +30,7 @@ class DocApp extends React.Component {
                         <Spacer className="drawer-separator" />
                         <span>Templates</span>
                         <Link to="templates/article" key="template-article">Article</Link>
+                        <Link to="templates/text" key="template-text">Text only</Link>
                     </Navigation>
                 </Drawer>
                 <Content className="mdl-color-text--grey-600">

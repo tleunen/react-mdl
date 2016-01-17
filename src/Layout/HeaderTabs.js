@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import Tab from '../Tabs/Tab';
 import TabBar from '../Tabs/TabBar';
 
 const HeaderTabs = props => {
@@ -18,12 +17,6 @@ const HeaderTabs = props => {
 };
 HeaderTabs.propTypes = {
     activeTab: PropTypes.number,
-    children: PropTypes.arrayOf((props, propName, componentName) => {
-        const prop = props[propName];
-        if(prop.type !== Tab) {
-            return new Error('`' + componentName + '` only accepts `Tab` as children.');
-        }
-    }),
     className: PropTypes.string,
     onChange: PropTypes.func,
     ripple: PropTypes.bool
