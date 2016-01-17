@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Pages from '../pages/html';
 import {
     Layout, Header, Drawer, Content, Navigation,
-    Icon, Grid, Cell
+    Icon, Grid, Cell, Spacer
 } from '../../src/';
 
 class DocApp extends React.Component {
@@ -23,9 +23,13 @@ class DocApp extends React.Component {
                         </a>
                     </Navigation>
                 </Header>
-                <Drawer title="Components">
+                <Drawer>
                     <Navigation>
+                        <span>Components</span>
                         {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
+                        <Spacer className="drawer-separator" />
+                        <span>Templates</span>
+                        <Link to="templates/article" key="template-article">Article</Link>
                     </Navigation>
                 </Drawer>
                 <Content className="mdl-color-text--grey-600">
