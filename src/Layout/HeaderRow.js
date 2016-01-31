@@ -10,7 +10,7 @@ const HeaderRow = props => {
     return (
         <div className={classes} {...otherProps}>
             {title && <span className="mdl-layout-title">{title}</span>}
-            <Spacer />
+            {title && <Spacer />}
             {children}
         </div>
     );

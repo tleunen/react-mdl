@@ -32,10 +32,17 @@ describe('Layout', () => {
                 .toBe('React-MDL');
         });
 
-        it('should render children after a Spacer', () => {
-            const output = render(<HeaderRow><div>React-MDL</div></HeaderRow>);
+        it('should render a spacer if a title is present', () => {
+            const output = render(<HeaderRow title="React-MDL" />);
 
             expect(output.props.children[1].type).toBe(Spacer);
+        });
+
+        it('should not render a spacer without title', () => {
+            const output = render(<HeaderRow><div>React-MDL</div></HeaderRow>);
+
+            expect(output.props.children[0]).toEqual(undefined);
+            expect(output.props.children[1]).toEqual(undefined);
             expect(output.props.children[2]).toEqual(<div>React-MDL</div>);
         });
     });

@@ -7,7 +7,11 @@ class Button extends React.Component {
         accent: PropTypes.bool,
         className: PropTypes.string,
         colored: PropTypes.bool,
-        component: PropTypes.any,
+        component: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.element,
+            PropTypes.func
+        ]),
         href: PropTypes.string,
         primary: PropTypes.bool,
         raised: PropTypes.bool,

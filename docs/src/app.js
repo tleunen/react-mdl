@@ -4,8 +4,9 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { createHashHistory, useBasename } from 'history';
 
 import DocApp from './DocApp';
-import Pages from '../pages/html';
+import * as Pages from '../pages/html';
 import pageComponentHelper from './PageComponentHelper';
+import * as Templates from './templates';
 
 // export all ReactMDL into global so we can generate demos
 import * as ReactMDL from '../../src/';
@@ -15,16 +16,6 @@ for(const component in ReactMDL) {
     }
 }
 
-const home = !!Pages.home
-    ? (
-        <IndexRoute component={pageComponentHelper(Pages.home)} />
-    )
-    : null;
-
-const routes = Object.keys(Pages).filter(e => e !== 'home').map(page => {
-    return <Route key={page} path={page} component={pageComponentHelper(Pages[page])} />;
-});
-
 const history = useBasename(createHashHistory)({
     queryKey: false
 });
@@ -32,8 +23,15 @@ const history = useBasename(createHashHistory)({
 render((
     <Router history={history}>
         <Route path="/" component={DocApp}>
-            {home}
-            {routes}
+            {Pages.home && <IndexRoute component={pageComponentHelper(Pages.home)} />}
+            {Object.keys(Pages).filter(e => e !== 'home').map(page => {
+                return <Route key={page} path={page} component={pageComponentHelper(Pages[page])} />;
+            })}
+        </Route>
+        <Route path="templates">
+            {Object.keys(Templates).map(template => {
+                return <Route key={template} path={template.toLowerCase()} component={Templates[template]} />;
+            })}
         </Route>
     </Router>
 ), document.getElementById('app'));
