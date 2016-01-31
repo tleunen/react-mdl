@@ -2,11 +2,11 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const Content = props => {
-    const { children, className, element, ...otherProps } = props;
+    const { children, className, component, ...otherProps } = props;
 
     const classes = classNames('mdl-layout__content', className);
 
-    return React.createElement(element || 'div', {
+    return React.createElement(component || 'div', {
         className: classes,
         ...otherProps
     }, [
@@ -17,7 +17,7 @@ const Content = props => {
 
 Content.propTypes = {
     className: PropTypes.string,
-    element: PropTypes.oneOfType([
+    component: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,
         PropTypes.func
