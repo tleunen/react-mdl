@@ -32,7 +32,7 @@ class DocApp extends React.Component {
                 <Drawer>
                     <Navigation>
                         <span>Components</span>
-                        {componentSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
+                        {componentSections.map(e => <Link to={e.id} activeClassName="active" key={e.id}>{e.label}</Link>)}
                         <Spacer className="drawer-separator" />
                         <span>Templates</span>
                         {templateSections.map(e => <Link to={e.id} key={e.id}>{e.label}</Link>)}
