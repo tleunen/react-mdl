@@ -25,7 +25,7 @@ describe('utils', () => {
             ];
 
             const clonedChildren = cloneChildren(children, child => ({
-                className: child.props.className + ' new-class'
+                className: `${child.props.className} new-class`
             }));
 
             expect(clonedChildren[0].props.className)

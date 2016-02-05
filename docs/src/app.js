@@ -24,14 +24,14 @@ render((
     <Router history={history}>
         <Route path="/" component={DocApp}>
             {Pages.home && <IndexRoute component={pageComponentHelper(Pages.home)} />}
-            {Object.keys(Pages).filter(e => e !== 'home').map(page => {
-                return <Route key={page} path={page} component={pageComponentHelper(Pages[page])} />;
-            })}
+            {Object.keys(Pages).filter(e => e !== 'home').map(page =>
+                <Route key={page} path={page} component={pageComponentHelper(Pages[page])} />
+            )}
         </Route>
         <Route path="templates">
-            {Object.keys(Templates).map(template => {
-                return <Route key={template} path={template.toLowerCase()} component={Templates[template]} />;
-            })}
+            {Object.keys(Templates).map(template =>
+                <Route key={template} path={template.toLowerCase()} component={Templates[template]} />
+            )}
         </Route>
     </Router>
 ), document.getElementById('app'));

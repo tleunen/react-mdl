@@ -42,10 +42,10 @@ ${suffix}`;
         .replace(/'/g, '&apos;');
 
 
-    return '<form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">' +
-        '<input type="hidden" name="data" value=\'' + JSONstring + '\'>' +
-        '<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">' +
-    '</form>';
+    return `<form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='${JSONstring}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form>`;
 }
 
 let demoContainerId = 0;
@@ -76,20 +76,18 @@ function convertJSX(jsxCode) {
 
     let transformedCode = babel.transform(code, { presets: ['react'] }).code;
     transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
-    const jsScript = '<script class="demo-js">' +
-            'var elem = ' + transformedCode + '\n' +
-            'var cont = document.getElementById("demo-' + demoContainerId + '");\n' +
-            'ReactDOM.render(elem, cont);\n' +
-        '</script>';
+    const jsScript = `<script class="demo-js">
+        var elem = ${transformedCode};
+        var cont = document.getElementById("demo-${demoContainerId}");
+        ReactDOM.render(elem, cont);
+    </script>`;
 
-    return '<div id="demo-' + demoContainerId + '"></div>' +
-        jsScript +
-        '<pre class="language-jsx">' +
-        '<code class="language-jsx">' +
-        highlightedCode +
-        '</code>' +
-        getCodePenForm(code) +
-        '</pre>\n';
+    return `<div id="demo-${demoContainerId}"></div>
+        ${jsScript}
+        <pre class="language-jsx">
+            <code class="language-jsx">${highlightedCode}</code>
+            ${getCodePenForm(code)}
+        </pre>`;
 }
 
 function convertJSXClass(jsxClass) {
@@ -99,25 +97,23 @@ function convertJSXClass(jsxClass) {
     let transformedCode = babel.transform(jsxClass, { presets: ['es2015', 'stage-0', 'react'] }).code;
     transformedCode = transformedCode.replace(/^"use strict";\n\n/, '');
 
-    const jsScript = '<script class="demo-js">' +
-            transformedCode + '\n' +
-            'var elem = React.createElement(Demo);\n' +
-            'var cont = document.getElementById("demo-' + demoContainerId + '");\n' +
-            'ReactDOM.render(elem, cont);\n' +
-        '</script>';
+    const jsScript = `<script class="demo-js">
+        ${transformedCode}
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-${demoContainerId}");
+        ReactDOM.render(elem, cont);
+    </script>`;
 
-    return '<div id="demo-' + demoContainerId + '"></div>' +
-        jsScript +
-        '<pre class="language-js">' +
-        '<code class="language-js">' +
-        highlightedCode +
-        '</code>' +
-        getCodePenForm(jsxClass, true) +
-        '</pre>\n';
+    return `<div id="demo-${demoContainerId}"></div>
+        ${jsScript}
+        <pre class="language-js">
+            <code class="language-js">${highlightedCode}</code>
+            ${getCodePenForm(jsxClass, true)}
+        </pre>`;
 }
 
 function convertCSS(code) {
-    return '<style>' + code + '</style>';
+    return `<style>${code}</style>`;
 }
 
 function enhanceRenderer(renderer) {
@@ -135,21 +131,21 @@ function enhanceRenderer(renderer) {
         if(lang === 'jsx') return convertJSX(code);
         if(lang === 'css_demo') return convertCSS(code);
         if(lang === 'jsx_demo_class') return convertJSXClass(code);
-        return '<pre><code>'
-              + (escaped ? code : escape(code, true))
-              + '\n</code></pre>';
+        return `<pre><code>
+                ${(escaped ? code : escape(code, true))}
+            </code></pre>`;
     };
 
     return renderer;
 }
 
 function convertPages() {
-    execSync('mkdir -p ' + DOC_PAGES_DIR_OUTPUT, { stdio: [0, 1, 2] });
+    execSync(`mkdir -p ${DOC_PAGES_DIR_OUTPUT}`, { stdio: [0, 1, 2] });
 
     const files = fs.readdirSync(DOC_PAGES_DIR);
     files.forEach(file => {
         const fileIn = path.join(DOC_PAGES_DIR, file);
-        const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, file + '.html');
+        const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, `${file}.html`);
 
         const stats = fs.lstatSync(fileIn);
         if(!stats.isFile()) return;
@@ -160,7 +156,7 @@ function convertPages() {
         const html = marked(content, { renderer: enhanceRenderer(mdlRenderer) });
 
         fs.writeFileSync(fileOut, html, 'utf8');
-        console.log(file + ' converted.');
+        console.log(`${file} converted.`);
     });
 }
 

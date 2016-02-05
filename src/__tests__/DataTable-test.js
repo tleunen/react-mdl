@@ -112,7 +112,7 @@ describe('DataTable', () => {
 
     it('should set the key for each row data element if provided', () => {
         rows.forEach((elt, idx) => {
-            elt.key = 'elt' + idx; // eslint-disable-line no-param-reassign
+            elt.key = `elt${idx}`; // eslint-disable-line no-param-reassign
         });
 
         const output = render(<DataTable columns={columns} rows={rows} />);
@@ -121,7 +121,7 @@ describe('DataTable', () => {
         const rowsRendered = tbody.props.children;
 
         rowsRendered.forEach((row, i) => {
-            expect(row.key).toBe('elt' + i);
+            expect(row.key).toBe(`elt${i}`);
         });
     });
 

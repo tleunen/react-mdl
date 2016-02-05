@@ -27,7 +27,7 @@ describe('Layout', () => {
         ['fixedDrawer', 'fixedHeader', 'fixedTabs'].forEach(prop => {
             const output = render(React.createElement(Layout, { [prop]: true }));
 
-            const css = prop.replace(/[A-Z]/g, ($1) => '-' + $1.toLowerCase());
+            const css = prop.replace(/[A-Z]/g, ($1) => `-${$1.toLowerCase()}`);
             expect(output.props.className)
                 .toInclude(`mdl-layout--${css}`);
         });

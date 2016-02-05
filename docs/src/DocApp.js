@@ -13,7 +13,7 @@ const componentSections = Object.keys(Pages).filter(e => e !== 'home').map(page 
 }));
 
 const templateSections = Object.keys(Templates).map(template => ({
-    id: 'templates/' + template.toLowerCase(),
+    id: `templates/${template.toLowerCase()}`,
     label: template
 }));
 

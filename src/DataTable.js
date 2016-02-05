@@ -72,9 +72,11 @@ class DataTable extends React.Component {
                         }, row.className);
                         return (
                             <tr key={row.key ? row.key : idx} className={rowClasses}>
-                                {columns.map((column) => {
-                                    return <td key={column.name} className={this._getCellClass(column)}>{row[column.name]}</td>;
-                                })}
+                                {columns.map((column) =>
+                                    <td key={column.name} className={this._getCellClass(column)}>
+                                        {row[column.name]}
+                                    </td>
+                                )}
                             </tr>
                         );
                     })}

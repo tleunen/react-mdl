@@ -35,14 +35,14 @@ class TabBar extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                {React.Children.map(this.props.children, (child, tabId) => {
-                    return React.cloneElement(child, {
+                {React.Children.map(this.props.children, (child, tabId) =>
+                    React.cloneElement(child, {
                         cssPrefix,
                         tabId,
                         active: tabId === activeTab,
                         onTabClick: this._handleClickTab
-                    });
-                })}
+                    })
+                )}
 
             </div>
         );

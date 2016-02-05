@@ -54,7 +54,7 @@ class Textfield extends React.Component {
               rows, style, ...otherProps } = this.props;
 
         const hasRows = !!rows;
-        const id = 'textfield-' + label.replace(/[^a-z0-9]/gi, '');
+        const id = `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
         const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
         const inputProps = {

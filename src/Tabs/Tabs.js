@@ -7,7 +7,7 @@ import mdlUpgrade from '../utils/mdlUpgrade';
 const TabPropType = (props, propName, componentName) => {
     const prop = props[propName];
     if(prop.type !== Tab) {
-        return new Error('`' + componentName + '` only accepts `Tab` as children.');
+        return new Error(`'${componentName}' only accepts 'Tab' as children.`);
     }
 };
 
