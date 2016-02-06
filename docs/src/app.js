@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
 
 import DocApp from './DocApp';
 import * as Pages from '../pages/html';
@@ -15,8 +16,10 @@ for(const component in ReactMDL) {
     }
 }
 
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+
 render((
-    <Router history={hashHistory}>
+    <Router history={appHistory}>
         <Route path="/" component={DocApp}>
             {Pages.home && <IndexRoute component={pageComponentHelper(Pages.home)} />}
             {Object.keys(Pages).filter(e => e !== 'home').map(page =>
