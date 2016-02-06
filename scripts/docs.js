@@ -84,10 +84,7 @@ function convertJSX(jsxCode) {
 
     return `<div id="demo-${demoContainerId}"></div>
         ${jsScript}
-        <pre class="language-jsx">
-            <code class="language-jsx">${highlightedCode}</code>
-            ${getCodePenForm(code)}
-        </pre>`;
+        <pre class="language-jsx"><code class="language-jsx">${highlightedCode}</code>${getCodePenForm(code)}</pre>`;
 }
 
 function convertJSXClass(jsxClass) {
@@ -106,10 +103,7 @@ function convertJSXClass(jsxClass) {
 
     return `<div id="demo-${demoContainerId}"></div>
         ${jsScript}
-        <pre class="language-js">
-            <code class="language-js">${highlightedCode}</code>
-            ${getCodePenForm(jsxClass, true)}
-        </pre>`;
+        <pre class="language-js"><code class="language-js">${highlightedCode}</code>${getCodePenForm(jsxClass, true)}</pre>`;
 }
 
 function convertCSS(code) {
@@ -131,9 +125,7 @@ function enhanceRenderer(renderer) {
         if(lang === 'jsx') return convertJSX(code);
         if(lang === 'css_demo') return convertCSS(code);
         if(lang === 'jsx_demo_class') return convertJSXClass(code);
-        return `<pre><code>
-                ${(escaped ? code : escape(code, true))}
-            </code></pre>`;
+        return `<pre><code>${(escaped ? code : escape(code, true))}</code></pre>`;
     };
 
     return renderer;
@@ -189,4 +181,3 @@ execSync('webpack docs/src/app.js out/docs/app.js', { stdio: [0, 1, 2] });
 execSync('cp -r extra/material.min.* docs/*.html docs/*.css out/docs/', { stdio: [0, 1, 2] });
 
 console.log('Documentation files generated.');
-
