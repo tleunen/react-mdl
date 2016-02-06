@@ -30,8 +30,11 @@ npm test
 
 update_version 'package.json' $next_version
 
+rm -rf out
 npm run compile
-npm run build-all
+npm run build-docs
+npm run build-umd
+npm run build-min
 
 git commit -am "Version $next_version"
 

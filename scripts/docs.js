@@ -144,6 +144,8 @@ function convertPages() {
 
     const files = fs.readdirSync(DOC_PAGES_DIR);
     files.forEach(file => {
+        if(file[0] === '.') return;
+
         const fileIn = path.join(DOC_PAGES_DIR, file);
         const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, `${file}.html`);
 
@@ -176,5 +178,15 @@ function generatePageIndex() {
     console.log('index.js generated.');
 }
 
+// build html documentation
 convertPages();
 generatePageIndex();
+
+// build js app
+execSync('webpack docs/src/app.js out/docs/app.js', { stdio: [0, 1, 2] });
+
+// copy static files in the output folder
+execSync('cp -r extra/material.min.* docs/*.html docs/*.css out/docs/', { stdio: [0, 1, 2] });
+
+console.log('Documentation files generated.');
+

@@ -89,12 +89,9 @@
     "lint": "eslint docs src scripts",
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "npm run build-docs && webpack-dev-server --content-base out/docs/",
-    "prebuild-docs": "babel-node scripts/docs.js",
-    "postbuild-docs": "cp -r extra/material.min.* docs/*.html docs/*.css out/docs/",
-    "build-docs": "webpack docs/src/app.js out/docs/app.js",
+    "build-docs": "babel-node scripts/docs.js",
     "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
-    "prebuild-all": "rm -rf out",
-    "build-all": "npm run build-docs && npm run build-umd && npm run build-min"
+    "release": "./scripts/release.sh"
   }
 }
