@@ -10,6 +10,10 @@ export {
 } from './Card';
 export Checkbox from './Checkbox';
 export DataTable from './DataTable';
+export {
+    Dialog, DialogTitle, DialogContent,
+    DialogActions
+} from './Dialog';
 export FABButton from './FABButton';
 export {
     Footer, FooterSection, FooterDropDownSection,
