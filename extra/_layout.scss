@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-@import "../variables";
-@import "../mixins";
+@import "~material-design-lite/src/variables";
+@import "~material-design-lite/src/mixins";
 
 // Navigation classes. Only used here for now, but we may at some point move
 // this to its own component.
