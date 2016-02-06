@@ -27,7 +27,7 @@ class Menu extends React.Component {
         }, className);
 
         return (
-            <ul className={classes} htmlFor={target} {...otherProps}>
+            <ul className={classes} data-mdl-for={target} {...otherProps}>
                 {children}
             </ul>
         );
