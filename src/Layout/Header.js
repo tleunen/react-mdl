@@ -5,13 +5,14 @@ import HeaderTabs from './HeaderTabs';
 
 const Header = props => {
     const { className, scroll, seamed, title, transparent,
-            waterfall, children, ...otherProps } = props;
+            waterfall, hideTop, children, ...otherProps } = props;
 
     const classes = classNames('mdl-layout__header', {
         'mdl-layout__header--scroll': scroll,
         'mdl-layout__header--seamed': seamed,
         'mdl-layout__header--transparent': transparent,
-        'mdl-layout__header--waterfall': waterfall
+        'mdl-layout__header--waterfall': waterfall,
+        'mdl-layout__header--waterfall-hide-top': waterfall && hideTop
     }, className);
 
     let isRowOrTab = false;
@@ -35,7 +36,8 @@ Header.propTypes = {
     seamed: PropTypes.bool,
     title: PropTypes.node,
     transparent: PropTypes.bool,
-    waterfall: PropTypes.bool
+    waterfall: PropTypes.bool,
+    hideTop: PropTypes.bool
 };
 
 export default Header;

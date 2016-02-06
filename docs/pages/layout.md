@@ -104,7 +104,7 @@
 
 ```jsx
 {/* Uses a header that scrolls with the text, rather than staying locked at the top */}
-<div className="big-content" style={{height: '300px', position: 'relative'}}>
+<div className="demo-big-content">
     <Layout>
         <Header title="Title" scroll>
             <Navigation>
@@ -131,9 +131,47 @@
 
 ```jsx
 {/* Uses a header that contracts as the page scrolls down. */}
-<div className="big-content" style={{height: '300px', position: 'relative'}}>
+<div className="demo-big-content">
     <Layout>
         <Header waterfall>
+            <HeaderRow title="Title">
+                <Textfield
+                    value=""
+                    onChange={() => {}}
+                    label="Search"
+                    expandable
+                    expandableIcon="search"
+                />
+            </HeaderRow>
+            <HeaderRow>
+                <Navigation>
+                    <a href="">Link</a>
+                    <a href="">Link</a>
+                    <a href="">Link</a>
+                    <a href="">Link</a>
+                </Navigation>
+            </HeaderRow>
+        </Header>
+        <Drawer title="Title">
+            <Navigation>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+            </Navigation>
+        </Drawer>
+        <Content>
+            <div className="page-content" />
+        </Content>
+    </Layout>
+</div>
+```
+
+```jsx
+{/* Hide the top part of the header when scrolling down */}
+<div className="demo-big-content">
+    <Layout>
+        <Header waterfall hideTop>
             <HeaderRow title="Title">
                 <Textfield
                     value=""
@@ -223,6 +261,7 @@
 | Header    | title        | Any       | Set the layout title | Optional |
 | Header    | transparent  | Boolean   | Makes header transparent | Optional |
 | Header    | waterfall    | Boolean   | Allows a "waterfall" effect with multiple header lines | Optional |
+| Header    | hideTop      | Boolean   | Hide the top part of the header when used with `waterfall` | Optional |
 | HeaderRow | title        | Any       | Set the layout title | Optional |
 | Content   | component    | String || Element || Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 

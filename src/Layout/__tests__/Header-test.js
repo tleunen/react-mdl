@@ -31,6 +31,15 @@ describe('Layout', () => {
             });
         });
 
+        it('should set the header as waterfall with the top part to hide when scrolling', () => {
+            const output = render(<Header waterfall hideTop />);
+
+            expect(output.type).toBe('header');
+            expect(output.props.className)
+                .toInclude('mdl-layout__header--waterfall')
+                .toInclude('mdl-layout__header--waterfall-hide-top');
+        });
+
         it('should wrap non Row/Tabs child in a HeaderRow', () => {
             const output = render(<Header>React-MDL</Header>);
 
