@@ -86,4 +86,20 @@ describe('Badge', () => {
             });
         });
     });
+
+    it('should make the badge overlap the container', () => {
+        const output = render(<Badge text={2} overlap><Icon name="account_box" /></Badge>);
+
+        expect(output.type).toBe(Icon);
+        expect(output.props.className).toBe('mdl-badge mdl-badge--overlap');
+        expect(output.props['data-badge']).toBe(2);
+    });
+
+    it('should remove the badge background', () => {
+        const output = render(<Badge text="♥" noBackground>Mood</Badge>);
+
+        expect(output.type).toBe('span');
+        expect(output.props.className).toBe('mdl-badge mdl-badge--no-background');
+        expect(output.props['data-badge']).toBe('♥');
+    });
 });
