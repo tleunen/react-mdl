@@ -57,6 +57,7 @@
     "eslint-config-airbnb": "^5.0.0",
     "eslint-plugin-react": "^3.16.1",
     "expect": "^1.14.0",
+    "gh-pages": "^0.9.0",
     "html-loader": "^0.4.0",
     "isparta": "^4.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
@@ -92,6 +93,7 @@
     "build-docs": "babel-node scripts/docs.js",
     "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
-    "release": "./scripts/release.sh"
+    "release": "./scripts/release.sh",
+    "release-docs": "gh-pages -d out/docs/ --no-push"
   }
 }

@@ -37,7 +37,7 @@ import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
 
-[react-mdl-url]: http://tleunen.github.io/react-mdl/
+[react-mdl-url]: https://tleunen.github.io/react-mdl/
 [travis-image]: https://travis-ci.org/tleunen/react-mdl.svg?branch=master
 [travis-url]: https://travis-ci.org/tleunen/react-mdl
 [coveralls-image]: https://coveralls.io/repos/tleunen/react-mdl/badge.svg?branch=master&service=github
