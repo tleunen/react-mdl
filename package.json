@@ -87,6 +87,7 @@
   "scripts": {
     "test": "karma start --single-run",
     "posttest": "npm run lint",
+    "test:watch": "karma start --auto-watch",
     "lint": "eslint docs src scripts",
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "npm run build-docs && webpack-dev-server --content-base out/docs/",

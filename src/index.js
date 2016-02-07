@@ -33,6 +33,7 @@ export ProgressBar from './ProgressBar';
 export Radio from './Radio';
 export RadioGroup from './RadioGroup';
 export Slider from './Slider';
+export Snackbar from './Snackbar';
 export Spinner from './Spinner';
 export Switch from './Switch';
 export { Tabs, Tab, TabBar } from './Tabs';
