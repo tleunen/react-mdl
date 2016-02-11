@@ -13,13 +13,15 @@ describe('ListItemAction', () => {
     });
 
     it('should have a child with .mdl-list__item-secondary-action CSS class', () => {
-        const output = renderDOM((
+        const output = render((
             <ListItemAction>
                 <a href="#"><Icon name="avatar" /></a>
             </ListItemAction>
         ));
 
-        expect(output.querySelector('.mdl-list__item-secondary-action')).toExist();
+        const [, action] = output.props.children;
+
+        expect(action[0].props.className).toInclude('mdl-list__item-secondary-action');
     });
 
     it('should have an info span if info is defined', () => {
