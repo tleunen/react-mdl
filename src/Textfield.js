@@ -11,6 +11,7 @@ class Textfield extends React.Component {
         expandable: PropTypes.bool,
         expandableIcon: PropTypes.string,
         floatingLabel: PropTypes.bool,
+        id: PropTypes.string,
         inputClassName: PropTypes.string,
         label: PropTypes.string.isRequired,
         maxRows: PropTypes.number,
@@ -48,51 +49,48 @@ class Textfield extends React.Component {
     }
 
     render() {
-        const { className, inputClassName,
+        const { className, inputClassName, id,
               error, expandable, expandableIcon,
               floatingLabel, label, maxRows,
               rows, style, ...otherProps } = this.props;
 
         const hasRows = !!rows;
-        const id = `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
+        const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
         const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
         const inputProps = {
             className: classNames('mdl-textfield__input', inputClassName),
-            id,
-            key: id,
+            id: customId,
             rows,
             ref: 'input',
             ...otherProps
         };
 
         const input = React.createElement(inputTag, inputProps);
-
-        const inputAndLabelError = [
-            input,
-            <label key="label" className="mdl-textfield__label" htmlFor={id}>{label}</label>,
-            error ? (
-                <span key="error" className="mdl-textfield__error">{error}</span>
-            ) : null
-        ];
+        const labelContainer = <label className="mdl-textfield__label" htmlFor={customId}>{label}</label>;
+        const errorContainer = !!error && <span className="mdl-textfield__error">{error}</span>;
 
         const containerClasses = classNames('mdl-textfield mdl-js-textfield', {
             'mdl-textfield--floating-label': floatingLabel,
             'mdl-textfield--expandable': expandable
         }, className);
 
-        const field = expandable
-            ? React.createElement('div', { className: 'mdl-textfield__expandable-holder' }, inputAndLabelError)
-            : inputAndLabelError;
-
-        return (
+        return expandable ? (
             <div className={containerClasses} style={style}>
-                {expandable ? (
-                    <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor={id}>
-                        <i className="material-icons">{expandableIcon}</i>
-                    </label>
-                ) : null}
-                {field}
+                <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor={customId}>
+                    <i className="material-icons">{expandableIcon}</i>
+                </label>
+                <div className="mdl-textfield__expandable-holder">
+                    {input}
+                    {labelContainer}
+                    {errorContainer}
+                </div>
+            </div>
+        ) : (
+            <div className={containerClasses} style={style}>
+                {input}
+                {labelContainer}
+                {errorContainer}
             </div>
         );
     }
