@@ -19,7 +19,7 @@ describe('ListItemAction', () => {
             </ListItemAction>
         ));
 
-        expect(output.firstChild.classList.contains('mdl-list__item-secondary-action'));
+        expect(output.firstChild.className).toInclude('mdl-list__item-secondary-action');
     });
 
     it('should have an info span if info is defined', () => {

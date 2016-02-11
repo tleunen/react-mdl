@@ -23,14 +23,16 @@ class ListItem extends React.Component {
         }, className);
 
         const children = React.Children.map(otherProps.children, child => {
+            let component = child;
+
             if (child.type === ListItemContent) {
                 // Pass the threeLine prop in order to define the correct className
                 // later in ListItemContent.
 
-                return <ListItemContent {...child.props} threeLine />;
+                component = <ListItemContent {...child.props} threeLine />;
             }
 
-            return child;
+            return component;
         });
 
         return (
