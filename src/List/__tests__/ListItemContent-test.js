@@ -39,6 +39,6 @@ describe('ListItemContent', () => {
     it('should have an i element if an icon is defined', () => {
         const output = renderDOM(<ListItemContent icon="person" />);
 
-        expect(output.firstChild.nodeName).toEqual("I");
+        expect(output.firstChild.nodeName).toEqual('I');
     });
 });
