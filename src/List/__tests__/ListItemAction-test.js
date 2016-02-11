@@ -6,8 +6,29 @@ import ListItemAction from '../ListItemAction';
 import Icon from '../../Icon';
 
 describe('ListItemAction', () => {
+    it('should throw if no child is defined', () => {
+        expect(() => {
+            render(<ListItemAction />);
+        }).toThrow();
+    });
+
+    it('should throw if more than one child are defined', () => {
+        expect(() => {
+            render((
+                <ListItemAction>
+                    <a href="#"><Icon name="avatar" /></a>
+                    <a href="#"><Icon name="avatar" /></a>
+                </ListItemAction>
+            ));
+        }).toThrow();
+    });
+
     it('should render a span element', () => {
-        const output = render(<ListItemAction />);
+        const output = render((
+            <ListItemAction>
+                <a href="#"><Icon name="avatar" /></a>
+            </ListItemAction>
+        ));
 
         expect(output.type).toBe('span');
     });
@@ -21,11 +42,15 @@ describe('ListItemAction', () => {
 
         const [, action] = output.props.children;
 
-        expect(action[0].props.className).toInclude('mdl-list__item-secondary-action');
+        expect(action.props.className).toInclude('mdl-list__item-secondary-action');
     });
 
     it('should have an info span if info is defined', () => {
-        const output = renderDOM(<ListItemAction info="Avatar" />);
+        const output = renderDOM((
+            <ListItemAction info="Avatar">
+                <a href="#"><Icon name="avatar" /></a>
+            </ListItemAction>
+        ));
 
         expect(output.querySelector('.mdl-list__item-secondary-info')).toExist();
     });

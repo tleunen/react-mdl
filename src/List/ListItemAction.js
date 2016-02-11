@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Children, cloneElement } from 'react';
 import classNames from 'classnames';
 
 class ListItemAction extends React.Component {
     static propTypes = {
+        children: PropTypes.element.isRequired,
         className: PropTypes.string,
         info: PropTypes.string
     };
@@ -16,14 +17,17 @@ class ListItemAction extends React.Component {
 
         const classes = classNames('mdl-list__item-secondary-content', className);
 
-        const children = React.Children.map(this.props.children, child => {
-            const toAdd = 'mdl-list__item-secondary-action';
-            const childClassName = child.props.className ? `${child.props.className} ${toAdd}` : toAdd;
+        let { children } = this.props;
 
-            return React.createElement(child.type, Object.assign({}, child.props, {
-                className: childClassName
-            }));
-        });
+        try {
+            const child = Children.only(children);
+            children = cloneElement(child, {
+                className: classNames('mdl-list__item-secondary-action', child.props.className)
+            });
+        }
+        catch (e) {
+            throw new Error('ListItemAction only accepts one child');
+        }
 
         let infoElement = null;
 
