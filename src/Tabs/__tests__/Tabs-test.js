@@ -67,6 +67,21 @@ describe('Tabs', () => {
         TestUtils.Simulate.click(el.querySelector('.mdl-tabs__tab-bar').children[1]);
     });
 
+    it('should be throw any error when clicking on a tab', () => {
+        expect(() => {
+            const element = (
+                <Tabs>
+                    <Tab>Tab1</Tab>
+                    <Tab>Tab2</Tab>
+                    <Tab>Tab3</Tab>
+                </Tabs>
+            );
+
+            const el = renderDOM(element);
+            TestUtils.Simulate.click(el.querySelector('.mdl-tabs__tab-bar').children[1]);
+        }).toNotThrow();
+    });
+
     it('should display a console warning', () => {
         const element = (
             <Tabs>

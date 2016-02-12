@@ -21,5 +21,12 @@ describe('Tabs', () => {
                 .toInclude('mdl-tabs__tab')
                 .toInclude('my-tab');
         });
+
+        it('should render the custom component', () => {
+            const MyCustomComponent = (props) => <button {...props} />;
+            const output = render(<Tab component={MyCustomComponent} cssPrefix="mdl-tabs">Tabs</Tab>);
+
+            expect(output.type).toBe(MyCustomComponent);
+        });
     });
 });

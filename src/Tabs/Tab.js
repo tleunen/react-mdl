@@ -5,6 +5,11 @@ class Tab extends React.Component {
     static propTypes = {
         active: PropTypes.bool,
         className: PropTypes.string,
+        component: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.element,
+            PropTypes.func
+        ]),
         cssPrefix: PropTypes.string,
         onTabClick: PropTypes.func,
         style: PropTypes.object,
@@ -26,8 +31,8 @@ class Tab extends React.Component {
     }
 
     render() {
-        const { active, className, cssPrefix, tabId,
-            onTabClick, style, ...otherProps } = this.props;
+        const { active, className, component, children, cssPrefix,
+            onTabClick, style, tabId, ...otherProps } = this.props;
 
         const classes = classNames({
             [`${cssPrefix}__tab`]: true,
@@ -36,7 +41,12 @@ class Tab extends React.Component {
 
         style.cursor = 'pointer';
 
-        return <a className={classes} onClick={this._handleClick} style={style} {...otherProps}>{this.props.children}</a>;
+        return React.createElement(component || 'a', {
+            className: classes,
+            onClick: this._handleClick,
+            style,
+            ...otherProps
+        }, children);
     }
 }
 

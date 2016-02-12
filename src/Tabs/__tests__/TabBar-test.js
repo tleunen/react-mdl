@@ -17,7 +17,7 @@ describe('Tabs', () => {
 
             const el = renderDOM(element);
             const tabBar = el.querySelector('.mdl-tabs__tab');
-            Array.prototype.slice.call(tabBar.children).forEach((tab, i) => {
+            [].slice.call(tabBar.children).forEach((tab, i) => {
                 if(i === 1) {
                     expect(tab.className).toInclude('is-active');
                 }
