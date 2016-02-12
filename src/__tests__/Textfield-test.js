@@ -24,7 +24,7 @@ describe('Textfield', () => {
     it('should render an input by default', () => {
         const output = render(<Textfield label="label" />);
 
-        const input = output.props.children[1][0];
+        const [input] = output.props.children;
         expect(input.type).toBe('input');
     });
 
@@ -32,14 +32,14 @@ describe('Textfield', () => {
         it('when rows is specified', () => {
             const output = render(<Textfield label="label" rows={3} />);
 
-            const input = output.props.children[1][0];
+            const [input] = output.props.children;
             expect(input.type).toBe('textarea');
         });
 
         it('when maxRows is specified', () => {
             const output = render(<Textfield label="label" maxRows={5} />);
 
-            const input = output.props.children[1][0];
+            const [input] = output.props.children;
             expect(input.type).toBe('textarea');
         });
     });
@@ -54,15 +54,16 @@ describe('Textfield', () => {
     it('should not render any error message by default', () => {
         const output = render(<Textfield label="label" />);
 
-        expect(output.props.children[1][2]).toBe(null);
+        const [,, error] = output.props.children;
+        expect(error).toBe(false);
     });
 
     it('should render with an error message if specified', () => {
         const output = render(<Textfield label="label" error="error..." />);
 
-        expect(output.props.children[1][2].props.className)
-            .toInclude('mdl-textfield__error');
-        expect(output.props.children[1][2].props.children).toBe('error...');
+        const [,, error] = output.props.children;
+        expect(error.props.className).toInclude('mdl-textfield__error');
+        expect(error.props.children).toBe('error...');
     });
 
     it('should render an expandable textfield if specified', () => {
