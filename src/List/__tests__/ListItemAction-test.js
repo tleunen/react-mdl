@@ -6,23 +6,6 @@ import ListItemAction from '../ListItemAction';
 import Icon from '../../Icon';
 
 describe('ListItemAction', () => {
-    it('should throw if no child is defined', () => {
-        expect(() => {
-            render(<ListItemAction />);
-        }).toThrow();
-    });
-
-    it('should throw if more than one child are defined', () => {
-        expect(() => {
-            render((
-                <ListItemAction>
-                    <a href="#"><Icon name="avatar" /></a>
-                    <a href="#"><Icon name="avatar" /></a>
-                </ListItemAction>
-            ));
-        }).toThrow();
-    });
-
     it('should render a span element', () => {
         const output = render((
             <ListItemAction>

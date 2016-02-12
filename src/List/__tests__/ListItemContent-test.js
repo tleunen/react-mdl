@@ -18,7 +18,7 @@ describe('ListItemContent', () => {
         expect(output.querySelector('.mdl-list__item-subtitle')).toExist();
     });
 
-    it('should have a three line property if defined on ListItem', () => {
+    it('should have a useBodyClass property if threeLine is defined on ListItem', () => {
         const output = render((
             <ListItem threeLine>
                 <ListItemContent />
@@ -27,11 +27,11 @@ describe('ListItemContent', () => {
 
         const firstChild = output.props.children[0];
 
-        expect(firstChild.props.threeLine).toExist();
+        expect(firstChild.props.useBodyClass).toExist();
     });
 
-    it('should have a .mdl-list__item-text-body CSS class if a subtitle and threeLine are defined', () => {
-        const output = renderDOM(<ListItemContent threeLine subtitle="Text body" />);
+    it('should have a .mdl-list__item-text-body CSS class if a subtitle and useBodyClass are defined', () => {
+        const output = renderDOM(<ListItemContent useBodyClass subtitle="Text body" />);
 
         expect(output.querySelector('.mdl-list__item-text-body')).toExist();
     });

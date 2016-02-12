@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Children, cloneElement } from 'react';
 import classNames from 'classnames';
 import ListItemContent from './ListItemContent';
 
@@ -18,18 +18,21 @@ class ListItem extends React.Component {
         const { className, twoLine, threeLine, ...otherProps } = this.props;
 
         const classes = classNames('mdl-list__item', {
-            'mdl-list__item--two-line': twoLine,
-            'mdl-list__item--three-line': threeLine,
+            'mdl-list__item--two-line': twoLine && !threeLine,
+            'mdl-list__item--three-line': !twoLine && threeLine,
         }, className);
 
-        const children = React.Children.map(otherProps.children, child => {
+        const children = Children.map(otherProps.children, child => {
             let component = child;
 
             if (child.type === ListItemContent) {
                 // Pass the threeLine prop in order to define the correct className
                 // later in ListItemContent.
 
-                component = <ListItemContent {...child.props} threeLine />;
+                component = cloneElement(child, {
+                    ...child.props,
+                    useBodyClass: threeLine
+                });
             }
 
             return component;
