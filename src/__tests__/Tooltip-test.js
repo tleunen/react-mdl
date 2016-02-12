@@ -86,4 +86,37 @@ describe('Tooltip', () => {
         expect(label.props.className)
             .toExclude('mdl-tooltip--large');
     });
+
+    it('should not render any tooltip positioning css if unspecified', () => {
+        const element = (
+            <Tooltip label="my tooltip">
+                <Icon name="add" />
+            </Tooltip>
+        );
+        const output = render(element);
+
+        const label = output.props.children[1].props.children;
+
+        expect(label.props.className)
+            .toExclude('mdl-tooltip--left')
+            .toExclude('mdl-tooltip--right')
+            .toExclude('mdl-tooltip--top')
+            .toExclude('mdl-tooltip--bottom');
+    });
+
+    it('should render tooltip with correct positioning css if specified', () => {
+        ['left', 'right', 'top', 'bottom'].forEach((position) => {
+            const element = (
+                <Tooltip label="my tooltip" position={position}>
+                    <Icon name="add" />
+                </Tooltip>
+            );
+            const output = render(element);
+
+            const label = output.props.children[1].props.children;
+
+            expect(label.props.className)
+                .toInclude(`mdl-tooltip--${position}`);
+        });
+    });
 });

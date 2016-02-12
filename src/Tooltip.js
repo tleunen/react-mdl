@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import MDLComponent from './utils/MDLComponent';
 
 const Tooltip = (props) => {
-    const { label, large, children, ...otherProps } = props;
+    const { label, large, children, position, ...otherProps } = props;
     const id = Math.random().toString(36).substr(2);
 
     const newLabel = (typeof label === 'string')
@@ -25,7 +25,8 @@ const Tooltip = (props) => {
                 {React.cloneElement(newLabel, {
                     htmlFor: id,
                     className: classNames('mdl-tooltip', {
-                        'mdl-tooltip--large': large
+                        'mdl-tooltip--large': large,
+                        [`mdl-tooltip--${position}`]: typeof position !== 'undefined'
                     })
                 })}
             </MDLComponent>
@@ -36,7 +37,8 @@ const Tooltip = (props) => {
 Tooltip.propTypes = {
     children: PropTypes.node.isRequired,
     label: PropTypes.node.isRequired,
-    large: PropTypes.bool
+    large: PropTypes.bool,
+    position: PropTypes.oneOf(['left', 'right', 'top', 'bottom'])
 };
 
 export default Tooltip;
