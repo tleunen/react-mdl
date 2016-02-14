@@ -46,4 +46,4 @@ git push origin $next_ref
 git push origin latest -f
 
 npm publish
-npm release-docs
+npm run release-docs
