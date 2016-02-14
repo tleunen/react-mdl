@@ -2,6 +2,35 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.4.0]
+
+### New
+- New `Dialog` component ([#207] by [@Permagate]).
+- New `Snackbar` component ([#208]).
+- New `List` component. ([#201] with [@darenju]'s help)
+- Adds `overlap` and `noBackground` prop in `Badge`.
+- Adds `hideTop` prop in `Layout`.
+- Adds position specific props in `Tooltip` ([#214] by [@Permagate]).
+- Adds `component` prop in `Tab` in order to fix custom links ([#116])
+
+### Fixes
+- Fixes `layout.scss` import paths ([#138]).
+- Fixes an issue in `Textfield` when a field replaces another one ([#197])
+
+### Changes
+- Changes `for` attribute with `data-mdl-for` in `Menu`.
+
+[1.4.0]: https://github.com/tleunen/react-mdl/compare/v1.3.0...v1.4.0
+[#138]: https://github.com/tleunen/react-mdl/issues/138
+[#207]: https://github.com/tleunen/react-mdl/issues/207
+[#208]: https://github.com/tleunen/react-mdl/issues/208
+[#197]: https://github.com/tleunen/react-mdl/issues/197
+[#214]: https://github.com/tleunen/react-mdl/issues/214
+[#116]: https://github.com/tleunen/react-mdl/issues/116
+[#201]: https://github.com/tleunen/react-mdl/issues/201
+[@Permagate]: https://github.com/Permagate
+[@darenju]: https://github.com/darenju
+
 ## [1.3.0]
 
 - Adds the Text and Article templates on the documentation website
