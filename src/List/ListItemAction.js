@@ -1,4 +1,4 @@
-import React, { PropTypes, Children, cloneElement } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 class ListItemAction extends React.Component {
@@ -13,15 +13,12 @@ class ListItemAction extends React.Component {
 
         const classes = classNames('mdl-list__item-secondary-content', className);
 
-        const child = cloneElement(Children.only(children), {
-            className: classNames('mdl-list__item-secondary-action', Children.only(children).props.className)
-        });
-
-
         return (
             <span className={classes} {...otherProps}>
                 {info && <span className="mdl-list__item-secondary-info">{info}</span>}
-                {child}
+                <span className="mdl-list__item-secondary-action">
+                    {children}
+                </span>
             </span>
         );
     }

@@ -6,6 +6,7 @@ import mdlUpgrade from './utils/mdlUpgrade';
 class Checkbox extends React.Component {
     static propTypes = {
         checked: PropTypes.bool,
+        className: PropTypes.string,
         disabled: PropTypes.bool,
         label: PropTypes.string,
         onChange: PropTypes.func,
@@ -24,11 +25,11 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        const { label, ripple, ...inputProps } = this.props;
+        const { className, label, ripple, ...inputProps } = this.props;
 
         const classes = classNames('mdl-checkbox mdl-js-checkbox', {
             'mdl-js-ripple-effect': ripple
-        });
+        }, className);
 
         return (
             <label className={classes}>

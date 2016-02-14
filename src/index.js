@@ -28,6 +28,10 @@ export {
     HeaderRow, HeaderTabs, Spacer,
     Navigation, Content
 } from './Layout';
+export {
+    List, ListItem,
+    ListItemAction, ListItemContent
+} from './List';
 export Menu, { MenuItem } from './Menu';
 export ProgressBar from './ProgressBar';
 export Radio from './Radio';

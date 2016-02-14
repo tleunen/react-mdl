@@ -9,11 +9,6 @@ class ListItem extends React.Component {
         threeLine: PropTypes.bool
     };
 
-    static defaultProps = {
-        twoLine: false,
-        threeLine: false
-    };
-
     render() {
         const { className, twoLine, threeLine, ...otherProps } = this.props;
 
@@ -23,19 +18,16 @@ class ListItem extends React.Component {
         }, className);
 
         const children = Children.map(otherProps.children, child => {
-            let component = child;
-
-            if (child.type === ListItemContent) {
-                // Pass the threeLine prop in order to define the correct className
-                // later in ListItemContent.
-
-                component = cloneElement(child, {
+            if(typeof child === 'string') {
+                return <ListItemContent>{child}</ListItemContent>;
+            }
+            if(child.type === ListItemContent) {
+                return cloneElement(child, {
                     ...child.props,
-                    useBodyClass: threeLine
+                    useBodyClass: !!threeLine
                 });
             }
-
-            return component;
+            return child;
         });
 
         return (

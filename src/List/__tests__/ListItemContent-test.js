@@ -1,9 +1,9 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { render, renderDOM } from '../../__tests__/render';
-import ListItem from '../ListItem';
-import ListItemContent from '../ListItemContent';
+import { render } from '../../__tests__/render';
+import { ListItemContent } from '../';
+import { Icon } from '../../';
 
 describe('ListItemContent', () => {
     it('should render a span element', () => {
@@ -12,33 +12,57 @@ describe('ListItemContent', () => {
         expect(output.type).toBe('span');
     });
 
-    it('should have a .mdl-list__item-subtitle CSS class if a subtitle is defined', () => {
-        const output = renderDOM(<ListItemContent subtitle="Subtitle" />);
+    it('should have a subtitle', () => {
+        const output = render(<ListItemContent subtitle="Subtitle" />);
 
-        expect(output.querySelector('.mdl-list__item-subtitle')).toExist();
+        const [,, action] = output.props.children;
+        expect(action.type).toBe('span');
+        expect(action.props.className).toBe('mdl-list__item-sub-title');
+        expect(action.props.children).toBe('Subtitle');
     });
 
-    it('should have a useBodyClass property if threeLine is defined on ListItem', () => {
-        const output = render((
-            <ListItem threeLine>
-                <ListItemContent />
-            </ListItem>
-        ));
+    it('should have a body subtitle', () => {
+        const output = render(<ListItemContent useBodyClass subtitle="body text" />);
 
-        const firstChild = output.props.children[0];
-
-        expect(firstChild.props.useBodyClass).toExist();
+        const [,, action] = output.props.children;
+        expect(action.type).toBe('span');
+        expect(action.props.className).toBe('mdl-list__item-text-body');
+        expect(action.props.children).toBe('body text');
     });
 
-    it('should have a .mdl-list__item-text-body CSS class if a subtitle and useBodyClass are defined', () => {
-        const output = renderDOM(<ListItemContent useBodyClass subtitle="Text body" />);
+    it('should have a icon', () => {
+        const output = render(<ListItemContent icon="person" />);
 
-        expect(output.querySelector('.mdl-list__item-text-body')).toExist();
+        const [icon] = output.props.children;
+        expect(icon.type).toBe(Icon);
+        expect(icon.props.className).toInclude('mdl-list__item-icon');
+        expect(icon.props.name).toBe('person');
     });
 
-    it('should have an i element if an icon is defined', () => {
-        const output = renderDOM(<ListItemContent icon="person" />);
+    it('should have a "complex" icon', () => {
+        const iconElement = <img src="something" />;
+        const output = render(<ListItemContent icon={iconElement} />);
 
-        expect(output.firstChild.nodeName).toEqual('I');
+        const [icon] = output.props.children;
+        expect(icon.type).toBe('img');
+        expect(icon.props.className).toInclude('mdl-list__item-icon');
+    });
+
+    it('should have an avatar', () => {
+        const output = render(<ListItemContent avatar="person" />);
+
+        const [icon] = output.props.children;
+        expect(icon.type).toBe(Icon);
+        expect(icon.props.className).toInclude('mdl-list__item-avatar');
+        expect(icon.props.name).toBe('person');
+    });
+
+    it('should have a "complex" avatar', () => {
+        const iconElement = <img src="something" />;
+        const output = render(<ListItemContent avatar={iconElement} />);
+
+        const [icon] = output.props.children;
+        expect(icon.type).toBe('img');
+        expect(icon.props.className).toInclude('mdl-list__item-avatar');
     });
 });
