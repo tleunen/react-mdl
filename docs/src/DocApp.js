@@ -20,7 +20,7 @@ const templateSections = Object.keys(Templates).map(template => ({
 class DocApp extends React.Component {
     render() {
         return (
-            <Layout fixedHeader fixedDrawer>
+            <Layout fixedHeader fixedDrawer style={{ zIndex: 100001 }}>
                 <Header title="React-MDL">
                     <Navigation>
                         <a href="https://github.com/tleunen/react-mdl">

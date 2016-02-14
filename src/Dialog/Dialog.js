@@ -18,6 +18,13 @@ class Dialog extends React.Component {
         if(this.props.open !== prevProps.open) {
             if(this.props.open) {
                 findDOMNode(this).showModal();
+
+                // display the dialog at the right location
+                // needed for the polyfill, otherwise it's not at the right position
+                const bodyHeight = document.body.clientHeight;
+                const dialogHeight = this.refs.dialog.clientHeight;
+                this.refs.dialog.style.position = 'fixed';
+                this.refs.dialog.style.top = `${(bodyHeight - dialogHeight) / 2}px`;
             }
             else {
                 findDOMNode(this).close();
@@ -31,7 +38,7 @@ class Dialog extends React.Component {
         const classes = classNames('mdl-dialog', className);
 
         return (
-            <dialog className={classes} {...otherProps}>
+            <dialog ref="dialog" className={classes} {...otherProps}>
                 {children}
             </dialog>
         );

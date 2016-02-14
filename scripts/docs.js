@@ -15,7 +15,7 @@ const DOC_PAGES_DIR = path.join('docs', 'pages');
 const DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
 
 function getCodePenForm(jsx, entireClass) {
-    const prefix = 'for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }';
+    const prefix = 'for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } } dialogPolyfill.registerDialog(document.querySelector("dialog"));';
     const suffix = "ReactDOM.render(<Demo />, document.getElementById('demo'))";
     const code = (entireClass) ? jsx : `
 const Demo = (props) => {
@@ -33,8 +33,8 @@ ${suffix}`;
         css: '@import url(https://fonts.googleapis.com/icon?family=Material+Icons);',
         js: JS,
         js_pre_processor: 'babel',
-        css_external: 'https://npmcdn.com/react-mdl/extra/material.css',
-        js_external: 'https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js'
+        css_external: 'https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css',
+        js_external: 'https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js'
     };
 
     const JSONstring = JSON.stringify(data)

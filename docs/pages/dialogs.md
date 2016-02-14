@@ -1,6 +1,8 @@
 # Dialogs
 
-This component uses [dialog element](https://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element), which is only supported by Chrome and Opera currently. For other browsers, you need to include a [polyfill](https://github.com/GoogleChrome/dialog-polyfill) in your code.
+> This component uses [dialog element](https://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element), which is only supported by Chrome and Opera currently. For other browsers, you need to include a [polyfill](https://github.com/GoogleChrome/dialog-polyfill) in your code.
+
+> If you're using the `Dialog` component with a full MDL app, you will also need to set a custom `z-index` on the `Layout` to make the `Dialog` be accessible on top of the dark overlay. A value of `100001` is required for this to work.
 
 ## Demo
 
