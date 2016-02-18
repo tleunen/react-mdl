@@ -2,13 +2,21 @@ import React, { PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 
+const prevent = (event) => event.preventDefault();
+
 class Dialog extends React.Component {
     static propTypes = {
         className: PropTypes.string,
+        onCancel: PropTypes.func,
         open: PropTypes.bool
     };
 
+    static defaultProps = {
+        onCancel: prevent
+    };
+
     componentDidMount() {
+        this.refs.dialog.addEventListener('cancel', prevent);
         if(this.props.open) {
             findDOMNode(this).showModal();
         }
@@ -30,6 +38,10 @@ class Dialog extends React.Component {
                 findDOMNode(this).close();
             }
         }
+    }
+
+    componentWillUnmount() {
+        this.refs.dialog.removeEventListener('cancel', prevent);
     }
 
     render() {

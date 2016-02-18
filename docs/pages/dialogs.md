@@ -96,6 +96,7 @@ class Demo extends React.Component {
 
 | Element   | Prop         | Type      | Effect       | Remarks      |
 |:----------|:-------------|:----------|:-------------|:-------------|
+| Dialog    | onCancel     | Function  | Defines the handler for the cancel event. (When the user press the "Escape" key)  | Optional. By default, the default behavior (closing the dialog) is prevented. |
 | Dialog    | open         | Boolean   | Set the open state of the dialog  | Optional |
 | DialogTitle | component  | String, Element, Function | Specify the custom component to use to render the element | Optional. Default 'h4' |
 | DialogActions | fullWidth | Boolean  | Apply the full-width effect to all children of dialog actions  | Optional |
