@@ -2,6 +2,14 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.4.1]
+
+### Fixes
+- Do not close the `Dialog` with the escape key, by default. Can be customized with the `onCancel` prop. ([#221]).
+
+[1.4.1]: https://github.com/tleunen/react-mdl/compare/v1.4.0...v1.4.1
+[#221]: https://github.com/tleunen/react-mdl/issues/221
+
 ## [1.4.0]
 
 ### New
