@@ -30,7 +30,7 @@ npm test
 
 update_version 'package.json' $next_version
 
-rm -rf out
+npm run clean
 npm run compile
 npm run build-docs
 npm run build-umd

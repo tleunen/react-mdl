@@ -85,6 +85,7 @@
     "react-dom": "0.14.x"
   },
   "scripts": {
+    "clean": "rm -rf coverage lib out",
     "test": "karma start --single-run",
     "posttest": "npm run lint",
     "test:watch": "karma start --auto-watch",
