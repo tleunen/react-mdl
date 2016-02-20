@@ -2,7 +2,7 @@
 import expect from 'expect';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Simulate } from 'react-addons-test-utils';
+import { Simulate, renderIntoDocument } from 'react-addons-test-utils';
 import { render, renderDOM } from './render';
 import Snackbar from '../Snackbar';
 
@@ -78,5 +78,48 @@ describe('Snackbar', () => {
         const el = renderDOM(<Snackbar active action="Undo" onTimeout={noop} onActionClick={onActionClick} />);
         expect(el.querySelector('.mdl-snackbar__action')).toNotBe(null);
         Simulate.click(el.querySelector('.mdl-snackbar__action'));
+    });
+
+    it('should clear timeout timer when unmounted', (done) => {
+        const el = renderDOM(<Snackbar active={false} onTimeout={noop} />);
+        let pass = true;
+        function timeoutHandler() {
+            pass = false;
+        }
+        ReactDOM.render(<Snackbar active timeout={1} onTimeout={timeoutHandler} />, el.parentNode, () => {
+            // Force unmount
+            ReactDOM.unmountComponentAtNode(el.parentNode);
+            // Call done if the handler wasn't called
+            setTimeout(() => {
+                if (pass) {
+                    done();
+                }
+                else {
+                    throw new Error('onTimeout handler should not have been called because component was unmounted');
+                }
+            }, 300);
+        });
+    });
+
+    it('should clear the cleartimer timer when unmounted', (done) => {
+        let pass = true;
+        function timeoutHandler() {
+            pass = false;
+        }
+        const component = renderIntoDocument(<Snackbar active={false} timeout={1} onTimeout={timeoutHandler} />);
+        const el = ReactDOM.findDOMNode(component);
+        // The clearTimer animation period is a very small window, so we invoke clearTimer here directly to start it
+        component.clearTimer();
+        // Force unmount
+        ReactDOM.unmountComponentAtNode(el.parentNode);
+        // Call done if the handler wasn't called
+        setTimeout(() => {
+            if (pass) {
+                done();
+            }
+            else {
+                throw new Error('onTimeout handler should not have been called because component was unmounted');
+            }
+        }, 300);
     });
 });

@@ -24,6 +24,7 @@ class Snackbar extends React.Component {
         super(props);
         this.clearTimer = this.clearTimer.bind(this);
         this.timeoutId = null;
+        this.clearTimeoutId = null;
         this.state = {
             open: false
         };
@@ -48,11 +49,23 @@ class Snackbar extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        if(this.timeoutId) {
+            clearTimeout(this.timeoutId);
+            this.timeoutId = null;
+        }
+        if(this.clearTimeoutId) {
+            clearTimeout(this.clearTimeoutId);
+            this.clearTimeoutId = null;
+        }
+    }
+
     clearTimer() {
         this.timeoutId = null;
         this.setState({ open: false });
 
-        setTimeout(() => {
+        this.clearTimeoutId = setTimeout(() => {
+            this.clearTimeoutId = null;
             this.props.onTimeout();
         }, ANIMATION_LENGTH);
     }
