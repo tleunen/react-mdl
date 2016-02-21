@@ -17,6 +17,9 @@ for (const component in ReactMDL) {
     }
 }
 
+window.React = React;
+window.ReactDOM = require('react-dom');
+
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 render((
