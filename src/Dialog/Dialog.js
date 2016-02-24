@@ -16,7 +16,7 @@ class Dialog extends React.Component {
     };
 
     componentDidMount() {
-        this.refs.dialog.addEventListener('cancel', prevent);
+        this.refs.dialog.addEventListener('cancel', this.props.onCancel);
         if(this.props.open) {
             findDOMNode(this).showModal();
         }
@@ -41,11 +41,11 @@ class Dialog extends React.Component {
     }
 
     componentWillUnmount() {
-        this.refs.dialog.removeEventListener('cancel', prevent);
+        this.refs.dialog.removeEventListener('cancel', this.props.onCancel);
     }
 
     render() {
-        const { className, children, open, ...otherProps } = this.props;
+        const { className, children, open, onCancel, ...otherProps } = this.props;
 
         const classes = classNames('mdl-dialog', className);
 
