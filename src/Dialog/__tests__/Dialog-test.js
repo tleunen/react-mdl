@@ -81,6 +81,34 @@ describe('Dialog', () => {
         expect.restoreSpies();
     });
 
+    it('should prevent default cancel handler', () => {
+        const spy = expect.spyOn(Event.prototype, 'preventDefault').andCallThrough();
+        const el = renderDOM(<Dialog />);
+
+        el.dispatchEvent(new Event('cancel'));
+        expect(spy).toHaveBeenCalled();
+        expect.restoreSpies();
+    });
+
+    it('should call provided cancel handler when specified on initial render', () => {
+        const spy = expect.createSpy();
+        const el = renderDOM(<Dialog onCancel={spy}/>);
+
+        el.dispatchEvent(new Event('cancel'));
+        expect(spy).toHaveBeenCalled();
+        expect.restoreSpies();
+    });
+
+    it('should remove any cancel handler when unmounted', () => {
+        const cancelHandler = expect.createSpy();
+        const el = renderDOM(<Dialog onCancel={cancelHandler} />);
+        const spy = expect.spyOn(el, 'removeEventListener');
+        ReactDOM.unmountComponentAtNode(el.parentNode);
+
+        expect(spy).toHaveBeenCalledWith('cancel', cancelHandler);
+        expect.restoreSpies();
+    });
+
     it('should render with the children', () => {
         const element = (
             <Dialog>
