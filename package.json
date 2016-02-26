@@ -1,6 +1,6 @@
 {
   "name": "react-mdl",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "React Components wrapper for Material Design Lite UI",
   "main": "lib/index.js",
   "repository": "tleunen/react-mdl",
