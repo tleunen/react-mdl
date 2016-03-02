@@ -13,7 +13,8 @@ module.exports = function karma(config) {
         frameworks: [ 'mocha' ],
         files: [
             'extra/material.js',
-            'src/**/*-test.js'
+            // 'src/**/*-test.js'
+            'tests.webpack.js'
         ],
 
         plugins: [
@@ -26,7 +27,8 @@ module.exports = function karma(config) {
         ],
 
         preprocessors: {
-            'src/**/*-test.js': ['webpack']
+            // 'src/**/*-test.js': ['webpack']
+            'tests.webpack.js': ['webpack']
         },
 
         reporters: [ 'mocha', 'coverage' ],
