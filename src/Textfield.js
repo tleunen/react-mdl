@@ -26,6 +26,12 @@ class Textfield extends React.Component {
         ])
     };
 
+    componentDidMount() {
+        if(this.props.error && !this.props.pattern) {
+            this.setAsInvalid();
+        }
+    }
+
     componentDidUpdate(prevProps) {
         if(
             this.props.required !== prevProps.required ||
@@ -41,11 +47,15 @@ class Textfield extends React.Component {
             findDOMNode(this).MaterialTextfield.change(this.props.value);
         }
         if(this.props.error && !this.props.pattern) {
-            // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
-            // If we want to force the error display, we have to override mdl 'is-invalid' value.
-            const elt = findDOMNode(this);
-            elt.className = classNames(elt.className, 'is-invalid');
+            this.setAsInvalid();
         }
+    }
+
+    setAsInvalid() {
+        // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
+        // If we want to force the error display, we have to override mdl 'is-invalid' value.
+        const elt = findDOMNode(this);
+        elt.className = classNames(elt.className, 'is-invalid');
     }
 
     render() {

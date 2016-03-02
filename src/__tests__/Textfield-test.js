@@ -59,11 +59,13 @@ describe('Textfield', () => {
     });
 
     it('should render with an error message if specified', () => {
-        const output = render(<Textfield label="label" error="error..." />);
+        const el = renderDOM(<Textfield label="label" error="error..." />);
 
-        const [,, error] = output.props.children;
-        expect(error.props.className).toInclude('mdl-textfield__error');
-        expect(error.props.children).toBe('error...');
+        expect(el.className).toInclude('is-invalid');
+
+        const error = el.querySelector('.mdl-textfield__error');
+        expect(error.className).toInclude('mdl-textfield__error');
+        expect(error.textContent).toBe('error...');
     });
 
     it('should render an expandable textfield if specified', () => {
