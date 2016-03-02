@@ -15,7 +15,8 @@ const DOC_PAGES_DIR = path.join('docs', 'pages');
 const DOC_PAGES_DIR_OUTPUT = path.join('docs', 'pages', 'html');
 
 function getCodePenForm(jsx, entireClass) {
-    const prefix = 'for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } } dialogPolyfill.registerDialog(document.querySelector("dialog"));';
+    const prefix = `for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }
+const dialogs = document.querySelector("dialog"); dialogs && dialogPolyfill.registerDialog(dialogs);`;
     const suffix = "ReactDOM.render(<Demo />, document.getElementById('demo'))";
     const code = (entireClass) ? jsx : `
 const Demo = (props) => {
