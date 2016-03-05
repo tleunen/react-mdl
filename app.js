@@ -48,33 +48,33 @@
 	
 	__webpack_require__(1);
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _reactRouter = __webpack_require__(193);
+	var _reactRouter = __webpack_require__(288);
 	
-	var _history = __webpack_require__(250);
+	var _history = __webpack_require__(345);
 	
-	var _DocApp = __webpack_require__(254);
+	var _DocApp = __webpack_require__(349);
 	
 	var _DocApp2 = _interopRequireDefault(_DocApp);
 	
-	var _html = __webpack_require__(255);
+	var _html = __webpack_require__(350);
 	
 	var Pages = _interopRequireWildcard(_html);
 	
-	var _PageComponentHelper = __webpack_require__(333);
+	var _PageComponentHelper = __webpack_require__(428);
 	
 	var _PageComponentHelper2 = _interopRequireDefault(_PageComponentHelper);
 	
-	var _templates = __webpack_require__(271);
+	var _templates = __webpack_require__(366);
 	
 	var Templates = _interopRequireWildcard(_templates);
 	
-	var _src = __webpack_require__(275);
+	var _src = __webpack_require__(370);
 	
 	var ReactMDL = _interopRequireWildcard(_src);
 	
@@ -120,407 +120,55 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	/* WEBPACK VAR INJECTION */(function(global) {/* eslint max-len: 0 */
 	
-	__webpack_require__(2);
+	"use strict";
 	
-	__webpack_require__(189);
+	var _Object$defineProperty = __webpack_require__(2)["default"];
+	
+	__webpack_require__(5);
+	
+	__webpack_require__(281);
+	
+	// Should be removed in the next major release:
+	
+	__webpack_require__(283);
 	
 	if (global._babelPolyfill) {
 	  throw new Error("only one instance of babel-polyfill is allowed");
 	}
 	global._babelPolyfill = true;
+	
+	function define(O, key, value) {
+	  O[key] || _Object$defineProperty(O, key, {
+	    writable: true,
+	    configurable: true,
+	    value: value
+	  });
+	}
+	
+	define(String.prototype, "padLeft", "".padStart);
+	define(String.prototype, "padRight", "".padEnd);
+	
+	"pop,reverse,shift,keys,values,entries,indexOf,every,some,forEach,map,filter,find,findIndex,includes,join,slice,concat,push,splice,unshift,sort,lastIndexOf,reduce,reduceRight,copyWithin,fill".split(",").forEach(function (key) {
+	  [][key] && define(Array, key, Function.call.bind([][key]));
+	});
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(3);
-	__webpack_require__(36);
-	__webpack_require__(42);
-	__webpack_require__(44);
-	__webpack_require__(46);
-	__webpack_require__(48);
-	__webpack_require__(50);
-	__webpack_require__(52);
-	__webpack_require__(53);
-	__webpack_require__(54);
-	__webpack_require__(55);
-	__webpack_require__(56);
-	__webpack_require__(57);
-	__webpack_require__(58);
-	__webpack_require__(59);
-	__webpack_require__(60);
-	__webpack_require__(61);
-	__webpack_require__(62);
-	__webpack_require__(63);
-	__webpack_require__(66);
-	__webpack_require__(67);
-	__webpack_require__(68);
-	__webpack_require__(70);
-	__webpack_require__(71);
-	__webpack_require__(72);
-	__webpack_require__(73);
-	__webpack_require__(74);
-	__webpack_require__(75);
-	__webpack_require__(76);
-	__webpack_require__(78);
-	__webpack_require__(79);
-	__webpack_require__(80);
-	__webpack_require__(82);
-	__webpack_require__(83);
-	__webpack_require__(84);
-	__webpack_require__(86);
-	__webpack_require__(87);
-	__webpack_require__(88);
-	__webpack_require__(89);
-	__webpack_require__(90);
-	__webpack_require__(91);
-	__webpack_require__(92);
-	__webpack_require__(93);
-	__webpack_require__(94);
-	__webpack_require__(95);
-	__webpack_require__(96);
-	__webpack_require__(97);
-	__webpack_require__(98);
-	__webpack_require__(99);
-	__webpack_require__(104);
-	__webpack_require__(105);
-	__webpack_require__(109);
-	__webpack_require__(110);
-	__webpack_require__(112);
-	__webpack_require__(113);
-	__webpack_require__(118);
-	__webpack_require__(119);
-	__webpack_require__(122);
-	__webpack_require__(124);
-	__webpack_require__(126);
-	__webpack_require__(128);
-	__webpack_require__(129);
-	__webpack_require__(130);
-	__webpack_require__(132);
-	__webpack_require__(133);
-	__webpack_require__(135);
-	__webpack_require__(136);
-	__webpack_require__(137);
-	__webpack_require__(138);
-	__webpack_require__(145);
-	__webpack_require__(148);
-	__webpack_require__(149);
-	__webpack_require__(151);
-	__webpack_require__(152);
-	__webpack_require__(153);
-	__webpack_require__(154);
-	__webpack_require__(155);
-	__webpack_require__(156);
-	__webpack_require__(157);
-	__webpack_require__(158);
-	__webpack_require__(159);
-	__webpack_require__(160);
-	__webpack_require__(161);
-	__webpack_require__(162);
-	__webpack_require__(164);
-	__webpack_require__(165);
-	__webpack_require__(166);
-	__webpack_require__(167);
-	__webpack_require__(168);
-	__webpack_require__(169);
-	__webpack_require__(171);
-	__webpack_require__(172);
-	__webpack_require__(173);
-	__webpack_require__(174);
-	__webpack_require__(176);
-	__webpack_require__(177);
-	__webpack_require__(179);
-	__webpack_require__(180);
-	__webpack_require__(182);
-	__webpack_require__(183);
-	__webpack_require__(184);
-	__webpack_require__(187);
-	__webpack_require__(188);
-	module.exports = __webpack_require__(7);
+	module.exports = { "default": __webpack_require__(3), __esModule: true };
 
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	var $                 = __webpack_require__(4)
-	  , $export           = __webpack_require__(5)
-	  , DESCRIPTORS       = __webpack_require__(10)
-	  , createDesc        = __webpack_require__(9)
-	  , html              = __webpack_require__(16)
-	  , cel               = __webpack_require__(17)
-	  , has               = __webpack_require__(19)
-	  , cof               = __webpack_require__(20)
-	  , invoke            = __webpack_require__(21)
-	  , fails             = __webpack_require__(11)
-	  , anObject          = __webpack_require__(22)
-	  , aFunction         = __webpack_require__(15)
-	  , isObject          = __webpack_require__(18)
-	  , toObject          = __webpack_require__(23)
-	  , toIObject         = __webpack_require__(25)
-	  , toInteger         = __webpack_require__(27)
-	  , toIndex           = __webpack_require__(28)
-	  , toLength          = __webpack_require__(29)
-	  , IObject           = __webpack_require__(26)
-	  , IE_PROTO          = __webpack_require__(13)('__proto__')
-	  , createArrayMethod = __webpack_require__(30)
-	  , arrayIndexOf      = __webpack_require__(35)(false)
-	  , ObjectProto       = Object.prototype
-	  , ArrayProto        = Array.prototype
-	  , arraySlice        = ArrayProto.slice
-	  , arrayJoin         = ArrayProto.join
-	  , defineProperty    = $.setDesc
-	  , getOwnDescriptor  = $.getDesc
-	  , defineProperties  = $.setDescs
-	  , factories         = {}
-	  , IE8_DOM_DEFINE;
-	
-	if(!DESCRIPTORS){
-	  IE8_DOM_DEFINE = !fails(function(){
-	    return defineProperty(cel('div'), 'a', {get: function(){ return 7; }}).a != 7;
-	  });
-	  $.setDesc = function(O, P, Attributes){
-	    if(IE8_DOM_DEFINE)try {
-	      return defineProperty(O, P, Attributes);
-	    } catch(e){ /* empty */ }
-	    if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-	    if('value' in Attributes)anObject(O)[P] = Attributes.value;
-	    return O;
-	  };
-	  $.getDesc = function(O, P){
-	    if(IE8_DOM_DEFINE)try {
-	      return getOwnDescriptor(O, P);
-	    } catch(e){ /* empty */ }
-	    if(has(O, P))return createDesc(!ObjectProto.propertyIsEnumerable.call(O, P), O[P]);
-	  };
-	  $.setDescs = defineProperties = function(O, Properties){
-	    anObject(O);
-	    var keys   = $.getKeys(Properties)
-	      , length = keys.length
-	      , i = 0
-	      , P;
-	    while(length > i)$.setDesc(O, P = keys[i++], Properties[P]);
-	    return O;
-	  };
-	}
-	$export($export.S + $export.F * !DESCRIPTORS, 'Object', {
-	  // 19.1.2.6 / 15.2.3.3 Object.getOwnPropertyDescriptor(O, P)
-	  getOwnPropertyDescriptor: $.getDesc,
-	  // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	  defineProperty: $.setDesc,
-	  // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-	  defineProperties: defineProperties
-	});
-	
-	  // IE 8- don't enum bug keys
-	var keys1 = ('constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,' +
-	            'toLocaleString,toString,valueOf').split(',')
-	  // Additional keys for getOwnPropertyNames
-	  , keys2 = keys1.concat('length', 'prototype')
-	  , keysLen1 = keys1.length;
-	
-	// Create object with `null` prototype: use iframe Object with cleared prototype
-	var createDict = function(){
-	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = cel('iframe')
-	    , i      = keysLen1
-	    , gt     = '>'
-	    , iframeDocument;
-	  iframe.style.display = 'none';
-	  html.appendChild(iframe);
-	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-	  // createDict = iframe.contentWindow.Object;
-	  // html.removeChild(iframe);
-	  iframeDocument = iframe.contentWindow.document;
-	  iframeDocument.open();
-	  iframeDocument.write('<script>document.F=Object</script' + gt);
-	  iframeDocument.close();
-	  createDict = iframeDocument.F;
-	  while(i--)delete createDict.prototype[keys1[i]];
-	  return createDict();
+	var $ = __webpack_require__(4);
+	module.exports = function defineProperty(it, key, desc){
+	  return $.setDesc(it, key, desc);
 	};
-	var createGetKeys = function(names, length){
-	  return function(object){
-	    var O      = toIObject(object)
-	      , i      = 0
-	      , result = []
-	      , key;
-	    for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
-	    // Don't enum bug & hidden keys
-	    while(length > i)if(has(O, key = names[i++])){
-	      ~arrayIndexOf(result, key) || result.push(key);
-	    }
-	    return result;
-	  };
-	};
-	var Empty = function(){};
-	$export($export.S, 'Object', {
-	  // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	  getPrototypeOf: $.getProto = $.getProto || function(O){
-	    O = toObject(O);
-	    if(has(O, IE_PROTO))return O[IE_PROTO];
-	    if(typeof O.constructor == 'function' && O instanceof O.constructor){
-	      return O.constructor.prototype;
-	    } return O instanceof Object ? ObjectProto : null;
-	  },
-	  // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	  getOwnPropertyNames: $.getNames = $.getNames || createGetKeys(keys2, keys2.length, true),
-	  // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	  create: $.create = $.create || function(O, /*?*/Properties){
-	    var result;
-	    if(O !== null){
-	      Empty.prototype = anObject(O);
-	      result = new Empty();
-	      Empty.prototype = null;
-	      // add "__proto__" for Object.getPrototypeOf shim
-	      result[IE_PROTO] = O;
-	    } else result = createDict();
-	    return Properties === undefined ? result : defineProperties(result, Properties);
-	  },
-	  // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	  keys: $.getKeys = $.getKeys || createGetKeys(keys1, keysLen1, false)
-	});
-	
-	var construct = function(F, len, args){
-	  if(!(len in factories)){
-	    for(var n = [], i = 0; i < len; i++)n[i] = 'a[' + i + ']';
-	    factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
-	  }
-	  return factories[len](F, args);
-	};
-	
-	// 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
-	$export($export.P, 'Function', {
-	  bind: function bind(that /*, args... */){
-	    var fn       = aFunction(this)
-	      , partArgs = arraySlice.call(arguments, 1);
-	    var bound = function(/* args... */){
-	      var args = partArgs.concat(arraySlice.call(arguments));
-	      return this instanceof bound ? construct(fn, args.length, args) : invoke(fn, args, that);
-	    };
-	    if(isObject(fn.prototype))bound.prototype = fn.prototype;
-	    return bound;
-	  }
-	});
-	
-	// fallback for not array-like ES3 strings and DOM objects
-	$export($export.P + $export.F * fails(function(){
-	  if(html)arraySlice.call(html);
-	}), 'Array', {
-	  slice: function(begin, end){
-	    var len   = toLength(this.length)
-	      , klass = cof(this);
-	    end = end === undefined ? len : end;
-	    if(klass == 'Array')return arraySlice.call(this, begin, end);
-	    var start  = toIndex(begin, len)
-	      , upTo   = toIndex(end, len)
-	      , size   = toLength(upTo - start)
-	      , cloned = Array(size)
-	      , i      = 0;
-	    for(; i < size; i++)cloned[i] = klass == 'String'
-	      ? this.charAt(start + i)
-	      : this[start + i];
-	    return cloned;
-	  }
-	});
-	$export($export.P + $export.F * (IObject != Object), 'Array', {
-	  join: function join(separator){
-	    return arrayJoin.call(IObject(this), separator === undefined ? ',' : separator);
-	  }
-	});
-	
-	// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
-	$export($export.S, 'Array', {isArray: __webpack_require__(32)});
-	
-	var createArrayReduce = function(isRight){
-	  return function(callbackfn, memo){
-	    aFunction(callbackfn);
-	    var O      = IObject(this)
-	      , length = toLength(O.length)
-	      , index  = isRight ? length - 1 : 0
-	      , i      = isRight ? -1 : 1;
-	    if(arguments.length < 2)for(;;){
-	      if(index in O){
-	        memo = O[index];
-	        index += i;
-	        break;
-	      }
-	      index += i;
-	      if(isRight ? index < 0 : length <= index){
-	        throw TypeError('Reduce of empty array with no initial value');
-	      }
-	    }
-	    for(;isRight ? index >= 0 : length > index; index += i)if(index in O){
-	      memo = callbackfn(memo, O[index], index, this);
-	    }
-	    return memo;
-	  };
-	};
-	
-	var methodize = function($fn){
-	  return function(arg1/*, arg2 = undefined */){
-	    return $fn(this, arg1, arguments[1]);
-	  };
-	};
-	
-	$export($export.P, 'Array', {
-	  // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
-	  forEach: $.each = $.each || methodize(createArrayMethod(0)),
-	  // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
-	  map: methodize(createArrayMethod(1)),
-	  // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
-	  filter: methodize(createArrayMethod(2)),
-	  // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
-	  some: methodize(createArrayMethod(3)),
-	  // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
-	  every: methodize(createArrayMethod(4)),
-	  // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
-	  reduce: createArrayReduce(false),
-	  // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
-	  reduceRight: createArrayReduce(true),
-	  // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
-	  indexOf: methodize(arrayIndexOf),
-	  // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
-	  lastIndexOf: function(el, fromIndex /* = @[*-1] */){
-	    var O      = toIObject(this)
-	      , length = toLength(O.length)
-	      , index  = length - 1;
-	    if(arguments.length > 1)index = Math.min(index, toInteger(fromIndex));
-	    if(index < 0)index = toLength(length + index);
-	    for(;index >= 0; index--)if(index in O)if(O[index] === el)return index;
-	    return -1;
-	  }
-	});
-	
-	// 20.3.3.1 / 15.9.4.4 Date.now()
-	$export($export.S, 'Date', {now: function(){ return +new Date; }});
-	
-	var lz = function(num){
-	  return num > 9 ? num : '0' + num;
-	};
-	
-	// 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
-	// PhantomJS / old WebKit has a broken implementations
-	$export($export.P + $export.F * (fails(function(){
-	  return new Date(-5e13 - 1).toISOString() != '0385-07-25T07:06:39.999Z';
-	}) || !fails(function(){
-	  new Date(NaN).toISOString();
-	})), 'Date', {
-	  toISOString: function toISOString(){
-	    if(!isFinite(this))throw RangeError('Invalid time value');
-	    var d = this
-	      , y = d.getUTCFullYear()
-	      , m = d.getUTCMilliseconds()
-	      , s = y < 0 ? '-' : y > 9999 ? '+' : '';
-	    return s + ('00000' + Math.abs(y)).slice(s ? -6 : -4) +
-	      '-' + lz(d.getUTCMonth() + 1) + '-' + lz(d.getUTCDate()) +
-	      'T' + lz(d.getUTCHours()) + ':' + lz(d.getUTCMinutes()) +
-	      ':' + lz(d.getUTCSeconds()) + '.' + (m > 99 ? m : '0' + lz(m)) + 'Z';
-	  }
-	});
 
 /***/ },
 /* 4 */
@@ -544,50 +192,410 @@
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global    = __webpack_require__(6)
-	  , core      = __webpack_require__(7)
-	  , hide      = __webpack_require__(8)
-	  , redefine  = __webpack_require__(12)
-	  , ctx       = __webpack_require__(14)
-	  , PROTOTYPE = 'prototype';
-	
-	var $export = function(type, name, source){
-	  var IS_FORCED = type & $export.F
-	    , IS_GLOBAL = type & $export.G
-	    , IS_STATIC = type & $export.S
-	    , IS_PROTO  = type & $export.P
-	    , IS_BIND   = type & $export.B
-	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE]
-	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-	    , expProto  = exports[PROTOTYPE] || (exports[PROTOTYPE] = {})
-	    , key, own, out, exp;
-	  if(IS_GLOBAL)source = name;
-	  for(key in source){
-	    // contains in native
-	    own = !IS_FORCED && target && key in target;
-	    // export native or passed
-	    out = (own ? target : source)[key];
-	    // bind timers to global for call from export context
-	    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-	    // extend global
-	    if(target && !own)redefine(target, key, out);
-	    // export
-	    if(exports[key] != out)hide(exports, key, exp);
-	    if(IS_PROTO && expProto[key] != out)expProto[key] = out;
-	  }
-	};
-	global.core = core;
-	// type bitmap
-	$export.F = 1;  // forced
-	$export.G = 2;  // global
-	$export.S = 4;  // static
-	$export.P = 8;  // proto
-	$export.B = 16; // bind
-	$export.W = 32; // wrap
-	module.exports = $export;
+	__webpack_require__(6);
+	__webpack_require__(53);
+	__webpack_require__(54);
+	__webpack_require__(55);
+	__webpack_require__(56);
+	__webpack_require__(58);
+	__webpack_require__(61);
+	__webpack_require__(62);
+	__webpack_require__(63);
+	__webpack_require__(64);
+	__webpack_require__(65);
+	__webpack_require__(66);
+	__webpack_require__(67);
+	__webpack_require__(68);
+	__webpack_require__(69);
+	__webpack_require__(71);
+	__webpack_require__(73);
+	__webpack_require__(75);
+	__webpack_require__(77);
+	__webpack_require__(80);
+	__webpack_require__(81);
+	__webpack_require__(82);
+	__webpack_require__(86);
+	__webpack_require__(88);
+	__webpack_require__(90);
+	__webpack_require__(94);
+	__webpack_require__(95);
+	__webpack_require__(96);
+	__webpack_require__(97);
+	__webpack_require__(99);
+	__webpack_require__(100);
+	__webpack_require__(101);
+	__webpack_require__(102);
+	__webpack_require__(103);
+	__webpack_require__(104);
+	__webpack_require__(105);
+	__webpack_require__(107);
+	__webpack_require__(108);
+	__webpack_require__(109);
+	__webpack_require__(111);
+	__webpack_require__(112);
+	__webpack_require__(113);
+	__webpack_require__(115);
+	__webpack_require__(116);
+	__webpack_require__(117);
+	__webpack_require__(118);
+	__webpack_require__(119);
+	__webpack_require__(120);
+	__webpack_require__(121);
+	__webpack_require__(122);
+	__webpack_require__(123);
+	__webpack_require__(124);
+	__webpack_require__(125);
+	__webpack_require__(126);
+	__webpack_require__(127);
+	__webpack_require__(128);
+	__webpack_require__(133);
+	__webpack_require__(134);
+	__webpack_require__(138);
+	__webpack_require__(139);
+	__webpack_require__(140);
+	__webpack_require__(141);
+	__webpack_require__(143);
+	__webpack_require__(144);
+	__webpack_require__(145);
+	__webpack_require__(146);
+	__webpack_require__(147);
+	__webpack_require__(148);
+	__webpack_require__(149);
+	__webpack_require__(150);
+	__webpack_require__(151);
+	__webpack_require__(152);
+	__webpack_require__(153);
+	__webpack_require__(154);
+	__webpack_require__(155);
+	__webpack_require__(156);
+	__webpack_require__(157);
+	__webpack_require__(158);
+	__webpack_require__(159);
+	__webpack_require__(160);
+	__webpack_require__(165);
+	__webpack_require__(166);
+	__webpack_require__(168);
+	__webpack_require__(169);
+	__webpack_require__(170);
+	__webpack_require__(173);
+	__webpack_require__(174);
+	__webpack_require__(175);
+	__webpack_require__(176);
+	__webpack_require__(177);
+	__webpack_require__(179);
+	__webpack_require__(180);
+	__webpack_require__(181);
+	__webpack_require__(182);
+	__webpack_require__(185);
+	__webpack_require__(187);
+	__webpack_require__(188);
+	__webpack_require__(189);
+	__webpack_require__(191);
+	__webpack_require__(193);
+	__webpack_require__(195);
+	__webpack_require__(196);
+	__webpack_require__(197);
+	__webpack_require__(199);
+	__webpack_require__(200);
+	__webpack_require__(201);
+	__webpack_require__(202);
+	__webpack_require__(208);
+	__webpack_require__(211);
+	__webpack_require__(212);
+	__webpack_require__(214);
+	__webpack_require__(215);
+	__webpack_require__(218);
+	__webpack_require__(219);
+	__webpack_require__(222);
+	__webpack_require__(223);
+	__webpack_require__(224);
+	__webpack_require__(225);
+	__webpack_require__(226);
+	__webpack_require__(227);
+	__webpack_require__(228);
+	__webpack_require__(229);
+	__webpack_require__(230);
+	__webpack_require__(231);
+	__webpack_require__(232);
+	__webpack_require__(233);
+	__webpack_require__(234);
+	__webpack_require__(235);
+	__webpack_require__(236);
+	__webpack_require__(237);
+	__webpack_require__(238);
+	__webpack_require__(239);
+	__webpack_require__(240);
+	__webpack_require__(242);
+	__webpack_require__(243);
+	__webpack_require__(244);
+	__webpack_require__(245);
+	__webpack_require__(246);
+	__webpack_require__(247);
+	__webpack_require__(249);
+	__webpack_require__(250);
+	__webpack_require__(251);
+	__webpack_require__(252);
+	__webpack_require__(253);
+	__webpack_require__(255);
+	__webpack_require__(256);
+	__webpack_require__(259);
+	__webpack_require__(260);
+	__webpack_require__(261);
+	__webpack_require__(262);
+	__webpack_require__(263);
+	__webpack_require__(264);
+	__webpack_require__(265);
+	__webpack_require__(266);
+	__webpack_require__(268);
+	__webpack_require__(269);
+	__webpack_require__(270);
+	__webpack_require__(271);
+	__webpack_require__(272);
+	__webpack_require__(273);
+	__webpack_require__(274);
+	__webpack_require__(275);
+	__webpack_require__(276);
+	__webpack_require__(279);
+	__webpack_require__(280);
+	module.exports = __webpack_require__(8);
 
 /***/ },
 /* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// ECMAScript 6 symbols shim
+	var global         = __webpack_require__(7)
+	  , core           = __webpack_require__(8)
+	  , has            = __webpack_require__(9)
+	  , DESCRIPTORS    = __webpack_require__(10)
+	  , $export        = __webpack_require__(12)
+	  , redefine       = __webpack_require__(21)
+	  , META           = __webpack_require__(25).KEY
+	  , $fails         = __webpack_require__(11)
+	  , shared         = __webpack_require__(26)
+	  , setToStringTag = __webpack_require__(27)
+	  , uid            = __webpack_require__(22)
+	  , wks            = __webpack_require__(28)
+	  , keyOf          = __webpack_require__(29)
+	  , enumKeys       = __webpack_require__(42)
+	  , isArray        = __webpack_require__(45)
+	  , anObject       = __webpack_require__(15)
+	  , toIObject      = __webpack_require__(32)
+	  , toPrimitive    = __webpack_require__(19)
+	  , createDesc     = __webpack_require__(20)
+	  , _create        = __webpack_require__(46)
+	  , gOPNExt        = __webpack_require__(49)
+	  , $GOPD          = __webpack_require__(51)
+	  , $DP            = __webpack_require__(14)
+	  , gOPD           = $GOPD.f
+	  , dP             = $DP.f
+	  , gOPN           = gOPNExt.f
+	  , $Symbol        = global.Symbol
+	  , $JSON          = global.JSON
+	  , _stringify     = $JSON && $JSON.stringify
+	  , setter         = false
+	  , HIDDEN         = wks('_hidden')
+	  , isEnum         = {}.propertyIsEnumerable
+	  , SymbolRegistry = shared('symbol-registry')
+	  , AllSymbols     = shared('symbols')
+	  , ObjectProto    = Object.prototype
+	  , USE_NATIVE     = typeof $Symbol == 'function';
+	
+	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+	var setSymbolDesc = DESCRIPTORS && $fails(function(){
+	  return _create(dP({}, 'a', {
+	    get: function(){ return dP(this, 'a', {value: 7}).a; }
+	  })).a != 7;
+	}) ? function(it, key, D){
+	  var protoDesc = gOPD(ObjectProto, key);
+	  if(protoDesc)delete ObjectProto[key];
+	  dP(it, key, D);
+	  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
+	} : dP;
+	
+	var wrap = function(tag){
+	  var sym = AllSymbols[tag] = _create($Symbol.prototype);
+	  sym._k = tag;
+	  DESCRIPTORS && setter && setSymbolDesc(ObjectProto, tag, {
+	    configurable: true,
+	    set: function(value){
+	      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
+	      setSymbolDesc(this, tag, createDesc(1, value));
+	    }
+	  });
+	  return sym;
+	};
+	
+	var isSymbol = function(it){
+	  return typeof it == 'symbol';
+	};
+	
+	var $defineProperty = function defineProperty(it, key, D){
+	  anObject(it);
+	  key = toPrimitive(key, true);
+	  anObject(D);
+	  if(has(AllSymbols, key)){
+	    if(!D.enumerable){
+	      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
+	      it[HIDDEN][key] = true;
+	    } else {
+	      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
+	      D = _create(D, {enumerable: createDesc(0, false)});
+	    } return setSymbolDesc(it, key, D);
+	  } return dP(it, key, D);
+	};
+	var $defineProperties = function defineProperties(it, P){
+	  anObject(it);
+	  var keys = enumKeys(P = toIObject(P))
+	    , i    = 0
+	    , l = keys.length
+	    , key;
+	  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
+	  return it;
+	};
+	var $create = function create(it, P){
+	  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+	};
+	var $propertyIsEnumerable = function propertyIsEnumerable(key){
+	  var E = isEnum.call(this, key = toPrimitive(key, true));
+	  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+	};
+	var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
+	  var D = gOPD(it = toIObject(it), key = toPrimitive(key, true));
+	  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
+	  return D;
+	};
+	var $getOwnPropertyNames = function getOwnPropertyNames(it){
+	  var names  = gOPN(toIObject(it))
+	    , result = []
+	    , i      = 0
+	    , key;
+	  while(names.length > i)if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
+	  return result;
+	};
+	var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
+	  var names  = gOPN(toIObject(it))
+	    , result = []
+	    , i      = 0
+	    , key;
+	  while(names.length > i)if(has(AllSymbols, key = names[i++]))result.push(AllSymbols[key]);
+	  return result;
+	};
+	var $stringify = function stringify(it){
+	  if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
+	  var args = [it]
+	    , i    = 1
+	    , replacer, $replacer;
+	  while(arguments.length > i)args.push(arguments[i++]);
+	  replacer = args[1];
+	  if(typeof replacer == 'function')$replacer = replacer;
+	  if($replacer || !isArray(replacer))replacer = function(key, value){
+	    if($replacer)value = $replacer.call(this, key, value);
+	    if(!isSymbol(value))return value;
+	  };
+	  args[1] = replacer;
+	  return _stringify.apply($JSON, args);
+	};
+	var BUGGY_JSON = $fails(function(){
+	  var S = $Symbol();
+	  // MS Edge converts symbol values to JSON as {}
+	  // WebKit converts symbol values to JSON as null
+	  // V8 throws on boxed symbols
+	  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
+	});
+	
+	// 19.4.1.1 Symbol([description])
+	if(!USE_NATIVE){
+	  $Symbol = function Symbol(){
+	    if(isSymbol(this))throw TypeError('Symbol is not a constructor');
+	    return wrap(uid(arguments.length > 0 ? arguments[0] : undefined));
+	  };
+	  redefine($Symbol.prototype, 'toString', function toString(){
+	    return this._k;
+	  });
+	
+	  isSymbol = function(it){
+	    return it instanceof $Symbol;
+	  };
+	
+	  $GOPD.f = $getOwnPropertyDescriptor;
+	  $DP.f   = $defineProperty;
+	  __webpack_require__(50).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(44).f  = $propertyIsEnumerable
+	  __webpack_require__(43).f = $getOwnPropertySymbols;
+	
+	  if(DESCRIPTORS && !__webpack_require__(52)){
+	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+	  }
+	}
+	
+	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
+	
+	// 19.4.2.2 Symbol.hasInstance
+	// 19.4.2.3 Symbol.isConcatSpreadable
+	// 19.4.2.4 Symbol.iterator
+	// 19.4.2.6 Symbol.match
+	// 19.4.2.8 Symbol.replace
+	// 19.4.2.9 Symbol.search
+	// 19.4.2.10 Symbol.species
+	// 19.4.2.11 Symbol.split
+	// 19.4.2.12 Symbol.toPrimitive
+	// 19.4.2.13 Symbol.toStringTag
+	// 19.4.2.14 Symbol.unscopables
+	for(var symbols = (
+	  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
+	).split(','), i = 0; symbols.length > i; ){
+	  var key     = symbols[i++]
+	    , Wrapper = core.Symbol
+	    , sym     = wks(key);
+	  if(!(key in Wrapper))dP(Wrapper, key, {value: USE_NATIVE ? sym : wrap(sym)});
+	};
+	
+	setter = true;
+	
+	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
+	  // 19.4.2.1 Symbol.for(key)
+	  'for': function(key){
+	    return has(SymbolRegistry, key += '')
+	      ? SymbolRegistry[key]
+	      : SymbolRegistry[key] = $Symbol(key);
+	  },
+	  // 19.4.2.5 Symbol.keyFor(sym)
+	  keyFor: function keyFor(key){
+	    return keyOf(SymbolRegistry, key);
+	  },
+	  useSetter: function(){ setter = true; },
+	  useSimple: function(){ setter = false; }
+	});
+	
+	$export($export.S + $export.F * !USE_NATIVE, 'Object', {
+	  // 19.1.2.2 Object.create(O [, Properties])
+	  create: $create,
+	  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+	  defineProperty: $defineProperty,
+	  // 19.1.2.3 Object.defineProperties(O, Properties)
+	  defineProperties: $defineProperties,
+	  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+	  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+	  // 19.1.2.7 Object.getOwnPropertyNames(O)
+	  getOwnPropertyNames: $getOwnPropertyNames,
+	  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+	  getOwnPropertySymbols: $getOwnPropertySymbols
+	});
+	
+	// 24.3.2 JSON.stringify(value [, replacer [, space]])
+	$JSON && $export($export.S + $export.F * (!USE_NATIVE || BUGGY_JSON), 'JSON', {stringify: $stringify});
+	
+	// 19.4.3.5 Symbol.prototype[@@toStringTag]
+	setToStringTag($Symbol, 'Symbol');
+	// 20.2.1.9 Math[@@toStringTag]
+	setToStringTag(Math, 'Math', true);
+	// 24.3.3 JSON[@@toStringTag]
+	setToStringTag(global.JSON, 'JSON', true);
+
+/***/ },
+/* 7 */
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -596,36 +604,19 @@
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
-	var core = module.exports = {version: '1.2.6'};
+	var core = module.exports = {version: '2.1.3'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $          = __webpack_require__(4)
-	  , createDesc = __webpack_require__(9);
-	module.exports = __webpack_require__(10) ? function(object, key, value){
-	  return $.setDesc(object, key, createDesc(1, value));
-	} : function(object, key, value){
-	  object[key] = value;
-	  return object;
-	};
 
 /***/ },
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = function(bitmap, value){
-	  return {
-	    enumerable  : !(bitmap & 1),
-	    configurable: !(bitmap & 2),
-	    writable    : !(bitmap & 4),
-	    value       : value
-	  };
+	var hasOwnProperty = {}.hasOwnProperty;
+	module.exports = function(it, key){
+	  return hasOwnProperty.call(it, key);
 	};
 
 /***/ },
@@ -653,36 +644,191 @@
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// add fake Function#toString
-	// for correct work wrapped methods / constructors with methods like LoDash isNative
-	var global    = __webpack_require__(6)
-	  , hide      = __webpack_require__(8)
-	  , SRC       = __webpack_require__(13)('src')
+	var global    = __webpack_require__(7)
+	  , core      = __webpack_require__(8)
+	  , hide      = __webpack_require__(13)
+	  , redefine  = __webpack_require__(21)
+	  , ctx       = __webpack_require__(23)
+	  , PROTOTYPE = 'prototype';
+	
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE]
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , expProto  = exports[PROTOTYPE] || (exports[PROTOTYPE] = {})
+	    , key, own, out, exp;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
+	    // contains in native
+	    own = !IS_FORCED && target && target[key] !== undefined;
+	    // export native or passed
+	    out = (own ? target : source)[key];
+	    // bind timers to global for call from export context
+	    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+	    // extend global
+	    if(target)redefine(target, key, out, type & $export.U);
+	    // export
+	    if(exports[key] != out)hide(exports, key, exp);
+	    if(IS_PROTO && expProto[key] != out)expProto[key] = out;
+	  }
+	};
+	global.core = core;
+	// type bitmap
+	$export.F = 1;   // forced
+	$export.G = 2;   // global
+	$export.S = 4;   // static
+	$export.P = 8;   // proto
+	$export.B = 16;  // bind
+	$export.W = 32;  // wrap
+	$export.U = 64;  // safe
+	$export.R = 128; // real proto method for `library` 
+	module.exports = $export;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var dP         = __webpack_require__(14)
+	  , createDesc = __webpack_require__(20);
+	module.exports = __webpack_require__(10) ? function(object, key, value){
+	  return dP.f(object, key, createDesc(1, value));
+	} : function(object, key, value){
+	  object[key] = value;
+	  return object;
+	};
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var anObject       = __webpack_require__(15)
+	  , IE8_DOM_DEFINE = __webpack_require__(17)
+	  , toPrimitive    = __webpack_require__(19)
+	  , dP             = Object.defineProperty;
+	
+	exports.f = __webpack_require__(10) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+	  anObject(O);
+	  P = toPrimitive(P, true);
+	  anObject(Attributes);
+	  if(IE8_DOM_DEFINE)try {
+	    return dP(O, P, Attributes);
+	  } catch(e){ /* empty */ }
+	  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
+	  if('value' in Attributes)O[P] = Attributes.value;
+	  return O;
+	};
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(16);
+	module.exports = function(it){
+	  if(!isObject(it))throw TypeError(it + ' is not an object!');
+	  return it;
+	};
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = !__webpack_require__(10) && !__webpack_require__(11)(function(){
+	  return Object.defineProperty(__webpack_require__(18)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+	});
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(16)
+	  , document = __webpack_require__(7).document
+	  // in old IE typeof document.createElement is 'object'
+	  , is = isObject(document) && isObject(document.createElement);
+	module.exports = function(it){
+	  return is ? document.createElement(it) : {};
+	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.1 ToPrimitive(input [, PreferredType])
+	var isObject = __webpack_require__(16);
+	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+	// and the second argument - flag - preferred type is a string
+	module.exports = function(it, S){
+	  if(!isObject(it))return it;
+	  var fn, val;
+	  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+	  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
+	  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+	  throw TypeError("Can't convert object to primitive value");
+	};
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = function(bitmap, value){
+	  return {
+	    enumerable  : !(bitmap & 1),
+	    configurable: !(bitmap & 2),
+	    writable    : !(bitmap & 4),
+	    value       : value
+	  };
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(7)
+	  , hide      = __webpack_require__(13)
+	  , has       = __webpack_require__(9)
+	  , SRC       = __webpack_require__(22)('src')
 	  , TO_STRING = 'toString'
 	  , $toString = Function[TO_STRING]
 	  , TPL       = ('' + $toString).split(TO_STRING);
 	
-	__webpack_require__(7).inspectSource = function(it){
+	__webpack_require__(8).inspectSource = function(it){
 	  return $toString.call(it);
 	};
 	
 	(module.exports = function(O, key, val, safe){
-	  if(typeof val == 'function'){
-	    val.hasOwnProperty(SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
-	    val.hasOwnProperty('name') || hide(val, 'name', key);
-	  }
+	  var isFunction = typeof val == 'function';
+	  if(isFunction)has(val, 'name') || hide(val, 'name', key);
+	  if(O[key] === val)return;
+	  if(isFunction)has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
 	  if(O === global){
 	    O[key] = val;
 	  } else {
-	    if(!safe)delete O[key];
-	    hide(O, key, val);
+	    if(!safe){
+	      delete O[key];
+	      hide(O, key, val);
+	    } else {
+	      if(O[key])O[key] = val;
+	      else hide(O, key, val);
+	    }
 	  }
+	// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
 	})(Function.prototype, TO_STRING, function toString(){
 	  return typeof this == 'function' && this[SRC] || $toString.call(this);
 	});
 
 /***/ },
-/* 13 */
+/* 22 */
 /***/ function(module, exports) {
 
 	var id = 0
@@ -692,11 +838,11 @@
 	};
 
 /***/ },
-/* 14 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(15);
+	var aFunction = __webpack_require__(24);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -717,7 +863,7 @@
 	};
 
 /***/ },
-/* 15 */
+/* 24 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -726,42 +872,171 @@
 	};
 
 /***/ },
-/* 16 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(6).document && document.documentElement;
+	var META     = __webpack_require__(22)('meta')
+	  , isObject = __webpack_require__(16)
+	  , has      = __webpack_require__(9)
+	  , setDesc  = __webpack_require__(14).f
+	  , id       = 0;
+	var isExtensible = Object.isExtensible || function(){
+	  return true;
+	};
+	var FREEZE = !__webpack_require__(11)(function(){
+	  return isExtensible(Object.preventExtensions({}));
+	});
+	var setMeta = function(it){
+	  setDesc(it, META, {value: {
+	    i: 'O' + ++id, // object ID
+	    w: {}          // weak collections IDs
+	  }});
+	};
+	var fastKey = function(it, create){
+	  // return primitive with prefix
+	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+	  if(!has(it, META)){
+	    // can't set metadata to uncaught frozen object
+	    if(!isExtensible(it))return 'F';
+	    // not necessary to add metadata
+	    if(!create)return 'E';
+	    // add missing metadata
+	    setMeta(it);
+	  // return object ID
+	  } return it[META].i;
+	};
+	var getWeak = function(it, create){
+	  if(!has(it, META)){
+	    // can't set metadata to uncaught frozen object
+	    if(!isExtensible(it))return true;
+	    // not necessary to add metadata
+	    if(!create)return false;
+	    // add missing metadata
+	    setMeta(it);
+	  // return hash weak collections IDs
+	  } return it[META].w;
+	};
+	// add metadata on freeze-family methods calling
+	var onFreeze = function(it){
+	  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
+	  return it;
+	};
+	var meta = module.exports = {
+	  KEY:      META,
+	  NEED:     false,
+	  fastKey:  fastKey,
+	  getWeak:  getWeak,
+	  onFreeze: onFreeze
+	};
 
 /***/ },
-/* 17 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(18)
-	  , document = __webpack_require__(6).document
-	  // in old IE typeof document.createElement is 'object'
-	  , is = isObject(document) && isObject(document.createElement);
+	var global = __webpack_require__(7)
+	  , SHARED = '__core-js_shared__'
+	  , store  = global[SHARED] || (global[SHARED] = {});
+	module.exports = function(key){
+	  return store[key] || (store[key] = {});
+	};
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var def = __webpack_require__(14).f
+	  , has = __webpack_require__(9)
+	  , TAG = __webpack_require__(28)('toStringTag');
+	
+	module.exports = function(it, tag, stat){
+	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
+	};
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var store      = __webpack_require__(26)('wks')
+	  , uid        = __webpack_require__(22)
+	  , Symbol     = __webpack_require__(7).Symbol
+	  , USE_SYMBOL = typeof Symbol == 'function';
+	module.exports = function(name){
+	  return store[name] || (store[name] =
+	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+	};
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var getKeys   = __webpack_require__(30)
+	  , toIObject = __webpack_require__(32);
+	module.exports = function(object, el){
+	  var O      = toIObject(object)
+	    , keys   = getKeys(O)
+	    , length = keys.length
+	    , index  = 0
+	    , key;
+	  while(length > index)if(O[key = keys[index++]] === el)return key;
+	};
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+	var $keys       = __webpack_require__(31)
+	  , enumBugKeys = __webpack_require__(41);
+	
+	module.exports = Object.keys || function keys(O){
+	  return $keys(O, enumBugKeys);
+	};
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var has          = __webpack_require__(9)
+	  , toIObject    = __webpack_require__(32)
+	  , arrayIndexOf = __webpack_require__(36)(false)
+	  , IE_PROTO     = __webpack_require__(40)('IE_PROTO');
+	
+	module.exports = function(object, names){
+	  var O      = toIObject(object)
+	    , i      = 0
+	    , result = []
+	    , key;
+	  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
+	  // Don't enum bug & hidden keys
+	  while(names.length > i)if(has(O, key = names[i++])){
+	    ~arrayIndexOf(result, key) || result.push(key);
+	  }
+	  return result;
+	};
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// to indexed object, toObject with fallback for non-array-like ES3 strings
+	var IObject = __webpack_require__(33)
+	  , defined = __webpack_require__(35);
 	module.exports = function(it){
-	  return is ? document.createElement(it) : {};
+	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 18 */
-/***/ function(module, exports) {
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = function(it){
-	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	// fallback for non-array-like ES3 and non-enumerable old V8 strings
+	var cof = __webpack_require__(34);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function(it, key){
-	  return hasOwnProperty.call(it, key);
-	};
-
-/***/ },
-/* 20 */
+/* 34 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -771,7 +1046,646 @@
 	};
 
 /***/ },
-/* 21 */
+/* 35 */
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
+	  return it;
+	};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// false -> Array#indexOf
+	// true  -> Array#includes
+	var toIObject = __webpack_require__(32)
+	  , toLength  = __webpack_require__(37)
+	  , toIndex   = __webpack_require__(39);
+	module.exports = function(IS_INCLUDES){
+	  return function($this, el, fromIndex){
+	    var O      = toIObject($this)
+	      , length = toLength(O.length)
+	      , index  = toIndex(fromIndex, length)
+	      , value;
+	    // Array#includes uses SameValueZero equality algorithm
+	    if(IS_INCLUDES && el != el)while(length > index){
+	      value = O[index++];
+	      if(value != value)return true;
+	    // Array#toIndex ignores holes, Array#includes - not
+	    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
+	      if(O[index] === el)return IS_INCLUDES || index;
+	    } return !IS_INCLUDES && -1;
+	  };
+	};
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.15 ToLength
+	var toInteger = __webpack_require__(38)
+	  , min       = Math.min;
+	module.exports = function(it){
+	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+	};
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	// 7.1.4 ToInteger
+	var ceil  = Math.ceil
+	  , floor = Math.floor;
+	module.exports = function(it){
+	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+	};
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toInteger = __webpack_require__(38)
+	  , max       = Math.max
+	  , min       = Math.min;
+	module.exports = function(index, length){
+	  index = toInteger(index);
+	  return index < 0 ? max(index + length, 0) : min(index, length);
+	};
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var shared = __webpack_require__(26)('keys')
+	  , uid    = __webpack_require__(22);
+	module.exports = function(key){
+	  return shared[key] || (shared[key] = uid(key));
+	};
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	// IE 8- don't enum bug keys
+	module.exports = (
+	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+	).split(',');
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// all enumerable object keys, includes symbols
+	var getKeys = __webpack_require__(30)
+	  , gOPS    = __webpack_require__(43)
+	  , pIE     = __webpack_require__(44);
+	module.exports = function(it){
+	  var result     = getKeys(it)
+	    , getSymbols = gOPS.f;
+	  if(getSymbols){
+	    var symbols = getSymbols(it)
+	      , isEnum  = pIE.f
+	      , i       = 0
+	      , key;
+	    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
+	  } return result;
+	};
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	exports.f = Object.getOwnPropertySymbols;
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	exports.f = {}.propertyIsEnumerable;
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.2.2 IsArray(argument)
+	var cof = __webpack_require__(34);
+	module.exports = Array.isArray || function isArray(arg){
+	  return cof(arg) == 'Array';
+	};
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+	var anObject    = __webpack_require__(15)
+	  , dPs         = __webpack_require__(47)
+	  , enumBugKeys = __webpack_require__(41)
+	  , IE_PROTO    = __webpack_require__(40)('IE_PROTO')
+	  , Empty       = function(){ /* empty */ }
+	  , PROTOTYPE   = 'prototype';
+	
+	// Create object with fake `null` prototype: use iframe Object with cleared prototype
+	var createDict = function(){
+	  // Thrash, waste and sodomy: IE GC bug
+	  var iframe = __webpack_require__(18)('iframe')
+	    , i      = enumBugKeys.length
+	    , gt     = '>'
+	    , iframeDocument;
+	  iframe.style.display = 'none';
+	  __webpack_require__(48).appendChild(iframe);
+	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+	  // createDict = iframe.contentWindow.Object;
+	  // html.removeChild(iframe);
+	  iframeDocument = iframe.contentWindow.document;
+	  iframeDocument.open();
+	  iframeDocument.write('<script>document.F=Object</script' + gt);
+	  iframeDocument.close();
+	  createDict = iframeDocument.F;
+	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
+	  return createDict();
+	};
+	
+	module.exports = Object.create || function create(O, Properties){
+	  var result;
+	  if(O !== null){
+	    Empty[PROTOTYPE] = anObject(O);
+	    result = new Empty;
+	    Empty[PROTOTYPE] = null;
+	    // add "__proto__" for Object.getPrototypeOf polyfill
+	    result[IE_PROTO] = O;
+	  } else result = createDict();
+	  return Properties === undefined ? result : dPs(result, Properties);
+	};
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var dP       = __webpack_require__(14)
+	  , anObject = __webpack_require__(15)
+	  , getKeys  = __webpack_require__(30);
+	
+	module.exports = __webpack_require__(10) ? Object.defineProperties : function defineProperties(O, Properties){
+	  anObject(O);
+	  var keys   = getKeys(Properties)
+	    , length = keys.length
+	    , i = 0
+	    , P;
+	  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
+	  return O;
+	};
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(7).document && document.documentElement;
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+	var toIObject = __webpack_require__(32)
+	  , gOPN      = __webpack_require__(50).f
+	  , toString  = {}.toString;
+	
+	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
+	  ? Object.getOwnPropertyNames(window) : [];
+	
+	var getWindowNames = function(it){
+	  try {
+	    return gOPN.f(it);
+	  } catch(e){
+	    return windowNames.slice();
+	  }
+	};
+	
+	module.exports.f = function getOwnPropertyNames(it){
+	  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
+	};
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+	var $keys      = __webpack_require__(31)
+	  , hiddenKeys = __webpack_require__(41).concat('length', 'prototype');
+	
+	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
+	  return $keys(O, hiddenKeys);
+	};
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var pIE            = __webpack_require__(44)
+	  , createDesc     = __webpack_require__(20)
+	  , toIObject      = __webpack_require__(32)
+	  , toPrimitive    = __webpack_require__(19)
+	  , has            = __webpack_require__(9)
+	  , IE8_DOM_DEFINE = __webpack_require__(17)
+	  , gOPD           = Object.getOwnPropertyDescriptor;
+	
+	exports.f = __webpack_require__(10) ? gOPD : function getOwnPropertyDescriptor(O, P){
+	  O = toIObject(O);
+	  P = toPrimitive(P, true);
+	  if(IE8_DOM_DEFINE)try {
+	    return gOPD(O, P);
+	  } catch(e){ /* empty */ }
+	  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
+	};
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	module.exports = false;
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12)
+	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+	$export($export.S, 'Object', {create: __webpack_require__(46)});
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12);
+	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+	$export($export.S + $export.F * !__webpack_require__(10), 'Object', {defineProperty: __webpack_require__(14).f});
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12);
+	// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
+	$export($export.S + $export.F * !__webpack_require__(10), 'Object', {defineProperties: __webpack_require__(47)});
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+	var toIObject                 = __webpack_require__(32)
+	  , $getOwnPropertyDescriptor = __webpack_require__(51).f;
+	
+	__webpack_require__(57)('getOwnPropertyDescriptor', function(){
+	  return function getOwnPropertyDescriptor(it, key){
+	    return $getOwnPropertyDescriptor(toIObject(it), key);
+	  };
+	});
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// most Object methods by ES6 should accept primitives
+	var $export = __webpack_require__(12)
+	  , core    = __webpack_require__(8)
+	  , fails   = __webpack_require__(11);
+	module.exports = function(KEY, exec){
+	  var fn  = (core.Object || {})[KEY] || Object[KEY]
+	    , exp = {};
+	  exp[KEY] = exec(fn);
+	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+	};
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.9 Object.getPrototypeOf(O)
+	var toObject        = __webpack_require__(59)
+	  , $getPrototypeOf = __webpack_require__(60);
+	
+	__webpack_require__(57)('getPrototypeOf', function(){
+	  return function getPrototypeOf(it){
+	    return $getPrototypeOf(toObject(it));
+	  };
+	});
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(35);
+	module.exports = function(it){
+	  return Object(defined(it));
+	};
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+	var has         = __webpack_require__(9)
+	  , toObject    = __webpack_require__(59)
+	  , IE_PROTO    = __webpack_require__(40)('IE_PROTO')
+	  , ObjectProto = Object.prototype;
+	
+	module.exports = Object.getPrototypeOf || function(O){
+	  O = toObject(O);
+	  if(has(O, IE_PROTO))return O[IE_PROTO];
+	  if(typeof O.constructor == 'function' && O instanceof O.constructor){
+	    return O.constructor.prototype;
+	  } return O instanceof Object ? ObjectProto : null;
+	};
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.14 Object.keys(O)
+	var toObject = __webpack_require__(59)
+	  , $keys    = __webpack_require__(30);
+	
+	__webpack_require__(57)('keys', function(){
+	  return function keys(it){
+	    return $keys(toObject(it));
+	  };
+	});
+
+/***/ },
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.7 Object.getOwnPropertyNames(O)
+	__webpack_require__(57)('getOwnPropertyNames', function(){
+	  return __webpack_require__(49).f;
+	});
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.5 Object.freeze(O)
+	var isObject = __webpack_require__(16)
+	  , meta     = __webpack_require__(25).onFreeze;
+	
+	__webpack_require__(57)('freeze', function($freeze){
+	  return function freeze(it){
+	    return $freeze && isObject(it) ? $freeze(meta(it)) : it;
+	  };
+	});
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.17 Object.seal(O)
+	var isObject = __webpack_require__(16)
+	  , meta     = __webpack_require__(25).onFreeze;
+	
+	__webpack_require__(57)('seal', function($seal){
+	  return function seal(it){
+	    return $seal && isObject(it) ? $seal(meta(it)) : it;
+	  };
+	});
+
+/***/ },
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.15 Object.preventExtensions(O)
+	var isObject = __webpack_require__(16)
+	  , meta     = __webpack_require__(25).onFreeze;
+	
+	__webpack_require__(57)('preventExtensions', function($preventExtensions){
+	  return function preventExtensions(it){
+	    return $preventExtensions && isObject(it) ? $preventExtensions(meta(it)) : it;
+	  };
+	});
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.12 Object.isFrozen(O)
+	var isObject = __webpack_require__(16);
+	
+	__webpack_require__(57)('isFrozen', function($isFrozen){
+	  return function isFrozen(it){
+	    return isObject(it) ? $isFrozen ? $isFrozen(it) : false : true;
+	  };
+	});
+
+/***/ },
+/* 67 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.13 Object.isSealed(O)
+	var isObject = __webpack_require__(16);
+	
+	__webpack_require__(57)('isSealed', function($isSealed){
+	  return function isSealed(it){
+	    return isObject(it) ? $isSealed ? $isSealed(it) : false : true;
+	  };
+	});
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.11 Object.isExtensible(O)
+	var isObject = __webpack_require__(16);
+	
+	__webpack_require__(57)('isExtensible', function($isExtensible){
+	  return function isExtensible(it){
+	    return isObject(it) ? $isExtensible ? $isExtensible(it) : true : false;
+	  };
+	});
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(12);
+	
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(70)});
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var getKeys  = __webpack_require__(30)
+	  , gOPS     = __webpack_require__(43)
+	  , pIE      = __webpack_require__(44)
+	  , toObject = __webpack_require__(59)
+	  , IObject  = __webpack_require__(33);
+	
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = __webpack_require__(11)(function(){
+	  var a = Object.assign
+	    , A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return a({}, A)[S] != 7 || Object.keys(a({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , aLen  = arguments.length
+	    , index = 1
+	    , getSymbols = gOPS.f
+	    , isEnum     = pIE.f;
+	  while(aLen > index){
+	    var S      = IObject(arguments[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  }
+	  return T;
+	} : Object.assign;
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.10 Object.is(value1, value2)
+	var $export = __webpack_require__(12);
+	$export($export.S, 'Object', {is: __webpack_require__(72)});
+
+/***/ },
+/* 72 */
+/***/ function(module, exports) {
+
+	// 7.2.9 SameValue(x, y)
+	module.exports = Object.is || function is(x, y){
+	  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
+	};
+
+/***/ },
+/* 73 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.19 Object.setPrototypeOf(O, proto)
+	var $export = __webpack_require__(12);
+	$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(74).set});
+
+/***/ },
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Works with __proto__ only. Old v8 can't work with null proto objects.
+	/* eslint-disable no-proto */
+	var isObject = __webpack_require__(16)
+	  , anObject = __webpack_require__(15);
+	var check = function(O, proto){
+	  anObject(O);
+	  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
+	};
+	module.exports = {
+	  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+	    function(test, buggy, set){
+	      try {
+	        set = __webpack_require__(23)(Function.call, __webpack_require__(51).f(Object.prototype, '__proto__').set, 2);
+	        set(test, []);
+	        buggy = !(test instanceof Array);
+	      } catch(e){ buggy = true; }
+	      return function setPrototypeOf(O, proto){
+	        check(O, proto);
+	        if(buggy)O.__proto__ = proto;
+	        else set(O, proto);
+	        return O;
+	      };
+	    }({}, false) : undefined),
+	  check: check
+	};
+
+/***/ },
+/* 75 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 19.1.3.6 Object.prototype.toString()
+	var classof = __webpack_require__(76)
+	  , test    = {};
+	test[__webpack_require__(28)('toStringTag')] = 'z';
+	if(test + '' != '[object z]'){
+	  __webpack_require__(21)(Object.prototype, 'toString', function toString(){
+	    return '[object ' + classof(this) + ']';
+	  }, true);
+	}
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// getting tag from 19.1.3.6 Object.prototype.toString()
+	var cof = __webpack_require__(34)
+	  , TAG = __webpack_require__(28)('toStringTag')
+	  // ES3 wrong here
+	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
+	
+	module.exports = function(it){
+	  var O, T, B;
+	  return it === undefined ? 'Undefined' : it === null ? 'Null'
+	    // @@toStringTag case
+	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
+	    // builtinTag case
+	    : ARG ? cof(O)
+	    // ES3 arguments fallback
+	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+	};
+
+/***/ },
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
+	var $export = __webpack_require__(12);
+	
+	$export($export.P, 'Function', {bind: __webpack_require__(78)});
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var aFunction  = __webpack_require__(24)
+	  , isObject   = __webpack_require__(16)
+	  , invoke     = __webpack_require__(79)
+	  , arraySlice = [].slice
+	  , factories  = {};
+	
+	var construct = function(F, len, args){
+	  if(!(len in factories)){
+	    for(var n = [], i = 0; i < len; i++)n[i] = 'a[' + i + ']';
+	    factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
+	  } return factories[len](F, args);
+	};
+	
+	module.exports = Function.bind || function bind(that /*, args... */){
+	  var fn       = aFunction(this)
+	    , partArgs = arraySlice.call(arguments, 1);
+	  var bound = function(/* args... */){
+	    var args = partArgs.concat(arraySlice.call(arguments));
+	    return this instanceof bound ? construct(fn, args.length, args) : invoke(fn, args, that);
+	  };
+	  if(isObject(fn.prototype))bound.prototype = fn.prototype;
+	  return bound;
+	};
+
+/***/ },
+/* 79 */
 /***/ function(module, exports) {
 
 	// fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -792,865 +1706,153 @@
 	};
 
 /***/ },
-/* 22 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(18);
-	module.exports = function(it){
-	  if(!isObject(it))throw TypeError(it + ' is not an object!');
-	  return it;
-	};
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(24);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
-/* 24 */
-/***/ function(module, exports) {
-
-	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function(it){
-	  if(it == undefined)throw TypeError("Can't call method on  " + it);
-	  return it;
-	};
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(26)
-	  , defined = __webpack_require__(24);
-	module.exports = function(it){
-	  return IObject(defined(it));
-	};
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(20);
-	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-	  return cof(it) == 'String' ? it.split('') : Object(it);
-	};
-
-/***/ },
-/* 27 */
-/***/ function(module, exports) {
-
-	// 7.1.4 ToInteger
-	var ceil  = Math.ceil
-	  , floor = Math.floor;
-	module.exports = function(it){
-	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-	};
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(27)
-	  , max       = Math.max
-	  , min       = Math.min;
-	module.exports = function(index, length){
-	  index = toInteger(index);
-	  return index < 0 ? max(index + length, 0) : min(index, length);
-	};
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(27)
-	  , min       = Math.min;
-	module.exports = function(it){
-	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-	};
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 0 -> Array#forEach
-	// 1 -> Array#map
-	// 2 -> Array#filter
-	// 3 -> Array#some
-	// 4 -> Array#every
-	// 5 -> Array#find
-	// 6 -> Array#findIndex
-	var ctx      = __webpack_require__(14)
-	  , IObject  = __webpack_require__(26)
-	  , toObject = __webpack_require__(23)
-	  , toLength = __webpack_require__(29)
-	  , asc      = __webpack_require__(31);
-	module.exports = function(TYPE){
-	  var IS_MAP        = TYPE == 1
-	    , IS_FILTER     = TYPE == 2
-	    , IS_SOME       = TYPE == 3
-	    , IS_EVERY      = TYPE == 4
-	    , IS_FIND_INDEX = TYPE == 6
-	    , NO_HOLES      = TYPE == 5 || IS_FIND_INDEX;
-	  return function($this, callbackfn, that){
-	    var O      = toObject($this)
-	      , self   = IObject(O)
-	      , f      = ctx(callbackfn, that, 3)
-	      , length = toLength(self.length)
-	      , index  = 0
-	      , result = IS_MAP ? asc($this, length) : IS_FILTER ? asc($this, 0) : undefined
-	      , val, res;
-	    for(;length > index; index++)if(NO_HOLES || index in self){
-	      val = self[index];
-	      res = f(val, index, O);
-	      if(TYPE){
-	        if(IS_MAP)result[index] = res;            // map
-	        else if(res)switch(TYPE){
-	          case 3: return true;                    // some
-	          case 5: return val;                     // find
-	          case 6: return index;                   // findIndex
-	          case 2: result.push(val);               // filter
-	        } else if(IS_EVERY)return false;          // every
-	      }
-	    }
-	    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
-	  };
-	};
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-	var isObject = __webpack_require__(18)
-	  , isArray  = __webpack_require__(32)
-	  , SPECIES  = __webpack_require__(33)('species');
-	module.exports = function(original, length){
-	  var C;
-	  if(isArray(original)){
-	    C = original.constructor;
-	    // cross-realm fallback
-	    if(typeof C == 'function' && (C === Array || isArray(C.prototype)))C = undefined;
-	    if(isObject(C)){
-	      C = C[SPECIES];
-	      if(C === null)C = undefined;
-	    }
-	  } return new (C === undefined ? Array : C)(length);
-	};
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(20);
-	module.exports = Array.isArray || function(arg){
-	  return cof(arg) == 'Array';
-	};
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store  = __webpack_require__(34)('wks')
-	  , uid    = __webpack_require__(13)
-	  , Symbol = __webpack_require__(6).Symbol;
-	module.exports = function(name){
-	  return store[name] || (store[name] =
-	    Symbol && Symbol[name] || (Symbol || uid)('Symbol.' + name));
-	};
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(6)
-	  , SHARED = '__core-js_shared__'
-	  , store  = global[SHARED] || (global[SHARED] = {});
-	module.exports = function(key){
-	  return store[key] || (store[key] = {});
-	};
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// false -> Array#indexOf
-	// true  -> Array#includes
-	var toIObject = __webpack_require__(25)
-	  , toLength  = __webpack_require__(29)
-	  , toIndex   = __webpack_require__(28);
-	module.exports = function(IS_INCLUDES){
-	  return function($this, el, fromIndex){
-	    var O      = toIObject($this)
-	      , length = toLength(O.length)
-	      , index  = toIndex(fromIndex, length)
-	      , value;
-	    // Array#includes uses SameValueZero equality algorithm
-	    if(IS_INCLUDES && el != el)while(length > index){
-	      value = O[index++];
-	      if(value != value)return true;
-	    // Array#toIndex ignores holes, Array#includes - not
-	    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
-	      if(O[index] === el)return IS_INCLUDES || index;
-	    } return !IS_INCLUDES && -1;
-	  };
-	};
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// ECMAScript 6 symbols shim
-	var $              = __webpack_require__(4)
-	  , global         = __webpack_require__(6)
-	  , has            = __webpack_require__(19)
-	  , DESCRIPTORS    = __webpack_require__(10)
-	  , $export        = __webpack_require__(5)
-	  , redefine       = __webpack_require__(12)
-	  , $fails         = __webpack_require__(11)
-	  , shared         = __webpack_require__(34)
-	  , setToStringTag = __webpack_require__(37)
-	  , uid            = __webpack_require__(13)
-	  , wks            = __webpack_require__(33)
-	  , keyOf          = __webpack_require__(38)
-	  , $names         = __webpack_require__(39)
-	  , enumKeys       = __webpack_require__(40)
-	  , isArray        = __webpack_require__(32)
-	  , anObject       = __webpack_require__(22)
-	  , toIObject      = __webpack_require__(25)
-	  , createDesc     = __webpack_require__(9)
-	  , getDesc        = $.getDesc
-	  , setDesc        = $.setDesc
-	  , _create        = $.create
-	  , getNames       = $names.get
-	  , $Symbol        = global.Symbol
-	  , $JSON          = global.JSON
-	  , _stringify     = $JSON && $JSON.stringify
-	  , setter         = false
-	  , HIDDEN         = wks('_hidden')
-	  , isEnum         = $.isEnum
-	  , SymbolRegistry = shared('symbol-registry')
-	  , AllSymbols     = shared('symbols')
-	  , useNative      = typeof $Symbol == 'function'
-	  , ObjectProto    = Object.prototype;
-	
-	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-	var setSymbolDesc = DESCRIPTORS && $fails(function(){
-	  return _create(setDesc({}, 'a', {
-	    get: function(){ return setDesc(this, 'a', {value: 7}).a; }
-	  })).a != 7;
-	}) ? function(it, key, D){
-	  var protoDesc = getDesc(ObjectProto, key);
-	  if(protoDesc)delete ObjectProto[key];
-	  setDesc(it, key, D);
-	  if(protoDesc && it !== ObjectProto)setDesc(ObjectProto, key, protoDesc);
-	} : setDesc;
-	
-	var wrap = function(tag){
-	  var sym = AllSymbols[tag] = _create($Symbol.prototype);
-	  sym._k = tag;
-	  DESCRIPTORS && setter && setSymbolDesc(ObjectProto, tag, {
-	    configurable: true,
-	    set: function(value){
-	      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
-	      setSymbolDesc(this, tag, createDesc(1, value));
-	    }
-	  });
-	  return sym;
-	};
-	
-	var isSymbol = function(it){
-	  return typeof it == 'symbol';
-	};
-	
-	var $defineProperty = function defineProperty(it, key, D){
-	  if(D && has(AllSymbols, key)){
-	    if(!D.enumerable){
-	      if(!has(it, HIDDEN))setDesc(it, HIDDEN, createDesc(1, {}));
-	      it[HIDDEN][key] = true;
-	    } else {
-	      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
-	      D = _create(D, {enumerable: createDesc(0, false)});
-	    } return setSymbolDesc(it, key, D);
-	  } return setDesc(it, key, D);
-	};
-	var $defineProperties = function defineProperties(it, P){
-	  anObject(it);
-	  var keys = enumKeys(P = toIObject(P))
-	    , i    = 0
-	    , l = keys.length
-	    , key;
-	  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
-	  return it;
-	};
-	var $create = function create(it, P){
-	  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-	};
-	var $propertyIsEnumerable = function propertyIsEnumerable(key){
-	  var E = isEnum.call(this, key);
-	  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key]
-	    ? E : true;
-	};
-	var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
-	  var D = getDesc(it = toIObject(it), key);
-	  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
-	  return D;
-	};
-	var $getOwnPropertyNames = function getOwnPropertyNames(it){
-	  var names  = getNames(toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i)if(!has(AllSymbols, key = names[i++]) && key != HIDDEN)result.push(key);
-	  return result;
-	};
-	var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
-	  var names  = getNames(toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i)if(has(AllSymbols, key = names[i++]))result.push(AllSymbols[key]);
-	  return result;
-	};
-	var $stringify = function stringify(it){
-	  if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
-	  var args = [it]
-	    , i    = 1
-	    , $$   = arguments
-	    , replacer, $replacer;
-	  while($$.length > i)args.push($$[i++]);
-	  replacer = args[1];
-	  if(typeof replacer == 'function')$replacer = replacer;
-	  if($replacer || !isArray(replacer))replacer = function(key, value){
-	    if($replacer)value = $replacer.call(this, key, value);
-	    if(!isSymbol(value))return value;
-	  };
-	  args[1] = replacer;
-	  return _stringify.apply($JSON, args);
-	};
-	var buggyJSON = $fails(function(){
-	  var S = $Symbol();
-	  // MS Edge converts symbol values to JSON as {}
-	  // WebKit converts symbol values to JSON as null
-	  // V8 throws on boxed symbols
-	  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
-	});
-	
-	// 19.4.1.1 Symbol([description])
-	if(!useNative){
-	  $Symbol = function Symbol(){
-	    if(isSymbol(this))throw TypeError('Symbol is not a constructor');
-	    return wrap(uid(arguments.length > 0 ? arguments[0] : undefined));
-	  };
-	  redefine($Symbol.prototype, 'toString', function toString(){
-	    return this._k;
-	  });
-	
-	  isSymbol = function(it){
-	    return it instanceof $Symbol;
-	  };
-	
-	  $.create     = $create;
-	  $.isEnum     = $propertyIsEnumerable;
-	  $.getDesc    = $getOwnPropertyDescriptor;
-	  $.setDesc    = $defineProperty;
-	  $.setDescs   = $defineProperties;
-	  $.getNames   = $names.get = $getOwnPropertyNames;
-	  $.getSymbols = $getOwnPropertySymbols;
-	
-	  if(DESCRIPTORS && !__webpack_require__(41)){
-	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-	  }
-	}
-	
-	var symbolStatics = {
-	  // 19.4.2.1 Symbol.for(key)
-	  'for': function(key){
-	    return has(SymbolRegistry, key += '')
-	      ? SymbolRegistry[key]
-	      : SymbolRegistry[key] = $Symbol(key);
-	  },
-	  // 19.4.2.5 Symbol.keyFor(sym)
-	  keyFor: function keyFor(key){
-	    return keyOf(SymbolRegistry, key);
-	  },
-	  useSetter: function(){ setter = true; },
-	  useSimple: function(){ setter = false; }
-	};
-	// 19.4.2.2 Symbol.hasInstance
-	// 19.4.2.3 Symbol.isConcatSpreadable
-	// 19.4.2.4 Symbol.iterator
-	// 19.4.2.6 Symbol.match
-	// 19.4.2.8 Symbol.replace
-	// 19.4.2.9 Symbol.search
-	// 19.4.2.10 Symbol.species
-	// 19.4.2.11 Symbol.split
-	// 19.4.2.12 Symbol.toPrimitive
-	// 19.4.2.13 Symbol.toStringTag
-	// 19.4.2.14 Symbol.unscopables
-	$.each.call((
-	  'hasInstance,isConcatSpreadable,iterator,match,replace,search,' +
-	  'species,split,toPrimitive,toStringTag,unscopables'
-	).split(','), function(it){
-	  var sym = wks(it);
-	  symbolStatics[it] = useNative ? sym : wrap(sym);
-	});
-	
-	setter = true;
-	
-	$export($export.G + $export.W, {Symbol: $Symbol});
-	
-	$export($export.S, 'Symbol', symbolStatics);
-	
-	$export($export.S + $export.F * !useNative, 'Object', {
-	  // 19.1.2.2 Object.create(O [, Properties])
-	  create: $create,
-	  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-	  defineProperty: $defineProperty,
-	  // 19.1.2.3 Object.defineProperties(O, Properties)
-	  defineProperties: $defineProperties,
-	  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-	  // 19.1.2.7 Object.getOwnPropertyNames(O)
-	  getOwnPropertyNames: $getOwnPropertyNames,
-	  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-	  getOwnPropertySymbols: $getOwnPropertySymbols
-	});
-	
-	// 24.3.2 JSON.stringify(value [, replacer [, space]])
-	$JSON && $export($export.S + $export.F * (!useNative || buggyJSON), 'JSON', {stringify: $stringify});
-	
-	// 19.4.3.5 Symbol.prototype[@@toStringTag]
-	setToStringTag($Symbol, 'Symbol');
-	// 20.2.1.9 Math[@@toStringTag]
-	setToStringTag(Math, 'Math', true);
-	// 24.3.3 JSON[@@toStringTag]
-	setToStringTag(global.JSON, 'JSON', true);
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var def = __webpack_require__(4).setDesc
-	  , has = __webpack_require__(19)
-	  , TAG = __webpack_require__(33)('toStringTag');
-	
-	module.exports = function(it, tag, stat){
-	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-	};
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $         = __webpack_require__(4)
-	  , toIObject = __webpack_require__(25);
-	module.exports = function(object, el){
-	  var O      = toIObject(object)
-	    , keys   = $.getKeys(O)
-	    , length = keys.length
-	    , index  = 0
-	    , key;
-	  while(length > index)if(O[key = keys[index++]] === el)return key;
-	};
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(25)
-	  , getNames  = __webpack_require__(4).getNames
-	  , toString  = {}.toString;
-	
-	var windowNames = typeof window == 'object' && Object.getOwnPropertyNames
-	  ? Object.getOwnPropertyNames(window) : [];
-	
-	var getWindowNames = function(it){
-	  try {
-	    return getNames(it);
-	  } catch(e){
-	    return windowNames.slice();
-	  }
-	};
-	
-	module.exports.get = function getOwnPropertyNames(it){
-	  if(windowNames && toString.call(it) == '[object Window]')return getWindowNames(it);
-	  return getNames(toIObject(it));
-	};
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// all enumerable object keys, includes symbols
-	var $ = __webpack_require__(4);
-	module.exports = function(it){
-	  var keys       = $.getKeys(it)
-	    , getSymbols = $.getSymbols;
-	  if(getSymbols){
-	    var symbols = getSymbols(it)
-	      , isEnum  = $.isEnum
-	      , i       = 0
-	      , key;
-	    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))keys.push(key);
-	  }
-	  return keys;
-	};
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-	module.exports = false;
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(5);
-	
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(43)});
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.1 Object.assign(target, source, ...)
-	var $        = __webpack_require__(4)
-	  , toObject = __webpack_require__(23)
-	  , IObject  = __webpack_require__(26);
-	
-	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = __webpack_require__(11)(function(){
-	  var a = Object.assign
-	    , A = {}
-	    , B = {}
-	    , S = Symbol()
-	    , K = 'abcdefghijklmnopqrst';
-	  A[S] = 7;
-	  K.split('').forEach(function(k){ B[k] = k; });
-	  return a({}, A)[S] != 7 || Object.keys(a({}, B)).join('') != K;
-	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-	  var T     = toObject(target)
-	    , $$    = arguments
-	    , $$len = $$.length
-	    , index = 1
-	    , getKeys    = $.getKeys
-	    , getSymbols = $.getSymbols
-	    , isEnum     = $.isEnum;
-	  while($$len > index){
-	    var S      = IObject($$[index++])
-	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-	      , length = keys.length
-	      , j      = 0
-	      , key;
-	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-	  }
-	  return T;
-	} : Object.assign;
-
-/***/ },
-/* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.10 Object.is(value1, value2)
-	var $export = __webpack_require__(5);
-	$export($export.S, 'Object', {is: __webpack_require__(45)});
-
-/***/ },
-/* 45 */
-/***/ function(module, exports) {
-
-	// 7.2.9 SameValue(x, y)
-	module.exports = Object.is || function is(x, y){
-	  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
-	};
-
-/***/ },
-/* 46 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.19 Object.setPrototypeOf(O, proto)
-	var $export = __webpack_require__(5);
-	$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(47).set});
-
-/***/ },
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Works with __proto__ only. Old v8 can't work with null proto objects.
-	/* eslint-disable no-proto */
-	var getDesc  = __webpack_require__(4).getDesc
-	  , isObject = __webpack_require__(18)
-	  , anObject = __webpack_require__(22);
-	var check = function(O, proto){
-	  anObject(O);
-	  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
-	};
-	module.exports = {
-	  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
-	    function(test, buggy, set){
-	      try {
-	        set = __webpack_require__(14)(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
-	        set(test, []);
-	        buggy = !(test instanceof Array);
-	      } catch(e){ buggy = true; }
-	      return function setPrototypeOf(O, proto){
-	        check(O, proto);
-	        if(buggy)O.__proto__ = proto;
-	        else set(O, proto);
-	        return O;
-	      };
-	    }({}, false) : undefined),
-	  check: check
-	};
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 19.1.3.6 Object.prototype.toString()
-	var classof = __webpack_require__(49)
-	  , test    = {};
-	test[__webpack_require__(33)('toStringTag')] = 'z';
-	if(test + '' != '[object z]'){
-	  __webpack_require__(12)(Object.prototype, 'toString', function toString(){
-	    return '[object ' + classof(this) + ']';
-	  }, true);
-	}
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(20)
-	  , TAG = __webpack_require__(33)('toStringTag')
-	  // ES3 wrong here
-	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-	
-	module.exports = function(it){
-	  var O, T, B;
-	  return it === undefined ? 'Undefined' : it === null ? 'Null'
-	    // @@toStringTag case
-	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
-	    // builtinTag case
-	    : ARG ? cof(O)
-	    // ES3 arguments fallback
-	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-	};
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.5 Object.freeze(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('freeze', function($freeze){
-	  return function freeze(it){
-	    return $freeze && isObject(it) ? $freeze(it) : it;
-	  };
-	});
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(5)
-	  , core    = __webpack_require__(7)
-	  , fails   = __webpack_require__(11);
-	module.exports = function(KEY, exec){
-	  var fn  = (core.Object || {})[KEY] || Object[KEY]
-	    , exp = {};
-	  exp[KEY] = exec(fn);
-	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
-	};
-
-/***/ },
-/* 52 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.17 Object.seal(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('seal', function($seal){
-	  return function seal(it){
-	    return $seal && isObject(it) ? $seal(it) : it;
-	  };
-	});
-
-/***/ },
-/* 53 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.15 Object.preventExtensions(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('preventExtensions', function($preventExtensions){
-	  return function preventExtensions(it){
-	    return $preventExtensions && isObject(it) ? $preventExtensions(it) : it;
-	  };
-	});
-
-/***/ },
-/* 54 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.12 Object.isFrozen(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('isFrozen', function($isFrozen){
-	  return function isFrozen(it){
-	    return isObject(it) ? $isFrozen ? $isFrozen(it) : false : true;
-	  };
-	});
-
-/***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.13 Object.isSealed(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('isSealed', function($isSealed){
-	  return function isSealed(it){
-	    return isObject(it) ? $isSealed ? $isSealed(it) : false : true;
-	  };
-	});
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.11 Object.isExtensible(O)
-	var isObject = __webpack_require__(18);
-	
-	__webpack_require__(51)('isExtensible', function($isExtensible){
-	  return function isExtensible(it){
-	    return isObject(it) ? $isExtensible ? $isExtensible(it) : true : false;
-	  };
-	});
-
-/***/ },
-/* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	var toIObject = __webpack_require__(25);
-	
-	__webpack_require__(51)('getOwnPropertyDescriptor', function($getOwnPropertyDescriptor){
-	  return function getOwnPropertyDescriptor(it, key){
-	    return $getOwnPropertyDescriptor(toIObject(it), key);
-	  };
-	});
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.9 Object.getPrototypeOf(O)
-	var toObject = __webpack_require__(23);
-	
-	__webpack_require__(51)('getPrototypeOf', function($getPrototypeOf){
-	  return function getPrototypeOf(it){
-	    return $getPrototypeOf(toObject(it));
-	  };
-	});
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(23);
-	
-	__webpack_require__(51)('keys', function($keys){
-	  return function keys(it){
-	    return $keys(toObject(it));
-	  };
-	});
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.7 Object.getOwnPropertyNames(O)
-	__webpack_require__(51)('getOwnPropertyNames', function(){
-	  return __webpack_require__(39).get;
-	});
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var setDesc    = __webpack_require__(4).setDesc
-	  , createDesc = __webpack_require__(9)
-	  , has        = __webpack_require__(19)
+	var dP         = __webpack_require__(14).f
+	  , createDesc = __webpack_require__(20)
+	  , has        = __webpack_require__(9)
 	  , FProto     = Function.prototype
 	  , nameRE     = /^\s*function ([^ (]*)/
 	  , NAME       = 'name';
 	// 19.2.4.2 name
-	NAME in FProto || __webpack_require__(10) && setDesc(FProto, NAME, {
+	NAME in FProto || __webpack_require__(10) && dP(FProto, NAME, {
 	  configurable: true,
 	  get: function(){
 	    var match = ('' + this).match(nameRE)
 	      , name  = match ? match[1] : '';
-	    has(this, NAME) || setDesc(this, NAME, createDesc(5, name));
+	    has(this, NAME) || dP(this, NAME, createDesc(5, name));
 	    return name;
 	  }
 	});
 
 /***/ },
-/* 62 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $             = __webpack_require__(4)
-	  , isObject      = __webpack_require__(18)
-	  , HAS_INSTANCE  = __webpack_require__(33)('hasInstance')
-	  , FunctionProto = Function.prototype;
+	var isObject       = __webpack_require__(16)
+	  , getPrototypeOf = __webpack_require__(60)
+	  , HAS_INSTANCE   = __webpack_require__(28)('hasInstance')
+	  , FunctionProto  = Function.prototype;
 	// 19.2.3.6 Function.prototype[@@hasInstance](V)
-	if(!(HAS_INSTANCE in FunctionProto))$.setDesc(FunctionProto, HAS_INSTANCE, {value: function(O){
+	if(!(HAS_INSTANCE in FunctionProto))__webpack_require__(14).f(FunctionProto, HAS_INSTANCE, {value: function(O){
 	  if(typeof this != 'function' || !isObject(O))return false;
 	  if(!isObject(this.prototype))return O instanceof this;
 	  // for environment w/o native `@@hasInstance` logic enough `instanceof`, but add this:
-	  while(O = $.getProto(O))if(this.prototype === O)return true;
+	  while(O = getPrototypeOf(O))if(this.prototype === O)return true;
 	  return false;
 	}});
 
 /***/ },
-/* 63 */
+/* 82 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export   = __webpack_require__(12)
+	  , $parseInt = __webpack_require__(83);
+	// 18.2.5 parseInt(string, radix)
+	$export($export.G + $export.F * (parseInt != $parseInt), {parseInt: $parseInt});
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $parseInt = __webpack_require__(7).parseInt
+	  , $trim     = __webpack_require__(84).trim
+	  , ws        = __webpack_require__(85)
+	  , hex       = /^[\-+]?0[xX]/;
+	
+	module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? function parseInt(str, radix){
+	  var string = $trim(String(str), 3);
+	  return $parseInt(string, (radix >>> 0) || (hex.test(string) ? 16 : 10));
+	} : $parseInt;
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12)
+	  , defined = __webpack_require__(35)
+	  , fails   = __webpack_require__(11)
+	  , spaces  = __webpack_require__(85)
+	  , space   = '[' + spaces + ']'
+	  , non     = '\u200b\u0085'
+	  , ltrim   = RegExp('^' + space + space + '*')
+	  , rtrim   = RegExp(space + space + '*$');
+	
+	var exporter = function(KEY, exec, ALIAS){
+	  var exp   = {};
+	  var FORCE = fails(function(){
+	    return !!spaces[KEY]() || non[KEY]() != non;
+	  });
+	  var fn = exp[KEY] = FORCE ? exec(trim) : spaces[KEY];
+	  if(ALIAS)exp[ALIAS] = fn;
+	  $export($export.P + $export.F * FORCE, 'String', exp);
+	};
+	
+	// 1 -> String#trimLeft
+	// 2 -> String#trimRight
+	// 3 -> String#trim
+	var trim = exporter.trim = function(string, TYPE){
+	  string = String(defined(string));
+	  if(TYPE & 1)string = string.replace(ltrim, '');
+	  if(TYPE & 2)string = string.replace(rtrim, '');
+	  return string;
+	};
+	
+	module.exports = exporter;
+
+/***/ },
+/* 85 */
+/***/ function(module, exports) {
+
+	module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
+	  '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export     = __webpack_require__(12)
+	  , $parseFloat = __webpack_require__(87);
+	// 18.2.4 parseFloat(string)
+	$export($export.G + $export.F * (parseFloat != $parseFloat), {parseFloat: $parseFloat});
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $parseFloat = __webpack_require__(7).parseFloat
+	  , $trim       = __webpack_require__(84).trim;
+	
+	module.exports = 1 / $parseFloat(__webpack_require__(85) + '-0') !== -Infinity ? function parseFloat(str){
+	  var string = $trim(String(str), 3)
+	    , result = $parseFloat(string);
+	  return result === 0 && string.charAt(0) == '-' ? -0 : result;
+	} : $parseFloat;
+
+/***/ },
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $           = __webpack_require__(4)
-	  , global      = __webpack_require__(6)
-	  , has         = __webpack_require__(19)
-	  , cof         = __webpack_require__(20)
-	  , toPrimitive = __webpack_require__(64)
-	  , fails       = __webpack_require__(11)
-	  , $trim       = __webpack_require__(65).trim
-	  , NUMBER      = 'Number'
-	  , $Number     = global[NUMBER]
-	  , Base        = $Number
-	  , proto       = $Number.prototype
+	var global            = __webpack_require__(7)
+	  , has               = __webpack_require__(9)
+	  , cof               = __webpack_require__(34)
+	  , inheritIfRequired = __webpack_require__(89)
+	  , toPrimitive       = __webpack_require__(19)
+	  , fails             = __webpack_require__(11)
+	  , gOPN              = __webpack_require__(50).f
+	  , gOPD              = __webpack_require__(51).f
+	  , dP                = __webpack_require__(14).f
+	  , $trim             = __webpack_require__(84).trim
+	  , NUMBER            = 'Number'
+	  , $Number           = global[NUMBER]
+	  , Base              = $Number
+	  , proto             = $Number.prototype
 	  // Opera ~12 has broken Object#toString
-	  , BROKEN_COF  = cof($.create(proto)) == NUMBER
-	  , TRIM        = 'trim' in String.prototype;
+	  , BROKEN_COF        = cof(__webpack_require__(46)(proto)) == NUMBER
+	  , TRIM              = 'trim' in String.prototype;
 	
 	// 7.1.3 ToNumber(argument)
 	var toNumber = function(argument){
@@ -1685,91 +1887,232 @@
 	    return that instanceof $Number
 	      // check on 1..constructor(foo) case
 	      && (BROKEN_COF ? fails(function(){ proto.valueOf.call(that); }) : cof(that) != NUMBER)
-	        ? new Base(toNumber(it)) : toNumber(it);
+	        ? inheritIfRequired(new Base(toNumber(it)), that, $Number) : toNumber(it);
 	  };
-	  $.each.call(__webpack_require__(10) ? $.getNames(Base) : (
+	  for(var keys = __webpack_require__(10) ? gOPN(Base) : (
 	    // ES3:
 	    'MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,' +
 	    // ES6 (in case, if modules with ES6 Number statics required before):
 	    'EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,' +
 	    'MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger'
-	  ).split(','), function(key){
-	    if(has(Base, key) && !has($Number, key)){
-	      $.setDesc($Number, key, $.getDesc(Base, key));
+	  ).split(','), j = 0, key; keys.length > j; j++){
+	    if(has(Base, key = keys[j]) && !has($Number, key)){
+	      dP($Number, key, gOPD(Base, key));
 	    }
-	  });
+	  }
 	  $Number.prototype = proto;
 	  proto.constructor = $Number;
-	  __webpack_require__(12)(global, NUMBER, $Number);
+	  __webpack_require__(21)(global, NUMBER, $Number);
 	}
 
 /***/ },
-/* 64 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(18);
-	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-	// and the second argument - flag - preferred type is a string
-	module.exports = function(it, S){
-	  if(!isObject(it))return it;
-	  var fn, val;
-	  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-	  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
-	  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-	  throw TypeError("Can't convert object to primitive value");
+	var isObject       = __webpack_require__(16)
+	  , setPrototypeOf = __webpack_require__(74).set;
+	module.exports = function(that, target, C){
+	  var P, S = target.constructor;
+	  if(S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf){
+	    setPrototypeOf(that, P);
+	  } return that;
 	};
 
 /***/ },
-/* 65 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(5)
-	  , defined = __webpack_require__(24)
-	  , fails   = __webpack_require__(11)
-	  , spaces  = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
-	      '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF'
-	  , space   = '[' + spaces + ']'
-	  , non     = '\u200b\u0085'
-	  , ltrim   = RegExp('^' + space + space + '*')
-	  , rtrim   = RegExp(space + space + '*$');
+	'use strict';
+	var $export      = __webpack_require__(12)
+	  , anInstance   = __webpack_require__(91)
+	  , toInteger    = __webpack_require__(38)
+	  , aNumberValue = __webpack_require__(92)
+	  , repeat       = __webpack_require__(93)
+	  , $toFixed     = 1..toFixed
+	  , floor        = Math.floor
+	  , data         = [0, 0, 0, 0, 0, 0]
+	  , ERROR        = 'Number.toFixed: incorrect invocation!'
+	  , ZERO         = '0';
 	
-	var exporter = function(KEY, exec){
-	  var exp  = {};
-	  exp[KEY] = exec(trim);
-	  $export($export.P + $export.F * fails(function(){
-	    return !!spaces[KEY]() || non[KEY]() != non;
-	  }), 'String', exp);
+	var multiply = function(n, c){
+	  var i  = -1
+	    , c2 = c;
+	  while(++i < 6){
+	    c2 += n * data[i];
+	    data[i] = c2 % 1e7;
+	    c2 = floor(c2 / 1e7);
+	  }
+	};
+	var divide = function(n){
+	  var i = 6
+	    , c = 0;
+	  while(--i >= 0){
+	    c += data[i];
+	    data[i] = floor(c / n);
+	    c = (c % n) * 1e7;
+	  }
+	};
+	var numToString = function(){
+	  var i = 6
+	    , s = '';
+	  while(--i >= 0){
+	    if(s !== '' || i === 0 || data[i] !== 0){
+	      var t = String(data[i]);
+	      s = s === '' ? t : s + repeat.call(ZERO, 7 - t.length) + t;
+	    }
+	  } return s;
+	};
+	var pow = function(x, n, acc){
+	  return n === 0 ? acc : n % 2 === 1 ? pow(x, n - 1, acc * x) : pow(x * x, n / 2, acc);
+	};
+	var log = function(x){
+	  var n  = 0
+	    , x2 = x;
+	  while(x2 >= 4096){
+	    n += 12;
+	    x2 /= 4096;
+	  }
+	  while(x2 >= 2){
+	    n  += 1;
+	    x2 /= 2;
+	  } return n;
 	};
 	
-	// 1 -> String#trimLeft
-	// 2 -> String#trimRight
-	// 3 -> String#trim
-	var trim = exporter.trim = function(string, TYPE){
-	  string = String(defined(string));
-	  if(TYPE & 1)string = string.replace(ltrim, '');
-	  if(TYPE & 2)string = string.replace(rtrim, '');
-	  return string;
-	};
-	
-	module.exports = exporter;
+	$export($export.P + $export.F * (!!$toFixed && (
+	  0.00008.toFixed(3) !== '0.000' ||
+	  0.9.toFixed(0) !== '1' ||
+	  1.255.toFixed(2) !== '1.25' ||
+	  1000000000000000128..toFixed(0) !== '1000000000000000128'
+	) || !__webpack_require__(11)(function(){
+	  // V8 ~ Android 4.3-
+	  $toFixed.call({});
+	})), 'Number', {
+	  toFixed: function toFixed(fractionDigits){
+	    var x = aNumberValue(this, ERROR)
+	      , f = toInteger(fractionDigits)
+	      , s = ''
+	      , m = ZERO
+	      , e, z, j, k;
+	    if(f < 0 || f > 20)throw RangeError(ERROR);
+	    if(x != x)return 'NaN';
+	    if(x <= -1e21 || x >= 1e21)return String(x);
+	    if(x < 0){
+	      s = '-';
+	      x = -x;
+	    }
+	    if(x > 1e-21){
+	      e = log(x * pow(2, 69, 1)) - 69;
+	      z = e < 0 ? x * pow(2, -e, 1) : x / pow(2, e, 1);
+	      z *= 0x10000000000000;
+	      e = 52 - e;
+	      if(e > 0){
+	        multiply(0, z);
+	        j = f;
+	        while(j >= 7){
+	          multiply(1e7, 0);
+	          j -= 7;
+	        }
+	        multiply(pow(10, j, 1), 0);
+	        j = e - 1;
+	        while(j >= 23){
+	          divide(1 << 23);
+	          j -= 23;
+	        }
+	        divide(1 << j);
+	        multiply(1, 1);
+	        divide(2);
+	        m = numToString();
+	      } else {
+	        multiply(0, z);
+	        multiply(1 << -e, 0);
+	        m = numToString() + repeat.call(ZERO, f);
+	      }
+	    }
+	    if(f > 0){
+	      k = m.length;
+	      m = s + (k <= f ? '0.' + repeat.call(ZERO, f - k) + m : m.slice(0, k - f) + '.' + m.slice(k - f));
+	    } else {
+	      m = s + m;
+	    } return m;
+	  }
+	});
 
 /***/ },
-/* 66 */
+/* 91 */
+/***/ function(module, exports) {
+
+	module.exports = function(it, Constructor, name, forbiddenField){
+	  if(!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)){
+	    throw TypeError(name + ': incorrect invocation!');
+	  } return it;
+	};
+
+/***/ },
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var cof = __webpack_require__(34);
+	module.exports = function(it, msg){
+	  if(typeof it != 'number' && cof(it) != 'Number')throw TypeError(msg);
+	  return +it;
+	};
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var toInteger = __webpack_require__(38)
+	  , defined   = __webpack_require__(35);
+	
+	module.exports = function repeat(count){
+	  var str = String(defined(this))
+	    , res = ''
+	    , n   = toInteger(count);
+	  if(n < 0 || n == Infinity)throw RangeError("Count can't be negative");
+	  for(;n > 0; (n >>>= 1) && (str += str))if(n & 1)res += str;
+	  return res;
+	};
+
+/***/ },
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export      = __webpack_require__(12)
+	  , $fails       = __webpack_require__(11)
+	  , aNumberValue = __webpack_require__(92)
+	  , $toPrecision = 1..toPrecision;
+	
+	$export($export.P + $export.F * ($fails(function(){
+	  // IE7-
+	  return $toPrecision.call(1, undefined) !== '1';
+	}) || !$fails(function(){
+	  // V8 ~ Android 4.3-
+	  $toPrecision.call({});
+	})), 'Number', {
+	  toPrecision: function toPrecision(precision){
+	    var that = aNumberValue(this, 'Number#toPrecision: incorrect invocation!');
+	    return precision === undefined ? $toPrecision.call(that) : $toPrecision.call(that, precision); 
+	  }
+	});
+
+/***/ },
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.1 Number.EPSILON
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Number', {EPSILON: Math.pow(2, -52)});
 
 /***/ },
-/* 67 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.2 Number.isFinite(number)
-	var $export   = __webpack_require__(5)
-	  , _isFinite = __webpack_require__(6).isFinite;
+	var $export   = __webpack_require__(12)
+	  , _isFinite = __webpack_require__(7).isFinite;
 	
 	$export($export.S, 'Number', {
 	  isFinite: function isFinite(it){
@@ -1778,31 +2121,31 @@
 	});
 
 /***/ },
-/* 68 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Number', {isInteger: __webpack_require__(69)});
+	$export($export.S, 'Number', {isInteger: __webpack_require__(98)});
 
 /***/ },
-/* 69 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
-	var isObject = __webpack_require__(18)
+	var isObject = __webpack_require__(16)
 	  , floor    = Math.floor;
 	module.exports = function isInteger(it){
 	  return !isObject(it) && isFinite(it) && floor(it) === it;
 	};
 
 /***/ },
-/* 70 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.4 Number.isNaN(number)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Number', {
 	  isNaN: function isNaN(number){
@@ -1811,12 +2154,12 @@
 	});
 
 /***/ },
-/* 71 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.5 Number.isSafeInteger(number)
-	var $export   = __webpack_require__(5)
-	  , isInteger = __webpack_require__(69)
+	var $export   = __webpack_require__(12)
+	  , isInteger = __webpack_require__(98)
 	  , abs       = Math.abs;
 	
 	$export($export.S, 'Number', {
@@ -1826,48 +2169,48 @@
 	});
 
 /***/ },
-/* 72 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.6 Number.MAX_SAFE_INTEGER
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Number', {MAX_SAFE_INTEGER: 0x1fffffffffffff});
 
 /***/ },
-/* 73 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.10 Number.MIN_SAFE_INTEGER
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Number', {MIN_SAFE_INTEGER: -0x1fffffffffffff});
 
 /***/ },
-/* 74 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $export     = __webpack_require__(12)
+	  , $parseFloat = __webpack_require__(87);
 	// 20.1.2.12 Number.parseFloat(string)
-	var $export = __webpack_require__(5);
-	
-	$export($export.S, 'Number', {parseFloat: parseFloat});
+	$export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', {parseFloat: $parseFloat});
 
 /***/ },
-/* 75 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $export   = __webpack_require__(12)
+	  , $parseInt = __webpack_require__(83);
 	// 20.1.2.13 Number.parseInt(string, radix)
-	var $export = __webpack_require__(5);
-	
-	$export($export.S, 'Number', {parseInt: parseInt});
+	$export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', {parseInt: $parseInt});
 
 /***/ },
-/* 76 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.3 Math.acosh(x)
-	var $export = __webpack_require__(5)
-	  , log1p   = __webpack_require__(77)
+	var $export = __webpack_require__(12)
+	  , log1p   = __webpack_require__(106)
 	  , sqrt    = Math.sqrt
 	  , $acosh  = Math.acosh;
 	
@@ -1881,7 +2224,7 @@
 	});
 
 /***/ },
-/* 77 */
+/* 106 */
 /***/ function(module, exports) {
 
 	// 20.2.2.20 Math.log1p(x)
@@ -1890,11 +2233,11 @@
 	};
 
 /***/ },
-/* 78 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.5 Math.asinh(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	function asinh(x){
 	  return !isFinite(x = +x) || x == 0 ? x : x < 0 ? -asinh(-x) : Math.log(x + Math.sqrt(x * x + 1));
@@ -1903,11 +2246,11 @@
 	$export($export.S, 'Math', {asinh: asinh});
 
 /***/ },
-/* 79 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.7 Math.atanh(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Math', {
 	  atanh: function atanh(x){
@@ -1916,12 +2259,12 @@
 	});
 
 /***/ },
-/* 80 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.9 Math.cbrt(x)
-	var $export = __webpack_require__(5)
-	  , sign    = __webpack_require__(81);
+	var $export = __webpack_require__(12)
+	  , sign    = __webpack_require__(110);
 	
 	$export($export.S, 'Math', {
 	  cbrt: function cbrt(x){
@@ -1930,7 +2273,7 @@
 	});
 
 /***/ },
-/* 81 */
+/* 110 */
 /***/ function(module, exports) {
 
 	// 20.2.2.28 Math.sign(x)
@@ -1939,11 +2282,11 @@
 	};
 
 /***/ },
-/* 82 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.11 Math.clz32(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Math', {
 	  clz32: function clz32(x){
@@ -1952,11 +2295,11 @@
 	});
 
 /***/ },
-/* 83 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.12 Math.cosh(x)
-	var $export = __webpack_require__(5)
+	var $export = __webpack_require__(12)
 	  , exp     = Math.exp;
 	
 	$export($export.S, 'Math', {
@@ -1966,16 +2309,16 @@
 	});
 
 /***/ },
-/* 84 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.14 Math.expm1(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Math', {expm1: __webpack_require__(85)});
+	$export($export.S, 'Math', {expm1: __webpack_require__(114)});
 
 /***/ },
-/* 85 */
+/* 114 */
 /***/ function(module, exports) {
 
 	// 20.2.2.14 Math.expm1(x)
@@ -1984,12 +2327,12 @@
 	};
 
 /***/ },
-/* 86 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.16 Math.fround(x)
-	var $export   = __webpack_require__(5)
-	  , sign      = __webpack_require__(81)
+	var $export   = __webpack_require__(12)
+	  , sign      = __webpack_require__(110)
 	  , pow       = Math.pow
 	  , EPSILON   = pow(2, -52)
 	  , EPSILON32 = pow(2, -23)
@@ -2015,23 +2358,22 @@
 	});
 
 /***/ },
-/* 87 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
-	var $export = __webpack_require__(5)
+	var $export = __webpack_require__(12)
 	  , abs     = Math.abs;
 	
 	$export($export.S, 'Math', {
 	  hypot: function hypot(value1, value2){ // eslint-disable-line no-unused-vars
-	    var sum   = 0
-	      , i     = 0
-	      , $$    = arguments
-	      , $$len = $$.length
-	      , larg  = 0
+	    var sum  = 0
+	      , i    = 0
+	      , aLen = arguments.length
+	      , larg = 0
 	      , arg, div;
-	    while(i < $$len){
-	      arg = abs($$[i++]);
+	    while(i < aLen){
+	      arg = abs(arguments[i++]);
 	      if(larg < arg){
 	        div  = larg / arg;
 	        sum  = sum * div * div + 1;
@@ -2046,11 +2388,11 @@
 	});
 
 /***/ },
-/* 88 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.18 Math.imul(x, y)
-	var $export = __webpack_require__(5)
+	var $export = __webpack_require__(12)
 	  , $imul   = Math.imul;
 	
 	// some WebKit versions fails with big numbers, some has wrong arity
@@ -2068,11 +2410,11 @@
 	});
 
 /***/ },
-/* 89 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.21 Math.log10(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Math', {
 	  log10: function log10(x){
@@ -2081,20 +2423,20 @@
 	});
 
 /***/ },
-/* 90 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.20 Math.log1p(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Math', {log1p: __webpack_require__(77)});
+	$export($export.S, 'Math', {log1p: __webpack_require__(106)});
 
 /***/ },
-/* 91 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.22 Math.log2(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Math', {
 	  log2: function log2(x){
@@ -2103,21 +2445,21 @@
 	});
 
 /***/ },
-/* 92 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.28 Math.sign(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Math', {sign: __webpack_require__(81)});
+	$export($export.S, 'Math', {sign: __webpack_require__(110)});
 
 /***/ },
-/* 93 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.30 Math.sinh(x)
-	var $export = __webpack_require__(5)
-	  , expm1   = __webpack_require__(85)
+	var $export = __webpack_require__(12)
+	  , expm1   = __webpack_require__(114)
 	  , exp     = Math.exp;
 	
 	// V8 near Chromium 38 has a problem with very small numbers
@@ -2132,12 +2474,12 @@
 	});
 
 /***/ },
-/* 94 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.33 Math.tanh(x)
-	var $export = __webpack_require__(5)
-	  , expm1   = __webpack_require__(85)
+	var $export = __webpack_require__(12)
+	  , expm1   = __webpack_require__(114)
 	  , exp     = Math.exp;
 	
 	$export($export.S, 'Math', {
@@ -2149,11 +2491,11 @@
 	});
 
 /***/ },
-/* 95 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.34 Math.trunc(x)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Math', {
 	  trunc: function trunc(it){
@@ -2162,11 +2504,11 @@
 	});
 
 /***/ },
-/* 96 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export        = __webpack_require__(5)
-	  , toIndex        = __webpack_require__(28)
+	var $export        = __webpack_require__(12)
+	  , toIndex        = __webpack_require__(39)
 	  , fromCharCode   = String.fromCharCode
 	  , $fromCodePoint = String.fromCodePoint;
 	
@@ -2174,13 +2516,12 @@
 	$export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1), 'String', {
 	  // 21.1.2.2 String.fromCodePoint(...codePoints)
 	  fromCodePoint: function fromCodePoint(x){ // eslint-disable-line no-unused-vars
-	    var res   = []
-	      , $$    = arguments
-	      , $$len = $$.length
-	      , i     = 0
+	    var res  = []
+	      , aLen = arguments.length
+	      , i    = 0
 	      , code;
-	    while($$len > i){
-	      code = +$$[i++];
+	    while(aLen > i){
+	      code = +arguments[i++];
 	      if(toIndex(code, 0x10ffff) !== code)throw RangeError(code + ' is not a valid code point');
 	      res.push(code < 0x10000
 	        ? fromCharCode(code)
@@ -2191,50 +2532,49 @@
 	});
 
 /***/ },
-/* 97 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export   = __webpack_require__(5)
-	  , toIObject = __webpack_require__(25)
-	  , toLength  = __webpack_require__(29);
+	var $export   = __webpack_require__(12)
+	  , toIObject = __webpack_require__(32)
+	  , toLength  = __webpack_require__(37);
 	
 	$export($export.S, 'String', {
 	  // 21.1.2.4 String.raw(callSite, ...substitutions)
 	  raw: function raw(callSite){
-	    var tpl   = toIObject(callSite.raw)
-	      , len   = toLength(tpl.length)
-	      , $$    = arguments
-	      , $$len = $$.length
-	      , res   = []
-	      , i     = 0;
+	    var tpl  = toIObject(callSite.raw)
+	      , len  = toLength(tpl.length)
+	      , aLen = arguments.length
+	      , res  = []
+	      , i    = 0;
 	    while(len > i){
 	      res.push(String(tpl[i++]));
-	      if(i < $$len)res.push(String($$[i]));
+	      if(i < aLen)res.push(String(arguments[i]));
 	    } return res.join('');
 	  }
 	});
 
 /***/ },
-/* 98 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 21.1.3.25 String.prototype.trim()
-	__webpack_require__(65)('trim', function($trim){
+	__webpack_require__(84)('trim', function($trim){
 	  return function trim(){
 	    return $trim(this, 3);
 	  };
 	});
 
 /***/ },
-/* 99 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $at  = __webpack_require__(100)(true);
+	var $at  = __webpack_require__(129)(true);
 	
 	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(101)(String, 'String', function(iterated){
+	__webpack_require__(130)(String, 'String', function(iterated){
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -2249,11 +2589,11 @@
 	});
 
 /***/ },
-/* 100 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(27)
-	  , defined   = __webpack_require__(24);
+	var toInteger = __webpack_require__(38)
+	  , defined   = __webpack_require__(35);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -2271,20 +2611,20 @@
 	};
 
 /***/ },
-/* 101 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(41)
-	  , $export        = __webpack_require__(5)
-	  , redefine       = __webpack_require__(12)
-	  , hide           = __webpack_require__(8)
-	  , has            = __webpack_require__(19)
-	  , Iterators      = __webpack_require__(102)
-	  , $iterCreate    = __webpack_require__(103)
-	  , setToStringTag = __webpack_require__(37)
-	  , getProto       = __webpack_require__(4).getProto
-	  , ITERATOR       = __webpack_require__(33)('iterator')
+	var LIBRARY        = __webpack_require__(52)
+	  , $export        = __webpack_require__(12)
+	  , redefine       = __webpack_require__(21)
+	  , hide           = __webpack_require__(13)
+	  , has            = __webpack_require__(9)
+	  , Iterators      = __webpack_require__(131)
+	  , $iterCreate    = __webpack_require__(132)
+	  , setToStringTag = __webpack_require__(27)
+	  , getPrototypeOf = __webpack_require__(60)
+	  , ITERATOR       = __webpack_require__(28)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -2307,19 +2647,23 @@
 	    , proto      = Base.prototype
 	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
 	    , $default   = $native || getMethod(DEFAULT)
-	    , methods, key;
+	    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
+	    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
+	    , methods, key, IteratorPrototype;
 	  // Fix native
-	  if($native){
-	    var IteratorPrototype = getProto($default.call(new Base));
-	    // Set @@toStringTag to native iterators
-	    setToStringTag(IteratorPrototype, TAG, true);
-	    // FF fix
-	    if(!LIBRARY && has(proto, FF_ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-	    // fix Array#{values, @@iterator}.name in V8 / FF
-	    if(DEF_VALUES && $native.name !== VALUES){
-	      VALUES_BUG = true;
-	      $default = function values(){ return $native.call(this); };
+	  if($anyNative){
+	    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
+	    if(IteratorPrototype !== Object.prototype){
+	      // Set @@toStringTag to native iterators
+	      setToStringTag(IteratorPrototype, TAG, true);
+	      // fix for some old engines
+	      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
 	    }
+	  }
+	  // fix Array#{values, @@iterator}.name in V8 / FF
+	  if(DEF_VALUES && $native && $native.name !== VALUES){
+	    VALUES_BUG = true;
+	    $default = function values(){ return $native.call(this); };
 	  }
 	  // Define iterator
 	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
@@ -2330,9 +2674,9 @@
 	  Iterators[TAG]  = returnThis;
 	  if(DEFAULT){
 	    methods = {
-	      values:  DEF_VALUES  ? $default : getMethod(VALUES),
-	      keys:    IS_SET      ? $default : getMethod(KEYS),
-	      entries: !DEF_VALUES ? $default : getMethod('entries')
+	      values:  DEF_VALUES ? $default : getMethod(VALUES),
+	      keys:    IS_SET     ? $default : getMethod(KEYS),
+	      entries: $entries
 	    };
 	    if(FORCED)for(key in methods){
 	      if(!(key in proto))redefine(proto, key, methods[key]);
@@ -2342,36 +2686,36 @@
 	};
 
 /***/ },
-/* 102 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-/* 103 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $              = __webpack_require__(4)
-	  , descriptor     = __webpack_require__(9)
-	  , setToStringTag = __webpack_require__(37)
+	var create         = __webpack_require__(46)
+	  , descriptor     = __webpack_require__(20)
+	  , setToStringTag = __webpack_require__(27)
 	  , IteratorPrototype = {};
 	
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(8)(IteratorPrototype, __webpack_require__(33)('iterator'), function(){ return this; });
+	__webpack_require__(13)(IteratorPrototype, __webpack_require__(28)('iterator'), function(){ return this; });
 	
 	module.exports = function(Constructor, NAME, next){
-	  Constructor.prototype = $.create(IteratorPrototype, {next: descriptor(1, next)});
+	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
 	  setToStringTag(Constructor, NAME + ' Iterator');
 	};
 
 /***/ },
-/* 104 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $export = __webpack_require__(5)
-	  , $at     = __webpack_require__(100)(false);
+	var $export = __webpack_require__(12)
+	  , $at     = __webpack_require__(129)(false);
 	$export($export.P, 'String', {
 	  // 21.1.3.3 String.prototype.codePointAt(pos)
 	  codePointAt: function codePointAt(pos){
@@ -2380,22 +2724,21 @@
 	});
 
 /***/ },
-/* 105 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.6 String.prototype.endsWith(searchString [, endPosition])
 	'use strict';
-	var $export   = __webpack_require__(5)
-	  , toLength  = __webpack_require__(29)
-	  , context   = __webpack_require__(106)
+	var $export   = __webpack_require__(12)
+	  , toLength  = __webpack_require__(37)
+	  , context   = __webpack_require__(135)
 	  , ENDS_WITH = 'endsWith'
 	  , $endsWith = ''[ENDS_WITH];
 	
-	$export($export.P + $export.F * __webpack_require__(108)(ENDS_WITH), 'String', {
+	$export($export.P + $export.F * __webpack_require__(137)(ENDS_WITH), 'String', {
 	  endsWith: function endsWith(searchString /*, endPosition = @length */){
 	    var that = context(this, searchString, ENDS_WITH)
-	      , $$   = arguments
-	      , endPosition = $$.length > 1 ? $$[1] : undefined
+	      , endPosition = arguments.length > 1 ? arguments[1] : undefined
 	      , len    = toLength(that.length)
 	      , end    = endPosition === undefined ? len : Math.min(toLength(endPosition), len)
 	      , search = String(searchString);
@@ -2406,12 +2749,12 @@
 	});
 
 /***/ },
-/* 106 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// helper for String#{startsWith, endsWith, includes}
-	var isRegExp = __webpack_require__(107)
-	  , defined  = __webpack_require__(24);
+	var isRegExp = __webpack_require__(136)
+	  , defined  = __webpack_require__(35);
 	
 	module.exports = function(that, searchString, NAME){
 	  if(isRegExp(searchString))throw TypeError('String#' + NAME + " doesn't accept regex!");
@@ -2419,23 +2762,23 @@
 	};
 
 /***/ },
-/* 107 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.8 IsRegExp(argument)
-	var isObject = __webpack_require__(18)
-	  , cof      = __webpack_require__(20)
-	  , MATCH    = __webpack_require__(33)('match');
+	var isObject = __webpack_require__(16)
+	  , cof      = __webpack_require__(34)
+	  , MATCH    = __webpack_require__(28)('match');
 	module.exports = function(it){
 	  var isRegExp;
 	  return isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : cof(it) == 'RegExp');
 	};
 
 /***/ },
-/* 108 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var MATCH = __webpack_require__(33)('match');
+	var MATCH = __webpack_require__(28)('match');
 	module.exports = function(KEY){
 	  var re = /./;
 	  try {
@@ -2449,16 +2792,16 @@
 	};
 
 /***/ },
-/* 109 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.7 String.prototype.includes(searchString, position = 0)
 	'use strict';
-	var $export  = __webpack_require__(5)
-	  , context  = __webpack_require__(106)
+	var $export  = __webpack_require__(12)
+	  , context  = __webpack_require__(135)
 	  , INCLUDES = 'includes';
 	
-	$export($export.P + $export.F * __webpack_require__(108)(INCLUDES), 'String', {
+	$export($export.P + $export.F * __webpack_require__(137)(INCLUDES), 'String', {
 	  includes: function includes(searchString /*, position = 0 */){
 	    return !!~context(this, searchString, INCLUDES)
 	      .indexOf(searchString, arguments.length > 1 ? arguments[1] : undefined);
@@ -2466,50 +2809,32 @@
 	});
 
 /***/ },
-/* 110 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.P, 'String', {
 	  // 21.1.3.13 String.prototype.repeat(count)
-	  repeat: __webpack_require__(111)
+	  repeat: __webpack_require__(93)
 	});
 
 /***/ },
-/* 111 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var toInteger = __webpack_require__(27)
-	  , defined   = __webpack_require__(24);
-	
-	module.exports = function repeat(count){
-	  var str = String(defined(this))
-	    , res = ''
-	    , n   = toInteger(count);
-	  if(n < 0 || n == Infinity)throw RangeError("Count can't be negative");
-	  for(;n > 0; (n >>>= 1) && (str += str))if(n & 1)res += str;
-	  return res;
-	};
-
-/***/ },
-/* 112 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.18 String.prototype.startsWith(searchString [, position ])
 	'use strict';
-	var $export     = __webpack_require__(5)
-	  , toLength    = __webpack_require__(29)
-	  , context     = __webpack_require__(106)
+	var $export     = __webpack_require__(12)
+	  , toLength    = __webpack_require__(37)
+	  , context     = __webpack_require__(135)
 	  , STARTS_WITH = 'startsWith'
 	  , $startsWith = ''[STARTS_WITH];
 	
-	$export($export.P + $export.F * __webpack_require__(108)(STARTS_WITH), 'String', {
+	$export($export.P + $export.F * __webpack_require__(137)(STARTS_WITH), 'String', {
 	  startsWith: function startsWith(searchString /*, position = 0 */){
 	    var that   = context(this, searchString, STARTS_WITH)
-	      , $$     = arguments
-	      , index  = toLength(Math.min($$.length > 1 ? $$[1] : undefined, that.length))
+	      , index  = toLength(Math.min(arguments.length > 1 ? arguments[1] : undefined, that.length))
 	      , search = String(searchString);
 	    return $startsWith
 	      ? $startsWith.call(that, search, index)
@@ -2518,30 +2843,293 @@
 	});
 
 /***/ },
-/* 113 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var ctx         = __webpack_require__(14)
-	  , $export     = __webpack_require__(5)
-	  , toObject    = __webpack_require__(23)
-	  , call        = __webpack_require__(114)
-	  , isArrayIter = __webpack_require__(115)
-	  , toLength    = __webpack_require__(29)
-	  , getIterFn   = __webpack_require__(116);
-	$export($export.S + $export.F * !__webpack_require__(117)(function(iter){ Array.from(iter); }), 'Array', {
+	// B.2.3.2 String.prototype.anchor(name)
+	__webpack_require__(142)('anchor', function(createHTML){
+	  return function anchor(name){
+	    return createHTML(this, 'a', 'name', name);
+	  }
+	});
+
+/***/ },
+/* 142 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12)
+	  , fails   = __webpack_require__(11)
+	  , defined = __webpack_require__(35)
+	  , quot    = /"/g;
+	// B.2.3.2.1 CreateHTML(string, tag, attribute, value)
+	var createHTML = function(string, tag, attribute, value) {
+	  var S  = String(defined(string))
+	    , p1 = '<' + tag;
+	  if(attribute !== '')p1 += ' ' + attribute + '="' + String(value).replace(quot, '&quot;') + '"';
+	  return p1 + '>' + S + '</' + tag + '>';
+	};
+	module.exports = function(NAME, exec){
+	  var O = {};
+	  O[NAME] = exec(createHTML);
+	  $export($export.P + $export.F * fails(function(){
+	    var test = ''[NAME]('"');
+	    return test !== test.toLowerCase() || test.split('"').length > 3;
+	  }), 'String', O);
+	};
+
+/***/ },
+/* 143 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.3 String.prototype.big()
+	__webpack_require__(142)('big', function(createHTML){
+	  return function big(){
+	    return createHTML(this, 'big', '', '');
+	  }
+	});
+
+/***/ },
+/* 144 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.4 String.prototype.blink()
+	__webpack_require__(142)('blink', function(createHTML){
+	  return function blink(){
+	    return createHTML(this, 'blink', '', '');
+	  }
+	});
+
+/***/ },
+/* 145 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.5 String.prototype.bold()
+	__webpack_require__(142)('bold', function(createHTML){
+	  return function bold(){
+	    return createHTML(this, 'b', '', '');
+	  }
+	});
+
+/***/ },
+/* 146 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.6 String.prototype.fixed()
+	__webpack_require__(142)('fixed', function(createHTML){
+	  return function fixed(){
+	    return createHTML(this, 'tt', '', '');
+	  }
+	});
+
+/***/ },
+/* 147 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.7 String.prototype.fontcolor(color)
+	__webpack_require__(142)('fontcolor', function(createHTML){
+	  return function fontcolor(color){
+	    return createHTML(this, 'font', 'color', color);
+	  }
+	});
+
+/***/ },
+/* 148 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.8 String.prototype.fontsize(size)
+	__webpack_require__(142)('fontsize', function(createHTML){
+	  return function fontsize(size){
+	    return createHTML(this, 'font', 'size', size);
+	  }
+	});
+
+/***/ },
+/* 149 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.9 String.prototype.italics()
+	__webpack_require__(142)('italics', function(createHTML){
+	  return function italics(){
+	    return createHTML(this, 'i', '', '');
+	  }
+	});
+
+/***/ },
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.10 String.prototype.link(url)
+	__webpack_require__(142)('link', function(createHTML){
+	  return function link(url){
+	    return createHTML(this, 'a', 'href', url);
+	  }
+	});
+
+/***/ },
+/* 151 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.11 String.prototype.small()
+	__webpack_require__(142)('small', function(createHTML){
+	  return function small(){
+	    return createHTML(this, 'small', '', '');
+	  }
+	});
+
+/***/ },
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.12 String.prototype.strike()
+	__webpack_require__(142)('strike', function(createHTML){
+	  return function strike(){
+	    return createHTML(this, 'strike', '', '');
+	  }
+	});
+
+/***/ },
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.13 String.prototype.sub()
+	__webpack_require__(142)('sub', function(createHTML){
+	  return function sub(){
+	    return createHTML(this, 'sub', '', '');
+	  }
+	});
+
+/***/ },
+/* 154 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// B.2.3.14 String.prototype.sup()
+	__webpack_require__(142)('sup', function(createHTML){
+	  return function sup(){
+	    return createHTML(this, 'sup', '', '');
+	  }
+	});
+
+/***/ },
+/* 155 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 20.3.3.1 / 15.9.4.4 Date.now()
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Date', {now: function(){ return +new Date; }});
+
+/***/ },
+/* 156 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var DateProto    = Date.prototype
+	  , INVALID_DATE = 'Invalid Date'
+	  , TO_STRING    = 'toString'
+	  , $toString    = DateProto[TO_STRING];
+	if(new Date(NaN) + '' != INVALID_DATE){
+	  __webpack_require__(21)(DateProto, TO_STRING, function toString(){
+	    var value = +this;
+	    return value === value ? $toString.call(this) : INVALID_DATE;
+	  });
+	}
+
+/***/ },
+/* 157 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
+	var $export = __webpack_require__(12)
+	  , fails   = __webpack_require__(11);
+	
+	var lz = function(num){
+	  return num > 9 ? num : '0' + num;
+	};
+	
+	// PhantomJS / old WebKit has a broken implementations
+	$export($export.P + $export.F * (fails(function(){
+	  return new Date(-5e13 - 1).toISOString() != '0385-07-25T07:06:39.999Z';
+	}) || !fails(function(){
+	  new Date(NaN).toISOString();
+	})), 'Date', {
+	  toISOString: function toISOString(){
+	    if(!isFinite(this))throw RangeError('Invalid time value');
+	    var d = this
+	      , y = d.getUTCFullYear()
+	      , m = d.getUTCMilliseconds()
+	      , s = y < 0 ? '-' : y > 9999 ? '+' : '';
+	    return s + ('00000' + Math.abs(y)).slice(s ? -6 : -4) +
+	      '-' + lz(d.getUTCMonth() + 1) + '-' + lz(d.getUTCDate()) +
+	      'T' + lz(d.getUTCHours()) + ':' + lz(d.getUTCMinutes()) +
+	      ':' + lz(d.getUTCSeconds()) + '.' + (m > 99 ? m : '0' + lz(m)) + 'Z';
+	  }
+	});
+
+/***/ },
+/* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export     = __webpack_require__(12)
+	  , toObject    = __webpack_require__(59)
+	  , toPrimitive = __webpack_require__(19);
+	
+	$export($export.P + $export.F * __webpack_require__(11)(function(){
+	  return new Date(NaN).toJSON() !== null || Date.prototype.toJSON.call({toISOString: function(){ return 1; }}) !== 1;
+	}), 'Date', {
+	  toJSON: function toJSON(key){
+	    var O  = toObject(this)
+	      , pv = toPrimitive(O);
+	    return typeof pv == 'number' && !isFinite(pv) ? null : O.toISOString();
+	  }
+	});
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Array', {isArray: __webpack_require__(45)});
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var ctx         = __webpack_require__(23)
+	  , $export     = __webpack_require__(12)
+	  , toObject    = __webpack_require__(59)
+	  , call        = __webpack_require__(161)
+	  , isArrayIter = __webpack_require__(162)
+	  , toLength    = __webpack_require__(37)
+	  , getIterFn   = __webpack_require__(163);
+	$export($export.S + $export.F * !__webpack_require__(164)(function(iter){ Array.from(iter); }), 'Array', {
 	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
 	  from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
 	    var O       = toObject(arrayLike)
 	      , C       = typeof this == 'function' ? this : Array
-	      , $$      = arguments
-	      , $$len   = $$.length
-	      , mapfn   = $$len > 1 ? $$[1] : undefined
+	      , aLen    = arguments.length
+	      , mapfn   = aLen > 1 ? arguments[1] : undefined
 	      , mapping = mapfn !== undefined
 	      , index   = 0
 	      , iterFn  = getIterFn(O)
 	      , length, result, step, iterator;
-	    if(mapping)mapfn = ctx(mapfn, $$len > 2 ? $$[2] : undefined, 2);
+	    if(mapping)mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
 	    // if object isn't iterable or it's array with default iterator - use simple case
 	    if(iterFn != undefined && !(C == Array && isArrayIter(iterFn))){
 	      for(iterator = iterFn.call(O), result = new C; !(step = iterator.next()).done; index++){
@@ -2560,11 +3148,11 @@
 
 
 /***/ },
-/* 114 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// call something on iterator step with safe closing on error
-	var anObject = __webpack_require__(22);
+	var anObject = __webpack_require__(15);
 	module.exports = function(iterator, fn, value, entries){
 	  try {
 	    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -2577,12 +3165,12 @@
 	};
 
 /***/ },
-/* 115 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// check on default Array iterator
-	var Iterators  = __webpack_require__(102)
-	  , ITERATOR   = __webpack_require__(33)('iterator')
+	var Iterators  = __webpack_require__(131)
+	  , ITERATOR   = __webpack_require__(28)('iterator')
 	  , ArrayProto = Array.prototype;
 	
 	module.exports = function(it){
@@ -2590,23 +3178,23 @@
 	};
 
 /***/ },
-/* 116 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var classof   = __webpack_require__(49)
-	  , ITERATOR  = __webpack_require__(33)('iterator')
-	  , Iterators = __webpack_require__(102);
-	module.exports = __webpack_require__(7).getIteratorMethod = function(it){
+	var classof   = __webpack_require__(76)
+	  , ITERATOR  = __webpack_require__(28)('iterator')
+	  , Iterators = __webpack_require__(131);
+	module.exports = __webpack_require__(8).getIteratorMethod = function(it){
 	  if(it != undefined)return it[ITERATOR]
 	    || it['@@iterator']
 	    || Iterators[classof(it)];
 	};
 
 /***/ },
-/* 117 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ITERATOR     = __webpack_require__(33)('iterator')
+	var ITERATOR     = __webpack_require__(28)('iterator')
 	  , SAFE_CLOSING = false;
 	
 	try {
@@ -2629,11 +3217,11 @@
 	};
 
 /***/ },
-/* 118 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	// WebKit Array.of isn't generic
 	$export($export.S + $export.F * __webpack_require__(11)(function(){
@@ -2643,30 +3231,513 @@
 	  // 22.1.2.3 Array.of( ...items)
 	  of: function of(/* ...args */){
 	    var index  = 0
-	      , $$     = arguments
-	      , $$len  = $$.length
-	      , result = new (typeof this == 'function' ? this : Array)($$len);
-	    while($$len > index)result[index] = $$[index++];
-	    result.length = $$len;
+	      , aLen   = arguments.length
+	      , result = new (typeof this == 'function' ? this : Array)(aLen);
+	    while(aLen > index)result[index] = arguments[index++];
+	    result.length = aLen;
 	    return result;
 	  }
 	});
 
 /***/ },
-/* 119 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(120)
-	  , step             = __webpack_require__(121)
-	  , Iterators        = __webpack_require__(102)
-	  , toIObject        = __webpack_require__(25);
+	// 22.1.3.13 Array.prototype.join(separator)
+	var $export   = __webpack_require__(12)
+	  , toIObject = __webpack_require__(32)
+	  , arrayJoin = [].join;
+	
+	// fallback for not array-like strings
+	$export($export.P + $export.F * (__webpack_require__(33) != Object || !__webpack_require__(167)(arrayJoin)), 'Array', {
+	  join: function join(separator){
+	    return arrayJoin.call(toIObject(this), separator === undefined ? ',' : separator);
+	  }
+	});
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var fails = __webpack_require__(11);
+	
+	module.exports = function(method, arg){
+	  return !!method && fails(function(){
+	    arg ? method.call(null, function(){}, 1) : method.call(null);
+	  });
+	};
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export    = __webpack_require__(12)
+	  , html       = __webpack_require__(48)
+	  , cof        = __webpack_require__(34)
+	  , toIndex    = __webpack_require__(39)
+	  , toLength   = __webpack_require__(37)
+	  , arraySlice = [].slice;
+	
+	// fallback for not array-like ES3 strings and DOM objects
+	$export($export.P + $export.F * __webpack_require__(11)(function(){
+	  if(html)arraySlice.call(html);
+	}), 'Array', {
+	  slice: function slice(begin, end){
+	    var len   = toLength(this.length)
+	      , klass = cof(this);
+	    end = end === undefined ? len : end;
+	    if(klass == 'Array')return arraySlice.call(this, begin, end);
+	    var start  = toIndex(begin, len)
+	      , upTo   = toIndex(end, len)
+	      , size   = toLength(upTo - start)
+	      , cloned = Array(size)
+	      , i      = 0;
+	    for(; i < size; i++)cloned[i] = klass == 'String'
+	      ? this.charAt(start + i)
+	      : this[start + i];
+	    return cloned;
+	  }
+	});
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export   = __webpack_require__(12)
+	  , aFunction = __webpack_require__(24)
+	  , toObject  = __webpack_require__(59)
+	  , fails     = __webpack_require__(11)
+	  , $sort     = [].sort
+	  , test      = [1, 2, 3];
+	
+	$export($export.P + $export.F * (fails(function(){
+	  // IE8-
+	  test.sort(undefined);
+	}) || !fails(function(){
+	  // V8 bug
+	  test.sort(null);
+	  // Old WebKit
+	}) || !__webpack_require__(167)($sort)), 'Array', {
+	  // 22.1.3.25 Array.prototype.sort(comparefn)
+	  sort: function sort(comparefn){
+	    return comparefn === undefined
+	      ? $sort.call(toObject(this))
+	      : $sort.call(toObject(this), aFunction(comparefn));
+	  }
+	});
+
+/***/ },
+/* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export  = __webpack_require__(12)
+	  , $forEach = __webpack_require__(171)(0)
+	  , STRICT   = __webpack_require__(167)([].forEach, true);
+	
+	$export($export.P + $export.F * !STRICT, 'Array', {
+	  // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
+	  forEach: function forEach(callbackfn /* , thisArg */){
+	    return $forEach(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 0 -> Array#forEach
+	// 1 -> Array#map
+	// 2 -> Array#filter
+	// 3 -> Array#some
+	// 4 -> Array#every
+	// 5 -> Array#find
+	// 6 -> Array#findIndex
+	var ctx      = __webpack_require__(23)
+	  , IObject  = __webpack_require__(33)
+	  , toObject = __webpack_require__(59)
+	  , toLength = __webpack_require__(37)
+	  , asc      = __webpack_require__(172);
+	module.exports = function(TYPE, $create){
+	  var IS_MAP        = TYPE == 1
+	    , IS_FILTER     = TYPE == 2
+	    , IS_SOME       = TYPE == 3
+	    , IS_EVERY      = TYPE == 4
+	    , IS_FIND_INDEX = TYPE == 6
+	    , NO_HOLES      = TYPE == 5 || IS_FIND_INDEX
+	    , create        = $create || asc;
+	  return function($this, callbackfn, that){
+	    var O      = toObject($this)
+	      , self   = IObject(O)
+	      , f      = ctx(callbackfn, that, 3)
+	      , length = toLength(self.length)
+	      , index  = 0
+	      , result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined
+	      , val, res;
+	    for(;length > index; index++)if(NO_HOLES || index in self){
+	      val = self[index];
+	      res = f(val, index, O);
+	      if(TYPE){
+	        if(IS_MAP)result[index] = res;            // map
+	        else if(res)switch(TYPE){
+	          case 3: return true;                    // some
+	          case 5: return val;                     // find
+	          case 6: return index;                   // findIndex
+	          case 2: result.push(val);               // filter
+	        } else if(IS_EVERY)return false;          // every
+	      }
+	    }
+	    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
+	  };
+	};
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
+	var isObject = __webpack_require__(16)
+	  , isArray  = __webpack_require__(45)
+	  , SPECIES  = __webpack_require__(28)('species');
+	module.exports = function(original, length){
+	  var C;
+	  if(isArray(original)){
+	    C = original.constructor;
+	    // cross-realm fallback
+	    if(typeof C == 'function' && (C === Array || isArray(C.prototype)))C = undefined;
+	    if(isObject(C)){
+	      C = C[SPECIES];
+	      if(C === null)C = undefined;
+	    }
+	  } return new (C === undefined ? Array : C)(length);
+	};
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $map    = __webpack_require__(171)(1);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].map, true), 'Array', {
+	  // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
+	  map: function map(callbackfn /* , thisArg */){
+	    return $map(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $filter = __webpack_require__(171)(2);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].filter, true), 'Array', {
+	  // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
+	  filter: function filter(callbackfn /* , thisArg */){
+	    return $filter(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $some   = __webpack_require__(171)(3);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].some, true), 'Array', {
+	  // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
+	  some: function some(callbackfn /* , thisArg */){
+	    return $some(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $every  = __webpack_require__(171)(4);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].every, true), 'Array', {
+	  // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
+	  every: function every(callbackfn /* , thisArg */){
+	    return $every(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $reduce = __webpack_require__(178);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].reduce, true), 'Array', {
+	  // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
+	  reduce: function reduce(callbackfn /* , initialValue */){
+	    return $reduce(this, callbackfn, arguments.length, arguments[1], false);
+	  }
+	});
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var aFunction = __webpack_require__(24)
+	  , toObject  = __webpack_require__(59)
+	  , IObject   = __webpack_require__(33)
+	  , toLength  = __webpack_require__(37);
+	
+	module.exports = function(that, callbackfn, aLen, memo, isRight){
+	  aFunction(callbackfn);
+	  var O      = toObject(that)
+	    , self   = IObject(O)
+	    , length = toLength(O.length)
+	    , index  = isRight ? length - 1 : 0
+	    , i      = isRight ? -1 : 1;
+	  if(aLen < 2)for(;;){
+	    if(index in self){
+	      memo = self[index];
+	      index += i;
+	      break;
+	    }
+	    index += i;
+	    if(isRight ? index < 0 : length <= index){
+	      throw TypeError('Reduce of empty array with no initial value');
+	    }
+	  }
+	  for(;isRight ? index >= 0 : length > index; index += i)if(index in self){
+	    memo = callbackfn(memo, self[index], index, O);
+	  }
+	  return memo;
+	};
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $reduce = __webpack_require__(178);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].reduceRight, true), 'Array', {
+	  // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
+	  reduceRight: function reduceRight(callbackfn /* , initialValue */){
+	    return $reduce(this, callbackfn, arguments.length, arguments[1], true);
+	  }
+	});
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export  = __webpack_require__(12)
+	  , $indexOf = __webpack_require__(36)(false);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].indexOf), 'Array', {
+	  // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
+	  indexOf: function indexOf(searchElement /*, fromIndex = 0 */){
+	    return $indexOf(this, searchElement, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export   = __webpack_require__(12)
+	  , toIObject = __webpack_require__(32)
+	  , toInteger = __webpack_require__(38)
+	  , toLength  = __webpack_require__(37);
+	
+	$export($export.P + $export.F * !__webpack_require__(167)([].lastIndexOf), 'Array', {
+	  // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
+	  lastIndexOf: function lastIndexOf(searchElement /*, fromIndex = @[*-1] */){
+	    var O      = toIObject(this)
+	      , length = toLength(O.length)
+	      , index  = length - 1;
+	    if(arguments.length > 1)index = Math.min(index, toInteger(arguments[1]));
+	    if(index < 0)index = length + index;
+	    for(;index >= 0; index--)if(index in O)if(O[index] === searchElement)return index;
+	    return -1;
+	  }
+	});
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
+	var $export = __webpack_require__(12);
+	
+	$export($export.P, 'Array', {copyWithin: __webpack_require__(183)});
+	
+	__webpack_require__(184)('copyWithin');
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
+	'use strict';
+	var toObject = __webpack_require__(59)
+	  , toIndex  = __webpack_require__(39)
+	  , toLength = __webpack_require__(37);
+	
+	module.exports = [].copyWithin || function copyWithin(target/*= 0*/, start/*= 0, end = @length*/){
+	  var O     = toObject(this)
+	    , len   = toLength(O.length)
+	    , to    = toIndex(target, len)
+	    , from  = toIndex(start, len)
+	    , end   = arguments.length > 2 ? arguments[2] : undefined
+	    , count = Math.min((end === undefined ? len : toIndex(end, len)) - from, len - to)
+	    , inc   = 1;
+	  if(from < to && to < from + count){
+	    inc  = -1;
+	    from += count - 1;
+	    to   += count - 1;
+	  }
+	  while(count-- > 0){
+	    if(from in O)O[to] = O[from];
+	    else delete O[to];
+	    to   += inc;
+	    from += inc;
+	  } return O;
+	};
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.3.31 Array.prototype[@@unscopables]
+	var UNSCOPABLES = __webpack_require__(28)('unscopables')
+	  , ArrayProto  = Array.prototype;
+	if(ArrayProto[UNSCOPABLES] == undefined)__webpack_require__(13)(ArrayProto, UNSCOPABLES, {});
+	module.exports = function(key){
+	  ArrayProto[UNSCOPABLES][key] = true;
+	};
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
+	var $export = __webpack_require__(12);
+	
+	$export($export.P, 'Array', {fill: __webpack_require__(186)});
+	
+	__webpack_require__(184)('fill');
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
+	'use strict';
+	var toObject = __webpack_require__(59)
+	  , toIndex  = __webpack_require__(39)
+	  , toLength = __webpack_require__(37);
+	module.exports = function fill(value /*, start = 0, end = @length */){
+	  var O      = toObject(this)
+	    , length = toLength(O.length)
+	    , aLen   = arguments.length
+	    , index  = toIndex(aLen > 1 ? arguments[1] : undefined, length)
+	    , end    = aLen > 2 ? arguments[2] : undefined
+	    , endPos = end === undefined ? length : toIndex(end, length);
+	  while(endPos > index)O[index++] = value;
+	  return O;
+	};
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
+	var $export = __webpack_require__(12)
+	  , $find   = __webpack_require__(171)(5)
+	  , KEY     = 'find'
+	  , forced  = true;
+	// Shouldn't skip holes
+	if(KEY in [])Array(1)[KEY](function(){ forced = false; });
+	$export($export.P + $export.F * forced, 'Array', {
+	  find: function find(callbackfn/*, that = undefined */){
+	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+	  }
+	});
+	__webpack_require__(184)(KEY);
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
+	var $export = __webpack_require__(12)
+	  , $find   = __webpack_require__(171)(6)
+	  , KEY     = 'findIndex'
+	  , forced  = true;
+	// Shouldn't skip holes
+	if(KEY in [])Array(1)[KEY](function(){ forced = false; });
+	$export($export.P + $export.F * forced, 'Array', {
+	  findIndex: function findIndex(callbackfn/*, that = undefined */){
+	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+	  }
+	});
+	__webpack_require__(184)(KEY);
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(190)('Array');
+
+/***/ },
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var global      = __webpack_require__(7)
+	  , dP          = __webpack_require__(14)
+	  , DESCRIPTORS = __webpack_require__(10)
+	  , SPECIES     = __webpack_require__(28)('species');
+	
+	module.exports = function(KEY){
+	  var C = global[KEY];
+	  if(DESCRIPTORS && C && !C[SPECIES])dP.f(C, SPECIES, {
+	    configurable: true,
+	    get: function(){ return this; }
+	  });
+	};
+
+/***/ },
+/* 191 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var addToUnscopables = __webpack_require__(184)
+	  , step             = __webpack_require__(192)
+	  , Iterators        = __webpack_require__(131)
+	  , toIObject        = __webpack_require__(32);
 	
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(101)(Array, 'Array', function(iterated, kind){
+	module.exports = __webpack_require__(130)(Array, 'Array', function(iterated, kind){
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -2692,19 +3763,7 @@
 	addToUnscopables('entries');
 
 /***/ },
-/* 120 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 22.1.3.31 Array.prototype[@@unscopables]
-	var UNSCOPABLES = __webpack_require__(33)('unscopables')
-	  , ArrayProto  = Array.prototype;
-	if(ArrayProto[UNSCOPABLES] == undefined)__webpack_require__(8)(ArrayProto, UNSCOPABLES, {});
-	module.exports = function(key){
-	  ArrayProto[UNSCOPABLES][key] = true;
-	};
-
-/***/ },
-/* 121 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -2712,192 +3771,60 @@
 	};
 
 /***/ },
-/* 122 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(123)('Array');
-
-/***/ },
-/* 123 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var global      = __webpack_require__(6)
-	  , $           = __webpack_require__(4)
-	  , DESCRIPTORS = __webpack_require__(10)
-	  , SPECIES     = __webpack_require__(33)('species');
-	
-	module.exports = function(KEY){
-	  var C = global[KEY];
-	  if(DESCRIPTORS && C && !C[SPECIES])$.setDesc(C, SPECIES, {
-	    configurable: true,
-	    get: function(){ return this; }
-	  });
-	};
-
-/***/ },
-/* 124 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
-	var $export = __webpack_require__(5);
-	
-	$export($export.P, 'Array', {copyWithin: __webpack_require__(125)});
-	
-	__webpack_require__(120)('copyWithin');
-
-/***/ },
-/* 125 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
-	'use strict';
-	var toObject = __webpack_require__(23)
-	  , toIndex  = __webpack_require__(28)
-	  , toLength = __webpack_require__(29);
-	
-	module.exports = [].copyWithin || function copyWithin(target/*= 0*/, start/*= 0, end = @length*/){
-	  var O     = toObject(this)
-	    , len   = toLength(O.length)
-	    , to    = toIndex(target, len)
-	    , from  = toIndex(start, len)
-	    , $$    = arguments
-	    , end   = $$.length > 2 ? $$[2] : undefined
-	    , count = Math.min((end === undefined ? len : toIndex(end, len)) - from, len - to)
-	    , inc   = 1;
-	  if(from < to && to < from + count){
-	    inc  = -1;
-	    from += count - 1;
-	    to   += count - 1;
-	  }
-	  while(count-- > 0){
-	    if(from in O)O[to] = O[from];
-	    else delete O[to];
-	    to   += inc;
-	    from += inc;
-	  } return O;
-	};
-
-/***/ },
-/* 126 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
-	var $export = __webpack_require__(5);
-	
-	$export($export.P, 'Array', {fill: __webpack_require__(127)});
-	
-	__webpack_require__(120)('fill');
-
-/***/ },
-/* 127 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
-	'use strict';
-	var toObject = __webpack_require__(23)
-	  , toIndex  = __webpack_require__(28)
-	  , toLength = __webpack_require__(29);
-	module.exports = [].fill || function fill(value /*, start = 0, end = @length */){
-	  var O      = toObject(this)
-	    , length = toLength(O.length)
-	    , $$     = arguments
-	    , $$len  = $$.length
-	    , index  = toIndex($$len > 1 ? $$[1] : undefined, length)
-	    , end    = $$len > 2 ? $$[2] : undefined
-	    , endPos = end === undefined ? length : toIndex(end, length);
-	  while(endPos > index)O[index++] = value;
-	  return O;
-	};
-
-/***/ },
-/* 128 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
-	var $export = __webpack_require__(5)
-	  , $find   = __webpack_require__(30)(5)
-	  , KEY     = 'find'
-	  , forced  = true;
-	// Shouldn't skip holes
-	if(KEY in [])Array(1)[KEY](function(){ forced = false; });
-	$export($export.P + $export.F * forced, 'Array', {
-	  find: function find(callbackfn/*, that = undefined */){
-	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-	  }
-	});
-	__webpack_require__(120)(KEY);
-
-/***/ },
-/* 129 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
-	var $export = __webpack_require__(5)
-	  , $find   = __webpack_require__(30)(6)
-	  , KEY     = 'findIndex'
-	  , forced  = true;
-	// Shouldn't skip holes
-	if(KEY in [])Array(1)[KEY](function(){ forced = false; });
-	$export($export.P + $export.F * forced, 'Array', {
-	  findIndex: function findIndex(callbackfn/*, that = undefined */){
-	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-	  }
-	});
-	__webpack_require__(120)(KEY);
-
-/***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $        = __webpack_require__(4)
-	  , global   = __webpack_require__(6)
-	  , isRegExp = __webpack_require__(107)
-	  , $flags   = __webpack_require__(131)
-	  , $RegExp  = global.RegExp
-	  , Base     = $RegExp
-	  , proto    = $RegExp.prototype
-	  , re1      = /a/g
-	  , re2      = /a/g
+	var global            = __webpack_require__(7)
+	  , inheritIfRequired = __webpack_require__(89)
+	  , dP                = __webpack_require__(14).f
+	  , gOPN              = __webpack_require__(50).f
+	  , isRegExp          = __webpack_require__(136)
+	  , $flags            = __webpack_require__(194)
+	  , $RegExp           = global.RegExp
+	  , Base              = $RegExp
+	  , proto             = $RegExp.prototype
+	  , re1               = /a/g
+	  , re2               = /a/g
 	  // "new" creates a new object, old webkit buggy here
-	  , CORRECT_NEW = new $RegExp(re1) !== re1;
+	  , CORRECT_NEW       = new $RegExp(re1) !== re1;
 	
 	if(__webpack_require__(10) && (!CORRECT_NEW || __webpack_require__(11)(function(){
-	  re2[__webpack_require__(33)('match')] = false;
+	  re2[__webpack_require__(28)('match')] = false;
 	  // RegExp constructor can alter flags and IsRegExp works correct with @@match
 	  return $RegExp(re1) != re1 || $RegExp(re2) == re2 || $RegExp(re1, 'i') != '/a/i';
 	}))){
 	  $RegExp = function RegExp(p, f){
-	    var piRE = isRegExp(p)
+	    var tiRE = this instanceof $RegExp
+	      , piRE = isRegExp(p)
 	      , fiU  = f === undefined;
-	    return !(this instanceof $RegExp) && piRE && p.constructor === $RegExp && fiU ? p
-	      : CORRECT_NEW
+	    return !tiRE && piRE && p.constructor === $RegExp && fiU ? p
+	      : inheritIfRequired(CORRECT_NEW
 	        ? new Base(piRE && !fiU ? p.source : p, f)
-	        : Base((piRE = p instanceof $RegExp) ? p.source : p, piRE && fiU ? $flags.call(p) : f);
+	        : Base((piRE = p instanceof $RegExp) ? p.source : p, piRE && fiU ? $flags.call(p) : f)
+	      , tiRE ? this : proto, $RegExp);
 	  };
-	  $.each.call($.getNames(Base), function(key){
-	    key in $RegExp || $.setDesc($RegExp, key, {
+	  var proxy = function(key){
+	    key in $RegExp || dP($RegExp, key, {
 	      configurable: true,
 	      get: function(){ return Base[key]; },
 	      set: function(it){ Base[key] = it; }
 	    });
-	  });
+	  };
+	  for(var keys = gOPN(Base), i = 0; keys.length > i; )proxy(keys[i++]);
 	  proto.constructor = $RegExp;
 	  $RegExp.prototype = proto;
-	  __webpack_require__(12)(global, 'RegExp', $RegExp);
+	  __webpack_require__(21)(global, 'RegExp', $RegExp);
 	}
 	
-	__webpack_require__(123)('RegExp');
+	__webpack_require__(190)('RegExp');
 
 /***/ },
-/* 131 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 21.2.5.3 get RegExp.prototype.flags
-	var anObject = __webpack_require__(22);
+	var anObject = __webpack_require__(15);
 	module.exports = function(){
 	  var that   = anObject(this)
 	    , result = '';
@@ -2910,194 +3837,260 @@
 	};
 
 /***/ },
-/* 132 */
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	__webpack_require__(196);
+	var anObject    = __webpack_require__(15)
+	  , $flags      = __webpack_require__(194)
+	  , DESCRIPTORS = __webpack_require__(10)
+	  , TO_STRING   = 'toString'
+	  , $toString   = /./[TO_STRING];
+	
+	var define = function(fn){
+	  __webpack_require__(21)(RegExp.prototype, TO_STRING, fn, true);
+	};
+	
+	// 21.2.5.14 RegExp.prototype.toString()
+	if(__webpack_require__(11)(function(){ return $toString.call({source: 'a', flags: 'b'}) != '/a/b'; })){
+	  define(function toString(){
+	    var R = anObject(this);
+	    return '/'.concat(R.source, '/',
+	      'flags' in R ? R.flags : !DESCRIPTORS && R instanceof RegExp ? $flags.call(R) : undefined);
+	  });
+	// FF44- RegExp#toString has a wrong name
+	} else if($toString.name != TO_STRING){
+	  define(function toString(){
+	    return $toString.call(this);
+	  });
+	}
+
+/***/ },
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 21.2.5.3 get RegExp.prototype.flags()
-	var $ = __webpack_require__(4);
-	if(__webpack_require__(10) && /./g.flags != 'g')$.setDesc(RegExp.prototype, 'flags', {
+	if(__webpack_require__(10) && /./g.flags != 'g')__webpack_require__(14).f(RegExp.prototype, 'flags', {
 	  configurable: true,
-	  get: __webpack_require__(131)
+	  get: __webpack_require__(194)
 	});
 
 /***/ },
-/* 133 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@match logic
-	__webpack_require__(134)('match', 1, function(defined, MATCH){
+	__webpack_require__(198)('match', 1, function(defined, MATCH, $match){
 	  // 21.1.3.11 String.prototype.match(regexp)
-	  return function match(regexp){
+	  return [function match(regexp){
 	    'use strict';
 	    var O  = defined(this)
 	      , fn = regexp == undefined ? undefined : regexp[MATCH];
 	    return fn !== undefined ? fn.call(regexp, O) : new RegExp(regexp)[MATCH](String(O));
-	  };
+	  }, $match];
 	});
 
 /***/ },
-/* 134 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var hide     = __webpack_require__(8)
-	  , redefine = __webpack_require__(12)
+	var hide     = __webpack_require__(13)
+	  , redefine = __webpack_require__(21)
 	  , fails    = __webpack_require__(11)
-	  , defined  = __webpack_require__(24)
-	  , wks      = __webpack_require__(33);
+	  , defined  = __webpack_require__(35)
+	  , wks      = __webpack_require__(28);
 	
 	module.exports = function(KEY, length, exec){
 	  var SYMBOL   = wks(KEY)
-	    , original = ''[KEY];
+	    , fns      = exec(defined, SYMBOL, ''[KEY])
+	    , strfn    = fns[0]
+	    , rxfn     = fns[1];
 	  if(fails(function(){
 	    var O = {};
 	    O[SYMBOL] = function(){ return 7; };
 	    return ''[KEY](O) != 7;
 	  })){
-	    redefine(String.prototype, KEY, exec(defined, SYMBOL, original));
+	    redefine(String.prototype, KEY, strfn);
 	    hide(RegExp.prototype, SYMBOL, length == 2
 	      // 21.2.5.8 RegExp.prototype[@@replace](string, replaceValue)
 	      // 21.2.5.11 RegExp.prototype[@@split](string, limit)
-	      ? function(string, arg){ return original.call(string, this, arg); }
+	      ? function(string, arg){ return rxfn.call(string, this, arg); }
 	      // 21.2.5.6 RegExp.prototype[@@match](string)
 	      // 21.2.5.9 RegExp.prototype[@@search](string)
-	      : function(string){ return original.call(string, this); }
+	      : function(string){ return rxfn.call(string, this); }
 	    );
 	  }
 	};
 
 /***/ },
-/* 135 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@replace logic
-	__webpack_require__(134)('replace', 2, function(defined, REPLACE, $replace){
+	__webpack_require__(198)('replace', 2, function(defined, REPLACE, $replace){
 	  // 21.1.3.14 String.prototype.replace(searchValue, replaceValue)
-	  return function replace(searchValue, replaceValue){
+	  return [function replace(searchValue, replaceValue){
 	    'use strict';
 	    var O  = defined(this)
 	      , fn = searchValue == undefined ? undefined : searchValue[REPLACE];
 	    return fn !== undefined
 	      ? fn.call(searchValue, O, replaceValue)
 	      : $replace.call(String(O), searchValue, replaceValue);
-	  };
+	  }, $replace];
 	});
 
 /***/ },
-/* 136 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@search logic
-	__webpack_require__(134)('search', 1, function(defined, SEARCH){
+	__webpack_require__(198)('search', 1, function(defined, SEARCH, $search){
 	  // 21.1.3.15 String.prototype.search(regexp)
-	  return function search(regexp){
+	  return [function search(regexp){
 	    'use strict';
 	    var O  = defined(this)
 	      , fn = regexp == undefined ? undefined : regexp[SEARCH];
 	    return fn !== undefined ? fn.call(regexp, O) : new RegExp(regexp)[SEARCH](String(O));
-	  };
+	  }, $search];
 	});
 
 /***/ },
-/* 137 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@split logic
-	__webpack_require__(134)('split', 2, function(defined, SPLIT, $split){
+	__webpack_require__(198)('split', 2, function(defined, SPLIT, $split){
+	  'use strict';
+	  var isRegExp   = __webpack_require__(136)
+	    , _split     = $split
+	    , $push      = [].push
+	    , $SPLIT     = 'split'
+	    , LENGTH     = 'length'
+	    , LAST_INDEX = 'lastIndex';
+	  if(
+	    'abbc'[$SPLIT](/(b)*/)[1] == 'c' ||
+	    'test'[$SPLIT](/(?:)/, -1)[LENGTH] != 4 ||
+	    'ab'[$SPLIT](/(?:ab)*/)[LENGTH] != 2 ||
+	    '.'[$SPLIT](/(.?)(.?)/)[LENGTH] != 4 ||
+	    '.'[$SPLIT](/()()/)[LENGTH] > 1 ||
+	    ''[$SPLIT](/.?/)[LENGTH]
+	  ){
+	    var NPCG = /()??/.exec('')[1] === undefined; // nonparticipating capturing group
+	    // based on es5-shim implementation, need to rework it
+	    $split = function(separator, limit){
+	      var string = String(this);
+	      if(separator === undefined && limit === 0)return [];
+	      // If `separator` is not a regex, use native split
+	      if(!isRegExp(separator))return _split.call(string, separator, limit);
+	      var output = [];
+	      var flags = (separator.ignoreCase ? 'i' : '') +
+	                  (separator.multiline ? 'm' : '') +
+	                  (separator.unicode ? 'u' : '') +
+	                  (separator.sticky ? 'y' : '');
+	      var lastLastIndex = 0;
+	      var splitLimit = limit === undefined ? 4294967295 : limit >>> 0;
+	      // Make `global` and avoid `lastIndex` issues by working with a copy
+	      var separatorCopy = new RegExp(separator.source, flags + 'g');
+	      var separator2, match, lastIndex, lastLength, i;
+	      // Doesn't need flags gy, but they don't hurt
+	      if(!NPCG)separator2 = new RegExp('^' + separatorCopy.source + '$(?!\\s)', flags);
+	      while(match = separatorCopy.exec(string)){
+	        // `separatorCopy.lastIndex` is not reliable cross-browser
+	        lastIndex = match.index + match[0][LENGTH];
+	        if(lastIndex > lastLastIndex){
+	          output.push(string.slice(lastLastIndex, match.index));
+	          // Fix browsers whose `exec` methods don't consistently return `undefined` for NPCG
+	          if(!NPCG && match[LENGTH] > 1)match[0].replace(separator2, function(){
+	            for(i = 1; i < arguments[LENGTH] - 2; i++)if(arguments[i] === undefined)match[i] = undefined;
+	          });
+	          if(match[LENGTH] > 1 && match.index < string[LENGTH])$push.apply(output, match.slice(1));
+	          lastLength = match[0][LENGTH];
+	          lastLastIndex = lastIndex;
+	          if(output[LENGTH] >= splitLimit)break;
+	        }
+	        if(separatorCopy[LAST_INDEX] === match.index)separatorCopy[LAST_INDEX]++; // Avoid an infinite loop
+	      }
+	      if(lastLastIndex === string[LENGTH]){
+	        if(lastLength || !separatorCopy.test(''))output.push('');
+	      } else output.push(string.slice(lastLastIndex));
+	      return output[LENGTH] > splitLimit ? output.slice(0, splitLimit) : output;
+	    };
+	  // Chakra, V8
+	  } else if('0'[$SPLIT](undefined, 0)[LENGTH]){
+	    $split = function(separator, limit){
+	      return separator === undefined && limit === 0 ? [] : _split.call(this, separator, limit);
+	    };
+	  }
 	  // 21.1.3.17 String.prototype.split(separator, limit)
-	  return function split(separator, limit){
-	    'use strict';
+	  return [function split(separator, limit){
 	    var O  = defined(this)
 	      , fn = separator == undefined ? undefined : separator[SPLIT];
-	    return fn !== undefined
-	      ? fn.call(separator, O, limit)
-	      : $split.call(String(O), separator, limit);
-	  };
+	    return fn !== undefined ? fn.call(separator, O, limit) : $split.call(String(O), separator, limit);
+	  }, $split];
 	});
 
 /***/ },
-/* 138 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $          = __webpack_require__(4)
-	  , LIBRARY    = __webpack_require__(41)
-	  , global     = __webpack_require__(6)
-	  , ctx        = __webpack_require__(14)
-	  , classof    = __webpack_require__(49)
-	  , $export    = __webpack_require__(5)
-	  , isObject   = __webpack_require__(18)
-	  , anObject   = __webpack_require__(22)
-	  , aFunction  = __webpack_require__(15)
-	  , strictNew  = __webpack_require__(139)
-	  , forOf      = __webpack_require__(140)
-	  , setProto   = __webpack_require__(47).set
-	  , same       = __webpack_require__(45)
-	  , SPECIES    = __webpack_require__(33)('species')
-	  , speciesConstructor = __webpack_require__(141)
-	  , asap       = __webpack_require__(142)
-	  , PROMISE    = 'Promise'
-	  , process    = global.process
-	  , isNode     = classof(process) == 'process'
-	  , P          = global[PROMISE]
-	  , Wrapper;
+	var LIBRARY            = __webpack_require__(52)
+	  , global             = __webpack_require__(7)
+	  , ctx                = __webpack_require__(23)
+	  , classof            = __webpack_require__(76)
+	  , $export            = __webpack_require__(12)
+	  , isObject           = __webpack_require__(16)
+	  , anObject           = __webpack_require__(15)
+	  , aFunction          = __webpack_require__(24)
+	  , anInstance         = __webpack_require__(91)
+	  , forOf              = __webpack_require__(203)
+	  , setProto           = __webpack_require__(74).set
+	  , speciesConstructor = __webpack_require__(204)
+	  , task               = __webpack_require__(205).set
+	  , microtask          = __webpack_require__(206)
+	  , PROMISE            = 'Promise'
+	  , TypeError          = global.TypeError
+	  , process            = global.process
+	  , $Promise           = global[PROMISE]
+	  , isNode             = classof(process) == 'process'
+	  , empty              = function(){ /* empty */ }
+	  , Internal, GenericPromiseCapability, Wrapper;
 	
-	var testResolve = function(sub){
-	  var test = new P(function(){});
-	  if(sub)test.constructor = Object;
-	  return P.resolve(test) === test;
-	};
-	
-	var USE_NATIVE = function(){
-	  var works = false;
-	  function P2(x){
-	    var self = new P(x);
-	    setProto(self, P2.prototype);
-	    return self;
-	  }
+	var USE_NATIVE = !!function(){
 	  try {
-	    works = P && P.resolve && testResolve();
-	    setProto(P2, P);
-	    P2.prototype = $.create(P.prototype, {constructor: {value: P2}});
-	    // actual Firefox has broken subclass support, test that
-	    if(!(P2.resolve(5).then(function(){}) instanceof P2)){
-	      works = false;
-	    }
-	    // actual V8 bug, https://code.google.com/p/v8/issues/detail?id=4162
-	    if(works && __webpack_require__(10)){
-	      var thenableThenGotten = false;
-	      P.resolve($.setDesc({}, 'then', {
-	        get: function(){ thenableThenGotten = true; }
-	      }));
-	      works = thenableThenGotten;
-	    }
-	  } catch(e){ works = false; }
-	  return works;
+	    // correct subclassing with @@species support
+	    var promise     = $Promise.resolve(1)
+	      , FakePromise = (promise.constructor = {})[__webpack_require__(28)('species')] = function(exec){ exec(empty, empty); };
+	    // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
+	    return (isNode || typeof PromiseRejectionEvent == 'function') && promise.then(empty) instanceof FakePromise;
+	  } catch(e){ /* empty */ }
 	}();
 	
 	// helpers
 	var sameConstructor = function(a, b){
-	  // library wrapper special case
-	  if(LIBRARY && a === P && b === Wrapper)return true;
-	  return same(a, b);
-	};
-	var getConstructor = function(C){
-	  var S = anObject(C)[SPECIES];
-	  return S != undefined ? S : C;
+	  // with library wrapper special case
+	  return a === b || a === $Promise && b === Wrapper;
 	};
 	var isThenable = function(it){
 	  var then;
 	  return isObject(it) && typeof (then = it.then) == 'function' ? then : false;
 	};
-	var PromiseCapability = function(C){
+	var newPromiseCapability = function(C){
+	  return sameConstructor($Promise, C)
+	    ? new PromiseCapability(C)
+	    : new GenericPromiseCapability(C);
+	};
+	var PromiseCapability = GenericPromiseCapability = function(C){
 	  var resolve, reject;
 	  this.promise = new C(function($$resolve, $$reject){
 	    if(resolve !== undefined || reject !== undefined)throw TypeError('Bad Promise constructor');
 	    resolve = $$resolve;
 	    reject  = $$reject;
 	  });
-	  this.resolve = aFunction(resolve),
-	  this.reject  = aFunction(reject)
+	  this.resolve = aFunction(resolve);
+	  this.reject  = aFunction(reject);
 	};
 	var perform = function(exec){
 	  try {
@@ -3106,13 +4099,13 @@
 	    return {error: e};
 	  }
 	};
-	var notify = function(record, isReject){
-	  if(record.n)return;
-	  record.n = true;
-	  var chain = record.c;
-	  asap(function(){
-	    var value = record.v
-	      , ok    = record.s == 1
+	var notify = function(promise, isReject){
+	  if(promise._n)return;
+	  promise._n = true;
+	  var chain = promise._c;
+	  microtask(function(){
+	    var value = promise._v
+	      , ok    = promise._s == 1
 	      , i     = 0;
 	    var run = function(reaction){
 	      var handler = ok ? reaction.ok : reaction.fail
@@ -3121,7 +4114,10 @@
 	        , result, then;
 	      try {
 	        if(handler){
-	          if(!ok)record.h = true;
+	          if(!ok){
+	            if(promise._h == 2)onHandleUnhandled(promise);
+	            promise._h = 1;
+	          }
 	          result = handler === true ? value : handler(value);
 	          if(result === reaction.promise){
 	            reject(TypeError('Promise-chain cycle'));
@@ -3134,12 +4130,17 @@
 	      }
 	    };
 	    while(chain.length > i)run(chain[i++]); // variable length - can't use forEach
-	    chain.length = 0;
-	    record.n = false;
-	    if(isReject)setTimeout(function(){
-	      var promise = record.p
-	        , handler, console;
-	      if(isUnhandled(promise)){
+	    promise._c = [];
+	    promise._n = false;
+	    if(isReject && !promise._h)onUnhandled(promise);
+	  });
+	};
+	var onUnhandled = function(promise){
+	  task.call(global, function(){
+	    var value = promise._v
+	      , abrupt, handler, console;
+	    if(isUnhandled(promise)){
+	      abrupt = perform(function(){
 	        if(isNode){
 	          process.emit('unhandledRejection', value, promise);
 	        } else if(handler = global.onunhandledrejection){
@@ -3147,42 +4148,54 @@
 	        } else if((console = global.console) && console.error){
 	          console.error('Unhandled promise rejection', value);
 	        }
-	      } record.a = undefined;
-	    }, 1);
+	      });
+	      // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
+	      promise._h = isNode || isUnhandled(promise) ? 2 : 1;
+	    } promise._a = undefined;
+	    if(abrupt)throw abrupt.error;
 	  });
 	};
 	var isUnhandled = function(promise){
-	  var record = promise._d
-	    , chain  = record.a || record.c
-	    , i      = 0
+	  if(promise._h == 1)return false;
+	  var chain = promise._a || promise._c
+	    , i     = 0
 	    , reaction;
-	  if(record.h)return false;
 	  while(chain.length > i){
 	    reaction = chain[i++];
 	    if(reaction.fail || !isUnhandled(reaction.promise))return false;
 	  } return true;
 	};
+	var onHandleUnhandled = function(promise){
+	  task.call(global, function(){
+	    var handler;
+	    if(isNode){
+	      process.emit('rejectionHandled', promise);
+	    } else if(handler = global.onrejectionhandled){
+	      handler({promise: promise, reason: promise._v});
+	    }
+	  });
+	};
 	var $reject = function(value){
-	  var record = this;
-	  if(record.d)return;
-	  record.d = true;
-	  record = record.r || record; // unwrap
-	  record.v = value;
-	  record.s = 2;
-	  record.a = record.c.slice();
-	  notify(record, true);
+	  var promise = this;
+	  if(promise._d)return;
+	  promise._d = true;
+	  promise = promise._w || promise; // unwrap
+	  promise._v = value;
+	  promise._s = 2;
+	  if(!promise._a)promise._a = promise._c.slice();
+	  notify(promise, true);
 	};
 	var $resolve = function(value){
-	  var record = this
+	  var promise = this
 	    , then;
-	  if(record.d)return;
-	  record.d = true;
-	  record = record.r || record; // unwrap
+	  if(promise._d)return;
+	  promise._d = true;
+	  promise = promise._w || promise; // unwrap
 	  try {
-	    if(record.p === value)throw TypeError("Promise can't be resolved itself");
+	    if(promise === value)throw TypeError("Promise can't be resolved itself");
 	    if(then = isThenable(value)){
-	      asap(function(){
-	        var wrapper = {r: record, d: false}; // wrap
+	      microtask(function(){
+	        var wrapper = {_w: promise, _d: false}; // wrap
 	        try {
 	          then.call(value, ctx($resolve, wrapper, 1), ctx($reject, wrapper, 1));
 	        } catch(e){
@@ -3190,114 +4203,121 @@
 	        }
 	      });
 	    } else {
-	      record.v = value;
-	      record.s = 1;
-	      notify(record, false);
+	      promise._v = value;
+	      promise._s = 1;
+	      notify(promise, false);
 	    }
 	  } catch(e){
-	    $reject.call({r: record, d: false}, e); // wrap
+	    $reject.call({_w: promise, _d: false}, e); // wrap
 	  }
 	};
 	
 	// constructor polyfill
 	if(!USE_NATIVE){
 	  // 25.4.3.1 Promise(executor)
-	  P = function Promise(executor){
+	  $Promise = function Promise(executor){
+	    anInstance(this, $Promise, PROMISE, '_h');
 	    aFunction(executor);
-	    var record = this._d = {
-	      p: strictNew(this, P, PROMISE),         // <- promise
-	      c: [],                                  // <- awaiting reactions
-	      a: undefined,                           // <- checked in isUnhandled reactions
-	      s: 0,                                   // <- state
-	      d: false,                               // <- done
-	      v: undefined,                           // <- value
-	      h: false,                               // <- handled rejection
-	      n: false                                // <- notify
-	    };
+	    Internal.call(this);
 	    try {
-	      executor(ctx($resolve, record, 1), ctx($reject, record, 1));
+	      executor(ctx($resolve, this, 1), ctx($reject, this, 1));
 	    } catch(err){
-	      $reject.call(record, err);
+	      $reject.call(this, err);
 	    }
 	  };
-	  __webpack_require__(144)(P.prototype, {
+	  Internal = function Promise(executor){
+	    this._c = [];             // <- awaiting reactions
+	    this._a = undefined;      // <- checked in isUnhandled reactions
+	    this._s = 0;              // <- state
+	    this._d = false;          // <- done
+	    this._v = undefined;      // <- value
+	    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
+	    this._n = false;          // <- notify
+	  };
+	  Internal.prototype = __webpack_require__(207)($Promise.prototype, {
 	    // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
 	    then: function then(onFulfilled, onRejected){
-	      var reaction = new PromiseCapability(speciesConstructor(this, P))
-	        , promise  = reaction.promise
-	        , record   = this._d;
+	      var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
 	      reaction.ok   = typeof onFulfilled == 'function' ? onFulfilled : true;
 	      reaction.fail = typeof onRejected == 'function' && onRejected;
-	      record.c.push(reaction);
-	      if(record.a)record.a.push(reaction);
-	      if(record.s)notify(record, false);
-	      return promise;
+	      this._c.push(reaction);
+	      if(this._a)this._a.push(reaction);
+	      if(this._s)notify(this, false);
+	      return reaction.promise;
 	    },
 	    // 25.4.5.1 Promise.prototype.catch(onRejected)
 	    'catch': function(onRejected){
 	      return this.then(undefined, onRejected);
 	    }
 	  });
+	  PromiseCapability = function(){
+	    var promise  = new Internal;
+	    this.promise = promise;
+	    this.resolve = ctx($resolve, promise, 1);
+	    this.reject  = ctx($reject, promise, 1);
+	  };
 	}
 	
-	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Promise: P});
-	__webpack_require__(37)(P, PROMISE);
-	__webpack_require__(123)(PROMISE);
-	Wrapper = __webpack_require__(7)[PROMISE];
+	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Promise: $Promise});
+	__webpack_require__(27)($Promise, PROMISE);
+	__webpack_require__(190)(PROMISE);
+	Wrapper = __webpack_require__(8)[PROMISE];
 	
 	// statics
 	$export($export.S + $export.F * !USE_NATIVE, PROMISE, {
 	  // 25.4.4.5 Promise.reject(r)
 	  reject: function reject(r){
-	    var capability = new PromiseCapability(this)
+	    var capability = newPromiseCapability(this)
 	      , $$reject   = capability.reject;
 	    $$reject(r);
 	    return capability.promise;
 	  }
 	});
-	$export($export.S + $export.F * (!USE_NATIVE || testResolve(true)), PROMISE, {
+	$export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
 	  // 25.4.4.6 Promise.resolve(x)
 	  resolve: function resolve(x){
 	    // instanceof instead of internal slot check because we should fix it without replacement native Promise core
-	    if(x instanceof P && sameConstructor(x.constructor, this))return x;
-	    var capability = new PromiseCapability(this)
+	    if(x instanceof $Promise && sameConstructor(x.constructor, this))return x;
+	    var capability = newPromiseCapability(this)
 	      , $$resolve  = capability.resolve;
 	    $$resolve(x);
 	    return capability.promise;
 	  }
 	});
-	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(117)(function(iter){
-	  P.all(iter)['catch'](function(){});
+	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(164)(function(iter){
+	  $Promise.all(iter)['catch'](empty);
 	})), PROMISE, {
 	  // 25.4.4.1 Promise.all(iterable)
 	  all: function all(iterable){
-	    var C          = getConstructor(this)
-	      , capability = new PromiseCapability(C)
+	    var C          = this
+	      , capability = newPromiseCapability(C)
 	      , resolve    = capability.resolve
-	      , reject     = capability.reject
-	      , values     = [];
+	      , reject     = capability.reject;
 	    var abrupt = perform(function(){
-	      forOf(iterable, false, values.push, values);
-	      var remaining = values.length
-	        , results   = Array(remaining);
-	      if(remaining)$.each.call(values, function(promise, index){
-	        var alreadyCalled = false;
+	      var values    = []
+	        , index     = 0
+	        , remaining = 1;
+	      forOf(iterable, false, function(promise){
+	        var $index        = index++
+	          , alreadyCalled = false;
+	        values.push(undefined);
+	        remaining++;
 	        C.resolve(promise).then(function(value){
 	          if(alreadyCalled)return;
-	          alreadyCalled = true;
-	          results[index] = value;
-	          --remaining || resolve(results);
+	          alreadyCalled  = true;
+	          values[$index] = value;
+	          --remaining || resolve(values);
 	        }, reject);
 	      });
-	      else resolve(results);
+	      --remaining || resolve(values);
 	    });
 	    if(abrupt)reject(abrupt.error);
 	    return capability.promise;
 	  },
 	  // 25.4.4.4 Promise.race(iterable)
 	  race: function race(iterable){
-	    var C          = getConstructor(this)
-	      , capability = new PromiseCapability(C)
+	    var C          = this
+	      , capability = newPromiseCapability(C)
 	      , reject     = capability.reject;
 	    var abrupt = perform(function(){
 	      forOf(iterable, false, function(promise){
@@ -3310,26 +4330,17 @@
 	});
 
 /***/ },
-/* 139 */
-/***/ function(module, exports) {
-
-	module.exports = function(it, Constructor, name){
-	  if(!(it instanceof Constructor))throw TypeError(name + ": use the 'new' operator!");
-	  return it;
-	};
-
-/***/ },
-/* 140 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ctx         = __webpack_require__(14)
-	  , call        = __webpack_require__(114)
-	  , isArrayIter = __webpack_require__(115)
-	  , anObject    = __webpack_require__(22)
-	  , toLength    = __webpack_require__(29)
-	  , getIterFn   = __webpack_require__(116);
-	module.exports = function(iterable, entries, fn, that){
-	  var iterFn = getIterFn(iterable)
+	var ctx         = __webpack_require__(23)
+	  , call        = __webpack_require__(161)
+	  , isArrayIter = __webpack_require__(162)
+	  , anObject    = __webpack_require__(15)
+	  , toLength    = __webpack_require__(37)
+	  , getIterFn   = __webpack_require__(163);
+	module.exports = function(iterable, entries, fn, that, ITERATOR){
+	  var iterFn = ITERATOR ? function(){ return iterable; } : getIterFn(iterable)
 	    , f      = ctx(fn, that, entries ? 2 : 1)
 	    , index  = 0
 	    , length, step, iterator;
@@ -3343,28 +4354,108 @@
 	};
 
 /***/ },
-/* 141 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.3.20 SpeciesConstructor(O, defaultConstructor)
-	var anObject  = __webpack_require__(22)
-	  , aFunction = __webpack_require__(15)
-	  , SPECIES   = __webpack_require__(33)('species');
+	var anObject  = __webpack_require__(15)
+	  , aFunction = __webpack_require__(24)
+	  , SPECIES   = __webpack_require__(28)('species');
 	module.exports = function(O, D){
 	  var C = anObject(O).constructor, S;
 	  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
 	};
 
 /***/ },
-/* 142 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global    = __webpack_require__(6)
-	  , macrotask = __webpack_require__(143).set
+	var ctx                = __webpack_require__(23)
+	  , invoke             = __webpack_require__(79)
+	  , html               = __webpack_require__(48)
+	  , cel                = __webpack_require__(18)
+	  , global             = __webpack_require__(7)
+	  , process            = global.process
+	  , setTask            = global.setImmediate
+	  , clearTask          = global.clearImmediate
+	  , MessageChannel     = global.MessageChannel
+	  , counter            = 0
+	  , queue              = {}
+	  , ONREADYSTATECHANGE = 'onreadystatechange'
+	  , defer, channel, port;
+	var run = function(){
+	  var id = +this;
+	  if(queue.hasOwnProperty(id)){
+	    var fn = queue[id];
+	    delete queue[id];
+	    fn();
+	  }
+	};
+	var listener = function(event){
+	  run.call(event.data);
+	};
+	// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
+	if(!setTask || !clearTask){
+	  setTask = function setImmediate(fn){
+	    var args = [], i = 1;
+	    while(arguments.length > i)args.push(arguments[i++]);
+	    queue[++counter] = function(){
+	      invoke(typeof fn == 'function' ? fn : Function(fn), args);
+	    };
+	    defer(counter);
+	    return counter;
+	  };
+	  clearTask = function clearImmediate(id){
+	    delete queue[id];
+	  };
+	  // Node.js 0.8-
+	  if(__webpack_require__(34)(process) == 'process'){
+	    defer = function(id){
+	      process.nextTick(ctx(run, id, 1));
+	    };
+	  // Browsers with MessageChannel, includes WebWorkers
+	  } else if(MessageChannel){
+	    channel = new MessageChannel;
+	    port    = channel.port2;
+	    channel.port1.onmessage = listener;
+	    defer = ctx(port.postMessage, port, 1);
+	  // Browsers with postMessage, skip WebWorkers
+	  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
+	  } else if(global.addEventListener && typeof postMessage == 'function' && !global.importScripts){
+	    defer = function(id){
+	      global.postMessage(id + '', '*');
+	    };
+	    global.addEventListener('message', listener, false);
+	  // IE8-
+	  } else if(ONREADYSTATECHANGE in cel('script')){
+	    defer = function(id){
+	      html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function(){
+	        html.removeChild(this);
+	        run.call(id);
+	      };
+	    };
+	  // Rest old browsers
+	  } else {
+	    defer = function(id){
+	      setTimeout(ctx(run, id, 1), 0);
+	    };
+	  }
+	}
+	module.exports = {
+	  set:   setTask,
+	  clear: clearTask
+	};
+
+/***/ },
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(7)
+	  , macrotask = __webpack_require__(205).set
 	  , Observer  = global.MutationObserver || global.WebKitMutationObserver
 	  , process   = global.process
 	  , Promise   = global.Promise
-	  , isNode    = __webpack_require__(20)(process) == 'process'
+	  , isNode    = __webpack_require__(34)(process) == 'process'
 	  , head, last, notify;
 	
 	var flush = function(){
@@ -3415,7 +4506,7 @@
 	  };
 	}
 	
-	module.exports = function asap(fn){
+	module.exports = function(fn){
 	  var task = {fn: fn, next: undefined, domain: isNode && process.domain};
 	  if(last)last.next = task;
 	  if(!head){
@@ -3425,104 +4516,24 @@
 	};
 
 /***/ },
-/* 143 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ctx                = __webpack_require__(14)
-	  , invoke             = __webpack_require__(21)
-	  , html               = __webpack_require__(16)
-	  , cel                = __webpack_require__(17)
-	  , global             = __webpack_require__(6)
-	  , process            = global.process
-	  , setTask            = global.setImmediate
-	  , clearTask          = global.clearImmediate
-	  , MessageChannel     = global.MessageChannel
-	  , counter            = 0
-	  , queue              = {}
-	  , ONREADYSTATECHANGE = 'onreadystatechange'
-	  , defer, channel, port;
-	var run = function(){
-	  var id = +this;
-	  if(queue.hasOwnProperty(id)){
-	    var fn = queue[id];
-	    delete queue[id];
-	    fn();
-	  }
-	};
-	var listner = function(event){
-	  run.call(event.data);
-	};
-	// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
-	if(!setTask || !clearTask){
-	  setTask = function setImmediate(fn){
-	    var args = [], i = 1;
-	    while(arguments.length > i)args.push(arguments[i++]);
-	    queue[++counter] = function(){
-	      invoke(typeof fn == 'function' ? fn : Function(fn), args);
-	    };
-	    defer(counter);
-	    return counter;
-	  };
-	  clearTask = function clearImmediate(id){
-	    delete queue[id];
-	  };
-	  // Node.js 0.8-
-	  if(__webpack_require__(20)(process) == 'process'){
-	    defer = function(id){
-	      process.nextTick(ctx(run, id, 1));
-	    };
-	  // Browsers with MessageChannel, includes WebWorkers
-	  } else if(MessageChannel){
-	    channel = new MessageChannel;
-	    port    = channel.port2;
-	    channel.port1.onmessage = listner;
-	    defer = ctx(port.postMessage, port, 1);
-	  // Browsers with postMessage, skip WebWorkers
-	  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
-	  } else if(global.addEventListener && typeof postMessage == 'function' && !global.importScripts){
-	    defer = function(id){
-	      global.postMessage(id + '', '*');
-	    };
-	    global.addEventListener('message', listner, false);
-	  // IE8-
-	  } else if(ONREADYSTATECHANGE in cel('script')){
-	    defer = function(id){
-	      html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function(){
-	        html.removeChild(this);
-	        run.call(id);
-	      };
-	    };
-	  // Rest old browsers
-	  } else {
-	    defer = function(id){
-	      setTimeout(ctx(run, id, 1), 0);
-	    };
-	  }
-	}
-	module.exports = {
-	  set:   setTask,
-	  clear: clearTask
-	};
-
-/***/ },
-/* 144 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var redefine = __webpack_require__(12);
-	module.exports = function(target, src){
-	  for(var key in src)redefine(target, key, src[key]);
+	var redefine = __webpack_require__(21);
+	module.exports = function(target, src, safe){
+	  for(var key in src)redefine(target, key, src[key], safe);
 	  return target;
 	};
 
 /***/ },
-/* 145 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strong = __webpack_require__(146);
+	var strong = __webpack_require__(209);
 	
 	// 23.1 Map Objects
-	__webpack_require__(147)('Map', function(get){
+	module.exports = __webpack_require__(210)('Map', function(get){
 	  return function Map(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.1.3.6 Map.prototype.get(key)
@@ -3537,41 +4548,24 @@
 	}, strong, true);
 
 /***/ },
-/* 146 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $            = __webpack_require__(4)
-	  , hide         = __webpack_require__(8)
-	  , redefineAll  = __webpack_require__(144)
-	  , ctx          = __webpack_require__(14)
-	  , strictNew    = __webpack_require__(139)
-	  , defined      = __webpack_require__(24)
-	  , forOf        = __webpack_require__(140)
-	  , $iterDefine  = __webpack_require__(101)
-	  , step         = __webpack_require__(121)
-	  , ID           = __webpack_require__(13)('id')
-	  , $has         = __webpack_require__(19)
-	  , isObject     = __webpack_require__(18)
-	  , setSpecies   = __webpack_require__(123)
-	  , DESCRIPTORS  = __webpack_require__(10)
-	  , isExtensible = Object.isExtensible || isObject
-	  , SIZE         = DESCRIPTORS ? '_s' : 'size'
-	  , id           = 0;
-	
-	var fastKey = function(it, create){
-	  // return primitive with prefix
-	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-	  if(!$has(it, ID)){
-	    // can't set id to frozen object
-	    if(!isExtensible(it))return 'F';
-	    // not necessary to add id
-	    if(!create)return 'E';
-	    // add missing object id
-	    hide(it, ID, ++id);
-	  // return object id with prefix
-	  } return 'O' + it[ID];
-	};
+	var dP          = __webpack_require__(14).f
+	  , create      = __webpack_require__(46)
+	  , hide        = __webpack_require__(13)
+	  , redefineAll = __webpack_require__(207)
+	  , ctx         = __webpack_require__(23)
+	  , anInstance  = __webpack_require__(91)
+	  , defined     = __webpack_require__(35)
+	  , forOf       = __webpack_require__(203)
+	  , $iterDefine = __webpack_require__(130)
+	  , step        = __webpack_require__(192)
+	  , setSpecies  = __webpack_require__(190)
+	  , DESCRIPTORS = __webpack_require__(10)
+	  , fastKey     = __webpack_require__(25).fastKey
+	  , SIZE        = DESCRIPTORS ? '_s' : 'size';
 	
 	var getEntry = function(that, key){
 	  // fast case
@@ -3586,11 +4580,11 @@
 	module.exports = {
 	  getConstructor: function(wrapper, NAME, IS_MAP, ADDER){
 	    var C = wrapper(function(that, iterable){
-	      strictNew(that, C, NAME);
-	      that._i = $.create(null); // index
-	      that._f = undefined;      // first entry
-	      that._l = undefined;      // last entry
-	      that[SIZE] = 0;           // size
+	      anInstance(that, C, NAME, '_i');
+	      that._i = create(null); // index
+	      that._f = undefined;    // first entry
+	      that._l = undefined;    // last entry
+	      that[SIZE] = 0;         // size
 	      if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
 	    });
 	    redefineAll(C.prototype, {
@@ -3625,6 +4619,7 @@
 	      // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
 	      // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
 	      forEach: function forEach(callbackfn /*, that = undefined */){
+	        anInstance(this, C, 'forEach');
 	        var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3)
 	          , entry;
 	        while(entry = entry ? entry.n : this._f){
@@ -3639,7 +4634,7 @@
 	        return !!getEntry(this, key);
 	      }
 	    });
-	    if(DESCRIPTORS)$.setDesc(C.prototype, 'size', {
+	    if(DESCRIPTORS)dP(C.prototype, 'size', {
 	      get: function(){
 	        return defined(this[SIZE]);
 	      }
@@ -3701,20 +4696,22 @@
 	};
 
 /***/ },
-/* 147 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var global         = __webpack_require__(6)
-	  , $export        = __webpack_require__(5)
-	  , redefine       = __webpack_require__(12)
-	  , redefineAll    = __webpack_require__(144)
-	  , forOf          = __webpack_require__(140)
-	  , strictNew      = __webpack_require__(139)
-	  , isObject       = __webpack_require__(18)
-	  , fails          = __webpack_require__(11)
-	  , $iterDetect    = __webpack_require__(117)
-	  , setToStringTag = __webpack_require__(37);
+	var global            = __webpack_require__(7)
+	  , $export           = __webpack_require__(12)
+	  , redefine          = __webpack_require__(21)
+	  , redefineAll       = __webpack_require__(207)
+	  , meta              = __webpack_require__(25)
+	  , forOf             = __webpack_require__(203)
+	  , anInstance        = __webpack_require__(91)
+	  , isObject          = __webpack_require__(16)
+	  , fails             = __webpack_require__(11)
+	  , $iterDetect       = __webpack_require__(164)
+	  , setToStringTag    = __webpack_require__(27)
+	  , inheritIfRequired = __webpack_require__(89);
 	
 	module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
 	  var Base  = global[NAME]
@@ -3741,6 +4738,7 @@
 	    // create collection constructor
 	    C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
 	    redefineAll(C.prototype, methods);
+	    meta.NEED = true;
 	  } else {
 	    var instance             = new C
 	      // early implementations not supports chaining
@@ -3750,20 +4748,23 @@
 	      // most early implementations doesn't supports iterables, most modern - not close it correctly
 	      , ACCEPT_ITERABLES     = $iterDetect(function(iter){ new C(iter); }) // eslint-disable-line no-new
 	      // for early implementations -0 and +0 not the same
-	      , BUGGY_ZERO;
+	      , BUGGY_ZERO = !IS_WEAK && fails(function(){
+	        // V8 ~ Chromium 42- fails only with 5+ elements
+	        var $instance = new C()
+	          , index     = 5;
+	        while(index--)$instance[ADDER](index, index);
+	        return !$instance.has(-0);
+	      });
 	    if(!ACCEPT_ITERABLES){ 
 	      C = wrapper(function(target, iterable){
-	        strictNew(target, C, NAME);
-	        var that = new Base;
+	        anInstance(target, C, NAME);
+	        var that = inheritIfRequired(new Base, target, C);
 	        if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
 	        return that;
 	      });
 	      C.prototype = proto;
 	      proto.constructor = C;
 	    }
-	    IS_WEAK || instance.forEach(function(val, key){
-	      BUGGY_ZERO = 1 / key === -Infinity;
-	    });
 	    if(THROWS_ON_PRIMITIVES || BUGGY_ZERO){
 	      fixMethod('delete');
 	      fixMethod('has');
@@ -3785,14 +4786,14 @@
 	};
 
 /***/ },
-/* 148 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strong = __webpack_require__(146);
+	var strong = __webpack_require__(209);
 	
 	// 23.2 Set Objects
-	__webpack_require__(147)('Set', function(get){
+	module.exports = __webpack_require__(210)('Set', function(get){
 	  return function Set(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.2.3.1 Set.prototype.add(value)
@@ -3802,46 +4803,60 @@
 	}, strong);
 
 /***/ },
-/* 149 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $            = __webpack_require__(4)
-	  , redefine     = __webpack_require__(12)
-	  , weak         = __webpack_require__(150)
-	  , isObject     = __webpack_require__(18)
-	  , has          = __webpack_require__(19)
-	  , frozenStore  = weak.frozenStore
-	  , WEAK         = weak.WEAK
-	  , isExtensible = Object.isExtensible || isObject
-	  , tmp          = {};
+	var each         = __webpack_require__(171)(0)
+	  , redefine     = __webpack_require__(21)
+	  , meta         = __webpack_require__(25)
+	  , assign       = __webpack_require__(70)
+	  , weak         = __webpack_require__(213)
+	  , isObject     = __webpack_require__(16)
+	  , has          = __webpack_require__(9)
+	  , getWeak      = meta.getWeak
+	  , isExtensible = Object.isExtensible
+	  , uncaughtFrozenStore = weak.ufstore
+	  , tmp          = {}
+	  , InternalMap;
 	
-	// 23.3 WeakMap Objects
-	var $WeakMap = __webpack_require__(147)('WeakMap', function(get){
-	  return function WeakMap(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
-	}, {
+	var wrapper = function(get){
+	  return function WeakMap(){
+	    return get(this, arguments.length > 0 ? arguments[0] : undefined);
+	  };
+	};
+	
+	var methods = {
 	  // 23.3.3.3 WeakMap.prototype.get(key)
 	  get: function get(key){
 	    if(isObject(key)){
-	      if(!isExtensible(key))return frozenStore(this).get(key);
-	      if(has(key, WEAK))return key[WEAK][this._i];
+	      var data = getWeak(key);
+	      if(data === true)return uncaughtFrozenStore(this).get(key);
+	      return data ? data[this._i] : undefined;
 	    }
 	  },
 	  // 23.3.3.5 WeakMap.prototype.set(key, value)
 	  set: function set(key, value){
 	    return weak.def(this, key, value);
 	  }
-	}, weak, true, true);
+	};
+	
+	// 23.3 WeakMap Objects
+	var $WeakMap = module.exports = __webpack_require__(210)('WeakMap', wrapper, methods, weak, true, true);
 	
 	// IE11 WeakMap frozen keys fix
 	if(new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7){
-	  $.each.call(['delete', 'has', 'get', 'set'], function(key){
+	  InternalMap = weak.getConstructor(wrapper);
+	  assign(InternalMap.prototype, methods);
+	  meta.NEED = true;
+	  each(['delete', 'has', 'get', 'set'], function(key){
 	    var proto  = $WeakMap.prototype
 	      , method = proto[key];
 	    redefine(proto, key, function(a, b){
-	      // store frozen objects on leaky map
+	      // store frozen objects on internal weakmap shim
 	      if(isObject(a) && !isExtensible(a)){
-	        var result = frozenStore(this)[key](a, b);
+	        if(!this._f)this._f = new InternalMap;
+	        var result = this._f[key](a, b);
 	        return key == 'set' ? this : result;
 	      // store all the rest on native weakmap
 	      } return method.call(this, a, b);
@@ -3850,46 +4865,44 @@
 	}
 
 /***/ },
-/* 150 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var hide              = __webpack_require__(8)
-	  , redefineAll       = __webpack_require__(144)
-	  , anObject          = __webpack_require__(22)
-	  , isObject          = __webpack_require__(18)
-	  , strictNew         = __webpack_require__(139)
-	  , forOf             = __webpack_require__(140)
-	  , createArrayMethod = __webpack_require__(30)
-	  , $has              = __webpack_require__(19)
-	  , WEAK              = __webpack_require__(13)('weak')
-	  , isExtensible      = Object.isExtensible || isObject
+	var redefineAll       = __webpack_require__(207)
+	  , getWeak           = __webpack_require__(25).getWeak
+	  , anObject          = __webpack_require__(15)
+	  , isObject          = __webpack_require__(16)
+	  , anInstance        = __webpack_require__(91)
+	  , forOf             = __webpack_require__(203)
+	  , createArrayMethod = __webpack_require__(171)
+	  , $has              = __webpack_require__(9)
 	  , arrayFind         = createArrayMethod(5)
 	  , arrayFindIndex    = createArrayMethod(6)
 	  , id                = 0;
 	
-	// fallback for frozen keys
-	var frozenStore = function(that){
-	  return that._l || (that._l = new FrozenStore);
+	// fallback for uncaught frozen keys
+	var uncaughtFrozenStore = function(that){
+	  return that._l || (that._l = new UncaughtFrozenStore);
 	};
-	var FrozenStore = function(){
+	var UncaughtFrozenStore = function(){
 	  this.a = [];
 	};
-	var findFrozen = function(store, key){
+	var findUncaughtFrozen = function(store, key){
 	  return arrayFind(store.a, function(it){
 	    return it[0] === key;
 	  });
 	};
-	FrozenStore.prototype = {
+	UncaughtFrozenStore.prototype = {
 	  get: function(key){
-	    var entry = findFrozen(this, key);
+	    var entry = findUncaughtFrozen(this, key);
 	    if(entry)return entry[1];
 	  },
 	  has: function(key){
-	    return !!findFrozen(this, key);
+	    return !!findUncaughtFrozen(this, key);
 	  },
 	  set: function(key, value){
-	    var entry = findFrozen(this, key);
+	    var entry = findUncaughtFrozen(this, key);
 	    if(entry)entry[1] = value;
 	    else this.a.push([key, value]);
 	  },
@@ -3905,9 +4918,9 @@
 	module.exports = {
 	  getConstructor: function(wrapper, NAME, IS_MAP, ADDER){
 	    var C = wrapper(function(that, iterable){
-	      strictNew(that, C, NAME);
+	      anInstance(that, C, NAME, '_i');
 	      that._i = id++;      // collection id
-	      that._l = undefined; // leak store for frozen objects
+	      that._l = undefined; // leak store for uncaught frozen objects
 	      if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
 	    });
 	    redefineAll(C.prototype, {
@@ -3915,40 +4928,39 @@
 	      // 23.4.3.3 WeakSet.prototype.delete(value)
 	      'delete': function(key){
 	        if(!isObject(key))return false;
-	        if(!isExtensible(key))return frozenStore(this)['delete'](key);
-	        return $has(key, WEAK) && $has(key[WEAK], this._i) && delete key[WEAK][this._i];
+	        var data = getWeak(key);
+	        if(data === true)return uncaughtFrozenStore(this)['delete'](key);
+	        return data && $has(data, this._i) && delete data[this._i];
 	      },
 	      // 23.3.3.4 WeakMap.prototype.has(key)
 	      // 23.4.3.4 WeakSet.prototype.has(value)
 	      has: function has(key){
 	        if(!isObject(key))return false;
-	        if(!isExtensible(key))return frozenStore(this).has(key);
-	        return $has(key, WEAK) && $has(key[WEAK], this._i);
+	        var data = getWeak(key);
+	        if(data === true)return uncaughtFrozenStore(this).has(key);
+	        return data && $has(data, this._i);
 	      }
 	    });
 	    return C;
 	  },
 	  def: function(that, key, value){
-	    if(!isExtensible(anObject(key))){
-	      frozenStore(that).set(key, value);
-	    } else {
-	      $has(key, WEAK) || hide(key, WEAK, {});
-	      key[WEAK][that._i] = value;
-	    } return that;
+	    var data = getWeak(anObject(key), true);
+	    if(data === true)uncaughtFrozenStore(that).set(key, value);
+	    else data[that._i] = value;
+	    return that;
 	  },
-	  frozenStore: frozenStore,
-	  WEAK: WEAK
+	  ufstore: uncaughtFrozenStore
 	};
 
 /***/ },
-/* 151 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var weak = __webpack_require__(150);
+	var weak = __webpack_require__(213);
 	
 	// 23.4 WeakSet Objects
-	__webpack_require__(147)('WeakSet', function(get){
+	__webpack_require__(210)('WeakSet', function(get){
 	  return function WeakSet(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.4.3.1 WeakSet.prototype.add(value)
@@ -3958,11 +4970,967 @@
 	}, weak, false, true);
 
 /***/ },
-/* 152 */
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export      = __webpack_require__(12)
+	  , $typed       = __webpack_require__(216)
+	  , buffer       = __webpack_require__(217)
+	  , anObject     = __webpack_require__(15)
+	  , toIndex      = __webpack_require__(39)
+	  , toLength     = __webpack_require__(37)
+	  , isObject     = __webpack_require__(16)
+	  , TYPED_ARRAY  = __webpack_require__(28)('typed_array')
+	  , ArrayBuffer  = __webpack_require__(7).ArrayBuffer
+	  , speciesConstructor = __webpack_require__(204)
+	  , $ArrayBuffer = buffer.ArrayBuffer
+	  , $DataView    = buffer.DataView
+	  , $isView      = $typed.ABV && ArrayBuffer.isView
+	  , $slice       = $ArrayBuffer.prototype.slice
+	  , VIEW         = $typed.VIEW
+	  , ARRAY_BUFFER = 'ArrayBuffer';
+	
+	$export($export.G + $export.W + $export.F * (ArrayBuffer !== $ArrayBuffer), {ArrayBuffer: $ArrayBuffer});
+	
+	$export($export.S + $export.F * !$typed.CONSTR, ARRAY_BUFFER, {
+	  // 24.1.3.1 ArrayBuffer.isView(arg)
+	  isView: function isView(it){
+	    return $isView && $isView(it) || isObject(it) && VIEW in it;
+	  }
+	});
+	
+	$export($export.P + $export.U + $export.F * __webpack_require__(11)(function(){
+	  return !new $ArrayBuffer(2).slice(1, undefined).byteLength;
+	}), ARRAY_BUFFER, {
+	  // 24.1.4.3 ArrayBuffer.prototype.slice(start, end)
+	  slice: function slice(start, end){
+	    if($slice !== undefined && end === undefined)return $slice.call(anObject(this), start); // FF fix
+	    var len    = anObject(this).byteLength
+	      , first  = toIndex(start, len)
+	      , final  = toIndex(end === undefined ? len : end, len)
+	      , result = new (speciesConstructor(this, $ArrayBuffer))(toLength(final - first))
+	      , viewS  = new $DataView(this)
+	      , viewT  = new $DataView(result)
+	      , index  = 0;
+	    while(first < final){
+	      viewT.setUint8(index++, viewS.getUint8(first++));
+	    } return result;
+	  }
+	});
+	
+	__webpack_require__(190)(ARRAY_BUFFER);
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global = __webpack_require__(7)
+	  , hide   = __webpack_require__(13)
+	  , uid    = __webpack_require__(22)
+	  , TYPED  = uid('typed_array')
+	  , VIEW   = uid('view')
+	  , ABV    = !!(global.ArrayBuffer && global.DataView)
+	  , CONSTR = ABV
+	  , i = 0, l = 9, Typed;
+	
+	var TypedArrayConstructors = (
+	  'Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array'
+	).split(',');
+	
+	while(i < l){
+	  if(Typed = global[TypedArrayConstructors[i++]]){
+	    hide(Typed.prototype, TYPED, true);
+	    hide(Typed.prototype, VIEW, true);
+	  } else CONSTR = false;
+	}
+	
+	module.exports = {
+	  ABV:    ABV,
+	  CONSTR: CONSTR,
+	  TYPED:  TYPED,
+	  VIEW:   VIEW
+	};
+
+/***/ },
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var global         = __webpack_require__(7)
+	  , DESCRIPTORS    = __webpack_require__(10)
+	  , LIBRARY        = __webpack_require__(52)
+	  , $typed         = __webpack_require__(216)
+	  , hide           = __webpack_require__(13)
+	  , redefineAll    = __webpack_require__(207)
+	  , fails          = __webpack_require__(11)
+	  , anInstance     = __webpack_require__(91)
+	  , toInteger      = __webpack_require__(38)
+	  , toLength       = __webpack_require__(37)
+	  , gOPN           = __webpack_require__(50).f
+	  , dP             = __webpack_require__(14).f
+	  , arrayFill      = __webpack_require__(186)
+	  , setToStringTag = __webpack_require__(27)
+	  , ARRAY_BUFFER   = 'ArrayBuffer'
+	  , DATA_VIEW      = 'DataView'
+	  , PROTOTYPE      = 'prototype'
+	  , WRONG_LENGTH   = 'Wrong length!'
+	  , WRONG_INDEX    = 'Wrong index!'
+	  , $ArrayBuffer   = global[ARRAY_BUFFER]
+	  , $DataView      = global[DATA_VIEW]
+	  , Math           = global.Math
+	  , parseInt       = global.parseInt
+	  , RangeError     = global.RangeError
+	  , Infinity       = global.Infinity
+	  , BaseBuffer     = $ArrayBuffer
+	  , abs            = Math.abs
+	  , pow            = Math.pow
+	  , min            = Math.min
+	  , floor          = Math.floor
+	  , log            = Math.log
+	  , LN2            = Math.LN2
+	  , BUFFER         = 'buffer'
+	  , BYTE_LENGTH    = 'byteLength'
+	  , BYTE_OFFSET    = 'byteOffset'
+	  , $BUFFER        = DESCRIPTORS ? '_b' : BUFFER
+	  , $LENGTH        = DESCRIPTORS ? '_l' : BYTE_LENGTH
+	  , $OFFSET        = DESCRIPTORS ? '_o' : BYTE_OFFSET;
+	
+	// IEEE754 conversions based on https://github.com/feross/ieee754
+	var packIEEE754 = function(value, mLen, nBytes){
+	  var buffer = Array(nBytes)
+	    , eLen   = nBytes * 8 - mLen - 1
+	    , eMax   = (1 << eLen) - 1
+	    , eBias  = eMax >> 1
+	    , rt     = mLen === 23 ? pow(2, -24) - pow(2, -77) : 0
+	    , i      = 0
+	    , s      = value < 0 || value === 0 && 1 / value < 0 ? 1 : 0
+	    , e, m, c;
+	  value = abs(value)
+	  if(value != value || value === Infinity){
+	    m = value != value ? 1 : 0;
+	    e = eMax;
+	  } else {
+	    e = floor(log(value) / LN2);
+	    if(value * (c = pow(2, -e)) < 1){
+	      e--;
+	      c *= 2;
+	    }
+	    if(e + eBias >= 1){
+	      value += rt / c;
+	    } else {
+	      value += rt * pow(2, 1 - eBias);
+	    }
+	    if(value * c >= 2){
+	      e++;
+	      c /= 2;
+	    }
+	    if(e + eBias >= eMax){
+	      m = 0;
+	      e = eMax;
+	    } else if(e + eBias >= 1){
+	      m = (value * c - 1) * pow(2, mLen);
+	      e = e + eBias;
+	    } else {
+	      m = value * pow(2, eBias - 1) * pow(2, mLen);
+	      e = 0;
+	    }
+	  }
+	  for(; mLen >= 8; buffer[i++] = m & 255, m /= 256, mLen -= 8);
+	  e = e << mLen | m;
+	  eLen += mLen;
+	  for(; eLen > 0; buffer[i++] = e & 255, e /= 256, eLen -= 8);
+	  buffer[--i] |= s * 128;
+	  return buffer;
+	};
+	var unpackIEEE754 = function(buffer, mLen, nBytes){
+	  var eLen  = nBytes * 8 - mLen - 1
+	    , eMax  = (1 << eLen) - 1
+	    , eBias = eMax >> 1
+	    , nBits = eLen - 7
+	    , i     = nBytes - 1
+	    , s     = buffer[i--]
+	    , e     = s & 127
+	    , m;
+	  s >>= 7;
+	  for(; nBits > 0; e = e * 256 + buffer[i], i--, nBits -= 8);
+	  m = e & (1 << -nBits) - 1;
+	  e >>= -nBits;
+	  nBits += mLen;
+	  for(; nBits > 0; m = m * 256 + buffer[i], i--, nBits -= 8);
+	  if(e === 0){
+	    e = 1 - eBias;
+	  } else if(e === eMax){
+	    return m ? NaN : s ? -Infinity : Infinity;
+	  } else {
+	    m = m + pow(2, mLen);
+	    e = e - eBias;
+	  } return (s ? -1 : 1) * m * pow(2, e - mLen);
+	};
+	
+	var unpackI32 = function(bytes){
+	  return bytes[3] << 24 | bytes[2] << 16 | bytes[1] << 8 | bytes[0];
+	};
+	var packI8 = function(it){
+	  return [it & 0xff];
+	};
+	var packI16 = function(it){
+	  return [it & 0xff, it >> 8 & 0xff];
+	};
+	var packI32 = function(it){
+	  return [it & 0xff, it >> 8 & 0xff, it >> 16 & 0xff, it >> 24 & 0xff];
+	};
+	var packF64 = function(it){
+	  return packIEEE754(it, 52, 8);
+	};
+	var packF32 = function(it){
+	  return packIEEE754(it, 23, 4);
+	};
+	
+	var addGetter = function(C, key, internal){
+	  dP(C[PROTOTYPE], key, {get: function(){ return this[internal]; }});
+	};
+	
+	var get = function(view, bytes, index, isLittleEndian){
+	  var numIndex = +index
+	    , intIndex = toInteger(numIndex);
+	  if(numIndex != intIndex || intIndex < 0 || intIndex + bytes > view[$LENGTH])throw RangeError(WRONG_INDEX);
+	  var store = view[$BUFFER]._b
+	    , start = intIndex + view[$OFFSET]
+	    , pack  = store.slice(start, start + bytes);
+	  return isLittleEndian ? pack : pack.reverse();
+	};
+	var set = function(view, bytes, index, conversion, value, isLittleEndian){
+	  var numIndex = +index
+	    , intIndex = toInteger(numIndex);
+	  if(numIndex != intIndex || intIndex < 0 || intIndex + bytes > view[$LENGTH])throw RangeError(WRONG_INDEX);
+	  var store = view[$BUFFER]._b
+	    , start = intIndex + view[$OFFSET]
+	    , pack  = conversion(+value);
+	  for(var i = 0; i < bytes; i++)store[start + i] = pack[isLittleEndian ? i : bytes - i - 1];
+	};
+	
+	var validateArrayBufferArguments = function(that, length){
+	  anInstance(that, $ArrayBuffer, ARRAY_BUFFER);
+	  var numberLength = +length
+	    , byteLength   = toLength(numberLength);
+	  if(numberLength != byteLength)throw RangeError(WRONG_LENGTH);
+	  return byteLength;
+	};
+	
+	if(!$typed.ABV){
+	  $ArrayBuffer = function ArrayBuffer(length){
+	    var byteLength = validateArrayBufferArguments(this, length);
+	    this._b       = arrayFill.call(Array(byteLength), 0);
+	    this[$LENGTH] = byteLength;
+	  };
+	
+	  $DataView = function DataView(buffer, byteOffset, byteLength){
+	    anInstance(this, $DataView, DATA_VIEW);
+	    anInstance(buffer, $ArrayBuffer, DATA_VIEW);
+	    var bufferLength = buffer[$LENGTH]
+	      , offset       = toInteger(byteOffset);
+	    if(offset < 0 || offset > bufferLength)throw RangeError('Wrong offset!');
+	    byteLength = byteLength === undefined ? bufferLength - offset : toLength(byteLength);
+	    if(offset + byteLength > bufferLength)throw RangeError(WRONG_LENGTH);
+	    this[$BUFFER] = buffer;
+	    this[$OFFSET] = offset;
+	    this[$LENGTH] = byteLength;
+	  };
+	
+	  if(DESCRIPTORS){
+	    addGetter($ArrayBuffer, BYTE_LENGTH, '_l');
+	    addGetter($DataView, BUFFER, '_b');
+	    addGetter($DataView, BYTE_LENGTH, '_l');
+	    addGetter($DataView, BYTE_OFFSET, '_o');
+	  }
+	
+	  redefineAll($DataView[PROTOTYPE], {
+	    getInt8: function getInt8(byteOffset){
+	      return get(this, 1, byteOffset)[0] << 24 >> 24;
+	    },
+	    getUint8: function getUint8(byteOffset){
+	      return get(this, 1, byteOffset)[0];
+	    },
+	    getInt16: function getInt16(byteOffset /*, littleEndian */){
+	      var bytes = get(this, 2, byteOffset, arguments[1]);
+	      return (bytes[1] << 8 | bytes[0]) << 16 >> 16;
+	    },
+	    getUint16: function getUint16(byteOffset /*, littleEndian */){
+	      var bytes = get(this, 2, byteOffset, arguments[1]);
+	      return bytes[1] << 8 | bytes[0];
+	    },
+	    getInt32: function getInt32(byteOffset /*, littleEndian */){
+	      return unpackI32(get(this, 4, byteOffset, arguments[1]));
+	    },
+	    getUint32: function getUint32(byteOffset /*, littleEndian */){
+	      return unpackI32(get(this, 4, byteOffset, arguments[1])) >>> 0;
+	    },
+	    getFloat32: function getFloat32(byteOffset /*, littleEndian */){
+	      return unpackIEEE754(get(this, 4, byteOffset, arguments[1]), 23, 4);
+	    },
+	    getFloat64: function getFloat64(byteOffset /*, littleEndian */){
+	      return unpackIEEE754(get(this, 8, byteOffset, arguments[1]), 52, 8);
+	    },
+	    setInt8: function setInt8(byteOffset, value){
+	      set(this, 1, byteOffset, packI8, value);
+	    },
+	    setUint8: function setUint8(byteOffset, value){
+	      set(this, 1, byteOffset, packI8, value);
+	    },
+	    setInt16: function setInt16(byteOffset, value /*, littleEndian */){
+	      set(this, 2, byteOffset, packI16, value, arguments[2]);
+	    },
+	    setUint16: function setUint16(byteOffset, value /*, littleEndian */){
+	      set(this, 2, byteOffset, packI16, value, arguments[2]);
+	    },
+	    setInt32: function setInt32(byteOffset, value /*, littleEndian */){
+	      set(this, 4, byteOffset, packI32, value, arguments[2]);
+	    },
+	    setUint32: function setUint32(byteOffset, value /*, littleEndian */){
+	      set(this, 4, byteOffset, packI32, value, arguments[2]);
+	    },
+	    setFloat32: function setFloat32(byteOffset, value /*, littleEndian */){
+	      set(this, 4, byteOffset, packF32, value, arguments[2]);
+	    },
+	    setFloat64: function setFloat64(byteOffset, value /*, littleEndian */){
+	      set(this, 8, byteOffset, packF64, value, arguments[2]);
+	    }
+	  });
+	} else {
+	  if(!fails(function(){
+	    new $ArrayBuffer;     // eslint-disable-line no-new
+	  }) || !fails(function(){
+	    new $ArrayBuffer(.5); // eslint-disable-line no-new
+	  })){
+	    $ArrayBuffer = function ArrayBuffer(length){
+	      return new BaseBuffer(validateArrayBufferArguments(this, length));
+	    };
+	    var ArrayBufferProto = $ArrayBuffer[PROTOTYPE] = BaseBuffer[PROTOTYPE];
+	    for(var keys = gOPN(BaseBuffer), j = 0, key; keys.length > j; ){
+	      if(!((key = keys[j++]) in $ArrayBuffer))hide($ArrayBuffer, key, BaseBuffer[key]);
+	    };
+	    if(!LIBRARY)ArrayBufferProto.constructor = $ArrayBuffer;
+	  }
+	  // iOS Safari 7.x bug
+	  var view = new $DataView(new $ArrayBuffer(2))
+	    , $setInt8 = $DataView[PROTOTYPE].setInt8;
+	  view.setInt8(0, 2147483648);
+	  view.setInt8(1, 2147483649);
+	  if(view.getInt8(0) || !view.getInt8(1))redefineAll($DataView[PROTOTYPE], {
+	    setInt8: function setInt8(byteOffset, value){
+	      $setInt8.call(this, byteOffset, value << 24 >> 24);
+	    },
+	    setUint8: function setUint8(byteOffset, value){
+	      $setInt8.call(this, byteOffset, value << 24 >> 24);
+	    }
+	  }, true);
+	}
+	setToStringTag($ArrayBuffer, ARRAY_BUFFER);
+	setToStringTag($DataView, DATA_VIEW);
+	hide($DataView[PROTOTYPE], $typed.VIEW, true);
+	exports[ARRAY_BUFFER] = $ArrayBuffer;
+	exports[DATA_VIEW] = $DataView;
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(12);
+	$export($export.G + $export.W + $export.F * !__webpack_require__(216).ABV, {
+	  DataView: __webpack_require__(217).DataView
+	});
+
+/***/ },
+/* 219 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Int8', 1, function(init){
+	  return function Int8Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	if(__webpack_require__(10)){
+	  var LIBRARY             = __webpack_require__(52)
+	    , global              = __webpack_require__(7)
+	    , fails               = __webpack_require__(11)
+	    , $export             = __webpack_require__(12)
+	    , $typed              = __webpack_require__(216)
+	    , $buffer             = __webpack_require__(217)
+	    , ctx                 = __webpack_require__(23)
+	    , anInstance          = __webpack_require__(91)
+	    , propertyDesc        = __webpack_require__(20)
+	    , hide                = __webpack_require__(13)
+	    , redefineAll         = __webpack_require__(207)
+	    , isInteger           = __webpack_require__(98)
+	    , toInteger           = __webpack_require__(38)
+	    , toLength            = __webpack_require__(37)
+	    , toIndex             = __webpack_require__(39)
+	    , toPrimitive         = __webpack_require__(19)
+	    , has                 = __webpack_require__(9)
+	    , same                = __webpack_require__(72)
+	    , classof             = __webpack_require__(76)
+	    , isObject            = __webpack_require__(16)
+	    , toObject            = __webpack_require__(59)
+	    , isArrayIter         = __webpack_require__(162)
+	    , create              = __webpack_require__(46)
+	    , getPrototypeOf      = __webpack_require__(60)
+	    , gOPN                = __webpack_require__(50).f
+	    , isIterable          = __webpack_require__(221)
+	    , getIterFn           = __webpack_require__(163)
+	    , uid                 = __webpack_require__(22)
+	    , wks                 = __webpack_require__(28)
+	    , createArrayMethod   = __webpack_require__(171)
+	    , createArrayIncludes = __webpack_require__(36)
+	    , speciesConstructor  = __webpack_require__(204)
+	    , ArrayIterators      = __webpack_require__(191)
+	    , Iterators           = __webpack_require__(131)
+	    , $iterDetect         = __webpack_require__(164)
+	    , setSpecies          = __webpack_require__(190)
+	    , arrayFill           = __webpack_require__(186)
+	    , arrayCopyWithin     = __webpack_require__(183)
+	    , $DP                 = __webpack_require__(14)
+	    , $GOPD               = __webpack_require__(51)
+	    , dP                  = $DP.f
+	    , gOPD                = $GOPD.f
+	    , RangeError          = global.RangeError
+	    , TypeError           = global.TypeError
+	    , Uint8Array          = global.Uint8Array
+	    , ARRAY_BUFFER        = 'ArrayBuffer'
+	    , SHARED_BUFFER       = 'Shared' + ARRAY_BUFFER
+	    , BYTES_PER_ELEMENT   = 'BYTES_PER_ELEMENT'
+	    , PROTOTYPE           = 'prototype'
+	    , ArrayProto          = Array[PROTOTYPE]
+	    , $ArrayBuffer        = $buffer.ArrayBuffer
+	    , $DataView           = $buffer.DataView
+	    , arrayForEach        = createArrayMethod(0)
+	    , arrayFilter         = createArrayMethod(2)
+	    , arraySome           = createArrayMethod(3)
+	    , arrayEvery          = createArrayMethod(4)
+	    , arrayFind           = createArrayMethod(5)
+	    , arrayFindIndex      = createArrayMethod(6)
+	    , arrayIncludes       = createArrayIncludes(true)
+	    , arrayIndexOf        = createArrayIncludes(false)
+	    , arrayValues         = ArrayIterators.values
+	    , arrayKeys           = ArrayIterators.keys
+	    , arrayEntries        = ArrayIterators.entries
+	    , arrayLastIndexOf    = ArrayProto.lastIndexOf
+	    , arrayReduce         = ArrayProto.reduce
+	    , arrayReduceRight    = ArrayProto.reduceRight
+	    , arrayJoin           = ArrayProto.join
+	    , arraySort           = ArrayProto.sort
+	    , arraySlice          = ArrayProto.slice
+	    , arrayToString       = ArrayProto.toString
+	    , arrayToLocaleString = ArrayProto.toLocaleString
+	    , ITERATOR            = wks('iterator')
+	    , TAG                 = wks('toStringTag')
+	    , TYPED_CONSTRUCTOR   = uid('typed_constructor')
+	    , DEF_CONSTRUCTOR     = uid('def_constructor')
+	    , ALL_CONSTRUCTORS    = $typed.CONSTR
+	    , TYPED_ARRAY         = $typed.TYPED
+	    , VIEW                = $typed.VIEW
+	    , WRONG_LENGTH        = 'Wrong length!';
+	
+	  var $map = createArrayMethod(1, function(O, length){
+	    return allocate(speciesConstructor(O, O[DEF_CONSTRUCTOR]), length);
+	  });
+	
+	  var LITTLE_ENDIAN = fails(function(){
+	    return new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
+	  });
+	
+	  var FORCED_SET = !!Uint8Array && !!Uint8Array[PROTOTYPE].set && fails(function(){
+	    new Uint8Array(1).set({});
+	  });
+	
+	  var strictToLength = function(it, SAME){
+	    if(it === undefined)throw TypeError(WRONG_LENGTH);
+	    var number = +it
+	      , length = toLength(it);
+	    if(SAME && !same(number, length))throw RangeError(WRONG_LENGTH);
+	    return length;
+	  };
+	
+	  var toOffset = function(it, BYTES){
+	    var offset = toInteger(it);
+	    if(offset < 0 || offset % BYTES)throw RangeError('Wrong offset!');
+	    return offset;
+	  };
+	
+	  var validate = function(it){
+	    if(isObject(it) && TYPED_ARRAY in it)return it;
+	    throw TypeError(it + ' is not a typed array!');
+	  };
+	
+	  var allocate = function(C, length){
+	    if(!(isObject(C) && TYPED_CONSTRUCTOR in C)){
+	      throw TypeError('It is not a typed array constructor!');
+	    } return new C(length);
+	  };
+	
+	  var speciesFromList = function(O, list){
+	    return fromList(speciesConstructor(O, O[DEF_CONSTRUCTOR]), list);
+	  };
+	
+	  var fromList = function(C, list){
+	    var index  = 0
+	      , length = list.length
+	      , result = allocate(C, length);
+	    while(length > index)result[index] = list[index++];
+	    return result;
+	  };
+	
+	  var addGetter = function(it, key, internal){
+	    dP(it, key, {get: function(){ return this._d[internal]; }});
+	  };
+	
+	  var $from = function from(source /*, mapfn, thisArg */){
+	    var O       = toObject(source)
+	      , aLen    = arguments.length
+	      , mapfn   = aLen > 1 ? arguments[1] : undefined
+	      , mapping = mapfn !== undefined
+	      , iterFn  = getIterFn(O)
+	      , i, length, values, result, step, iterator;
+	    if(iterFn != undefined && !isArrayIter(iterFn)){
+	      for(iterator = iterFn.call(O), values = [], i = 0; !(step = iterator.next()).done; i++){
+	        values.push(step.value);
+	      } O = values;
+	    }
+	    if(mapping && aLen > 2)mapfn = ctx(mapfn, arguments[2], 2);
+	    for(i = 0, length = toLength(O.length), result = allocate(this, length); length > i; i++){
+	      result[i] = mapping ? mapfn(O[i], i) : O[i];
+	    }
+	    return result;
+	  };
+	
+	  var $of = function of(/*...items*/){
+	    var index  = 0
+	      , length = arguments.length
+	      , result = allocate(this, length);
+	    while(length > index)result[index] = arguments[index++];
+	    return result;
+	  };
+	
+	  // iOS Safari 6.x fails here
+	  var TO_LOCALE_BUG = !!Uint8Array && fails(function(){ arrayToLocaleString.call(new Uint8Array(1)); });
+	
+	  var $toLocaleString = function toLocaleString(){
+	    return arrayToLocaleString.apply(TO_LOCALE_BUG ? arraySlice.call(validate(this)) : validate(this), arguments);
+	  };
+	
+	  var proto = {
+	    copyWithin: function copyWithin(target, start /*, end */){
+	      return arrayCopyWithin.call(validate(this), target, start, arguments.length > 2 ? arguments[2] : undefined);
+	    },
+	    every: function every(callbackfn /*, thisArg */){
+	      return arrayEvery(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    fill: function fill(value /*, start, end */){ // eslint-disable-line no-unused-vars
+	      return arrayFill.apply(validate(this), arguments);
+	    },
+	    filter: function filter(callbackfn /*, thisArg */){
+	      return speciesFromList(this, arrayFilter(validate(this), callbackfn,
+	        arguments.length > 1 ? arguments[1] : undefined));
+	    },
+	    find: function find(predicate /*, thisArg */){
+	      return arrayFind(validate(this), predicate, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    findIndex: function findIndex(predicate /*, thisArg */){
+	      return arrayFindIndex(validate(this), predicate, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    forEach: function forEach(callbackfn /*, thisArg */){
+	      arrayForEach(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    indexOf: function indexOf(searchElement /*, fromIndex */){
+	      return arrayIndexOf(validate(this), searchElement, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    includes: function includes(searchElement /*, fromIndex */){
+	      return arrayIncludes(validate(this), searchElement, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    join: function join(separator){ // eslint-disable-line no-unused-vars
+	      return arrayJoin.apply(validate(this), arguments);
+	    },
+	    lastIndexOf: function lastIndexOf(searchElement /*, fromIndex */){ // eslint-disable-line no-unused-vars
+	      return arrayLastIndexOf.apply(validate(this), arguments);
+	    },
+	    map: function map(mapfn /*, thisArg */){
+	      return $map(validate(this), mapfn, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    reduce: function reduce(callbackfn /*, initialValue */){ // eslint-disable-line no-unused-vars
+	      return arrayReduce.apply(validate(this), arguments);
+	    },
+	    reduceRight: function reduceRight(callbackfn /*, initialValue */){ // eslint-disable-line no-unused-vars
+	      return arrayReduceRight.apply(validate(this), arguments);
+	    },
+	    reverse: function reverse(){
+	      var that   = this
+	        , length = validate(that).length
+	        , middle = Math.floor(length / 2)
+	        , index  = 0
+	        , value;
+	      while(index < middle){
+	        value         = that[index];
+	        that[index++] = that[--length];
+	        that[length]  = value;
+	      } return that;
+	    },
+	    slice: function slice(start, end){
+	      return speciesFromList(this, arraySlice.call(validate(this), start, end));
+	    },
+	    some: function some(callbackfn /*, thisArg */){
+	      return arraySome(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+	    },
+	    sort: function sort(comparefn){
+	      return arraySort.call(validate(this), comparefn);
+	    },
+	    subarray: function subarray(begin, end){
+	      var O      = validate(this)
+	        , length = O.length
+	        , $begin = toIndex(begin, length);
+	      return new (speciesConstructor(O, O[DEF_CONSTRUCTOR]))(
+	        O.buffer,
+	        O.byteOffset + $begin * O.BYTES_PER_ELEMENT,
+	        toLength((end === undefined ? length : toIndex(end, length)) - $begin)
+	      );
+	    }
+	  };
+	
+	  var $set = function set(arrayLike /*, offset */){
+	    validate(this);
+	    var offset = toOffset(arguments[1], 1)
+	      , length = this.length
+	      , src    = toObject(arrayLike)
+	      , len    = toLength(src.length)
+	      , index  = 0;
+	    if(len + offset > length)throw RangeError(WRONG_LENGTH);
+	    while(index < len)this[offset + index] = src[index++];
+	  };
+	
+	  var $iterators = {
+	    entries: function entries(){
+	      return arrayEntries.call(validate(this));
+	    },
+	    keys: function keys(){
+	      return arrayKeys.call(validate(this));
+	    },
+	    values: function values(){
+	      return arrayValues.call(validate(this));
+	    }
+	  };
+	
+	  var isTAIndex = function(target, key){
+	    return isObject(target)
+	      && target[TYPED_ARRAY]
+	      && typeof key != 'symbol'
+	      && key in target
+	      && String(+key) == String(key);
+	  };
+	  var $getDesc = function getOwnPropertyDescriptor(target, key){
+	    return isTAIndex(target, key = toPrimitive(key, true))
+	      ? propertyDesc(2, target[key])
+	      : gOPD(target, key);
+	  };
+	  var $setDesc = function defineProperty(target, key, desc){
+	    if(isTAIndex(target, key = toPrimitive(key, true))
+	      && isObject(desc)
+	      && has(desc, 'value')
+	      && !has(desc, 'get')
+	      && !has(desc, 'set')
+	      // TODO: add validation descriptor w/o calling accessors
+	      && !desc.configurable
+	      && (!has(desc, 'writable') || desc.writable)
+	      && (!has(desc, 'enumerable') || desc.enumerable)
+	    ){
+	      target[key] = desc.value;
+	      return target;
+	    } else return dP(target, key, desc);
+	  };
+	
+	  if(!ALL_CONSTRUCTORS){
+	    $GOPD.f = $getDesc;
+	    $DP.f   = $setDesc;
+	  }
+	
+	  $export($export.S + $export.F * !ALL_CONSTRUCTORS, 'Object', {
+	    getOwnPropertyDescriptor: $getDesc,
+	    defineProperty:           $setDesc
+	  });
+	
+	  if(fails(function(){ arrayToString.call({}); })){
+	    arrayToString = arrayToLocaleString = function toString(){
+	      return arrayJoin.call(this);
+	    }
+	  }
+	
+	  var $TypedArrayPrototype$ = redefineAll({}, proto);
+	  redefineAll($TypedArrayPrototype$, $iterators);
+	  hide($TypedArrayPrototype$, ITERATOR, $iterators.values);
+	  redefineAll($TypedArrayPrototype$, {
+	    set:            $set,
+	    constructor:    function(){ /* noop */ },
+	    toString:       arrayToString,
+	    toLocaleString: $toLocaleString
+	  });
+	  addGetter($TypedArrayPrototype$, 'buffer', 'b');
+	  addGetter($TypedArrayPrototype$, 'byteOffset', 'o');
+	  addGetter($TypedArrayPrototype$, 'byteLength', 'l');
+	  addGetter($TypedArrayPrototype$, 'length', 'e');
+	  dP($TypedArrayPrototype$, TAG, {
+	    get: function(){ return this[TYPED_ARRAY]; }
+	  });
+	
+	  module.exports = function(KEY, BYTES, wrapper, CLAMPED){
+	    CLAMPED = !!CLAMPED;
+	    var NAME       = KEY + (CLAMPED ? 'Clamped' : '') + 'Array'
+	      , ISNT_UINT8 = NAME != 'Uint8Array'
+	      , GETTER     = 'get' + KEY
+	      , SETTER     = 'set' + KEY
+	      , TypedArray = global[NAME]
+	      , Base       = TypedArray || {}
+	      , TAC        = TypedArray && getPrototypeOf(TypedArray)
+	      , FORCED     = !TypedArray || !$typed.ABV
+	      , O          = {}
+	      , TypedArrayPrototype = TypedArray && TypedArray[PROTOTYPE];
+	    var getter = function(that, index){
+	      var data = that._d;
+	      return data.v[GETTER](index * BYTES + data.o, LITTLE_ENDIAN);
+	    };
+	    var setter = function(that, index, value){
+	      var data = that._d;
+	      if(CLAMPED)value = (value = Math.round(value)) < 0 ? 0 : value > 0xff ? 0xff : value & 0xff;
+	      data.v[SETTER](index * BYTES + data.o, value, LITTLE_ENDIAN);
+	    };
+	    var addElement = function(that, index){
+	      dP(that, index, {
+	        get: function(){
+	          return getter(this, index);
+	        },
+	        set: function(value){
+	          return setter(this, index, value);
+	        },
+	        enumerable: true
+	      });
+	    };
+	    if(FORCED){
+	      TypedArray = wrapper(function(that, data, $offset, $length){
+	        anInstance(that, TypedArray, NAME, '_d');
+	        var index  = 0
+	          , offset = 0
+	          , buffer, byteLength, length, klass;
+	        if(!isObject(data)){
+	          length     = strictToLength(data, true)
+	          byteLength = length * BYTES;
+	          buffer     = new $ArrayBuffer(byteLength);
+	        } else if(data instanceof $ArrayBuffer || (klass = classof(data)) == ARRAY_BUFFER || klass == SHARED_BUFFER){
+	          buffer = data;
+	          offset = toOffset($offset, BYTES);
+	          var $len = data.byteLength;
+	          if($length === undefined){
+	            if($len % BYTES)throw RangeError(WRONG_LENGTH);
+	            byteLength = $len - offset;
+	            if(byteLength < 0)throw RangeError(WRONG_LENGTH);
+	          } else {
+	            byteLength = toLength($length) * BYTES;
+	            if(byteLength + offset > $len)throw RangeError(WRONG_LENGTH);
+	          }
+	          length = byteLength / BYTES;
+	        } else if(TYPED_ARRAY in data){
+	          return fromList(TypedArray, data);
+	        } else {
+	          return $from.call(TypedArray, data);
+	        }
+	        hide(that, '_d', {
+	          b: buffer,
+	          o: offset,
+	          l: byteLength,
+	          e: length,
+	          v: new $DataView(buffer)
+	        });
+	        while(index < length)addElement(that, index++);
+	      });
+	      TypedArrayPrototype = TypedArray[PROTOTYPE] = create($TypedArrayPrototype$);
+	      hide(TypedArrayPrototype, 'constructor', TypedArray);
+	    } else if(!$iterDetect(function(iter){
+	      // V8 works with iterators, but fails in many other cases
+	      // https://code.google.com/p/v8/issues/detail?id=4552
+	      new TypedArray(null); // eslint-disable-line no-new
+	      new TypedArray(iter); // eslint-disable-line no-new
+	    }, true)){
+	      TypedArray = wrapper(function(that, data, $offset, $length){
+	        anInstance(that, TypedArray, NAME);
+	        var klass;
+	        // `ws` module bug, temporarily remove validation length for Uint8Array
+	        // https://github.com/websockets/ws/pull/645
+	        if(!isObject(data))return new Base(strictToLength(data, ISNT_UINT8));
+	        if(data instanceof $ArrayBuffer || (klass = classof(data)) == ARRAY_BUFFER || klass == SHARED_BUFFER){
+	          return $length !== undefined
+	            ? new Base(data, toOffset($offset, BYTES), $length)
+	            : $offset !== undefined
+	              ? new Base(data, toOffset($offset, BYTES))
+	              : new Base(data);
+	        }
+	        if(TYPED_ARRAY in data)return fromList(TypedArray, data);
+	        return $from.call(TypedArray, data);
+	      });
+	      arrayForEach(TAC !== Function.prototype ? gOPN(Base).concat(gOPN(TAC)) : gOPN(Base), function(key){
+	        if(!(key in TypedArray))hide(TypedArray, key, Base[key]);
+	      });
+	      TypedArray[PROTOTYPE] = TypedArrayPrototype;
+	      if(!LIBRARY)TypedArrayPrototype.constructor = TypedArray;
+	    }
+	    var $nativeIterator   = TypedArrayPrototype[ITERATOR]
+	      , CORRECT_ITER_NAME = !!$nativeIterator && ($nativeIterator.name == 'values' || $nativeIterator.name == undefined)
+	      , $iterator         = $iterators.values;
+	    hide(TypedArray, TYPED_CONSTRUCTOR, true);
+	    hide(TypedArrayPrototype, TYPED_ARRAY, NAME);
+	    hide(TypedArrayPrototype, VIEW, true);
+	    hide(TypedArrayPrototype, DEF_CONSTRUCTOR, TypedArray);
+	
+	    if(CLAMPED ? new TypedArray(1)[TAG] != NAME : !(TAG in TypedArrayPrototype)){
+	      dP(TypedArrayPrototype, TAG, {
+	        get: function(){ return NAME; }
+	      });
+	    }
+	
+	    O[NAME] = TypedArray;
+	
+	    $export($export.G + $export.W + $export.F * (TypedArray != Base), O);
+	
+	    $export($export.S, NAME, {
+	      BYTES_PER_ELEMENT: BYTES,
+	      from: $from,
+	      of: $of
+	    });
+	
+	    if(!(BYTES_PER_ELEMENT in TypedArrayPrototype))hide(TypedArrayPrototype, BYTES_PER_ELEMENT, BYTES);
+	
+	    $export($export.P, NAME, proto);
+	
+	    $export($export.P + $export.F * FORCED_SET, NAME, {set: $set});
+	
+	    $export($export.P + $export.F * !CORRECT_ITER_NAME, NAME, $iterators);
+	
+	    $export($export.P + $export.F * (TypedArrayPrototype.toString != arrayToString), NAME, {toString: arrayToString});
+	
+	    $export($export.P + $export.F * (fails(function(){
+	      return [1, 2].toLocaleString() != new TypedArray([1, 2]).toLocaleString()
+	    }) || !fails(function(){
+	      TypedArrayPrototype.toLocaleString.call([1, 2]);
+	    })), NAME, {toLocaleString: $toLocaleString});
+	
+	    Iterators[NAME] = CORRECT_ITER_NAME ? $nativeIterator : $iterator;
+	    if(!LIBRARY && !CORRECT_ITER_NAME)hide(TypedArrayPrototype, ITERATOR, $iterator);
+	
+	    setSpecies(NAME);
+	  };
+	} else module.exports = function(){ /* empty */ };
+
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var classof   = __webpack_require__(76)
+	  , ITERATOR  = __webpack_require__(28)('iterator')
+	  , Iterators = __webpack_require__(131);
+	module.exports = __webpack_require__(8).isIterable = function(it){
+	  var O = Object(it);
+	  return O[ITERATOR] !== undefined
+	    || '@@iterator' in O
+	    || Iterators.hasOwnProperty(classof(O));
+	};
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Uint8', 1, function(init){
+	  return function Uint8Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Uint8', 1, function(init){
+	  return function Uint8ClampedArray(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	}, true);
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Int16', 2, function(init){
+	  return function Int16Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Uint16', 2, function(init){
+	  return function Uint16Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Int32', 4, function(init){
+	  return function Int32Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Uint32', 4, function(init){
+	  return function Uint32Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Float32', 4, function(init){
+	  return function Float32Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(220)('Float64', 8, function(init){
+	  return function Float64Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
-	var $export = __webpack_require__(5)
+	var $export = __webpack_require__(12)
 	  , _apply  = Function.apply;
 	
 	$export($export.S, 'Reflect', {
@@ -3972,16 +5940,16 @@
 	});
 
 /***/ },
-/* 153 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
-	var $         = __webpack_require__(4)
-	  , $export   = __webpack_require__(5)
-	  , aFunction = __webpack_require__(15)
-	  , anObject  = __webpack_require__(22)
-	  , isObject  = __webpack_require__(18)
-	  , bind      = Function.bind || __webpack_require__(7).Function.prototype.bind;
+	var $export   = __webpack_require__(12)
+	  , create    = __webpack_require__(46)
+	  , aFunction = __webpack_require__(24)
+	  , anObject  = __webpack_require__(15)
+	  , isObject  = __webpack_require__(16)
+	  , bind      = __webpack_require__(78);
 	
 	// MS Edge supports only 2 arguments
 	// FF Nightly sets third argument as `new.target`, but does not create `this` from it
@@ -4008,29 +5976,32 @@
 	    }
 	    // with altered newTarget, not support built-in constructors
 	    var proto    = newTarget.prototype
-	      , instance = $.create(isObject(proto) ? proto : Object.prototype)
+	      , instance = create(isObject(proto) ? proto : Object.prototype)
 	      , result   = Function.apply.call(Target, instance, args);
 	    return isObject(result) ? result : instance;
 	  }
 	});
 
 /***/ },
-/* 154 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
-	var $        = __webpack_require__(4)
-	  , $export  = __webpack_require__(5)
-	  , anObject = __webpack_require__(22);
+	var dP          = __webpack_require__(14)
+	  , $export     = __webpack_require__(12)
+	  , anObject    = __webpack_require__(15)
+	  , toPrimitive = __webpack_require__(19);
 	
 	// MS Edge has broken Reflect.defineProperty - throwing instead of returning false
 	$export($export.S + $export.F * __webpack_require__(11)(function(){
-	  Reflect.defineProperty($.setDesc({}, 1, {value: 1}), 1, {value: 2});
+	  Reflect.defineProperty(dP.f({}, 1, {value: 1}), 1, {value: 2});
 	}), 'Reflect', {
 	  defineProperty: function defineProperty(target, propertyKey, attributes){
 	    anObject(target);
+	    propertyKey = toPrimitive(propertyKey, true);
+	    anObject(attributes);
 	    try {
-	      $.setDesc(target, propertyKey, attributes);
+	      dP.f(target, propertyKey, attributes);
 	      return true;
 	    } catch(e){
 	      return false;
@@ -4039,29 +6010,29 @@
 	});
 
 /***/ },
-/* 155 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.4 Reflect.deleteProperty(target, propertyKey)
-	var $export  = __webpack_require__(5)
-	  , getDesc  = __webpack_require__(4).getDesc
-	  , anObject = __webpack_require__(22);
+	var $export  = __webpack_require__(12)
+	  , gOPD     = __webpack_require__(51).f
+	  , anObject = __webpack_require__(15);
 	
 	$export($export.S, 'Reflect', {
 	  deleteProperty: function deleteProperty(target, propertyKey){
-	    var desc = getDesc(anObject(target), propertyKey);
+	    var desc = gOPD(anObject(target), propertyKey);
 	    return desc && !desc.configurable ? false : delete target[propertyKey];
 	  }
 	});
 
 /***/ },
-/* 156 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 26.1.5 Reflect.enumerate(target)
-	var $export  = __webpack_require__(5)
-	  , anObject = __webpack_require__(22);
+	var $export  = __webpack_require__(12)
+	  , anObject = __webpack_require__(15);
 	var Enumerate = function(iterated){
 	  this._t = anObject(iterated); // target
 	  this._i = 0;                  // next index
@@ -4069,7 +6040,7 @@
 	    , key;
 	  for(key in iterated)keys.push(key);
 	};
-	__webpack_require__(103)(Enumerate, 'Object', function(){
+	__webpack_require__(132)(Enumerate, 'Object', function(){
 	  var that = this
 	    , keys = that._k
 	    , key;
@@ -4086,53 +6057,54 @@
 	});
 
 /***/ },
-/* 157 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.6 Reflect.get(target, propertyKey [, receiver])
-	var $        = __webpack_require__(4)
-	  , has      = __webpack_require__(19)
-	  , $export  = __webpack_require__(5)
-	  , isObject = __webpack_require__(18)
-	  , anObject = __webpack_require__(22);
+	var gOPD           = __webpack_require__(51)
+	  , getPrototypeOf = __webpack_require__(60)
+	  , has            = __webpack_require__(9)
+	  , $export        = __webpack_require__(12)
+	  , isObject       = __webpack_require__(16)
+	  , anObject       = __webpack_require__(15);
 	
 	function get(target, propertyKey/*, receiver*/){
 	  var receiver = arguments.length < 3 ? target : arguments[2]
 	    , desc, proto;
 	  if(anObject(target) === receiver)return target[propertyKey];
-	  if(desc = $.getDesc(target, propertyKey))return has(desc, 'value')
+	  if(desc = gOPD.f(target, propertyKey))return has(desc, 'value')
 	    ? desc.value
 	    : desc.get !== undefined
 	      ? desc.get.call(receiver)
 	      : undefined;
-	  if(isObject(proto = $.getProto(target)))return get(proto, propertyKey, receiver);
+	  if(isObject(proto = getPrototypeOf(target)))return get(proto, propertyKey, receiver);
 	}
 	
 	$export($export.S, 'Reflect', {get: get});
 
 /***/ },
-/* 158 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
-	var $        = __webpack_require__(4)
-	  , $export  = __webpack_require__(5)
-	  , anObject = __webpack_require__(22);
+	var gOPD     = __webpack_require__(51)
+	  , $export  = __webpack_require__(12)
+	  , anObject = __webpack_require__(15);
 	
 	$export($export.S, 'Reflect', {
 	  getOwnPropertyDescriptor: function getOwnPropertyDescriptor(target, propertyKey){
-	    return $.getDesc(anObject(target), propertyKey);
+	    return gOPD.f(anObject(target), propertyKey);
 	  }
 	});
 
 /***/ },
-/* 159 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.8 Reflect.getPrototypeOf(target)
-	var $export  = __webpack_require__(5)
-	  , getProto = __webpack_require__(4).getProto
-	  , anObject = __webpack_require__(22);
+	var $export  = __webpack_require__(12)
+	  , getProto = __webpack_require__(60)
+	  , anObject = __webpack_require__(15);
 	
 	$export($export.S, 'Reflect', {
 	  getPrototypeOf: function getPrototypeOf(target){
@@ -4141,11 +6113,11 @@
 	});
 
 /***/ },
-/* 160 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.9 Reflect.has(target, propertyKey)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
 	$export($export.S, 'Reflect', {
 	  has: function has(target, propertyKey){
@@ -4154,12 +6126,12 @@
 	});
 
 /***/ },
-/* 161 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.10 Reflect.isExtensible(target)
-	var $export       = __webpack_require__(5)
-	  , anObject      = __webpack_require__(22)
+	var $export       = __webpack_require__(12)
+	  , anObject      = __webpack_require__(15)
 	  , $isExtensible = Object.isExtensible;
 	
 	$export($export.S, 'Reflect', {
@@ -4170,35 +6142,36 @@
 	});
 
 /***/ },
-/* 162 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.11 Reflect.ownKeys(target)
-	var $export = __webpack_require__(5);
+	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Reflect', {ownKeys: __webpack_require__(163)});
+	$export($export.S, 'Reflect', {ownKeys: __webpack_require__(241)});
 
 /***/ },
-/* 163 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all object keys, includes non-enumerable and symbols
-	var $        = __webpack_require__(4)
-	  , anObject = __webpack_require__(22)
-	  , Reflect  = __webpack_require__(6).Reflect;
+	var gOPN     = __webpack_require__(50)
+	  , gOPS     = __webpack_require__(43)
+	  , anObject = __webpack_require__(15)
+	  , Reflect  = __webpack_require__(7).Reflect;
 	module.exports = Reflect && Reflect.ownKeys || function ownKeys(it){
-	  var keys       = $.getNames(anObject(it))
-	    , getSymbols = $.getSymbols;
+	  var keys       = gOPN.f(anObject(it))
+	    , getSymbols = gOPS.f;
 	  return getSymbols ? keys.concat(getSymbols(it)) : keys;
 	};
 
 /***/ },
-/* 164 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.12 Reflect.preventExtensions(target)
-	var $export            = __webpack_require__(5)
-	  , anObject           = __webpack_require__(22)
+	var $export            = __webpack_require__(12)
+	  , anObject           = __webpack_require__(15)
 	  , $preventExtensions = Object.preventExtensions;
 	
 	$export($export.S, 'Reflect', {
@@ -4214,32 +6187,34 @@
 	});
 
 /***/ },
-/* 165 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
-	var $          = __webpack_require__(4)
-	  , has        = __webpack_require__(19)
-	  , $export    = __webpack_require__(5)
-	  , createDesc = __webpack_require__(9)
-	  , anObject   = __webpack_require__(22)
-	  , isObject   = __webpack_require__(18);
+	var dP             = __webpack_require__(14)
+	  , gOPD           = __webpack_require__(51)
+	  , getPrototypeOf = __webpack_require__(60)
+	  , has            = __webpack_require__(9)
+	  , $export        = __webpack_require__(12)
+	  , createDesc     = __webpack_require__(20)
+	  , anObject       = __webpack_require__(15)
+	  , isObject       = __webpack_require__(16);
 	
 	function set(target, propertyKey, V/*, receiver*/){
 	  var receiver = arguments.length < 4 ? target : arguments[3]
-	    , ownDesc  = $.getDesc(anObject(target), propertyKey)
+	    , ownDesc  = gOPD.f(anObject(target), propertyKey)
 	    , existingDescriptor, proto;
 	  if(!ownDesc){
-	    if(isObject(proto = $.getProto(target))){
+	    if(isObject(proto = getPrototypeOf(target))){
 	      return set(proto, propertyKey, V, receiver);
 	    }
 	    ownDesc = createDesc(0);
 	  }
 	  if(has(ownDesc, 'value')){
 	    if(ownDesc.writable === false || !isObject(receiver))return false;
-	    existingDescriptor = $.getDesc(receiver, propertyKey) || createDesc(0);
+	    existingDescriptor = gOPD.f(receiver, propertyKey) || createDesc(0);
 	    existingDescriptor.value = V;
-	    $.setDesc(receiver, propertyKey, existingDescriptor);
+	    dP.f(receiver, propertyKey, existingDescriptor);
 	    return true;
 	  }
 	  return ownDesc.set === undefined ? false : (ownDesc.set.call(receiver, V), true);
@@ -4248,12 +6223,12 @@
 	$export($export.S, 'Reflect', {set: set});
 
 /***/ },
-/* 166 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.14 Reflect.setPrototypeOf(target, proto)
-	var $export  = __webpack_require__(5)
-	  , setProto = __webpack_require__(47);
+	var $export  = __webpack_require__(12)
+	  , setProto = __webpack_require__(74);
 	
 	if(setProto)$export($export.S, 'Reflect', {
 	  setPrototypeOf: function setPrototypeOf(target, proto){
@@ -4268,12 +6243,12 @@
 	});
 
 /***/ },
-/* 167 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $export   = __webpack_require__(5)
-	  , $includes = __webpack_require__(35)(true);
+	var $export   = __webpack_require__(12)
+	  , $includes = __webpack_require__(36)(true);
 	
 	$export($export.P, 'Array', {
 	  // https://github.com/domenic/Array.prototype.includes
@@ -4282,16 +6257,16 @@
 	  }
 	});
 	
-	__webpack_require__(120)('includes');
+	__webpack_require__(184)('includes');
 
 /***/ },
-/* 168 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/mathiasbynens/String.prototype.at
-	var $export = __webpack_require__(5)
-	  , $at     = __webpack_require__(100)(true);
+	var $export = __webpack_require__(12)
+	  , $at     = __webpack_require__(129)(true);
 	
 	$export($export.P, 'String', {
 	  at: function at(pos){
@@ -4300,27 +6275,27 @@
 	});
 
 /***/ },
-/* 169 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $export = __webpack_require__(5)
-	  , $pad    = __webpack_require__(170);
+	var $export = __webpack_require__(12)
+	  , $pad    = __webpack_require__(248);
 	
 	$export($export.P, 'String', {
-	  padLeft: function padLeft(maxLength /*, fillString = ' ' */){
+	  padStart: function padStart(maxLength /*, fillString = ' ' */){
 	    return $pad(this, maxLength, arguments.length > 1 ? arguments[1] : undefined, true);
 	  }
 	});
 
 /***/ },
-/* 170 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// https://github.com/ljharb/proposal-string-pad-left-right
-	var toLength = __webpack_require__(29)
-	  , repeat   = __webpack_require__(111)
-	  , defined  = __webpack_require__(24);
+	// https://github.com/tc39/proposal-string-pad-start-end
+	var toLength = __webpack_require__(37)
+	  , repeat   = __webpack_require__(93)
+	  , defined  = __webpack_require__(35);
 	
 	module.exports = function(that, maxLength, fillString, left){
 	  var S            = String(defined(that))
@@ -4335,103 +6310,80 @@
 	  return left ? stringFiller + S : S + stringFiller;
 	};
 
+
 /***/ },
-/* 171 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $export = __webpack_require__(5)
-	  , $pad    = __webpack_require__(170);
+	var $export = __webpack_require__(12)
+	  , $pad    = __webpack_require__(248);
 	
 	$export($export.P, 'String', {
-	  padRight: function padRight(maxLength /*, fillString = ' ' */){
+	  padEnd: function padEnd(maxLength /*, fillString = ' ' */){
 	    return $pad(this, maxLength, arguments.length > 1 ? arguments[1] : undefined, false);
 	  }
 	});
 
 /***/ },
-/* 172 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-	__webpack_require__(65)('trimLeft', function($trim){
+	__webpack_require__(84)('trimLeft', function($trim){
 	  return function trimLeft(){
 	    return $trim(this, 1);
 	  };
-	});
+	}, 'trimStart');
 
 /***/ },
-/* 173 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-	__webpack_require__(65)('trimRight', function($trim){
+	__webpack_require__(84)('trimRight', function($trim){
 	  return function trimRight(){
 	    return $trim(this, 2);
 	  };
-	});
+	}, 'trimEnd');
 
 /***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://github.com/benjamingr/RexExp.escape
-	var $export = __webpack_require__(5)
-	  , $re     = __webpack_require__(175)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
-	
-	$export($export.S, 'RegExp', {escape: function escape(it){ return $re(it); }});
-
-
-/***/ },
-/* 175 */
-/***/ function(module, exports) {
-
-	module.exports = function(regExp, replace){
-	  var replacer = replace === Object(replace) ? function(part){
-	    return replace[part];
-	  } : replace;
-	  return function(it){
-	    return String(it).replace(regExp, replacer);
-	  };
-	};
-
-/***/ },
-/* 176 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://gist.github.com/WebReflection/9353781
-	var $          = __webpack_require__(4)
-	  , $export    = __webpack_require__(5)
-	  , ownKeys    = __webpack_require__(163)
-	  , toIObject  = __webpack_require__(25)
-	  , createDesc = __webpack_require__(9);
+	var $export    = __webpack_require__(12)
+	  , ownKeys    = __webpack_require__(241)
+	  , toIObject  = __webpack_require__(32)
+	  , createDesc = __webpack_require__(20)
+	  , gOPD       = __webpack_require__(51)
+	  , dP         = __webpack_require__(14);
 	
 	$export($export.S, 'Object', {
 	  getOwnPropertyDescriptors: function getOwnPropertyDescriptors(object){
 	    var O       = toIObject(object)
-	      , setDesc = $.setDesc
-	      , getDesc = $.getDesc
+	      , getDesc = gOPD.f
 	      , keys    = ownKeys(O)
 	      , result  = {}
 	      , i       = 0
 	      , key, D;
 	    while(keys.length > i){
 	      D = getDesc(O, key = keys[i++]);
-	      if(key in result)setDesc(result, key, createDesc(0, D));
+	      if(key in result)dP.f(result, key, createDesc(0, D));
 	      else result[key] = D;
 	    } return result;
 	  }
 	});
 
 /***/ },
-/* 177 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// http://goo.gl/XkBrjD
-	var $export = __webpack_require__(5)
-	  , $values = __webpack_require__(178)(false);
+	var $export = __webpack_require__(12)
+	  , $values = __webpack_require__(254)(false);
 	
 	$export($export.S, 'Object', {
 	  values: function values(it){
@@ -4440,16 +6392,16 @@
 	});
 
 /***/ },
-/* 178 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $         = __webpack_require__(4)
-	  , toIObject = __webpack_require__(25)
-	  , isEnum    = $.isEnum;
+	var getKeys   = __webpack_require__(30)
+	  , toIObject = __webpack_require__(32)
+	  , isEnum    = __webpack_require__(44).f;
 	module.exports = function(isEntries){
 	  return function(it){
 	    var O      = toIObject(it)
-	      , keys   = $.getKeys(O)
+	      , keys   = getKeys(O)
 	      , length = keys.length
 	      , i      = 0
 	      , result = []
@@ -4461,12 +6413,12 @@
 	};
 
 /***/ },
-/* 179 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// http://goo.gl/XkBrjD
-	var $export  = __webpack_require__(5)
-	  , $entries = __webpack_require__(178)(true);
+	var $export  = __webpack_require__(12)
+	  , $entries = __webpack_require__(254)(true);
 	
 	$export($export.S, 'Object', {
 	  entries: function entries(it){
@@ -4475,70 +6427,373 @@
 	});
 
 /***/ },
-/* 180 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-	var $export  = __webpack_require__(5);
+	var $export  = __webpack_require__(12);
 	
-	$export($export.P, 'Map', {toJSON: __webpack_require__(181)('Map')});
+	$export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(257)('Map')});
 
 /***/ },
-/* 181 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-	var forOf   = __webpack_require__(140)
-	  , classof = __webpack_require__(49);
+	var classof = __webpack_require__(76)
+	  , from    = __webpack_require__(258);
 	module.exports = function(NAME){
 	  return function toJSON(){
 	    if(classof(this) != NAME)throw TypeError(NAME + "#toJSON isn't generic");
-	    var arr = [];
-	    forOf(this, false, arr.push, arr);
-	    return arr;
+	    return from(this);
 	  };
 	};
 
 /***/ },
-/* 182 */
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var forOf = __webpack_require__(203);
+	
+	module.exports = function(iter, ITERATOR){
+	  var result = [];
+	  forOf(iter, false, result.push, result, ITERATOR);
+	  return result;
+	};
+
+
+/***/ },
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-	var $export  = __webpack_require__(5);
+	var $export  = __webpack_require__(12);
 	
-	$export($export.P, 'Set', {toJSON: __webpack_require__(181)('Set')});
+	$export($export.P + $export.R, 'Set', {toJSON: __webpack_require__(257)('Set')});
 
 /***/ },
-/* 183 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// JavaScript 1.6 / Strawman array statics shim
-	var $       = __webpack_require__(4)
-	  , $export = __webpack_require__(5)
-	  , $ctx    = __webpack_require__(14)
-	  , $Array  = __webpack_require__(7).Array || Array
-	  , statics = {};
-	var setStatics = function(keys, length){
-	  $.each.call(keys.split(','), function(key){
-	    if(length == undefined && key in $Array)statics[key] = $Array[key];
-	    else if(key in [])statics[key] = $ctx(Function.call, [][key], length);
-	  });
-	};
-	setStatics('pop,reverse,shift,keys,values,entries', 1);
-	setStatics('indexOf,every,some,forEach,map,filter,find,findIndex,includes', 3);
-	setStatics('join,slice,concat,push,splice,unshift,sort,lastIndexOf,' +
-	           'reduce,reduceRight,copyWithin,fill');
-	$export($export.S, 'Array', statics);
+	// https://github.com/ljharb/proposal-global
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'System', {global: __webpack_require__(7)});
 
 /***/ },
-/* 184 */
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://github.com/ljharb/proposal-is-error
+	var $export = __webpack_require__(12)
+	  , cof     = __webpack_require__(34);
+	
+	$export($export.S, 'Error', {
+	  isError: function isError(it){
+	    return cof(it) === 'Error';
+	  }
+	});
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Math', {
+	  iaddh: function iaddh(x0, x1, y0, y1){
+	    var $x0 = x0 >>> 0
+	      , $x1 = x1 >>> 0
+	      , $y0 = y0 >>> 0;
+	    return $x1 + (y1 >>> 0) + (($x0 & $y0 | ($x0 | $y0) & ~($x0 + $y0 >>> 0)) >>> 31) | 0;
+	  }
+	});
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Math', {
+	  isubh: function isubh(x0, x1, y0, y1){
+	    var $x0 = x0 >>> 0
+	      , $x1 = x1 >>> 0
+	      , $y0 = y0 >>> 0;
+	    return $x1 - (y1 >>> 0) - ((~$x0 & $y0 | ~($x0 ^ $y0) & $x0 - $y0 >>> 0) >>> 31) | 0;
+	  }
+	});
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Math', {
+	  imulh: function imulh(u, v){
+	    var UINT16 = 0xffff
+	      , $u = +u
+	      , $v = +v
+	      , u0 = $u & UINT16
+	      , v0 = $v & UINT16
+	      , u1 = $u >> 16
+	      , v1 = $v >> 16
+	      , t  = (u1 * v0 >>> 0) + (u0 * v0 >>> 16);
+	    return u1 * v1 + (t >> 16) + ((u0 * v1 >>> 0) + (t & UINT16) >> 16);
+	  }
+	});
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
+	var $export = __webpack_require__(12);
+	
+	$export($export.S, 'Math', {
+	  umulh: function umulh(u, v){
+	    var UINT16 = 0xffff
+	      , $u = +u
+	      , $v = +v
+	      , u0 = $u & UINT16
+	      , v0 = $v & UINT16
+	      , u1 = $u >>> 16
+	      , v1 = $v >>> 16
+	      , t  = (u1 * v0 >>> 0) + (u0 * v0 >>> 16);
+	    return u1 * v1 + (t >>> 16) + ((u0 * v1 >>> 0) + (t & UINT16) >>> 16);
+	  }
+	});
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata                  = __webpack_require__(267)
+	  , anObject                  = __webpack_require__(15)
+	  , toMetaKey                 = metadata.key
+	  , ordinaryDefineOwnMetadata = metadata.set;
+	
+	metadata.exp({defineMetadata: function defineMetadata(metadataKey, metadataValue, target, targetKey){
+	  ordinaryDefineOwnMetadata(metadataKey, metadataValue, anObject(target), toMetaKey(targetKey));
+	}});
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Map     = __webpack_require__(208)
+	  , $export = __webpack_require__(12)
+	  , shared  = __webpack_require__(26)('metadata')
+	  , store   = shared.store || (shared.store = new (__webpack_require__(212)));
+	
+	var getOrCreateMetadataMap = function(target, targetKey, create){
+	  var targetMetadata = store.get(target);
+	  if(!targetMetadata){
+	    if(!create)return undefined;
+	    store.set(target, targetMetadata = new Map);
+	  }
+	  var keyMetadata = targetMetadata.get(targetKey);
+	  if(!keyMetadata){
+	    if(!create)return undefined;
+	    targetMetadata.set(targetKey, keyMetadata = new Map);
+	  } return keyMetadata;
+	};
+	var ordinaryHasOwnMetadata = function(MetadataKey, O, P){
+	  var metadataMap = getOrCreateMetadataMap(O, P, false);
+	  return metadataMap === undefined ? false : metadataMap.has(MetadataKey);
+	};
+	var ordinaryGetOwnMetadata = function(MetadataKey, O, P){
+	  var metadataMap = getOrCreateMetadataMap(O, P, false);
+	  return metadataMap === undefined ? undefined : metadataMap.get(MetadataKey);
+	};
+	var ordinaryDefineOwnMetadata = function(MetadataKey, MetadataValue, O, P){
+	  getOrCreateMetadataMap(O, P, true).set(MetadataKey, MetadataValue);
+	};
+	var ordinaryOwnMetadataKeys = function(target, targetKey){
+	  var metadataMap = getOrCreateMetadataMap(target, targetKey, false)
+	    , keys        = [];
+	  if(metadataMap)metadataMap.forEach(function(_, key){ keys.push(key); });
+	  return keys;
+	};
+	var toMetaKey = function(it){
+	  return it === undefined || typeof it == 'symbol' ? it : String(it);
+	};
+	var exp = function(O){
+	  $export($export.S, 'Reflect', O);
+	};
+	
+	module.exports = {
+	  store: store,
+	  map: getOrCreateMetadataMap,
+	  has: ordinaryHasOwnMetadata,
+	  get: ordinaryGetOwnMetadata,
+	  set: ordinaryDefineOwnMetadata,
+	  keys: ordinaryOwnMetadataKeys,
+	  key: toMetaKey,
+	  exp: exp
+	};
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata               = __webpack_require__(267)
+	  , anObject               = __webpack_require__(15)
+	  , toMetaKey              = metadata.key
+	  , getOrCreateMetadataMap = metadata.map
+	  , store                  = metadata.store;
+	
+	metadata.exp({deleteMetadata: function deleteMetadata(metadataKey, target /*, targetKey */){
+	  var targetKey   = arguments.length < 3 ? undefined : toMetaKey(arguments[2])
+	    , metadataMap = getOrCreateMetadataMap(anObject(target), targetKey, false);
+	  if(metadataMap === undefined || !metadataMap['delete'](metadataKey))return false;
+	  if(metadataMap.size)return true;
+	  var targetMetadata = store.get(target);
+	  targetMetadata['delete'](targetKey);
+	  return !!targetMetadata.size || store['delete'](target);
+	}});
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata               = __webpack_require__(267)
+	  , anObject               = __webpack_require__(15)
+	  , getPrototypeOf         = __webpack_require__(60)
+	  , ordinaryHasOwnMetadata = metadata.has
+	  , ordinaryGetOwnMetadata = metadata.get
+	  , toMetaKey              = metadata.key;
+	
+	var ordinaryGetMetadata = function(MetadataKey, O, P){
+	  var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
+	  if(hasOwn)return ordinaryGetOwnMetadata(MetadataKey, O, P);
+	  var parent = getPrototypeOf(O);
+	  return parent !== null ? ordinaryGetMetadata(MetadataKey, parent, P) : undefined;
+	};
+	
+	metadata.exp({getMetadata: function getMetadata(metadataKey, target /*, targetKey */){
+	  return ordinaryGetMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+	}});
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Set                     = __webpack_require__(211)
+	  , from                    = __webpack_require__(258)
+	  , metadata                = __webpack_require__(267)
+	  , anObject                = __webpack_require__(15)
+	  , getPrototypeOf          = __webpack_require__(60)
+	  , ordinaryOwnMetadataKeys = metadata.keys
+	  , toMetaKey               = metadata.key;
+	
+	var ordinaryMetadataKeys = function(O, P){
+	  var oKeys  = ordinaryOwnMetadataKeys(O, P)
+	    , parent = getPrototypeOf(O);
+	  if(parent === null)return oKeys;
+	  var pKeys  = ordinaryMetadataKeys(parent, P);
+	  return pKeys.length ? oKeys.length ? from(new Set(oKeys.concat(pKeys))) : pKeys : oKeys;
+	};
+	
+	metadata.exp({getMetadataKeys: function getMetadataKeys(target /*, targetKey */){
+	  return ordinaryMetadataKeys(anObject(target), arguments.length < 2 ? undefined : toMetaKey(arguments[1]));
+	}});
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata               = __webpack_require__(267)
+	  , anObject               = __webpack_require__(15)
+	  , ordinaryGetOwnMetadata = metadata.get
+	  , toMetaKey              = metadata.key;
+	
+	metadata.exp({getOwnMetadata: function getOwnMetadata(metadataKey, target /*, targetKey */){
+	  return ordinaryGetOwnMetadata(metadataKey, anObject(target)
+	    , arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+	}});
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata                = __webpack_require__(267)
+	  , anObject                = __webpack_require__(15)
+	  , ordinaryOwnMetadataKeys = metadata.keys
+	  , toMetaKey               = metadata.key;
+	
+	metadata.exp({getOwnMetadataKeys: function getOwnMetadataKeys(target /*, targetKey */){
+	  return ordinaryOwnMetadataKeys(anObject(target), arguments.length < 2 ? undefined : toMetaKey(arguments[1]));
+	}});
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata               = __webpack_require__(267)
+	  , anObject               = __webpack_require__(15)
+	  , getPrototypeOf         = __webpack_require__(60)
+	  , ordinaryHasOwnMetadata = metadata.has
+	  , toMetaKey              = metadata.key;
+	
+	var ordinaryHasMetadata = function(MetadataKey, O, P){
+	  var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
+	  if(hasOwn)return true;
+	  var parent = getPrototypeOf(O);
+	  return parent !== null ? ordinaryHasMetadata(MetadataKey, parent, P) : false;
+	};
+	
+	metadata.exp({hasMetadata: function hasMetadata(metadataKey, target /*, targetKey */){
+	  return ordinaryHasMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+	}});
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata               = __webpack_require__(267)
+	  , anObject               = __webpack_require__(15)
+	  , ordinaryHasOwnMetadata = metadata.has
+	  , toMetaKey              = metadata.key;
+	
+	metadata.exp({hasOwnMetadata: function hasOwnMetadata(metadataKey, target /*, targetKey */){
+	  return ordinaryHasOwnMetadata(metadataKey, anObject(target)
+	    , arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+	}});
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var metadata                  = __webpack_require__(267)
+	  , anObject                  = __webpack_require__(15)
+	  , aFunction                 = __webpack_require__(24)
+	  , toMetaKey                 = metadata.key
+	  , ordinaryDefineOwnMetadata = metadata.set;
+	
+	metadata.exp({metadata: function metadata(metadataKey, metadataValue){
+	  return function decorator(target, targetKey){
+	    ordinaryDefineOwnMetadata(
+	      metadataKey, metadataValue,
+	      (targetKey !== undefined ? anObject : aFunction)(target),
+	      toMetaKey(targetKey)
+	    );
+	  };
+	}});
+
+/***/ },
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// ie9- setTimeout & setInterval additional parameters fix
-	var global     = __webpack_require__(6)
-	  , $export    = __webpack_require__(5)
-	  , invoke     = __webpack_require__(21)
-	  , partial    = __webpack_require__(185)
+	var global     = __webpack_require__(7)
+	  , $export    = __webpack_require__(12)
+	  , invoke     = __webpack_require__(79)
+	  , partial    = __webpack_require__(277)
 	  , navigator  = global.navigator
 	  , MSIE       = !!navigator && /MSIE .\./.test(navigator.userAgent); // <- dirty ie9- check
 	var wrap = function(set){
@@ -4556,13 +6811,13 @@
 	});
 
 /***/ },
-/* 185 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var path      = __webpack_require__(186)
-	  , invoke    = __webpack_require__(21)
-	  , aFunction = __webpack_require__(15);
+	var path      = __webpack_require__(278)
+	  , invoke    = __webpack_require__(79)
+	  , aFunction = __webpack_require__(24);
 	module.exports = function(/* ...pargs */){
 	  var fn     = aFunction(this)
 	    , length = arguments.length
@@ -4572,54 +6827,63 @@
 	    , holder = false;
 	  while(length > i)if((pargs[i] = arguments[i++]) === _)holder = true;
 	  return function(/* ...args */){
-	    var that  = this
-	      , $$    = arguments
-	      , $$len = $$.length
+	    var that = this
+	      , aLen = arguments.length
 	      , j = 0, k = 0, args;
-	    if(!holder && !$$len)return invoke(fn, pargs, that);
+	    if(!holder && !aLen)return invoke(fn, pargs, that);
 	    args = pargs.slice();
-	    if(holder)for(;length > j; j++)if(args[j] === _)args[j] = $$[k++];
-	    while($$len > k)args.push($$[k++]);
+	    if(holder)for(;length > j; j++)if(args[j] === _)args[j] = arguments[k++];
+	    while(aLen > k)args.push(arguments[k++]);
 	    return invoke(fn, args, that);
 	  };
 	};
 
 /***/ },
-/* 186 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(6);
+	module.exports = __webpack_require__(7);
 
 /***/ },
-/* 187 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(5)
-	  , $task   = __webpack_require__(143);
+	var $export = __webpack_require__(12)
+	  , $task   = __webpack_require__(205);
 	$export($export.G + $export.B, {
 	  setImmediate:   $task.set,
 	  clearImmediate: $task.clear
 	});
 
 /***/ },
-/* 188 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(119);
-	var global      = __webpack_require__(6)
-	  , hide        = __webpack_require__(8)
-	  , Iterators   = __webpack_require__(102)
-	  , ITERATOR    = __webpack_require__(33)('iterator')
-	  , NL          = global.NodeList
-	  , HTC         = global.HTMLCollection
-	  , NLProto     = NL && NL.prototype
-	  , HTCProto    = HTC && HTC.prototype
-	  , ArrayValues = Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
-	if(NLProto && !NLProto[ITERATOR])hide(NLProto, ITERATOR, ArrayValues);
-	if(HTCProto && !HTCProto[ITERATOR])hide(HTCProto, ITERATOR, ArrayValues);
+	var $iterators    = __webpack_require__(191)
+	  , redefine      = __webpack_require__(21)
+	  , global        = __webpack_require__(7)
+	  , hide          = __webpack_require__(13)
+	  , Iterators     = __webpack_require__(131)
+	  , wks           = __webpack_require__(28)
+	  , ITERATOR      = wks('iterator')
+	  , TO_STRING_TAG = wks('toStringTag')
+	  , ArrayValues   = Iterators.Array;
+	
+	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
+	  var NAME       = collections[i]
+	    , Collection = global[NAME]
+	    , proto      = Collection && Collection.prototype
+	    , key;
+	  if(proto){
+	    if(!proto[ITERATOR])hide(proto, ITERATOR, ArrayValues);
+	    if(!proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
+	    Iterators[NAME] = ArrayValues;
+	    for(key in $iterators)if(!proto[key])redefine(proto, key, $iterators[key], true);
+	  }
+	}
 
 /***/ },
-/* 189 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/**
@@ -5280,10 +7544,10 @@
 	  typeof self === "object" ? self : this
 	);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(282)))
 
 /***/ },
-/* 190 */
+/* 282 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -5380,19 +7644,50 @@
 
 
 /***/ },
-/* 191 */
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(284);
+	module.exports = __webpack_require__(8).RegExp.escape;
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://github.com/benjamingr/RexExp.escape
+	var $export = __webpack_require__(12)
+	  , $re     = __webpack_require__(285)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+	
+	$export($export.S, 'RegExp', {escape: function escape(it){ return $re(it); }});
+
+
+/***/ },
+/* 285 */
+/***/ function(module, exports) {
+
+	module.exports = function(regExp, replace){
+	  var replacer = replace === Object(replace) ? function(part){
+	    return replace[part];
+	  } : replace;
+	  return function(it){
+	    return String(it).replace(regExp, replacer);
+	  };
+	};
+
+/***/ },
+/* 286 */
 /***/ function(module, exports) {
 
 	module.exports = React;
 
 /***/ },
-/* 192 */
+/* 287 */
 /***/ function(module, exports) {
 
 	module.exports = ReactDOM;
 
 /***/ },
-/* 193 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* components */
@@ -5402,19 +7697,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _Router2 = __webpack_require__(194);
+	var _Router2 = __webpack_require__(289);
 	
 	var _Router3 = _interopRequireDefault(_Router2);
 	
 	exports.Router = _Router3['default'];
 	
-	var _Link2 = __webpack_require__(230);
+	var _Link2 = __webpack_require__(325);
 	
 	var _Link3 = _interopRequireDefault(_Link2);
 	
 	exports.Link = _Link3['default'];
 	
-	var _IndexLink2 = __webpack_require__(231);
+	var _IndexLink2 = __webpack_require__(326);
 	
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 	
@@ -5422,25 +7717,25 @@
 	
 	/* components (configuration) */
 	
-	var _IndexRedirect2 = __webpack_require__(232);
+	var _IndexRedirect2 = __webpack_require__(327);
 	
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 	
 	exports.IndexRedirect = _IndexRedirect3['default'];
 	
-	var _IndexRoute2 = __webpack_require__(234);
+	var _IndexRoute2 = __webpack_require__(329);
 	
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 	
 	exports.IndexRoute = _IndexRoute3['default'];
 	
-	var _Redirect2 = __webpack_require__(233);
+	var _Redirect2 = __webpack_require__(328);
 	
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 	
 	exports.Redirect = _Redirect3['default'];
 	
-	var _Route2 = __webpack_require__(235);
+	var _Route2 = __webpack_require__(330);
 	
 	var _Route3 = _interopRequireDefault(_Route2);
 	
@@ -5448,19 +7743,19 @@
 	
 	/* mixins */
 	
-	var _History2 = __webpack_require__(236);
+	var _History2 = __webpack_require__(331);
 	
 	var _History3 = _interopRequireDefault(_History2);
 	
 	exports.History = _History3['default'];
 	
-	var _Lifecycle2 = __webpack_require__(237);
+	var _Lifecycle2 = __webpack_require__(332);
 	
 	var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 	
 	exports.Lifecycle = _Lifecycle3['default'];
 	
-	var _RouteContext2 = __webpack_require__(238);
+	var _RouteContext2 = __webpack_require__(333);
 	
 	var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 	
@@ -5468,72 +7763,72 @@
 	
 	/* utils */
 	
-	var _useRoutes2 = __webpack_require__(239);
+	var _useRoutes2 = __webpack_require__(334);
 	
 	var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 	
 	exports.useRoutes = _useRoutes3['default'];
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
 	exports.createRoutes = _RouteUtils.createRoutes;
 	
-	var _RouterContext2 = __webpack_require__(226);
+	var _RouterContext2 = __webpack_require__(321);
 	
 	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 	
 	exports.RouterContext = _RouterContext3['default'];
 	
-	var _RoutingContext2 = __webpack_require__(240);
+	var _RoutingContext2 = __webpack_require__(335);
 	
 	var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 	
 	exports.RoutingContext = _RoutingContext3['default'];
 	
-	var _PropTypes2 = __webpack_require__(225);
+	var _PropTypes2 = __webpack_require__(320);
 	
 	var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 	
 	exports.PropTypes = _PropTypes3['default'];
 	
-	var _match2 = __webpack_require__(241);
+	var _match2 = __webpack_require__(336);
 	
 	var _match3 = _interopRequireDefault(_match2);
 	
 	exports.match = _match3['default'];
 	
-	var _useRouterHistory2 = __webpack_require__(245);
+	var _useRouterHistory2 = __webpack_require__(340);
 	
 	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 	
 	exports.useRouterHistory = _useRouterHistory3['default'];
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
 	exports.formatPattern = _PatternUtils.formatPattern;
 	
 	/* histories */
 	
-	var _browserHistory2 = __webpack_require__(246);
+	var _browserHistory2 = __webpack_require__(341);
 	
 	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 	
 	exports.browserHistory = _browserHistory3['default'];
 	
-	var _hashHistory2 = __webpack_require__(249);
+	var _hashHistory2 = __webpack_require__(344);
 	
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 	
 	exports.hashHistory = _hashHistory3['default'];
 	
-	var _createMemoryHistory2 = __webpack_require__(242);
+	var _createMemoryHistory2 = __webpack_require__(337);
 	
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 	
 	exports.createMemoryHistory = _createMemoryHistory3['default'];
 
 /***/ },
-/* 194 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -5546,33 +7841,33 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _historyLibCreateHashHistory = __webpack_require__(195);
+	var _historyLibCreateHashHistory = __webpack_require__(290);
 	
 	var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
 	
-	var _historyLibUseQueries = __webpack_require__(212);
+	var _historyLibUseQueries = __webpack_require__(307);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(310);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
-	var _RouterContext = __webpack_require__(226);
+	var _RouterContext = __webpack_require__(321);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _RouterUtils = __webpack_require__(229);
+	var _RouterUtils = __webpack_require__(324);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -5746,10 +8041,10 @@
 	
 	exports['default'] = Router;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 195 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -5760,25 +8055,25 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(293);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(295);
 	
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(296);
 	
-	var _DOMStateStorage = __webpack_require__(202);
+	var _DOMStateStorage = __webpack_require__(297);
 	
-	var _createDOMHistory = __webpack_require__(203);
+	var _createDOMHistory = __webpack_require__(298);
 	
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 	
@@ -5998,10 +8293,10 @@
 	
 	exports['default'] = createHashHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 196 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6065,10 +8360,10 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 197 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6123,10 +8418,10 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 198 */
+/* 293 */
 /***/ function(module, exports) {
 
 	/**
@@ -6162,7 +8457,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6173,7 +8468,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -6212,10 +8507,10 @@
 	    hash: hash
 	  };
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 200 */
+/* 295 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6225,7 +8520,7 @@
 	exports.canUseDOM = canUseDOM;
 
 /***/ },
-/* 201 */
+/* 296 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6305,7 +8600,7 @@
 	}
 
 /***/ },
-/* 202 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*eslint-disable no-empty */
@@ -6317,7 +8612,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -6381,10 +8676,10 @@
 	
 	  return null;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 203 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6395,15 +8690,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(295);
 	
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(296);
 	
-	var _createHistory = __webpack_require__(204);
+	var _createHistory = __webpack_require__(299);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -6427,10 +8722,10 @@
 	
 	exports['default'] = createDOMHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 204 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6441,29 +8736,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _deepEqual = __webpack_require__(205);
+	var _deepEqual = __webpack_require__(300);
 	
 	var _deepEqual2 = _interopRequireDefault(_deepEqual);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _AsyncUtils = __webpack_require__(208);
+	var _AsyncUtils = __webpack_require__(303);
 	
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(293);
 	
-	var _createLocation2 = __webpack_require__(209);
+	var _createLocation2 = __webpack_require__(304);
 	
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 	
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(305);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -6721,15 +9016,15 @@
 	
 	exports['default'] = createHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 205 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var pSlice = Array.prototype.slice;
-	var objectKeys = __webpack_require__(206);
-	var isArguments = __webpack_require__(207);
+	var objectKeys = __webpack_require__(301);
+	var isArguments = __webpack_require__(302);
 	
 	var deepEqual = module.exports = function (actual, expected, opts) {
 	  if (!opts) opts = {};
@@ -6824,7 +9119,7 @@
 
 
 /***/ },
-/* 206 */
+/* 301 */
 /***/ function(module, exports) {
 
 	exports = module.exports = typeof Object.keys === 'function'
@@ -6839,7 +9134,7 @@
 
 
 /***/ },
-/* 207 */
+/* 302 */
 /***/ function(module, exports) {
 
 	var supportsArgumentsClass = (function(){
@@ -6865,7 +9160,7 @@
 
 
 /***/ },
-/* 208 */
+/* 303 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6896,7 +9191,7 @@
 	}
 
 /***/ },
-/* 209 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6907,13 +9202,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(293);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
 	function createLocation() {
 	  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
@@ -6950,10 +9245,10 @@
 	
 	exports['default'] = createLocation;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 210 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6962,7 +9257,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -6980,10 +9275,10 @@
 	
 	exports['default'] = runTransitionHook;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 211 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6992,7 +9287,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -7005,10 +9300,10 @@
 	
 	exports['default'] = deprecate;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 212 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7021,19 +9316,19 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _queryString = __webpack_require__(213);
+	var _queryString = __webpack_require__(308);
 	
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(305);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -7190,14 +9485,14 @@
 	
 	exports['default'] = useQueries;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 213 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(214);
+	var strictUriEncode = __webpack_require__(309);
 	
 	exports.extract = function (str) {
 		return str.split('?')[1] || '';
@@ -7265,7 +9560,7 @@
 
 
 /***/ },
-/* 214 */
+/* 309 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7277,7 +9572,7 @@
 
 
 /***/ },
-/* 215 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7290,27 +9585,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _historyLibActions = __webpack_require__(198);
+	var _historyLibActions = __webpack_require__(293);
 	
-	var _computeChangedRoutes2 = __webpack_require__(217);
+	var _computeChangedRoutes2 = __webpack_require__(312);
 	
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 	
-	var _TransitionUtils = __webpack_require__(219);
+	var _TransitionUtils = __webpack_require__(314);
 	
-	var _isActive2 = __webpack_require__(221);
+	var _isActive2 = __webpack_require__(316);
 	
 	var _isActive3 = _interopRequireDefault(_isActive2);
 	
-	var _getComponents = __webpack_require__(222);
+	var _getComponents = __webpack_require__(317);
 	
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 	
-	var _matchRoutes = __webpack_require__(223);
+	var _matchRoutes = __webpack_require__(318);
 	
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 	
@@ -7576,10 +9871,10 @@
 	
 	//export default useRoutes
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 216 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7589,7 +9884,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -7604,17 +9899,17 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 217 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
@@ -7668,7 +9963,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 218 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7682,7 +9977,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
@@ -7898,10 +10193,10 @@
 	
 	  return pathname.replace(/\/+/g, '/');
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 219 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7912,9 +10207,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _AsyncUtils = __webpack_require__(220);
+	var _AsyncUtils = __webpack_require__(315);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -7993,10 +10288,10 @@
 	    if (routes[i].onLeave) routes[i].onLeave.call(routes[i]);
 	  }
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 220 */
+/* 315 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -8091,7 +10386,7 @@
 	}
 
 /***/ },
-/* 221 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8099,7 +10394,7 @@
 	exports.__esModule = true;
 	exports['default'] = isActive;
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
 	function deepEqual(a, b) {
 	  if (a == b) return true;
@@ -8223,14 +10518,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 222 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _AsyncUtils = __webpack_require__(220);
+	var _AsyncUtils = __webpack_require__(315);
 	
 	function getComponentsForRoute(location, route, callback) {
 	  if (route.component || route.components) {
@@ -8261,7 +10556,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 223 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8270,15 +10565,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _AsyncUtils = __webpack_require__(220);
+	var _AsyncUtils = __webpack_require__(315);
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
 	function getChildRoutes(route, location, callback) {
 	  if (route.childRoutes) {
@@ -8470,10 +10765,10 @@
 	
 	exports['default'] = matchRoutes;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 224 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8489,11 +10784,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -8590,10 +10885,10 @@
 	
 	  return routes;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 225 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8601,7 +10896,7 @@
 	exports.__esModule = true;
 	exports.falsy = falsy;
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var func = _react.PropTypes.func;
 	var object = _react.PropTypes.object;
@@ -8651,7 +10946,7 @@
 	};
 
 /***/ },
-/* 226 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8662,25 +10957,25 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _deprecateObjectProperties = __webpack_require__(227);
+	var _deprecateObjectProperties = __webpack_require__(322);
 	
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 	
-	var _getRouteParams = __webpack_require__(228);
+	var _getRouteParams = __webpack_require__(323);
 	
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -8808,10 +11103,10 @@
 	
 	exports['default'] = RouterContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 227 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*eslint no-empty: 0*/
@@ -8822,7 +11117,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -8871,17 +11166,17 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 228 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
 	/**
 	 * Extracts an object of params the given route cares about from
@@ -8903,7 +11198,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 229 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8917,7 +11212,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecateObjectProperties = __webpack_require__(227);
+	var _deprecateObjectProperties = __webpack_require__(322);
 	
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 	
@@ -8939,10 +11234,10 @@
 	
 	  return history;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 230 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8955,11 +11250,11 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -9109,10 +11404,10 @@
 	
 	exports['default'] = Link;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 231 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9123,11 +11418,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Link = __webpack_require__(230);
+	var _Link = __webpack_require__(325);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
@@ -9147,7 +11442,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 232 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9156,23 +11451,23 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Redirect = __webpack_require__(233);
+	var _Redirect = __webpack_require__(328);
 	
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -9214,10 +11509,10 @@
 	
 	exports['default'] = IndexRedirect;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 233 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9226,19 +11521,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _PatternUtils = __webpack_require__(218);
+	var _PatternUtils = __webpack_require__(313);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -9323,10 +11618,10 @@
 	
 	exports['default'] = Redirect;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 234 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9335,21 +11630,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
 	var func = _react2['default'].PropTypes.func;
 	
@@ -9390,10 +11685,10 @@
 	
 	exports['default'] = IndexRoute;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 235 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9402,17 +11697,17 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -9452,10 +11747,10 @@
 	
 	exports['default'] = Route;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 236 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9464,11 +11759,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _PropTypes = __webpack_require__(225);
+	var _PropTypes = __webpack_require__(320);
 	
 	/**
 	 * A mixin that adds the "history" instance variable to components.
@@ -9488,10 +11783,10 @@
 	
 	exports['default'] = History;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 237 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9500,15 +11795,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
@@ -9563,10 +11858,10 @@
 	
 	exports['default'] = Lifecycle;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 238 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9575,11 +11870,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -9615,10 +11910,10 @@
 	
 	exports['default'] = RouteContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 239 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9631,15 +11926,15 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _historyLibUseQueries = __webpack_require__(212);
+	var _historyLibUseQueries = __webpack_require__(307);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(310);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -9672,10 +11967,10 @@
 	
 	exports['default'] = useRoutes;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 240 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9684,15 +11979,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _RouterContext = __webpack_require__(226);
+	var _RouterContext = __webpack_require__(321);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _routerWarning = __webpack_require__(216);
+	var _routerWarning = __webpack_require__(311);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -9710,10 +12005,10 @@
 	
 	exports['default'] = RoutingContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 241 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9726,21 +12021,21 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _createMemoryHistory = __webpack_require__(242);
+	var _createMemoryHistory = __webpack_require__(337);
 	
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 	
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(310);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _RouteUtils = __webpack_require__(224);
+	var _RouteUtils = __webpack_require__(319);
 	
-	var _RouterUtils = __webpack_require__(229);
+	var _RouterUtils = __webpack_require__(324);
 	
 	/**
 	 * A high-level API to be used for server-side rendering.
@@ -9797,10 +12092,10 @@
 	
 	exports['default'] = match;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 242 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9810,15 +12105,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibUseQueries = __webpack_require__(212);
+	var _historyLibUseQueries = __webpack_require__(307);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _historyLibUseBasename = __webpack_require__(243);
+	var _historyLibUseBasename = __webpack_require__(338);
 	
 	var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
 	
-	var _historyLibCreateMemoryHistory = __webpack_require__(244);
+	var _historyLibCreateMemoryHistory = __webpack_require__(339);
 	
 	var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 	
@@ -9838,7 +12133,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 243 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9851,15 +12146,15 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(295);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(305);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -9981,7 +12276,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9992,19 +12287,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(293);
 	
-	var _createHistory = __webpack_require__(204);
+	var _createHistory = __webpack_require__(299);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -10137,10 +12432,10 @@
 	
 	exports['default'] = createMemoryHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 245 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10150,11 +12445,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibUseQueries = __webpack_require__(212);
+	var _historyLibUseQueries = __webpack_require__(307);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _historyLibUseBasename = __webpack_require__(243);
+	var _historyLibUseBasename = __webpack_require__(338);
 	
 	var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
 	
@@ -10169,7 +12464,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 246 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10178,11 +12473,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibCreateBrowserHistory = __webpack_require__(247);
+	var _historyLibCreateBrowserHistory = __webpack_require__(342);
 	
 	var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 	
-	var _createRouterHistory = __webpack_require__(248);
+	var _createRouterHistory = __webpack_require__(343);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -10190,7 +12485,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 247 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10201,21 +12496,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(197);
+	var _invariant = __webpack_require__(292);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(293);
 	
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(294);
 	
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(295);
 	
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(296);
 	
-	var _DOMStateStorage = __webpack_require__(202);
+	var _DOMStateStorage = __webpack_require__(297);
 	
-	var _createDOMHistory = __webpack_require__(203);
+	var _createDOMHistory = __webpack_require__(298);
 	
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 	
@@ -10369,10 +12664,10 @@
 	
 	exports['default'] = createBrowserHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 248 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10381,7 +12676,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _useRouterHistory = __webpack_require__(245);
+	var _useRouterHistory = __webpack_require__(340);
 	
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 	
@@ -10396,7 +12691,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 249 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10405,11 +12700,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibCreateHashHistory = __webpack_require__(195);
+	var _historyLibCreateHashHistory = __webpack_require__(290);
 	
 	var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
 	
-	var _createRouterHistory = __webpack_require__(248);
+	var _createRouterHistory = __webpack_require__(343);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -10417,7 +12712,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 250 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10426,51 +12721,51 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _createLocation2 = __webpack_require__(209);
+	var _createLocation2 = __webpack_require__(304);
 	
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 	
-	var _createBrowserHistory = __webpack_require__(247);
+	var _createBrowserHistory = __webpack_require__(342);
 	
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 	
 	exports.createHistory = _createBrowserHistory2['default'];
 	
-	var _createHashHistory2 = __webpack_require__(195);
+	var _createHashHistory2 = __webpack_require__(290);
 	
 	var _createHashHistory3 = _interopRequireDefault(_createHashHistory2);
 	
 	exports.createHashHistory = _createHashHistory3['default'];
 	
-	var _createMemoryHistory2 = __webpack_require__(244);
+	var _createMemoryHistory2 = __webpack_require__(339);
 	
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 	
 	exports.createMemoryHistory = _createMemoryHistory3['default'];
 	
-	var _useBasename2 = __webpack_require__(243);
+	var _useBasename2 = __webpack_require__(338);
 	
 	var _useBasename3 = _interopRequireDefault(_useBasename2);
 	
 	exports.useBasename = _useBasename3['default'];
 	
-	var _useBeforeUnload2 = __webpack_require__(251);
+	var _useBeforeUnload2 = __webpack_require__(346);
 	
 	var _useBeforeUnload3 = _interopRequireDefault(_useBeforeUnload2);
 	
 	exports.useBeforeUnload = _useBeforeUnload3['default'];
 	
-	var _useQueries2 = __webpack_require__(212);
+	var _useQueries2 = __webpack_require__(307);
 	
 	var _useQueries3 = _interopRequireDefault(_useQueries2);
 	
 	exports.useQueries = _useQueries3['default'];
 	
-	var _Actions2 = __webpack_require__(198);
+	var _Actions2 = __webpack_require__(293);
 	
 	var _Actions3 = _interopRequireDefault(_Actions2);
 	
@@ -10478,13 +12773,13 @@
 	
 	// deprecated
 	
-	var _enableBeforeUnload2 = __webpack_require__(252);
+	var _enableBeforeUnload2 = __webpack_require__(347);
 	
 	var _enableBeforeUnload3 = _interopRequireDefault(_enableBeforeUnload2);
 	
 	exports.enableBeforeUnload = _enableBeforeUnload3['default'];
 	
-	var _enableQueries2 = __webpack_require__(253);
+	var _enableQueries2 = __webpack_require__(348);
 	
 	var _enableQueries3 = _interopRequireDefault(_enableQueries2);
 	
@@ -10493,7 +12788,7 @@
 	exports.createLocation = createLocation;
 
 /***/ },
-/* 251 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10504,15 +12799,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(196);
+	var _warning = __webpack_require__(291);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(295);
 	
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(296);
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -10607,10 +12902,10 @@
 	
 	exports['default'] = useBeforeUnload;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(190)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
 
 /***/ },
-/* 252 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10619,11 +12914,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _useBeforeUnload = __webpack_require__(251);
+	var _useBeforeUnload = __webpack_require__(346);
 	
 	var _useBeforeUnload2 = _interopRequireDefault(_useBeforeUnload);
 	
@@ -10631,7 +12926,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 253 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10640,11 +12935,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(306);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _useQueries = __webpack_require__(212);
+	var _useQueries = __webpack_require__(307);
 	
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 	
@@ -10652,7 +12947,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 254 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10663,21 +12958,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactRouter = __webpack_require__(193);
+	var _reactRouter = __webpack_require__(288);
 	
-	var _html = __webpack_require__(255);
+	var _html = __webpack_require__(350);
 	
 	var Pages = _interopRequireWildcard(_html);
 	
-	var _templates = __webpack_require__(271);
+	var _templates = __webpack_require__(366);
 	
 	var Templates = _interopRequireWildcard(_templates);
 	
-	var _src = __webpack_require__(275);
+	var _src = __webpack_require__(370);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -10790,7 +13085,7 @@
 	exports.default = DocApp;
 
 /***/ },
-/* 255 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10800,63 +13095,63 @@
 	});
 	exports.tooltips = exports.toggles = exports.textfield = exports.snackbar = exports.sliders = exports.menus = exports.loading = exports.lists = exports.layout = exports.home = exports.dialogs = exports.datatables = exports.cards = exports.buttons = exports.badges = undefined;
 	
-	var _badgesMd = __webpack_require__(256);
+	var _badgesMd = __webpack_require__(351);
 	
 	var _badgesMd2 = _interopRequireDefault(_badgesMd);
 	
-	var _buttonsMd = __webpack_require__(257);
+	var _buttonsMd = __webpack_require__(352);
 	
 	var _buttonsMd2 = _interopRequireDefault(_buttonsMd);
 	
-	var _cardsMd = __webpack_require__(258);
+	var _cardsMd = __webpack_require__(353);
 	
 	var _cardsMd2 = _interopRequireDefault(_cardsMd);
 	
-	var _datatablesMd = __webpack_require__(259);
+	var _datatablesMd = __webpack_require__(354);
 	
 	var _datatablesMd2 = _interopRequireDefault(_datatablesMd);
 	
-	var _dialogsMd = __webpack_require__(260);
+	var _dialogsMd = __webpack_require__(355);
 	
 	var _dialogsMd2 = _interopRequireDefault(_dialogsMd);
 	
-	var _homeMd = __webpack_require__(261);
+	var _homeMd = __webpack_require__(356);
 	
 	var _homeMd2 = _interopRequireDefault(_homeMd);
 	
-	var _layoutMd = __webpack_require__(262);
+	var _layoutMd = __webpack_require__(357);
 	
 	var _layoutMd2 = _interopRequireDefault(_layoutMd);
 	
-	var _listsMd = __webpack_require__(263);
+	var _listsMd = __webpack_require__(358);
 	
 	var _listsMd2 = _interopRequireDefault(_listsMd);
 	
-	var _loadingMd = __webpack_require__(264);
+	var _loadingMd = __webpack_require__(359);
 	
 	var _loadingMd2 = _interopRequireDefault(_loadingMd);
 	
-	var _menusMd = __webpack_require__(265);
+	var _menusMd = __webpack_require__(360);
 	
 	var _menusMd2 = _interopRequireDefault(_menusMd);
 	
-	var _slidersMd = __webpack_require__(266);
+	var _slidersMd = __webpack_require__(361);
 	
 	var _slidersMd2 = _interopRequireDefault(_slidersMd);
 	
-	var _snackbarMd = __webpack_require__(267);
+	var _snackbarMd = __webpack_require__(362);
 	
 	var _snackbarMd2 = _interopRequireDefault(_snackbarMd);
 	
-	var _textfieldMd = __webpack_require__(268);
+	var _textfieldMd = __webpack_require__(363);
 	
 	var _textfieldMd2 = _interopRequireDefault(_textfieldMd);
 	
-	var _togglesMd = __webpack_require__(269);
+	var _togglesMd = __webpack_require__(364);
 	
 	var _togglesMd2 = _interopRequireDefault(_togglesMd);
 	
-	var _tooltipsMd = __webpack_require__(270);
+	var _tooltipsMd = __webpack_require__(365);
 	
 	var _tooltipsMd2 = _interopRequireDefault(_tooltipsMd);
 	
@@ -10879,97 +13174,97 @@
 	exports.tooltips = _tooltipsMd2.default;
 
 /***/ },
-/* 256 */
+/* 351 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"badges\" class=\"mdl-typography--display-4\">Badges</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-1\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Badge,\n                                                { text: \"1\", overlap: true },\n                                                React.createElement(Icon, { name: \"account_box\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Badge,\n                                                { text: \"♥\", overlap: true },\n                                                React.createElement(Icon, { name: \"account_box\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-1\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Number badge on icon */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >overlap</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>account_box<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon badge on icon */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>♥<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >overlap</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>account_box<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Badge text=\\&​quot;1\\&​quot; overlap>\\n    <Icon name=\\&​quot;account_box\\&​quot; />\\n</Badge>\\n                </Cell><Cell col={6}>\\n                    <Badge text=\\&​quot;♥\\&​quot; overlap>\\n    <Icon name=\\&​quot;account_box\\&​quot; />\\n</Badge>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-2\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Badge,\n            { text: \"4\" },\n            \"Inbox\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Badge,\n            { text: \"♥\", noBackground: true },\n            \"Mood\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-2\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Number badge on text */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>4<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Inbox<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon badge without background on text */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>♥<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >noBackground</span><span class=\"token punctuation\" >></span></span>Mood<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Badge text=\\&​quot;4\\&​quot;>Inbox</Badge>\\n                </Cell><Cell col={6}>\\n                    <Badge text=\\&​quot;♥\\&​quot; noBackground>Mood</Badge>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">text</td>\n<td style=\"text-align:left\">Assign string value to badge</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">overlap</td>\n<td style=\"text-align:left\">Makes the badge overlaps its container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">noBackground</td>\n<td style=\"text-align:left\">Removes the background of the badge</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 257 */
+/* 352 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"buttons\" class=\"mdl-typography--display-4\">Buttons</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-3\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { colored: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { colored: true, ripple: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-3\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored FAB button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >colored</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <FABButton colored>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={6}>\\n                    <FABButton colored ripple>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-4\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                null,\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                { ripple: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                { disabled: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-4\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* FAB button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <FABButton>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={4}>\\n                    <FABButton ripple>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={4}>\\n                    <FABButton disabled>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-5\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { mini: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { mini: true, colored: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-5\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Mini FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >mini</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Mini FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >mini</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <FABButton mini>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={6}>\\n                    <FABButton mini colored>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-6\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, ripple: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, disabled: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-6\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Raised button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button raised>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised ripple>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised disabled>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-7\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, colored: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, accent: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, accent: true, ripple: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-7\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored button without ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >accent</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >accent</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button raised colored>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised accent>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised accent ripple>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-8\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            null,\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { ripple: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { disabled: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-8\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Flat button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button ripple>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button disabled>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-9\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Button,\n            { primary: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Button,\n            { accent: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-9\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Primary colored flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >primary</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >accent</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Button primary>Button</Button>\\n                </Cell><Cell col={6}>\\n                    <Button accent>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-10\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconButton, { name: \"mood\" })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconButton, { name: \"mood\", colored: true })\n    )\n);;\n        var cont = document.getElementById(\"demo-10\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mood<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Icon button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mood<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >colored</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <IconButton name=\\&​quot;mood\\&​quot; />\\n                </Cell><Cell col={6}>\\n                    <IconButton name=\\&​quot;mood\\&​quot; colored />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">accent</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;accent&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">colored</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;colored&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the element</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">mini</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the button as &quot;mini&quot;</td>\n<td style=\"text-align:left\">Optional, works only with &quot;FABButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the icon name&quot;</td>\n<td style=\"text-align:left\">Optional, works only with &quot;IconButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">primary</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;primary&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">raised</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;raised&quot; button style</td>\n<td style=\"text-align:left\">Optional, doesn\\&#39;t work with &quot;FABButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;ripple&quot; click effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 258 */
+/* 353 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"cards\" class=\"mdl-typography--display-4\">Cards</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-11\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '512px', margin: 'auto' } },\n    React.createElement(\n        CardTitle,\n        { style: { color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover' } },\n        'Welcome'\n    ),\n    React.createElement(\n        CardText,\n        null,\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...'\n    ),\n    React.createElement(\n        CardActions,\n        { border: true },\n        React.createElement(\n            Button,\n            { colored: true },\n            'Get Started'\n        )\n    ),\n    React.createElement(\n        CardMenu,\n        { style: { color: '#fff' } },\n        React.createElement(IconButton, { name: 'share' })\n    )\n);;\n        var cont = document.getElementById(\"demo-11\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'512px'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'176px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Welcome<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardText</span><span class=\"token punctuation\" >></span></span>\n        Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span>\n        Mauris sagittis pellentesque lacus eleifend lacinia<span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardText</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>Get Started<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardMenu</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>share<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardMenu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;512px&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle style={{color: &apos;#fff&apos;, height: &apos;176px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover&apos;}}>Welcome</CardTitle>\\n    <CardText>\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Mauris sagittis pellentesque lacus eleifend lacinia...\\n    </CardText>\\n    <CardActions border>\\n        <Button colored>Get Started</Button>\\n    </CardActions>\\n    <CardMenu style={{color: &apos;#fff&apos;}}>\\n        <IconButton name=\\&​quot;share\\&​quot; />\\n    </CardMenu>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-12\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '320px', height: '320px', margin: 'auto' } },\n    React.createElement(\n        CardTitle,\n        { expand: true, style: { color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' } },\n        'Update'\n    ),\n    React.createElement(\n        CardText,\n        null,\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'\n    ),\n    React.createElement(\n        CardActions,\n        { border: true },\n        React.createElement(\n            Button,\n            { colored: true },\n            'View Updates'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-12\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'320px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'320px'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Update<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardText</span><span class=\"token punctuation\" >></span></span>\n        Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span>\n        Aenan convallis<span class=\"token punctuation\" >.</span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardText</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>View Updates<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;320px&apos;, height: &apos;320px&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle expand style={{color: &apos;#fff&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC&apos;}}>Update</CardTitle>\\n    <CardText>\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Aenan convallis.\\n    </CardText>\\n    <CardActions border>\\n        <Button colored>View Updates</Button>\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-13\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto' } },\n    React.createElement(CardTitle, { expand: true }),\n    React.createElement(\n        CardActions,\n        { style: { height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)' } },\n        React.createElement(\n            'span',\n            { style: { color: '#fff', fontSize: '14px', fontWeight: '500' } },\n            'Image.jpg'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-13\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'52px'</span><span class=\"token punctuation\" >,</span> padding<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'16px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'rgba(0,0,0,0.2)'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> fontSize<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'14px'</span><span class=\"token punctuation\" >,</span> fontWeight<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'500'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            Image<span class=\"token punctuation\" >.</span>jpg\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle expand />\\n    <CardActions style={{height: &apos;52px&apos;, padding: &apos;16px&apos;, background: &apos;rgba(0,0,0,0.2)&apos;}}>\\n        <span style={{color: &apos;#fff&apos;, fontSize: &apos;14px&apos;, fontWeight: &apos;500&apos;}}>\\n            Image.jpg\\n        </span>\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-14\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '256px', height: '256px', background: '#3E4EB8' } },\n    React.createElement(\n        CardTitle,\n        { expand: true, style: { alignItems: 'flex-start', color: '#fff' } },\n        React.createElement(\n            'h4',\n            { style: { marginTop: '0' } },\n            'Featured event:',\n            React.createElement('br', null),\n            'May 24, 2016',\n            React.createElement('br', null),\n            '7-11pm'\n        )\n    ),\n    React.createElement(\n        CardActions,\n        { border: true, style: { borderColor: 'rgba(255, 255, 255, 0.2)', display: 'flex', boxSizing: 'border-box', alignItems: 'center', color: '#fff' } },\n        React.createElement(\n            Button,\n            { colored: true, style: { color: '#fff' } },\n            'Add to Calendar'\n        ),\n        React.createElement('div', { className: 'mdl-layout-spacer' }),\n        React.createElement(Icon, { name: 'event' })\n    )\n);;\n        var cont = document.getElementById(\"demo-14\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#3E4EB8'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>alignItems<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'flex-start'</span><span class=\"token punctuation\" >,</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>marginTop<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'0'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            Featured event<span class=\"token punctuation\" >:</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n            May <span class=\"token number\" >24</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >2016</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token number\" >7</span><span class=\"token operator\" >-</span>11pm\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>borderColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'rgba(255, 255, 255, 0.2)'</span><span class=\"token punctuation\" >,</span> display<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'flex'</span><span class=\"token punctuation\" >,</span> boxSizing<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'border-box'</span><span class=\"token punctuation\" >,</span> alignItems<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'center'</span><span class=\"token punctuation\" >,</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Add to Calendar<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mdl-layout-spacer<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>event<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;#3E4EB8&apos;}}>\\n    <CardTitle expand style={{alignItems: &apos;flex-start&apos;, color: &apos;#fff&apos;}}>\\n        <h4 style={{marginTop: &apos;0&apos;}}>\\n            Featured event:<br />\\n            May 24, 2016<br />\\n            7-11pm\\n        </h4>\\n    </CardTitle>\\n    <CardActions border style={{borderColor: &apos;rgba(255, 255, 255, 0.2)&apos;, display: &apos;flex&apos;, boxSizing: &apos;border-box&apos;, alignItems: &apos;center&apos;, color: &apos;#fff&apos;}}>\\n        <Button colored style={{color: &apos;#fff&apos;}}>Add to Calendar</Button>\\n        <div className=\\&​quot;mdl-layout-spacer\\&​quot;></div>\\n        <Icon name=\\&​quot;event\\&​quot; />\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">border</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies a border on top of the container</td>\n<td style=\"text-align:left\">Optional. Works only with &quot;CardActions&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expand</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Expand the size to take the available space</td>\n<td style=\"text-align:left\">Optional. Works only with &quot;CardTitle&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 259 */
+/* 354 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"data-tables\" class=\"mdl-typography--display-4\">Data Tables</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-table\" class=\"mdl-typography--display-2\">Simple table</h3>\n<div id=\"demo-15\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(DataTable, {\n    shadow: 0,\n    columns: [{ name: 'material', label: 'Material', tooltip: 'The amazing material name' }, { name: 'quantity', label: 'Quantity', tooltip: 'Number of materials', numeric: true }, { name: 'price', label: 'Unit Price', tooltip: 'Price pet unit', numeric: true }],\n    rows: [{ material: 'Acrylic (Transparent)', quantity: 25, price: '$2.90' }, { material: 'Plywood (Birch)', quantity: 50, price: '$1.25' }, { material: 'Laminate (Gold on Blue)', quantity: 10, price: '$2.35' }]\n});;\n        var cont = document.getElementById(\"demo-15\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DataTable</span>\n    <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >columns</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n        <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'material'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Material'</span><span class=\"token punctuation\" >,</span> tooltip<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'The amazing material name'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'quantity'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Quantity'</span><span class=\"token punctuation\" >,</span> tooltip<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Number of materials'</span><span class=\"token punctuation\" >,</span> numeric<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'price'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Unit Price'</span><span class=\"token punctuation\" >,</span> tooltip<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Price pet unit'</span><span class=\"token punctuation\" >,</span> numeric<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >}</span>\n    <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Acrylic (Transparent)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >25</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$2.90'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Plywood (Birch)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$1.25'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Laminate (Gold on Blue)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$2.35'</span><span class=\"token punctuation\" >}</span>\n    <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <DataTable\\n    shadow={0}\\n    columns={[\\n        {name: &apos;material&apos;, label: &apos;Material&apos;, tooltip: &apos;The amazing material name&apos;},\\n        {name: &apos;quantity&apos;, label: &apos;Quantity&apos;, tooltip: &apos;Number of materials&apos;, numeric: true},\\n        {name: &apos;price&apos;, label: &apos;Unit Price&apos;, tooltip: &apos;Price pet unit&apos;, numeric: true}\\n    ]}\\n    rows={[\\n        {material: &apos;Acrylic (Transparent)&apos;, quantity: 25, price: &apos;$2.90&apos;},\\n        {material: &apos;Plywood (Birch)&apos;, quantity: 50, price: &apos;$1.25&apos;},\\n        {material: &apos;Laminate (Gold on Blue)&apos;, quantity: 10, price: &apos;$2.35&apos;}\\n    ]}\\n/>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"selectable-table-with-checkboxes\" class=\"mdl-typography--display-2\">Selectable Table with checkboxes</h3>\n<div id=\"demo-16\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Demo = function (_React$Component) {\n    _inherits(Demo, _React$Component);\n\n    function Demo(props) {\n        _classCallCheck(this, Demo);\n\n        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n        _this.onChangeHeaderCheckbox = _this.onChangeHeaderCheckbox.bind(_this);\n        _this.onChangeDataCheckbox = _this.onChangeDataCheckbox.bind(_this);\n\n        // imagine we get this data from the server\n        var dataFromServer = [{ material: 'Acrylic (Transparent)', quantity: 25, price: '$2.90' }, { material: 'Plywood (Birch)', quantity: 50, price: '$1.25' }, { material: 'Laminate (Gold on Blue)', quantity: 10, price: '$2.35' }];\n\n        // we add a \"checked\" state in our data (the name could be anything you want)\n        _this.state = {\n            rows: dataFromServer.map(function (row) {\n                return _extends({}, row, {\n                    checked: false\n                });\n            }),\n            headerChecked: false\n        };\n        return _this;\n    }\n\n    _createClass(Demo, [{\n        key: 'onChangeHeaderCheckbox',\n        value: function onChangeHeaderCheckbox() {\n            // update the state by checking or unchecking everything\n            this.setState(function (previousState) {\n                return {\n                    headerChecked: !previousState.headerChecked,\n                    rows: previousState.rows.map(function (row) {\n                        return _extends({}, row, {\n                            checked: !previousState.headerChecked\n                        });\n                    })\n                };\n            });\n        }\n    }, {\n        key: 'onChangeDataCheckbox',\n        value: function onChangeDataCheckbox(e) {\n            this.setState(function (previousState) {\n                return {\n                    rows: previousState.rows.map(function (row, i) {\n                        return _extends({}, row, {\n                            checked: i === parseInt(e.target.dataset.rowId, 10) ? !row.checked : row.checked\n                        });\n                    })\n                };\n            });\n        }\n    }, {\n        key: 'render',\n        value: function render() {\n            var _this2 = this;\n\n            // we need to render a checkbox based on the state\n            var rows = this.state.rows.map(function (row, i) {\n                return _extends({\n                    checkbox: React.createElement(Checkbox, { 'data-row-id': i, checked: row.checked, onChange: _this2.onChangeDataCheckbox }),\n                    selected: row.checked\n                }, row);\n            });\n\n            return React.createElement(DataTable, {\n                shadow: 0,\n                columns: [{ name: 'checkbox', label: React.createElement(Checkbox, { checked: this.state.headerChecked, onChange: this.onChangeHeaderCheckbox }) }, { name: 'material', label: 'Material' }, { name: 'quantity', label: 'Quantity', numeric: true }, { name: 'price', label: 'Unit Price', numeric: true }],\n                rows: rows\n            });\n        }\n    }]);\n\n    return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-16\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeHeaderCheckbox <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeHeaderCheckbox<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeDataCheckbox <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeDataCheckbox<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\n        <span class=\"token comment\" spellcheck=\"true\">// imagine we get this data from the server</span>\n        <span class=\"token keyword\" >const</span> dataFromServer <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >[</span>\n            <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Acrylic (Transparent)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >25</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$2.90'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n            <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Plywood (Birch)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$1.25'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n            <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Laminate (Gold on Blue)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'$2.35'</span><span class=\"token punctuation\" >}</span>\n        <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >;</span>\n\n        <span class=\"token comment\" spellcheck=\"true\">// we add a \"checked\" state in our data (the name could be anything you want)</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span>\n            rows<span class=\"token punctuation\" >:</span> dataFromServer<span class=\"token punctuation\" >.</span><span class=\"token function\" >map</span><span class=\"token punctuation\" >(</span>row <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n                <span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>row<span class=\"token punctuation\" >,</span>\n                checked<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n            <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >,</span>\n            headerChecked<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n        <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n\n    <span class=\"token function\" >onChangeHeaderCheckbox</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token comment\" spellcheck=\"true\">// update the state by checking or unchecking everything</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span>previousState <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n            headerChecked<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >!</span>previousState<span class=\"token punctuation\" >.</span>headerChecked<span class=\"token punctuation\" >,</span>\n            rows<span class=\"token punctuation\" >:</span> previousState<span class=\"token punctuation\" >.</span>rows<span class=\"token punctuation\" >.</span><span class=\"token function\" >map</span><span class=\"token punctuation\" >(</span>row <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n                <span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>row<span class=\"token punctuation\" >,</span>\n                checked<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >!</span>previousState<span class=\"token punctuation\" >.</span>headerChecked\n            <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span>\n        <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n\n    <span class=\"token function\" >onChangeDataCheckbox</span><span class=\"token punctuation\" >(</span>e<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span>previousState <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n            rows<span class=\"token punctuation\" >:</span> previousState<span class=\"token punctuation\" >.</span>rows<span class=\"token punctuation\" >.</span><span class=\"token function\" >map</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >(</span>row<span class=\"token punctuation\" >,</span> i<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n                <span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>row<span class=\"token punctuation\" >,</span>\n                checked<span class=\"token punctuation\" >:</span> i <span class=\"token operator\" >===</span> <span class=\"token function\" >parseInt</span><span class=\"token punctuation\" >(</span>e<span class=\"token punctuation\" >.</span>target<span class=\"token punctuation\" >.</span>dataset<span class=\"token punctuation\" >.</span>rowId<span class=\"token punctuation\" >,</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >?</span> <span class=\"token operator\" >!</span>row<span class=\"token punctuation\" >.</span>checked <span class=\"token punctuation\" >:</span> row<span class=\"token punctuation\" >.</span>checked\n            <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span>\n        <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n\n    <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token comment\" spellcheck=\"true\">// we need to render a checkbox based on the state</span>\n        <span class=\"token keyword\" >const</span> rows <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>rows<span class=\"token punctuation\" >.</span><span class=\"token function\" >map</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >(</span>row<span class=\"token punctuation\" >,</span> i<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n            checkbox<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >&lt;</span>Checkbox data<span class=\"token operator\" >-</span>row<span class=\"token operator\" >-</span>id<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>i<span class=\"token punctuation\" >}</span> checked<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>row<span class=\"token punctuation\" >.</span>checked<span class=\"token punctuation\" >}</span> onChange<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeDataCheckbox<span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span><span class=\"token punctuation\" >,</span>\n            selected<span class=\"token punctuation\" >:</span> row<span class=\"token punctuation\" >.</span>checked<span class=\"token punctuation\" >,</span>\n            <span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>row\n        <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n\n        <span class=\"token keyword\" >return</span> <span class=\"token operator\" >&lt;</span>DataTable\n            shadow<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span>\n            columns<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n                <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'checkbox'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token operator\" >&lt;</span>Checkbox checked<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>headerChecked<span class=\"token punctuation\" >}</span> onChange<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>onChangeHeaderCheckbox<span class=\"token punctuation\" >}</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n                <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'material'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Material'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n                <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'quantity'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Quantity'</span><span class=\"token punctuation\" >,</span> numeric<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n                <span class=\"token punctuation\" >{</span>name<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'price'</span><span class=\"token punctuation\" >,</span> label<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Unit Price'</span><span class=\"token punctuation\" >,</span> numeric<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >}</span>\n            <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span>\n            rows<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>rows<span class=\"token punctuation\" >}</span>\n        <span class=\"token operator\" >/</span><span class=\"token operator\" >></span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\nclass Demo extends React.Component {\\n    constructor(props) {\\n        super(props);\\n\\n        this.onChangeHeaderCheckbox = this.onChangeHeaderCheckbox.bind(this);\\n        this.onChangeDataCheckbox = this.onChangeDataCheckbox.bind(this);\\n\\n        // imagine we get this data from the server\\n        const dataFromServer = [\\n            {material: &apos;Acrylic (Transparent)&apos;, quantity: 25, price: &apos;$2.90&apos;},\\n            {material: &apos;Plywood (Birch)&apos;, quantity: 50, price: &apos;$1.25&apos;},\\n            {material: &apos;Laminate (Gold on Blue)&apos;, quantity: 10, price: &apos;$2.35&apos;}\\n        ];\\n\\n        // we add a \\&​quot;checked\\&​quot; state in our data (the name could be anything you want)\\n        this.state = {\\n            rows: dataFromServer.map(row => ({\\n                ...row,\\n                checked: false\\n            })),\\n            headerChecked: false\\n        };\\n    }\\n\\n    onChangeHeaderCheckbox() {\\n        // update the state by checking or unchecking everything\\n        this.setState(previousState => ({\\n            headerChecked: !previousState.headerChecked,\\n            rows: previousState.rows.map(row => ({\\n                ...row,\\n                checked: !previousState.headerChecked\\n            }))\\n        }));\\n    }\\n\\n    onChangeDataCheckbox(e) {\\n        this.setState(previousState => ({\\n            rows: previousState.rows.map((row, i) => ({\\n                ...row,\\n                checked: i === parseInt(e.target.dataset.rowId, 10) ? !row.checked : row.checked\\n            }))\\n        }));\\n    }\\n\\n    render() {\\n        // we need to render a checkbox based on the state\\n        const rows = this.state.rows.map((row, i) => ({\\n            checkbox: <Checkbox data-row-id={i} checked={row.checked} onChange={this.onChangeDataCheckbox} />,\\n            selected: row.checked,\\n            ...row\\n        }));\\n\\n        return <DataTable\\n            shadow={0}\\n            columns={[\\n                {name: &apos;checkbox&apos;, label: <Checkbox checked={this.state.headerChecked} onChange={this.onChangeHeaderCheckbox} />},\\n                {name: &apos;material&apos;, label: &apos;Material&apos;},\\n                {name: &apos;quantity&apos;, label: &apos;Quantity&apos;, numeric: true},\\n                {name: &apos;price&apos;, label: &apos;Unit Price&apos;, numeric: true}\\n            ]}\\n            rows={rows}\\n        />;\\n    }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">columns</td>\n<td style=\"text-align:left\">Array of {label, name, numeric, tooltip}</td>\n<td style=\"text-align:left\">Set the columns</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">rows</td>\n<td style=\"text-align:left\">Array of object</td>\n<td style=\"text-align:left\">Set the rows data</td>\n<td style=\"text-align:left\">Required. The properties of each object should be the &quot;name&quot; of each column</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 260 */
+/* 355 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"dialogs\" class=\"mdl-typography--display-4\">Dialogs</h1>\n<blockquote>\n<p>This component uses <a href=\"https://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element\">dialog element</a>, which is only supported by Chrome and Opera currently. For other browsers, you need to include a <a href=\"https://github.com/GoogleChrome/dialog-polyfill\">polyfill</a> in your code.</p>\n<p>If you&#39;re using the <code>Dialog</code> component with a full MDL app, you will also need to set a custom <code>z-index</code> on the <code>Layout</code> to make the <code>Dialog</code> be accessible on top of the dark overlay. A value of <code>100001</code> is required for this to work.</p>\n</blockquote>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-dialog\" class=\"mdl-typography--display-2\">Simple Dialog</h3>\n<div id=\"demo-17\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },\n          'Show Dialog'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow data collection?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            null,\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-17\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Dialog<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow data collection<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>\\n        <Dialog open={this.state.openDialog}>\\n          <DialogTitle>Allow data collection?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"dialog-with-full-width-actions\" class=\"mdl-typography--display-2\">Dialog with Full Width Actions</h3>\n<div id=\"demo-18\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },\n          'Show Modal'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow this site to collect usage data to improve your experience?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            { fullWidth: true },\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-18\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Modal<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow <span class=\"token keyword\" >this</span> site to collect usage data to improve your experience<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions fullWidth<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Modal</Button>\\n        <Dialog open={this.state.openDialog}>\\n          <DialogTitle>Allow this site to collect usage data to improve your experience?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions fullWidth>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"dialog-with-cancel-event-handler\" class=\"mdl-typography--display-2\">Dialog with Cancel Event Handler</h3>\n<div id=\"demo-19\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Cancel event is emitted when the user clicks \"Escape\" key while the modal is open.\n     It doesn't do anything by default.*/}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, onCancel: this.handleCloseDialog, raised: true, ripple: true },\n          'Show Dialog'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog, onCancel: this.handleCloseDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow data collection?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            null,\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-19\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Cancel event is emitted when the user clicks \"Escape\" key while the modal is open.\n    It doesn't do anything by default.*/</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> onCancel<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Dialog<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span> onCancel<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow data collection<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Cancel event is emitted when the user clicks \\&​quot;Escape\\&​quot; key while the modal is open.\\n    It doesn&apos;t do anything by default.*/}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} onCancel={this.handleCloseDialog} raised ripple>Show Dialog</Button>\\n        <Dialog open={this.state.openDialog} onCancel={this.handleCloseDialog}>\\n          <DialogTitle>Allow data collection?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Dialog</td>\n<td style=\"text-align:left\">onCancel</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the handler for the cancel event. (When the user press the &quot;Escape&quot; key)</td>\n<td style=\"text-align:left\">Optional. By default, the default behavior (closing the dialog) is prevented.</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Dialog</td>\n<td style=\"text-align:left\">open</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the open state of the dialog</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">DialogTitle</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String, Element, Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the element</td>\n<td style=\"text-align:left\">Optional. Default &#39;h4&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">DialogActions</td>\n<td style=\"text-align:left\">fullWidth</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Apply the full-width effect to all children of dialog actions</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 261 */
+/* 356 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"react-mdl\" class=\"mdl-typography--display-4\">React-MDL</h1>\n<p>React-MDL is a React wrapper for <a href=\"http://www.getmdl.io\">Material Design Lite</a>, a set of material components maintained by Google.</p>\n<p>This documentation is actually built entirely with React-MDL. You&#39;ll find examples of the available components.</p>\n<p>If you want to experiment using codepen for example, you can find the React-MDL <a href=\"https://npmcdn.com/react-mdl/out/ReactMDL.js\">bundle JS file</a> and its <a href=\"https://npmcdn.com/react-mdl/out/ReactMDL.min.js\">minified version</a>. Don&#39;t forget to include React and React-DOM for your demos.</p>\n";
 
 /***/ },
-/* 262 */
+/* 357 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"layout\" class=\"mdl-typography--display-4\">Layout</h1>\n<ul>\n<li><a href=\"#navigation-layout\">Navigation Layout</a></li>\n<li><a href=\"#grid\">Grid</a></li>\n<li><a href=\"#tabs\">Tabs</a></li>\n<li><a href=\"#footer\">Footer</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"navigation-layout\" class=\"mdl-typography--display-2\">Navigation Layout</h3>\n<div id=\"demo-20\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { style: { background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' } },\n        React.createElement(\n            Header,\n            { transparent: true, title: 'Title', style: { color: 'white' } },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-20\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a transparent header that draws on top of the layout's background */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >transparent</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'white'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout style={{background: &apos;url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover&apos;}}>\\n        <Header transparent title=\\&​quot;Title\\&​quot; style={{color: &apos;white&apos;}}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-21\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedDrawer: true },\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-21\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* No header, and the drawer stays open on larger screens (fixed drawer). */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedDrawer>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-22\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true },\n        React.createElement(\n            Header,\n            { title: React.createElement(\n                    'span',\n                    null,\n                    React.createElement(\n                        'span',\n                        { style: { color: '#ddd' } },\n                        'Area / '\n                    ),\n                    React.createElement(\n                        'strong',\n                        null,\n                        'The Title'\n                    )\n                ) },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-22\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Always shows a header, even in smaller screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title={&lt;span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#ddd'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Area <span class=\"token operator\" >/</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span>The Title<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader>\\n        <Header title={<span><span style={{ color: &apos;#ddd&apos; }}>Area / </span><strong>The Title</strong></span>}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-23\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedDrawer: true },\n        React.createElement(\n            Header,\n            { title: 'Title' },\n            React.createElement(Textfield, {\n                value: '',\n                onChange: () => {},\n                label: 'Search',\n                expandable: true,\n                expandableIcon: 'search'\n            })\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-23\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* The drawer is always open in large screens. The header is always shown, even in small screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >expandable</span>\n                <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n            <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedDrawer>\\n        <Header title=\\&​quot;Title\\&​quot;>\\n            <Textfield\\n                value=\\&​quot;\\&​quot;\\n                onChange={() => {}}\\n                label=\\&​quot;Search\\&​quot;\\n                expandable\\n                expandableIcon=\\&​quot;search\\&​quot;\\n            />\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-24\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { title: \"Title\", scroll: true },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-24\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that scrolls with the text, rather than staying locked at the top */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >scroll</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header title=\\&​quot;Title\\&​quot; scroll>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-25\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-25\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that contracts as the page scrolls down. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-26\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true, hideTop: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-26\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Hide the top part of the header when scrolling down */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span> <span class=\"token attr-name\" >hideTop</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall hideTop>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-27\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true },\n        React.createElement(\n            Header,\n            null,\n            React.createElement(HeaderRow, { title: 'Title' }),\n            React.createElement(\n                HeaderTabs,\n                { activeTab: 2, onChange: tabId => {} },\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab1'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab2'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab3'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab4'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab5'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab6'\n                )\n            )\n        ),\n        React.createElement(Drawer, { title: 'Title' }),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\n                'div',\n                { className: 'page-content' },\n                'You can add logic to update the content of this container based on the \"activeTab\" receive in the `onChange` callback.'\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-27\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple header with scrollable tabs. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderTabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab1<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab2<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab3<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab4<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab5<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab6<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader>\\n        <Header>\\n            <HeaderRow title=\\&​quot;Title\\&​quot; />\\n            <HeaderTabs activeTab={2} onChange={(tabId) => {}}>\\n                <Tab>Tab1</Tab>\\n                <Tab>Tab2</Tab>\\n                <Tab>Tab3</Tab>\\n                <Tab>Tab4</Tab>\\n                <Tab>Tab5</Tab>\\n                <Tab>Tab6</Tab>\\n            </HeaderTabs>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot; />\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-28\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedTabs: true },\n        React.createElement(\n            Header,\n            null,\n            React.createElement(HeaderRow, { title: 'Title' }),\n            React.createElement(\n                HeaderTabs,\n                { activeTab: 1, onChange: tabId => {} },\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab1'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab2'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab3'\n                )\n            )\n        ),\n        React.createElement(Drawer, { title: 'Title' }),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\n                'div',\n                { className: 'page-content' },\n                'You can add logic to update the content of this container based on the \"activeTab\" receive in the `onChange` callback.'\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-28\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple header with fixed tabs. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderTabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab1<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab2<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab3<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedTabs>\\n        <Header>\\n            <HeaderRow title=\\&​quot;Title\\&​quot; />\\n            <HeaderTabs activeTab={1} onChange={(tabId) => {}}>\\n                <Tab>Tab1</Tab>\\n                <Tab>Tab2</Tab>\\n                <Tab>Tab3</Tab>\\n            </HeaderTabs>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot; />\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Drawer</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the Drawer title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedDrawer</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the drawer always visible and open in larger screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedHeader</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header always visible, even in small screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedTabs</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses fixed tabs instead of the default scrollable tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">scroll</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header scroll with the content</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">seamed</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses a header without a shadow</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">transparent</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes header transparent</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">waterfall</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Allows a &quot;waterfall&quot; effect with multiple header lines</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">hideTop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the top part of the header when used with <code>waterfall</code></td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">HeaderRow</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Content</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the element</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"grid\" class=\"mdl-typography--display-2\">Grid</h3>\n<style>.demo-grid-ruler .mdl-cell,\n.demo-grid-1 .mdl-cell,\n.demo-grid-2 .mdl-cell,\n.demo-grid-3 .mdl-cell {\n  box-sizing: border-box;\n  background-color: #BDBDBD;\n  height: 100px;\n  padding-left: 8px;\n  padding-top: 4px;\n  color: white;\n}\n.demo-grid-ruler.demo-grid-ruler .mdl-cell {\n  height: 50px;\n}</style><div id=\"demo-29\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { width: '80%', margin: 'auto' } },\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-ruler' },\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-1' },\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-2' },\n        React.createElement(\n            Cell,\n            { col: 6 },\n            '6'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2 },\n            '2'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-3' },\n        React.createElement(\n            Cell,\n            { col: 6, tablet: 8 },\n            '6 (8 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4, tablet: 6 },\n            '4 (6 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2, phone: 4 },\n            '2 (4 phone)'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-29\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'80%'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-ruler<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >8</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >8</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >6</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >phone</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >4</span> phone<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{width: &apos;80%&apos;, margin: &apos;auto&apos;}}>\\n    <Grid className=\\&​quot;demo-grid-ruler\\&​quot;>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-1\\&​quot;>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-2\\&​quot;>\\n        <Cell col={6}>6</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={2}>2</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-3\\&​quot;>\\n        <Cell col={6} tablet={8}>6 (8 tablet)</Cell>\\n        <Cell col={4} tablet={6}>4 (6 tablet)</Cell>\\n        <Cell col={2} phone={4}>2 (4 phone)</Cell>\\n    </Grid>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the grid</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">noSpacing</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Removes the margins between the cells.</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">align</td>\n<td style=\"text-align:left\">String[top, middle, bottom, stretch]</td>\n<td style=\"text-align:left\">Set the cell alignment</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">col</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the cell</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideDesktop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in desktop mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hidePhone</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideTablet</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">phone</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">tablet</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"tabs\" class=\"mdl-typography--display-2\">Tabs</h3>\n<style>.demo-tabs {\n    width: 70%;\n    margin: auto;\n}\n.demo-tabs .content {\n    height: 100px;\n}</style><div id=\"demo-30\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-tabs\" },\n    React.createElement(\n        Tabs,\n        { activeTab: 1, onChange: tabId => {}, ripple: true },\n        React.createElement(\n            Tab,\n            null,\n            \"Starks\"\n        ),\n        React.createElement(\n            Tab,\n            null,\n            \"Lannisters\"\n        ),\n        React.createElement(\n            Tab,\n            null,\n            \"Targaryens\"\n        )\n    ),\n    React.createElement(\n        \"section\",\n        null,\n        React.createElement(\n            \"div\",\n            { className: \"content\" },\n            \"You can add logic to update the content of this container based on the \\\"activeTab\\\" receive in the `onChange` callback.\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-30\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-tabs<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Starks<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Lannisters<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Targaryens<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tabs</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>section</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>section</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-tabs\\&​quot;>\\n    <Tabs activeTab={1} onChange={(tabId) => {}} ripple>\\n        <Tab>Starks</Tab>\\n        <Tab>Lannisters</Tab>\\n        <Tab>Targaryens</Tab>\\n    </Tabs>\\n    <section>\\n        <div className=\\&​quot;content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n    </section>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">activeTab</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the active tab</td>\n<td style=\"text-align:left\">Optional, default 0</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Set the change callback</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies ripples effect on tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">tabBarProps</td>\n<td style=\"text-align:left\">Object</td>\n<td style=\"text-align:left\">Pass Props to the TabBar Element</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"footer\" class=\"mdl-typography--display-2\">Footer</h3>\n<div id=\"demo-31\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mega\" },\n    React.createElement(\n        FooterSection,\n        { type: \"middle\" },\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Features\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"About\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Terms\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Partners\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Updates\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Details\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Specs\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Tools\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Resources\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Technology\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"How it works\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Patterns\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Usage\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Products\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contracts\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"FAQ\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Questions\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Answers\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contact Us\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        FooterSection,\n        { type: \"bottom\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-31\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mega<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>middle<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Features<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>About<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Partners<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Updates<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Details<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Specs<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Tools<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Resources<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Technology<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>How it works<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Patterns<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Usage<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Products<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contracts<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>FAQ<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Questions<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Answers<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contact Us<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mega\\&​quot;>\\n    <FooterSection type=\\&​quot;middle\\&​quot;>\\n        <FooterDropDownSection title=\\&​quot;Features\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>About</a>\\n                <a href=\\&​quot;#\\&​quot;>Terms</a>\\n                <a href=\\&​quot;#\\&​quot;>Partners</a>\\n                <a href=\\&​quot;#\\&​quot;>Updates</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Details\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Specs</a>\\n                <a href=\\&​quot;#\\&​quot;>Tools</a>\\n                <a href=\\&​quot;#\\&​quot;>Resources</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Technology\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>How it works</a>\\n                <a href=\\&​quot;#\\&​quot;>Patterns</a>\\n                <a href=\\&​quot;#\\&​quot;>Usage</a>\\n                <a href=\\&​quot;#\\&​quot;>Products</a>\\n                <a href=\\&​quot;#\\&​quot;>Contracts</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;FAQ\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Questions</a>\\n                <a href=\\&​quot;#\\&​quot;>Answers</a>\\n                <a href=\\&​quot;#\\&​quot;>Contact Us</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n    </FooterSection>\\n    <FooterSection type=\\&​quot;bottom\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-32\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mini\" },\n    React.createElement(\n        FooterSection,\n        { type: \"left\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-32\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mini<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mini\\&​quot;>\\n    <FooterSection type=\\&​quot;left\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Footer</td>\n<td style=\"text-align:left\">size</td>\n<td style=\"text-align:left\">String (mini, mega)</td>\n<td style=\"text-align:left\">Set the size of the footer</td>\n<td style=\"text-align:left\">Optional, default &quot;mega&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">logo</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Optional, used only in the mini footer</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">type</td>\n<td style=\"text-align:left\">String (top, middle, bottom, left, right)</td>\n<td style=\"text-align:left\">Set the section type</td>\n<td style=\"text-align:left\">Optional, default left</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterDropDownSection</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 263 */
+/* 358 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"lists\" class=\"mdl-typography--display-4\">Lists</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-list\" class=\"mdl-typography--display-2\">Simple list</h3>\n<div id=\"demo-33\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  null,\n  React.createElement(\n    ListItem,\n    null,\n    \"Bryan Cranston\"\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    \"Aaron Paul\"\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    \"Bob Odenkirk\"\n  )\n);;\n        var cont = document.getElementById(\"demo-33\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List>\\n  <ListItem>Bryan Cranston</ListItem>\\n  <ListItem>Aaron Paul</ListItem>\\n  <ListItem>Bob Odenkirk</ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"simple-list-with-icon\" class=\"mdl-typography--display-2\">Simple list with icon</h3>\n<div id=\"demo-34\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  null,\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Bryan Cranston\"\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Aaron Paul\"\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Bob Odenkirk\"\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-34\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"list-with-avatar-and-simple-action\" class=\"mdl-typography--display-2\">List with avatar and simple action</h3>\n<div id=\"demo-35\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-35\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"list-with-avatar-and-complex-action\" class=\"mdl-typography--display-2\">List with avatar and complex action</h3>\n<div id=\"demo-36\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Checkbox, { defaultChecked: true })\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Radio, { value: false })\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Switch, { defaultChecked: true })\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-36\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token boolean\" >false</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <Checkbox defaultChecked />\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <Radio value={false} />\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <Switch defaultChecked />\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"two-line-list\" class=\"mdl-typography--display-2\">Two line list</h3>\n<div id=\"demo-37\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      { info: \"Actor\" },\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-37\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span> <span class=\"token attr-name\" >info</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Actor<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction info=\\&​quot;Actor\\&​quot;>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"three-line-list\" class=\"mdl-typography--display-2\">Three line list</h3>\n<div id=\"demo-38\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '650px' } },\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-38\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'650px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Bryan</span> <span class=\"token attr-name\" >Cranston</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Walter</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >He</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >also</span> <span class=\"token attr-name\" >known</span> <span class=\"token attr-name\" >for</span> <span class=\"token attr-name\" >playing</span> <span class=\"token attr-name\" >Hal</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Malcom</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >Middle.\"</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Aaron</span> <span class=\"token attr-name\" >Paul</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Jesse</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >He</span> <span class=\"token attr-name\" >also</span> <span class=\"token attr-name\" >featured</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >Need</span> <span class=\"token attr-name\" >For</span> <span class=\"token attr-name\" >Speed</span> <span class=\"token attr-name\" >Movie.\"</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Bob</span> <span class=\"token attr-name\" >Odinkrik</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Saul</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >Due</span> <span class=\"token attr-name\" >to</span> <span class=\"token attr-name\" >public</span> <span class=\"token attr-name\" >fondness</span> <span class=\"token attr-name\" >for</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >character,</span> <span class=\"token attr-name\" >Bob</span> <span class=\"token attr-name\" >stars</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >his</span> <span class=\"token attr-name\" >own</span> <span class=\"token attr-name\" >show</span> <span class=\"token attr-name\" >now,</span> <span class=\"token attr-name\" >called</span> <span class=\"token attr-name\" >Better</span> <span class=\"token attr-name\" >Call</span> <span class=\"token attr-name\" >Saul.\"</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;650px&apos;}}>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">ListItem</td>\n<td style=\"text-align:left\">twoLine</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set item to have 2 lines</td>\n<td style=\"text-align:left\">Optional. Cannot be set alongside <code>threeline</code></td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItem</td>\n<td style=\"text-align:left\">twoLine</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set item to have 3 lines</td>\n<td style=\"text-align:left\">Optional. Cannot be set alongside <code>twoLine</code></td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">avatar</td>\n<td style=\"text-align:left\">string, Element</td>\n<td style=\"text-align:left\">Set the item left avatar</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">icon</td>\n<td style=\"text-align:left\">string, Element</td>\n<td style=\"text-align:left\">Set the item left icon</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">subtitle</td>\n<td style=\"text-align:left\">string</td>\n<td style=\"text-align:left\">Set the item subtitle</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemAction</td>\n<td style=\"text-align:left\">info</td>\n<td style=\"text-align:left\">string</td>\n<td style=\"text-align:left\">Set a small header above the action</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 264 */
+/* 359 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"loading\" class=\"mdl-typography--display-4\">Loading</h1>\n<ul>\n<li><a href=\"#progress-bar\">Progress Bar</a></li>\n<li><a href=\"#spinner\">Spinner</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"progress-bar\" class=\"mdl-typography--display-2\">Progress Bar</h3>\n<div id=\"demo-39\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { progress: 44 });;\n        var cont = document.getElementById(\"demo-39\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple Progress Bar */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >progress</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >44</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar progress={44} />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-40\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { indeterminate: true });;\n        var cont = document.getElementById(\"demo-40\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Progress Bar with Indeterminate Progress */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >indeterminate</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar indeterminate />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-41\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { progress: 33, buffer: 87 });;\n        var cont = document.getElementById(\"demo-41\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Progress Bar with Buffering */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >progress</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >33</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >buffer</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >87</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar progress={33} buffer={87} />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">buffer</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Specify the buffer</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">indeterminate</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set as indeterminate</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">progress</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Specify the progress value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"spinner\" class=\"mdl-typography--display-2\">Spinner</h3>\n<div id=\"demo-42\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Spinner, null)\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Spinner, { singleColor: true })\n    )\n);;\n        var cont = document.getElementById(\"demo-42\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple spinner */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Spinner</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Single color spinner */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Spinner</span> <span class=\"token attr-name\" >singleColor</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Spinner />\\n                </Cell><Cell col={6}>\\n                    <Spinner singleColor />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">singleColor</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Use the primary color instead of a multi color spinner</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 265 */
+/* 360 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"menus\" class=\"mdl-typography--display-4\">Menus</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-43\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-lower-left\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-lower-left\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-lower-right\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-lower-right\", align: \"right\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-43\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Lower left */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Lower right */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >align</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-lower-left\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-lower-left\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-lower-right\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-lower-right\\&​quot; align=\\&​quot;right\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-44\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-top-left\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-top-left\", valign: \"top\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-top-right\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-top-right\", valign: \"top\", align: \"right\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-44\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top left */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >valign</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top right */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >valign</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >align</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-top-left\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-top-left\\&​quot; valign=\\&​quot;top\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-top-right\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-top-right\\&​quot; valign=\\&​quot;top\\&​quot; align=\\&​quot;right\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">align</td>\n<td style=\"text-align:left\">String (left, right)</td>\n<td style=\"text-align:left\">Set the horizontal alignment</td>\n<td style=\"text-align:left\">Optional, default &quot;left&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Apply the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">target</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">ID of the targeted element. A click on the targeted element will open the menu</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">valign</td>\n<td style=\"text-align:left\">String (top, bottom)</td>\n<td style=\"text-align:left\">Set the vertical alignment</td>\n<td style=\"text-align:left\">Optional, default &quot;bottom&quot;</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 266 */
+/* 361 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"sliders\" class=\"mdl-typography--display-4\">Sliders</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-45\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Slider, { min: 0, max: 100, defaultValue: 0 })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Slider, { min: 0, max: 100, defaultValue: 25 })\n    )\n);;\n        var cont = document.getElementById(\"demo-45\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Default slider */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >100</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Slider with initial value */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >100</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >25</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Slider min={0} max={100} defaultValue={0} />\\n                </Cell><Cell col={6}>\\n                    <Slider min={0} max={100} defaultValue={25} />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">max</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the maximum value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">min</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the minimum value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback taking 1 parameter with the new value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the initial/current value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 267 */
+/* 362 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"snackbar\" class=\"mdl-typography--display-4\">Snackbar</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-46\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Example of a snackbar */}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);\n    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);\n    _this.handleClickActionSnackbar = _this.handleClickActionSnackbar.bind(_this);\n    _this.state = { isSnackbarActive: false };\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleShowSnackbar',\n    value: function handleShowSnackbar() {\n      this.setState({\n        isSnackbarActive: true,\n        btnBgColor: '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16)\n      });\n    }\n  }, {\n    key: 'handleTimeoutSnackbar',\n    value: function handleTimeoutSnackbar() {\n      this.setState({ isSnackbarActive: false });\n    }\n  }, {\n    key: 'handleClickActionSnackbar',\n    value: function handleClickActionSnackbar() {\n      this.setState({\n        btnBgColor: ''\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _state = this.state;\n      var btnBgColor = _state.btnBgColor;\n      var isSnackbarActive = _state.isSnackbarActive;\n\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { raised: true, style: { backgroundColor: btnBgColor }, onClick: this.handleShowSnackbar },\n          'Show a Snackbar'\n        ),\n        React.createElement(\n          Snackbar,\n          {\n            active: isSnackbarActive,\n            onClick: this.handleClickActionSnackbar,\n            onTimeout: this.handleTimeoutSnackbar,\n            action: 'Undo' },\n          'Button color changed.'\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-46\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Example of a snackbar */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleShowSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n      btnBgColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#'</span> <span class=\"token operator\" >+</span>\n        Math<span class=\"token punctuation\" >.</span><span class=\"token function\" >floor</span><span class=\"token punctuation\" >(</span>Math<span class=\"token punctuation\" >.</span><span class=\"token function\" >random</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >*</span> <span class=\"token number\" >0xFFFFFF</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >toString</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >16</span><span class=\"token punctuation\" >)</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleTimeoutSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleClickActionSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      btnBgColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> btnBgColor<span class=\"token punctuation\" >,</span> isSnackbarActive <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button raised style<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>backgroundColor<span class=\"token punctuation\" >:</span> btnBgColor<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Show a Snackbar<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Snackbar\n          active<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>isSnackbarActive<span class=\"token punctuation\" >}</span>\n          onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar<span class=\"token punctuation\" >}</span>\n          onTimeout<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >}</span>\n          action<span class=\"token operator\" >=</span><span class=\"token string\" >\"Undo\"</span><span class=\"token operator\" >></span>Button color changed<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Snackbar<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Example of a snackbar */}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\\n    this.handleClickActionSnackbar = this.handleClickActionSnackbar.bind(this);\\n    this.state = { isSnackbarActive: false };\\n  }\\n\\n  handleShowSnackbar() {\\n    this.setState({\\n      isSnackbarActive: true,\\n      btnBgColor: &apos;#&apos; +\\n        Math.floor(Math.random() * 0xFFFFFF).toString(16)\\n    });\\n  }\\n  handleTimeoutSnackbar() {\\n    this.setState({ isSnackbarActive: false });\\n  }\\n  handleClickActionSnackbar() {\\n    this.setState({\\n      btnBgColor: &apos;&apos;\\n    });\\n  }\\n  render() {\\n    const { btnBgColor, isSnackbarActive } = this.state;\\n    return (\\n      <div>\\n        <Button raised style={{backgroundColor: btnBgColor}} onClick={this.handleShowSnackbar}>Show a Snackbar</Button>\\n        <Snackbar\\n          active={isSnackbarActive}\\n          onClick={this.handleClickActionSnackbar}\\n          onTimeout={this.handleTimeoutSnackbar}\\n          action=\\&​quot;Undo\\&​quot;>Button color changed.</Snackbar>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-47\"></div>\n        <script class=\"demo-js\">\n        var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Example of a toast (snackbar without action button) */}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);\n    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);\n    _this.state = { isSnackbarActive: false };\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: \"handleShowSnackbar\",\n    value: function handleShowSnackbar() {\n      this.setState({ isSnackbarActive: true });\n    }\n  }, {\n    key: \"handleTimeoutSnackbar\",\n    value: function handleTimeoutSnackbar() {\n      this.setState({ isSnackbarActive: false });\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var isSnackbarActive = this.state.isSnackbarActive;\n\n      return React.createElement(\n        \"div\",\n        null,\n        React.createElement(\n          Button,\n          { raised: true, onClick: this.handleShowSnackbar },\n          \"Show a Toast\"\n        ),\n        React.createElement(\n          Snackbar,\n          {\n            active: isSnackbarActive,\n            onTimeout: this.handleTimeoutSnackbar },\n          \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem.\"\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-47\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Example of a toast (snackbar without action button) */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleShowSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleTimeoutSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> isSnackbarActive <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button raised onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Show a Toast<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Snackbar\n          active<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>isSnackbarActive<span class=\"token punctuation\" >}</span>\n          onTimeout<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n            Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span> Fusce varius luctus quam<span class=\"token punctuation\" >.</span> Fusce quis blandit libero<span class=\"token punctuation\" >.</span> Donec accumsan nunc lectus<span class=\"token punctuation\" >,</span> vel blandit diam bibendum ac<span class=\"token punctuation\" >.</span> Integer faucibus<span class=\"token punctuation\" >,</span> lorem et convallis fermentum<span class=\"token punctuation\" >,</span> diam dolor imperdiet mi<span class=\"token punctuation\" >,</span> nec iaculis risus mauris id elit<span class=\"token punctuation\" >.</span> Vivamus vel eros dapibus<span class=\"token punctuation\" >,</span> molestie ante ut<span class=\"token punctuation\" >,</span> vestibulum sem<span class=\"token punctuation\" >.</span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Snackbar<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Example of a toast (snackbar without action button) */}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\\n    this.state = { isSnackbarActive: false };\\n  }\\n\\n  handleShowSnackbar() {\\n    this.setState({ isSnackbarActive: true });\\n  }\\n  handleTimeoutSnackbar() {\\n    this.setState({ isSnackbarActive: false });\\n  }\\n  render() {\\n    const { isSnackbarActive } = this.state;\\n    return (\\n      <div>\\n        <Button raised onClick={this.handleShowSnackbar}>Show a Toast</Button>\\n        <Snackbar\\n          active={isSnackbarActive}\\n          onTimeout={this.handleTimeoutSnackbar}>\\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem.\\n          </Snackbar>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">action</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Specify the label of the action button</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">active</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the snackbar visible</td>\n<td style=\"text-align:left\">Required. Should be false when mounting the component</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onActionClick</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Function to call when the action button is clicked</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onTimeout</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Function to call when the snackbar is getting hidden</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">timeout</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the time (in ms) to show the snackbar</td>\n<td style=\"text-align:left\">Optional. Default 2750</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 268 */
+/* 363 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"textfield\" class=\"mdl-typography--display-4\">Textfield</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-48\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text...\",\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                pattern: \"-?[0-9]*(\\\\.[0-9]+)?\",\n                                                error: \"Input is not a number!\",\n                                                label: \"Number...\",\n                                                style: { width: '200px' }\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-48\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Numeric textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pattern</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>-?[0-9]*(\\.[0-9]+)?<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >error</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Input</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >not</span> <span class=\"token attr-name\" >a</span> <span class=\"token attr-name\" >number!\"</span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text...\\&​quot;\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    pattern=\\&​quot;-?[0-9]*(\\\\.[0-9]+)?\\&​quot;\\n    error=\\&​quot;Input is not a number!\\&​quot;\\n    label=\\&​quot;Number...\\&​quot;\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-49\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text...\",\n                                                floatingLabel: true,\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                pattern: \"-?[0-9]*(\\\\.[0-9]+)?\",\n                                                error: \"Input is not a number!\",\n                                                label: \"Number...\",\n                                                floatingLabel: true\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-49\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Textfield with floating label */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >floatingLabel</span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Numeric Textfield with floating label */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pattern</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>-?[0-9]*(\\.[0-9]+)?<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >error</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Input</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >not</span> <span class=\"token attr-name\" >a</span> <span class=\"token attr-name\" >number!\"</span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >floatingLabel</span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text...\\&​quot;\\n    floatingLabel\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    pattern=\\&​quot;-?[0-9]*(\\\\.[0-9]+)?\\&​quot;\\n    error=\\&​quot;Input is not a number!\\&​quot;\\n    label=\\&​quot;Number...\\&​quot;\\n    floatingLabel\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-50\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text lines...\",\n                                                rows: 3,\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Expandable Input\",\n                                                expandable: true,\n                                                expandableIcon: \"search\"\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-50\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Floating Multiline Textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text</span> <span class=\"token attr-name\" >lines...\"</span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >3</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Expandable Textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Expandable</span> <span class=\"token attr-name\" >Input\"</span>\n    <span class=\"token attr-name\" >expandable</span>\n    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text lines...\\&​quot;\\n    rows={3}\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Expandable Input\\&​quot;\\n    expandable\\n    expandableIcon=\\&​quot;search\\&​quot;\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the disabled state</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">error</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Specifies the error message</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expandable</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the textfield as expandable</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expandableIcon</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the icon for the expandable textfield</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">floatingLabel</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the floating label effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">inputClassName</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set CSS classes on the input</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the input label</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">maxRows</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the max rows (multilines)</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">pattern</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the pattern to validate the value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">required</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the textfield as required</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">rows</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the number of rows (multiline)</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">style</td>\n<td style=\"text-align:left\">Object</td>\n<td style=\"text-align:left\">Defines the custom styles for the container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Definest the &#39;current&#39; value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 269 */
+/* 364 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"toggles\" class=\"mdl-typography--display-4\">Toggles</h1>\n<ul>\n<li><a href=\"#checkbox\">Checkbox</a></li>\n<li><a href=\"#radio-button\">Radio Button</a></li>\n<li><a href=\"#icon-toggle\">Icon Toggle</a></li>\n<li><a href=\"#switch\">Switch</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"checkbox\" class=\"mdl-typography--display-2\">Checkbox</h3>\n<div id=\"demo-51\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Checkbox, { label: \"With ripple\", ripple: true, defaultChecked: true })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Checkbox, { label: \"Without ripple\" })\n    )\n);;\n        var cont = document.getElementById(\"demo-51\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>With</span> <span class=\"token attr-name\" >ripple\"</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Without</span> <span class=\"token attr-name\" >ripple\"</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Checkbox label=\\&​quot;With ripple\\&​quot; ripple defaultChecked />\\n                </Cell><Cell col={6}>\\n                    <Checkbox label=\\&​quot;Without ripple\\&​quot; />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the label</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"radio-button\" class=\"mdl-typography--display-2\">Radio Button</h3>\n<div id=\"demo-52\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                RadioGroup,\n                                                { name: \"demo\", value: \"opt1\" },\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt1\", ripple: true },\n                                                                \"Ripple option\"\n                                                ),\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt2\" },\n                                                                \"Other option\"\n                                                )\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                RadioGroup,\n                                                { container: \"ul\", childContainer: \"li\", name: \"demo2\", value: \"opt2\" },\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt1\", ripple: true },\n                                                                \"Ripple option\"\n                                                ),\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt2\" },\n                                                                \"Other option\"\n                                                )\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-52\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RadioGroup</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Ripple option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Other option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>RadioGroup</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RadioGroup</span> <span class=\"token attr-name\" >container</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ul<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >childContainer</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>li<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo2<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Ripple option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Other option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>RadioGroup</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <RadioGroup name=\\&​quot;demo\\&​quot; value=\\&​quot;opt1\\&​quot;>\\n    <Radio value=\\&​quot;opt1\\&​quot; ripple>Ripple option</Radio>\\n    <Radio value=\\&​quot;opt2\\&​quot;>Other option</Radio>\\n</RadioGroup>\\n                </Cell><Cell col={6}>\\n                    <RadioGroup container=\\&​quot;ul\\&​quot; childContainer=\\&​quot;li\\&​quot; name=\\&​quot;demo2\\&​quot; value=\\&​quot;opt2\\&​quot;>\\n    <Radio value=\\&​quot;opt1\\&​quot; ripple>Ripple option</Radio>\\n    <Radio value=\\&​quot;opt2\\&​quot;>Other option</Radio>\\n</RadioGroup>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">childContainer</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Wrap every child in the specified container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the name of the radio group</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Defines the selected value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set as disabled</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Defines the selected value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"icon-toggle\" class=\"mdl-typography--display-2\">Icon Toggle</h3>\n<div id=\"demo-53\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconToggle, { ripple: true, id: \"bold\", name: \"format_bold\", defaultChecked: true })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconToggle, { id: \"italic\", name: \"format_italic\" })\n    )\n);;\n        var cont = document.getElementById(\"demo-53\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconToggle</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bold<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>format_bold<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconToggle</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>italic<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>format_italic<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <IconToggle ripple id=\\&​quot;bold\\&​quot; name=\\&​quot;format_bold\\&​quot; defaultChecked />\\n                </Cell><Cell col={6}>\\n                    <IconToggle id=\\&​quot;italic\\&​quot; name=\\&​quot;format_italic\\&​quot; />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the name</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"switch\" class=\"mdl-typography--display-2\">Switch</h3>\n<div id=\"demo-54\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Switch,\n            { ripple: true, id: \"switch1\", defaultChecked: true },\n            \"Ripple switch\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Switch,\n            { id: \"switch2\" },\n            \"Switch\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-54\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>switch1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >defaultChecked</span><span class=\"token punctuation\" >></span></span>Ripple <span class=\"token keyword\" >switch</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Switch</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>switch2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Switch<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Switch</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Switch ripple id=\\&​quot;switch1\\&​quot; defaultChecked>Ripple switch</Switch>\\n                </Cell><Cell col={6}>\\n                    <Switch id=\\&​quot;switch2\\&​quot;>Switch</Switch>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 270 */
+/* 365 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"loading\" class=\"mdl-typography--display-4\">Loading</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-55\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\" },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Print\", large: true },\n                                                React.createElement(Icon, { name: \"print\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-55\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Large Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Print<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >large</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>print<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot;>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={6}>\\n                    <Tooltip label=\\&​quot;Print\\&​quot; large>\\n    <Icon name=\\&​quot;print\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-56\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: React.createElement(\n                                                                                \"span\",\n                                                                                null,\n                                                                                \"Upload \",\n                                                                                React.createElement(\n                                                                                                \"strong\",\n                                                                                                null,\n                                                                                                \"file.zip\"\n                                                                                )\n                                                                ) },\n                                                React.createElement(Icon, { name: \"cloud_upload\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: React.createElement(\n                                                                                \"span\",\n                                                                                null,\n                                                                                \"Share your content\",\n                                                                                React.createElement(\"br\", null),\n                                                                                \"via social media\"\n                                                                ) },\n                                                React.createElement(Icon, { name: \"share\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-56\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Rich Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label={&lt;span</span><span class=\"token punctuation\" >></span></span>Upload <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span>file<span class=\"token punctuation\" >.</span>zip<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>cloud_upload<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Multiline Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label={&lt;span</span><span class=\"token punctuation\" >></span></span>Share your content<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>via social media<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>share<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Tooltip label={<span>Upload <strong>file.zip</strong></span>}>\\n    <Icon name=\\&​quot;cloud_upload\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={6}>\\n                    <Tooltip label={<span>Share your content<br />via social media</span>}>\\n    <Icon name=\\&​quot;share\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-57\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"right\" },\n                                                React.createElement(Icon, { name: \"arrow_forward\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"left\" },\n                                                React.createElement(Icon, { name: \"arrow_back\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"top\" },\n                                                React.createElement(Icon, { name: \"arrow_upward\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"bottom\" },\n                                                React.createElement(Icon, { name: \"arrow_downward\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-57\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Right Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_forward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Left Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_back<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_upward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Bottom Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_downward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;right\\&​quot;>\\n    <Icon name=\\&​quot;arrow_forward\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;left\\&​quot;>\\n    <Icon name=\\&​quot;arrow_back\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;top\\&​quot;>\\n    <Icon name=\\&​quot;arrow_upward\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;bottom\\&​quot;>\\n    <Icon name=\\&​quot;arrow_downward\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">Element or String</td>\n<td style=\"text-align:left\">Specify the content of the tooltip</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">large</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines a large tooltip</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">position</td>\n<td style=\"text-align:left\">String[left, right, top, bottom]</td>\n<td style=\"text-align:left\">Specify the position of the tooltip</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 271 */
+/* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10979,11 +13274,11 @@
 	});
 	exports.Text = exports.Article = undefined;
 	
-	var _Article2 = __webpack_require__(272);
+	var _Article2 = __webpack_require__(367);
 	
 	var _Article3 = _interopRequireDefault(_Article2);
 	
-	var _Text2 = __webpack_require__(332);
+	var _Text2 = __webpack_require__(427);
 	
 	var _Text3 = _interopRequireDefault(_Text2);
 	
@@ -10993,7 +13288,7 @@
 	exports.Text = _Text3.default;
 
 /***/ },
-/* 272 */
+/* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11004,21 +13299,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TemplateHelper = __webpack_require__(274);
+	var _TemplateHelper = __webpack_require__(369);
 	
 	var _TemplateHelper2 = _interopRequireDefault(_TemplateHelper);
 	
-	var _src = __webpack_require__(275);
+	var _src = __webpack_require__(370);
 	
-	var _palette = __webpack_require__(331);
+	var _palette = __webpack_require__(426);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -11174,7 +13469,7 @@
 	exports.default = (0, _TemplateHelper2.default)(Article, '\n.demo-ribbon {\n  width: 100%;\n  height: 40vh;\n  background-color: #3F51B5;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n}\n\n.demo-main {\n  margin-top: -35vh;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n}\n\n.demo-header .mdl-layout__header-row {\n  padding-left: 40px;\n}\n\n.demo-container {\n  max-width: 1600px;\n  width: calc(100% - 16px);\n  margin: 0 auto;\n}\n\n.demo-content {\n  border-radius: 2px;\n  padding: 80px 56px;\n  margin-bottom: 80px;\n}\n\n.demo-layout.is-small-screen .demo-content {\n  padding: 40px 28px;\n}\n\n.demo-content h3 {\n  margin-top: 48px;\n}\n\n.demo-footer {\n  padding-left: 40px;\n}\n\n.demo-footer .mdl-mini-footer--link-list a {\n  font-size: 13px;\n}\n');
 
 /***/ },
-/* 273 */
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11228,7 +13523,7 @@
 
 
 /***/ },
-/* 274 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11239,7 +13534,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -11295,7 +13590,7 @@
 	};
 
 /***/ },
-/* 275 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11305,7 +13600,7 @@
 	});
 	exports.Tooltip = exports.Textfield = exports.TabBar = exports.Tab = exports.Tabs = exports.Switch = exports.Spinner = exports.Snackbar = exports.Slider = exports.RadioGroup = exports.Radio = exports.ProgressBar = exports.MenuItem = exports.Menu = exports.ListItemContent = exports.ListItemAction = exports.ListItem = exports.List = exports.Content = exports.Navigation = exports.Spacer = exports.HeaderTabs = exports.HeaderRow = exports.Drawer = exports.Header = exports.Layout = exports.IconToggle = exports.IconButton = exports.Icon = exports.Cell = exports.Grid = exports.FooterLinkList = exports.FooterDropDownSection = exports.FooterSection = exports.Footer = exports.FABButton = exports.DialogActions = exports.DialogContent = exports.DialogTitle = exports.Dialog = exports.DataTable = exports.Checkbox = exports.CardMenu = exports.CardText = exports.CardMedia = exports.CardActions = exports.CardTitle = exports.Card = exports.Button = exports.Badge = exports.MDLComponent = exports.mdlUpgrade = undefined;
 	
-	var _Card = __webpack_require__(276);
+	var _Card = __webpack_require__(371);
 	
 	Object.defineProperty(exports, 'Card', {
 	    enumerable: true,
@@ -11344,7 +13639,7 @@
 	    }
 	});
 	
-	var _Dialog = __webpack_require__(283);
+	var _Dialog = __webpack_require__(378);
 	
 	Object.defineProperty(exports, 'Dialog', {
 	    enumerable: true,
@@ -11371,7 +13666,7 @@
 	    }
 	});
 	
-	var _Footer = __webpack_require__(287);
+	var _Footer = __webpack_require__(382);
 	
 	Object.defineProperty(exports, 'Footer', {
 	    enumerable: true,
@@ -11398,7 +13693,7 @@
 	    }
 	});
 	
-	var _Grid2 = __webpack_require__(293);
+	var _Grid2 = __webpack_require__(388);
 	
 	Object.defineProperty(exports, 'Cell', {
 	    enumerable: true,
@@ -11407,7 +13702,7 @@
 	    }
 	});
 	
-	var _Layout = __webpack_require__(294);
+	var _Layout = __webpack_require__(389);
 	
 	Object.defineProperty(exports, 'Layout', {
 	    enumerable: true,
@@ -11458,7 +13753,7 @@
 	    }
 	});
 	
-	var _List = __webpack_require__(306);
+	var _List = __webpack_require__(401);
 	
 	Object.defineProperty(exports, 'List', {
 	    enumerable: true,
@@ -11485,7 +13780,7 @@
 	    }
 	});
 	
-	var _Menu2 = __webpack_require__(311);
+	var _Menu2 = __webpack_require__(406);
 	
 	Object.defineProperty(exports, 'MenuItem', {
 	    enumerable: true,
@@ -11494,7 +13789,7 @@
 	    }
 	});
 	
-	var _Tabs = __webpack_require__(312);
+	var _Tabs = __webpack_require__(407);
 	
 	Object.defineProperty(exports, 'Tabs', {
 	    enumerable: true,
@@ -11515,83 +13810,83 @@
 	    }
 	});
 	
-	var _mdlUpgrade2 = __webpack_require__(296);
+	var _mdlUpgrade2 = __webpack_require__(391);
 	
 	var _mdlUpgrade3 = _interopRequireDefault(_mdlUpgrade2);
 	
-	var _MDLComponent2 = __webpack_require__(297);
+	var _MDLComponent2 = __webpack_require__(392);
 	
 	var _MDLComponent3 = _interopRequireDefault(_MDLComponent2);
 	
-	var _Badge2 = __webpack_require__(315);
+	var _Badge2 = __webpack_require__(410);
 	
 	var _Badge3 = _interopRequireDefault(_Badge2);
 	
-	var _Button2 = __webpack_require__(316);
+	var _Button2 = __webpack_require__(411);
 	
 	var _Button3 = _interopRequireDefault(_Button2);
 	
-	var _Checkbox2 = __webpack_require__(317);
+	var _Checkbox2 = __webpack_require__(412);
 	
 	var _Checkbox3 = _interopRequireDefault(_Checkbox2);
 	
-	var _DataTable2 = __webpack_require__(318);
+	var _DataTable2 = __webpack_require__(413);
 	
 	var _DataTable3 = _interopRequireDefault(_DataTable2);
 	
-	var _FABButton2 = __webpack_require__(320);
+	var _FABButton2 = __webpack_require__(415);
 	
 	var _FABButton3 = _interopRequireDefault(_FABButton2);
 	
 	var _Grid3 = _interopRequireDefault(_Grid2);
 	
-	var _Icon2 = __webpack_require__(309);
+	var _Icon2 = __webpack_require__(404);
 	
 	var _Icon3 = _interopRequireDefault(_Icon2);
 	
-	var _IconButton2 = __webpack_require__(321);
+	var _IconButton2 = __webpack_require__(416);
 	
 	var _IconButton3 = _interopRequireDefault(_IconButton2);
 	
-	var _IconToggle2 = __webpack_require__(322);
+	var _IconToggle2 = __webpack_require__(417);
 	
 	var _IconToggle3 = _interopRequireDefault(_IconToggle2);
 	
 	var _Menu3 = _interopRequireDefault(_Menu2);
 	
-	var _ProgressBar2 = __webpack_require__(323);
+	var _ProgressBar2 = __webpack_require__(418);
 	
 	var _ProgressBar3 = _interopRequireDefault(_ProgressBar2);
 	
-	var _Radio2 = __webpack_require__(324);
+	var _Radio2 = __webpack_require__(419);
 	
 	var _Radio3 = _interopRequireDefault(_Radio2);
 	
-	var _RadioGroup2 = __webpack_require__(325);
+	var _RadioGroup2 = __webpack_require__(420);
 	
 	var _RadioGroup3 = _interopRequireDefault(_RadioGroup2);
 	
-	var _Slider2 = __webpack_require__(326);
+	var _Slider2 = __webpack_require__(421);
 	
 	var _Slider3 = _interopRequireDefault(_Slider2);
 	
-	var _Snackbar2 = __webpack_require__(327);
+	var _Snackbar2 = __webpack_require__(422);
 	
 	var _Snackbar3 = _interopRequireDefault(_Snackbar2);
 	
-	var _Spinner2 = __webpack_require__(328);
+	var _Spinner2 = __webpack_require__(423);
 	
 	var _Spinner3 = _interopRequireDefault(_Spinner2);
 	
-	var _Switch2 = __webpack_require__(329);
+	var _Switch2 = __webpack_require__(424);
 	
 	var _Switch3 = _interopRequireDefault(_Switch2);
 	
-	var _Textfield2 = __webpack_require__(330);
+	var _Textfield2 = __webpack_require__(425);
 	
 	var _Textfield3 = _interopRequireDefault(_Textfield2);
 	
-	var _Tooltip2 = __webpack_require__(319);
+	var _Tooltip2 = __webpack_require__(414);
 	
 	var _Tooltip3 = _interopRequireDefault(_Tooltip2);
 	
@@ -11623,7 +13918,7 @@
 	exports.Tooltip = _Tooltip3.default;
 
 /***/ },
-/* 276 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11633,19 +13928,19 @@
 	});
 	exports.CardMedia = exports.CardActions = exports.CardTitle = exports.CardMenu = exports.CardText = exports.Card = undefined;
 	
-	var _basicClassCreator = __webpack_require__(277);
+	var _basicClassCreator = __webpack_require__(372);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _Card2 = __webpack_require__(278);
+	var _Card2 = __webpack_require__(373);
 	
 	var _Card3 = _interopRequireDefault(_Card2);
 	
-	var _CardTitle2 = __webpack_require__(281);
+	var _CardTitle2 = __webpack_require__(376);
 	
 	var _CardTitle3 = _interopRequireDefault(_CardTitle2);
 	
-	var _CardActions2 = __webpack_require__(282);
+	var _CardActions2 = __webpack_require__(377);
 	
 	var _CardActions3 = _interopRequireDefault(_CardActions2);
 	
@@ -11659,7 +13954,7 @@
 	var CardMedia = exports.CardMedia = (0, _basicClassCreator2.default)('CardMedia', 'mdl-card__media');
 
 /***/ },
-/* 277 */
+/* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11670,11 +13965,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11705,7 +14000,7 @@
 	};
 
 /***/ },
-/* 278 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11716,19 +14011,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(279);
+	var _clamp = __webpack_require__(374);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _shadows = __webpack_require__(280);
+	var _shadows = __webpack_require__(375);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
@@ -11764,7 +14059,7 @@
 	exports.default = Card;
 
 /***/ },
-/* 279 */
+/* 374 */
 /***/ function(module, exports) {
 
 	module.exports = clamp
@@ -11777,7 +14072,7 @@
 
 
 /***/ },
-/* 280 */
+/* 375 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11791,7 +14086,7 @@
 	});
 
 /***/ },
-/* 281 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11804,11 +14099,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11865,7 +14160,7 @@
 	exports.default = CardTitle;
 
 /***/ },
-/* 282 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11876,11 +14171,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -11914,7 +14209,7 @@
 	exports.default = CardActions;
 
 /***/ },
-/* 283 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11924,19 +14219,19 @@
 	});
 	exports.DialogActions = exports.DialogContent = exports.DialogTitle = exports.Dialog = undefined;
 	
-	var _basicClassCreator = __webpack_require__(277);
+	var _basicClassCreator = __webpack_require__(372);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _Dialog2 = __webpack_require__(284);
+	var _Dialog2 = __webpack_require__(379);
 	
 	var _Dialog3 = _interopRequireDefault(_Dialog2);
 	
-	var _DialogTitle2 = __webpack_require__(285);
+	var _DialogTitle2 = __webpack_require__(380);
 	
 	var _DialogTitle3 = _interopRequireDefault(_DialogTitle2);
 	
-	var _DialogActions2 = __webpack_require__(286);
+	var _DialogActions2 = __webpack_require__(381);
 	
 	var _DialogActions3 = _interopRequireDefault(_DialogActions2);
 	
@@ -11948,7 +14243,7 @@
 	exports.DialogActions = _DialogActions3.default;
 
 /***/ },
-/* 284 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11961,13 +14256,13 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12060,7 +14355,7 @@
 	exports.default = Dialog;
 
 /***/ },
-/* 285 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12071,11 +14366,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12103,7 +14398,7 @@
 	exports.default = DialogTitle;
 
 /***/ },
-/* 286 */
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12114,11 +14409,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12152,7 +14447,7 @@
 	exports.default = DialogActions;
 
 /***/ },
-/* 287 */
+/* 382 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12162,19 +14457,19 @@
 	});
 	exports.FooterLinkList = exports.FooterDropDownSection = exports.FooterSection = exports.Footer = undefined;
 	
-	var _Footer2 = __webpack_require__(288);
+	var _Footer2 = __webpack_require__(383);
 	
 	var _Footer3 = _interopRequireDefault(_Footer2);
 	
-	var _Section = __webpack_require__(290);
+	var _Section = __webpack_require__(385);
 	
 	var _Section2 = _interopRequireDefault(_Section);
 	
-	var _DropDownSection = __webpack_require__(291);
+	var _DropDownSection = __webpack_require__(386);
 	
 	var _DropDownSection2 = _interopRequireDefault(_DropDownSection);
 	
-	var _LinkList = __webpack_require__(292);
+	var _LinkList = __webpack_require__(387);
 	
 	var _LinkList2 = _interopRequireDefault(_LinkList);
 	
@@ -12186,7 +14481,7 @@
 	exports.FooterLinkList = _LinkList2.default;
 
 /***/ },
-/* 288 */
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12197,15 +14492,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(289);
+	var _cloneChildren = __webpack_require__(384);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -12242,7 +14537,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 289 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12251,7 +14546,7 @@
 	    value: true
 	});
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -12265,7 +14560,7 @@
 	};
 
 /***/ },
-/* 290 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12276,15 +14571,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(289);
+	var _cloneChildren = __webpack_require__(384);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -12331,7 +14626,7 @@
 	exports.default = Section;
 
 /***/ },
-/* 291 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12342,15 +14637,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(289);
+	var _cloneChildren = __webpack_require__(384);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -12395,7 +14690,7 @@
 	exports.default = DropDownSection;
 
 /***/ },
-/* 292 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12406,11 +14701,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12453,7 +14748,7 @@
 	exports.default = LinkList;
 
 /***/ },
-/* 293 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12465,19 +14760,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(279);
+	var _clamp = __webpack_require__(374);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _shadows = __webpack_require__(280);
+	var _shadows = __webpack_require__(375);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
@@ -12560,7 +14855,7 @@
 	exports.Cell = Cell;
 
 /***/ },
-/* 294 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12570,35 +14865,35 @@
 	});
 	exports.Spacer = exports.Navigation = exports.HeaderTabs = exports.HeaderRow = exports.Header = exports.Drawer = exports.Content = exports.Layout = undefined;
 	
-	var _Layout2 = __webpack_require__(295);
+	var _Layout2 = __webpack_require__(390);
 	
 	var _Layout3 = _interopRequireDefault(_Layout2);
 	
-	var _Content2 = __webpack_require__(298);
+	var _Content2 = __webpack_require__(393);
 	
 	var _Content3 = _interopRequireDefault(_Content2);
 	
-	var _Drawer2 = __webpack_require__(299);
+	var _Drawer2 = __webpack_require__(394);
 	
 	var _Drawer3 = _interopRequireDefault(_Drawer2);
 	
-	var _Header2 = __webpack_require__(300);
+	var _Header2 = __webpack_require__(395);
 	
 	var _Header3 = _interopRequireDefault(_Header2);
 	
-	var _HeaderRow2 = __webpack_require__(301);
+	var _HeaderRow2 = __webpack_require__(396);
 	
 	var _HeaderRow3 = _interopRequireDefault(_HeaderRow2);
 	
-	var _HeaderTabs2 = __webpack_require__(303);
+	var _HeaderTabs2 = __webpack_require__(398);
 	
 	var _HeaderTabs3 = _interopRequireDefault(_HeaderTabs2);
 	
-	var _Navigation2 = __webpack_require__(305);
+	var _Navigation2 = __webpack_require__(400);
 	
 	var _Navigation3 = _interopRequireDefault(_Navigation2);
 	
-	var _Spacer2 = __webpack_require__(302);
+	var _Spacer2 = __webpack_require__(397);
 	
 	var _Spacer3 = _interopRequireDefault(_Spacer2);
 	
@@ -12614,7 +14909,7 @@
 	exports.Spacer = _Spacer3.default;
 
 /***/ },
-/* 295 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12627,15 +14922,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -12695,7 +14990,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Layout);
 
 /***/ },
-/* 296 */
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12704,11 +14999,11 @@
 	    value: true
 	});
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _MDLComponent = __webpack_require__(297);
+	var _MDLComponent = __webpack_require__(392);
 	
 	var _MDLComponent2 = _interopRequireDefault(_MDLComponent);
 	
@@ -12730,7 +15025,7 @@
 	};
 
 /***/ },
-/* 297 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12741,9 +15036,9 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -12783,7 +15078,7 @@
 	exports.default = MDLComponent;
 
 /***/ },
-/* 298 */
+/* 393 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12794,11 +15089,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12828,7 +15123,7 @@
 	exports.default = Content;
 
 /***/ },
-/* 299 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12839,11 +15134,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -12879,7 +15174,7 @@
 	exports.default = Drawer;
 
 /***/ },
-/* 300 */
+/* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12890,19 +15185,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _HeaderRow = __webpack_require__(301);
+	var _HeaderRow = __webpack_require__(396);
 	
 	var _HeaderRow2 = _interopRequireDefault(_HeaderRow);
 	
-	var _HeaderTabs = __webpack_require__(303);
+	var _HeaderTabs = __webpack_require__(398);
 	
 	var _HeaderTabs2 = _interopRequireDefault(_HeaderTabs);
 	
@@ -12960,7 +15255,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 301 */
+/* 396 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12971,15 +15266,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Spacer = __webpack_require__(302);
+	var _Spacer = __webpack_require__(397);
 	
 	var _Spacer2 = _interopRequireDefault(_Spacer);
 	
@@ -13016,7 +15311,7 @@
 	exports.default = HeaderRow;
 
 /***/ },
-/* 302 */
+/* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13025,7 +15320,7 @@
 	  value: true
 	});
 	
-	var _basicClassCreator = __webpack_require__(277);
+	var _basicClassCreator = __webpack_require__(372);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
@@ -13034,7 +15329,7 @@
 	exports.default = (0, _basicClassCreator2.default)('Spacer', 'mdl-layout-spacer');
 
 /***/ },
-/* 303 */
+/* 398 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13045,15 +15340,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TabBar = __webpack_require__(304);
+	var _TabBar = __webpack_require__(399);
 	
 	var _TabBar2 = _interopRequireDefault(_TabBar);
 	
@@ -13088,7 +15383,7 @@
 	exports.default = HeaderTabs;
 
 /***/ },
-/* 304 */
+/* 399 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13101,11 +15396,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -13185,7 +15480,7 @@
 	exports.default = TabBar;
 
 /***/ },
-/* 305 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13196,19 +15491,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(289);
+	var _cloneChildren = __webpack_require__(384);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
-	var _Spacer = __webpack_require__(302);
+	var _Spacer = __webpack_require__(397);
 	
 	var _Spacer2 = _interopRequireDefault(_Spacer);
 	
@@ -13241,7 +15536,7 @@
 	exports.default = Navigation;
 
 /***/ },
-/* 306 */
+/* 401 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13251,19 +15546,19 @@
 	});
 	exports.ListItemContent = exports.ListItemAction = exports.ListItem = exports.List = undefined;
 	
-	var _basicClassCreator = __webpack_require__(277);
+	var _basicClassCreator = __webpack_require__(372);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _ListItem2 = __webpack_require__(307);
+	var _ListItem2 = __webpack_require__(402);
 	
 	var _ListItem3 = _interopRequireDefault(_ListItem2);
 	
-	var _ListItemAction2 = __webpack_require__(310);
+	var _ListItemAction2 = __webpack_require__(405);
 	
 	var _ListItemAction3 = _interopRequireDefault(_ListItemAction2);
 	
-	var _ListItemContent2 = __webpack_require__(308);
+	var _ListItemContent2 = __webpack_require__(403);
 	
 	var _ListItemContent3 = _interopRequireDefault(_ListItemContent2);
 	
@@ -13275,7 +15570,7 @@
 	exports.ListItemContent = _ListItemContent3.default;
 
 /***/ },
-/* 307 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13288,15 +15583,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _ListItemContent = __webpack_require__(308);
+	var _ListItemContent = __webpack_require__(403);
 	
 	var _ListItemContent2 = _interopRequireDefault(_ListItemContent);
 	
@@ -13369,7 +15664,7 @@
 	exports.default = ListItem;
 
 /***/ },
-/* 308 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13382,15 +15677,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Icon = __webpack_require__(309);
+	var _Icon = __webpack_require__(404);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -13475,7 +15770,7 @@
 	exports.default = ListItemContent;
 
 /***/ },
-/* 309 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13486,11 +15781,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -13521,7 +15816,7 @@
 	exports.default = Icon;
 
 /***/ },
-/* 310 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13534,11 +15829,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -13601,7 +15896,7 @@
 	exports.default = ListItemAction;
 
 /***/ },
-/* 311 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13615,19 +15910,19 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
-	var _basicClassCreator = __webpack_require__(277);
+	var _basicClassCreator = __webpack_require__(372);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
@@ -13695,7 +15990,7 @@
 	var MenuItem = exports.MenuItem = (0, _basicClassCreator2.default)('MenuItem', 'mdl-menu__item', 'li');
 
 /***/ },
-/* 312 */
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13705,15 +16000,15 @@
 	});
 	exports.Tab = exports.TabBar = exports.Tabs = undefined;
 	
-	var _Tabs2 = __webpack_require__(313);
+	var _Tabs2 = __webpack_require__(408);
 	
 	var _Tabs3 = _interopRequireDefault(_Tabs2);
 	
-	var _TabBar2 = __webpack_require__(304);
+	var _TabBar2 = __webpack_require__(399);
 	
 	var _TabBar3 = _interopRequireDefault(_TabBar2);
 	
-	var _Tab2 = __webpack_require__(314);
+	var _Tab2 = __webpack_require__(409);
 	
 	var _Tab3 = _interopRequireDefault(_Tab2);
 	
@@ -13724,7 +16019,7 @@
 	exports.Tab = _Tab3.default;
 
 /***/ },
-/* 313 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13737,23 +16032,23 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Tab = __webpack_require__(314);
+	var _Tab = __webpack_require__(409);
 	
 	var _Tab2 = _interopRequireDefault(_Tab);
 	
-	var _TabBar = __webpack_require__(304);
+	var _TabBar = __webpack_require__(399);
 	
 	var _TabBar2 = _interopRequireDefault(_TabBar);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -13827,7 +16122,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Tabs);
 
 /***/ },
-/* 314 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13840,11 +16135,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -13924,7 +16219,7 @@
 	exports.default = Tab;
 
 /***/ },
-/* 315 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13935,11 +16230,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -14004,7 +16299,7 @@
 	exports.default = Badge;
 
 /***/ },
-/* 316 */
+/* 411 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14017,15 +16312,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14095,7 +16390,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Button);
 
 /***/ },
-/* 317 */
+/* 412 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14108,17 +16403,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14197,7 +16492,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Checkbox);
 
 /***/ },
-/* 318 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14210,27 +16505,27 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(279);
+	var _clamp = __webpack_require__(374);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
-	var _shadows = __webpack_require__(280);
+	var _shadows = __webpack_require__(375);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
-	var _Tooltip = __webpack_require__(319);
+	var _Tooltip = __webpack_require__(414);
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
@@ -14360,7 +16655,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(DataTable);
 
 /***/ },
-/* 319 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14371,15 +16666,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _MDLComponent = __webpack_require__(297);
+	var _MDLComponent = __webpack_require__(392);
 	
 	var _MDLComponent2 = _interopRequireDefault(_MDLComponent);
 	
@@ -14443,7 +16738,7 @@
 	exports.default = Tooltip;
 
 /***/ },
-/* 320 */
+/* 415 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14454,15 +16749,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Button = __webpack_require__(316);
+	var _Button = __webpack_require__(411);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
@@ -14496,7 +16791,7 @@
 	exports.default = FABButton;
 
 /***/ },
-/* 321 */
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14507,19 +16802,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Button = __webpack_require__(316);
+	var _Button = __webpack_require__(411);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _Icon = __webpack_require__(309);
+	var _Icon = __webpack_require__(404);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -14550,7 +16845,7 @@
 	exports.default = IconButton;
 
 /***/ },
-/* 322 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14563,21 +16858,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Icon = __webpack_require__(309);
+	var _Icon = __webpack_require__(404);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14652,7 +16947,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(IconToggle);
 
 /***/ },
-/* 323 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14665,17 +16960,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14755,7 +17050,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(ProgressBar);
 
 /***/ },
-/* 324 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14768,17 +17063,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14862,7 +17157,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Radio);
 
 /***/ },
-/* 325 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14873,11 +17168,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Radio = __webpack_require__(324);
+	var _Radio = __webpack_require__(419);
 	
 	var _Radio2 = _interopRequireDefault(_Radio);
 	
@@ -14930,7 +17225,7 @@
 	exports.default = RadioGroup;
 
 /***/ },
-/* 326 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14943,15 +17238,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -15004,7 +17299,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Slider);
 
 /***/ },
-/* 327 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15017,11 +17312,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -15073,9 +17368,6 @@
 	
 	            if (this.props.active) {
 	                this.timeoutId = setTimeout(this.clearTimer, this.props.timeout);
-	
-	                // Hack fix to re-center the snackbar based on its content
-	                this.refs.snackbar.style.marginLeft = '-' + this.refs.snackbar.offsetWidth * 0.5 + 'px';
 	            }
 	        }
 	    }, {
@@ -15158,7 +17450,7 @@
 	exports.default = Snackbar;
 
 /***/ },
-/* 328 */
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15171,15 +17463,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -15229,7 +17521,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Spinner);
 
 /***/ },
-/* 329 */
+/* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15242,17 +17534,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -15330,7 +17622,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Switch);
 
 /***/ },
-/* 330 */
+/* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15343,17 +17635,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(296);
+	var _mdlUpgrade = __webpack_require__(391);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -15506,7 +17798,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Textfield);
 
 /***/ },
-/* 331 */
+/* 426 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -15530,7 +17822,7 @@
 	}
 
 /***/ },
-/* 332 */
+/* 427 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15541,21 +17833,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(273);
+	var _classnames = __webpack_require__(368);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TemplateHelper = __webpack_require__(274);
+	var _TemplateHelper = __webpack_require__(369);
 	
 	var _TemplateHelper2 = _interopRequireDefault(_TemplateHelper);
 	
-	var _src = __webpack_require__(275);
+	var _src = __webpack_require__(370);
 	
-	var _palette = __webpack_require__(331);
+	var _palette = __webpack_require__(426);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -16206,7 +18498,7 @@
 	exports.default = (0, _TemplateHelper2.default)(Text, '\nhtml, body {\n  font-family: \'Roboto\', \'Helvetica\', sans-serif;\n  margin: 0;\n  padding: 0;\n}\n.mdl-demo .mdl-layout__header-row {\n  padding-left: 40px;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {\n  font-size: inherit;\n}\n.mdl-demo .mdl-layout__tab-bar-button {\n  display: none;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {\n  display: none;\n}\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {\n  overflow: visible;\n}\n.mdl-demo .mdl-layout__tab-bar-container {\n  height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar {\n  padding: 0;\n  padding-left: 16px;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {\n  height: 64px;\n  line-height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {\n  background-color: white;\n  height: 4px;\n}\n.mdl-demo main > .react-mdl-layout__tab-panel {\n  padding: 8px;\n  padding-top: 48px;\n}\n.mdl-demo .mdl-card {\n  height: auto;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mdl-demo .mdl-card > * {\n  height: auto;\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text {\n  margin: 40px;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  padding: 0;\n  color: inherit;\n  width: calc(100% - 80px);\n}\n.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\n.mdl-demo .mdl-card__actions {\n  margin: 0;\n  padding: 4px 40px;\n  color: inherit;\n}\n.mdl-demo .mdl-card__actions a {\n  color: #00BCD4;\n  margin: 0;\n}\n.mdl-demo .mdl-card__actions a:hover,\n.mdl-demo .mdl-card__actions a:active {\n  color: inherit;\n  background-color: transparent;\n}\n.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {\n  border-top: 1px solid rgba(0, 0, 0, 0.12);\n}\n.mdl-demo #add {\n  position: absolute;\n  right: 40px;\n  top: 36px;\n  z-index: 999;\n}\n.mdl-demo .mdl-layout__content {\n    padding-top: 48px;\n}\n.mdl-demo .mdl-layout__content section:not(:last-of-type) {\n  position: relative;\n  margin-bottom: 48px;\n}\n.mdl-demo section.section--center {\n  max-width: 860px;\n}\n.mdl-demo #features section.section--center {\n  max-width: 620px;\n}\n.mdl-demo section > header{\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.mdl-demo section > .section__play-btn {\n  min-height: 200px;\n}\n.mdl-demo section > header > .material-icons {\n  font-size: 3rem;\n}\n.mdl-demo section > button {\n  position: absolute;\n  z-index: 99;\n  top: 8px;\n  right: 8px;\n}\n.mdl-demo section .section__circle {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-flex: 0;\n  -webkit-flex-grow: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -webkit-flex-shrink: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.mdl-demo section .section__text {\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n  padding-top: 8px;\n}\n.mdl-demo section .section__text h5 {\n  font-size: inherit;\n  margin: 0;\n  margin-bottom: 0.5em;\n}\n.mdl-demo section .section__text a {\n  text-decoration: none;\n}\n.mdl-demo section .section__circle-container > .section__circle-container__circle {\n  width: 64px;\n  height: 64px;\n  border-radius: 32px;\n  margin: 8px 0;\n}\n.mdl-demo section.section--footer .section__circle--big {\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  margin: 8px 32px;\n}\n.mdl-demo .is-small-screen section.section--footer .section__circle--big {\n  width: 50px;\n  height: 50px;\n  border-radius: 25px;\n  margin: 8px 16px;\n}\n.mdl-demo section.section--footer {\n  padding: 64px 0;\n  margin: 0 -8px -8px -8px;\n}\n.mdl-demo section.section--center .section__text:not(:last-child) {\n  border-bottom: 1px solid rgba(0,0,0,.13);\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {\n  margin-bottom: 24px;\n}\n.mdl-demo #features section {\n  margin-bottom: 72px;\n}\n.mdl-demo #features h4, #features h5 {\n  margin-bottom: 16px;\n}\n.mdl-demo .toc {\n  border-left: 4px solid #C1EEF4;\n  margin: 24px;\n  padding: 0;\n  padding-left: 8px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mdl-demo .toc h4 {\n  font-size: 0.9rem;\n  margin-top: 0;\n}\n.mdl-demo .toc a {\n  color: #4DD0E1;\n  text-decoration: none;\n  font-size: 16px;\n  line-height: 28px;\n  display: block;\n}\n.mdl-demo .mdl-menu__container {\n  z-index: 99;\n}\n');
 
 /***/ },
-/* 333 */
+/* 428 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16217,11 +18509,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(191);
+	var _react = __webpack_require__(286);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(192);
+	var _reactDom = __webpack_require__(287);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
