@@ -345,17 +345,19 @@ componentHandler = (function() {
    * @param {?componentHandler.Component} component
    */
   function deconstructComponentInternal(component) {
-    var componentIndex = createdComponents_.indexOf(component);
-    createdComponents_.splice(componentIndex, 1);
+    if (component) {
+      var componentIndex = createdComponents_.indexOf(component);
+      createdComponents_.splice(componentIndex, 1);
 
-    var upgrades = component.element_.getAttribute('data-upgraded').split(',');
-    var componentPlace = upgrades.indexOf(component[componentConfigProperty_].classAsString);
-    upgrades.splice(componentPlace, 1);
-    component.element_.setAttribute('data-upgraded', upgrades.join(','));
+      var upgrades = component.element_.getAttribute('data-upgraded').split(',');
+      var componentPlace = upgrades.indexOf(component[componentConfigProperty_].classAsString);
+      upgrades.splice(componentPlace, 1);
+      component.element_.setAttribute('data-upgraded', upgrades.join(','));
 
-    var ev = document.createEvent('Events');
-    ev.initEvent('mdl-componentdowngraded', true, true);
-    component.element_.dispatchEvent(ev);
+      var ev = document.createEvent('Events');
+      ev.initEvent('mdl-componentdowngraded', true, true);
+      component.element_.dispatchEvent(ev);
+    }
   }
 
   /**
@@ -2774,7 +2776,8 @@ MaterialTextfield.prototype.CssClasses_ = {
     IS_FOCUSED: 'is-focused',
     IS_DISABLED: 'is-disabled',
     IS_INVALID: 'is-invalid',
-    IS_UPGRADED: 'is-upgraded'
+    IS_UPGRADED: 'is-upgraded',
+    HAS_PLACEHOLDER: 'has-placeholder'
 };
 /**
    * Handle input being entered.
@@ -2927,6 +2930,9 @@ MaterialTextfield.prototype.init = function () {
                 if (isNaN(this.maxRows)) {
                     this.maxRows = this.Constant_.NO_MAX_ROWS;
                 }
+            }
+            if (this.input_.hasAttribute('placeholder')) {
+                this.element_.classList.add(this.CssClasses_.HAS_PLACEHOLDER);
             }
             this.boundUpdateClassesHandler = this.updateClasses_.bind(this);
             this.boundFocusHandler = this.onFocus_.bind(this);
@@ -3133,6 +3139,7 @@ window['MaterialLayout'] = MaterialLayout;
 MaterialLayout.prototype.Constant_ = {
     MAX_WIDTH: '(max-width: 1024px)',
     TAB_SCROLL_PIXELS: 100,
+    RESIZE_TIMEOUT: 100,
     MENU_ICON: '&#xE5D2;',
     CHEVRON_LEFT: 'chevron_left',
     CHEVRON_RIGHT: 'chevron_right'
@@ -3235,7 +3242,8 @@ MaterialLayout.prototype.contentScrollHandler_ = function () {
    * @private
    */
 MaterialLayout.prototype.keyboardEventHandler_ = function (evt) {
-    if (evt.keyCode === this.Keycodes_.ESCAPE) {
+    // Only react when the drawer is open.
+    if (evt.keyCode === this.Keycodes_.ESCAPE && this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)) {
         this.toggleDrawer();
     }
 };
@@ -3337,6 +3345,10 @@ MaterialLayout.prototype['toggleDrawer'] = MaterialLayout.prototype.toggleDrawer
    */
 MaterialLayout.prototype.init = function () {
     if (this.element_) {
+        var focusedElement = this.element_.querySelector(':focus');
+        if (focusedElement) {
+            focusedElement.focus();
+        }
         var directChildren = this.element_.childNodes;
         var numChildren = directChildren.length;
         for (var c = 0; c < numChildren; c++) {
@@ -3471,8 +3483,9 @@ MaterialLayout.prototype.init = function () {
             tabContainer.appendChild(leftButton);
             tabContainer.appendChild(this.tabBar_);
             tabContainer.appendChild(rightButton);
-            // Add and remove buttons depending on scroll position.
-            var tabScrollHandler = function () {
+            // Add and remove tab buttons depending on scroll position and total
+            // window size.
+            var tabUpdateHandler = function () {
                 if (this.tabBar_.scrollLeft > 0) {
                     leftButton.classList.add(this.CssClasses_.IS_ACTIVE);
                 } else {
@@ -3484,8 +3497,20 @@ MaterialLayout.prototype.init = function () {
                     rightButton.classList.remove(this.CssClasses_.IS_ACTIVE);
                 }
             }.bind(this);
-            this.tabBar_.addEventListener('scroll', tabScrollHandler);
-            tabScrollHandler();
+            this.tabBar_.addEventListener('scroll', tabUpdateHandler);
+            tabUpdateHandler();
+            // Update tabs when the window resizes.
+            var windowResizeHandler = function () {
+                // Use timeouts to make sure it doesn't happen too often.
+                if (this.resizeTimeoutId_) {
+                    clearTimeout(this.resizeTimeoutId_);
+                }
+                this.resizeTimeoutId_ = setTimeout(function () {
+                    tabUpdateHandler();
+                    this.resizeTimeoutId_ = null;
+                }.bind(this), this.Constant_.RESIZE_TIMEOUT);
+            }.bind(this);
+            window.addEventListener('resize', windowResizeHandler);
             if (this.tabBar_.classList.contains(this.CssClasses_.JS_RIPPLE_EFFECT)) {
                 this.tabBar_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS);
             }

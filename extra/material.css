@@ -1,6 +1,6 @@
 /**
  * material-design-lite - Material Design Components in CSS, JS and HTML
- * @version v1.1.1
+ * @version v1.1.2
  * @license Apache-2.0
  * @copyright 2015 Google, Inc.
  * @link https://github.com/google/material-design-lite
@@ -526,13 +526,11 @@ textarea {
   *,
   *:before,
   *:after,
-  *:first-letter,
-  *:first-line {
+  *:first-letter {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
-    text-shadow: none !important; }
+    box-shadow: none !important; }
   a,
   a:visited {
     text-decoration: underline; }
@@ -4800,10 +4798,9 @@ input.mdl-button[type="submit"] {
     color: rgba(0, 0, 0, 0.54);
     padding-bottom: 8px;
     box-sizing: border-box; }
-    .mdl-data-table th .mdl-data-table__header--sorted-ascending, .mdl-data-table th .mdl-data-table__header--sorted-descending {
+    .mdl-data-table th.mdl-data-table__header--sorted-ascending, .mdl-data-table th.mdl-data-table__header--sorted-descending {
       color: rgba(0, 0, 0, 0.87); }
-      .mdl-data-table th .mdl-data-table__header--sorted-ascending:before, .mdl-data-table th .mdl-data-table__header--sorted-descending:before {
-        font-size: 16px;
+      .mdl-data-table th.mdl-data-table__header--sorted-ascending:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:before {
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
@@ -4816,10 +4813,16 @@ input.mdl-button[type="submit"] {
         -moz-font-feature-settings: 'liga';
              font-feature-settings: 'liga';
         -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased; }
-    .mdl-data-table th .mdl-data-table__header--sorted-ascending:before {
-      content: "\e5d8"; }
-    .mdl-data-table th .mdl-data-table__header--sorted-descending:before {
+        -webkit-font-smoothing: antialiased;
+        font-size: 16px;
+        content: "\e5d8";
+        margin-right: 5px;
+        vertical-align: sub; }
+      .mdl-data-table th.mdl-data-table__header--sorted-ascending:hover, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover {
+        cursor: pointer; }
+        .mdl-data-table th.mdl-data-table__header--sorted-ascending:hover:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover:before {
+          color: rgba(0, 0, 0, 0.26); }
+    .mdl-data-table th.mdl-data-table__header--sorted-descending:before {
       content: "\e5db"; }
 
 .mdl-data-table__select {
@@ -8457,17 +8460,20 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   position: fixed;
   bottom: 0;
   left: 50%;
-  margin-right: -50%;
   cursor: default;
   background-color: #323232;
-  z-index: 10000;
+  z-index: 3;
+  display: block;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   will-change: transform;
-  -webkit-transform: translate(0, 80px);
-          transform: translate(0, 80px);
+  -webkit-transform: translate(-50%, 80px);
+          transform: translate(-50%, 80px);
   transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
   transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1);
   transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
@@ -8484,22 +8490,24 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       max-width: 568px;
       border-radius: 2px; } }
   .mdl-snackbar--active {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     pointer-events: auto;
     transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
     transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
     transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1); }
   .mdl-snackbar__text {
-    padding: 14px 24px;
+    padding: 14px 12px 14px 24px;
     vertical-align: middle;
-    color: white; }
+    color: white;
+    float: left; }
   .mdl-snackbar__action {
     background: transparent;
     border: none;
     color: rgb(255,64,129);
+    float: right;
     text-transform: uppercase;
-    padding: 14px 24px;
+    padding: 14px 24px 14px 12px;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -8513,7 +8521,9 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    vertical-align: middle; }
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
     .mdl-snackbar__action::-moz-focus-inner {
       border: 0; }
     .mdl-snackbar__action:not([aria-hidden]) {
@@ -9831,22 +9841,27 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   overflow: hidden;
   white-space: nowrap;
   text-align: left; }
-  .mdl-textfield.is-dirty .mdl-textfield__label {
+  .mdl-textfield.is-dirty .mdl-textfield__label,
+  .mdl-textfield.has-placeholder .mdl-textfield__label {
     visibility: hidden; }
   .mdl-textfield--floating-label .mdl-textfield__label {
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    transition: none; }
   fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   .mdl-textfield.is-disabled.is-disabled .mdl-textfield__label {
     color: rgba(0,0,0, 0.26); }
   .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
-  .mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
     color: rgb(63,81,181);
     font-size: 12px;
     top: 4px;
     visibility: visible; }
   .mdl-textfield--floating-label.is-focused .mdl-textfield__expandable-holder .mdl-textfield__label,
-  .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__label {
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__label,
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__expandable-holder .mdl-textfield__label {
     top: -16px; }
   .mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
     color: rgb(213,0,0);

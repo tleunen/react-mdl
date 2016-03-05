@@ -43,9 +43,6 @@ class Snackbar extends React.Component {
 
         if(this.props.active) {
             this.timeoutId = setTimeout(this.clearTimer, this.props.timeout);
-
-            // Hack fix to re-center the snackbar based on its content
-            this.refs.snackbar.style.marginLeft = `-${this.refs.snackbar.offsetWidth * 0.5}px`;
         }
     }
 

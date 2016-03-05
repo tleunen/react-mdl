@@ -2,6 +2,37 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.4.4]
+
+### Changes/Fixes
+- Updates to MDL 1.1.2
+
+[1.4.4]: https://github.com/tleunen/react-mdl/compare/v1.4.3...v1.4.4
+
+## [1.4.3]
+
+### Fixes
+- Fixes documentation on IE by including the babel polyfill ([]#236])
+- Fixes `Textfield` initial invalid state ([#241])
+- Tried to resolve memory issue while running tests ([#230])
+
+[1.4.3]: https://github.com/tleunen/react-mdl/compare/v1.4.2...v1.4.3
+[#236]: https://github.com/tleunen/react-mdl/issues/236
+[#241]: https://github.com/tleunen/react-mdl/issues/241
+[#230]: https://github.com/tleunen/react-mdl/issues/230
+
+## [1.4.2]
+
+### Fixes
+- Fixes `Snackbar` clear timeer on unmount. ([#227] by [@carpie]).
+- Fixes `Dialog` onCancel event. ([#237] by [@Permagate])
+
+[1.4.2]: https://github.com/tleunen/react-mdl/compare/v1.4.1...v1.4.2
+[#227]: https://github.com/tleunen/react-mdl/issues/227
+[#237]: https://github.com/tleunen/react-mdl/issues/237
+[@Permagate]: https://github.com/Permagate
+[@carpie]: https://github.com/carpie
+
 ## [1.4.1]
 
 ### Fixes
