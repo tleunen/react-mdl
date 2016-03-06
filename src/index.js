@@ -9,7 +9,7 @@ export {
     CardMedia, CardText, CardMenu
 } from './Card';
 export Checkbox from './Checkbox';
-export DataTable, { Table, TableHeader } from './DataTable';
+export DataTable, { Table, SortableTable, TableHeader } from './DataTable';
 export {
     Dialog, DialogTitle, DialogContent,
     DialogActions

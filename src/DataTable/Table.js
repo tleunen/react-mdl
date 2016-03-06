@@ -46,6 +46,12 @@ class DataTable extends React.Component {
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            rows: (nextProps.rows || nextProps.data).slice()
+        });
+    }
+
     handleChangeHeaderCheckbox() {
         const previousState = this.state;
 
@@ -109,7 +115,19 @@ class DataTable extends React.Component {
             [shadows[shadowLevel]]: hasShadow
         }, className);
 
-        const hasChildrenColumns = !!children;
+        const columnChildren = !!children
+            ? children
+            : columns.map((column) =>
+                <TableHeader
+                    key={column.name}
+                    className={column.className}
+                    name={column.name}
+                    numeric={column.numeric}
+                    tooltip={column.tooltip}
+                >
+                    {column.label}
+                </TableHeader>
+            );
 
         return (
             <table className={classes} {...otherProps}>
@@ -120,24 +138,7 @@ class DataTable extends React.Component {
                                 <Checkbox checked={headerSelected} onChange={this.handleChangeHeaderCheckbox} />
                             </th>
                         ) : null}
-                        {hasChildrenColumns
-                            ? React.Children.map(children, child =>
-                                React.cloneElement(child, {
-                                    className: child.props.className
-                                })
-                            )
-                            : columns.map((column) =>
-                                <TableHeader
-                                    key={column.name}
-                                    className={column.className}
-                                    name={column.name}
-                                    numeric={column.numeric}
-                                    tooltip={column.tooltip}
-                                >
-                                    {column.label}
-                                </TableHeader>
-                            )
-                        }
+                        {columnChildren}
                     </tr>
                 </thead>
                 <tbody>
@@ -153,10 +154,7 @@ class DataTable extends React.Component {
                                         <Checkbox data-row-id={idx} checked={isSelected} onChange={this.handleChangeDataCheckbox} />
                                     </td>
                                 ) : null}
-                                {hasChildrenColumns
-                                    ? React.Children.map(children, (child) => this.renderCell(child.props, row))
-                                    : columns.map((column) => this.renderCell(column, row))
-                                }
+                                {React.Children.map(columnChildren, (child) => this.renderCell(child.props, row))}
                             </tr>
                         );
                     })}

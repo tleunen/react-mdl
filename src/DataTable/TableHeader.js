@@ -2,32 +2,46 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tooltip from '../Tooltip';
 
-const propTypes = {
-    cellFormatter: PropTypes.func,
-    className: PropTypes.string,
-    name: PropTypes.string,
-    numeric: PropTypes.bool,
-    tooltip: PropTypes.node
-};
+class TableHeader extends React.Component {
+    static propTypes = {
+        cellFormatter: PropTypes.func,
+        className: PropTypes.string,
+        name: PropTypes.string,
+        numeric: PropTypes.bool,
+        onClick: PropTypes.func,
+        sortable: PropTypes.bool,
+        sortFn: PropTypes.func,
+        tooltip: PropTypes.node
+    };
 
-const TableHeader = (props) => {
-    const { cellFormatter, className, name, numeric,
-        tooltip, children, ...otherProps } = props;
+    constructor(props) {
+        super(props);
 
-    const classes = classNames({
-        'mdl-data-table__cell--non-numeric': !numeric
-    }, className);
+        this.handleClick = this.handleClick.bind(this);
+    }
 
+    handleClick(e) {
+        this.props.onClick(e, this.props.name);
+    }
 
-    return (
-        <th className={classes} {...otherProps}>
-            {!!tooltip ? (
-                <Tooltip label={tooltip}>{children}</Tooltip>
-            ) : children}
-        </th>
-    );
-};
+    render() {
+        const { cellFormatter, className, name, numeric, onClick,
+            sortable, sortFn, tooltip, children, ...otherProps } = this.props;
 
-TableHeader.propTypes = propTypes;
+        const classes = classNames({
+            'mdl-data-table__cell--non-numeric': !numeric
+        }, className);
+
+        const clickFn = sortable && onClick ? this.handleClick : null;
+
+        return (
+            <th className={classes} onClick={clickFn} {...otherProps}>
+                {!!tooltip ? (
+                    <Tooltip label={tooltip}>{children}</Tooltip>
+                ) : children}
+            </th>
+        );
+    }
+}
 
 export default TableHeader;
