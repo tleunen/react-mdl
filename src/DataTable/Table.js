@@ -1,12 +1,11 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
-import mdlUpgrade from '../utils/mdlUpgrade';
 import shadows from '../utils/shadows';
 import Checkbox from '../Checkbox';
 import TableHeader from './TableHeader';
 
-class DataTable extends React.Component {
+class Table extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         columns: (props, propName, componentName) => {
@@ -52,16 +51,14 @@ class DataTable extends React.Component {
         });
     }
 
-    handleChangeHeaderCheckbox() {
-        const previousState = this.state;
-
-        const selected = !previousState.headerSelected;
-        const selectedRows = [];
+    handleChangeHeaderCheckbox(e) {
+        const selected = e.target.checked;
+        let selectedRows = [];
 
         if(selected) {
-            // select all rows
-            let ln = this.state.rows.length;
-            while(ln--) selectedRows.push(ln);
+            selectedRows = this.state.rows.map((row, idx) =>
+                row.key ? row.key : idx
+            );
         }
 
         this.setState({
@@ -111,13 +108,13 @@ class DataTable extends React.Component {
         const hasShadow = typeof shadow !== 'undefined';
         const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
-        const classes = classNames('mdl-data-table mdl-js-data-table', {
+        const classes = classNames('mdl-data-table', {
             [shadows[shadowLevel]]: hasShadow
         }, className);
 
         const columnChildren = !!children
-            ? children
-            : columns.map((column) =>
+            ? React.Children.toArray(children)
+            : columns.map(column =>
                 <TableHeader
                     key={column.name}
                     className={column.className}
@@ -128,14 +125,13 @@ class DataTable extends React.Component {
                     {column.label}
                 </TableHeader>
             );
-
         return (
             <table className={classes} {...otherProps}>
                 <thead>
                     <tr>
                         {selectable ? (
                             <th>
-                                <Checkbox checked={headerSelected} onChange={this.handleChangeHeaderCheckbox} />
+                                <Checkbox className="mdl-data-table__select" checked={headerSelected} onChange={this.handleChangeHeaderCheckbox} />
                             </th>
                         ) : null}
                         {columnChildren}
@@ -143,18 +139,19 @@ class DataTable extends React.Component {
                 </thead>
                 <tbody>
                     {rows.map((row, idx) => {
-                        const isSelected = selectedRows.includes(idx);
+                        const isSelected = selectedRows.indexOf(idx) > -1;
                         const rowClasses = classNames({
                             'is-selected': isSelected
                         }, row.className);
+                        const rowKey = row.key ? row.key : idx;
                         return (
-                            <tr key={row.key ? row.key : idx} className={rowClasses}>
+                            <tr key={rowKey} className={rowClasses}>
                                 {selectable ? (
                                     <td>
-                                        <Checkbox data-row-id={idx} checked={isSelected} onChange={this.handleChangeDataCheckbox} />
+                                        <Checkbox className="mdl-data-table__select" data-row-id={rowKey} checked={isSelected} onChange={this.handleChangeDataCheckbox} />
                                     </td>
                                 ) : null}
-                                {React.Children.map(columnChildren, (child) => this.renderCell(child.props, row))}
+                                {columnChildren.map((child) => this.renderCell(child.props, row))}
                             </tr>
                         );
                     })}
@@ -164,4 +161,4 @@ class DataTable extends React.Component {
     }
 }
 
-export default mdlUpgrade(DataTable);
+export default Table;

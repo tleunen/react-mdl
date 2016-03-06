@@ -9,12 +9,12 @@ module.exports = function karma(config) {
             }
         },
 
-        browsers: [ 'Chrome' ],
-        frameworks: [ 'mocha' ],
+        browsers: ['Chrome'],
+        frameworks: ['mocha'],
         files: [
             'extra/material.js',
-            // 'src/**/*-test.js'
-            'tests.webpack.js'
+            'src/**/*-test.js'
+            // 'tests.webpack.js'
         ],
 
         plugins: [
@@ -27,11 +27,11 @@ module.exports = function karma(config) {
         ],
 
         preprocessors: {
-            // 'src/**/*-test.js': ['webpack']
-            'tests.webpack.js': ['webpack']
+            'src/**/*-test.js': ['webpack']
+            // 'tests.webpack.js': ['webpack']
         },
 
-        reporters: [ 'mocha', 'coverage' ],
+        reporters: ['mocha', 'coverage'],
         coverageReporter: {
             reporters: [
                 { type: 'html', subdir: 'html' },
@@ -74,6 +74,8 @@ module.exports = function karma(config) {
     });
 
     if(process.env.TRAVIS) {
-        config.browsers = ['Chrome_travis_ci'];
+        config.set({
+            browsers: ['Chrome_travis_ci']
+        });
     }
 };
