@@ -38,7 +38,8 @@
 
 ### Sortable table
 ```jsx
-<SortableTable
+<Table
+    sortable
     shadow={0}
     rows={[
         {material: 'Acrylic (Transparent)', quantity: 25, price: 2.90},
@@ -70,7 +71,7 @@
     >
         Price
     </TableHeader>
-</SortableTable>
+</Table>
 ```
 
 ## Configuration

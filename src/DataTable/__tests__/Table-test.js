@@ -1,12 +1,13 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { Simulate } from 'react-addons-test-utils';
-import { render, renderDOM } from '../../__tests__/render';
-import { Table, TableHeader } from '..';
-import Checkbox from '../../Checkbox';
+// import { Simulate } from 'react-addons-test-utils';
+import { render } from '../../__tests__/render';
+import { TableHeader } from '..';
+import { UndecoratedTable as Table } from '../Table';
+// import Checkbox from '../../Checkbox';
 
-describe('DataTable', () => {
+describe('Table', () => {
     const priceFormatter = price => `\$${price.toFixed(2)}`;
     const rows = [
         { material: 'Acrylic (Transparent)', quantity: 25, price: 2.90 },
@@ -49,7 +50,7 @@ describe('DataTable', () => {
 
         const [thead] = output.props.children;
         const headTr = thead.props.children;
-        const [, columns] = headTr.props.children;
+        const columns = headTr.props.children;
         expect(columns.length).toBe(3);
 
         columns.forEach(td => {
@@ -68,7 +69,7 @@ describe('DataTable', () => {
 
         const [thead] = output.props.children;
         const headTr = thead.props.children;
-        const [, columnsRendered] = headTr.props.children;
+        const columnsRendered = headTr.props.children;
         expect(columnsRendered.length).toBe(3);
 
         columnsRendered.forEach((td, i) => {
@@ -86,7 +87,7 @@ describe('DataTable', () => {
         expect(rowsRendered.length).toBe(3);
 
         rowsRendered.forEach((row, i) => {
-            const [, tds] = row.props.children;
+            const tds = row.props.children;
             expect(tds.length).toBe(3);
 
             const [td1, td2] = tds;
@@ -103,7 +104,7 @@ describe('DataTable', () => {
         const rowsRendered = tbody.props.children;
 
         rowsRendered.forEach((row, i) => {
-            const [, tds] = row.props.children;
+            const tds = row.props.children;
             expect(tds.length).toBe(3);
 
             const [,, td3] = tds;
@@ -118,7 +119,7 @@ describe('DataTable', () => {
         const rowsRendered = tbody.props.children;
 
         rowsRendered.forEach(row => {
-            const [, tds] = row.props.children;
+            const tds = row.props.children;
 
             const [td1, td2, td3] = tds;
             expect(td1.props.className).toInclude('mdl-data-table__cell--non-numeric');
@@ -143,116 +144,116 @@ describe('DataTable', () => {
         });
     });
 
-    describe('Selectable Table', () => {
-        function getSortableTable(props) {
-            return getDataTable({ ...props, selectable: true });
-        }
-
-        it('should add a checkbox column in the head', () => {
-            const output = render(getSortableTable());
-
-            const [thead] = output.props.children;
-            const headTr = thead.props.children;
-            const [checkboxColumn] = headTr.props.children;
-            expect(checkboxColumn.type).toBe('th');
-            expect(checkboxColumn.props.children.type).toBe(Checkbox);
-        });
-
-        it('should add a checkbox column in every data row', () => {
-            const output = render(getSortableTable());
-
-            const [, tbody] = output.props.children;
-            const rowsRendered = tbody.props.children;
-
-            rowsRendered.forEach(row => {
-                const [checkboxTd] = row.props.children;
-                expect(checkboxTd.props.children.type).toBe(Checkbox);
-            });
-        });
-
-        it('should check the clicked checkbox', () => {
-            const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
-            expect(el.querySelector('[data-row-id="0"]').checked).toBe(true);
-        });
-
-        it('should uncheck the clicked checkbox', () => {
-            const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: false, dataset: { rowId: 0 } } });
-            expect(el.querySelector('[data-row-id="0"]').checked).toBe(false);
-        });
-
-        it('should send the selected row in the onChange handler', () => {
-            const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
-            expect(onChange).toHaveBeenCalledWith([0]);
-        });
-
-        it('should send all the selected rows in the onChange handler', () => {
-            const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
-            Simulate.change(el.querySelector('[data-row-id="2"]'), { target: { checked: true, dataset: { rowId: 2 } } });
-            expect(onChange).toHaveBeenCalledWith([0, 2]);
-        });
-
-        it('should not send a previously selected row in the onChange handler', () => {
-            const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-            Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
-            Simulate.change(el.querySelector('[data-row-id="1"]'), { target: { checked: true, dataset: { rowId: 1 } } });
-            Simulate.change(el.querySelector('[data-row-id="2"]'), { target: { checked: true, dataset: { rowId: 2 } } });
-
-            // uncheck
-            Simulate.change(el.querySelector('[data-row-id="1"]'), { target: { checked: false, dataset: { rowId: 1 } } });
-
-            expect(onChange).toHaveBeenCalledWith([0, 2]);
-        });
-
-        describe('when the checkbox in the header is clicked', () => {
-            it('should check the header checkbox', () => {
-                const onChange = expect.createSpy();
-                const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-                Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
-                expect(el.querySelector('th .mdl-checkbox__input').checked).toBe(true);
-            });
-
-            it('should check all the rows', () => {
-                const onChange = expect.createSpy();
-                const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-                Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
-                expect(el.querySelector('[data-row-id="0"]').checked).toBe(true);
-                expect(el.querySelector('[data-row-id="1"]').checked).toBe(true);
-                expect(el.querySelector('[data-row-id="2"]').checked).toBe(true);
-            });
-
-            it('should send all the selected rows in the onChange handler', () => {
-                const onChange = expect.createSpy();
-                const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-                Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
-                expect(onChange).toHaveBeenCalledWith([0, 1, 2]);
-            });
-
-            it('should not send the previously selected rows in the onChange handler', () => {
-                const onChange = expect.createSpy();
-                const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
-
-                Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
-                Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: false } });
-                expect(onChange).toHaveBeenCalledWith([]);
-            });
-        });
-    });
+    // describe('Selectable Table', () => {
+    //     function getSortableTable(props) {
+    //         return getDataTable({ ...props, selectable: true });
+    //     }
+    //
+    //     it('should add a checkbox column in the head', () => {
+    //         const output = render(getSortableTable());
+    //
+    //         const [thead] = output.props.children;
+    //         const headTr = thead.props.children;
+    //         const [checkboxColumn] = headTr.props.children;
+    //         expect(checkboxColumn.type).toBe('th');
+    //         expect(checkboxColumn.props.children.type).toBe(Checkbox);
+    //     });
+    //
+    //     it('should add a checkbox column in every data row', () => {
+    //         const output = render(getSortableTable());
+    //
+    //         const [, tbody] = output.props.children;
+    //         const rowsRendered = tbody.props.children;
+    //
+    //         rowsRendered.forEach(row => {
+    //             const [checkboxTd] = row.props.children;
+    //             expect(checkboxTd.props.children.type).toBe(Checkbox);
+    //         });
+    //     });
+    //
+    //     it('should check the clicked checkbox', () => {
+    //         const onChange = expect.createSpy();
+    //         const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
+    //         expect(el.querySelector('[data-row-id="0"]').checked).toBe(true);
+    //     });
+    //
+    //     it('should uncheck the clicked checkbox', () => {
+    //         const onChange = expect.createSpy();
+    //         const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: false, dataset: { rowId: 0 } } });
+    //         expect(el.querySelector('[data-row-id="0"]').checked).toBe(false);
+    //     });
+    //
+    //     it('should send the selected row in the onChange handler', () => {
+    //         const onChange = expect.createSpy();
+    //         const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
+    //         expect(onChange).toHaveBeenCalledWith([0]);
+    //     });
+    //
+    //     it('should send all the selected rows in the onChange handler', () => {
+    //         const onChange = expect.createSpy();
+    //         const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
+    //         Simulate.change(el.querySelector('[data-row-id="2"]'), { target: { checked: true, dataset: { rowId: 2 } } });
+    //         expect(onChange).toHaveBeenCalledWith([0, 2]);
+    //     });
+    //
+    //     it('should not send a previously selected row in the onChange handler', () => {
+    //         const onChange = expect.createSpy();
+    //         const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //         Simulate.change(el.querySelector('[data-row-id="0"]'), { target: { checked: true, dataset: { rowId: 0 } } });
+    //         Simulate.change(el.querySelector('[data-row-id="1"]'), { target: { checked: true, dataset: { rowId: 1 } } });
+    //         Simulate.change(el.querySelector('[data-row-id="2"]'), { target: { checked: true, dataset: { rowId: 2 } } });
+    //
+    //         // uncheck
+    //         Simulate.change(el.querySelector('[data-row-id="1"]'), { target: { checked: false, dataset: { rowId: 1 } } });
+    //
+    //         expect(onChange).toHaveBeenCalledWith([0, 2]);
+    //     });
+    //
+    //     describe('when the checkbox in the header is clicked', () => {
+    //         it('should check the header checkbox', () => {
+    //             const onChange = expect.createSpy();
+    //             const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
+    //             expect(el.querySelector('th .mdl-checkbox__input').checked).toBe(true);
+    //         });
+    //
+    //         it('should check all the rows', () => {
+    //             const onChange = expect.createSpy();
+    //             const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
+    //             expect(el.querySelector('[data-row-id="0"]').checked).toBe(true);
+    //             expect(el.querySelector('[data-row-id="1"]').checked).toBe(true);
+    //             expect(el.querySelector('[data-row-id="2"]').checked).toBe(true);
+    //         });
+    //
+    //         it('should send all the selected rows in the onChange handler', () => {
+    //             const onChange = expect.createSpy();
+    //             const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
+    //             expect(onChange).toHaveBeenCalledWith([0, 1, 2]);
+    //         });
+    //
+    //         it('should not send the previously selected rows in the onChange handler', () => {
+    //             const onChange = expect.createSpy();
+    //             const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+    //
+    //             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
+    //             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: false } });
+    //             expect(onChange).toHaveBeenCalledWith([]);
+    //         });
+    //     });
+    // });
 });
