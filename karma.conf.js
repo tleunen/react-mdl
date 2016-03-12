@@ -73,7 +73,7 @@ module.exports = function karma(config) {
         }
     });
 
-    if(process.env.TRAVIS) {
+    if (process.env.TRAVIS) {
         config.set({
             browsers: ['Chrome_travis_ci']
         });

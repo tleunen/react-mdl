@@ -40,6 +40,26 @@ export default Component =>
             }
         }
 
+        componentWillReceiveProps(nextProps) {
+            if (nextProps.selectable) {
+                const { rows, data } = nextProps;
+                const rrows = rows || data;
+                // keep only existing rows
+                const selectedRows = this.state.selectedRows
+                    .filter(k => rrows
+                        .map((r, i) => r.key || i)
+                        .indexOf(k) > -1
+                    );
+
+                this.setState({
+                    headerSelected: selectedRows.length === rrows.length,
+                    selectedRows
+                });
+
+                nextProps.onSelectionChanged(selectedRows);
+            }
+        }
+
         handleChangeHeaderCheckbox(e) {
             const { rows, data } = this.props;
             const selected = e.target.checked;
@@ -57,7 +77,7 @@ export default Component =>
 
         handleChangeRowCheckbox(e) {
             const { rows, data } = this.props;
-            const rowId = parseInt(e.target.dataset.rowId, 10);
+            const rowId = e.target.dataset.rowId;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
 

@@ -25,9 +25,9 @@
     selectable
     shadow={0}
     rows={[
-        {material: 'Acrylic (Transparent)', quantity: 25, price: 2.90},
-        {material: 'Plywood (Birch)', quantity: 50, price: 1.25},
-        {material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35}
+        {key: 'e1', material: 'Acrylic (Transparent)', quantity: 25, price: 2.90},
+        {key: 'e3', material: 'Plywood (Birch)', quantity: 50, price: 1.25},
+        {key: 'e2', material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35}
     ]}
 >
     <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
