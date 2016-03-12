@@ -13,11 +13,11 @@ class Switch extends React.Component {
     };
 
     componentDidUpdate(prevProps) {
-        if(this.props.disabled !== prevProps.disabled) {
+        if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
             findDOMNode(this).MaterialSwitch[fnName]();
         }
-        if(this.props.checked !== prevProps.checked) {
+        if (this.props.checked !== prevProps.checked) {
             const fnName = this.props.checked ? 'on' : 'off';
             findDOMNode(this).MaterialSwitch[fnName]();
         }

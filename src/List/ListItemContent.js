@@ -18,7 +18,7 @@ class ListItemContent extends React.Component {
     };
 
     createIcon(type, icon) {
-        if(typeof icon === 'string') {
+        if (typeof icon === 'string') {
             return <Icon className={`mdl-list__item-${type}`} name={icon} />;
         }
         return React.cloneElement(icon, { className: `mdl-list__item-${type}` });
@@ -32,10 +32,10 @@ class ListItemContent extends React.Component {
         const subtitleClassName = useBodyClass ? 'mdl-list__item-text-body' : 'mdl-list__item-sub-title';
 
         let iconElement = null;
-        if(icon) {
+        if (icon) {
             iconElement = this.createIcon('icon', icon);
         }
-        else if(avatar) {
+        else if (avatar) {
             iconElement = this.createIcon('avatar', avatar);
         }
 

@@ -8,7 +8,7 @@ export function render(element) {
 
     const output = renderer.getRenderOutput();
 
-    if(output && output.type === MDLComponent) {
+    if (output && output.type === MDLComponent) {
         return output.props.children;
     }
 

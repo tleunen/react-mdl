@@ -60,7 +60,7 @@ function convertJSX(jsxCode) {
 
     const codeSplit = code.split('\n\n');
     const columns = codeSplit.length;
-    if(columns > 1) {
+    if (columns > 1) {
         code = '<Grid>';
 
         codeSplit.forEach(c => {
@@ -123,9 +123,9 @@ function enhanceRenderer(renderer) {
 
 
     renderer.code = (code, lang, escaped) => { // eslint-disable-line no-param-reassign
-        if(lang === 'jsx') return convertJSX(code);
-        if(lang === 'css_demo') return convertCSS(code);
-        if(lang === 'jsx_demo_class') return convertJSXClass(code);
+        if (lang === 'jsx') return convertJSX(code);
+        if (lang === 'css_demo') return convertCSS(code);
+        if (lang === 'jsx_demo_class') return convertJSXClass(code);
         return `<pre><code>${(escaped ? code : escape(code, true))}</code></pre>`;
     };
 
@@ -137,13 +137,13 @@ function convertPages() {
 
     const files = fs.readdirSync(DOC_PAGES_DIR);
     files.forEach(file => {
-        if(file[0] === '.') return;
+        if (file[0] === '.') return;
 
         const fileIn = path.join(DOC_PAGES_DIR, file);
         const fileOut = path.join(DOC_PAGES_DIR_OUTPUT, `${file}.html`);
 
         const stats = fs.lstatSync(fileIn);
-        if(!stats.isFile()) return;
+        if (!stats.isFile()) return;
 
         const data = fs.readFileSync(fileIn);
 
@@ -161,7 +161,7 @@ function generatePageIndex() {
 
     files.forEach(file => {
         const name = file.substring(0, file.indexOf('.'));
-        if(name === 'index' || file[0] === '.') return;
+        if (name === 'index' || file[0] === '.') return;
         content += `export ${name} from './${file}';\n`;
     });
 

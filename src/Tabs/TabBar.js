@@ -35,7 +35,7 @@ class TabBar extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                {React.Children.map(this.props.children, (child, tabId) =>
+                {React.Children.map(children, (child, tabId) =>
                     React.cloneElement(child, {
                         cssPrefix,
                         tabId,

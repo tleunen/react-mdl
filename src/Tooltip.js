@@ -11,7 +11,7 @@ const Tooltip = (props) => {
         : label;
 
     let element;
-    if(typeof children === 'string') {
+    if (typeof children === 'string') {
         element = <span>{children}</span>;
     }
     else {

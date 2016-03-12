@@ -11,8 +11,8 @@ import * as Templates from './templates';
 
 // export all ReactMDL into global so we can generate demos
 import * as ReactMDL from '../../src/';
-for(const component in ReactMDL) {
-    if(ReactMDL.hasOwnProperty(component)) {
+for (const component in ReactMDL) {
+    if (ReactMDL.hasOwnProperty(component)) {
         global[component] = ReactMDL[component];
     }
 }

@@ -44,7 +44,7 @@ describe('Grid', () => {
         });
 
         it('should have the specicic column css class', () => {
-            for(let i = 1; i < 13; i++) {
+            for (let i = 1; i < 13; i++) {
                 const output = render(<Cell col={i} />);
 
                 expect(output.props.className)
@@ -53,7 +53,7 @@ describe('Grid', () => {
         });
 
         it('should have the specicic phone column css class when specified', () => {
-            for(let i = 1; i < 4; i++) {
+            for (let i = 1; i < 4; i++) {
                 const output = render(<Cell col={1} phone={i} />);
 
                 expect(output.props.className)
@@ -62,7 +62,7 @@ describe('Grid', () => {
         });
 
         it('should have the specicic tablet column css class when specified', () => {
-            for(let i = 1; i < 8; i++) {
+            for (let i = 1; i < 8; i++) {
                 const output = render(<Cell col={1} tablet={i} />);
 
                 expect(output.props.className)

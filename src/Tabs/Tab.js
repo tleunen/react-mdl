@@ -1,53 +1,44 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Tab extends React.Component {
-    static propTypes = {
-        active: PropTypes.bool,
-        className: PropTypes.string,
-        component: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.element,
-            PropTypes.func
-        ]),
-        cssPrefix: PropTypes.string,
-        onTabClick: PropTypes.func,
-        style: PropTypes.object,
-        tabId: PropTypes.number
-    };
+const propTypes = {
+    active: PropTypes.bool,
+    className: PropTypes.string,
+    component: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.func
+    ]),
+    cssPrefix: PropTypes.string,
+    onTabClick: PropTypes.func,
+    style: PropTypes.object,
+    tabId: PropTypes.number
+};
 
-    static defaultProps = {
-        style: {}
-    };
+const defaultProps = {
+    style: {}
+};
 
-    constructor(props) {
-        super(props);
+const Tab = (props) => {
+    const { active, className, component, children, cssPrefix,
+        onTabClick, style, tabId, ...otherProps } = props;
 
-        this._handleClick = this._handleClick.bind(this);
-    }
+    const classes = classNames({
+        [`${cssPrefix}__tab`]: true,
+        'is-active': active
+    }, className);
 
-    _handleClick() {
-        this.props.onTabClick(this.props.tabId);
-    }
+    style.cursor = 'pointer';
 
-    render() {
-        const { active, className, component, children, cssPrefix,
-            onTabClick, style, tabId, ...otherProps } = this.props;
+    return React.createElement(component || 'a', {
+        className: classes,
+        onClick: () => onTabClick(tabId),
+        style,
+        ...otherProps
+    }, children);
+};
 
-        const classes = classNames({
-            [`${cssPrefix}__tab`]: true,
-            'is-active': active
-        }, className);
-
-        style.cursor = 'pointer';
-
-        return React.createElement(component || 'a', {
-            className: classes,
-            onClick: this._handleClick,
-            style,
-            ...otherProps
-        }, children);
-    }
-}
+Tab.propTypes = propTypes;
+Tab.defaultProps = defaultProps;
 
 export default Tab;

@@ -18,10 +18,10 @@ class ListItem extends React.Component {
         }, className);
 
         const children = Children.map(otherProps.children, child => {
-            if(typeof child === 'string') {
+            if (typeof child === 'string') {
                 return <ListItemContent>{child}</ListItemContent>;
             }
-            if(child.type === ListItemContent) {
+            if (child.type === ListItemContent) {
                 return cloneElement(child, {
                     ...child.props,
                     useBodyClass: !!threeLine

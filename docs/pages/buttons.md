@@ -98,7 +98,7 @@
 |:---------|:----------|:-------------|:-------------|
 | accent   | Boolean   | Applies "accent" colors  | Optional |
 | colored  | Boolean   | Applies "colored" colors | Optional |
-| component| String || Element || Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
+| component| String, Element, Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 | mini     | Boolean   | Set the button as "mini" | Optional, works only with "FABButton" |
 | name     | String    | Set the icon name" | Optional, works only with "IconButton" |
 | primary  | Boolean   | Applies "primary" colors | Optional |

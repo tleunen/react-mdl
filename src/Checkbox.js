@@ -14,11 +14,11 @@ class Checkbox extends React.Component {
     };
 
     componentDidUpdate(prevProps) {
-        if(this.props.disabled !== prevProps.disabled) {
+        if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
             findDOMNode(this).MaterialCheckbox[fnName]();
         }
-        if(this.props.checked !== prevProps.checked) {
+        if (this.props.checked !== prevProps.checked) {
             const fnName = this.props.checked ? 'check' : 'uncheck';
             findDOMNode(this).MaterialCheckbox[fnName]();
         }

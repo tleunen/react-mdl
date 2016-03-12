@@ -60,7 +60,7 @@ describe('RadioGroup', () => {
         );
         const output = render(element);
 
-        for(let i = 0; i < output.props.children.length; i++) {
+        for (let i = 0; i < output.props.children.length; i++) {
             const radio = output.props.children[i];
             expect(radio.props.defaultChecked).toBe(value === radio.props.value);
         }
@@ -80,7 +80,7 @@ describe('RadioGroup', () => {
         );
         const output = render(element);
 
-        for(let i = 0; i < output.props.children.length; i++) {
+        for (let i = 0; i < output.props.children.length; i++) {
             const radio = output.props.children[i];
             expect(radio.props.checked).toBe(value === radio.props.value);
         }

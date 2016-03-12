@@ -17,14 +17,14 @@ class Dialog extends React.Component {
 
     componentDidMount() {
         this.refs.dialog.addEventListener('cancel', this.props.onCancel);
-        if(this.props.open) {
+        if (this.props.open) {
             findDOMNode(this).showModal();
         }
     }
 
     componentDidUpdate(prevProps) {
-        if(this.props.open !== prevProps.open) {
-            if(this.props.open) {
+        if (this.props.open !== prevProps.open) {
+            if (this.props.open) {
                 findDOMNode(this).showModal();
 
                 // display the dialog at the right location
@@ -45,7 +45,10 @@ class Dialog extends React.Component {
     }
 
     render() {
-        const { className, children, open, onCancel, ...otherProps } = this.props;
+        // We cannot set the `open` prop on the Dialog if we manage its state manually with `showModal`,
+        // this the disabled eslint rule
+        // eslint-disable-next-line no-unused-vars
+        const { className, open, onCancel, children, ...otherProps } = this.props;
 
         const classes = classNames('mdl-dialog', className);
 

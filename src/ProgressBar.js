@@ -22,20 +22,19 @@ class ProgressBar extends React.Component {
     }
 
     _setProgress(progress) {
-        if(!this.props.indeterminate && progress !== undefined) {
+        if (!this.props.indeterminate && progress !== undefined) {
             findDOMNode(this).MaterialProgress.setProgress(progress);
         }
     }
 
     _setBuffer(buffer) {
-        if(buffer !== undefined) {
+        if (buffer !== undefined) {
             findDOMNode(this).MaterialProgress.setBuffer(buffer);
         }
     }
 
     render() {
-        const { buffer, className, indeterminate,
-            progress, ...otherProps } = this.props;
+        const { className, indeterminate, ...otherProps } = this.props;
 
         const classes = classNames('mdl-progress mdl-js-progress', {
             'mdl-progress__indeterminate': indeterminate

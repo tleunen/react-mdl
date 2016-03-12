@@ -62,7 +62,7 @@ describe('DataTable', () => {
         const tds = headTr.props.children;
 
         tds.forEach((td, i) => {
-            if(!columns[i].numeric) {
+            if (!columns[i].numeric) {
                 expect(td.props.className).toInclude('mdl-data-table__cell--non-numeric');
             }
             else {
@@ -100,7 +100,7 @@ describe('DataTable', () => {
             const tds = row.props.children;
 
             tds.forEach((td, j) => {
-                if(!columns[j].numeric) {
+                if (!columns[j].numeric) {
                     expect(td.props.className).toInclude('mdl-data-table__cell--non-numeric');
                 }
                 else {

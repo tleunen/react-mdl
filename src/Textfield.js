@@ -27,26 +27,26 @@ class Textfield extends React.Component {
     };
 
     componentDidMount() {
-        if(this.props.error && !this.props.pattern) {
+        if (this.props.error && !this.props.pattern) {
             this.setAsInvalid();
         }
     }
 
     componentDidUpdate(prevProps) {
-        if(
+        if (
             this.props.required !== prevProps.required ||
             this.props.pattern !== prevProps.pattern ||
             this.props.error !== prevProps.error
         ) {
             findDOMNode(this).MaterialTextfield.checkValidity();
         }
-        if(this.props.disabled !== prevProps.disabled) {
+        if (this.props.disabled !== prevProps.disabled) {
             findDOMNode(this).MaterialTextfield.checkDisabled();
         }
-        if(this.props.value !== prevProps.value && this.refs.input !== document.activeElement) {
+        if (this.props.value !== prevProps.value && this.refs.input !== document.activeElement) {
             findDOMNode(this).MaterialTextfield.change(this.props.value);
         }
-        if(this.props.error && !this.props.pattern) {
+        if (this.props.error && !this.props.pattern) {
             this.setAsInvalid();
         }
     }

@@ -17,7 +17,7 @@ const Header = props => {
 
     let isRowOrTab = false;
     React.Children.forEach(children, child => {
-        if(child && (child.type === HeaderRow || child.type === HeaderTabs)) {
+        if (child && (child.type === HeaderRow || child.type === HeaderTabs)) {
             isRowOrTab = true;
         }
     });

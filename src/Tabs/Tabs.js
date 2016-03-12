@@ -6,9 +6,7 @@ import mdlUpgrade from '../utils/mdlUpgrade';
 
 const TabPropType = (props, propName, componentName) => {
     const prop = props[propName];
-    if(prop.type !== Tab) {
-        return new Error(`'${componentName}' only accepts 'Tab' as children.`);
-    }
+    return prop.type !== Tab && new Error(`'${componentName}' only accepts 'Tab' as children.`);
 };
 
 class Tabs extends React.Component {

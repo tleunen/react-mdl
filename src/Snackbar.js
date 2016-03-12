@@ -37,21 +37,21 @@ class Snackbar extends React.Component {
     }
 
     componentDidUpdate() {
-        if(this.timeoutId) {
+        if (this.timeoutId) {
             clearTimeout(this.timeoutId);
         }
 
-        if(this.props.active) {
+        if (this.props.active) {
             this.timeoutId = setTimeout(this.clearTimer, this.props.timeout);
         }
     }
 
     componentWillUnmount() {
-        if(this.timeoutId) {
+        if (this.timeoutId) {
             clearTimeout(this.timeoutId);
             this.timeoutId = null;
         }
-        if(this.clearTimeoutId) {
+        if (this.clearTimeoutId) {
             clearTimeout(this.clearTimeoutId);
             this.clearTimeoutId = null;
         }
@@ -69,7 +69,7 @@ class Snackbar extends React.Component {
 
     render() {
         const { action, active, className, children,
-            onActionClick, onTimeout, timeout, ...otherProps } = this.props;
+            onActionClick, ...otherProps } = this.props;
         const { open } = this.state;
 
         const classes = classNames('mdl-snackbar', {

@@ -66,7 +66,7 @@
   <ListItem>
     <ListItemContent avatar="person">Aaron Paul</ListItemContent>
     <ListItemAction>
-      <Radio value={false} />
+      <Radio value={1} />
     </ListItemAction>
   </ListItem>
   <ListItem>

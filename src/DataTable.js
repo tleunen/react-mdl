@@ -16,19 +16,15 @@ class DataTable extends React.Component {
                 tooltip: PropTypes.node
             })
         ).isRequired,
-        data: (props, propName, componentName) => {
-            if(props[propName]) {
-                return new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`);
-            }
-        },
+        data: (props, propName, componentName) => (
+            props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
+        ),
         rows: PropTypes.arrayOf(
             PropTypes.object
         ).isRequired,
-        selectable: (props, propName, componentName) => {
-            if(props[propName]) {
-                return new Error(`${componentName}: \`${propName}\` is deprecated. Please manage the checkboxes yourself. An example is available here: http://tleunen.github.io/react-mdl/#/datatables \`${propName}\` will be removed in the next major release.`);
-            }
-        },
+        selectable: (props, propName, componentName) => (
+            props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated. Please manage the checkboxes yourself. An example is available here: http://tleunen.github.io/react-mdl/#/datatables \`${propName}\` will be removed in the next major release.`)
+        ),
         shadow: PropTypes.number
     };
 

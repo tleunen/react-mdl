@@ -92,7 +92,7 @@ describe('Dialog', () => {
 
     it('should call provided cancel handler when specified on initial render', () => {
         const spy = expect.createSpy();
-        const el = renderDOM(<Dialog onCancel={spy}/>);
+        const el = renderDOM(<Dialog onCancel={spy} />);
 
         el.dispatchEvent(new Event('cancel'));
         expect(spy).toHaveBeenCalled();

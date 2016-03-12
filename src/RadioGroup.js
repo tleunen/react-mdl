@@ -26,9 +26,7 @@ RadioGroup.propTypes = {
     childContainer: PropTypes.string,
     children: PropTypes.arrayOf((props, propName, componentName) => {
         const prop = props[propName];
-        if(prop.type !== Radio) {
-            return new Error(`'${componentName}' only accepts 'Radio' as children.`);
-        }
+        return prop.type !== Radio && new Error(`'${componentName}' only accepts 'Radio' as children.`);
     }),
     container: PropTypes.string,
     name: PropTypes.string.isRequired,

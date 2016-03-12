@@ -19,14 +19,14 @@ class Badge extends React.Component {
         const { children, text, overlap, noBackground } = this.props;
 
         // No badge if no children
-        if(!React.Children.count(children)) return null;
+        if (!React.Children.count(children)) return null;
 
         const element = typeof children === 'string'
             ? <span>{children}</span>
             : React.Children.only(children);
 
         // No text -> No need of badge
-        if(text === null || typeof text === 'undefined') return element;
+        if (text === null || typeof text === 'undefined') return element;
 
         return React.cloneElement(element, {
             className: classNames('mdl-badge', {

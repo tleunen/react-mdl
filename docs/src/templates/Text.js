@@ -165,7 +165,7 @@ class Text extends React.Component {
     }
 
     renderActiveTabContent() {
-        switch(this.state.activeHeaderTab) {
+        switch (this.state.activeHeaderTab) {
             case 0: return this.renderTabOverview();
             case 1: return this.renderFeatures();
             default: return <div>Nothing to see here :-)</div>;
