@@ -37,7 +37,14 @@ export default Component =>
 
         componentWillReceiveProps(nextProps) {
             if (nextProps.sortable) {
-                this.setState(initState(nextProps));
+                const realRows = nextProps.rows || nextProps.data;
+                const rows = this.state.sortHeader
+                    ? this.getSortedRowsForColumn(this.state.isAsc, this.state.sortHeader, realRows)
+                    : realRows;
+
+                this.setState({
+                    rows
+                });
             }
         }
 
@@ -58,7 +65,15 @@ export default Component =>
 
         handleClickColumn(e, columnName) {
             const isAsc = this.state.sortHeader === columnName ? !this.state.isAsc : true;
+            const rows = this.getSortedRowsForColumn(isAsc, columnName, this.state.rows);
+            this.setState({
+                sortHeader: columnName,
+                isAsc,
+                rows
+            });
+        }
 
+        getSortedRowsForColumn(isAsc, columnName, rows) {
             const columns = !!this.props.children
                 ? React.Children.map(this.props.children, child => child.props)
                 : this.props.columns;
@@ -71,17 +86,13 @@ export default Component =>
                 }
             }
 
-            this.setState({
-                sortHeader: columnName,
-                isAsc,
-                rows: this.state.rows.sort((a, b) =>
-                    sortFn(
-                        String(a[columnName]),
-                        String(b[columnName]),
-                        isAsc
-                    )
+            return rows.sort((a, b) =>
+                sortFn(
+                    String(a[columnName]),
+                    String(b[columnName]),
+                    isAsc
                 )
-            });
+            );
         }
 
         renderTableHeaders() {
