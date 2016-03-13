@@ -2,7 +2,7 @@
 import expect from 'expect';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Simulate, renderIntoDocument } from 'react-addons-test-utils';
+import { Simulate } from 'react-addons-test-utils';
 import { render, renderDOM } from './render';
 import Snackbar from '../Snackbar';
 
@@ -36,15 +36,7 @@ describe('Snackbar', () => {
         expect(el.getAttribute('aria-hidden')).toBe('true');
         expect(el.querySelector('.mdl-snackbar__action')).toBe(null);
 
-        function hideSnackbar() {
-            ReactDOM.render(<Snackbar active={false} action="Undo" onTimeout={hideSnackbar} />, el.parentNode);
-            expect(el.className).toExclude('mdl-snackbar--active');
-            expect(el.getAttribute('aria-hidden')).toBe('true');
-            expect(el.querySelector('.mdl-snackbar__action')).toBe(null);
-            done();
-        }
-
-        ReactDOM.render(<Snackbar active action="Undo" timeout={200} onTimeout={hideSnackbar} />, el.parentNode);
+        ReactDOM.render(<Snackbar active action="Undo" timeout={200} onTimeout={done} />, el.parentNode);
         expect(el.className).toInclude('mdl-snackbar--active');
         expect(el.getAttribute('aria-hidden')).toBe('false');
         expect(el.querySelector('.mdl-snackbar__action')).toNotBe(null);
@@ -56,70 +48,55 @@ describe('Snackbar', () => {
         expect(el.getAttribute('aria-hidden')).toBe('true');
         expect(el.querySelector('.mdl-snackbar__action')).toBe(null);
 
-        function hideToast() {
-            ReactDOM.render(<Snackbar active={false} onTimeout={hideToast} />, el.parentNode);
-            expect(el.className).toExclude('mdl-snackbar--active');
-            expect(el.getAttribute('aria-hidden')).toBe('true');
-            expect(el.querySelector('.mdl-snackbar__action')).toBe(null);
-            done();
-        }
-
-        ReactDOM.render(<Snackbar active timeout={200} onTimeout={hideToast} />, el.parentNode);
+        ReactDOM.render(<Snackbar active timeout={200} onTimeout={done} />, el.parentNode);
         expect(el.className).toInclude('mdl-snackbar--active');
         expect(el.getAttribute('aria-hidden')).toBe('false');
         expect(el.querySelector('.mdl-snackbar__action')).toBe(null);
     });
 
-    it('should click on the action button', (done) => {
-        function onActionClick() {
-            done();
-        }
+    it('should click on the action button', () => {
+        const onClick = expect.createSpy();
 
-        const el = renderDOM(<Snackbar active action="Undo" onTimeout={noop} onActionClick={onActionClick} />);
+        const el = renderDOM(<Snackbar active action="Undo" onTimeout={noop} onActionClick={onClick} />);
         expect(el.querySelector('.mdl-snackbar__action')).toNotBe(null);
         Simulate.click(el.querySelector('.mdl-snackbar__action'));
+        expect(onClick).toHaveBeenCalled();
+    });
+
+    it('should clear the timer when receiving new props', (done) => {
+        const timeoutHandler1 = expect.createSpy();
+        const timeoutHandler2 = () => {
+            expect(timeoutHandler1).toNotHaveBeenCalled();
+            done();
+        };
+        const el = renderDOM(<Snackbar active={false} onTimeout={timeoutHandler1} />);
+        ReactDOM.render(<Snackbar active timeout={1000} onTimeout={timeoutHandler1} />, el.parentNode);
+        ReactDOM.render(<Snackbar active timeout={100} onTimeout={timeoutHandler2} />, el.parentNode);
     });
 
     it('should clear timeout timer when unmounted', (done) => {
         const el = renderDOM(<Snackbar active={false} onTimeout={noop} />);
-        let pass = true;
-        function timeoutHandler() {
-            pass = false;
-        }
-        ReactDOM.render(<Snackbar active timeout={1} onTimeout={timeoutHandler} />, el.parentNode, () => {
-            // Force unmount
-            ReactDOM.unmountComponentAtNode(el.parentNode);
-            // Call done if the handler wasn't called
-            setTimeout(() => {
-                if (pass) {
-                    done();
-                }
-                else {
-                    throw new Error('onTimeout handler should not have been called because component was unmounted');
-                }
-            }, 300);
-        });
+        const timeoutHandler = expect.createSpy();
+
+        ReactDOM.render(<Snackbar active timeout={100} onTimeout={timeoutHandler} />, el.parentNode);
+        ReactDOM.unmountComponentAtNode(el.parentNode);
+        setTimeout(() => {
+            expect(timeoutHandler).toNotHaveBeenCalled();
+            done();
+        }, 300);
     });
 
     it('should clear the cleartimer timer when unmounted', (done) => {
-        let pass = true;
-        function timeoutHandler() {
-            pass = false;
-        }
-        const component = renderIntoDocument(<Snackbar active={false} timeout={1} onTimeout={timeoutHandler} />);
-        const el = ReactDOM.findDOMNode(component);
-        // The clearTimer animation period is a very small window, so we invoke clearTimer here directly to start it
-        component.clearTimer();
-        // Force unmount
-        ReactDOM.unmountComponentAtNode(el.parentNode);
-        // Call done if the handler wasn't called
+        const el = renderDOM(<Snackbar active={false} onTimeout={noop} />);
+        const timeoutHandler = expect.createSpy();
+
+        ReactDOM.render(<Snackbar active timeout={100} onTimeout={timeoutHandler} />, el.parentNode);
         setTimeout(() => {
-            if (pass) {
+            ReactDOM.unmountComponentAtNode(el.parentNode);
+            setTimeout(() => {
+                expect(timeoutHandler).toNotHaveBeenCalled();
                 done();
-            }
-            else {
-                throw new Error('onTimeout handler should not have been called because component was unmounted');
-            }
-        }, 300);
+            }, 200);
+        }, 101);
     });
 });
