@@ -2,6 +2,16 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.5.0]
+
+### New
+- Adds `selectable` and `sortable` props on the `DataTable` component. ([#246])
+- Adds `rowKeyColumn` on the `DataTable` component. This allows users to specify the data from the specific column to use as `key` for each rows (usually `id` or `uid`). ([#246])
+- Adds support of React 15 rc1.
+
+[1.5.0]: https://github.com/tleunen/react-mdl/compare/v1.4.4...v1.5.0
+[#246]: https://github.com/tleunen/react-mdl/issues/246
+
 ## [1.4.4]
 
 ### Changes/Fixes
@@ -12,7 +22,7 @@ All notable changes to the project will be documented in this file.
 ## [1.4.3]
 
 ### Fixes
-- Fixes documentation on IE by including the babel polyfill ([]#236])
+- Fixes documentation on IE by including the babel polyfill ([#236])
 - Fixes `Textfield` initial invalid state ([#241])
 - Tried to resolve memory issue while running tests ([#230])
 
