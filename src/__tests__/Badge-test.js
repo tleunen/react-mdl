@@ -1,44 +1,43 @@
 /* eslint-env mocha */
-import expect from 'expect';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { render } from './render';
 import Badge from '../Badge';
 import Icon from '../Icon';
 
+chai.use(chaiEnzyme());
+
 describe('Badge', () => {
-    it('should render span with data-badge on text child', () => {
-        const output = render(<Badge text="4">Inbox</Badge>);
+    it('should render a mdl badge on a text', () => {
+        const wrapper = shallow(<Badge text="4">Inbox</Badge>);
 
-        expect(output.type).toBe('span');
-        expect(output.props.className).toBe('mdl-badge');
-        expect(output.props['data-badge']).toBe('4');
-        expect(output.props.children).toBe('Inbox');
+        expect(wrapper).to.have.tagName('span');
+        expect(wrapper).to.have.className('mdl-badge');
+        expect(wrapper).to.have.prop('data-badge', '4');
     });
 
-    it('should append badge data/class to existing complex child', () => {
-        const output = render(<Badge text="8"><Icon name="account_box" /></Badge>);
+    it('should attach the badge on a complex child', () => {
+        const child = <Icon name="account_box" />;
+        const wrapper = shallow(<Badge text="8">{child}</Badge>);
 
-        expect(output.type).toBe(Icon);
-        expect(output.props.className).toBe('mdl-badge');
-        expect(output.props['data-badge']).toBe('8');
+        expect(wrapper.node.type).to.equal(Icon);
+        expect(wrapper).to.have.className('mdl-badge');
+        expect(wrapper).to.have.prop('data-badge', '8');
     });
+
 
     it('should render empty badge when text is empty', () => {
-        const output = render(<Badge text="">Inbox</Badge>);
+        const wrapper = shallow(<Badge text="">Inbox</Badge>);
 
-        expect(output.type).toBe('span');
-        expect(output.props.className).toBe('mdl-badge');
-        expect(output.props['data-badge']).toBe('');
-        expect(output.props.children).toBe('Inbox');
+        expect(wrapper).to.have.className('mdl-badge');
+        expect(wrapper).to.have.prop('data-badge', '');
     });
 
     it('should allow number as badge text', () => {
-        const output = render(<Badge text={4}>Inbox</Badge>);
+        const wrapper = shallow(<Badge text={4}>Inbox</Badge>);
 
-        expect(output.type).toBe('span');
-        expect(output.props.className).toBe('mdl-badge');
-        expect(output.props['data-badge']).toBe(4);
-        expect(output.props.children).toBe('Inbox');
+        expect(wrapper).to.have.prop('data-badge', 4);
     });
 
     it('should allow custom className on the badge itself', () => {
@@ -63,63 +62,53 @@ describe('Badge', () => {
 
     describe('should not render badge', () => {
         it('when no children', () => {
-            const output = render(<Badge text="4" />);
+            const wrapper = shallow(<Badge text="4" />);
 
-            expect(output).toNotExist();
+            expect(wrapper).to.be.blank();
         });
 
         describe('when badge text is null', () => {
             it('and the child is text', () => {
-                const output = render(<Badge text={null}>Inbox</Badge>);
+                const wrapper = shallow(<Badge text={null}>Inbox</Badge>);
 
-                expect(output.type).toBe('span');
-                expect(output.props.className).toNotBe('mdl-badge');
-                expect(output.props['data-badge']).toNotExist();
-                expect(output.props.children).toBe('Inbox');
+                expect(wrapper).to.not.have.className('mdl-badge');
+                expect(wrapper).to.not.have.prop('data-badge');
             });
 
             it('and the child is a complex object', () => {
-                const output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
+                const wrapper = shallow(<Badge text={null}><Icon name="account_box" /></Badge>);
 
-                expect(output.type).toBe(Icon);
-                expect(output.props.className).toNotBe('mdl-badge');
-                expect(output.props['data-badge']).toNotExist();
+                expect(wrapper).to.not.have.className('mdl-badge');
+                expect(wrapper).to.not.have.prop('data-badge');
             });
         });
 
         describe('when badge text is undefined', () => {
             it('and the child is text', () => {
-                const output = render(<Badge text={null}>Inbox</Badge>);
+                const wrapper = shallow(<Badge text={null}>Inbox</Badge>);
 
-                expect(output.type).toBe('span');
-                expect(output.props.className).toNotBe('mdl-badge');
-                expect(output.props['data-badge']).toNotExist();
-                expect(output.props.children).toBe('Inbox');
+                expect(wrapper).to.not.have.className('mdl-badge');
+                expect(wrapper).to.not.have.prop('data-badge');
             });
 
             it('and the child is a complex object', () => {
-                const output = render(<Badge text={null}><Icon name="account_box" /></Badge>);
+                const wrapper = shallow(<Badge text={null}><Icon name="account_box" /></Badge>);
 
-                expect(output.type).toBe(Icon);
-                expect(output.props.className).toNotBe('mdl-badge');
-                expect(output.props['data-badge']).toNotExist();
+                expect(wrapper).to.not.have.className('mdl-badge');
+                expect(wrapper).to.not.have.prop('data-badge');
             });
         });
     });
 
     it('should make the badge overlap the container', () => {
-        const output = render(<Badge text={2} overlap><Icon name="account_box" /></Badge>);
+        const wrapper = shallow(<Badge text={2} overlap><Icon name="account_box" /></Badge>);
 
-        expect(output.type).toBe(Icon);
-        expect(output.props.className).toBe('mdl-badge mdl-badge--overlap');
-        expect(output.props['data-badge']).toBe(2);
+        expect(wrapper).to.have.className('mdl-badge--overlap');
     });
 
     it('should remove the badge background', () => {
-        const output = render(<Badge text="♥" noBackground>Mood</Badge>);
+        const wrapper = shallow(<Badge text="♥" noBackground>Mood</Badge>);
 
-        expect(output.type).toBe('span');
-        expect(output.props.className).toBe('mdl-badge mdl-badge--no-background');
-        expect(output.props['data-badge']).toBe('♥');
+        expect(wrapper).to.have.className('mdl-badge--no-background');
     });
 });

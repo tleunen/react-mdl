@@ -15,30 +15,27 @@ const propTypes = {
     noBackground: PropTypes.bool
 };
 
-class Badge extends React.Component {
-    render() {
-        const { children, className, text, overlap, noBackground } = this.props;
+const Badge = (props) => {
+    const { children, text, overlap, noBackground } = props;
 
-        // No badge if no children
-        if (!React.Children.count(children)) return null;
+    // No badge if no children
+    if (!React.Children.count(children)) return null;
 
-        const element = typeof children === 'string'
-            ? <span>{children}</span>
-            : React.Children.only(children);
+    const element = typeof children === 'string'
+        ? <span>{children}</span>
+        : React.Children.only(children);
 
-        // No text -> No need of badge
-        if (text === null || typeof text === 'undefined') return element;
+    // No text -> No need of badge
+    if (text === null || typeof text === 'undefined') return element;
 
-        return React.cloneElement(element, {
-            className: classNames(className, element.props.className, 'mdl-badge', {
-                'mdl-badge--overlap': !!overlap,
-                'mdl-badge--no-background': !!noBackground
-            }),
-            'data-badge': text
-        });
-    }
-}
+    return React.cloneElement(element, {
+		className: classNames(className, element.props.className, 'mdl-badge', {
+            'mdl-badge--overlap': !!overlap,
+            'mdl-badge--no-background': !!noBackground
+        }),
+        'data-badge': text
+    });
+};
 
-Badge.propTypes = propTypes;
 
 export default Badge;
