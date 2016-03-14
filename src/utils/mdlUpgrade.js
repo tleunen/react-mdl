@@ -5,7 +5,8 @@ export default Component => {
     const render = Component.prototype.render;
 
     Component.prototype.render = function rendr() { // eslint-disable-line no-param-reassign
-        return <MDLComponent>{this::render()}</MDLComponent>;
+        const renderBound = render.bind(this);
+        return <MDLComponent>{renderBound()}</MDLComponent>;
     };
 
     return Component;
