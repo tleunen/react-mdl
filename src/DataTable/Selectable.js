@@ -13,6 +13,7 @@ export default Component =>
                 props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
             ),
             onSelectionChanged: PropTypes.func,
+            rowKeyColumn: PropTypes.string,
             rows: PropTypes.arrayOf(
                 PropTypes.object
             ).isRequired,
@@ -42,12 +43,13 @@ export default Component =>
 
         componentWillReceiveProps(nextProps) {
             if (nextProps.selectable) {
-                const { rows, data } = nextProps;
+                const { rows, data, rowKeyColumn } = nextProps;
                 const rrows = rows || data;
+
                 // keep only existing rows
                 const selectedRows = this.state.selectedRows
                     .filter(k => rrows
-                        .map((r, i) => r.key || i)
+                        .map((row, i) => row[rowKeyColumn] || row.key || i)
                         .indexOf(k) > -1
                     );
 
@@ -61,10 +63,10 @@ export default Component =>
         }
 
         handleChangeHeaderCheckbox(e) {
-            const { rows, data } = this.props;
+            const { rowKeyColumn, rows, data } = this.props;
             const selected = e.target.checked;
             const selectedRows = selected
-                ? (rows || data).map((row, idx) => row.key || idx)
+                ? (rows || data).map((row, idx) => row[rowKeyColumn] || row.key || idx)
                 : [];
 
             this.setState({
@@ -77,7 +79,7 @@ export default Component =>
 
         handleChangeRowCheckbox(e) {
             const { rows, data } = this.props;
-            const rowId = e.target.dataset.rowId;
+            const rowId = JSON.parse(e.target.dataset.reactmdl).id;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
 
@@ -98,12 +100,12 @@ export default Component =>
         }
 
         builRowCheckbox(content, row, idx) {
-            const rowKey = row.key || idx;
+            const rowKey = row[this.props.rowKeyColumn] || row.key || idx;
             const isSelected = this.state.selectedRows.indexOf(rowKey) > -1;
             return (
                 <Checkbox
                     className="mdl-data-table__select"
-                    data-row-id={rowKey}
+                    data-reactmdl={JSON.stringify({ id: rowKey })}
                     checked={isSelected}
                     onChange={this.handleChangeRowCheckbox}
                 />
@@ -111,11 +113,11 @@ export default Component =>
         }
 
         render() {
-            const { rows, data, selectable, children, ...otherProps } = this.props;
+            const { rows, data, selectable, children, rowKeyColumn, ...otherProps } = this.props;
 
             const realRows = selectable
                 ? (rows || data).map((row, idx) => {
-                    const rowKey = row.key ? row.key : idx;
+                    const rowKey = row[rowKeyColumn] || row.key || idx;
                     return {
                         ...row,
                         className: classNames({

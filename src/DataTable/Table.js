@@ -15,6 +15,7 @@ class Table extends React.Component {
         data: (props, propName, componentName) => (
             props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
         ),
+        rowKeyColumn: PropTypes.string,
         rows: PropTypes.arrayOf(
             PropTypes.object
         ).isRequired,
@@ -32,7 +33,7 @@ class Table extends React.Component {
 
     render() {
         const { className, columns, shadow, children,
-            rows, data, ...otherProps } = this.props;
+            rowKeyColumn, rows, data, ...otherProps } = this.props;
         const realRows = rows || data;
 
         const hasShadow = typeof shadow !== 'undefined';
@@ -64,7 +65,7 @@ class Table extends React.Component {
                 </thead>
                 <tbody>
                     {realRows.map((row, idx) =>
-                        <tr key={row.key || idx} className={row.className}>
+                        <tr key={row[rowKeyColumn] || row.key || idx} className={row.className}>
                             {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
                         </tr>
                     )}
