@@ -1,54 +1,52 @@
 /* eslint-env mocha */
-import expect from 'expect';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { render } from '../../__tests__/render';
 import { CardTitle } from '../';
 
-describe('Card', () => {
-    describe('CardTitle', () => {
-        it('should render a div with the title css class', () => {
-            const output = render(<CardTitle />);
+chai.use(chaiEnzyme());
 
-            expect(output.type).toBe('div');
-            expect(output.props.className).toInclude('mdl-card__title');
-        });
+describe('CardTitle', () => {
+    it('should render a div with the title css class', () => {
+        const wrapper = shallow(<CardTitle />);
 
-        it('should allow custom css classes', () => {
-            const output = render(<CardTitle className="my-title" />);
+        expect(wrapper).to.have.tagName('div');
+        expect(wrapper).to.have.className('mdl-card__title');
+    });
 
-            expect(output.props.className)
-                .toInclude('mdl-card__title')
-                .toInclude('my-title');
-        });
+    it('should allow custom css classes', () => {
+        const wrapper = shallow(<CardTitle className="my-title" />);
 
-        it('should not expand by default', () => {
-            const output = render(<CardTitle />);
+        expect(wrapper).to.have.className('mdl-card__title');
+        expect(wrapper).to.have.className('my-title');
+    });
 
-            expect(output.props.className)
-                .toExclude('mdl-card--expand');
-        });
+    it('should not expand by default', () => {
+        const wrapper = shallow(<CardTitle />);
 
-        it('should expand when specified', () => {
-            const output = render(<CardTitle expand />);
+        expect(wrapper).to.not.have.className('mdl-card--expand');
+    });
 
-            expect(output.props.className)
-                .toInclude('mdl-card--expand');
-        });
+    it('should expand when specified', () => {
+        const wrapper = shallow(<CardTitle expand />);
 
-        it('should render the title in the specific container by default', () => {
-            const output = render(<CardTitle>My Title</CardTitle>);
+        expect(wrapper).to.have.className('mdl-card--expand');
+    });
 
-            const titleContainer = output.props.children;
-            expect(titleContainer.type).toBe('h2');
-            expect(titleContainer.props.className).toBe('mdl-card__title-text');
-            expect(titleContainer.props.children).toBe('My Title');
-        });
+    it('should render the title in the default <h2>', () => {
+        const wrapper = shallow(<CardTitle>My Title</CardTitle>);
 
-        it('should render custom complex title', () => {
-            const output = render(<CardTitle><h4>My Title</h4></CardTitle>);
+        expect(wrapper).to.contain(
+            <h2 className="mdl-card__title-text">My Title</h2>
+        );
+    });
 
-            const titleContainer = output.props.children;
-            expect(titleContainer).toEqual(<h4>My Title</h4>);
-        });
+    it('should render custom complex title', () => {
+        const wrapper = shallow(<CardTitle><h4>My Title</h4></CardTitle>);
+
+        expect(wrapper).to.contain(
+            <h4>My Title</h4>
+        );
     });
 });

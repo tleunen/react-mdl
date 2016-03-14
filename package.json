@@ -94,7 +94,7 @@
     "react:15": "npm run react:clean && npm i react@15 react-dom@15 react-addons-test-utils@15",
     "test:react:14": "npm run react:14 && npm run test:suite",
     "test:react:15": "npm run react:15 && npm run test:suite",
-    "test:suite": "mocha --compilers js:babel-core/register -r tests.setup.js src/**/Badge*-test.js",
+    "test:suite": "mocha --compilers js:babel-core/register -r tests.setup.js src/**/Card*-test.js",
     "pretest": "npm run lint",
     "test": "npm run test:react:14 && npm run test:react:15",
     "test:watch": "karma start --auto-watch",

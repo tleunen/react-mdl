@@ -1,50 +1,49 @@
 /* eslint-env mocha */
-import expect from 'expect';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { render } from '../../__tests__/render';
 import { CardActions } from '../';
 
-describe('Card', () => {
-    describe('CardActions', () => {
-        it('should render a div with the action css class', () => {
-            const output = render(<CardActions />);
+chai.use(chaiEnzyme());
 
-            expect(output.type).toBe('div');
-            expect(output.props.className).toInclude('mdl-card__actions');
-        });
+describe('CardActions', () => {
+    it('should render a div with the action css class', () => {
+        const wrapper = shallow(<CardActions />);
 
-        it('should allow custom css classes', () => {
-            const output = render(<CardActions className="my-actions" />);
+        expect(wrapper).to.have.tagName('div');
+        expect(wrapper).to.have.className('mdl-card__actions');
+    });
 
-            expect(output.props.className)
-                .toInclude('mdl-card__actions')
-                .toInclude('my-actions');
-        });
+    it('should allow custom css classes', () => {
+        const wrapper = shallow(<CardActions className="my-actions" />);
 
-        it('should not have a border by default', () => {
-            const output = render(<CardActions />);
+        expect(wrapper).to.have.className('mdl-card__actions');
+        expect(wrapper).to.have.className('my-actions');
+    });
 
-            expect(output.props.className)
-                .toExclude('mdl-card--border');
-        });
+    it('should not have a border by default', () => {
+        const wrapper = shallow(<CardActions />);
 
-        it('should have a border when specified', () => {
-            const output = render(<CardActions border />);
+        expect(wrapper).to.not.have.className('mdl-card--border');
+    });
 
-            expect(output.props.className)
-                .toInclude('mdl-card--border');
-        });
+    it('should have a border when specified', () => {
+        const wrapper = shallow(<CardActions border />);
 
-        it('should render with the children', () => {
-            const element = (
-                <CardActions>
-                    <div className="inner">Inner text</div>
-                </CardActions>
-            );
-            const output = render(element);
+        expect(wrapper).to.have.className('mdl-card--border');
+    });
 
-            expect(output.props.children)
-                .toEqual(<div className="inner">Inner text</div>);
-        });
+    it('should render with the children', () => {
+        const element = (
+            <CardActions>
+                <div className="inner">Inner text</div>
+            </CardActions>
+        );
+        const wrapper = shallow(element);
+
+        expect(wrapper).to.contain(
+            <div className="inner">Inner text</div>
+        );
     });
 });
