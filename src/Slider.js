@@ -11,6 +11,7 @@ const propTypes = {
     value: PropTypes.number
 };
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Slider extends React.Component {
     componentDidUpdate() {
         if (typeof this.props.value !== 'undefined') {
