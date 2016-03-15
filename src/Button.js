@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import addRipple from './Ripple';
 
 const propTypes = {
     accent: PropTypes.bool,
@@ -13,33 +13,28 @@ const propTypes = {
     ]),
     href: PropTypes.string,
     primary: PropTypes.bool,
-    raised: PropTypes.bool,
-    ripple: PropTypes.bool
+    raised: PropTypes.bool
 };
 
-// eslint-disable-next-line react/prefer-stateless-function
-class Button extends React.Component {
-    render() {
-        const { accent, className, colored,
-            primary, raised, ripple, component, href,
-            children, ...otherProps } = this.props;
+const Button = (props) => {
+    const { accent, className, colored,
+        primary, raised, component, href,
+        children, ...otherProps } = props;
+    const buttonClasses = classNames('mdl-button', {
+        'mdl-button--raised': raised,
+        'mdl-button--colored': colored,
+        'mdl-button--primary': primary,
+        'mdl-button--accent': accent
+    }, className);
 
-        const buttonClasses = classNames('mdl-button mdl-js-button', {
-            'mdl-js-ripple-effect': ripple,
-            'mdl-button--raised': raised,
-            'mdl-button--colored': colored,
-            'mdl-button--primary': primary,
-            'mdl-button--accent': accent
-        }, className);
+    return React.createElement(component || (href ? 'a' : 'button'), {
+        className: buttonClasses,
+        href,
+        ...otherProps
+    }, children);
+};
 
-        return React.createElement(component || (href ? 'a' : 'button'), {
-            className: buttonClasses,
-            href,
-            ...otherProps
-        }, children);
-    }
-}
 
 Button.propTypes = propTypes;
 
-export default mdlUpgrade(Button);
+export default addRipple(Button, { prefix: 'mdl-button' });
