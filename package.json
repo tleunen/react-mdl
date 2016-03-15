@@ -88,6 +88,10 @@
     "react": "0.14.x || ^15.0.0-rc",
     "react-dom": "0.14.x || ^15.0.0-rc"
   },
+  "config": {
+    "isparta": "--report lcov --report json --report text",
+    "mocha": "-r tests.setup.js src/**/Badge-test.js src/**/Card*-test.js src/**/Button-test.js"
+  },
   "scripts": {
     "clean": "rimraf coverage lib out",
     "react:clean": "rimraf node_modules/react node_modules/react-dom node_modules/react-addons-test-utils",
@@ -95,10 +99,10 @@
     "react:15": "npm run react:clean && npm i react@15 react-dom@15 react-addons-test-utils@15",
     "test:react:14": "npm run react:14 && npm run test:suite",
     "test:react:15": "npm run react:15 && npm run test:suite",
-    "test:suite": "mocha --compilers js:babel-core/register -r tests.setup.js src/**/Card*-test.js",
+    "test:suite": "babel-node $(npm bin)/isparta cover $npm_package_config_isparta --report html $(npm bin)/_mocha -- $npm_package_config_mocha",
     "pretest": "npm run lint",
     "test": "npm run test:react:14 && npm run test:react:15",
-    "test:watch": "karma start --auto-watch",
+    "test:watch": "mocha --compilers js:babel-register $npm_package_config_mocha --watch",
     "lint": "eslint docs src scripts",
     "compile": "rimraf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "cd docs && ./node_modules/.bin/gatsby develop",
