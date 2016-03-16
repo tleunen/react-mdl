@@ -7,7 +7,7 @@ const INITIAL_SCALE = 'scale(0.0001, 0.0001)';
 const FINAL_SCALE = '';
 
 export default (Component, options = {}) => {
-    const { prefix } = options;
+    const { prefix, center } = options;
 
     return class Ripple extends React.Component {
         static propTypes = {
@@ -122,7 +122,7 @@ export default (Component, options = {}) => {
         setRippleStyles(start) {
             if (this.props.ripple) {
                 const scale = start ? INITIAL_SCALE : FINAL_SCALE;
-                const offset = !start
+                const offset = !start && center
                     ? `translate(${this.boundWidth / 2}px, ${this.boundHeight / 2}px)`
                     : `translate(${this.x}px, ${this.y}px)`;
 
@@ -164,13 +164,13 @@ export default (Component, options = {}) => {
 
             return (
                 <Component
+                    {...otherProps}
                     onMouseUp={this.blurComponent}
                     onMouseLeave={this.blurComponent}
                     onMouseDown={this.handleDown}
                     onTouchStart={this.handleDown}
                     onTouchEnd={this.handleUp}
                     onBlur={this.handleUp}
-                    {...otherProps}
                 >
                     {children}
                     <span className={`${prefix}__ripple-container`}>
