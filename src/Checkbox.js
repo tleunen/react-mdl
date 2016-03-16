@@ -1,44 +1,60 @@
 import React, { PropTypes } from 'react';
-import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
-import mdlUpgrade from './utils/mdlUpgrade';
+import addRipple from './Ripple';
 
 const propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
+    defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     label: PropTypes.string,
     onChange: PropTypes.func,
-    ripple: PropTypes.bool
+    onMouseUp: PropTypes.func // from Ripple
 };
 
 class Checkbox extends React.Component {
-    componentDidUpdate(prevProps) {
-        if (this.props.disabled !== prevProps.disabled) {
-            const fnName = this.props.disabled ? 'disable' : 'enable';
-            findDOMNode(this).MaterialCheckbox[fnName]();
-        }
-        if (this.props.checked !== prevProps.checked) {
-            const fnName = this.props.checked ? 'check' : 'uncheck';
-            findDOMNode(this).MaterialCheckbox[fnName]();
-        }
+    constructor(props) {
+        super(props);
+        this.handleMouseUp = this.handleMouseUp.bind(this);
+    }
+
+    handleMouseUp() {
+        window.setTimeout(() => {
+            this.refs.input.blur();
+        }, 0);
     }
 
     render() {
-        const { className, label, ripple, ...inputProps } = this.props;
+        const { children, className, checked,
+            disabled, label, onChange, onMouseUp, ...otherProps } = this.props;
 
-        const classes = classNames('mdl-checkbox mdl-js-checkbox', {
-            'mdl-js-ripple-effect': ripple
+        const classes = classNames('mdl-checkbox is-upgraded', {
+            'is-focused': false,
+            'is-disabled': disabled,
+            'is-checked': checked
         }, className);
 
+        const handleMouseUp = (e) => {
+            this.handleMouseUp(e);
+            onMouseUp(e); // from Ripple
+        };
+
         return (
-            <label className={classes}>
+            <label className={classes} onMouseUp={handleMouseUp} {...otherProps}>
                 <input
+                    ref="input"
                     type="checkbox"
                     className="mdl-checkbox__input"
-                    { ...inputProps }
+                    disabled={disabled}
+                    checked={checked}
+                    onChange={onChange}
                 />
                 {label && <span className="mdl-checkbox__label">{label}</span>}
+                <span className="mdl-checkbox__focus-helper" />
+                <span className="mdl-checkbox__box-outline">
+                    <span className="mdl-checkbox__tick-outline" />
+                </span>
+                {children}
             </label>
         );
     }
@@ -46,4 +62,4 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = propTypes;
 
-export default mdlUpgrade(Checkbox);
+export default addRipple(Checkbox, { prefix: 'mdl-checkbox', center: true });
