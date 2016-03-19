@@ -2,6 +2,22 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.5.1]
+
+### Fixes
+- Fixes `Slider` UI background when it receives a new value ([#261])
+- Fixes javascript error when using tabs ([#255])
+
+### New
+- Adds `jsnext:main` field in `package.json` for ES6 build tools ([#259])
+- Adds support for all version of React 15 rc.
+- Updates to MDL 1.1.3
+
+[1.5.1]: https://github.com/tleunen/react-mdl/compare/v1.5.0...v1.5.1
+[#261]: https://github.com/tleunen/react-mdl/issues/261
+[#259]: https://github.com/tleunen/react-mdl/issues/259
+[#255]: https://github.com/tleunen/react-mdl/issues/255
+
 ## [1.5.0]
 
 ### New
