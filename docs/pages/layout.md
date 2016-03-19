@@ -274,7 +274,7 @@ class Demo extends React.Component {
 | Header    | waterfall    | Boolean   | Allows a "waterfall" effect with multiple header lines | Optional |
 | Header    | hideTop      | Boolean   | Hide the top part of the header when used with `waterfall` | Optional |
 | HeaderRow | title        | Any       | Set the layout title | Optional |
-| Content   | component    | String || Element || Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
+| Content   | component    | String, Element, Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 
 ### Grid
 
@@ -332,12 +332,12 @@ class Demo extends React.Component {
 
 | Element   | Prop         | Type      | Effect       | Remarks      |
 |:----------|:-------------|:----------|:-------------|:-------------|
-| Grid      | component    | String || Element || Function   | Specify the custom component to use to render the grid | Optional. Default 'div' |
+| Grid      | component    | String,  Element,  Function   | Specify the custom component to use to render the grid | Optional. Default 'div' |
 | Grid      | noSpacing    | Boolean    | Removes the margins between the cells. | Optional |
 | Grid      | shadow       | Number    | Defines the shadow depth | Optional, Default 0. Must be between 0 and 6 |
 | Cell      | align        | String[top, middle, bottom, stretch]    | Set the cell alignment | Optional |
 | Cell      | col          | Number[1..12]    | Set the column size | Required |
-| Cell      | component    | String || Element || Function   | Specify the custom component to use to render the cell | Optional. Default 'div' |
+| Cell      | component    | String,  Element,  Function   | Specify the custom component to use to render the cell | Optional. Default 'div' |
 | Cell      | hideDesktop  | Boolean    | Hide the cell in desktop mode | Optional |
 | Cell      | hidePhone    | Boolean    | Hide the cell in phone mode | Optional |
 | Cell      | hideTablet   | Boolean    | Hide the cell in tablet mode | Optional |
