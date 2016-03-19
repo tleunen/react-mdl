@@ -27,8 +27,8 @@ describe('Slider', () => {
         const onChange = expect.createSpy();
         const el = renderDOM(<Slider min={0} max={100} value={25} onChange={onChange} />);
 
-        expect(el.parentElement.querySelector('.mdl-slider__background-lower').style.flex).toBe('0.25 1 0%');
-        expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toBe('0.75 1 0%');
+        expect(el.parentElement.querySelector('.mdl-slider__background-lower').style.flex).toMatch(/^0.25 .*/);
+        expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toMatch(/^0.75 .*/);
     });
 
     describe('should update with the new value', () => {
@@ -37,7 +37,7 @@ describe('Slider', () => {
 
         ReactDOM.render(<Slider min={0} max={100} value={50} onChange={onChange} />, el.parentNode);
 
-        expect(el.parentElement.querySelector('.mdl-slider__background-lower').style.flex).toBe('0.5 1 0%');
-        expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toBe('0.5 1 0%');
+        expect(el.parentElement.querySelector('.mdl-slider__background-lower').style.flex).toMatch(/^0.5 .*/);
+        expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toMatch(/^0.5 .*/);
     });
 });
