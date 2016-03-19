@@ -75,16 +75,16 @@
     "marked-renderer-mdl": "0.0.3",
     "mocha": "^2.4.5",
     "prismjs": "^1.4.1",
-    "react": "^15.0.0-rc.1",
-    "react-addons-test-utils": "^15.0.0-rc.1",
-    "react-dom": "^15.0.0-rc.1",
+    "react": "^15.0.0-rc.2",
+    "react-addons-test-utils": "^15.0.0-rc.2",
+    "react-dom": "^15.0.0-rc.2",
     "react-router": "^2.0.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": ">= 0.14.0 < 16.0.0 || 15.0.0-rc.1",
-    "react-dom": ">= 0.14.0 < 16.0.0 || 15.0.0-rc.1"
+    "react": "0.14.x || 15.x || ^15.0.0-rc",
+    "react-dom": "0.14.x || 15.x || ^15.0.0-rc"
   },
   "scripts": {
     "clean": "rm -rf coverage lib out",
