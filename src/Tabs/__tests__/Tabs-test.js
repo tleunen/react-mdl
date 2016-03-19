@@ -11,8 +11,7 @@ describe('Tabs', () => {
 
         expect(output.type).toBe('div');
         expect(output.props.className)
-            .toInclude('mdl-tabs')
-            .toInclude('mdl-js-tabs');
+            .toInclude('mdl-tabs');
     });
 
     it('should allow custom css classes', () => {
@@ -26,21 +25,7 @@ describe('Tabs', () => {
     it('should define a child TabBar', () => {
         const output = render(<Tabs />);
 
-        expect(output.props.children[0].type).toBe(TabBar);
-    });
-
-    it('should not have a ripple by default', () => {
-        const output = render(<Tabs />);
-
-        expect(output.props.className)
-            .toExclude('mdl-js-ripple-effect');
-    });
-
-    it('should have a ripple if specified', () => {
-        const output = render(<Tabs ripple />);
-
-        expect(output.props.className)
-            .toInclude('mdl-js-ripple-effect');
+        expect(output.props.children.type).toBe(TabBar);
     });
 
     it('should pass the active prop to the tab bar', () => {

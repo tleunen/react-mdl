@@ -21,14 +21,5 @@ describe('Layout', () => {
                 .toInclude('mdl-layout__content')
                 .toInclude('my-content');
         });
-
-        it('should have the hack element to fix tabs', () => {
-            const output = render(<Content />);
-
-            expect(output.props.children[1].props.className)
-                .toBe('react-mdl-header-tabs-hack');
-            expect(output.props.children[1].props.id)
-                .toBe('undefined');
-        });
     });
 });
