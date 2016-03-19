@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tab from './Tab';
 import TabBar from './TabBar';
-import mdlUpgrade from '../utils/mdlUpgrade';
 
 const TabPropType = (props, propName, componentName) => {
     const prop = props[propName];
@@ -18,27 +17,23 @@ class Tabs extends React.Component {
         ]),
         className: PropTypes.string,
         onChange: PropTypes.func,
-        ripple: PropTypes.bool,
         tabBarProps: PropTypes.object,
     };
 
     render() {
-        const { activeTab, className, onChange, ripple,
+        const { activeTab, className, onChange,
             children, tabBarProps, ...otherProps } = this.props;
 
-        const classes = classNames('mdl-tabs mdl-js-tabs', {
-            'mdl-js-ripple-effect': ripple
-        }, className);
+        const classes = classNames('mdl-tabs is-upgraded', className);
 
         return (
             <div className={classes} {...otherProps}>
                 <TabBar cssPrefix="mdl-tabs" activeTab={activeTab} onChange={onChange} {...tabBarProps} >
                     {children}
                 </TabBar>
-                <div className="react-mdl-hack" id="undefined" />
             </div>
         );
     }
 }
 
-export default mdlUpgrade(Tabs);
+export default Tabs;

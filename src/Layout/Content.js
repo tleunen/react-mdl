@@ -9,10 +9,7 @@ const Content = props => {
     return React.createElement(component || 'div', {
         className: classes,
         ...otherProps
-    }, [
-        children,
-        <div key="hack" className="react-mdl-header-tabs-hack" id="undefined" />
-    ]);
+    }, children);
 };
 
 Content.propTypes = {

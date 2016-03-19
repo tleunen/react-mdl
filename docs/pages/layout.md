@@ -205,27 +205,38 @@
 </div>
 ```
 
-```jsx
-{/* Simple header with scrollable tabs. */}
-<div style={{height: '300px', position: 'relative'}}>
-    <Layout fixedHeader>
-        <Header>
-            <HeaderRow title="Title" />
-            <HeaderTabs activeTab={2} onChange={(tabId) => {}}>
-                <Tab>Tab1</Tab>
-                <Tab>Tab2</Tab>
-                <Tab>Tab3</Tab>
-                <Tab>Tab4</Tab>
-                <Tab>Tab5</Tab>
-                <Tab>Tab6</Tab>
-            </HeaderTabs>
-        </Header>
-        <Drawer title="Title" />
-        <Content>
-            <div className="page-content">You can add logic to update the content of this container based on the "activeTab" receive in the `onChange` callback.</div>
-        </Content>
-    </Layout>
-</div>
+```jsx_demo_class
+// Simple header with scrollable tabs
+class Demo extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { activeTab: 2 };
+    }
+
+    render() {
+        return (
+            <div style={{height: '300px', position: 'relative'}}>
+                <Layout fixedHeader>
+                    <Header>
+                        <HeaderRow title="Title" />
+                        <HeaderTabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })}>
+                            <Tab>Tab1</Tab>
+                            <Tab>Tab2</Tab>
+                            <Tab>Tab3</Tab>
+                            <Tab>Tab4</Tab>
+                            <Tab>Tab5</Tab>
+                            <Tab>Tab6</Tab>
+                        </HeaderTabs>
+                    </Header>
+                    <Drawer title="Title" />
+                    <Content>
+                        <div className="page-content">Content for the tab: {this.state.activeTab}</div>
+                    </Content>
+                </Layout>
+            </div>
+        );
+    }
+}
 ```
 
 ```jsx
@@ -346,17 +357,29 @@
     height: 100px;
 }
 ```
-```jsx
-<div className="demo-tabs">
-    <Tabs activeTab={1} onChange={(tabId) => {}} ripple>
-        <Tab>Starks</Tab>
-        <Tab>Lannisters</Tab>
-        <Tab>Targaryens</Tab>
-    </Tabs>
-    <section>
-        <div className="content">You can add logic to update the content of this container based on the "activeTab" receive in the `onChange` callback.</div>
-    </section>
-</div>
+```jsx_demo_class
+// Simple header with scrollable tabs
+class Demo extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { activeTab: 2 };
+    }
+
+    render() {
+        return (
+            <div className="demo-tabs">
+                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
+                    <Tab>Starks</Tab>
+                    <Tab>Lannisters</Tab>
+                    <Tab>Targaryens</Tab>
+                </Tabs>
+                <section>
+                    <div className="content">Content for the tab: {this.state.activeTab}</div>
+                </section>
+            </div>    
+        );
+    }
+}
 ```
 
 #### Configuration
