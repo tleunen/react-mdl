@@ -48,33 +48,33 @@
 	
 	__webpack_require__(1);
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _reactRouter = __webpack_require__(288);
+	var _reactRouter = __webpack_require__(296);
 	
-	var _history = __webpack_require__(345);
+	var _history = __webpack_require__(353);
 	
-	var _DocApp = __webpack_require__(349);
+	var _DocApp = __webpack_require__(357);
 	
 	var _DocApp2 = _interopRequireDefault(_DocApp);
 	
-	var _html = __webpack_require__(350);
+	var _html = __webpack_require__(358);
 	
 	var Pages = _interopRequireWildcard(_html);
 	
-	var _PageComponentHelper = __webpack_require__(432);
+	var _PageComponentHelper = __webpack_require__(440);
 	
 	var _PageComponentHelper2 = _interopRequireDefault(_PageComponentHelper);
 	
-	var _templates = __webpack_require__(366);
+	var _templates = __webpack_require__(374);
 	
 	var Templates = _interopRequireWildcard(_templates);
 	
-	var _src = __webpack_require__(370);
+	var _src = __webpack_require__(378);
 	
 	var ReactMDL = _interopRequireWildcard(_src);
 	
@@ -92,7 +92,7 @@
 	
 	
 	window.React = _react2.default;
-	window.ReactDOM = __webpack_require__(287);
+	window.ReactDOM = __webpack_require__(295);
 	
 	var appHistory = (0, _reactRouter.useRouterHistory)(_history.createHashHistory)({ queryKey: false });
 	
@@ -131,11 +131,11 @@
 	
 	__webpack_require__(5);
 	
-	__webpack_require__(281);
+	__webpack_require__(289);
 	
 	// Should be removed in the next major release:
 	
-	__webpack_require__(283);
+	__webpack_require__(291);
 	
 	if (global._babelPolyfill) {
 	  throw new Error("only one instance of babel-polyfill is allowed");
@@ -274,43 +274,42 @@
 	__webpack_require__(157);
 	__webpack_require__(158);
 	__webpack_require__(159);
-	__webpack_require__(160);
-	__webpack_require__(165);
-	__webpack_require__(166);
+	__webpack_require__(161);
+	__webpack_require__(162);
+	__webpack_require__(167);
 	__webpack_require__(168);
-	__webpack_require__(169);
 	__webpack_require__(170);
-	__webpack_require__(173);
-	__webpack_require__(174);
+	__webpack_require__(171);
+	__webpack_require__(172);
 	__webpack_require__(175);
 	__webpack_require__(176);
 	__webpack_require__(177);
+	__webpack_require__(178);
 	__webpack_require__(179);
-	__webpack_require__(180);
 	__webpack_require__(181);
 	__webpack_require__(182);
-	__webpack_require__(185);
+	__webpack_require__(183);
+	__webpack_require__(184);
 	__webpack_require__(187);
-	__webpack_require__(188);
 	__webpack_require__(189);
+	__webpack_require__(190);
 	__webpack_require__(191);
 	__webpack_require__(193);
 	__webpack_require__(195);
-	__webpack_require__(196);
 	__webpack_require__(197);
+	__webpack_require__(198);
 	__webpack_require__(199);
-	__webpack_require__(200);
 	__webpack_require__(201);
 	__webpack_require__(202);
-	__webpack_require__(208);
-	__webpack_require__(211);
-	__webpack_require__(212);
+	__webpack_require__(203);
+	__webpack_require__(204);
+	__webpack_require__(210);
+	__webpack_require__(213);
 	__webpack_require__(214);
-	__webpack_require__(215);
-	__webpack_require__(218);
-	__webpack_require__(219);
-	__webpack_require__(222);
-	__webpack_require__(223);
+	__webpack_require__(216);
+	__webpack_require__(217);
+	__webpack_require__(220);
+	__webpack_require__(221);
 	__webpack_require__(224);
 	__webpack_require__(225);
 	__webpack_require__(226);
@@ -328,27 +327,27 @@
 	__webpack_require__(238);
 	__webpack_require__(239);
 	__webpack_require__(240);
+	__webpack_require__(241);
 	__webpack_require__(242);
-	__webpack_require__(243);
 	__webpack_require__(244);
 	__webpack_require__(245);
 	__webpack_require__(246);
 	__webpack_require__(247);
+	__webpack_require__(248);
 	__webpack_require__(249);
-	__webpack_require__(250);
 	__webpack_require__(251);
 	__webpack_require__(252);
 	__webpack_require__(253);
+	__webpack_require__(254);
 	__webpack_require__(255);
 	__webpack_require__(256);
+	__webpack_require__(258);
 	__webpack_require__(259);
-	__webpack_require__(260);
 	__webpack_require__(261);
 	__webpack_require__(262);
 	__webpack_require__(263);
 	__webpack_require__(264);
-	__webpack_require__(265);
-	__webpack_require__(266);
+	__webpack_require__(267);
 	__webpack_require__(268);
 	__webpack_require__(269);
 	__webpack_require__(270);
@@ -356,10 +355,17 @@
 	__webpack_require__(272);
 	__webpack_require__(273);
 	__webpack_require__(274);
-	__webpack_require__(275);
 	__webpack_require__(276);
+	__webpack_require__(277);
+	__webpack_require__(278);
 	__webpack_require__(279);
 	__webpack_require__(280);
+	__webpack_require__(281);
+	__webpack_require__(282);
+	__webpack_require__(283);
+	__webpack_require__(284);
+	__webpack_require__(287);
+	__webpack_require__(288);
 	module.exports = __webpack_require__(8);
 
 /***/ },
@@ -398,11 +404,13 @@
 	  , $JSON          = global.JSON
 	  , _stringify     = $JSON && $JSON.stringify
 	  , setter         = false
+	  , PROTOTYPE      = 'prototype'
 	  , HIDDEN         = wks('_hidden')
+	  , TO_PRIMITIVE   = wks('toPrimitive')
 	  , isEnum         = {}.propertyIsEnumerable
 	  , SymbolRegistry = shared('symbol-registry')
 	  , AllSymbols     = shared('symbols')
-	  , ObjectProto    = Object.prototype
+	  , ObjectProto    = Object[PROTOTYPE]
 	  , USE_NATIVE     = typeof $Symbol == 'function'
 	  , QObject        = global.QObject;
 	
@@ -419,7 +427,7 @@
 	} : dP;
 	
 	var wrap = function(tag){
-	  var sym = AllSymbols[tag] = _create($Symbol.prototype);
+	  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
 	  sym._k = tag;
 	  DESCRIPTORS && setter && setSymbolDesc(ObjectProto, tag, {
 	    configurable: true,
@@ -431,8 +439,10 @@
 	  return sym;
 	};
 	
-	var isSymbol = function(it){
+	var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
 	  return typeof it == 'symbol';
+	} : function(it){
+	  return it instanceof $Symbol;
 	};
 	
 	var $defineProperty = function defineProperty(it, key, D){
@@ -512,16 +522,12 @@
 	// 19.4.1.1 Symbol([description])
 	if(!USE_NATIVE){
 	  $Symbol = function Symbol(){
-	    if(isSymbol(this))throw TypeError('Symbol is not a constructor');
+	    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
 	    return wrap(uid(arguments.length > 0 ? arguments[0] : undefined));
 	  };
-	  redefine($Symbol.prototype, 'toString', function toString(){
+	  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
 	    return this._k;
 	  });
-	
-	  isSymbol = function(it){
-	    return it instanceof $Symbol;
-	  };
 	
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
@@ -557,7 +563,7 @@
 	};
 	
 	// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-	if(!QObject || !QObject.prototype || !QObject.prototype.findChild)setter = true;
+	if(!QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild)setter = true;
 	
 	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
 	  // 19.4.2.1 Symbol.for(key)
@@ -568,7 +574,8 @@
 	  },
 	  // 19.4.2.5 Symbol.keyFor(sym)
 	  keyFor: function keyFor(key){
-	    return keyOf(SymbolRegistry, key);
+	    if(isSymbol(key))return keyOf(SymbolRegistry, key);
+	    throw TypeError(key + ' is not a symbol!');
 	  },
 	  useSetter: function(){ setter = true; },
 	  useSimple: function(){ setter = false; }
@@ -592,6 +599,8 @@
 	// 24.3.2 JSON.stringify(value [, replacer [, space]])
 	$JSON && $export($export.S + $export.F * (!USE_NATIVE || BUGGY_JSON), 'JSON', {stringify: $stringify});
 	
+	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(13)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 	// 19.4.3.5 Symbol.prototype[@@toStringTag]
 	setToStringTag($Symbol, 'Symbol');
 	// 20.2.1.9 Math[@@toStringTag]
@@ -612,7 +621,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	var core = module.exports = {version: '2.1.5'};
+	var core = module.exports = {version: '2.2.1'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
@@ -1264,7 +1273,7 @@
 	
 	var getWindowNames = function(it){
 	  try {
-	    return gOPN.f(it);
+	    return gOPN(it);
 	  } catch(e){
 	    return windowNames.slice();
 	  }
@@ -1273,6 +1282,7 @@
 	module.exports.f = function getOwnPropertyNames(it){
 	  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
 	};
+
 
 /***/ },
 /* 50 */
@@ -3046,17 +3056,20 @@
 /* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var DateProto    = Date.prototype
-	  , INVALID_DATE = 'Invalid Date'
-	  , TO_STRING    = 'toString'
-	  , $toString    = DateProto[TO_STRING]
-	  , getTime      = DateProto.getTime;
-	if(new Date(NaN) + '' != INVALID_DATE){
-	  __webpack_require__(21)(DateProto, TO_STRING, function toString(){
-	    var value = getTime.call(this);
-	    return value === value ? $toString.call(this) : INVALID_DATE;
-	  });
-	}
+	'use strict';
+	var $export     = __webpack_require__(12)
+	  , toObject    = __webpack_require__(59)
+	  , toPrimitive = __webpack_require__(19);
+	
+	$export($export.P + $export.F * __webpack_require__(11)(function(){
+	  return new Date(NaN).toJSON() !== null || Date.prototype.toJSON.call({toISOString: function(){ return 1; }}) !== 1;
+	}), 'Date', {
+	  toJSON: function toJSON(key){
+	    var O  = toObject(this)
+	      , pv = toPrimitive(O);
+	    return typeof pv == 'number' && !isFinite(pv) ? null : O.toISOString();
+	  }
+	});
 
 /***/ },
 /* 157 */
@@ -3095,23 +3108,43 @@
 /* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	var $export     = __webpack_require__(12)
-	  , toObject    = __webpack_require__(59)
-	  , toPrimitive = __webpack_require__(19);
-	
-	$export($export.P + $export.F * __webpack_require__(11)(function(){
-	  return new Date(NaN).toJSON() !== null || Date.prototype.toJSON.call({toISOString: function(){ return 1; }}) !== 1;
-	}), 'Date', {
-	  toJSON: function toJSON(key){
-	    var O  = toObject(this)
-	      , pv = toPrimitive(O);
-	    return typeof pv == 'number' && !isFinite(pv) ? null : O.toISOString();
-	  }
-	});
+	var DateProto    = Date.prototype
+	  , INVALID_DATE = 'Invalid Date'
+	  , TO_STRING    = 'toString'
+	  , $toString    = DateProto[TO_STRING]
+	  , getTime      = DateProto.getTime;
+	if(new Date(NaN) + '' != INVALID_DATE){
+	  __webpack_require__(21)(DateProto, TO_STRING, function toString(){
+	    var value = getTime.call(this);
+	    return value === value ? $toString.call(this) : INVALID_DATE;
+	  });
+	}
 
 /***/ },
 /* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var TO_PRIMITIVE = __webpack_require__(28)('toPrimitive')
+	  , proto        = Date.prototype;
+	
+	if(!(TO_PRIMITIVE in proto))__webpack_require__(13)(proto, TO_PRIMITIVE, __webpack_require__(160));
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var anObject    = __webpack_require__(15)
+	  , toPrimitive = __webpack_require__(19)
+	  , NUMBER      = 'number';
+	
+	module.exports = function(hint){
+	  if(hint !== 'string' && hint !== NUMBER && hint !== 'default')throw TypeError('Incorrect hint');
+	  return toPrimitive(anObject(this), hint != NUMBER);
+	};
+
+/***/ },
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
@@ -3120,18 +3153,18 @@
 	$export($export.S, 'Array', {isArray: __webpack_require__(45)});
 
 /***/ },
-/* 160 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var ctx         = __webpack_require__(23)
 	  , $export     = __webpack_require__(12)
 	  , toObject    = __webpack_require__(59)
-	  , call        = __webpack_require__(161)
-	  , isArrayIter = __webpack_require__(162)
+	  , call        = __webpack_require__(163)
+	  , isArrayIter = __webpack_require__(164)
 	  , toLength    = __webpack_require__(37)
-	  , getIterFn   = __webpack_require__(163);
-	$export($export.S + $export.F * !__webpack_require__(164)(function(iter){ Array.from(iter); }), 'Array', {
+	  , getIterFn   = __webpack_require__(165);
+	$export($export.S + $export.F * !__webpack_require__(166)(function(iter){ Array.from(iter); }), 'Array', {
 	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
 	  from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
 	    var O       = toObject(arrayLike)
@@ -3161,7 +3194,7 @@
 
 
 /***/ },
-/* 161 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// call something on iterator step with safe closing on error
@@ -3178,7 +3211,7 @@
 	};
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// check on default Array iterator
@@ -3191,7 +3224,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var classof   = __webpack_require__(76)
@@ -3204,7 +3237,7 @@
 	};
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var ITERATOR     = __webpack_require__(28)('iterator')
@@ -3230,7 +3263,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3253,7 +3286,7 @@
 	});
 
 /***/ },
-/* 166 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3263,14 +3296,14 @@
 	  , arrayJoin = [].join;
 	
 	// fallback for not array-like strings
-	$export($export.P + $export.F * (__webpack_require__(33) != Object || !__webpack_require__(167)(arrayJoin)), 'Array', {
+	$export($export.P + $export.F * (__webpack_require__(33) != Object || !__webpack_require__(169)(arrayJoin)), 'Array', {
 	  join: function join(separator){
 	    return arrayJoin.call(toIObject(this), separator === undefined ? ',' : separator);
 	  }
 	});
 
 /***/ },
-/* 167 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var fails = __webpack_require__(11);
@@ -3282,7 +3315,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3315,7 +3348,7 @@
 	});
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3333,7 +3366,7 @@
 	  // V8 bug
 	  test.sort(null);
 	  // Old WebKit
-	}) || !__webpack_require__(167)($sort)), 'Array', {
+	}) || !__webpack_require__(169)($sort)), 'Array', {
 	  // 22.1.3.25 Array.prototype.sort(comparefn)
 	  sort: function sort(comparefn){
 	    return comparefn === undefined
@@ -3343,13 +3376,13 @@
 	});
 
 /***/ },
-/* 170 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export  = __webpack_require__(12)
-	  , $forEach = __webpack_require__(171)(0)
-	  , STRICT   = __webpack_require__(167)([].forEach, true);
+	  , $forEach = __webpack_require__(173)(0)
+	  , STRICT   = __webpack_require__(169)([].forEach, true);
 	
 	$export($export.P + $export.F * !STRICT, 'Array', {
 	  // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
@@ -3359,7 +3392,7 @@
 	});
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 0 -> Array#forEach
@@ -3373,7 +3406,7 @@
 	  , IObject  = __webpack_require__(33)
 	  , toObject = __webpack_require__(59)
 	  , toLength = __webpack_require__(37)
-	  , asc      = __webpack_require__(172);
+	  , asc      = __webpack_require__(174);
 	module.exports = function(TYPE, $create){
 	  var IS_MAP        = TYPE == 1
 	    , IS_FILTER     = TYPE == 2
@@ -3408,7 +3441,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
@@ -3429,47 +3462,17 @@
 	};
 
 /***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $export = __webpack_require__(12)
-	  , $map    = __webpack_require__(171)(1);
-	
-	$export($export.P + $export.F * !__webpack_require__(167)([].map, true), 'Array', {
-	  // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
-	  map: function map(callbackfn /* , thisArg */){
-	    return $map(this, callbackfn, arguments[1]);
-	  }
-	});
-
-/***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $export = __webpack_require__(12)
-	  , $filter = __webpack_require__(171)(2);
-	
-	$export($export.P + $export.F * !__webpack_require__(167)([].filter, true), 'Array', {
-	  // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
-	  filter: function filter(callbackfn /* , thisArg */){
-	    return $filter(this, callbackfn, arguments[1]);
-	  }
-	});
-
-/***/ },
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export = __webpack_require__(12)
-	  , $some   = __webpack_require__(171)(3);
+	  , $map    = __webpack_require__(173)(1);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].some, true), 'Array', {
-	  // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
-	  some: function some(callbackfn /* , thisArg */){
-	    return $some(this, callbackfn, arguments[1]);
+	$export($export.P + $export.F * !__webpack_require__(169)([].map, true), 'Array', {
+	  // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
+	  map: function map(callbackfn /* , thisArg */){
+	    return $map(this, callbackfn, arguments[1]);
 	  }
 	});
 
@@ -3479,12 +3482,12 @@
 
 	'use strict';
 	var $export = __webpack_require__(12)
-	  , $every  = __webpack_require__(171)(4);
+	  , $filter = __webpack_require__(173)(2);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].every, true), 'Array', {
-	  // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
-	  every: function every(callbackfn /* , thisArg */){
-	    return $every(this, callbackfn, arguments[1]);
+	$export($export.P + $export.F * !__webpack_require__(169)([].filter, true), 'Array', {
+	  // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
+	  filter: function filter(callbackfn /* , thisArg */){
+	    return $filter(this, callbackfn, arguments[1]);
 	  }
 	});
 
@@ -3494,9 +3497,39 @@
 
 	'use strict';
 	var $export = __webpack_require__(12)
-	  , $reduce = __webpack_require__(178);
+	  , $some   = __webpack_require__(173)(3);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].reduce, true), 'Array', {
+	$export($export.P + $export.F * !__webpack_require__(169)([].some, true), 'Array', {
+	  // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
+	  some: function some(callbackfn /* , thisArg */){
+	    return $some(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $every  = __webpack_require__(173)(4);
+	
+	$export($export.P + $export.F * !__webpack_require__(169)([].every, true), 'Array', {
+	  // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
+	  every: function every(callbackfn /* , thisArg */){
+	    return $every(this, callbackfn, arguments[1]);
+	  }
+	});
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export = __webpack_require__(12)
+	  , $reduce = __webpack_require__(180);
+	
+	$export($export.P + $export.F * !__webpack_require__(169)([].reduce, true), 'Array', {
 	  // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
 	  reduce: function reduce(callbackfn /* , initialValue */){
 	    return $reduce(this, callbackfn, arguments.length, arguments[1], false);
@@ -3504,7 +3537,7 @@
 	});
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var aFunction = __webpack_require__(24)
@@ -3537,14 +3570,14 @@
 	};
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export = __webpack_require__(12)
-	  , $reduce = __webpack_require__(178);
+	  , $reduce = __webpack_require__(180);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].reduceRight, true), 'Array', {
+	$export($export.P + $export.F * !__webpack_require__(169)([].reduceRight, true), 'Array', {
 	  // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
 	  reduceRight: function reduceRight(callbackfn /* , initialValue */){
 	    return $reduce(this, callbackfn, arguments.length, arguments[1], true);
@@ -3552,14 +3585,14 @@
 	});
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export  = __webpack_require__(12)
 	  , $indexOf = __webpack_require__(36)(false);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].indexOf), 'Array', {
+	$export($export.P + $export.F * !__webpack_require__(169)([].indexOf), 'Array', {
 	  // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
 	  indexOf: function indexOf(searchElement /*, fromIndex = 0 */){
 	    return $indexOf(this, searchElement, arguments[1]);
@@ -3567,7 +3600,7 @@
 	});
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3576,7 +3609,7 @@
 	  , toInteger = __webpack_require__(38)
 	  , toLength  = __webpack_require__(37);
 	
-	$export($export.P + $export.F * !__webpack_require__(167)([].lastIndexOf), 'Array', {
+	$export($export.P + $export.F * !__webpack_require__(169)([].lastIndexOf), 'Array', {
 	  // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
 	  lastIndexOf: function lastIndexOf(searchElement /*, fromIndex = @[*-1] */){
 	    var O      = toIObject(this)
@@ -3590,18 +3623,18 @@
 	});
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 	var $export = __webpack_require__(12);
 	
-	$export($export.P, 'Array', {copyWithin: __webpack_require__(183)});
+	$export($export.P, 'Array', {copyWithin: __webpack_require__(185)});
 	
-	__webpack_require__(184)('copyWithin');
+	__webpack_require__(186)('copyWithin');
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
@@ -3632,7 +3665,7 @@
 	};
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.31 Array.prototype[@@unscopables]
@@ -3644,18 +3677,18 @@
 	};
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 	var $export = __webpack_require__(12);
 	
-	$export($export.P, 'Array', {fill: __webpack_require__(186)});
+	$export($export.P, 'Array', {fill: __webpack_require__(188)});
 	
-	__webpack_require__(184)('fill');
+	__webpack_require__(186)('fill');
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
@@ -3675,13 +3708,13 @@
 	};
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
 	var $export = __webpack_require__(12)
-	  , $find   = __webpack_require__(171)(5)
+	  , $find   = __webpack_require__(173)(5)
 	  , KEY     = 'find'
 	  , forced  = true;
 	// Shouldn't skip holes
@@ -3691,16 +3724,16 @@
 	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
 	  }
 	});
-	__webpack_require__(184)(KEY);
+	__webpack_require__(186)(KEY);
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
 	var $export = __webpack_require__(12)
-	  , $find   = __webpack_require__(171)(6)
+	  , $find   = __webpack_require__(173)(6)
 	  , KEY     = 'findIndex'
 	  , forced  = true;
 	// Shouldn't skip holes
@@ -3710,16 +3743,16 @@
 	    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
 	  }
 	});
-	__webpack_require__(184)(KEY);
+	__webpack_require__(186)(KEY);
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(190)('Array');
+	__webpack_require__(192)('Array');
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3737,12 +3770,12 @@
 	};
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(184)
-	  , step             = __webpack_require__(192)
+	var addToUnscopables = __webpack_require__(186)
+	  , step             = __webpack_require__(194)
 	  , Iterators        = __webpack_require__(131)
 	  , toIObject        = __webpack_require__(32);
 	
@@ -3776,7 +3809,7 @@
 	addToUnscopables('entries');
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -3784,7 +3817,7 @@
 	};
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global            = __webpack_require__(7)
@@ -3792,7 +3825,7 @@
 	  , dP                = __webpack_require__(14).f
 	  , gOPN              = __webpack_require__(50).f
 	  , isRegExp          = __webpack_require__(136)
-	  , $flags            = __webpack_require__(194)
+	  , $flags            = __webpack_require__(196)
 	  , $RegExp           = global.RegExp
 	  , Base              = $RegExp
 	  , proto             = $RegExp.prototype
@@ -3829,10 +3862,10 @@
 	  __webpack_require__(21)(global, 'RegExp', $RegExp);
 	}
 	
-	__webpack_require__(190)('RegExp');
+	__webpack_require__(192)('RegExp');
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3850,13 +3883,13 @@
 	};
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	__webpack_require__(196);
+	__webpack_require__(198);
 	var anObject    = __webpack_require__(15)
-	  , $flags      = __webpack_require__(194)
+	  , $flags      = __webpack_require__(196)
 	  , DESCRIPTORS = __webpack_require__(10)
 	  , TO_STRING   = 'toString'
 	  , $toString   = /./[TO_STRING];
@@ -3880,21 +3913,21 @@
 	}
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 21.2.5.3 get RegExp.prototype.flags()
 	if(__webpack_require__(10) && /./g.flags != 'g')__webpack_require__(14).f(RegExp.prototype, 'flags', {
 	  configurable: true,
-	  get: __webpack_require__(194)
+	  get: __webpack_require__(196)
 	});
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@match logic
-	__webpack_require__(198)('match', 1, function(defined, MATCH, $match){
+	__webpack_require__(200)('match', 1, function(defined, MATCH, $match){
 	  // 21.1.3.11 String.prototype.match(regexp)
 	  return [function match(regexp){
 	    'use strict';
@@ -3905,7 +3938,7 @@
 	});
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3938,11 +3971,11 @@
 	};
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@replace logic
-	__webpack_require__(198)('replace', 2, function(defined, REPLACE, $replace){
+	__webpack_require__(200)('replace', 2, function(defined, REPLACE, $replace){
 	  // 21.1.3.14 String.prototype.replace(searchValue, replaceValue)
 	  return [function replace(searchValue, replaceValue){
 	    'use strict';
@@ -3955,11 +3988,11 @@
 	});
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@search logic
-	__webpack_require__(198)('search', 1, function(defined, SEARCH, $search){
+	__webpack_require__(200)('search', 1, function(defined, SEARCH, $search){
 	  // 21.1.3.15 String.prototype.search(regexp)
 	  return [function search(regexp){
 	    'use strict';
@@ -3970,11 +4003,11 @@
 	});
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// @@split logic
-	__webpack_require__(198)('split', 2, function(defined, SPLIT, $split){
+	__webpack_require__(200)('split', 2, function(defined, SPLIT, $split){
 	  'use strict';
 	  var isRegExp   = __webpack_require__(136)
 	    , _split     = $split
@@ -4045,7 +4078,7 @@
 	});
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4058,11 +4091,11 @@
 	  , anObject           = __webpack_require__(15)
 	  , aFunction          = __webpack_require__(24)
 	  , anInstance         = __webpack_require__(91)
-	  , forOf              = __webpack_require__(203)
+	  , forOf              = __webpack_require__(205)
 	  , setProto           = __webpack_require__(74).set
-	  , speciesConstructor = __webpack_require__(204)
-	  , task               = __webpack_require__(205).set
-	  , microtask          = __webpack_require__(206)
+	  , speciesConstructor = __webpack_require__(206)
+	  , task               = __webpack_require__(207).set
+	  , microtask          = __webpack_require__(208)
 	  , PROMISE            = 'Promise'
 	  , TypeError          = global.TypeError
 	  , process            = global.process
@@ -4254,7 +4287,7 @@
 	    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
 	    this._n = false;          // <- notify
 	  };
-	  Internal.prototype = __webpack_require__(207)($Promise.prototype, {
+	  Internal.prototype = __webpack_require__(209)($Promise.prototype, {
 	    // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
 	    then: function then(onFulfilled, onRejected){
 	      var reaction    = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -4281,7 +4314,7 @@
 	
 	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Promise: $Promise});
 	__webpack_require__(27)($Promise, PROMISE);
-	__webpack_require__(190)(PROMISE);
+	__webpack_require__(192)(PROMISE);
 	Wrapper = __webpack_require__(8)[PROMISE];
 	
 	// statics
@@ -4305,7 +4338,7 @@
 	    return capability.promise;
 	  }
 	});
-	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(164)(function(iter){
+	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(166)(function(iter){
 	  $Promise.all(iter)['catch'](empty);
 	})), PROMISE, {
 	  // 25.4.4.1 Promise.all(iterable)
@@ -4351,15 +4384,15 @@
 	});
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var ctx         = __webpack_require__(23)
-	  , call        = __webpack_require__(161)
-	  , isArrayIter = __webpack_require__(162)
+	  , call        = __webpack_require__(163)
+	  , isArrayIter = __webpack_require__(164)
 	  , anObject    = __webpack_require__(15)
 	  , toLength    = __webpack_require__(37)
-	  , getIterFn   = __webpack_require__(163);
+	  , getIterFn   = __webpack_require__(165);
 	module.exports = function(iterable, entries, fn, that, ITERATOR){
 	  var iterFn = ITERATOR ? function(){ return iterable; } : getIterFn(iterable)
 	    , f      = ctx(fn, that, entries ? 2 : 1)
@@ -4375,7 +4408,7 @@
 	};
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.3.20 SpeciesConstructor(O, defaultConstructor)
@@ -4388,7 +4421,7 @@
 	};
 
 /***/ },
-/* 205 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var ctx                = __webpack_require__(23)
@@ -4468,11 +4501,11 @@
 	};
 
 /***/ },
-/* 206 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(7)
-	  , macrotask = __webpack_require__(205).set
+	  , macrotask = __webpack_require__(207).set
 	  , Observer  = global.MutationObserver || global.WebKitMutationObserver
 	  , process   = global.process
 	  , Promise   = global.Promise
@@ -4531,7 +4564,7 @@
 	};
 
 /***/ },
-/* 207 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var redefine = __webpack_require__(21);
@@ -4541,14 +4574,14 @@
 	};
 
 /***/ },
-/* 208 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strong = __webpack_require__(209);
+	var strong = __webpack_require__(211);
 	
 	// 23.1 Map Objects
-	module.exports = __webpack_require__(210)('Map', function(get){
+	module.exports = __webpack_require__(212)('Map', function(get){
 	  return function Map(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.1.3.6 Map.prototype.get(key)
@@ -4563,21 +4596,21 @@
 	}, strong, true);
 
 /***/ },
-/* 209 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var dP          = __webpack_require__(14).f
 	  , create      = __webpack_require__(46)
 	  , hide        = __webpack_require__(13)
-	  , redefineAll = __webpack_require__(207)
+	  , redefineAll = __webpack_require__(209)
 	  , ctx         = __webpack_require__(23)
 	  , anInstance  = __webpack_require__(91)
 	  , defined     = __webpack_require__(35)
-	  , forOf       = __webpack_require__(203)
+	  , forOf       = __webpack_require__(205)
 	  , $iterDefine = __webpack_require__(130)
-	  , step        = __webpack_require__(192)
-	  , setSpecies  = __webpack_require__(190)
+	  , step        = __webpack_require__(194)
+	  , setSpecies  = __webpack_require__(192)
 	  , DESCRIPTORS = __webpack_require__(10)
 	  , fastKey     = __webpack_require__(25).fastKey
 	  , SIZE        = DESCRIPTORS ? '_s' : 'size';
@@ -4711,20 +4744,20 @@
 	};
 
 /***/ },
-/* 210 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var global            = __webpack_require__(7)
 	  , $export           = __webpack_require__(12)
 	  , redefine          = __webpack_require__(21)
-	  , redefineAll       = __webpack_require__(207)
+	  , redefineAll       = __webpack_require__(209)
 	  , meta              = __webpack_require__(25)
-	  , forOf             = __webpack_require__(203)
+	  , forOf             = __webpack_require__(205)
 	  , anInstance        = __webpack_require__(91)
 	  , isObject          = __webpack_require__(16)
 	  , fails             = __webpack_require__(11)
-	  , $iterDetect       = __webpack_require__(164)
+	  , $iterDetect       = __webpack_require__(166)
 	  , setToStringTag    = __webpack_require__(27)
 	  , inheritIfRequired = __webpack_require__(89);
 	
@@ -4801,14 +4834,14 @@
 	};
 
 /***/ },
-/* 211 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strong = __webpack_require__(209);
+	var strong = __webpack_require__(211);
 	
 	// 23.2 Set Objects
-	module.exports = __webpack_require__(210)('Set', function(get){
+	module.exports = __webpack_require__(212)('Set', function(get){
 	  return function Set(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.2.3.1 Set.prototype.add(value)
@@ -4818,15 +4851,15 @@
 	}, strong);
 
 /***/ },
-/* 212 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var each         = __webpack_require__(171)(0)
+	var each         = __webpack_require__(173)(0)
 	  , redefine     = __webpack_require__(21)
 	  , meta         = __webpack_require__(25)
 	  , assign       = __webpack_require__(70)
-	  , weak         = __webpack_require__(213)
+	  , weak         = __webpack_require__(215)
 	  , isObject     = __webpack_require__(16)
 	  , has          = __webpack_require__(9)
 	  , getWeak      = meta.getWeak
@@ -4857,7 +4890,7 @@
 	};
 	
 	// 23.3 WeakMap Objects
-	var $WeakMap = module.exports = __webpack_require__(210)('WeakMap', wrapper, methods, weak, true, true);
+	var $WeakMap = module.exports = __webpack_require__(212)('WeakMap', wrapper, methods, weak, true, true);
 	
 	// IE11 WeakMap frozen keys fix
 	if(new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7){
@@ -4880,17 +4913,17 @@
 	}
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var redefineAll       = __webpack_require__(207)
+	var redefineAll       = __webpack_require__(209)
 	  , getWeak           = __webpack_require__(25).getWeak
 	  , anObject          = __webpack_require__(15)
 	  , isObject          = __webpack_require__(16)
 	  , anInstance        = __webpack_require__(91)
-	  , forOf             = __webpack_require__(203)
-	  , createArrayMethod = __webpack_require__(171)
+	  , forOf             = __webpack_require__(205)
+	  , createArrayMethod = __webpack_require__(173)
 	  , $has              = __webpack_require__(9)
 	  , arrayFind         = createArrayMethod(5)
 	  , arrayFindIndex    = createArrayMethod(6)
@@ -4968,14 +5001,14 @@
 	};
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var weak = __webpack_require__(213);
+	var weak = __webpack_require__(215);
 	
 	// 23.4 WeakSet Objects
-	__webpack_require__(210)('WeakSet', function(get){
+	__webpack_require__(212)('WeakSet', function(get){
 	  return function WeakSet(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 	}, {
 	  // 23.4.3.1 WeakSet.prototype.add(value)
@@ -4985,20 +5018,20 @@
 	}, weak, false, true);
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export      = __webpack_require__(12)
-	  , $typed       = __webpack_require__(216)
-	  , buffer       = __webpack_require__(217)
+	  , $typed       = __webpack_require__(218)
+	  , buffer       = __webpack_require__(219)
 	  , anObject     = __webpack_require__(15)
 	  , toIndex      = __webpack_require__(39)
 	  , toLength     = __webpack_require__(37)
 	  , isObject     = __webpack_require__(16)
 	  , TYPED_ARRAY  = __webpack_require__(28)('typed_array')
 	  , ArrayBuffer  = __webpack_require__(7).ArrayBuffer
-	  , speciesConstructor = __webpack_require__(204)
+	  , speciesConstructor = __webpack_require__(206)
 	  , $ArrayBuffer = buffer.ArrayBuffer
 	  , $DataView    = buffer.DataView
 	  , $isView      = $typed.ABV && ArrayBuffer.isView
@@ -5034,10 +5067,10 @@
 	  }
 	});
 	
-	__webpack_require__(190)(ARRAY_BUFFER);
+	__webpack_require__(192)(ARRAY_BUFFER);
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(7)
@@ -5068,23 +5101,23 @@
 	};
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var global         = __webpack_require__(7)
 	  , DESCRIPTORS    = __webpack_require__(10)
 	  , LIBRARY        = __webpack_require__(52)
-	  , $typed         = __webpack_require__(216)
+	  , $typed         = __webpack_require__(218)
 	  , hide           = __webpack_require__(13)
-	  , redefineAll    = __webpack_require__(207)
+	  , redefineAll    = __webpack_require__(209)
 	  , fails          = __webpack_require__(11)
 	  , anInstance     = __webpack_require__(91)
 	  , toInteger      = __webpack_require__(38)
 	  , toLength       = __webpack_require__(37)
 	  , gOPN           = __webpack_require__(50).f
 	  , dP             = __webpack_require__(14).f
-	  , arrayFill      = __webpack_require__(186)
+	  , arrayFill      = __webpack_require__(188)
 	  , setToStringTag = __webpack_require__(27)
 	  , ARRAY_BUFFER   = 'ArrayBuffer'
 	  , DATA_VIEW      = 'DataView'
@@ -5348,26 +5381,26 @@
 	exports[DATA_VIEW] = $DataView;
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(12);
-	$export($export.G + $export.W + $export.F * !__webpack_require__(216).ABV, {
-	  DataView: __webpack_require__(217).DataView
+	$export($export.G + $export.W + $export.F * !__webpack_require__(218).ABV, {
+	  DataView: __webpack_require__(219).DataView
 	});
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Int8', 1, function(init){
+	__webpack_require__(222)('Int8', 1, function(init){
 	  return function Int8Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5376,13 +5409,13 @@
 	    , global              = __webpack_require__(7)
 	    , fails               = __webpack_require__(11)
 	    , $export             = __webpack_require__(12)
-	    , $typed              = __webpack_require__(216)
-	    , $buffer             = __webpack_require__(217)
+	    , $typed              = __webpack_require__(218)
+	    , $buffer             = __webpack_require__(219)
 	    , ctx                 = __webpack_require__(23)
 	    , anInstance          = __webpack_require__(91)
 	    , propertyDesc        = __webpack_require__(20)
 	    , hide                = __webpack_require__(13)
-	    , redefineAll         = __webpack_require__(207)
+	    , redefineAll         = __webpack_require__(209)
 	    , isInteger           = __webpack_require__(98)
 	    , toInteger           = __webpack_require__(38)
 	    , toLength            = __webpack_require__(37)
@@ -5393,23 +5426,23 @@
 	    , classof             = __webpack_require__(76)
 	    , isObject            = __webpack_require__(16)
 	    , toObject            = __webpack_require__(59)
-	    , isArrayIter         = __webpack_require__(162)
+	    , isArrayIter         = __webpack_require__(164)
 	    , create              = __webpack_require__(46)
 	    , getPrototypeOf      = __webpack_require__(60)
 	    , gOPN                = __webpack_require__(50).f
-	    , isIterable          = __webpack_require__(221)
-	    , getIterFn           = __webpack_require__(163)
+	    , isIterable          = __webpack_require__(223)
+	    , getIterFn           = __webpack_require__(165)
 	    , uid                 = __webpack_require__(22)
 	    , wks                 = __webpack_require__(28)
-	    , createArrayMethod   = __webpack_require__(171)
+	    , createArrayMethod   = __webpack_require__(173)
 	    , createArrayIncludes = __webpack_require__(36)
-	    , speciesConstructor  = __webpack_require__(204)
-	    , ArrayIterators      = __webpack_require__(191)
+	    , speciesConstructor  = __webpack_require__(206)
+	    , ArrayIterators      = __webpack_require__(193)
 	    , Iterators           = __webpack_require__(131)
-	    , $iterDetect         = __webpack_require__(164)
-	    , setSpecies          = __webpack_require__(190)
-	    , arrayFill           = __webpack_require__(186)
-	    , arrayCopyWithin     = __webpack_require__(183)
+	    , $iterDetect         = __webpack_require__(166)
+	    , setSpecies          = __webpack_require__(192)
+	    , arrayFill           = __webpack_require__(188)
+	    , arrayCopyWithin     = __webpack_require__(185)
 	    , $DP                 = __webpack_require__(14)
 	    , $GOPD               = __webpack_require__(51)
 	    , dP                  = $DP.f
@@ -5595,9 +5628,6 @@
 	        that[length]  = value;
 	      } return that;
 	    },
-	    slice: function slice(start, end){
-	      return speciesFromList(this, arraySlice.call(validate(this), start, end));
-	    },
 	    some: function some(callbackfn /*, thisArg */){
 	      return arraySome(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined);
 	    },
@@ -5614,6 +5644,10 @@
 	        toLength((end === undefined ? length : toIndex(end, length)) - $begin)
 	      );
 	    }
+	  };
+	
+	  var $slice = function slice(start, end){
+	    return speciesFromList(this, arraySlice.call(validate(this), start, end));
 	  };
 	
 	  var $set = function set(arrayLike /*, offset */){
@@ -5687,6 +5721,7 @@
 	  redefineAll($TypedArrayPrototype$, $iterators);
 	  hide($TypedArrayPrototype$, ITERATOR, $iterators.values);
 	  redefineAll($TypedArrayPrototype$, {
+	    slice:          $slice,
 	    set:            $set,
 	    constructor:    function(){ /* noop */ },
 	    toString:       arrayToString,
@@ -5827,11 +5862,17 @@
 	
 	    $export($export.P, NAME, proto);
 	
+	    setSpecies(NAME);
+	
 	    $export($export.P + $export.F * FORCED_SET, NAME, {set: $set});
 	
 	    $export($export.P + $export.F * !CORRECT_ITER_NAME, NAME, $iterators);
 	
 	    $export($export.P + $export.F * (TypedArrayPrototype.toString != arrayToString), NAME, {toString: arrayToString});
+	
+	    $export($export.P + $export.F * fails(function(){
+	      new TypedArray(1).slice();
+	    }), NAME, {slice: $slice});
 	
 	    $export($export.P + $export.F * (fails(function(){
 	      return [1, 2].toLocaleString() != new TypedArray([1, 2]).toLocaleString()
@@ -5841,13 +5882,11 @@
 	
 	    Iterators[NAME] = CORRECT_ITER_NAME ? $nativeIterator : $iterator;
 	    if(!LIBRARY && !CORRECT_ITER_NAME)hide(TypedArrayPrototype, ITERATOR, $iterator);
-	
-	    setSpecies(NAME);
 	  };
 	} else module.exports = function(){ /* empty */ };
 
 /***/ },
-/* 221 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var classof   = __webpack_require__(76)
@@ -5861,31 +5900,11 @@
 	};
 
 /***/ },
-/* 222 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(220)('Uint8', 1, function(init){
-	  return function Uint8Array(data, byteOffset, length){
-	    return init(this, data, byteOffset, length);
-	  };
-	});
-
-/***/ },
-/* 223 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(220)('Uint8', 1, function(init){
-	  return function Uint8ClampedArray(data, byteOffset, length){
-	    return init(this, data, byteOffset, length);
-	  };
-	}, true);
-
-/***/ },
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Int16', 2, function(init){
-	  return function Int16Array(data, byteOffset, length){
+	__webpack_require__(222)('Uint8', 1, function(init){
+	  return function Uint8Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
@@ -5894,18 +5913,18 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Uint16', 2, function(init){
-	  return function Uint16Array(data, byteOffset, length){
+	__webpack_require__(222)('Uint8', 1, function(init){
+	  return function Uint8ClampedArray(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
-	});
+	}, true);
 
 /***/ },
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Int32', 4, function(init){
-	  return function Int32Array(data, byteOffset, length){
+	__webpack_require__(222)('Int16', 2, function(init){
+	  return function Int16Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
@@ -5914,8 +5933,8 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Uint32', 4, function(init){
-	  return function Uint32Array(data, byteOffset, length){
+	__webpack_require__(222)('Uint16', 2, function(init){
+	  return function Uint16Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
@@ -5924,8 +5943,8 @@
 /* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Float32', 4, function(init){
-	  return function Float32Array(data, byteOffset, length){
+	__webpack_require__(222)('Int32', 4, function(init){
+	  return function Int32Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
@@ -5934,14 +5953,34 @@
 /* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(220)('Float64', 8, function(init){
-	  return function Float64Array(data, byteOffset, length){
+	__webpack_require__(222)('Uint32', 4, function(init){
+	  return function Uint32Array(data, byteOffset, length){
 	    return init(this, data, byteOffset, length);
 	  };
 	});
 
 /***/ },
 /* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(222)('Float32', 4, function(init){
+	  return function Float32Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(222)('Float64', 8, function(init){
+	  return function Float64Array(data, byteOffset, length){
+	    return init(this, data, byteOffset, length);
+	  };
+	});
+
+/***/ },
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
@@ -5955,7 +5994,7 @@
 	});
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
@@ -5998,7 +6037,7 @@
 	});
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
@@ -6025,7 +6064,7 @@
 	});
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.4 Reflect.deleteProperty(target, propertyKey)
@@ -6041,7 +6080,7 @@
 	});
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6072,7 +6111,7 @@
 	});
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.6 Reflect.get(target, propertyKey [, receiver])
@@ -6098,7 +6137,7 @@
 	$export($export.S, 'Reflect', {get: get});
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
@@ -6113,7 +6152,7 @@
 	});
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.8 Reflect.getPrototypeOf(target)
@@ -6128,7 +6167,7 @@
 	});
 
 /***/ },
-/* 238 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.9 Reflect.has(target, propertyKey)
@@ -6141,7 +6180,7 @@
 	});
 
 /***/ },
-/* 239 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.10 Reflect.isExtensible(target)
@@ -6157,16 +6196,16 @@
 	});
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.11 Reflect.ownKeys(target)
 	var $export = __webpack_require__(12);
 	
-	$export($export.S, 'Reflect', {ownKeys: __webpack_require__(241)});
+	$export($export.S, 'Reflect', {ownKeys: __webpack_require__(243)});
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all object keys, includes non-enumerable and symbols
@@ -6181,7 +6220,7 @@
 	};
 
 /***/ },
-/* 242 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.12 Reflect.preventExtensions(target)
@@ -6202,7 +6241,7 @@
 	});
 
 /***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
@@ -6238,7 +6277,7 @@
 	$export($export.S, 'Reflect', {set: set});
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.14 Reflect.setPrototypeOf(target, proto)
@@ -6258,24 +6297,24 @@
 	});
 
 /***/ },
-/* 245 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	// https://github.com/tc39/Array.prototype.includes
 	var $export   = __webpack_require__(12)
 	  , $includes = __webpack_require__(36)(true);
 	
 	$export($export.P, 'Array', {
-	  // https://github.com/domenic/Array.prototype.includes
 	  includes: function includes(el /*, fromIndex = 0 */){
 	    return $includes(this, el, arguments.length > 1 ? arguments[1] : undefined);
 	  }
 	});
 	
-	__webpack_require__(184)('includes');
+	__webpack_require__(186)('includes');
 
 /***/ },
-/* 246 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6290,12 +6329,13 @@
 	});
 
 /***/ },
-/* 247 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	// https://github.com/tc39/proposal-string-pad-start-end
 	var $export = __webpack_require__(12)
-	  , $pad    = __webpack_require__(248);
+	  , $pad    = __webpack_require__(250);
 	
 	$export($export.P, 'String', {
 	  padStart: function padStart(maxLength /*, fillString = ' ' */){
@@ -6304,7 +6344,7 @@
 	});
 
 /***/ },
-/* 248 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-string-pad-start-end
@@ -6327,12 +6367,13 @@
 
 
 /***/ },
-/* 249 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	// https://github.com/tc39/proposal-string-pad-start-end
 	var $export = __webpack_require__(12)
-	  , $pad    = __webpack_require__(248);
+	  , $pad    = __webpack_require__(250);
 	
 	$export($export.P, 'String', {
 	  padEnd: function padEnd(maxLength /*, fillString = ' ' */){
@@ -6341,7 +6382,7 @@
 	});
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6353,7 +6394,7 @@
 	}, 'trimStart');
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6365,12 +6406,47 @@
 	}, 'trimEnd');
 
 /***/ },
-/* 252 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// https://gist.github.com/WebReflection/9353781
+	'use strict';
+	// https://tc39.github.io/String.prototype.matchAll/
+	var $export     = __webpack_require__(12)
+	  , defined     = __webpack_require__(35)
+	  , toLength    = __webpack_require__(37)
+	  , isRegExp    = __webpack_require__(136)
+	  , getFlags    = __webpack_require__(196)
+	  , RegExpProto = RegExp.prototype;
+	
+	var $RegExpStringIterator = function(regexp, string){
+	  this._r = regexp;
+	  this._s = string;
+	};
+	
+	__webpack_require__(132)($RegExpStringIterator, 'RegExp String', function next(){
+	  var match = this._r.exec(this._s);
+	  return {value: match, done: match === null};
+	});
+	
+	$export($export.P, 'String', {
+	  matchAll: function matchAll(regexp){
+	    defined(this);
+	    if(!isRegExp(regexp))throw TypeError(regexp + ' is not a regexp!');
+	    var S     = String(this)
+	      , flags = 'flags' in RegExpProto ? String(regexp.flags) : getFlags.call(regexp)
+	      , rx    = new RegExp(regexp.source, ~flags.indexOf('g') ? flags : 'g' + flags);
+	    rx.lastIndex = toLength(regexp.lastIndex);
+	    return new $RegExpStringIterator(rx, S);
+	  }
+	});
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://github.com/tc39/proposal-object-getownpropertydescriptors
 	var $export    = __webpack_require__(12)
-	  , ownKeys    = __webpack_require__(241)
+	  , ownKeys    = __webpack_require__(243)
 	  , toIObject  = __webpack_require__(32)
 	  , createDesc = __webpack_require__(20)
 	  , gOPD       = __webpack_require__(51)
@@ -6393,12 +6469,12 @@
 	});
 
 /***/ },
-/* 253 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// http://goo.gl/XkBrjD
+	// https://github.com/tc39/proposal-object-values-entries
 	var $export = __webpack_require__(12)
-	  , $values = __webpack_require__(254)(false);
+	  , $values = __webpack_require__(257)(false);
 	
 	$export($export.S, 'Object', {
 	  values: function values(it){
@@ -6407,7 +6483,7 @@
 	});
 
 /***/ },
-/* 254 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(30)
@@ -6428,12 +6504,12 @@
 	};
 
 /***/ },
-/* 255 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// http://goo.gl/XkBrjD
+	// https://github.com/tc39/proposal-object-values-entries
 	var $export  = __webpack_require__(12)
-	  , $entries = __webpack_require__(254)(true);
+	  , $entries = __webpack_require__(257)(true);
 	
 	$export($export.S, 'Object', {
 	  entries: function entries(it){
@@ -6442,21 +6518,113 @@
 	});
 
 /***/ },
-/* 256 */
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export         = __webpack_require__(12)
+	  , toObject        = __webpack_require__(59)
+	  , aFunction       = __webpack_require__(24)
+	  , $defineProperty = __webpack_require__(14);
+	
+	// B.2.2.2 Object.prototype.__defineGetter__(P, getter)
+	__webpack_require__(10) && $export($export.P + __webpack_require__(260), 'Object', {
+	  __defineGetter__: function __defineGetter__(P, getter){
+	    $defineProperty.f(toObject(this), P, {get: aFunction(getter), enumerable: true, configurable: true});
+	  }
+	});
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Forced replacement prototype accessors methods
+	module.exports = __webpack_require__(52)|| !__webpack_require__(11)(function(){
+	  var K = Math.random();
+	  // In FF throws only define methods
+	  __defineSetter__.call(null, K, function(){ /* empty */});
+	  delete __webpack_require__(7)[K];
+	});
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export         = __webpack_require__(12)
+	  , toObject        = __webpack_require__(59)
+	  , aFunction       = __webpack_require__(24)
+	  , $defineProperty = __webpack_require__(14);
+	
+	// B.2.2.3 Object.prototype.__defineSetter__(P, setter)
+	__webpack_require__(10) && $export($export.P + __webpack_require__(260), 'Object', {
+	  __defineSetter__: function __defineSetter__(P, setter){
+	    $defineProperty.f(toObject(this), P, {set: aFunction(setter), enumerable: true, configurable: true});
+	  }
+	});
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export                  = __webpack_require__(12)
+	  , toObject                 = __webpack_require__(59)
+	  , toPrimitive              = __webpack_require__(19)
+	  , getPrototypeOf           = __webpack_require__(60)
+	  , getOwnPropertyDescriptor = __webpack_require__(51).f;
+	
+	// B.2.2.4 Object.prototype.__lookupGetter__(P)
+	__webpack_require__(10) && $export($export.P + __webpack_require__(260), 'Object', {
+	  __lookupGetter__: function __lookupGetter__(P){
+	    var O = toObject(this)
+	      , K = toPrimitive(P, true)
+	      , D;
+	    do {
+	      if(D = getOwnPropertyDescriptor(O, K))return D.get;
+	    } while(O = getPrototypeOf(O));
+	  }
+	});
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $export                  = __webpack_require__(12)
+	  , toObject                 = __webpack_require__(59)
+	  , toPrimitive              = __webpack_require__(19)
+	  , getPrototypeOf           = __webpack_require__(60)
+	  , getOwnPropertyDescriptor = __webpack_require__(51).f;
+	
+	// B.2.2.5 Object.prototype.__lookupSetter__(P)
+	__webpack_require__(10) && $export($export.P + __webpack_require__(260), 'Object', {
+	  __lookupSetter__: function __lookupSetter__(P){
+	    var O = toObject(this)
+	      , K = toPrimitive(P, true)
+	      , D;
+	    do {
+	      if(D = getOwnPropertyDescriptor(O, K))return D.set;
+	    } while(O = getPrototypeOf(O));
+	  }
+	});
+
+/***/ },
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
 	var $export  = __webpack_require__(12);
 	
-	$export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(257)('Map')});
+	$export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(265)('Map')});
 
 /***/ },
-/* 257 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
 	var classof = __webpack_require__(76)
-	  , from    = __webpack_require__(258);
+	  , from    = __webpack_require__(266);
 	module.exports = function(NAME){
 	  return function toJSON(){
 	    if(classof(this) != NAME)throw TypeError(NAME + "#toJSON isn't generic");
@@ -6465,10 +6633,10 @@
 	};
 
 /***/ },
-/* 258 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var forOf = __webpack_require__(203);
+	var forOf = __webpack_require__(205);
 	
 	module.exports = function(iter, ITERATOR){
 	  var result = [];
@@ -6478,16 +6646,16 @@
 
 
 /***/ },
-/* 259 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
 	var $export  = __webpack_require__(12);
 	
-	$export($export.P + $export.R, 'Set', {toJSON: __webpack_require__(257)('Set')});
+	$export($export.P + $export.R, 'Set', {toJSON: __webpack_require__(265)('Set')});
 
 /***/ },
-/* 260 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/ljharb/proposal-global
@@ -6496,7 +6664,7 @@
 	$export($export.S, 'System', {global: __webpack_require__(7)});
 
 /***/ },
-/* 261 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/ljharb/proposal-is-error
@@ -6510,7 +6678,7 @@
 	});
 
 /***/ },
-/* 262 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -6526,7 +6694,7 @@
 	});
 
 /***/ },
-/* 263 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -6542,7 +6710,7 @@
 	});
 
 /***/ },
-/* 264 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -6563,7 +6731,7 @@
 	});
 
 /***/ },
-/* 265 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -6584,10 +6752,10 @@
 	});
 
 /***/ },
-/* 266 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata                  = __webpack_require__(267)
+	var metadata                  = __webpack_require__(275)
 	  , anObject                  = __webpack_require__(15)
 	  , toMetaKey                 = metadata.key
 	  , ordinaryDefineOwnMetadata = metadata.set;
@@ -6597,13 +6765,13 @@
 	}});
 
 /***/ },
-/* 267 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Map     = __webpack_require__(208)
+	var Map     = __webpack_require__(210)
 	  , $export = __webpack_require__(12)
 	  , shared  = __webpack_require__(26)('metadata')
-	  , store   = shared.store || (shared.store = new (__webpack_require__(212)));
+	  , store   = shared.store || (shared.store = new (__webpack_require__(214)));
 	
 	var getOrCreateMetadataMap = function(target, targetKey, create){
 	  var targetMetadata = store.get(target);
@@ -6653,10 +6821,10 @@
 	};
 
 /***/ },
-/* 268 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata               = __webpack_require__(267)
+	var metadata               = __webpack_require__(275)
 	  , anObject               = __webpack_require__(15)
 	  , toMetaKey              = metadata.key
 	  , getOrCreateMetadataMap = metadata.map
@@ -6673,10 +6841,10 @@
 	}});
 
 /***/ },
-/* 269 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata               = __webpack_require__(267)
+	var metadata               = __webpack_require__(275)
 	  , anObject               = __webpack_require__(15)
 	  , getPrototypeOf         = __webpack_require__(60)
 	  , ordinaryHasOwnMetadata = metadata.has
@@ -6695,12 +6863,12 @@
 	}});
 
 /***/ },
-/* 270 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Set                     = __webpack_require__(211)
-	  , from                    = __webpack_require__(258)
-	  , metadata                = __webpack_require__(267)
+	var Set                     = __webpack_require__(213)
+	  , from                    = __webpack_require__(266)
+	  , metadata                = __webpack_require__(275)
 	  , anObject                = __webpack_require__(15)
 	  , getPrototypeOf          = __webpack_require__(60)
 	  , ordinaryOwnMetadataKeys = metadata.keys
@@ -6719,10 +6887,10 @@
 	}});
 
 /***/ },
-/* 271 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata               = __webpack_require__(267)
+	var metadata               = __webpack_require__(275)
 	  , anObject               = __webpack_require__(15)
 	  , ordinaryGetOwnMetadata = metadata.get
 	  , toMetaKey              = metadata.key;
@@ -6733,10 +6901,10 @@
 	}});
 
 /***/ },
-/* 272 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata                = __webpack_require__(267)
+	var metadata                = __webpack_require__(275)
 	  , anObject                = __webpack_require__(15)
 	  , ordinaryOwnMetadataKeys = metadata.keys
 	  , toMetaKey               = metadata.key;
@@ -6746,10 +6914,10 @@
 	}});
 
 /***/ },
-/* 273 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata               = __webpack_require__(267)
+	var metadata               = __webpack_require__(275)
 	  , anObject               = __webpack_require__(15)
 	  , getPrototypeOf         = __webpack_require__(60)
 	  , ordinaryHasOwnMetadata = metadata.has
@@ -6767,10 +6935,10 @@
 	}});
 
 /***/ },
-/* 274 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata               = __webpack_require__(267)
+	var metadata               = __webpack_require__(275)
 	  , anObject               = __webpack_require__(15)
 	  , ordinaryHasOwnMetadata = metadata.has
 	  , toMetaKey              = metadata.key;
@@ -6781,10 +6949,10 @@
 	}});
 
 /***/ },
-/* 275 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var metadata                  = __webpack_require__(267)
+	var metadata                  = __webpack_require__(275)
 	  , anObject                  = __webpack_require__(15)
 	  , aFunction                 = __webpack_require__(24)
 	  , toMetaKey                 = metadata.key
@@ -6801,14 +6969,14 @@
 	}});
 
 /***/ },
-/* 276 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// ie9- setTimeout & setInterval additional parameters fix
 	var global     = __webpack_require__(7)
 	  , $export    = __webpack_require__(12)
 	  , invoke     = __webpack_require__(79)
-	  , partial    = __webpack_require__(277)
+	  , partial    = __webpack_require__(285)
 	  , navigator  = global.navigator
 	  , MSIE       = !!navigator && /MSIE .\./.test(navigator.userAgent); // <- dirty ie9- check
 	var wrap = function(set){
@@ -6826,11 +6994,11 @@
 	});
 
 /***/ },
-/* 277 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var path      = __webpack_require__(278)
+	var path      = __webpack_require__(286)
 	  , invoke    = __webpack_require__(79)
 	  , aFunction = __webpack_require__(24);
 	module.exports = function(/* ...pargs */){
@@ -6854,27 +7022,27 @@
 	};
 
 /***/ },
-/* 278 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(7);
 
 /***/ },
-/* 279 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(12)
-	  , $task   = __webpack_require__(205);
+	  , $task   = __webpack_require__(207);
 	$export($export.G + $export.B, {
 	  setImmediate:   $task.set,
 	  clearImmediate: $task.clear
 	});
 
 /***/ },
-/* 280 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $iterators    = __webpack_require__(191)
+	var $iterators    = __webpack_require__(193)
 	  , redefine      = __webpack_require__(21)
 	  , global        = __webpack_require__(7)
 	  , hide          = __webpack_require__(13)
@@ -6898,7 +7066,7 @@
 	}
 
 /***/ },
-/* 281 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/**
@@ -7559,10 +7727,10 @@
 	  typeof self === "object" ? self : this
 	);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(290)))
 
 /***/ },
-/* 282 */
+/* 290 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -7659,25 +7827,25 @@
 
 
 /***/ },
-/* 283 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(284);
+	__webpack_require__(292);
 	module.exports = __webpack_require__(8).RegExp.escape;
 
 /***/ },
-/* 284 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/benjamingr/RexExp.escape
 	var $export = __webpack_require__(12)
-	  , $re     = __webpack_require__(285)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+	  , $re     = __webpack_require__(293)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 	
 	$export($export.S, 'RegExp', {escape: function escape(it){ return $re(it); }});
 
 
 /***/ },
-/* 285 */
+/* 293 */
 /***/ function(module, exports) {
 
 	module.exports = function(regExp, replace){
@@ -7690,19 +7858,19 @@
 	};
 
 /***/ },
-/* 286 */
+/* 294 */
 /***/ function(module, exports) {
 
 	module.exports = React;
 
 /***/ },
-/* 287 */
+/* 295 */
 /***/ function(module, exports) {
 
 	module.exports = ReactDOM;
 
 /***/ },
-/* 288 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* components */
@@ -7712,19 +7880,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _Router2 = __webpack_require__(289);
+	var _Router2 = __webpack_require__(297);
 	
 	var _Router3 = _interopRequireDefault(_Router2);
 	
 	exports.Router = _Router3['default'];
 	
-	var _Link2 = __webpack_require__(325);
+	var _Link2 = __webpack_require__(333);
 	
 	var _Link3 = _interopRequireDefault(_Link2);
 	
 	exports.Link = _Link3['default'];
 	
-	var _IndexLink2 = __webpack_require__(326);
+	var _IndexLink2 = __webpack_require__(334);
 	
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 	
@@ -7732,25 +7900,25 @@
 	
 	/* components (configuration) */
 	
-	var _IndexRedirect2 = __webpack_require__(327);
+	var _IndexRedirect2 = __webpack_require__(335);
 	
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 	
 	exports.IndexRedirect = _IndexRedirect3['default'];
 	
-	var _IndexRoute2 = __webpack_require__(329);
+	var _IndexRoute2 = __webpack_require__(337);
 	
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 	
 	exports.IndexRoute = _IndexRoute3['default'];
 	
-	var _Redirect2 = __webpack_require__(328);
+	var _Redirect2 = __webpack_require__(336);
 	
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 	
 	exports.Redirect = _Redirect3['default'];
 	
-	var _Route2 = __webpack_require__(330);
+	var _Route2 = __webpack_require__(338);
 	
 	var _Route3 = _interopRequireDefault(_Route2);
 	
@@ -7758,19 +7926,19 @@
 	
 	/* mixins */
 	
-	var _History2 = __webpack_require__(331);
+	var _History2 = __webpack_require__(339);
 	
 	var _History3 = _interopRequireDefault(_History2);
 	
 	exports.History = _History3['default'];
 	
-	var _Lifecycle2 = __webpack_require__(332);
+	var _Lifecycle2 = __webpack_require__(340);
 	
 	var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 	
 	exports.Lifecycle = _Lifecycle3['default'];
 	
-	var _RouteContext2 = __webpack_require__(333);
+	var _RouteContext2 = __webpack_require__(341);
 	
 	var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 	
@@ -7778,72 +7946,72 @@
 	
 	/* utils */
 	
-	var _useRoutes2 = __webpack_require__(334);
+	var _useRoutes2 = __webpack_require__(342);
 	
 	var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 	
 	exports.useRoutes = _useRoutes3['default'];
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
 	exports.createRoutes = _RouteUtils.createRoutes;
 	
-	var _RouterContext2 = __webpack_require__(321);
+	var _RouterContext2 = __webpack_require__(329);
 	
 	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 	
 	exports.RouterContext = _RouterContext3['default'];
 	
-	var _RoutingContext2 = __webpack_require__(335);
+	var _RoutingContext2 = __webpack_require__(343);
 	
 	var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 	
 	exports.RoutingContext = _RoutingContext3['default'];
 	
-	var _PropTypes2 = __webpack_require__(320);
+	var _PropTypes2 = __webpack_require__(328);
 	
 	var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 	
 	exports.PropTypes = _PropTypes3['default'];
 	
-	var _match2 = __webpack_require__(336);
+	var _match2 = __webpack_require__(344);
 	
 	var _match3 = _interopRequireDefault(_match2);
 	
 	exports.match = _match3['default'];
 	
-	var _useRouterHistory2 = __webpack_require__(340);
+	var _useRouterHistory2 = __webpack_require__(348);
 	
 	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 	
 	exports.useRouterHistory = _useRouterHistory3['default'];
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
 	exports.formatPattern = _PatternUtils.formatPattern;
 	
 	/* histories */
 	
-	var _browserHistory2 = __webpack_require__(341);
+	var _browserHistory2 = __webpack_require__(349);
 	
 	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 	
 	exports.browserHistory = _browserHistory3['default'];
 	
-	var _hashHistory2 = __webpack_require__(344);
+	var _hashHistory2 = __webpack_require__(352);
 	
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 	
 	exports.hashHistory = _hashHistory3['default'];
 	
-	var _createMemoryHistory2 = __webpack_require__(337);
+	var _createMemoryHistory2 = __webpack_require__(345);
 	
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 	
 	exports.createMemoryHistory = _createMemoryHistory3['default'];
 
 /***/ },
-/* 289 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7856,33 +8024,33 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _historyLibCreateHashHistory = __webpack_require__(290);
+	var _historyLibCreateHashHistory = __webpack_require__(298);
 	
 	var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
 	
-	var _historyLibUseQueries = __webpack_require__(307);
+	var _historyLibUseQueries = __webpack_require__(315);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _createTransitionManager = __webpack_require__(310);
+	var _createTransitionManager = __webpack_require__(318);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
-	var _RouterContext = __webpack_require__(321);
+	var _RouterContext = __webpack_require__(329);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _RouterUtils = __webpack_require__(324);
+	var _RouterUtils = __webpack_require__(332);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -8056,10 +8224,10 @@
 	
 	exports['default'] = Router;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 290 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8070,25 +8238,25 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Actions = __webpack_require__(293);
+	var _Actions = __webpack_require__(301);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _ExecutionEnvironment = __webpack_require__(295);
+	var _ExecutionEnvironment = __webpack_require__(303);
 	
-	var _DOMUtils = __webpack_require__(296);
+	var _DOMUtils = __webpack_require__(304);
 	
-	var _DOMStateStorage = __webpack_require__(297);
+	var _DOMStateStorage = __webpack_require__(305);
 	
-	var _createDOMHistory = __webpack_require__(298);
+	var _createDOMHistory = __webpack_require__(306);
 	
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 	
@@ -8308,10 +8476,10 @@
 	
 	exports['default'] = createHashHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 291 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8375,10 +8543,10 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 292 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8433,10 +8601,10 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 293 */
+/* 301 */
 /***/ function(module, exports) {
 
 	/**
@@ -8472,7 +8640,7 @@
 	};
 
 /***/ },
-/* 294 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8483,7 +8651,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -8522,10 +8690,10 @@
 	    hash: hash
 	  };
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 295 */
+/* 303 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8535,7 +8703,7 @@
 	exports.canUseDOM = canUseDOM;
 
 /***/ },
-/* 296 */
+/* 304 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8615,7 +8783,7 @@
 	}
 
 /***/ },
-/* 297 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*eslint-disable no-empty */
@@ -8627,7 +8795,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -8691,10 +8859,10 @@
 	
 	  return null;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 298 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8705,15 +8873,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _ExecutionEnvironment = __webpack_require__(295);
+	var _ExecutionEnvironment = __webpack_require__(303);
 	
-	var _DOMUtils = __webpack_require__(296);
+	var _DOMUtils = __webpack_require__(304);
 	
-	var _createHistory = __webpack_require__(299);
+	var _createHistory = __webpack_require__(307);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -8737,10 +8905,10 @@
 	
 	exports['default'] = createDOMHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 299 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8751,29 +8919,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _deepEqual = __webpack_require__(300);
+	var _deepEqual = __webpack_require__(308);
 	
 	var _deepEqual2 = _interopRequireDefault(_deepEqual);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _AsyncUtils = __webpack_require__(303);
+	var _AsyncUtils = __webpack_require__(311);
 	
-	var _Actions = __webpack_require__(293);
+	var _Actions = __webpack_require__(301);
 	
-	var _createLocation2 = __webpack_require__(304);
+	var _createLocation2 = __webpack_require__(312);
 	
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 	
-	var _runTransitionHook = __webpack_require__(305);
+	var _runTransitionHook = __webpack_require__(313);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -9031,15 +9199,15 @@
 	
 	exports['default'] = createHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 300 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var pSlice = Array.prototype.slice;
-	var objectKeys = __webpack_require__(301);
-	var isArguments = __webpack_require__(302);
+	var objectKeys = __webpack_require__(309);
+	var isArguments = __webpack_require__(310);
 	
 	var deepEqual = module.exports = function (actual, expected, opts) {
 	  if (!opts) opts = {};
@@ -9134,7 +9302,7 @@
 
 
 /***/ },
-/* 301 */
+/* 309 */
 /***/ function(module, exports) {
 
 	exports = module.exports = typeof Object.keys === 'function'
@@ -9149,7 +9317,7 @@
 
 
 /***/ },
-/* 302 */
+/* 310 */
 /***/ function(module, exports) {
 
 	var supportsArgumentsClass = (function(){
@@ -9175,7 +9343,7 @@
 
 
 /***/ },
-/* 303 */
+/* 311 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9238,7 +9406,7 @@
 	}
 
 /***/ },
-/* 304 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9249,13 +9417,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _Actions = __webpack_require__(293);
+	var _Actions = __webpack_require__(301);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
 	function createLocation() {
 	  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
@@ -9292,10 +9460,10 @@
 	
 	exports['default'] = createLocation;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 305 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9304,7 +9472,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -9322,10 +9490,10 @@
 	
 	exports['default'] = runTransitionHook;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 306 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9334,7 +9502,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -9347,10 +9515,10 @@
 	
 	exports['default'] = deprecate;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 307 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9361,19 +9529,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _queryString = __webpack_require__(308);
+	var _queryString = __webpack_require__(316);
 	
-	var _runTransitionHook = __webpack_require__(305);
+	var _runTransitionHook = __webpack_require__(313);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -9529,14 +9697,14 @@
 	
 	exports['default'] = useQueries;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 308 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(309);
+	var strictUriEncode = __webpack_require__(317);
 	
 	exports.extract = function (str) {
 		return str.split('?')[1] || '';
@@ -9604,7 +9772,7 @@
 
 
 /***/ },
-/* 309 */
+/* 317 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9616,7 +9784,7 @@
 
 
 /***/ },
-/* 310 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9629,27 +9797,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _historyLibActions = __webpack_require__(293);
+	var _historyLibActions = __webpack_require__(301);
 	
-	var _computeChangedRoutes2 = __webpack_require__(312);
+	var _computeChangedRoutes2 = __webpack_require__(320);
 	
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 	
-	var _TransitionUtils = __webpack_require__(314);
+	var _TransitionUtils = __webpack_require__(322);
 	
-	var _isActive2 = __webpack_require__(316);
+	var _isActive2 = __webpack_require__(324);
 	
 	var _isActive3 = _interopRequireDefault(_isActive2);
 	
-	var _getComponents = __webpack_require__(317);
+	var _getComponents = __webpack_require__(325);
 	
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 	
-	var _matchRoutes = __webpack_require__(318);
+	var _matchRoutes = __webpack_require__(326);
 	
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 	
@@ -9917,10 +10085,10 @@
 	
 	//export default useRoutes
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 311 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -9930,7 +10098,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -9945,17 +10113,17 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 312 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
@@ -10018,7 +10186,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 313 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10032,7 +10200,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
@@ -10248,10 +10416,10 @@
 	
 	  return pathname.replace(/\/+/g, '/');
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 314 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10262,9 +10430,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _AsyncUtils = __webpack_require__(315);
+	var _AsyncUtils = __webpack_require__(323);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -10343,10 +10511,10 @@
 	    if (routes[i].onLeave) routes[i].onLeave.call(routes[i]);
 	  }
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 315 */
+/* 323 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10441,7 +10609,7 @@
 	}
 
 /***/ },
-/* 316 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10449,7 +10617,7 @@
 	exports.__esModule = true;
 	exports['default'] = isActive;
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
 	function deepEqual(a, b) {
 	  if (a == b) return true;
@@ -10573,14 +10741,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 317 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _AsyncUtils = __webpack_require__(315);
+	var _AsyncUtils = __webpack_require__(323);
 	
 	function getComponentsForRoute(location, route, callback) {
 	  if (route.component || route.components) {
@@ -10611,7 +10779,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 318 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10620,15 +10788,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _AsyncUtils = __webpack_require__(315);
+	var _AsyncUtils = __webpack_require__(323);
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
 	function getChildRoutes(route, location, callback) {
 	  if (route.childRoutes) {
@@ -10820,10 +10988,10 @@
 	
 	exports['default'] = matchRoutes;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 319 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10839,11 +11007,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -10940,10 +11108,10 @@
 	
 	  return routes;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 320 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10951,7 +11119,7 @@
 	exports.__esModule = true;
 	exports.falsy = falsy;
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var func = _react.PropTypes.func;
 	var object = _react.PropTypes.object;
@@ -11001,7 +11169,7 @@
 	};
 
 /***/ },
-/* 321 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11012,25 +11180,25 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _deprecateObjectProperties = __webpack_require__(322);
+	var _deprecateObjectProperties = __webpack_require__(330);
 	
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 	
-	var _getRouteParams = __webpack_require__(323);
+	var _getRouteParams = __webpack_require__(331);
 	
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -11158,10 +11326,10 @@
 	
 	exports['default'] = RouterContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 322 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*eslint no-empty: 0*/
@@ -11172,7 +11340,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -11221,17 +11389,17 @@
 	}
 	
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 323 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
 	/**
 	 * Extracts an object of params the given route cares about from
@@ -11253,7 +11421,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 324 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11267,7 +11435,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecateObjectProperties = __webpack_require__(322);
+	var _deprecateObjectProperties = __webpack_require__(330);
 	
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 	
@@ -11289,10 +11457,10 @@
 	
 	  return history;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 325 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11305,11 +11473,11 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -11459,10 +11627,10 @@
 	
 	exports['default'] = Link;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 326 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11473,11 +11641,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Link = __webpack_require__(325);
+	var _Link = __webpack_require__(333);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
@@ -11497,7 +11665,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 327 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11506,23 +11674,23 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Redirect = __webpack_require__(328);
+	var _Redirect = __webpack_require__(336);
 	
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -11564,10 +11732,10 @@
 	
 	exports['default'] = IndexRedirect;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 328 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11576,19 +11744,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _PatternUtils = __webpack_require__(313);
+	var _PatternUtils = __webpack_require__(321);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -11673,10 +11841,10 @@
 	
 	exports['default'] = Redirect;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 329 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11685,21 +11853,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
 	var func = _react2['default'].PropTypes.func;
 	
@@ -11740,10 +11908,10 @@
 	
 	exports['default'] = IndexRoute;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 330 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11752,17 +11920,17 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -11802,10 +11970,10 @@
 	
 	exports['default'] = Route;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 331 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11814,11 +11982,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _PropTypes = __webpack_require__(320);
+	var _PropTypes = __webpack_require__(328);
 	
 	/**
 	 * A mixin that adds the "history" instance variable to components.
@@ -11838,10 +12006,10 @@
 	
 	exports['default'] = History;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 332 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11850,15 +12018,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
@@ -11913,10 +12081,10 @@
 	
 	exports['default'] = Lifecycle;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 333 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11925,11 +12093,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -11965,10 +12133,10 @@
 	
 	exports['default'] = RouteContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 334 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11981,15 +12149,15 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _historyLibUseQueries = __webpack_require__(307);
+	var _historyLibUseQueries = __webpack_require__(315);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _createTransitionManager = __webpack_require__(310);
+	var _createTransitionManager = __webpack_require__(318);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -12022,10 +12190,10 @@
 	
 	exports['default'] = useRoutes;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 335 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12034,15 +12202,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _RouterContext = __webpack_require__(321);
+	var _RouterContext = __webpack_require__(329);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _routerWarning = __webpack_require__(311);
+	var _routerWarning = __webpack_require__(319);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -12060,10 +12228,10 @@
 	
 	exports['default'] = RoutingContext;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 336 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12076,21 +12244,21 @@
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _createMemoryHistory = __webpack_require__(337);
+	var _createMemoryHistory = __webpack_require__(345);
 	
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 	
-	var _createTransitionManager = __webpack_require__(310);
+	var _createTransitionManager = __webpack_require__(318);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _RouteUtils = __webpack_require__(319);
+	var _RouteUtils = __webpack_require__(327);
 	
-	var _RouterUtils = __webpack_require__(324);
+	var _RouterUtils = __webpack_require__(332);
 	
 	/**
 	 * A high-level API to be used for server-side rendering.
@@ -12147,10 +12315,10 @@
 	
 	exports['default'] = match;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 337 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12160,15 +12328,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibUseQueries = __webpack_require__(307);
+	var _historyLibUseQueries = __webpack_require__(315);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _historyLibUseBasename = __webpack_require__(338);
+	var _historyLibUseBasename = __webpack_require__(346);
 	
 	var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
 	
-	var _historyLibCreateMemoryHistory = __webpack_require__(339);
+	var _historyLibCreateMemoryHistory = __webpack_require__(347);
 	
 	var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 	
@@ -12188,7 +12356,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 338 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12199,15 +12367,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _ExecutionEnvironment = __webpack_require__(295);
+	var _ExecutionEnvironment = __webpack_require__(303);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _runTransitionHook = __webpack_require__(305);
+	var _runTransitionHook = __webpack_require__(313);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -12328,7 +12496,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 339 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12339,19 +12507,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _Actions = __webpack_require__(293);
+	var _Actions = __webpack_require__(301);
 	
-	var _createHistory = __webpack_require__(299);
+	var _createHistory = __webpack_require__(307);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -12485,10 +12653,10 @@
 	
 	exports['default'] = createMemoryHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 340 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12498,11 +12666,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibUseQueries = __webpack_require__(307);
+	var _historyLibUseQueries = __webpack_require__(315);
 	
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 	
-	var _historyLibUseBasename = __webpack_require__(338);
+	var _historyLibUseBasename = __webpack_require__(346);
 	
 	var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
 	
@@ -12517,7 +12685,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 341 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12526,11 +12694,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibCreateBrowserHistory = __webpack_require__(342);
+	var _historyLibCreateBrowserHistory = __webpack_require__(350);
 	
 	var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 	
-	var _createRouterHistory = __webpack_require__(343);
+	var _createRouterHistory = __webpack_require__(351);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -12538,7 +12706,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 342 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12549,21 +12717,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _invariant = __webpack_require__(292);
+	var _invariant = __webpack_require__(300);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Actions = __webpack_require__(293);
+	var _Actions = __webpack_require__(301);
 	
-	var _PathUtils = __webpack_require__(294);
+	var _PathUtils = __webpack_require__(302);
 	
-	var _ExecutionEnvironment = __webpack_require__(295);
+	var _ExecutionEnvironment = __webpack_require__(303);
 	
-	var _DOMUtils = __webpack_require__(296);
+	var _DOMUtils = __webpack_require__(304);
 	
-	var _DOMStateStorage = __webpack_require__(297);
+	var _DOMStateStorage = __webpack_require__(305);
 	
-	var _createDOMHistory = __webpack_require__(298);
+	var _createDOMHistory = __webpack_require__(306);
 	
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 	
@@ -12717,10 +12885,10 @@
 	
 	exports['default'] = createBrowserHistory;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 343 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12729,7 +12897,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _useRouterHistory = __webpack_require__(340);
+	var _useRouterHistory = __webpack_require__(348);
 	
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 	
@@ -12744,7 +12912,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 344 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12753,11 +12921,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _historyLibCreateHashHistory = __webpack_require__(290);
+	var _historyLibCreateHashHistory = __webpack_require__(298);
 	
 	var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
 	
-	var _createRouterHistory = __webpack_require__(343);
+	var _createRouterHistory = __webpack_require__(351);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -12765,7 +12933,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 345 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12774,51 +12942,51 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _createLocation2 = __webpack_require__(304);
+	var _createLocation2 = __webpack_require__(312);
 	
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 	
-	var _createBrowserHistory = __webpack_require__(342);
+	var _createBrowserHistory = __webpack_require__(350);
 	
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 	
 	exports.createHistory = _createBrowserHistory2['default'];
 	
-	var _createHashHistory2 = __webpack_require__(290);
+	var _createHashHistory2 = __webpack_require__(298);
 	
 	var _createHashHistory3 = _interopRequireDefault(_createHashHistory2);
 	
 	exports.createHashHistory = _createHashHistory3['default'];
 	
-	var _createMemoryHistory2 = __webpack_require__(339);
+	var _createMemoryHistory2 = __webpack_require__(347);
 	
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 	
 	exports.createMemoryHistory = _createMemoryHistory3['default'];
 	
-	var _useBasename2 = __webpack_require__(338);
+	var _useBasename2 = __webpack_require__(346);
 	
 	var _useBasename3 = _interopRequireDefault(_useBasename2);
 	
 	exports.useBasename = _useBasename3['default'];
 	
-	var _useBeforeUnload2 = __webpack_require__(346);
+	var _useBeforeUnload2 = __webpack_require__(354);
 	
 	var _useBeforeUnload3 = _interopRequireDefault(_useBeforeUnload2);
 	
 	exports.useBeforeUnload = _useBeforeUnload3['default'];
 	
-	var _useQueries2 = __webpack_require__(307);
+	var _useQueries2 = __webpack_require__(315);
 	
 	var _useQueries3 = _interopRequireDefault(_useQueries2);
 	
 	exports.useQueries = _useQueries3['default'];
 	
-	var _Actions2 = __webpack_require__(293);
+	var _Actions2 = __webpack_require__(301);
 	
 	var _Actions3 = _interopRequireDefault(_Actions2);
 	
@@ -12826,13 +12994,13 @@
 	
 	// deprecated
 	
-	var _enableBeforeUnload2 = __webpack_require__(347);
+	var _enableBeforeUnload2 = __webpack_require__(355);
 	
 	var _enableBeforeUnload3 = _interopRequireDefault(_enableBeforeUnload2);
 	
 	exports.enableBeforeUnload = _enableBeforeUnload3['default'];
 	
-	var _enableQueries2 = __webpack_require__(348);
+	var _enableQueries2 = __webpack_require__(356);
 	
 	var _enableQueries3 = _interopRequireDefault(_enableQueries2);
 	
@@ -12841,7 +13009,7 @@
 	exports.createLocation = createLocation;
 
 /***/ },
-/* 346 */
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12852,15 +13020,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _warning = __webpack_require__(291);
+	var _warning = __webpack_require__(299);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _ExecutionEnvironment = __webpack_require__(295);
+	var _ExecutionEnvironment = __webpack_require__(303);
 	
-	var _DOMUtils = __webpack_require__(296);
+	var _DOMUtils = __webpack_require__(304);
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
@@ -12955,10 +13123,10 @@
 	
 	exports['default'] = useBeforeUnload;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(282)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)))
 
 /***/ },
-/* 347 */
+/* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12967,11 +13135,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _useBeforeUnload = __webpack_require__(346);
+	var _useBeforeUnload = __webpack_require__(354);
 	
 	var _useBeforeUnload2 = _interopRequireDefault(_useBeforeUnload);
 	
@@ -12979,7 +13147,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 348 */
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12988,11 +13156,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _deprecate = __webpack_require__(306);
+	var _deprecate = __webpack_require__(314);
 	
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 	
-	var _useQueries = __webpack_require__(307);
+	var _useQueries = __webpack_require__(315);
 	
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 	
@@ -13000,7 +13168,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 349 */
+/* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13011,21 +13179,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactRouter = __webpack_require__(288);
+	var _reactRouter = __webpack_require__(296);
 	
-	var _html = __webpack_require__(350);
+	var _html = __webpack_require__(358);
 	
 	var Pages = _interopRequireWildcard(_html);
 	
-	var _templates = __webpack_require__(366);
+	var _templates = __webpack_require__(374);
 	
 	var Templates = _interopRequireWildcard(_templates);
 	
-	var _src = __webpack_require__(370);
+	var _src = __webpack_require__(378);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -13138,7 +13306,7 @@
 	exports.default = DocApp;
 
 /***/ },
-/* 350 */
+/* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13148,63 +13316,63 @@
 	});
 	exports.tooltips = exports.toggles = exports.textfield = exports.snackbar = exports.sliders = exports.menus = exports.loading = exports.lists = exports.layout = exports.home = exports.dialogs = exports.datatables = exports.cards = exports.buttons = exports.badges = undefined;
 	
-	var _badgesMd = __webpack_require__(351);
+	var _badgesMd = __webpack_require__(359);
 	
 	var _badgesMd2 = _interopRequireDefault(_badgesMd);
 	
-	var _buttonsMd = __webpack_require__(352);
+	var _buttonsMd = __webpack_require__(360);
 	
 	var _buttonsMd2 = _interopRequireDefault(_buttonsMd);
 	
-	var _cardsMd = __webpack_require__(353);
+	var _cardsMd = __webpack_require__(361);
 	
 	var _cardsMd2 = _interopRequireDefault(_cardsMd);
 	
-	var _datatablesMd = __webpack_require__(354);
+	var _datatablesMd = __webpack_require__(362);
 	
 	var _datatablesMd2 = _interopRequireDefault(_datatablesMd);
 	
-	var _dialogsMd = __webpack_require__(355);
+	var _dialogsMd = __webpack_require__(363);
 	
 	var _dialogsMd2 = _interopRequireDefault(_dialogsMd);
 	
-	var _homeMd = __webpack_require__(356);
+	var _homeMd = __webpack_require__(364);
 	
 	var _homeMd2 = _interopRequireDefault(_homeMd);
 	
-	var _layoutMd = __webpack_require__(357);
+	var _layoutMd = __webpack_require__(365);
 	
 	var _layoutMd2 = _interopRequireDefault(_layoutMd);
 	
-	var _listsMd = __webpack_require__(358);
+	var _listsMd = __webpack_require__(366);
 	
 	var _listsMd2 = _interopRequireDefault(_listsMd);
 	
-	var _loadingMd = __webpack_require__(359);
+	var _loadingMd = __webpack_require__(367);
 	
 	var _loadingMd2 = _interopRequireDefault(_loadingMd);
 	
-	var _menusMd = __webpack_require__(360);
+	var _menusMd = __webpack_require__(368);
 	
 	var _menusMd2 = _interopRequireDefault(_menusMd);
 	
-	var _slidersMd = __webpack_require__(361);
+	var _slidersMd = __webpack_require__(369);
 	
 	var _slidersMd2 = _interopRequireDefault(_slidersMd);
 	
-	var _snackbarMd = __webpack_require__(362);
+	var _snackbarMd = __webpack_require__(370);
 	
 	var _snackbarMd2 = _interopRequireDefault(_snackbarMd);
 	
-	var _textfieldMd = __webpack_require__(363);
+	var _textfieldMd = __webpack_require__(371);
 	
 	var _textfieldMd2 = _interopRequireDefault(_textfieldMd);
 	
-	var _togglesMd = __webpack_require__(364);
+	var _togglesMd = __webpack_require__(372);
 	
 	var _togglesMd2 = _interopRequireDefault(_togglesMd);
 	
-	var _tooltipsMd = __webpack_require__(365);
+	var _tooltipsMd = __webpack_require__(373);
 	
 	var _tooltipsMd2 = _interopRequireDefault(_tooltipsMd);
 	
@@ -13227,97 +13395,97 @@
 	exports.tooltips = _tooltipsMd2.default;
 
 /***/ },
-/* 351 */
+/* 359 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"badges\" class=\"mdl-typography--display-4\">Badges</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-1\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Badge,\n                                                { text: \"1\", overlap: true },\n                                                React.createElement(Icon, { name: \"account_box\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Badge,\n                                                { text: \"♥\", overlap: true },\n                                                React.createElement(Icon, { name: \"account_box\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-1\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Number badge on icon */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >overlap</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>account_box<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon badge on icon */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>♥<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >overlap</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>account_box<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Badge text=\\&​quot;1\\&​quot; overlap>\\n    <Icon name=\\&​quot;account_box\\&​quot; />\\n</Badge>\\n                </Cell><Cell col={6}>\\n                    <Badge text=\\&​quot;♥\\&​quot; overlap>\\n    <Icon name=\\&​quot;account_box\\&​quot; />\\n</Badge>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-2\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Badge,\n            { text: \"4\" },\n            \"Inbox\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Badge,\n            { text: \"♥\", noBackground: true },\n            \"Mood\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-2\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Number badge on text */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>4<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Inbox<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon badge without background on text */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Badge</span> <span class=\"token attr-name\" >text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>♥<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >noBackground</span><span class=\"token punctuation\" >></span></span>Mood<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Badge</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Badge text=\\&​quot;4\\&​quot;>Inbox</Badge>\\n                </Cell><Cell col={6}>\\n                    <Badge text=\\&​quot;♥\\&​quot; noBackground>Mood</Badge>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">text</td>\n<td style=\"text-align:left\">Assign string value to badge</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">overlap</td>\n<td style=\"text-align:left\">Makes the badge overlaps its container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">noBackground</td>\n<td style=\"text-align:left\">Removes the background of the badge</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 352 */
+/* 360 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"buttons\" class=\"mdl-typography--display-4\">Buttons</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-3\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { colored: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { colored: true, ripple: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-3\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored FAB button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >colored</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <FABButton colored>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={6}>\\n                    <FABButton colored ripple>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-4\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                null,\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                { ripple: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 4 },\n                                React.createElement(\n                                                FABButton,\n                                                { disabled: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-4\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* FAB button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <FABButton>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={4}>\\n                    <FABButton ripple>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={4}>\\n                    <FABButton disabled>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-5\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { mini: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                FABButton,\n                                                { mini: true, colored: true },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-5\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Mini FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >mini</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Mini FAB button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FABButton</span> <span class=\"token attr-name\" >mini</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FABButton</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <FABButton mini>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell><Cell col={6}>\\n                    <FABButton mini colored>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</FABButton>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-6\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, ripple: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, disabled: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-6\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Raised button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button raised>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised ripple>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised disabled>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-7\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, colored: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, accent: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { raised: true, accent: true, ripple: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-7\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Raised button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored button without ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >accent</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >raised</span> <span class=\"token attr-name\" >accent</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button raised colored>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised accent>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button raised accent ripple>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-8\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            null,\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { ripple: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 4 },\n        React.createElement(\n            Button,\n            { disabled: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-8\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Flat button with ripple */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Disabled flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={4}>\\n                    <Button>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button ripple>Button</Button>\\n                </Cell><Cell col={4}>\\n                    <Button disabled>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-9\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Button,\n            { primary: true },\n            \"Button\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Button,\n            { accent: true },\n            \"Button\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-9\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Primary colored flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >primary</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Accent-colored flat button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >accent</span><span class=\"token punctuation\" >></span></span>Button<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Button primary>Button</Button>\\n                </Cell><Cell col={6}>\\n                    <Button accent>Button</Button>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-10\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconButton, { name: \"mood\" })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconButton, { name: \"mood\", colored: true })\n    )\n);;\n        var cont = document.getElementById(\"demo-10\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Icon button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mood<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Colored Icon button */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mood<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >colored</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <IconButton name=\\&​quot;mood\\&​quot; />\\n                </Cell><Cell col={6}>\\n                    <IconButton name=\\&​quot;mood\\&​quot; colored />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">accent</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;accent&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">colored</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;colored&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String, Element, Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the element</td>\n<td style=\"text-align:left\">Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">mini</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the button as &quot;mini&quot;</td>\n<td style=\"text-align:left\">Optional, works only with &quot;FABButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the icon name&quot;</td>\n<td style=\"text-align:left\">Optional, works only with &quot;IconButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">primary</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;primary&quot; colors</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">raised</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;raised&quot; button style</td>\n<td style=\"text-align:left\">Optional, doesn\\&#39;t work with &quot;FABButton&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies &quot;ripple&quot; click effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 353 */
+/* 361 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"cards\" class=\"mdl-typography--display-4\">Cards</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-11\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '512px', margin: 'auto' } },\n    React.createElement(\n        CardTitle,\n        { style: { color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover' } },\n        'Welcome'\n    ),\n    React.createElement(\n        CardText,\n        null,\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...'\n    ),\n    React.createElement(\n        CardActions,\n        { border: true },\n        React.createElement(\n            Button,\n            { colored: true },\n            'Get Started'\n        )\n    ),\n    React.createElement(\n        CardMenu,\n        { style: { color: '#fff' } },\n        React.createElement(IconButton, { name: 'share' })\n    )\n);;\n        var cont = document.getElementById(\"demo-11\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'512px'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'176px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Welcome<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardText</span><span class=\"token punctuation\" >></span></span>\n        Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span>\n        Mauris sagittis pellentesque lacus eleifend lacinia<span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span><span class=\"token punctuation\" >.</span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardText</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>Get Started<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardMenu</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>share<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardMenu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;512px&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle style={{color: &apos;#fff&apos;, height: &apos;176px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover&apos;}}>Welcome</CardTitle>\\n    <CardText>\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Mauris sagittis pellentesque lacus eleifend lacinia...\\n    </CardText>\\n    <CardActions border>\\n        <Button colored>Get Started</Button>\\n    </CardActions>\\n    <CardMenu style={{color: &apos;#fff&apos;}}>\\n        <IconButton name=\\&​quot;share\\&​quot; />\\n    </CardMenu>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-12\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '320px', height: '320px', margin: 'auto' } },\n    React.createElement(\n        CardTitle,\n        { expand: true, style: { color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' } },\n        'Update'\n    ),\n    React.createElement(\n        CardText,\n        null,\n        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'\n    ),\n    React.createElement(\n        CardActions,\n        { border: true },\n        React.createElement(\n            Button,\n            { colored: true },\n            'View Updates'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-12\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'320px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'320px'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Update<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardText</span><span class=\"token punctuation\" >></span></span>\n        Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span>\n        Aenan convallis<span class=\"token punctuation\" >.</span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardText</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span><span class=\"token punctuation\" >></span></span>View Updates<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;320px&apos;, height: &apos;320px&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle expand style={{color: &apos;#fff&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC&apos;}}>Update</CardTitle>\\n    <CardText>\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Aenan convallis.\\n    </CardText>\\n    <CardActions border>\\n        <Button colored>View Updates</Button>\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-13\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto' } },\n    React.createElement(CardTitle, { expand: true }),\n    React.createElement(\n        CardActions,\n        { style: { height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)' } },\n        React.createElement(\n            'span',\n            { style: { color: '#fff', fontSize: '14px', fontWeight: '500' } },\n            'Image.jpg'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-13\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'52px'</span><span class=\"token punctuation\" >,</span> padding<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'16px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'rgba(0,0,0,0.2)'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >,</span> fontSize<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'14px'</span><span class=\"token punctuation\" >,</span> fontWeight<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'500'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            Image<span class=\"token punctuation\" >.</span>jpg\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover&apos;, margin: &apos;auto&apos;}}>\\n    <CardTitle expand />\\n    <CardActions style={{height: &apos;52px&apos;, padding: &apos;16px&apos;, background: &apos;rgba(0,0,0,0.2)&apos;}}>\\n        <span style={{color: &apos;#fff&apos;, fontSize: &apos;14px&apos;, fontWeight: &apos;500&apos;}}>\\n            Image.jpg\\n        </span>\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-14\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Card,\n    { shadow: 0, style: { width: '256px', height: '256px', background: '#3E4EB8' } },\n    React.createElement(\n        CardTitle,\n        { expand: true, style: { alignItems: 'flex-start', color: '#fff' } },\n        React.createElement(\n            'h4',\n            { style: { marginTop: '0' } },\n            'Featured event:',\n            React.createElement('br', null),\n            'May 24, 2016',\n            React.createElement('br', null),\n            '7-11pm'\n        )\n    ),\n    React.createElement(\n        CardActions,\n        { border: true, style: { borderColor: 'rgba(255, 255, 255, 0.2)', display: 'flex', boxSizing: 'border-box', alignItems: 'center', color: '#fff' } },\n        React.createElement(\n            Button,\n            { colored: true, style: { color: '#fff' } },\n            'Add to Calendar'\n        ),\n        React.createElement('div', { className: 'mdl-layout-spacer' }),\n        React.createElement(Icon, { name: 'event' })\n    )\n);;\n        var cont = document.getElementById(\"demo-14\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Card</span> <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'256px'</span><span class=\"token punctuation\" >,</span> background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#3E4EB8'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardTitle</span> <span class=\"token attr-name\" >expand</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>alignItems<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'flex-start'</span><span class=\"token punctuation\" >,</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>h4</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>marginTop<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'0'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            Featured event<span class=\"token punctuation\" >:</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n            May <span class=\"token number\" >24</span><span class=\"token punctuation\" >,</span> <span class=\"token number\" >2016</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token number\" >7</span><span class=\"token operator\" >-</span>11pm\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>h4</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardTitle</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>CardActions</span> <span class=\"token attr-name\" >border</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>borderColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'rgba(255, 255, 255, 0.2)'</span><span class=\"token punctuation\" >,</span> display<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'flex'</span><span class=\"token punctuation\" >,</span> boxSizing<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'border-box'</span><span class=\"token punctuation\" >,</span> alignItems<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'center'</span><span class=\"token punctuation\" >,</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Button</span> <span class=\"token attr-name\" >colored</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#fff'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Add to Calendar<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Button</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mdl-layout-spacer<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>event<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>CardActions</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Card</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;#3E4EB8&apos;}}>\\n    <CardTitle expand style={{alignItems: &apos;flex-start&apos;, color: &apos;#fff&apos;}}>\\n        <h4 style={{marginTop: &apos;0&apos;}}>\\n            Featured event:<br />\\n            May 24, 2016<br />\\n            7-11pm\\n        </h4>\\n    </CardTitle>\\n    <CardActions border style={{borderColor: &apos;rgba(255, 255, 255, 0.2)&apos;, display: &apos;flex&apos;, boxSizing: &apos;border-box&apos;, alignItems: &apos;center&apos;, color: &apos;#fff&apos;}}>\\n        <Button colored style={{color: &apos;#fff&apos;}}>Add to Calendar</Button>\\n        <div className=\\&​quot;mdl-layout-spacer\\&​quot;></div>\\n        <Icon name=\\&​quot;event\\&​quot; />\\n    </CardActions>\\n</Card>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">border</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies a border on top of the container</td>\n<td style=\"text-align:left\">Optional. Works only with &quot;CardActions&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expand</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Expand the size to take the available space</td>\n<td style=\"text-align:left\">Optional. Works only with &quot;CardTitle&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 354 */
+/* 362 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"data-tables\" class=\"mdl-typography--display-4\">Data Tables</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-table\" class=\"mdl-typography--display-2\">Simple table</h3>\n<div id=\"demo-15\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    DataTable,\n    {\n        shadow: 0,\n        rows: [{ material: 'Acrylic (Transparent)', quantity: 25, price: 2.90 }, { material: 'Plywood (Birch)', quantity: 50, price: 1.25 }, { material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35 }]\n    },\n    React.createElement(\n        TableHeader,\n        { name: 'material', tooltip: 'The amazing material name' },\n        'Material'\n    ),\n    React.createElement(\n        TableHeader,\n        { numeric: true, name: 'quantity', tooltip: 'Number of materials' },\n        'Quantity'\n    ),\n    React.createElement(\n        TableHeader,\n        { numeric: true, name: 'price', cellFormatter: price => `\\$${ price.toFixed(2) }`, tooltip: 'Price pet unit' },\n        'Price'\n    )\n);;\n        var cont = document.getElementById(\"demo-15\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DataTable</span>\n    <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Acrylic (Transparent)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >25</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.90</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Plywood (Birch)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1.25</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Laminate (Gold on Blue)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.35</span><span class=\"token punctuation\" >}</span>\n    <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>material<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>The</span> <span class=\"token attr-name\" >amazing</span> <span class=\"token attr-name\" >material</span> <span class=\"token attr-name\" >name\"</span><span class=\"token punctuation\" >></span></span>Material<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >numeric</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>quantity<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >materials\"</span><span class=\"token punctuation\" >></span></span>Quantity<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >numeric</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>price<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >cellFormatter</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>price<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token template-string\" ><span class=\"token string\" >`\\$</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>price<span class=\"token punctuation\" >.</span><span class=\"token function\" >toFixed</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >)</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >`</span></span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Price</span> <span class=\"token attr-name\" >pet</span> <span class=\"token attr-name\" >unit\"</span><span class=\"token punctuation\" >></span></span>Price<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>DataTable</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <DataTable\\n    shadow={0}\\n    rows={[\\n        {material: &apos;Acrylic (Transparent)&apos;, quantity: 25, price: 2.90},\\n        {material: &apos;Plywood (Birch)&apos;, quantity: 50, price: 1.25},\\n        {material: &apos;Laminate (Gold on Blue)&apos;, quantity: 10, price: 2.35}\\n    ]}\\n>\\n    <TableHeader name=\\&​quot;material\\&​quot; tooltip=\\&​quot;The amazing material name\\&​quot;>Material</TableHeader>\\n    <TableHeader numeric name=\\&​quot;quantity\\&​quot; tooltip=\\&​quot;Number of materials\\&​quot;>Quantity</TableHeader>\\n    <TableHeader numeric name=\\&​quot;price\\&​quot; cellFormatter={(price) => `\\\\$${price.toFixed(2)}`} tooltip=\\&​quot;Price pet unit\\&​quot;>Price</TableHeader>\\n</DataTable>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"selectable-table-with-checkboxes\" class=\"mdl-typography--display-2\">Selectable Table with checkboxes</h3>\n<div id=\"demo-16\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    DataTable,\n    {\n        selectable: true,\n        shadow: 0,\n        rowKeyColumn: 'id',\n        rows: [{ id: 1001, material: 'Acrylic (Transparent)', quantity: 25, price: 2.90 }, { id: 1002, material: 'Plywood (Birch)', quantity: 50, price: 1.25 }, { id: 1003, material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35 }]\n    },\n    React.createElement(\n        TableHeader,\n        { name: 'material', tooltip: 'The amazing material name' },\n        'Material'\n    ),\n    React.createElement(\n        TableHeader,\n        { numeric: true, name: 'quantity', tooltip: 'Number of materials' },\n        'Quantity'\n    ),\n    React.createElement(\n        TableHeader,\n        { numeric: true, name: 'price', cellFormatter: price => `\\$${ price.toFixed(2) }`, tooltip: 'Price pet unit' },\n        'Price'\n    )\n);;\n        var cont = document.getElementById(\"demo-16\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>DataTable</span>\n    <span class=\"token attr-name\" >selectable</span>\n    <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >rowKeyColumn</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>id<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n        <span class=\"token punctuation\" >{</span>id<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1001</span><span class=\"token punctuation\" >,</span> material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Acrylic (Transparent)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >25</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.90</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>id<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1002</span><span class=\"token punctuation\" >,</span> material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Plywood (Birch)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1.25</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>id<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1003</span><span class=\"token punctuation\" >,</span> material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Laminate (Gold on Blue)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.35</span><span class=\"token punctuation\" >}</span>\n    <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>material<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>The</span> <span class=\"token attr-name\" >amazing</span> <span class=\"token attr-name\" >material</span> <span class=\"token attr-name\" >name\"</span><span class=\"token punctuation\" >></span></span>Material<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >numeric</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>quantity<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >materials\"</span><span class=\"token punctuation\" >></span></span>Quantity<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span> <span class=\"token attr-name\" >numeric</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>price<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >cellFormatter</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>price<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token template-string\" ><span class=\"token string\" >`\\$</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>price<span class=\"token punctuation\" >.</span><span class=\"token function\" >toFixed</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >)</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >`</span></span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Price</span> <span class=\"token attr-name\" >pet</span> <span class=\"token attr-name\" >unit\"</span><span class=\"token punctuation\" >></span></span>Price<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>DataTable</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <DataTable\\n    selectable\\n    shadow={0}\\n    rowKeyColumn=\\&​quot;id\\&​quot;\\n    rows={[\\n        {id: 1001, material: &apos;Acrylic (Transparent)&apos;, quantity: 25, price: 2.90},\\n        {id: 1002, material: &apos;Plywood (Birch)&apos;, quantity: 50, price: 1.25},\\n        {id: 1003, material: &apos;Laminate (Gold on Blue)&apos;, quantity: 10, price: 2.35}\\n    ]}\\n>\\n    <TableHeader name=\\&​quot;material\\&​quot; tooltip=\\&​quot;The amazing material name\\&​quot;>Material</TableHeader>\\n    <TableHeader numeric name=\\&​quot;quantity\\&​quot; tooltip=\\&​quot;Number of materials\\&​quot;>Quantity</TableHeader>\\n    <TableHeader numeric name=\\&​quot;price\\&​quot; cellFormatter={(price) => `\\\\$${price.toFixed(2)}`} tooltip=\\&​quot;Price pet unit\\&​quot;>Price</TableHeader>\\n</DataTable>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"sortable-table\" class=\"mdl-typography--display-2\">Sortable table</h3>\n<div id=\"demo-17\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Table,\n    {\n        sortable: true,\n        shadow: 0,\n        rows: [{ material: 'Acrylic (Transparent)', quantity: 25, price: 2.90 }, { material: 'Plywood (Birch)', quantity: 50, price: 1.25 }, { material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35 }]\n    },\n    React.createElement(\n        TableHeader,\n        {\n            name: 'material',\n            sortable: true,\n            sortFn: (a, b, isAsc) => (isAsc ? a : b).match(/\\((.*)\\)/)[1].localeCompare((isAsc ? b : a).match(/\\((.*)\\)/)[1]),\n            tooltip: 'The amazing material name'\n        },\n        'Material'\n    ),\n    React.createElement(\n        TableHeader,\n        {\n            numeric: true,\n            name: 'quantity',\n            tooltip: 'Number of materials'\n        },\n        'Quantity'\n    ),\n    React.createElement(\n        TableHeader,\n        {\n            numeric: true,\n            sortable: true,\n            name: 'price',\n            cellFormatter: price => `\\$${ price.toFixed(2) }`,\n            tooltip: 'Price pet unit'\n        },\n        'Price'\n    )\n);;\n        var cont = document.getElementById(\"demo-17\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Table</span>\n    <span class=\"token attr-name\" >sortable</span>\n    <span class=\"token attr-name\" >shadow</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >[</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Acrylic (Transparent)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >25</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.90</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Plywood (Birch)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >50</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >1.25</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >,</span>\n        <span class=\"token punctuation\" >{</span>material<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'Laminate (Gold on Blue)'</span><span class=\"token punctuation\" >,</span> quantity<span class=\"token punctuation\" >:</span> <span class=\"token number\" >10</span><span class=\"token punctuation\" >,</span> price<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2.35</span><span class=\"token punctuation\" >}</span>\n    <span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span>\n        <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>material<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >sortable</span>\n        <span class=\"token attr-name\" >sortFn</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>a<span class=\"token punctuation\" >,</span> b<span class=\"token punctuation\" >,</span> isAsc<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >(</span>isAsc <span class=\"token operator\" >?</span> a <span class=\"token punctuation\" >:</span> b<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >match</span><span class=\"token punctuation\" >(</span><span class=\"token regex\" >/\\((.*)\\)/</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >localeCompare</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >(</span>isAsc <span class=\"token operator\" >?</span> b <span class=\"token punctuation\" >:</span> a<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >match</span><span class=\"token punctuation\" >(</span><span class=\"token regex\" >/\\((.*)\\)/</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >[</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >]</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span></span>\n        <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>The</span> <span class=\"token attr-name\" >amazing</span> <span class=\"token attr-name\" >material</span> <span class=\"token attr-name\" >name\"</span>\n    <span class=\"token punctuation\" >></span></span>\n        Material\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span>\n        <span class=\"token attr-name\" >numeric</span>\n        <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>quantity<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >materials\"</span>\n    <span class=\"token punctuation\" >></span></span>\n        Quantity\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>TableHeader</span>\n        <span class=\"token attr-name\" >numeric</span>\n        <span class=\"token attr-name\" >sortable</span>\n        <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>price<span class=\"token punctuation\" >\"</span></span>\n        <span class=\"token attr-name\" >cellFormatter</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>price<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token template-string\" ><span class=\"token string\" >`\\$</span><span class=\"token interpolation\" ><span class=\"token interpolation-punctuation punctuation\" >${</span>price<span class=\"token punctuation\" >.</span><span class=\"token function\" >toFixed</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >)</span><span class=\"token interpolation-punctuation punctuation\" >}</span></span><span class=\"token string\" >`</span></span><span class=\"token punctuation\" >}</span></span>\n        <span class=\"token attr-name\" >tooltip</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Price</span> <span class=\"token attr-name\" >pet</span> <span class=\"token attr-name\" >unit\"</span>\n    <span class=\"token punctuation\" >></span></span>\n        Price\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>TableHeader</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Table</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Table\\n    sortable\\n    shadow={0}\\n    rows={[\\n        {material: &apos;Acrylic (Transparent)&apos;, quantity: 25, price: 2.90},\\n        {material: &apos;Plywood (Birch)&apos;, quantity: 50, price: 1.25},\\n        {material: &apos;Laminate (Gold on Blue)&apos;, quantity: 10, price: 2.35}\\n    ]}\\n>\\n    <TableHeader\\n        name=\\&​quot;material\\&​quot;\\n        sortable\\n        sortFn={(a, b, isAsc) => (isAsc ? a : b).match(/\\\\((.*)\\\\)/)[1].localeCompare((isAsc ? b : a).match(/\\\\((.*)\\\\)/)[1])}\\n        tooltip=\\&​quot;The amazing material name\\&​quot;\\n    >\\n        Material\\n    </TableHeader>\\n    <TableHeader\\n        numeric\\n        name=\\&​quot;quantity\\&​quot;\\n        tooltip=\\&​quot;Number of materials\\&​quot;\\n    >\\n        Quantity\\n    </TableHeader>\\n    <TableHeader\\n        numeric\\n        sortable\\n        name=\\&​quot;price\\&​quot;\\n        cellFormatter={(price) => `\\\\$${price.toFixed(2)}`}\\n        tooltip=\\&​quot;Price pet unit\\&​quot;\\n    >\\n        Price\\n    </TableHeader>\\n</Table>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">columns</td>\n<td style=\"text-align:left\">Array of {label, name, numeric, tooltip}</td>\n<td style=\"text-align:left\">Set the columns</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onSelectionChanged</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Handler to get the selected rows</td>\n<td style=\"text-align:left\">Optional. Required when <code>selectable</code> is set</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">rowKeyColumn</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Will define the <code>key</code> for each row based on the content of the column specified (will often be <code>id</code> or <code>uid</code>)</td>\n<td style=\"text-align:left\">Optional, but recommended</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">rows</td>\n<td style=\"text-align:left\">Array of object</td>\n<td style=\"text-align:left\">Set the rows data</td>\n<td style=\"text-align:left\">Required. The properties of each object should be the &quot;name&quot; of each column</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">selectable</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Adds checkboxes in front of each rows to select it</td>\n<td style=\"text-align:left\">Optional.</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 355 */
+/* 363 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"dialogs\" class=\"mdl-typography--display-4\">Dialogs</h1>\n<blockquote>\n<p>This component uses <a href=\"https://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element\">dialog element</a>, which is only supported by Chrome and Opera currently. For other browsers, you need to include a <a href=\"https://github.com/GoogleChrome/dialog-polyfill\">polyfill</a> in your code.</p>\n<p>If you&#39;re using the <code>Dialog</code> component with a full MDL app, you will also need to set a custom <code>z-index</code> on the <code>Layout</code> to make the <code>Dialog</code> be accessible on top of the dark overlay. A value of <code>100001</code> is required for this to work.</p>\n</blockquote>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-dialog\" class=\"mdl-typography--display-2\">Simple Dialog</h3>\n<div id=\"demo-18\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },\n          'Show Dialog'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow data collection?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            null,\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-18\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Dialog<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow data collection<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>\\n        <Dialog open={this.state.openDialog}>\\n          <DialogTitle>Allow data collection?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"dialog-with-full-width-actions\" class=\"mdl-typography--display-2\">Dialog with Full Width Actions</h3>\n<div id=\"demo-19\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },\n          'Show Modal'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow this site to collect usage data to improve your experience?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            { fullWidth: true },\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-19\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Modal<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow <span class=\"token keyword\" >this</span> site to collect usage data to improve your experience<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions fullWidth<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Modal</Button>\\n        <Dialog open={this.state.openDialog}>\\n          <DialogTitle>Allow this site to collect usage data to improve your experience?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions fullWidth>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"dialog-with-cancel-event-handler\" class=\"mdl-typography--display-2\">Dialog with Cancel Event Handler</h3>\n<div id=\"demo-20\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Cancel event is emitted when the user clicks \"Escape\" key while the modal is open.\n     It doesn't do anything by default.*/}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.state = {};\n    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);\n    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleOpenDialog',\n    value: function handleOpenDialog() {\n      this.setState({\n        openDialog: true\n      });\n    }\n  }, {\n    key: 'handleCloseDialog',\n    value: function handleCloseDialog() {\n      this.setState({\n        openDialog: false\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { colored: true, onClick: this.handleOpenDialog, onCancel: this.handleCloseDialog, raised: true, ripple: true },\n          'Show Dialog'\n        ),\n        React.createElement(\n          Dialog,\n          { open: this.state.openDialog, onCancel: this.handleCloseDialog },\n          React.createElement(\n            DialogTitle,\n            null,\n            'Allow data collection?'\n          ),\n          React.createElement(\n            DialogContent,\n            null,\n            React.createElement(\n              'p',\n              null,\n              'Allowing us to collect data will let us get you the information you want faster.'\n            )\n          ),\n          React.createElement(\n            DialogActions,\n            null,\n            React.createElement(\n              Button,\n              { type: 'button' },\n              'Agree'\n            ),\n            React.createElement(\n              Button,\n              { type: 'button', onClick: this.handleCloseDialog },\n              'Disagree'\n            )\n          )\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-20\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Cancel event is emitted when the user clicks \"Escape\" key while the modal is open.\n    It doesn't do anything by default.*/</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleOpenDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleCloseDialog</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      openDialog<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button colored onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleOpenDialog<span class=\"token punctuation\" >}</span> onCancel<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span> raised ripple<span class=\"token operator\" >></span>Show Dialog<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Dialog open<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>openDialog<span class=\"token punctuation\" >}</span> onCancel<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogTitle<span class=\"token operator\" >></span>Allow data collection<span class=\"token operator\" >?</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogTitle<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogContent<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>p<span class=\"token operator\" >></span>Allowing us to collect data will <span class=\"token keyword\" >let</span> us <span class=\"token keyword\" >get</span> you the information you want faster<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>p<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogContent<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span>DialogActions<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span><span class=\"token operator\" >></span>Agree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span>Button type<span class=\"token operator\" >=</span><span class=\"token string\" >'button'</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleCloseDialog<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Disagree<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>DialogActions<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Dialog<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Cancel event is emitted when the user clicks \\&​quot;Escape\\&​quot; key while the modal is open.\\n    It doesn&apos;t do anything by default.*/}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.state = {};\\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\\n  }\\n\\n  handleOpenDialog() {\\n    this.setState({\\n      openDialog: true\\n    });\\n  }\\n\\n  handleCloseDialog() {\\n    this.setState({\\n      openDialog: false\\n    });\\n  }\\n\\n  render() {\\n    return (\\n      <div>\\n        <Button colored onClick={this.handleOpenDialog} onCancel={this.handleCloseDialog} raised ripple>Show Dialog</Button>\\n        <Dialog open={this.state.openDialog} onCancel={this.handleCloseDialog}>\\n          <DialogTitle>Allow data collection?</DialogTitle>\\n          <DialogContent>\\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\\n          </DialogContent>\\n          <DialogActions>\\n            <Button type=&apos;button&apos;>Agree</Button>\\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\\n          </DialogActions>\\n        </Dialog>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Dialog</td>\n<td style=\"text-align:left\">onCancel</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the handler for the cancel event. (When the user press the &quot;Escape&quot; key)</td>\n<td style=\"text-align:left\">Optional. By default, the default behavior (closing the dialog) is prevented.</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Dialog</td>\n<td style=\"text-align:left\">open</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the open state of the dialog</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">DialogTitle</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String, Element, Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the element</td>\n<td style=\"text-align:left\">Optional. Default &#39;h4&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">DialogActions</td>\n<td style=\"text-align:left\">fullWidth</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Apply the full-width effect to all children of dialog actions</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 356 */
+/* 364 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"react-mdl\" class=\"mdl-typography--display-4\">React-MDL</h1>\n<p>React-MDL is a React wrapper for <a href=\"http://www.getmdl.io\">Material Design Lite</a>, a set of material components maintained by Google.</p>\n<p>This documentation is actually built entirely with React-MDL. You&#39;ll find examples of the available components.</p>\n<p>If you want to experiment using codepen for example, you can find the React-MDL <a href=\"https://npmcdn.com/react-mdl/out/ReactMDL.js\">bundle JS file</a> and its <a href=\"https://npmcdn.com/react-mdl/out/ReactMDL.min.js\">minified version</a>. Don&#39;t forget to include React and React-DOM for your demos.</p>\n";
 
 /***/ },
-/* 357 */
+/* 365 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1 id=\"layout\" class=\"mdl-typography--display-4\">Layout</h1>\n<ul>\n<li><a href=\"#navigation-layout\">Navigation Layout</a></li>\n<li><a href=\"#grid\">Grid</a></li>\n<li><a href=\"#tabs\">Tabs</a></li>\n<li><a href=\"#footer\">Footer</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"navigation-layout\" class=\"mdl-typography--display-2\">Navigation Layout</h3>\n<div id=\"demo-21\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { style: { background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' } },\n        React.createElement(\n            Header,\n            { transparent: true, title: 'Title', style: { color: 'white' } },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-21\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a transparent header that draws on top of the layout's background */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >transparent</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'white'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout style={{background: &apos;url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover&apos;}}>\\n        <Header transparent title=\\&​quot;Title\\&​quot; style={{color: &apos;white&apos;}}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-22\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedDrawer: true },\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-22\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* No header, and the drawer stays open on larger screens (fixed drawer). */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedDrawer>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-23\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true },\n        React.createElement(\n            Header,\n            { title: React.createElement(\n                    'span',\n                    null,\n                    React.createElement(\n                        'span',\n                        { style: { color: '#ddd' } },\n                        'Area / '\n                    ),\n                    React.createElement(\n                        'strong',\n                        null,\n                        'The Title'\n                    )\n                ) },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-23\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Always shows a header, even in smaller screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title={&lt;span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#ddd'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Area <span class=\"token operator\" >/</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span>The Title<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader>\\n        <Header title={<span><span style={{ color: &apos;#ddd&apos; }}>Area / </span><strong>The Title</strong></span>}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-24\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedDrawer: true },\n        React.createElement(\n            Header,\n            { title: 'Title' },\n            React.createElement(Textfield, {\n                value: '',\n                onChange: () => {},\n                label: 'Search',\n                expandable: true,\n                expandableIcon: 'search'\n            })\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-24\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* The drawer is always open in large screens. The header is always shown, even in small screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >expandable</span>\n                <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n            <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedDrawer>\\n        <Header title=\\&​quot;Title\\&​quot;>\\n            <Textfield\\n                value=\\&​quot;\\&​quot;\\n                onChange={() => {}}\\n                label=\\&​quot;Search\\&​quot;\\n                expandable\\n                expandableIcon=\\&​quot;search\\&​quot;\\n            />\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-25\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { title: \"Title\", scroll: true },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-25\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that scrolls with the text, rather than staying locked at the top */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >scroll</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header title=\\&​quot;Title\\&​quot; scroll>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-26\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-26\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that contracts as the page scrolls down. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-27\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true, hideTop: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-27\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Hide the top part of the header when scrolling down */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span> <span class=\"token attr-name\" >hideTop</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall hideTop>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-28\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true },\n        React.createElement(\n            Header,\n            null,\n            React.createElement(HeaderRow, { title: 'Title' }),\n            React.createElement(\n                HeaderTabs,\n                { activeTab: 2, onChange: tabId => {} },\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab1'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab2'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab3'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab4'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab5'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab6'\n                )\n            )\n        ),\n        React.createElement(Drawer, { title: 'Title' }),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\n                'div',\n                { className: 'page-content' },\n                'You can add logic to update the content of this container based on the \"activeTab\" receive in the `onChange` callback.'\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-28\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple header with scrollable tabs. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderTabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab1<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab2<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab3<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab4<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab5<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab6<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader>\\n        <Header>\\n            <HeaderRow title=\\&​quot;Title\\&​quot; />\\n            <HeaderTabs activeTab={2} onChange={(tabId) => {}}>\\n                <Tab>Tab1</Tab>\\n                <Tab>Tab2</Tab>\\n                <Tab>Tab3</Tab>\\n                <Tab>Tab4</Tab>\\n                <Tab>Tab5</Tab>\\n                <Tab>Tab6</Tab>\\n            </HeaderTabs>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot; />\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-29\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedTabs: true },\n        React.createElement(\n            Header,\n            null,\n            React.createElement(HeaderRow, { title: 'Title' }),\n            React.createElement(\n                HeaderTabs,\n                { activeTab: 1, onChange: tabId => {} },\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab1'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab2'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab3'\n                )\n            )\n        ),\n        React.createElement(Drawer, { title: 'Title' }),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\n                'div',\n                { className: 'page-content' },\n                'You can add logic to update the content of this container based on the \"activeTab\" receive in the `onChange` callback.'\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-29\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple header with fixed tabs. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderTabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab1<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab2<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab3<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedTabs>\\n        <Header>\\n            <HeaderRow title=\\&​quot;Title\\&​quot; />\\n            <HeaderTabs activeTab={1} onChange={(tabId) => {}}>\\n                <Tab>Tab1</Tab>\\n                <Tab>Tab2</Tab>\\n                <Tab>Tab3</Tab>\\n            </HeaderTabs>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot; />\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Drawer</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the Drawer title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedDrawer</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the drawer always visible and open in larger screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedHeader</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header always visible, even in small screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedTabs</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses fixed tabs instead of the default scrollable tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">scroll</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header scroll with the content</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">seamed</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses a header without a shadow</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">transparent</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes header transparent</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">waterfall</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Allows a &quot;waterfall&quot; effect with multiple header lines</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">hideTop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the top part of the header when used with <code>waterfall</code></td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">HeaderRow</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Content</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the element</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"grid\" class=\"mdl-typography--display-2\">Grid</h3>\n<style>.demo-grid-ruler .mdl-cell,\n.demo-grid-1 .mdl-cell,\n.demo-grid-2 .mdl-cell,\n.demo-grid-3 .mdl-cell {\n  box-sizing: border-box;\n  background-color: #BDBDBD;\n  height: 100px;\n  padding-left: 8px;\n  padding-top: 4px;\n  color: white;\n}\n.demo-grid-ruler.demo-grid-ruler .mdl-cell {\n  height: 50px;\n}</style><div id=\"demo-30\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { width: '80%', margin: 'auto' } },\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-ruler' },\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-1' },\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-2' },\n        React.createElement(\n            Cell,\n            { col: 6 },\n            '6'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2 },\n            '2'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-3' },\n        React.createElement(\n            Cell,\n            { col: 6, tablet: 8 },\n            '6 (8 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4, tablet: 6 },\n            '4 (6 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2, phone: 4 },\n            '2 (4 phone)'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-30\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'80%'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-ruler<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >8</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >8</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >6</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >phone</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >4</span> phone<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{width: &apos;80%&apos;, margin: &apos;auto&apos;}}>\\n    <Grid className=\\&​quot;demo-grid-ruler\\&​quot;>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-1\\&​quot;>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-2\\&​quot;>\\n        <Cell col={6}>6</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={2}>2</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-3\\&​quot;>\\n        <Cell col={6} tablet={8}>6 (8 tablet)</Cell>\\n        <Cell col={4} tablet={6}>4 (6 tablet)</Cell>\\n        <Cell col={2} phone={4}>2 (4 phone)</Cell>\\n    </Grid>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the grid</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">noSpacing</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Removes the margins between the cells.</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">align</td>\n<td style=\"text-align:left\">String[top, middle, bottom, stretch]</td>\n<td style=\"text-align:left\">Set the cell alignment</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">col</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\"></td>\n<td style=\"text-align:left\">Element</td>\n<td></td>\n<td>Function</td>\n<td>Specify the custom component to use to render the cell</td>\n<td>Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideDesktop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in desktop mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hidePhone</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideTablet</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">phone</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">tablet</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"tabs\" class=\"mdl-typography--display-2\">Tabs</h3>\n<style>.demo-tabs {\n    width: 70%;\n    margin: auto;\n}\n.demo-tabs .content {\n    height: 100px;\n}</style><div id=\"demo-31\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-tabs\" },\n    React.createElement(\n        Tabs,\n        { activeTab: 1, onChange: tabId => {}, ripple: true },\n        React.createElement(\n            Tab,\n            null,\n            \"Starks\"\n        ),\n        React.createElement(\n            Tab,\n            null,\n            \"Lannisters\"\n        ),\n        React.createElement(\n            Tab,\n            null,\n            \"Targaryens\"\n        )\n    ),\n    React.createElement(\n        \"section\",\n        null,\n        React.createElement(\n            \"div\",\n            { className: \"content\" },\n            \"You can add logic to update the content of this container based on the \\\"activeTab\\\" receive in the `onChange` callback.\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-31\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-tabs<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Starks<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Lannisters<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Targaryens<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tabs</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>section</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>section</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-tabs\\&​quot;>\\n    <Tabs activeTab={1} onChange={(tabId) => {}} ripple>\\n        <Tab>Starks</Tab>\\n        <Tab>Lannisters</Tab>\\n        <Tab>Targaryens</Tab>\\n    </Tabs>\\n    <section>\\n        <div className=\\&​quot;content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n    </section>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">activeTab</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the active tab</td>\n<td style=\"text-align:left\">Optional, default 0</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Set the change callback</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies ripples effect on tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">tabBarProps</td>\n<td style=\"text-align:left\">Object</td>\n<td style=\"text-align:left\">Pass Props to the TabBar Element</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"footer\" class=\"mdl-typography--display-2\">Footer</h3>\n<div id=\"demo-32\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mega\" },\n    React.createElement(\n        FooterSection,\n        { type: \"middle\" },\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Features\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"About\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Terms\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Partners\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Updates\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Details\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Specs\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Tools\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Resources\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Technology\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"How it works\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Patterns\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Usage\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Products\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contracts\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"FAQ\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Questions\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Answers\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contact Us\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        FooterSection,\n        { type: \"bottom\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-32\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mega<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>middle<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Features<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>About<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Partners<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Updates<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Details<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Specs<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Tools<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Resources<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Technology<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>How it works<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Patterns<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Usage<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Products<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contracts<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>FAQ<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Questions<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Answers<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contact Us<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mega\\&​quot;>\\n    <FooterSection type=\\&​quot;middle\\&​quot;>\\n        <FooterDropDownSection title=\\&​quot;Features\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>About</a>\\n                <a href=\\&​quot;#\\&​quot;>Terms</a>\\n                <a href=\\&​quot;#\\&​quot;>Partners</a>\\n                <a href=\\&​quot;#\\&​quot;>Updates</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Details\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Specs</a>\\n                <a href=\\&​quot;#\\&​quot;>Tools</a>\\n                <a href=\\&​quot;#\\&​quot;>Resources</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Technology\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>How it works</a>\\n                <a href=\\&​quot;#\\&​quot;>Patterns</a>\\n                <a href=\\&​quot;#\\&​quot;>Usage</a>\\n                <a href=\\&​quot;#\\&​quot;>Products</a>\\n                <a href=\\&​quot;#\\&​quot;>Contracts</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;FAQ\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Questions</a>\\n                <a href=\\&​quot;#\\&​quot;>Answers</a>\\n                <a href=\\&​quot;#\\&​quot;>Contact Us</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n    </FooterSection>\\n    <FooterSection type=\\&​quot;bottom\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-33\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mini\" },\n    React.createElement(\n        FooterSection,\n        { type: \"left\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-33\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mini<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mini\\&​quot;>\\n    <FooterSection type=\\&​quot;left\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Footer</td>\n<td style=\"text-align:left\">size</td>\n<td style=\"text-align:left\">String (mini, mega)</td>\n<td style=\"text-align:left\">Set the size of the footer</td>\n<td style=\"text-align:left\">Optional, default &quot;mega&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">logo</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Optional, used only in the mini footer</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">type</td>\n<td style=\"text-align:left\">String (top, middle, bottom, left, right)</td>\n<td style=\"text-align:left\">Set the section type</td>\n<td style=\"text-align:left\">Optional, default left</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterDropDownSection</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n";
+	module.exports = "<h1 id=\"layout\" class=\"mdl-typography--display-4\">Layout</h1>\n<ul>\n<li><a href=\"#navigation-layout\">Navigation Layout</a></li>\n<li><a href=\"#grid\">Grid</a></li>\n<li><a href=\"#tabs\">Tabs</a></li>\n<li><a href=\"#footer\">Footer</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"navigation-layout\" class=\"mdl-typography--display-2\">Navigation Layout</h3>\n<div id=\"demo-21\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { style: { background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' } },\n        React.createElement(\n            Header,\n            { transparent: true, title: 'Title', style: { color: 'white' } },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-21\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a transparent header that draws on top of the layout's background */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>background<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >transparent</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'white'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout style={{background: &apos;url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover&apos;}}>\\n        <Header transparent title=\\&​quot;Title\\&​quot; style={{color: &apos;white&apos;}}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-22\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedDrawer: true },\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-22\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* No header, and the drawer stays open on larger screens (fixed drawer). */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedDrawer>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-23\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true },\n        React.createElement(\n            Header,\n            { title: React.createElement(\n                    'span',\n                    null,\n                    React.createElement(\n                        'span',\n                        { style: { color: '#ddd' } },\n                        'Area / '\n                    ),\n                    React.createElement(\n                        'strong',\n                        null,\n                        'The Title'\n                    )\n                ) },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-23\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Always shows a header, even in smaller screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title={&lt;span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span> color<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#ddd'</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>Area <span class=\"token operator\" >/</span> <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span>The Title<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader>\\n        <Header title={<span><span style={{ color: &apos;#ddd&apos; }}>Area / </span><strong>The Title</strong></span>}>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-24\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedDrawer: true },\n        React.createElement(\n            Header,\n            { title: 'Title' },\n            React.createElement(Textfield, {\n                value: '',\n                onChange: () => {},\n                label: 'Search',\n                expandable: true,\n                expandableIcon: 'search'\n            })\n        ),\n        React.createElement(\n            Drawer,\n            { title: 'Title' },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                ),\n                React.createElement(\n                    'a',\n                    { href: '' },\n                    'Link'\n                )\n            )\n        ),\n        React.createElement(Content, null)\n    )\n);;\n        var cont = document.getElementById(\"demo-24\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* The drawer is always open in large screens. The header is always shown, even in small screens. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedDrawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token attr-name\" >expandable</span>\n                <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n            <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedDrawer>\\n        <Header title=\\&​quot;Title\\&​quot;>\\n            <Textfield\\n                value=\\&​quot;\\&​quot;\\n                onChange={() => {}}\\n                label=\\&​quot;Search\\&​quot;\\n                expandable\\n                expandableIcon=\\&​quot;search\\&​quot;\\n            />\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content />\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-25\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { title: \"Title\", scroll: true },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-25\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that scrolls with the text, rather than staying locked at the top */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >scroll</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header title=\\&​quot;Title\\&​quot; scroll>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-26\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-26\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Uses a header that contracts as the page scrolls down. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-27\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    \"div\",\n    { className: \"demo-big-content\" },\n    React.createElement(\n        Layout,\n        null,\n        React.createElement(\n            Header,\n            { waterfall: true, hideTop: true },\n            React.createElement(\n                HeaderRow,\n                { title: \"Title\" },\n                React.createElement(Textfield, {\n                    value: \"\",\n                    onChange: () => {},\n                    label: \"Search\",\n                    expandable: true,\n                    expandableIcon: \"search\"\n                })\n            ),\n            React.createElement(\n                HeaderRow,\n                null,\n                React.createElement(\n                    Navigation,\n                    null,\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    ),\n                    React.createElement(\n                        \"a\",\n                        { href: \"\" },\n                        \"Link\"\n                    )\n                )\n            )\n        ),\n        React.createElement(\n            Drawer,\n            { title: \"Title\" },\n            React.createElement(\n                Navigation,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"\" },\n                    \"Link\"\n                )\n            )\n        ),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\"div\", { className: \"page-content\" })\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-27\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Hide the top part of the header when scrolling down */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-big-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span> <span class=\"token attr-name\" >waterfall</span> <span class=\"token attr-name\" >hideTop</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n                    <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n                    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Search<span class=\"token punctuation\" >\"</span></span>\n                    <span class=\"token attr-name\" >expandable</span>\n                    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n                <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderRow</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Link<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Navigation</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Drawer</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div className=\\&​quot;demo-big-content\\&​quot;>\\n    <Layout>\\n        <Header waterfall hideTop>\\n            <HeaderRow title=\\&​quot;Title\\&​quot;>\\n                <Textfield\\n                    value=\\&​quot;\\&​quot;\\n                    onChange={() => {}}\\n                    label=\\&​quot;Search\\&​quot;\\n                    expandable\\n                    expandableIcon=\\&​quot;search\\&​quot;\\n                />\\n            </HeaderRow>\\n            <HeaderRow>\\n                <Navigation>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                    <a href=\\&​quot;\\&​quot;>Link</a>\\n                </Navigation>\\n            </HeaderRow>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot;>\\n            <Navigation>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n                <a href=\\&​quot;\\&​quot;>Link</a>\\n            </Navigation>\\n        </Drawer>\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot; />\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-28\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n// Simple header with scrollable tabs\n\nvar Demo = function (_React$Component) {\n    _inherits(Demo, _React$Component);\n\n    function Demo(props) {\n        _classCallCheck(this, Demo);\n\n        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n        _this.state = { activeTab: 2 };\n        return _this;\n    }\n\n    _createClass(Demo, [{\n        key: 'render',\n        value: function render() {\n            var _this2 = this;\n\n            return React.createElement(\n                'div',\n                { style: { height: '300px', position: 'relative' } },\n                React.createElement(\n                    Layout,\n                    { fixedHeader: true },\n                    React.createElement(\n                        Header,\n                        null,\n                        React.createElement(HeaderRow, { title: 'Title' }),\n                        React.createElement(\n                            HeaderTabs,\n                            { activeTab: this.state.activeTab, onChange: function onChange(tabId) {\n                                    return _this2.setState({ activeTab: tabId });\n                                } },\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab1'\n                            ),\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab2'\n                            ),\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab3'\n                            ),\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab4'\n                            ),\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab5'\n                            ),\n                            React.createElement(\n                                Tab,\n                                null,\n                                'Tab6'\n                            )\n                        )\n                    ),\n                    React.createElement(Drawer, { title: 'Title' }),\n                    React.createElement(\n                        Content,\n                        null,\n                        React.createElement(\n                            'div',\n                            { className: 'page-content' },\n                            'Content for the tab: ',\n                            this.state.activeTab\n                        )\n                    )\n                )\n            );\n        }\n    }]);\n\n    return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-28\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token comment\" spellcheck=\"true\">// Simple header with scrollable tabs</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> activeTab<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n\n    <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n            <span class=\"token operator\" >&lt;</span>div style<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span>Layout fixedHeader<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Header<span class=\"token operator\" >></span>\n                        <span class=\"token operator\" >&lt;</span>HeaderRow title<span class=\"token operator\" >=</span><span class=\"token string\" >\"Title\"</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n                        <span class=\"token operator\" >&lt;</span>HeaderTabs activeTab<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>activeTab<span class=\"token punctuation\" >}</span> onChange<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> activeTab<span class=\"token punctuation\" >:</span> tabId <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab1<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab2<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab3<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab4<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab5<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                            <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Tab6<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                        <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>HeaderTabs<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Header<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Drawer title<span class=\"token operator\" >=</span><span class=\"token string\" >\"Title\"</span> <span class=\"token operator\" >/</span><span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Content<span class=\"token operator\" >></span>\n                        <span class=\"token operator\" >&lt;</span>div className<span class=\"token operator\" >=</span><span class=\"token string\" >\"page-content\"</span><span class=\"token operator\" >></span>Content <span class=\"token keyword\" >for</span> the tab<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>activeTab<span class=\"token punctuation\" >}</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Content<span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Layout<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n        <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n// Simple header with scrollable tabs\\nclass Demo extends React.Component {\\n    constructor(props) {\\n        super(props)\\n        this.state = { activeTab: 2 };\\n    }\\n\\n    render() {\\n        return (\\n            <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n                <Layout fixedHeader>\\n                    <Header>\\n                        <HeaderRow title=\\&​quot;Title\\&​quot; />\\n                        <HeaderTabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })}>\\n                            <Tab>Tab1</Tab>\\n                            <Tab>Tab2</Tab>\\n                            <Tab>Tab3</Tab>\\n                            <Tab>Tab4</Tab>\\n                            <Tab>Tab5</Tab>\\n                            <Tab>Tab6</Tab>\\n                        </HeaderTabs>\\n                    </Header>\\n                    <Drawer title=\\&​quot;Title\\&​quot; />\\n                    <Content>\\n                        <div className=\\&​quot;page-content\\&​quot;>Content for the tab: {this.state.activeTab}</div>\\n                    </Content>\\n                </Layout>\\n            </div>\\n        );\\n    }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-29\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { height: '300px', position: 'relative' } },\n    React.createElement(\n        Layout,\n        { fixedHeader: true, fixedTabs: true },\n        React.createElement(\n            Header,\n            null,\n            React.createElement(HeaderRow, { title: 'Title' }),\n            React.createElement(\n                HeaderTabs,\n                { activeTab: 1, onChange: tabId => {} },\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab1'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab2'\n                ),\n                React.createElement(\n                    Tab,\n                    null,\n                    'Tab3'\n                )\n            )\n        ),\n        React.createElement(Drawer, { title: 'Title' }),\n        React.createElement(\n            Content,\n            null,\n            React.createElement(\n                'div',\n                { className: 'page-content' },\n                'You can add logic to update the content of this container based on the \"activeTab\" receive in the `onChange` callback.'\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-29\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple header with fixed tabs. */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>height<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >,</span> position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Layout</span> <span class=\"token attr-name\" >fixedHeader</span> <span class=\"token attr-name\" >fixedTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Header</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderRow</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>HeaderTabs</span> <span class=\"token attr-name\" >activeTab</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab1<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab2<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tab</span><span class=\"token punctuation\" >></span></span>Tab3<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tab</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>HeaderTabs</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Header</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Drawer</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Content</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>page-content<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>You can add logic to update the content <span class=\"token keyword\" >of</span> <span class=\"token keyword\" >this</span> container based on the <span class=\"token string\" >\"activeTab\"</span> receive <span class=\"token keyword\" >in</span> the <span class=\"token template-string\" ><span class=\"token string\" >`onChange`</span></span> callback<span class=\"token punctuation\" >.</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Content</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Layout</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{height: &apos;300px&apos;, position: &apos;relative&apos;}}>\\n    <Layout fixedHeader fixedTabs>\\n        <Header>\\n            <HeaderRow title=\\&​quot;Title\\&​quot; />\\n            <HeaderTabs activeTab={1} onChange={(tabId) => {}}>\\n                <Tab>Tab1</Tab>\\n                <Tab>Tab2</Tab>\\n                <Tab>Tab3</Tab>\\n            </HeaderTabs>\\n        </Header>\\n        <Drawer title=\\&​quot;Title\\&​quot; />\\n        <Content>\\n            <div className=\\&​quot;page-content\\&​quot;>You can add logic to update the content of this container based on the \\&​quot;activeTab\\&​quot; receive in the `onChange` callback.</div>\\n        </Content>\\n    </Layout>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Drawer</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the Drawer title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedDrawer</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the drawer always visible and open in larger screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedHeader</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header always visible, even in small screens</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Layout</td>\n<td style=\"text-align:left\">fixedTabs</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses fixed tabs instead of the default scrollable tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">scroll</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes the header scroll with the content</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">seamed</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Uses a header without a shadow</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">transparent</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Makes header transparent</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">waterfall</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Allows a &quot;waterfall&quot; effect with multiple header lines</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Header</td>\n<td style=\"text-align:left\">hideTop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the top part of the header when used with <code>waterfall</code></td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">HeaderRow</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">Any</td>\n<td style=\"text-align:left\">Set the layout title</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Content</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String, Element, Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the element</td>\n<td style=\"text-align:left\">Optional. Default &#39;div&#39;</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"grid\" class=\"mdl-typography--display-2\">Grid</h3>\n<style>.demo-grid-ruler .mdl-cell,\n.demo-grid-1 .mdl-cell,\n.demo-grid-2 .mdl-cell,\n.demo-grid-3 .mdl-cell {\n  box-sizing: border-box;\n  background-color: #BDBDBD;\n  height: 100px;\n  padding-left: 8px;\n  padding-top: 4px;\n  color: white;\n}\n.demo-grid-ruler.demo-grid-ruler .mdl-cell {\n  height: 50px;\n}</style><div id=\"demo-30\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    'div',\n    { style: { width: '80%', margin: 'auto' } },\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-ruler' },\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        ),\n        React.createElement(\n            Cell,\n            { col: 1 },\n            '1'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-1' },\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-2' },\n        React.createElement(\n            Cell,\n            { col: 6 },\n            '6'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4 },\n            '4'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2 },\n            '2'\n        )\n    ),\n    React.createElement(\n        Grid,\n        { className: 'demo-grid-3' },\n        React.createElement(\n            Cell,\n            { col: 6, tablet: 8 },\n            '6 (8 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 4, tablet: 6 },\n            '4 (6 tablet)'\n        ),\n        React.createElement(\n            Cell,\n            { col: 2, phone: 4 },\n            '2 (4 phone)'\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-30\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'80%'</span><span class=\"token punctuation\" >,</span> margin<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'auto'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-ruler<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >1</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Grid</span> <span class=\"token attr-name\" >className</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-grid-3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >8</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >6</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >8</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >tablet</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >6</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >4</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >6</span> tablet<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Cell</span> <span class=\"token attr-name\" >col</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >2</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >phone</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >4</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span><span class=\"token number\" >2</span> <span class=\"token punctuation\" >(</span><span class=\"token number\" >4</span> phone<span class=\"token punctuation\" >)</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Cell</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Grid</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <div style={{width: &apos;80%&apos;, margin: &apos;auto&apos;}}>\\n    <Grid className=\\&​quot;demo-grid-ruler\\&​quot;>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n        <Cell col={1}>1</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-1\\&​quot;>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={4}>4</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-2\\&​quot;>\\n        <Cell col={6}>6</Cell>\\n        <Cell col={4}>4</Cell>\\n        <Cell col={2}>2</Cell>\\n    </Grid>\\n    <Grid className=\\&​quot;demo-grid-3\\&​quot;>\\n        <Cell col={6} tablet={8}>6 (8 tablet)</Cell>\\n        <Cell col={4} tablet={6}>4 (6 tablet)</Cell>\\n        <Cell col={2} phone={4}>2 (4 phone)</Cell>\\n    </Grid>\\n</div>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String,  Element,  Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the grid</td>\n<td style=\"text-align:left\">Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">noSpacing</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Removes the margins between the cells.</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Grid</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">align</td>\n<td style=\"text-align:left\">String[top, middle, bottom, stretch]</td>\n<td style=\"text-align:left\">Set the cell alignment</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">col</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">component</td>\n<td style=\"text-align:left\">String,  Element,  Function</td>\n<td style=\"text-align:left\">Specify the custom component to use to render the cell</td>\n<td style=\"text-align:left\">Optional. Default &#39;div&#39;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideDesktop</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in desktop mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hidePhone</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">hideTablet</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Hide the cell in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">phone</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in phone mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">tablet</td>\n<td style=\"text-align:left\">Number[1..12]</td>\n<td style=\"text-align:left\">Set the column size in tablet mode</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Cell</td>\n<td style=\"text-align:left\">shadow</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the shadow depth</td>\n<td style=\"text-align:left\">Optional, Default 0. Must be between 0 and 6</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"tabs\" class=\"mdl-typography--display-2\">Tabs</h3>\n<style>.demo-tabs {\n    width: 70%;\n    margin: auto;\n}\n.demo-tabs .content {\n    height: 100px;\n}</style><div id=\"demo-31\"></div>\n        <script class=\"demo-js\">\n        var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n// Simple header with scrollable tabs\n\nvar Demo = function (_React$Component) {\n    _inherits(Demo, _React$Component);\n\n    function Demo(props) {\n        _classCallCheck(this, Demo);\n\n        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n        _this.state = { activeTab: 2 };\n        return _this;\n    }\n\n    _createClass(Demo, [{\n        key: \"render\",\n        value: function render() {\n            var _this2 = this;\n\n            return React.createElement(\n                \"div\",\n                { className: \"demo-tabs\" },\n                React.createElement(\n                    Tabs,\n                    { activeTab: this.state.activeTab, onChange: function onChange(tabId) {\n                            return _this2.setState({ activeTab: tabId });\n                        }, ripple: true },\n                    React.createElement(\n                        Tab,\n                        null,\n                        \"Starks\"\n                    ),\n                    React.createElement(\n                        Tab,\n                        null,\n                        \"Lannisters\"\n                    ),\n                    React.createElement(\n                        Tab,\n                        null,\n                        \"Targaryens\"\n                    )\n                ),\n                React.createElement(\n                    \"section\",\n                    null,\n                    React.createElement(\n                        \"div\",\n                        { className: \"content\" },\n                        \"Content for the tab: \",\n                        this.state.activeTab\n                    )\n                )\n            );\n        }\n    }]);\n\n    return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-31\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token comment\" spellcheck=\"true\">// Simple header with scrollable tabs</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span>\n        <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> activeTab<span class=\"token punctuation\" >:</span> <span class=\"token number\" >2</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n\n    <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n        <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n            <span class=\"token operator\" >&lt;</span>div className<span class=\"token operator\" >=</span><span class=\"token string\" >\"demo-tabs\"</span><span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span>Tabs activeTab<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>activeTab<span class=\"token punctuation\" >}</span> onChange<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span>tabId<span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> activeTab<span class=\"token punctuation\" >:</span> tabId <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >}</span> ripple<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Starks<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Lannisters<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>Tab<span class=\"token operator\" >></span>Targaryens<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tab<span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Tabs<span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span>section<span class=\"token operator\" >></span>\n                    <span class=\"token operator\" >&lt;</span>div className<span class=\"token operator\" >=</span><span class=\"token string\" >\"content\"</span><span class=\"token operator\" >></span>Content <span class=\"token keyword\" >for</span> the tab<span class=\"token punctuation\" >:</span> <span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >.</span>activeTab<span class=\"token punctuation\" >}</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n                <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>section<span class=\"token operator\" >></span>\n            <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>    \n        <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n// Simple header with scrollable tabs\\nclass Demo extends React.Component {\\n    constructor(props) {\\n        super(props)\\n        this.state = { activeTab: 2 };\\n    }\\n\\n    render() {\\n        return (\\n            <div className=\\&​quot;demo-tabs\\&​quot;>\\n                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>\\n                    <Tab>Starks</Tab>\\n                    <Tab>Lannisters</Tab>\\n                    <Tab>Targaryens</Tab>\\n                </Tabs>\\n                <section>\\n                    <div className=\\&​quot;content\\&​quot;>Content for the tab: {this.state.activeTab}</div>\\n                </section>\\n            </div>    \\n        );\\n    }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">activeTab</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the active tab</td>\n<td style=\"text-align:left\">Optional, default 0</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Set the change callback</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies ripples effect on tabs</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Tabs</td>\n<td style=\"text-align:left\">tabBarProps</td>\n<td style=\"text-align:left\">Object</td>\n<td style=\"text-align:left\">Pass Props to the TabBar Element</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"footer\" class=\"mdl-typography--display-2\">Footer</h3>\n<div id=\"demo-32\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mega\" },\n    React.createElement(\n        FooterSection,\n        { type: \"middle\" },\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Features\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"About\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Terms\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Partners\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Updates\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Details\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Specs\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Tools\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Resources\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"Technology\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"How it works\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Patterns\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Usage\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Products\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contracts\"\n                )\n            )\n        ),\n        React.createElement(\n            FooterDropDownSection,\n            { title: \"FAQ\" },\n            React.createElement(\n                FooterLinkList,\n                null,\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Questions\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Answers\"\n                ),\n                React.createElement(\n                    \"a\",\n                    { href: \"#\" },\n                    \"Contact Us\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        FooterSection,\n        { type: \"bottom\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-32\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mega<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>middle<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Features<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>About<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Partners<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Updates<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Details<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Specs<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Tools<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Resources<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Technology<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>How it works<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Patterns<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Usage<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Products<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contracts<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterDropDownSection</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>FAQ<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Questions<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Answers<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n                <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Contact Us<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterDropDownSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mega\\&​quot;>\\n    <FooterSection type=\\&​quot;middle\\&​quot;>\\n        <FooterDropDownSection title=\\&​quot;Features\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>About</a>\\n                <a href=\\&​quot;#\\&​quot;>Terms</a>\\n                <a href=\\&​quot;#\\&​quot;>Partners</a>\\n                <a href=\\&​quot;#\\&​quot;>Updates</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Details\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Specs</a>\\n                <a href=\\&​quot;#\\&​quot;>Tools</a>\\n                <a href=\\&​quot;#\\&​quot;>Resources</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;Technology\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>How it works</a>\\n                <a href=\\&​quot;#\\&​quot;>Patterns</a>\\n                <a href=\\&​quot;#\\&​quot;>Usage</a>\\n                <a href=\\&​quot;#\\&​quot;>Products</a>\\n                <a href=\\&​quot;#\\&​quot;>Contracts</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n        <FooterDropDownSection title=\\&​quot;FAQ\\&​quot;>\\n            <FooterLinkList>\\n                <a href=\\&​quot;#\\&​quot;>Questions</a>\\n                <a href=\\&​quot;#\\&​quot;>Answers</a>\\n                <a href=\\&​quot;#\\&​quot;>Contact Us</a>\\n            </FooterLinkList>\\n        </FooterDropDownSection>\\n    </FooterSection>\\n    <FooterSection type=\\&​quot;bottom\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-33\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Footer,\n    { size: \"mini\" },\n    React.createElement(\n        FooterSection,\n        { type: \"left\", logo: \"Title\" },\n        React.createElement(\n            FooterLinkList,\n            null,\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Help\"\n            ),\n            React.createElement(\n                \"a\",\n                { href: \"#\" },\n                \"Privacy & Terms\"\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-33\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Footer</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>mini<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterSection</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >logo</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Title<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Help<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n            <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Privacy <span class=\"token operator\" >&amp;</span> Terms<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterLinkList</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>FooterSection</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Footer</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Footer size=\\&​quot;mini\\&​quot;>\\n    <FooterSection type=\\&​quot;left\\&​quot; logo=\\&​quot;Title\\&​quot;>\\n        <FooterLinkList>\\n            <a href=\\&​quot;#\\&​quot;>Help</a>\\n            <a href=\\&​quot;#\\&​quot;>Privacy & Terms</a>\\n        </FooterLinkList>\\n    </FooterSection>\\n</Footer>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Footer</td>\n<td style=\"text-align:left\">size</td>\n<td style=\"text-align:left\">String (mini, mega)</td>\n<td style=\"text-align:left\">Set the size of the footer</td>\n<td style=\"text-align:left\">Optional, default &quot;mega&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">logo</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Optional, used only in the mini footer</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterSection</td>\n<td style=\"text-align:left\">type</td>\n<td style=\"text-align:left\">String (top, middle, bottom, left, right)</td>\n<td style=\"text-align:left\">Set the section type</td>\n<td style=\"text-align:left\">Optional, default left</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">FooterDropDownSection</td>\n<td style=\"text-align:left\">title</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the &quot;logo&quot; name</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 358 */
+/* 366 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"lists\" class=\"mdl-typography--display-4\">Lists</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"simple-list\" class=\"mdl-typography--display-2\">Simple list</h3>\n<div id=\"demo-34\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  null,\n  React.createElement(\n    ListItem,\n    null,\n    \"Bryan Cranston\"\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    \"Aaron Paul\"\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    \"Bob Odenkirk\"\n  )\n);;\n        var cont = document.getElementById(\"demo-34\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List>\\n  <ListItem>Bryan Cranston</ListItem>\\n  <ListItem>Aaron Paul</ListItem>\\n  <ListItem>Bob Odenkirk</ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"simple-list-with-icon\" class=\"mdl-typography--display-2\">Simple list with icon</h3>\n<div id=\"demo-35\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  null,\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Bryan Cranston\"\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Aaron Paul\"\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { icon: \"person\" },\n      \"Bob Odenkirk\"\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-35\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent icon=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"list-with-avatar-and-simple-action\" class=\"mdl-typography--display-2\">List with avatar and simple action</h3>\n<div id=\"demo-36\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-36\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"list-with-avatar-and-complex-action\" class=\"mdl-typography--display-2\">List with avatar and complex action</h3>\n<div id=\"demo-37\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Checkbox, { defaultChecked: true })\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Radio, { value: 1 })\n    )\n  ),\n  React.createElement(\n    ListItem,\n    null,\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(Switch, { defaultChecked: true })\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-37\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >1</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <Checkbox defaultChecked />\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <Radio value={1} />\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <Switch defaultChecked />\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"two-line-list\" class=\"mdl-typography--display-2\">Two line list</h3>\n<div id=\"demo-38\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '300px' } },\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      { info: \"Actor\" },\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { twoLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"62 episodes\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-38\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'300px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span> <span class=\"token attr-name\" >info</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Actor<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >twoLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>62</span> <span class=\"token attr-name\" >episodes\"</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;300px&apos;}}>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction info=\\&​quot;Actor\\&​quot;>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem twoLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;62 episodes\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h3 id=\"three-line-list\" class=\"mdl-typography--display-2\">Three line list</h3>\n<div id=\"demo-39\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n  List,\n  { style: { width: '650px' } },\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.\" },\n      \"Bryan Cranston\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.\" },\n      \"Aaron Paul\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  ),\n  React.createElement(\n    ListItem,\n    { threeLine: true },\n    React.createElement(\n      ListItemContent,\n      { avatar: \"person\", subtitle: \"Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.\" },\n      \"Bob Odenkirk\"\n    ),\n    React.createElement(\n      ListItemAction,\n      null,\n      React.createElement(\n        \"a\",\n        { href: \"#\" },\n        React.createElement(Icon, { name: \"star\" })\n      )\n    )\n  )\n);;\n        var cont = document.getElementById(\"demo-39\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>List</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'650px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Bryan</span> <span class=\"token attr-name\" >Cranston</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Walter</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >He</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >also</span> <span class=\"token attr-name\" >known</span> <span class=\"token attr-name\" >for</span> <span class=\"token attr-name\" >playing</span> <span class=\"token attr-name\" >Hal</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Malcom</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >Middle.\"</span><span class=\"token punctuation\" >></span></span>Bryan Cranston<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Aaron</span> <span class=\"token attr-name\" >Paul</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Jesse</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >He</span> <span class=\"token attr-name\" >also</span> <span class=\"token attr-name\" >featured</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >Need</span> <span class=\"token attr-name\" >For</span> <span class=\"token attr-name\" >Speed</span> <span class=\"token attr-name\" >Movie.\"</span><span class=\"token punctuation\" >></span></span>Aaron Paul<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItem</span> <span class=\"token attr-name\" >threeLine</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemContent</span> <span class=\"token attr-name\" >avatar</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>person<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >subtitle</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Bob</span> <span class=\"token attr-name\" >Odinkrik</span> <span class=\"token attr-name\" >played</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >role</span> <span class=\"token attr-name\" >of</span> <span class=\"token attr-name\" >Saul</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >Breaking</span> <span class=\"token attr-name\" >Bad.</span> <span class=\"token attr-name\" >Due</span> <span class=\"token attr-name\" >to</span> <span class=\"token attr-name\" >public</span> <span class=\"token attr-name\" >fondness</span> <span class=\"token attr-name\" >for</span> <span class=\"token attr-name\" >the</span> <span class=\"token attr-name\" >character,</span> <span class=\"token attr-name\" >Bob</span> <span class=\"token attr-name\" >stars</span> <span class=\"token attr-name\" >in</span> <span class=\"token attr-name\" >his</span> <span class=\"token attr-name\" >own</span> <span class=\"token attr-name\" >show</span> <span class=\"token attr-name\" >now,</span> <span class=\"token attr-name\" >called</span> <span class=\"token attr-name\" >Better</span> <span class=\"token attr-name\" >Call</span> <span class=\"token attr-name\" >Saul.\"</span><span class=\"token punctuation\" >></span></span>Bob Odenkirk<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemContent</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>#<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>star<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItemAction</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>ListItem</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>List</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <List style={{width: &apos;650px&apos;}}>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.\\&​quot;>Bryan Cranston</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.\\&​quot;>Aaron Paul</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n  <ListItem threeLine>\\n    <ListItemContent avatar=\\&​quot;person\\&​quot; subtitle=\\&​quot;Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.\\&​quot;>Bob Odenkirk</ListItemContent>\\n    <ListItemAction>\\n      <a href=\\&​quot;#\\&​quot;><Icon name=\\&​quot;star\\&​quot; /></a>\\n    </ListItemAction>\\n  </ListItem>\\n</List>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">ListItem</td>\n<td style=\"text-align:left\">twoLine</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set item to have 2 lines</td>\n<td style=\"text-align:left\">Optional. Cannot be set alongside <code>threeline</code></td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItem</td>\n<td style=\"text-align:left\">twoLine</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set item to have 3 lines</td>\n<td style=\"text-align:left\">Optional. Cannot be set alongside <code>twoLine</code></td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">avatar</td>\n<td style=\"text-align:left\">string, Element</td>\n<td style=\"text-align:left\">Set the item left avatar</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">icon</td>\n<td style=\"text-align:left\">string, Element</td>\n<td style=\"text-align:left\">Set the item left icon</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemContent</td>\n<td style=\"text-align:left\">subtitle</td>\n<td style=\"text-align:left\">string</td>\n<td style=\"text-align:left\">Set the item subtitle</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ListItemAction</td>\n<td style=\"text-align:left\">info</td>\n<td style=\"text-align:left\">string</td>\n<td style=\"text-align:left\">Set a small header above the action</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 359 */
+/* 367 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"loading\" class=\"mdl-typography--display-4\">Loading</h1>\n<ul>\n<li><a href=\"#progress-bar\">Progress Bar</a></li>\n<li><a href=\"#spinner\">Spinner</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"progress-bar\" class=\"mdl-typography--display-2\">Progress Bar</h3>\n<div id=\"demo-40\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { progress: 44 });;\n        var cont = document.getElementById(\"demo-40\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple Progress Bar */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >progress</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >44</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar progress={44} />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-41\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { indeterminate: true });;\n        var cont = document.getElementById(\"demo-41\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Progress Bar with Indeterminate Progress */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >indeterminate</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar indeterminate />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-42\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(ProgressBar, { progress: 33, buffer: 87 });;\n        var cont = document.getElementById(\"demo-42\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Progress Bar with Buffering */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>ProgressBar</span> <span class=\"token attr-name\" >progress</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >33</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >buffer</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >87</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <ProgressBar progress={33} buffer={87} />;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">buffer</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Specify the buffer</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">indeterminate</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set as indeterminate</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">progress</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Specify the progress value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"spinner\" class=\"mdl-typography--display-2\">Spinner</h3>\n<div id=\"demo-43\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Spinner, null)\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Spinner, { singleColor: true })\n    )\n);;\n        var cont = document.getElementById(\"demo-43\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple spinner */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Spinner</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Single color spinner */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Spinner</span> <span class=\"token attr-name\" >singleColor</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Spinner />\\n                </Cell><Cell col={6}>\\n                    <Spinner singleColor />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">singleColor</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Use the primary color instead of a multi color spinner</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 360 */
+/* 368 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"menus\" class=\"mdl-typography--display-4\">Menus</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-44\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-lower-left\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-lower-left\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-lower-right\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-lower-right\", align: \"right\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-44\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Lower left */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Lower right */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-lower-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >align</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-lower-left\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-lower-left\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-lower-right\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-lower-right\\&​quot; align=\\&​quot;right\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-45\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-top-left\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-top-left\", valign: \"top\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            \"div\",\n            { style: { position: 'relative' } },\n            React.createElement(IconButton, { name: \"more_vert\", id: \"demo-menu-top-right\" }),\n            React.createElement(\n                Menu,\n                { target: \"demo-menu-top-right\", valign: \"top\", align: \"right\" },\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Some Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Another Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    { disabled: true },\n                    \"Disabled Action\"\n                ),\n                React.createElement(\n                    MenuItem,\n                    null,\n                    \"Yet Another Action\"\n                )\n            )\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-45\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top left */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-left<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >valign</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top right */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>position<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'relative'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconButton</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>more_vert<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Menu</span> <span class=\"token attr-name\" >target</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo-menu-top-right<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >valign</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >align</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Some Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n        <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>MenuItem</span><span class=\"token punctuation\" >></span></span>Yet Another Action<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>MenuItem</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Menu</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-top-left\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-top-left\\&​quot; valign=\\&​quot;top\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell><Cell col={6}>\\n                    <div style={{position: &apos;relative&apos;}}>\\n    <IconButton name=\\&​quot;more_vert\\&​quot; id=\\&​quot;demo-menu-top-right\\&​quot; />\\n    <Menu target=\\&​quot;demo-menu-top-right\\&​quot; valign=\\&​quot;top\\&​quot; align=\\&​quot;right\\&​quot;>\\n        <MenuItem>Some Action</MenuItem>\\n        <MenuItem>Another Action</MenuItem>\\n        <MenuItem disabled>Disabled Action</MenuItem>\\n        <MenuItem>Yet Another Action</MenuItem>\\n    </Menu>\\n</div>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">align</td>\n<td style=\"text-align:left\">String (left, right)</td>\n<td style=\"text-align:left\">Set the horizontal alignment</td>\n<td style=\"text-align:left\">Optional, default &quot;left&quot;</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Apply the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">target</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">ID of the targeted element. A click on the targeted element will open the menu</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Menu</td>\n<td style=\"text-align:left\">valign</td>\n<td style=\"text-align:left\">String (top, bottom)</td>\n<td style=\"text-align:left\">Set the vertical alignment</td>\n<td style=\"text-align:left\">Optional, default &quot;bottom&quot;</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 361 */
+/* 369 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"sliders\" class=\"mdl-typography--display-4\">Sliders</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-46\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Slider, { min: 0, max: 100, defaultValue: 0 })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Slider, { min: 0, max: 100, defaultValue: 25 })\n    )\n);;\n        var cont = document.getElementById(\"demo-46\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Default slider */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >100</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Slider with initial value */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Slider</span> <span class=\"token attr-name\" >min</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >0</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >max</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >100</span><span class=\"token punctuation\" >}</span></span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >25</span><span class=\"token punctuation\" >}</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Slider min={0} max={100} defaultValue={0} />\\n                </Cell><Cell col={6}>\\n                    <Slider min={0} max={100} defaultValue={25} />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">max</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the maximum value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">min</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the minimum value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback taking 1 parameter with the new value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Set the initial/current value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 362 */
+/* 370 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"snackbar\" class=\"mdl-typography--display-4\">Snackbar</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-47\"></div>\n        <script class=\"demo-js\">\n        'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Example of a snackbar */}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);\n    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);\n    _this.handleClickActionSnackbar = _this.handleClickActionSnackbar.bind(_this);\n    _this.state = { isSnackbarActive: false };\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: 'handleShowSnackbar',\n    value: function handleShowSnackbar() {\n      this.setState({\n        isSnackbarActive: true,\n        btnBgColor: '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16)\n      });\n    }\n  }, {\n    key: 'handleTimeoutSnackbar',\n    value: function handleTimeoutSnackbar() {\n      this.setState({ isSnackbarActive: false });\n    }\n  }, {\n    key: 'handleClickActionSnackbar',\n    value: function handleClickActionSnackbar() {\n      this.setState({\n        btnBgColor: ''\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _state = this.state;\n      var btnBgColor = _state.btnBgColor;\n      var isSnackbarActive = _state.isSnackbarActive;\n\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(\n          Button,\n          { raised: true, style: { backgroundColor: btnBgColor }, onClick: this.handleShowSnackbar },\n          'Show a Snackbar'\n        ),\n        React.createElement(\n          Snackbar,\n          {\n            active: isSnackbarActive,\n            onClick: this.handleClickActionSnackbar,\n            onTimeout: this.handleTimeoutSnackbar,\n            action: 'Undo' },\n          'Button color changed.'\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-47\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Example of a snackbar */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleShowSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span><span class=\"token punctuation\" >,</span>\n      btnBgColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'#'</span> <span class=\"token operator\" >+</span>\n        Math<span class=\"token punctuation\" >.</span><span class=\"token function\" >floor</span><span class=\"token punctuation\" >(</span>Math<span class=\"token punctuation\" >.</span><span class=\"token function\" >random</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >*</span> <span class=\"token number\" >0xFFFFFF</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >toString</span><span class=\"token punctuation\" >(</span><span class=\"token number\" >16</span><span class=\"token punctuation\" >)</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleTimeoutSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleClickActionSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span>\n      btnBgColor<span class=\"token punctuation\" >:</span> <span class=\"token string\" >''</span>\n    <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> btnBgColor<span class=\"token punctuation\" >,</span> isSnackbarActive <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button raised style<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>backgroundColor<span class=\"token punctuation\" >:</span> btnBgColor<span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span> onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Show a Snackbar<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Snackbar\n          active<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>isSnackbarActive<span class=\"token punctuation\" >}</span>\n          onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleClickActionSnackbar<span class=\"token punctuation\" >}</span>\n          onTimeout<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >}</span>\n          action<span class=\"token operator\" >=</span><span class=\"token string\" >\"Undo\"</span><span class=\"token operator\" >></span>Button color changed<span class=\"token punctuation\" >.</span><span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Snackbar<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Example of a snackbar */}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\\n    this.handleClickActionSnackbar = this.handleClickActionSnackbar.bind(this);\\n    this.state = { isSnackbarActive: false };\\n  }\\n\\n  handleShowSnackbar() {\\n    this.setState({\\n      isSnackbarActive: true,\\n      btnBgColor: &apos;#&apos; +\\n        Math.floor(Math.random() * 0xFFFFFF).toString(16)\\n    });\\n  }\\n  handleTimeoutSnackbar() {\\n    this.setState({ isSnackbarActive: false });\\n  }\\n  handleClickActionSnackbar() {\\n    this.setState({\\n      btnBgColor: &apos;&apos;\\n    });\\n  }\\n  render() {\\n    const { btnBgColor, isSnackbarActive } = this.state;\\n    return (\\n      <div>\\n        <Button raised style={{backgroundColor: btnBgColor}} onClick={this.handleShowSnackbar}>Show a Snackbar</Button>\\n        <Snackbar\\n          active={isSnackbarActive}\\n          onClick={this.handleClickActionSnackbar}\\n          onTimeout={this.handleTimeoutSnackbar}\\n          action=\\&​quot;Undo\\&​quot;>Button color changed.</Snackbar>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-48\"></div>\n        <script class=\"demo-js\">\n        var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n{/* Example of a toast (snackbar without action button) */}\n\nvar Demo = function (_React$Component) {\n  _inherits(Demo, _React$Component);\n\n  function Demo(props) {\n    _classCallCheck(this, Demo);\n\n    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Demo).call(this, props));\n\n    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);\n    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);\n    _this.state = { isSnackbarActive: false };\n    return _this;\n  }\n\n  _createClass(Demo, [{\n    key: \"handleShowSnackbar\",\n    value: function handleShowSnackbar() {\n      this.setState({ isSnackbarActive: true });\n    }\n  }, {\n    key: \"handleTimeoutSnackbar\",\n    value: function handleTimeoutSnackbar() {\n      this.setState({ isSnackbarActive: false });\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var isSnackbarActive = this.state.isSnackbarActive;\n\n      return React.createElement(\n        \"div\",\n        null,\n        React.createElement(\n          Button,\n          { raised: true, onClick: this.handleShowSnackbar },\n          \"Show a Toast\"\n        ),\n        React.createElement(\n          Snackbar,\n          {\n            active: isSnackbarActive,\n            onTimeout: this.handleTimeoutSnackbar },\n          \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem.\"\n        )\n      );\n    }\n  }]);\n\n  return Demo;\n}(React.Component);\n        var elem = React.createElement(Demo);\n        var cont = document.getElementById(\"demo-48\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-js\"><code class=\"language-js\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Example of a toast (snackbar without action button) */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token keyword\" >class</span> <span class=\"token class-name\" >Demo</span> <span class=\"token keyword\" >extends</span> <span class=\"token class-name\" >React<span class=\"token punctuation\" >.</span>Component</span> <span class=\"token punctuation\" >{</span>\n  <span class=\"token function\" >constructor</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >super</span><span class=\"token punctuation\" >(</span>props<span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >.</span><span class=\"token function\" >bind</span><span class=\"token punctuation\" >(</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state <span class=\"token operator\" >=</span> <span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n\n  <span class=\"token function\" >handleShowSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >true</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >handleTimeoutSnackbar</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span><span class=\"token function\" >setState</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >{</span> isSnackbarActive<span class=\"token punctuation\" >:</span> <span class=\"token boolean\" >false</span> <span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n  <span class=\"token function\" >render</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token punctuation\" >{</span>\n    <span class=\"token keyword\" >const</span> <span class=\"token punctuation\" >{</span> isSnackbarActive <span class=\"token punctuation\" >}</span> <span class=\"token operator\" >=</span> <span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>state<span class=\"token punctuation\" >;</span>\n    <span class=\"token keyword\" >return</span> <span class=\"token punctuation\" >(</span>\n      <span class=\"token operator\" >&lt;</span>div<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Button raised onClick<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleShowSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>Show a Toast<span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Button<span class=\"token operator\" >></span>\n        <span class=\"token operator\" >&lt;</span>Snackbar\n          active<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span>isSnackbarActive<span class=\"token punctuation\" >}</span>\n          onTimeout<span class=\"token operator\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token keyword\" >this</span><span class=\"token punctuation\" >.</span>handleTimeoutSnackbar<span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n            Lorem ipsum dolor sit amet<span class=\"token punctuation\" >,</span> consectetur adipiscing elit<span class=\"token punctuation\" >.</span> Fusce varius luctus quam<span class=\"token punctuation\" >.</span> Fusce quis blandit libero<span class=\"token punctuation\" >.</span> Donec accumsan nunc lectus<span class=\"token punctuation\" >,</span> vel blandit diam bibendum ac<span class=\"token punctuation\" >.</span> Integer faucibus<span class=\"token punctuation\" >,</span> lorem et convallis fermentum<span class=\"token punctuation\" >,</span> diam dolor imperdiet mi<span class=\"token punctuation\" >,</span> nec iaculis risus mauris id elit<span class=\"token punctuation\" >.</span> Vivamus vel eros dapibus<span class=\"token punctuation\" >,</span> molestie ante ut<span class=\"token punctuation\" >,</span> vestibulum sem<span class=\"token punctuation\" >.</span>\n          <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>Snackbar<span class=\"token operator\" >></span>\n      <span class=\"token operator\" >&lt;</span><span class=\"token operator\" >/</span>div<span class=\"token operator\" >></span>\n    <span class=\"token punctuation\" >)</span><span class=\"token punctuation\" >;</span>\n  <span class=\"token punctuation\" >}</span>\n<span class=\"token punctuation\" >}</span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n{/* Example of a toast (snackbar without action button) */}\\nclass Demo extends React.Component {\\n  constructor(props) {\\n    super(props);\\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\\n    this.state = { isSnackbarActive: false };\\n  }\\n\\n  handleShowSnackbar() {\\n    this.setState({ isSnackbarActive: true });\\n  }\\n  handleTimeoutSnackbar() {\\n    this.setState({ isSnackbarActive: false });\\n  }\\n  render() {\\n    const { isSnackbarActive } = this.state;\\n    return (\\n      <div>\\n        <Button raised onClick={this.handleShowSnackbar}>Show a Toast</Button>\\n        <Snackbar\\n          active={isSnackbarActive}\\n          onTimeout={this.handleTimeoutSnackbar}>\\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem.\\n          </Snackbar>\\n      </div>\\n    );\\n  }\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">action</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Specify the label of the action button</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">active</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the snackbar visible</td>\n<td style=\"text-align:left\">Required. Should be false when mounting the component</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onActionClick</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Function to call when the action button is clicked</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onTimeout</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Function to call when the snackbar is getting hidden</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">timeout</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the time (in ms) to show the snackbar</td>\n<td style=\"text-align:left\">Optional. Default 2750</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 363 */
+/* 371 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"textfield\" class=\"mdl-typography--display-4\">Textfield</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-49\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text...\",\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                pattern: \"-?[0-9]*(\\\\.[0-9]+)?\",\n                                                error: \"Input is not a number!\",\n                                                label: \"Number...\",\n                                                style: { width: '200px' }\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-49\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Numeric textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pattern</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>-?[0-9]*(\\.[0-9]+)?<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >error</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Input</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >not</span> <span class=\"token attr-name\" >a</span> <span class=\"token attr-name\" >number!\"</span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text...\\&​quot;\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    pattern=\\&​quot;-?[0-9]*(\\\\.[0-9]+)?\\&​quot;\\n    error=\\&​quot;Input is not a number!\\&​quot;\\n    label=\\&​quot;Number...\\&​quot;\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-50\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text...\",\n                                                floatingLabel: true,\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                pattern: \"-?[0-9]*(\\\\.[0-9]+)?\",\n                                                error: \"Input is not a number!\",\n                                                label: \"Number...\",\n                                                floatingLabel: true\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-50\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Textfield with floating label */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >floatingLabel</span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Numeric Textfield with floating label */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >pattern</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>-?[0-9]*(\\.[0-9]+)?<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >error</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Input</span> <span class=\"token attr-name\" >is</span> <span class=\"token attr-name\" >not</span> <span class=\"token attr-name\" >a</span> <span class=\"token attr-name\" >number!\"</span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Number...<span class=\"token punctuation\" >\"</span></span>\n    <span class=\"token attr-name\" >floatingLabel</span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text...\\&​quot;\\n    floatingLabel\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    pattern=\\&​quot;-?[0-9]*(\\\\.[0-9]+)?\\&​quot;\\n    error=\\&​quot;Input is not a number!\\&​quot;\\n    label=\\&​quot;Number...\\&​quot;\\n    floatingLabel\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-51\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Text lines...\",\n                                                rows: 3,\n                                                style: { width: '200px' }\n                                })\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(Textfield, {\n                                                onChange: () => {},\n                                                label: \"Expandable Input\",\n                                                expandable: true,\n                                                expandableIcon: \"search\"\n                                })\n                )\n);;\n        var cont = document.getElementById(\"demo-51\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Floating Multiline Textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Text</span> <span class=\"token attr-name\" >lines...\"</span>\n    <span class=\"token attr-name\" >rows</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token number\" >3</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >style</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >{</span>width<span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n<span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Expandable Textfield */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Textfield</span>\n    <span class=\"token attr-name\" >onChange</span><span class=\"token script language-javascript\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >(</span><span class=\"token punctuation\" >)</span> <span class=\"token operator\" >=</span><span class=\"token operator\" >></span> <span class=\"token punctuation\" >{</span><span class=\"token punctuation\" >}</span><span class=\"token punctuation\" >}</span></span>\n    <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Expandable</span> <span class=\"token attr-name\" >Input\"</span>\n    <span class=\"token attr-name\" >expandable</span>\n    <span class=\"token attr-name\" >expandableIcon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>search<span class=\"token punctuation\" >\"</span></span>\n<span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Text lines...\\&​quot;\\n    rows={3}\\n    style={{width: &apos;200px&apos;}}\\n/>\\n                </Cell><Cell col={6}>\\n                    <Textfield\\n    onChange={() => {}}\\n    label=\\&​quot;Expandable Input\\&​quot;\\n    expandable\\n    expandableIcon=\\&​quot;search\\&​quot;\\n/>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the disabled state</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">error</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Specifies the error message</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expandable</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the textfield as expandable</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">expandableIcon</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set the icon for the expandable textfield</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">floatingLabel</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the floating label effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">inputClassName</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Set CSS classes on the input</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the input label</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">maxRows</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the max rows (multilines)</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">pattern</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the pattern to validate the value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">required</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set the textfield as required</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">rows</td>\n<td style=\"text-align:left\">Number</td>\n<td style=\"text-align:left\">Defines the number of rows (multiline)</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">style</td>\n<td style=\"text-align:left\">Object</td>\n<td style=\"text-align:left\">Defines the custom styles for the container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Definest the &#39;current&#39; value</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 364 */
+/* 372 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"toggles\" class=\"mdl-typography--display-4\">Toggles</h1>\n<ul>\n<li><a href=\"#checkbox\">Checkbox</a></li>\n<li><a href=\"#radio-button\">Radio Button</a></li>\n<li><a href=\"#icon-toggle\">Icon Toggle</a></li>\n<li><a href=\"#switch\">Switch</a></li>\n</ul>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<h3 id=\"checkbox\" class=\"mdl-typography--display-2\">Checkbox</h3>\n<div id=\"demo-52\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Checkbox, { label: \"With ripple\", ripple: true, defaultChecked: true })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(Checkbox, { label: \"Without ripple\" })\n    )\n);;\n        var cont = document.getElementById(\"demo-52\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>With</span> <span class=\"token attr-name\" >ripple\"</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Checkbox</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Without</span> <span class=\"token attr-name\" >ripple\"</span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Checkbox label=\\&​quot;With ripple\\&​quot; ripple defaultChecked />\\n                </Cell><Cell col={6}>\\n                    <Checkbox label=\\&​quot;Without ripple\\&​quot; />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the label</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"radio-button\" class=\"mdl-typography--display-2\">Radio Button</h3>\n<div id=\"demo-53\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                RadioGroup,\n                                                { name: \"demo\", value: \"opt1\" },\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt1\", ripple: true },\n                                                                \"Ripple option\"\n                                                ),\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt2\" },\n                                                                \"Other option\"\n                                                )\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                RadioGroup,\n                                                { container: \"ul\", childContainer: \"li\", name: \"demo2\", value: \"opt2\" },\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt1\", ripple: true },\n                                                                \"Ripple option\"\n                                                ),\n                                                React.createElement(\n                                                                Radio,\n                                                                { value: \"opt2\" },\n                                                                \"Other option\"\n                                                )\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-53\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RadioGroup</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Ripple option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Other option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>RadioGroup</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>RadioGroup</span> <span class=\"token attr-name\" >container</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ul<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >childContainer</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>li<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>demo2<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >ripple</span><span class=\"token punctuation\" >></span></span>Ripple option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Radio</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>opt2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Other option<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>RadioGroup</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <RadioGroup name=\\&​quot;demo\\&​quot; value=\\&​quot;opt1\\&​quot;>\\n    <Radio value=\\&​quot;opt1\\&​quot; ripple>Ripple option</Radio>\\n    <Radio value=\\&​quot;opt2\\&​quot;>Other option</Radio>\\n</RadioGroup>\\n                </Cell><Cell col={6}>\\n                    <RadioGroup container=\\&​quot;ul\\&​quot; childContainer=\\&​quot;li\\&​quot; name=\\&​quot;demo2\\&​quot; value=\\&​quot;opt2\\&​quot;>\\n    <Radio value=\\&​quot;opt1\\&​quot; ripple>Ripple option</Radio>\\n    <Radio value=\\&​quot;opt2\\&​quot;>Other option</Radio>\\n</RadioGroup>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Element</th>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">childContainer</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Wrap every child in the specified container</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the name of the radio group</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Defines the callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">RadioGroup</td>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Defines the selected value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Set as disabled</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">Radio</td>\n<td style=\"text-align:left\">value</td>\n<td style=\"text-align:left\">String or Number</td>\n<td style=\"text-align:left\">Defines the selected value</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"icon-toggle\" class=\"mdl-typography--display-2\">Icon Toggle</h3>\n<div id=\"demo-54\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconToggle, { ripple: true, id: \"bold\", name: \"format_bold\", defaultChecked: true })\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(IconToggle, { id: \"italic\", name: \"format_italic\" })\n    )\n);;\n        var cont = document.getElementById(\"demo-54\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconToggle</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bold<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>format_bold<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >defaultChecked</span> <span class=\"token punctuation\" >/></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>IconToggle</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>italic<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>format_italic<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <IconToggle ripple id=\\&​quot;bold\\&​quot; name=\\&​quot;format_bold\\&​quot; defaultChecked />\\n                </Cell><Cell col={6}>\\n                    <IconToggle id=\\&​quot;italic\\&​quot; name=\\&​quot;format_italic\\&​quot; />\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">name</td>\n<td style=\"text-align:left\">String</td>\n<td style=\"text-align:left\">Defines the name</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n<h3 id=\"switch\" class=\"mdl-typography--display-2\">Switch</h3>\n<div id=\"demo-55\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n    Grid,\n    null,\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Switch,\n            { ripple: true, id: \"switch1\", defaultChecked: true },\n            \"Ripple switch\"\n        )\n    ),\n    React.createElement(\n        Cell,\n        { col: 6 },\n        React.createElement(\n            Switch,\n            { id: \"switch2\" },\n            \"Switch\"\n        )\n    )\n);;\n        var cont = document.getElementById(\"demo-55\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >ripple</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>switch1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >defaultChecked</span><span class=\"token punctuation\" >></span></span>Ripple <span class=\"token keyword\" >switch</span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Switch</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Switch</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>switch2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Switch<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Switch</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Switch ripple id=\\&​quot;switch1\\&​quot; defaultChecked>Ripple switch</Switch>\\n                </Cell><Cell col={6}>\\n                    <Switch id=\\&​quot;switch2\\&​quot;>Switch</Switch>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h4 id=\"configuration\" class=\"mdl-typography--display-1\">Configuration</h4>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">checked</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;checked&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">disabled</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines the checkbox as &quot;disabled&quot;</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">onChange</td>\n<td style=\"text-align:left\">Function</td>\n<td style=\"text-align:left\">Callback to receive the change event</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">ripple</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Applies the ripple effect</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 365 */
+/* 373 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 id=\"loading\" class=\"mdl-typography--display-4\">Loading</h1>\n<h2 id=\"demo\" class=\"mdl-typography--display-3\">Demo</h2>\n<div id=\"demo-56\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\" },\n                                                React.createElement(Icon, { name: \"add\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Print\", large: true },\n                                                React.createElement(Icon, { name: \"print\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-56\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Simple tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>add<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Large Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Print<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >large</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>print<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot;>\\n    <Icon name=\\&​quot;add\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={6}>\\n                    <Tooltip label=\\&​quot;Print\\&​quot; large>\\n    <Icon name=\\&​quot;print\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-57\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: React.createElement(\n                                                                                \"span\",\n                                                                                null,\n                                                                                \"Upload \",\n                                                                                React.createElement(\n                                                                                                \"strong\",\n                                                                                                null,\n                                                                                                \"file.zip\"\n                                                                                )\n                                                                ) },\n                                                React.createElement(Icon, { name: \"cloud_upload\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 6 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: React.createElement(\n                                                                                \"span\",\n                                                                                null,\n                                                                                \"Share your content\",\n                                                                                React.createElement(\"br\", null),\n                                                                                \"via social media\"\n                                                                ) },\n                                                React.createElement(Icon, { name: \"share\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-57\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Rich Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label={&lt;span</span><span class=\"token punctuation\" >></span></span>Upload <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>strong</span><span class=\"token punctuation\" >></span></span>file<span class=\"token punctuation\" >.</span>zip<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>strong</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>cloud_upload<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Multiline Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label={&lt;span</span><span class=\"token punctuation\" >></span></span>Share your content<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span> <span class=\"token punctuation\" >/></span></span>via social media<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token punctuation\" >}</span><span class=\"token operator\" >></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>share<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={6}>\\n                    <Tooltip label={<span>Upload <strong>file.zip</strong></span>}>\\n    <Icon name=\\&​quot;cloud_upload\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={6}>\\n                    <Tooltip label={<span>Share your content<br />via social media</span>}>\\n    <Icon name=\\&​quot;share\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><div id=\"demo-58\"></div>\n        <script class=\"demo-js\">\n        var elem = React.createElement(\n                Grid,\n                null,\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"right\" },\n                                                React.createElement(Icon, { name: \"arrow_forward\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"left\" },\n                                                React.createElement(Icon, { name: \"arrow_back\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"top\" },\n                                                React.createElement(Icon, { name: \"arrow_upward\" })\n                                )\n                ),\n                React.createElement(\n                                Cell,\n                                { col: 3 },\n                                React.createElement(\n                                                Tooltip,\n                                                { label: \"Follow\", position: \"bottom\" },\n                                                React.createElement(Icon, { name: \"arrow_downward\" })\n                                )\n                )\n);;\n        var cont = document.getElementById(\"demo-58\");\n        ReactDOM.render(elem, cont);\n    </script>\n        <pre class=\"language-jsx\"><code class=\"language-jsx\"><span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Right Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_forward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Left Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_back<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Top Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_upward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span>\n\n<span class=\"token punctuation\" >{</span><span class=\"token comment\" spellcheck=\"true\">/* Bottom Tooltip */</span><span class=\"token punctuation\" >}</span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Tooltip</span> <span class=\"token attr-name\" >label</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>Follow<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >position</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>Icon</span> <span class=\"token attr-name\" >name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>arrow_downward<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>Tooltip</span><span class=\"token punctuation\" >></span></span></code><form class=\"codepen\" action=\"http://codepen.io/pen/define\" method=\"POST\" target=\"_blank\">\n<input type=\"hidden\" name=\"data\" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\\&​quot;demo\\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;for(const component in ReactMDL) { if(ReactMDL.hasOwnProperty(component)) { window[component] = ReactMDL[component]; } }\\nconst dialogs = document.querySelector(\\&​quot;dialog\\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\\n\\nconst Demo = (props) => {\\n    return <Grid><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;right\\&​quot;>\\n    <Icon name=\\&​quot;arrow_forward\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;left\\&​quot;>\\n    <Icon name=\\&​quot;arrow_back\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;top\\&​quot;>\\n    <Icon name=\\&​quot;arrow_upward\\&​quot; />\\n</Tooltip>\\n                </Cell><Cell col={3}>\\n                    <Tooltip label=\\&​quot;Follow\\&​quot; position=\\&​quot;bottom\\&​quot;>\\n    <Icon name=\\&​quot;arrow_downward\\&​quot; />\\n</Tooltip>\\n                </Cell></Grid>;\\n}\\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://npmcdn.com/react-mdl/extra/material.css;https://npmcdn.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://npmcdn.com/react@0.14.7/dist/react.js;https://npmcdn.com/react-dom@0.14.7/dist/react-dom.js;https://npmcdn.com/react-mdl/extra/material.js;https://npmcdn.com/react-mdl/out/ReactMDL.js;https://npmcdn.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>\n<input type=\"image\" src=\"http://s.cdpn.io/3/cp-arrow-right.svg\" width=\"40\" height=\"40\" value=\"Create New Pen with Prefilled Data\" class=\"codepen-mover-button\">\n</form></pre><h2 id=\"configuration\" class=\"mdl-typography--display-3\">Configuration</h2>\n<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\n            <thead><tr>\n<th style=\"text-align:left\">Prop</th>\n<th style=\"text-align:left\">Type</th>\n<th style=\"text-align:left\">Effect</th>\n<th style=\"text-align:left\">Remarks</th>\n</tr>\n</thead>\n            <tbody<tr>\n<td style=\"text-align:left\">label</td>\n<td style=\"text-align:left\">Element or String</td>\n<td style=\"text-align:left\">Specify the content of the tooltip</td>\n<td style=\"text-align:left\">Required</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">large</td>\n<td style=\"text-align:left\">Boolean</td>\n<td style=\"text-align:left\">Defines a large tooltip</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">position</td>\n<td style=\"text-align:left\">String[left, right, top, bottom]</td>\n<td style=\"text-align:left\">Specify the position of the tooltip</td>\n<td style=\"text-align:left\">Optional</td>\n</tr>\n</tbody>\n        </table>\n";
 
 /***/ },
-/* 366 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13327,11 +13495,11 @@
 	});
 	exports.Text = exports.Article = undefined;
 	
-	var _Article2 = __webpack_require__(367);
+	var _Article2 = __webpack_require__(375);
 	
 	var _Article3 = _interopRequireDefault(_Article2);
 	
-	var _Text2 = __webpack_require__(431);
+	var _Text2 = __webpack_require__(439);
 	
 	var _Text3 = _interopRequireDefault(_Text2);
 	
@@ -13341,7 +13509,7 @@
 	exports.Text = _Text3.default;
 
 /***/ },
-/* 367 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13352,21 +13520,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TemplateHelper = __webpack_require__(369);
+	var _TemplateHelper = __webpack_require__(377);
 	
 	var _TemplateHelper2 = _interopRequireDefault(_TemplateHelper);
 	
-	var _src = __webpack_require__(370);
+	var _src = __webpack_require__(378);
 	
-	var _palette = __webpack_require__(430);
+	var _palette = __webpack_require__(438);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -13522,7 +13690,7 @@
 	exports.default = (0, _TemplateHelper2.default)(Article, '\n.demo-ribbon {\n  width: 100%;\n  height: 40vh;\n  background-color: #3F51B5;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n}\n\n.demo-main {\n  margin-top: -35vh;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n}\n\n.demo-header .mdl-layout__header-row {\n  padding-left: 40px;\n}\n\n.demo-container {\n  max-width: 1600px;\n  width: calc(100% - 16px);\n  margin: 0 auto;\n}\n\n.demo-content {\n  border-radius: 2px;\n  padding: 80px 56px;\n  margin-bottom: 80px;\n}\n\n.demo-layout.is-small-screen .demo-content {\n  padding: 40px 28px;\n}\n\n.demo-content h3 {\n  margin-top: 48px;\n}\n\n.demo-footer {\n  padding-left: 40px;\n}\n\n.demo-footer .mdl-mini-footer--link-list a {\n  font-size: 13px;\n}\n');
 
 /***/ },
-/* 368 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13576,7 +13744,7 @@
 
 
 /***/ },
-/* 369 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13587,7 +13755,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -13643,7 +13811,7 @@
 	};
 
 /***/ },
-/* 370 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13653,7 +13821,7 @@
 	});
 	exports.Tooltip = exports.Textfield = exports.TabBar = exports.Tab = exports.Tabs = exports.Switch = exports.Spinner = exports.Snackbar = exports.Slider = exports.RadioGroup = exports.Radio = exports.ProgressBar = exports.MenuItem = exports.Menu = exports.ListItemContent = exports.ListItemAction = exports.ListItem = exports.List = exports.Content = exports.Navigation = exports.Spacer = exports.HeaderTabs = exports.HeaderRow = exports.Drawer = exports.Header = exports.Layout = exports.IconToggle = exports.IconButton = exports.Icon = exports.Cell = exports.Grid = exports.FooterLinkList = exports.FooterDropDownSection = exports.FooterSection = exports.Footer = exports.FABButton = exports.DialogActions = exports.DialogContent = exports.DialogTitle = exports.Dialog = exports.TableHeader = exports.Table = exports.DataTable = exports.Checkbox = exports.CardMenu = exports.CardText = exports.CardMedia = exports.CardActions = exports.CardTitle = exports.Card = exports.Button = exports.Badge = exports.MDLComponent = exports.mdlUpgrade = undefined;
 	
-	var _Card = __webpack_require__(371);
+	var _Card = __webpack_require__(379);
 	
 	Object.defineProperty(exports, 'Card', {
 	    enumerable: true,
@@ -13692,7 +13860,7 @@
 	    }
 	});
 	
-	var _DataTable2 = __webpack_require__(378);
+	var _DataTable2 = __webpack_require__(386);
 	
 	Object.defineProperty(exports, 'Table', {
 	    enumerable: true,
@@ -13707,7 +13875,7 @@
 	    }
 	});
 	
-	var _Dialog = __webpack_require__(387);
+	var _Dialog = __webpack_require__(395);
 	
 	Object.defineProperty(exports, 'Dialog', {
 	    enumerable: true,
@@ -13734,7 +13902,7 @@
 	    }
 	});
 	
-	var _Footer = __webpack_require__(391);
+	var _Footer = __webpack_require__(399);
 	
 	Object.defineProperty(exports, 'Footer', {
 	    enumerable: true,
@@ -13761,7 +13929,7 @@
 	    }
 	});
 	
-	var _Grid2 = __webpack_require__(397);
+	var _Grid2 = __webpack_require__(405);
 	
 	Object.defineProperty(exports, 'Cell', {
 	    enumerable: true,
@@ -13770,7 +13938,7 @@
 	    }
 	});
 	
-	var _Layout = __webpack_require__(398);
+	var _Layout = __webpack_require__(406);
 	
 	Object.defineProperty(exports, 'Layout', {
 	    enumerable: true,
@@ -13821,7 +13989,7 @@
 	    }
 	});
 	
-	var _List = __webpack_require__(408);
+	var _List = __webpack_require__(416);
 	
 	Object.defineProperty(exports, 'List', {
 	    enumerable: true,
@@ -13848,7 +14016,7 @@
 	    }
 	});
 	
-	var _Menu2 = __webpack_require__(413);
+	var _Menu2 = __webpack_require__(421);
 	
 	Object.defineProperty(exports, 'MenuItem', {
 	    enumerable: true,
@@ -13857,7 +14025,7 @@
 	    }
 	});
 	
-	var _Tabs = __webpack_require__(414);
+	var _Tabs = __webpack_require__(422);
 	
 	Object.defineProperty(exports, 'Tabs', {
 	    enumerable: true,
@@ -13878,81 +14046,81 @@
 	    }
 	});
 	
-	var _mdlUpgrade2 = __webpack_require__(385);
+	var _mdlUpgrade2 = __webpack_require__(393);
 	
 	var _mdlUpgrade3 = _interopRequireDefault(_mdlUpgrade2);
 	
-	var _MDLComponent2 = __webpack_require__(381);
+	var _MDLComponent2 = __webpack_require__(389);
 	
 	var _MDLComponent3 = _interopRequireDefault(_MDLComponent2);
 	
-	var _Badge2 = __webpack_require__(417);
+	var _Badge2 = __webpack_require__(425);
 	
 	var _Badge3 = _interopRequireDefault(_Badge2);
 	
-	var _Button2 = __webpack_require__(418);
+	var _Button2 = __webpack_require__(426);
 	
 	var _Button3 = _interopRequireDefault(_Button2);
 	
-	var _Checkbox2 = __webpack_require__(384);
+	var _Checkbox2 = __webpack_require__(392);
 	
 	var _Checkbox3 = _interopRequireDefault(_Checkbox2);
 	
 	var _DataTable3 = _interopRequireDefault(_DataTable2);
 	
-	var _FABButton2 = __webpack_require__(419);
+	var _FABButton2 = __webpack_require__(427);
 	
 	var _FABButton3 = _interopRequireDefault(_FABButton2);
 	
 	var _Grid3 = _interopRequireDefault(_Grid2);
 	
-	var _Icon2 = __webpack_require__(411);
+	var _Icon2 = __webpack_require__(419);
 	
 	var _Icon3 = _interopRequireDefault(_Icon2);
 	
-	var _IconButton2 = __webpack_require__(420);
+	var _IconButton2 = __webpack_require__(428);
 	
 	var _IconButton3 = _interopRequireDefault(_IconButton2);
 	
-	var _IconToggle2 = __webpack_require__(421);
+	var _IconToggle2 = __webpack_require__(429);
 	
 	var _IconToggle3 = _interopRequireDefault(_IconToggle2);
 	
 	var _Menu3 = _interopRequireDefault(_Menu2);
 	
-	var _ProgressBar2 = __webpack_require__(422);
+	var _ProgressBar2 = __webpack_require__(430);
 	
 	var _ProgressBar3 = _interopRequireDefault(_ProgressBar2);
 	
-	var _Radio2 = __webpack_require__(423);
+	var _Radio2 = __webpack_require__(431);
 	
 	var _Radio3 = _interopRequireDefault(_Radio2);
 	
-	var _RadioGroup2 = __webpack_require__(424);
+	var _RadioGroup2 = __webpack_require__(432);
 	
 	var _RadioGroup3 = _interopRequireDefault(_RadioGroup2);
 	
-	var _Slider2 = __webpack_require__(425);
+	var _Slider2 = __webpack_require__(433);
 	
 	var _Slider3 = _interopRequireDefault(_Slider2);
 	
-	var _Snackbar2 = __webpack_require__(426);
+	var _Snackbar2 = __webpack_require__(434);
 	
 	var _Snackbar3 = _interopRequireDefault(_Snackbar2);
 	
-	var _Spinner2 = __webpack_require__(427);
+	var _Spinner2 = __webpack_require__(435);
 	
 	var _Spinner3 = _interopRequireDefault(_Spinner2);
 	
-	var _Switch2 = __webpack_require__(428);
+	var _Switch2 = __webpack_require__(436);
 	
 	var _Switch3 = _interopRequireDefault(_Switch2);
 	
-	var _Textfield2 = __webpack_require__(429);
+	var _Textfield2 = __webpack_require__(437);
 	
 	var _Textfield3 = _interopRequireDefault(_Textfield2);
 	
-	var _Tooltip2 = __webpack_require__(380);
+	var _Tooltip2 = __webpack_require__(388);
 	
 	var _Tooltip3 = _interopRequireDefault(_Tooltip2);
 	
@@ -13984,7 +14152,7 @@
 	exports.Tooltip = _Tooltip3.default;
 
 /***/ },
-/* 371 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13994,19 +14162,19 @@
 	});
 	exports.CardMedia = exports.CardActions = exports.CardTitle = exports.CardMenu = exports.CardText = exports.Card = undefined;
 	
-	var _basicClassCreator = __webpack_require__(372);
+	var _basicClassCreator = __webpack_require__(380);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _Card2 = __webpack_require__(373);
+	var _Card2 = __webpack_require__(381);
 	
 	var _Card3 = _interopRequireDefault(_Card2);
 	
-	var _CardTitle2 = __webpack_require__(376);
+	var _CardTitle2 = __webpack_require__(384);
 	
 	var _CardTitle3 = _interopRequireDefault(_CardTitle2);
 	
-	var _CardActions2 = __webpack_require__(377);
+	var _CardActions2 = __webpack_require__(385);
 	
 	var _CardActions3 = _interopRequireDefault(_CardActions2);
 	
@@ -14020,7 +14188,7 @@
 	var CardMedia = exports.CardMedia = (0, _basicClassCreator2.default)('CardMedia', 'mdl-card__media');
 
 /***/ },
-/* 372 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14031,11 +14199,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -14066,7 +14234,7 @@
 	};
 
 /***/ },
-/* 373 */
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14077,19 +14245,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(374);
+	var _clamp = __webpack_require__(382);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _shadows = __webpack_require__(375);
+	var _shadows = __webpack_require__(383);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
@@ -14125,7 +14293,7 @@
 	exports.default = Card;
 
 /***/ },
-/* 374 */
+/* 382 */
 /***/ function(module, exports) {
 
 	module.exports = clamp
@@ -14138,7 +14306,7 @@
 
 
 /***/ },
-/* 375 */
+/* 383 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -14152,7 +14320,7 @@
 	});
 
 /***/ },
-/* 376 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14165,11 +14333,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -14226,7 +14394,7 @@
 	exports.default = CardTitle;
 
 /***/ },
-/* 377 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14237,11 +14405,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -14275,7 +14443,7 @@
 	exports.default = CardActions;
 
 /***/ },
-/* 378 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14285,11 +14453,11 @@
 	});
 	exports.default = exports.Table = exports.TableHeader = undefined;
 	
-	var _TableHeader2 = __webpack_require__(379);
+	var _TableHeader2 = __webpack_require__(387);
 	
 	var _TableHeader3 = _interopRequireDefault(_TableHeader2);
 	
-	var _Table2 = __webpack_require__(382);
+	var _Table2 = __webpack_require__(390);
 	
 	var _Table3 = _interopRequireDefault(_Table2);
 	
@@ -14300,7 +14468,7 @@
 	exports.default = _Table3.default;
 
 /***/ },
-/* 379 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14311,15 +14479,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Tooltip = __webpack_require__(380);
+	var _Tooltip = __webpack_require__(388);
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
@@ -14373,7 +14541,7 @@
 	exports.default = TableHeader;
 
 /***/ },
-/* 380 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14384,15 +14552,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _MDLComponent = __webpack_require__(381);
+	var _MDLComponent = __webpack_require__(389);
 	
 	var _MDLComponent2 = _interopRequireDefault(_MDLComponent);
 	
@@ -14456,7 +14624,7 @@
 	exports.default = Tooltip;
 
 /***/ },
-/* 381 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14467,9 +14635,9 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -14509,7 +14677,7 @@
 	exports.default = MDLComponent;
 
 /***/ },
-/* 382 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14523,31 +14691,31 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(374);
+	var _clamp = __webpack_require__(382);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _shadows = __webpack_require__(375);
+	var _shadows = __webpack_require__(383);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
-	var _TableHeader = __webpack_require__(379);
+	var _TableHeader = __webpack_require__(387);
 	
 	var _TableHeader2 = _interopRequireDefault(_TableHeader);
 	
-	var _Selectable = __webpack_require__(383);
+	var _Selectable = __webpack_require__(391);
 	
 	var _Selectable2 = _interopRequireDefault(_Selectable);
 	
-	var _Sortable = __webpack_require__(386);
+	var _Sortable = __webpack_require__(394);
 	
 	var _Sortable2 = _interopRequireDefault(_Sortable);
 	
@@ -14666,7 +14834,7 @@
 	var UndecoratedTable = exports.UndecoratedTable = Table;
 
 /***/ },
-/* 383 */
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14679,19 +14847,19 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TableHeader = __webpack_require__(379);
+	var _TableHeader = __webpack_require__(387);
 	
 	var _TableHeader2 = _interopRequireDefault(_TableHeader);
 	
-	var _Checkbox = __webpack_require__(384);
+	var _Checkbox = __webpack_require__(392);
 	
 	var _Checkbox2 = _interopRequireDefault(_Checkbox);
 	
@@ -14871,7 +15039,7 @@
 	};
 
 /***/ },
-/* 384 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14884,17 +15052,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -14973,7 +15141,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Checkbox);
 
 /***/ },
-/* 385 */
+/* 393 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14982,11 +15150,11 @@
 	    value: true
 	});
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _MDLComponent = __webpack_require__(381);
+	var _MDLComponent = __webpack_require__(389);
 	
 	var _MDLComponent2 = _interopRequireDefault(_MDLComponent);
 	
@@ -15009,7 +15177,7 @@
 	};
 
 /***/ },
-/* 386 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15022,15 +15190,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TableHeader = __webpack_require__(379);
+	var _TableHeader = __webpack_require__(387);
 	
 	var _TableHeader2 = _interopRequireDefault(_TableHeader);
 	
@@ -15198,7 +15366,7 @@
 	};
 
 /***/ },
-/* 387 */
+/* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15208,19 +15376,19 @@
 	});
 	exports.DialogActions = exports.DialogContent = exports.DialogTitle = exports.Dialog = undefined;
 	
-	var _basicClassCreator = __webpack_require__(372);
+	var _basicClassCreator = __webpack_require__(380);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _Dialog2 = __webpack_require__(388);
+	var _Dialog2 = __webpack_require__(396);
 	
 	var _Dialog3 = _interopRequireDefault(_Dialog2);
 	
-	var _DialogTitle2 = __webpack_require__(389);
+	var _DialogTitle2 = __webpack_require__(397);
 	
 	var _DialogTitle3 = _interopRequireDefault(_DialogTitle2);
 	
-	var _DialogActions2 = __webpack_require__(390);
+	var _DialogActions2 = __webpack_require__(398);
 	
 	var _DialogActions3 = _interopRequireDefault(_DialogActions2);
 	
@@ -15232,7 +15400,7 @@
 	exports.DialogActions = _DialogActions3.default;
 
 /***/ },
-/* 388 */
+/* 396 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15245,13 +15413,13 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -15347,7 +15515,7 @@
 	exports.default = Dialog;
 
 /***/ },
-/* 389 */
+/* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15358,11 +15526,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -15390,7 +15558,7 @@
 	exports.default = DialogTitle;
 
 /***/ },
-/* 390 */
+/* 398 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15401,11 +15569,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -15439,7 +15607,7 @@
 	exports.default = DialogActions;
 
 /***/ },
-/* 391 */
+/* 399 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15449,19 +15617,19 @@
 	});
 	exports.FooterLinkList = exports.FooterDropDownSection = exports.FooterSection = exports.Footer = undefined;
 	
-	var _Footer2 = __webpack_require__(392);
+	var _Footer2 = __webpack_require__(400);
 	
 	var _Footer3 = _interopRequireDefault(_Footer2);
 	
-	var _Section = __webpack_require__(394);
+	var _Section = __webpack_require__(402);
 	
 	var _Section2 = _interopRequireDefault(_Section);
 	
-	var _DropDownSection = __webpack_require__(395);
+	var _DropDownSection = __webpack_require__(403);
 	
 	var _DropDownSection2 = _interopRequireDefault(_DropDownSection);
 	
-	var _LinkList = __webpack_require__(396);
+	var _LinkList = __webpack_require__(404);
 	
 	var _LinkList2 = _interopRequireDefault(_LinkList);
 	
@@ -15473,7 +15641,7 @@
 	exports.FooterLinkList = _LinkList2.default;
 
 /***/ },
-/* 392 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15484,15 +15652,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(393);
+	var _cloneChildren = __webpack_require__(401);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -15529,7 +15697,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 393 */
+/* 401 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15538,7 +15706,7 @@
 	    value: true
 	});
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -15552,7 +15720,7 @@
 	};
 
 /***/ },
-/* 394 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15563,15 +15731,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(393);
+	var _cloneChildren = __webpack_require__(401);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -15618,7 +15786,7 @@
 	exports.default = Section;
 
 /***/ },
-/* 395 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15629,15 +15797,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(393);
+	var _cloneChildren = __webpack_require__(401);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
@@ -15682,7 +15850,7 @@
 	exports.default = DropDownSection;
 
 /***/ },
-/* 396 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15693,11 +15861,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -15740,7 +15908,7 @@
 	exports.default = LinkList;
 
 /***/ },
-/* 397 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15752,19 +15920,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _clamp = __webpack_require__(374);
+	var _clamp = __webpack_require__(382);
 	
 	var _clamp2 = _interopRequireDefault(_clamp);
 	
-	var _shadows = __webpack_require__(375);
+	var _shadows = __webpack_require__(383);
 	
 	var _shadows2 = _interopRequireDefault(_shadows);
 	
@@ -15847,7 +16015,7 @@
 	exports.Cell = Cell;
 
 /***/ },
-/* 398 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15857,35 +16025,35 @@
 	});
 	exports.Spacer = exports.Navigation = exports.HeaderTabs = exports.HeaderRow = exports.Header = exports.Drawer = exports.Content = exports.Layout = undefined;
 	
-	var _Layout2 = __webpack_require__(399);
+	var _Layout2 = __webpack_require__(407);
 	
 	var _Layout3 = _interopRequireDefault(_Layout2);
 	
-	var _Content2 = __webpack_require__(400);
+	var _Content2 = __webpack_require__(408);
 	
 	var _Content3 = _interopRequireDefault(_Content2);
 	
-	var _Drawer2 = __webpack_require__(401);
+	var _Drawer2 = __webpack_require__(409);
 	
 	var _Drawer3 = _interopRequireDefault(_Drawer2);
 	
-	var _Header2 = __webpack_require__(402);
+	var _Header2 = __webpack_require__(410);
 	
 	var _Header3 = _interopRequireDefault(_Header2);
 	
-	var _HeaderRow2 = __webpack_require__(403);
+	var _HeaderRow2 = __webpack_require__(411);
 	
 	var _HeaderRow3 = _interopRequireDefault(_HeaderRow2);
 	
-	var _HeaderTabs2 = __webpack_require__(405);
+	var _HeaderTabs2 = __webpack_require__(413);
 	
 	var _HeaderTabs3 = _interopRequireDefault(_HeaderTabs2);
 	
-	var _Navigation2 = __webpack_require__(407);
+	var _Navigation2 = __webpack_require__(415);
 	
 	var _Navigation3 = _interopRequireDefault(_Navigation2);
 	
-	var _Spacer2 = __webpack_require__(404);
+	var _Spacer2 = __webpack_require__(412);
 	
 	var _Spacer3 = _interopRequireDefault(_Spacer2);
 	
@@ -15901,7 +16069,7 @@
 	exports.Spacer = _Spacer3.default;
 
 /***/ },
-/* 399 */
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15914,15 +16082,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -15982,7 +16150,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Layout);
 
 /***/ },
-/* 400 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15993,11 +16161,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -16016,7 +16184,7 @@
 	
 	    return _react2.default.createElement(component || 'div', _extends({
 	        className: classes
-	    }, otherProps), [children, _react2.default.createElement('div', { key: 'hack', className: 'react-mdl-header-tabs-hack', id: 'undefined' })]);
+	    }, otherProps), children);
 	};
 	
 	Content.propTypes = {
@@ -16027,7 +16195,7 @@
 	exports.default = Content;
 
 /***/ },
-/* 401 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16038,11 +16206,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -16078,7 +16246,7 @@
 	exports.default = Drawer;
 
 /***/ },
-/* 402 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16089,19 +16257,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _HeaderRow = __webpack_require__(403);
+	var _HeaderRow = __webpack_require__(411);
 	
 	var _HeaderRow2 = _interopRequireDefault(_HeaderRow);
 	
-	var _HeaderTabs = __webpack_require__(405);
+	var _HeaderTabs = __webpack_require__(413);
 	
 	var _HeaderTabs2 = _interopRequireDefault(_HeaderTabs);
 	
@@ -16159,7 +16327,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 403 */
+/* 411 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16170,15 +16338,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Spacer = __webpack_require__(404);
+	var _Spacer = __webpack_require__(412);
 	
 	var _Spacer2 = _interopRequireDefault(_Spacer);
 	
@@ -16215,7 +16383,7 @@
 	exports.default = HeaderRow;
 
 /***/ },
-/* 404 */
+/* 412 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16224,7 +16392,7 @@
 	  value: true
 	});
 	
-	var _basicClassCreator = __webpack_require__(372);
+	var _basicClassCreator = __webpack_require__(380);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
@@ -16233,7 +16401,7 @@
 	exports.default = (0, _basicClassCreator2.default)('Spacer', 'mdl-layout-spacer');
 
 /***/ },
-/* 405 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16244,15 +16412,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TabBar = __webpack_require__(406);
+	var _TabBar = __webpack_require__(414);
 	
 	var _TabBar2 = _interopRequireDefault(_TabBar);
 	
@@ -16287,7 +16455,7 @@
 	exports.default = HeaderTabs;
 
 /***/ },
-/* 406 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16300,11 +16468,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -16384,7 +16552,7 @@
 	exports.default = TabBar;
 
 /***/ },
-/* 407 */
+/* 415 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16395,19 +16563,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _cloneChildren = __webpack_require__(393);
+	var _cloneChildren = __webpack_require__(401);
 	
 	var _cloneChildren2 = _interopRequireDefault(_cloneChildren);
 	
-	var _Spacer = __webpack_require__(404);
+	var _Spacer = __webpack_require__(412);
 	
 	var _Spacer2 = _interopRequireDefault(_Spacer);
 	
@@ -16440,7 +16608,7 @@
 	exports.default = Navigation;
 
 /***/ },
-/* 408 */
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16450,19 +16618,19 @@
 	});
 	exports.ListItemContent = exports.ListItemAction = exports.ListItem = exports.List = undefined;
 	
-	var _basicClassCreator = __webpack_require__(372);
+	var _basicClassCreator = __webpack_require__(380);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
-	var _ListItem2 = __webpack_require__(409);
+	var _ListItem2 = __webpack_require__(417);
 	
 	var _ListItem3 = _interopRequireDefault(_ListItem2);
 	
-	var _ListItemAction2 = __webpack_require__(412);
+	var _ListItemAction2 = __webpack_require__(420);
 	
 	var _ListItemAction3 = _interopRequireDefault(_ListItemAction2);
 	
-	var _ListItemContent2 = __webpack_require__(410);
+	var _ListItemContent2 = __webpack_require__(418);
 	
 	var _ListItemContent3 = _interopRequireDefault(_ListItemContent2);
 	
@@ -16474,7 +16642,7 @@
 	exports.ListItemContent = _ListItemContent3.default;
 
 /***/ },
-/* 409 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16487,15 +16655,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _ListItemContent = __webpack_require__(410);
+	var _ListItemContent = __webpack_require__(418);
 	
 	var _ListItemContent2 = _interopRequireDefault(_ListItemContent);
 	
@@ -16568,7 +16736,7 @@
 	exports.default = ListItem;
 
 /***/ },
-/* 410 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16581,15 +16749,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Icon = __webpack_require__(411);
+	var _Icon = __webpack_require__(419);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -16674,7 +16842,7 @@
 	exports.default = ListItemContent;
 
 /***/ },
-/* 411 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16685,11 +16853,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -16720,7 +16888,7 @@
 	exports.default = Icon;
 
 /***/ },
-/* 412 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16733,11 +16901,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -16800,7 +16968,7 @@
 	exports.default = ListItemAction;
 
 /***/ },
-/* 413 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16814,19 +16982,19 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
-	var _basicClassCreator = __webpack_require__(372);
+	var _basicClassCreator = __webpack_require__(380);
 	
 	var _basicClassCreator2 = _interopRequireDefault(_basicClassCreator);
 	
@@ -16894,7 +17062,7 @@
 	var MenuItem = exports.MenuItem = (0, _basicClassCreator2.default)('MenuItem', 'mdl-menu__item', 'li');
 
 /***/ },
-/* 414 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16904,15 +17072,15 @@
 	});
 	exports.Tab = exports.TabBar = exports.Tabs = undefined;
 	
-	var _Tabs2 = __webpack_require__(415);
+	var _Tabs2 = __webpack_require__(423);
 	
 	var _Tabs3 = _interopRequireDefault(_Tabs2);
 	
-	var _TabBar2 = __webpack_require__(406);
+	var _TabBar2 = __webpack_require__(414);
 	
 	var _TabBar3 = _interopRequireDefault(_TabBar2);
 	
-	var _Tab2 = __webpack_require__(416);
+	var _Tab2 = __webpack_require__(424);
 	
 	var _Tab3 = _interopRequireDefault(_Tab2);
 	
@@ -16923,7 +17091,7 @@
 	exports.Tab = _Tab3.default;
 
 /***/ },
-/* 415 */
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16936,25 +17104,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Tab = __webpack_require__(416);
+	var _Tab = __webpack_require__(424);
 	
 	var _Tab2 = _interopRequireDefault(_Tab);
 	
-	var _TabBar = __webpack_require__(406);
+	var _TabBar = __webpack_require__(414);
 	
 	var _TabBar2 = _interopRequireDefault(_TabBar);
-	
-	var _mdlUpgrade = __webpack_require__(385);
-	
-	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -16987,15 +17151,12 @@
 	            var activeTab = _props.activeTab;
 	            var className = _props.className;
 	            var onChange = _props.onChange;
-	            var ripple = _props.ripple;
 	            var children = _props.children;
 	            var tabBarProps = _props.tabBarProps;
 	
-	            var otherProps = _objectWithoutProperties(_props, ['activeTab', 'className', 'onChange', 'ripple', 'children', 'tabBarProps']);
+	            var otherProps = _objectWithoutProperties(_props, ['activeTab', 'className', 'onChange', 'children', 'tabBarProps']);
 	
-	            var classes = (0, _classnames2.default)('mdl-tabs mdl-js-tabs', {
-	                'mdl-js-ripple-effect': ripple
-	            }, className);
+	            var classes = (0, _classnames2.default)('mdl-tabs is-upgraded', className);
 	
 	            return _react2.default.createElement(
 	                'div',
@@ -17004,8 +17165,7 @@
 	                    _TabBar2.default,
 	                    _extends({ cssPrefix: 'mdl-tabs', activeTab: activeTab, onChange: onChange }, tabBarProps),
 	                    children
-	                ),
-	                _react2.default.createElement('div', { className: 'react-mdl-hack', id: 'undefined' })
+	                )
 	            );
 	        }
 	    }]);
@@ -17018,13 +17178,12 @@
 	    children: _react.PropTypes.oneOfType([TabPropType, _react.PropTypes.arrayOf(TabPropType)]),
 	    className: _react.PropTypes.string,
 	    onChange: _react.PropTypes.func,
-	    ripple: _react.PropTypes.bool,
 	    tabBarProps: _react.PropTypes.object
 	};
-	exports.default = (0, _mdlUpgrade2.default)(Tabs);
+	exports.default = Tabs;
 
 /***/ },
-/* 416 */
+/* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17035,11 +17194,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -17096,7 +17255,7 @@
 	exports.default = Tab;
 
 /***/ },
-/* 417 */
+/* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17107,11 +17266,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -17176,7 +17335,7 @@
 	exports.default = Badge;
 
 /***/ },
-/* 418 */
+/* 426 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17189,15 +17348,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -17267,7 +17426,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Button);
 
 /***/ },
-/* 419 */
+/* 427 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17278,15 +17437,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Button = __webpack_require__(418);
+	var _Button = __webpack_require__(426);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
@@ -17320,7 +17479,7 @@
 	exports.default = FABButton;
 
 /***/ },
-/* 420 */
+/* 428 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17331,19 +17490,19 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Button = __webpack_require__(418);
+	var _Button = __webpack_require__(426);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _Icon = __webpack_require__(411);
+	var _Icon = __webpack_require__(419);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -17374,7 +17533,7 @@
 	exports.default = IconButton;
 
 /***/ },
-/* 421 */
+/* 429 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17387,21 +17546,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _Icon = __webpack_require__(411);
+	var _Icon = __webpack_require__(419);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -17476,7 +17635,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(IconToggle);
 
 /***/ },
-/* 422 */
+/* 430 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17489,17 +17648,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -17577,7 +17736,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(ProgressBar);
 
 /***/ },
-/* 423 */
+/* 431 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17590,17 +17749,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -17684,7 +17843,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Radio);
 
 /***/ },
-/* 424 */
+/* 432 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17695,11 +17854,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Radio = __webpack_require__(423);
+	var _Radio = __webpack_require__(431);
 	
 	var _Radio2 = _interopRequireDefault(_Radio);
 	
@@ -17750,7 +17909,7 @@
 	exports.default = RadioGroup;
 
 /***/ },
-/* 425 */
+/* 433 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17763,15 +17922,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _reactDom = __webpack_require__(295);
+	
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -17795,6 +17956,11 @@
 	    }
 	
 	    _createClass(Slider, [{
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate() {
+	            (0, _reactDom.findDOMNode)(this).MaterialSlider.change(this.props.value);
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var _props = this.props;
@@ -17816,15 +17982,15 @@
 	
 	Slider.propTypes = {
 	    className: _react.PropTypes.string,
-	    max: _react.PropTypes.number,
-	    min: _react.PropTypes.number,
-	    onChange: _react.PropTypes.func,
-	    value: _react.PropTypes.number
+	    max: _react.PropTypes.number.isRequired,
+	    min: _react.PropTypes.number.isRequired,
+	    onChange: _react.PropTypes.func.isRequired,
+	    value: _react.PropTypes.number.isRequired
 	};
 	exports.default = (0, _mdlUpgrade2.default)(Slider);
 
 /***/ },
-/* 426 */
+/* 434 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17837,11 +18003,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -17973,7 +18139,7 @@
 	exports.default = Snackbar;
 
 /***/ },
-/* 427 */
+/* 435 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17986,15 +18152,15 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -18044,7 +18210,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Spinner);
 
 /***/ },
-/* 428 */
+/* 436 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18057,17 +18223,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -18145,7 +18311,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Switch);
 
 /***/ },
-/* 429 */
+/* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18158,17 +18324,17 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _mdlUpgrade = __webpack_require__(385);
+	var _mdlUpgrade = __webpack_require__(393);
 	
 	var _mdlUpgrade2 = _interopRequireDefault(_mdlUpgrade);
 	
@@ -18321,7 +18487,7 @@
 	exports.default = (0, _mdlUpgrade2.default)(Textfield);
 
 /***/ },
-/* 430 */
+/* 438 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18345,7 +18511,7 @@
 	}
 
 /***/ },
-/* 431 */
+/* 439 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18356,21 +18522,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(368);
+	var _classnames = __webpack_require__(376);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _TemplateHelper = __webpack_require__(369);
+	var _TemplateHelper = __webpack_require__(377);
 	
 	var _TemplateHelper2 = _interopRequireDefault(_TemplateHelper);
 	
-	var _src = __webpack_require__(370);
+	var _src = __webpack_require__(378);
 	
-	var _palette = __webpack_require__(430);
+	var _palette = __webpack_require__(438);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -19021,7 +19187,7 @@
 	exports.default = (0, _TemplateHelper2.default)(Text, '\nhtml, body {\n  font-family: \'Roboto\', \'Helvetica\', sans-serif;\n  margin: 0;\n  padding: 0;\n}\n.mdl-demo .mdl-layout__header-row {\n  padding-left: 40px;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {\n  font-size: inherit;\n}\n.mdl-demo .mdl-layout__tab-bar-button {\n  display: none;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {\n  display: none;\n}\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {\n  overflow: visible;\n}\n.mdl-demo .mdl-layout__tab-bar-container {\n  height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar {\n  padding: 0;\n  padding-left: 16px;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {\n  height: 64px;\n  line-height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {\n  background-color: white;\n  height: 4px;\n}\n.mdl-demo main > .react-mdl-layout__tab-panel {\n  padding: 8px;\n  padding-top: 48px;\n}\n.mdl-demo .mdl-card {\n  height: auto;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mdl-demo .mdl-card > * {\n  height: auto;\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text {\n  margin: 40px;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  padding: 0;\n  color: inherit;\n  width: calc(100% - 80px);\n}\n.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\n.mdl-demo .mdl-card__actions {\n  margin: 0;\n  padding: 4px 40px;\n  color: inherit;\n}\n.mdl-demo .mdl-card__actions a {\n  color: #00BCD4;\n  margin: 0;\n}\n.mdl-demo .mdl-card__actions a:hover,\n.mdl-demo .mdl-card__actions a:active {\n  color: inherit;\n  background-color: transparent;\n}\n.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {\n  border-top: 1px solid rgba(0, 0, 0, 0.12);\n}\n.mdl-demo #add {\n  position: absolute;\n  right: 40px;\n  top: 36px;\n  z-index: 999;\n}\n.mdl-demo .mdl-layout__content {\n    padding-top: 48px;\n}\n.mdl-demo .mdl-layout__content section:not(:last-of-type) {\n  position: relative;\n  margin-bottom: 48px;\n}\n.mdl-demo section.section--center {\n  max-width: 860px;\n}\n.mdl-demo #features section.section--center {\n  max-width: 620px;\n}\n.mdl-demo section > header{\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.mdl-demo section > .section__play-btn {\n  min-height: 200px;\n}\n.mdl-demo section > header > .material-icons {\n  font-size: 3rem;\n}\n.mdl-demo section > button {\n  position: absolute;\n  z-index: 99;\n  top: 8px;\n  right: 8px;\n}\n.mdl-demo section .section__circle {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-flex: 0;\n  -webkit-flex-grow: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -webkit-flex-shrink: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.mdl-demo section .section__text {\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-flex-shrink: 0;\n      -ms-flex-negative: 0;\n          flex-shrink: 0;\n  padding-top: 8px;\n}\n.mdl-demo section .section__text h5 {\n  font-size: inherit;\n  margin: 0;\n  margin-bottom: 0.5em;\n}\n.mdl-demo section .section__text a {\n  text-decoration: none;\n}\n.mdl-demo section .section__circle-container > .section__circle-container__circle {\n  width: 64px;\n  height: 64px;\n  border-radius: 32px;\n  margin: 8px 0;\n}\n.mdl-demo section.section--footer .section__circle--big {\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  margin: 8px 32px;\n}\n.mdl-demo .is-small-screen section.section--footer .section__circle--big {\n  width: 50px;\n  height: 50px;\n  border-radius: 25px;\n  margin: 8px 16px;\n}\n.mdl-demo section.section--footer {\n  padding: 64px 0;\n  margin: 0 -8px -8px -8px;\n}\n.mdl-demo section.section--center .section__text:not(:last-child) {\n  border-bottom: 1px solid rgba(0,0,0,.13);\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {\n  margin-bottom: 24px;\n}\n.mdl-demo #features section {\n  margin-bottom: 72px;\n}\n.mdl-demo #features h4, #features h5 {\n  margin-bottom: 16px;\n}\n.mdl-demo .toc {\n  border-left: 4px solid #C1EEF4;\n  margin: 24px;\n  padding: 0;\n  padding-left: 8px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mdl-demo .toc h4 {\n  font-size: 0.9rem;\n  margin-top: 0;\n}\n.mdl-demo .toc a {\n  color: #4DD0E1;\n  text-decoration: none;\n  font-size: 16px;\n  line-height: 28px;\n  display: block;\n}\n.mdl-demo .mdl-menu__container {\n  z-index: 99;\n}\n');
 
 /***/ },
-/* 432 */
+/* 440 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19032,11 +19198,11 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(286);
+	var _react = __webpack_require__(294);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(287);
+	var _reactDom = __webpack_require__(295);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
