@@ -2,4 +2,6 @@ siteTitle = "React-MDL: React Components for Material Design Lite UI"
 componentPages = [
   "/components/",
   "/components/badge/",
+  "/components/buttons/",
+  "/components/cards/",
 ]

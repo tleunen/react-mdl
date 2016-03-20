@@ -8,8 +8,9 @@ import {
 } from 'react-mdl';
 
 // Import styles.
-import '../../extra/material.css';
 import '../../extra/material.js';
+import '../../extra/material.css';
+import '../css/prism.css';
 
 const Template = (props) => (
     <Layout fixedHeader style={{ zIndex: 100001 }}>

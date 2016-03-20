@@ -1,11 +1,7 @@
 {
-  "name": "docs-site",
   "private": true,
-  "version": "1.0.0",
-  "license": "MIT",
   "dependencies": {
     "babel-plugin-react-transform": "^1.1.1",
-    "lodash": "^4.5.0",
     "react": "^0.14.7",
     "react-document-title": "^2.0.1",
     "react-dom": "^0.14.7",
@@ -14,10 +10,9 @@
     "react-transform-hmr": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.1",
-    "gh-pages": "^0.11.0",
-    "react-mdl": "^1.5.1"
+    "front-matter": "^2.0.6",
+    "markdown-it": "^6.0.0",
+    "prismjs": "^1.4.1",
+    "react-mdl": "latest"
   }
 }
