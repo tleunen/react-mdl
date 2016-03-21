@@ -4,7 +4,7 @@ title: Switch
 
 ## Demo
 
-```jsx
+```jsx_demo
 <Switch ripple id="switch1" defaultChecked>Ripple switch</Switch>
 
 <Switch id="switch2">Switch</Switch>

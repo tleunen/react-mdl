@@ -6,7 +6,7 @@ title: Checkbox
 
 ### Checkbox
 
-```jsx
+```jsx_demo
 <Checkbox label="With ripple" ripple defaultChecked />
 
 <Checkbox label="Without ripple" />

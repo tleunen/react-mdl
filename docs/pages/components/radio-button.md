@@ -4,7 +4,7 @@ title: Radio Button
 
 ## Demo
 
-```jsx
+```jsx_demo
 <RadioGroup name="demo" value="opt1">
     <Radio value="opt1" ripple>Ripple option</Radio>
     <Radio value="opt2">Other option</Radio>

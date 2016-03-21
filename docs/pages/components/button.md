@@ -4,7 +4,7 @@ title: Buttons
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Colored FAB button */}
 <FABButton colored>
     <Icon name="add" />
@@ -16,7 +16,7 @@ title: Buttons
 </FABButton>
 ```
 
-```jsx
+```jsx_demo
 {/* FAB button */}
 <FABButton>
     <Icon name="add" />
@@ -33,7 +33,7 @@ title: Buttons
 </FABButton>
 ```
 
-```jsx
+```jsx_demo
 {/* Mini FAB button */}
 <FABButton mini>
     <Icon name="add" />
@@ -45,7 +45,7 @@ title: Buttons
 </FABButton>
 ```
 
-```jsx
+```jsx_demo
 {/* Raised button */}
 <Button raised>Button</Button>
 
@@ -56,7 +56,7 @@ title: Buttons
 <Button raised disabled>Button</Button>
 ```
 
-```jsx
+```jsx_demo
 {/* Colored Raised button */}
 <Button raised colored>Button</Button>
 
@@ -67,7 +67,7 @@ title: Buttons
 <Button raised accent ripple>Button</Button>
 ```
 
-```jsx
+```jsx_demo
 {/* Flat button */}
 <Button>Button</Button>
 
@@ -78,7 +78,7 @@ title: Buttons
 <Button disabled>Button</Button>
 ```
 
-```jsx
+```jsx_demo
 {/* Primary colored flat button */}
 <Button primary>Button</Button>
 
@@ -86,7 +86,7 @@ title: Buttons
 <Button accent>Button</Button>
 ```
 
-```jsx
+```jsx_demo
 {/* Icon button */}
 <IconButton name="mood" />
 

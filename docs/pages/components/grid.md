@@ -4,23 +4,7 @@ title: Grid
 
 ## Demo
 
-```css_demo
-.demo-grid-ruler .mdl-cell,
-.demo-grid-1 .mdl-cell,
-.demo-grid-2 .mdl-cell,
-.demo-grid-3 .mdl-cell {
-  box-sizing: border-box;
-  background-color: #BDBDBD;
-  height: 100px;
-  padding-left: 8px;
-  padding-top: 4px;
-  color: white;
-}
-.demo-grid-ruler.demo-grid-ruler .mdl-cell {
-  height: 50px;
-}
-```
-```jsx
+```jsx_demo
 <div style={{width: '80%', margin: 'auto'}}>
     <Grid className="demo-grid-ruler">
         <Cell col={1}>1</Cell>

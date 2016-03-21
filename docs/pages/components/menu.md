@@ -4,7 +4,7 @@ title: Menu
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Lower left */}
 <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-left" />
@@ -28,7 +28,7 @@ title: Menu
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* Top left */}
 <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-top-left" />

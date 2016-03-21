@@ -9,7 +9,7 @@ title: Layout
 
 ### Navigation Layout
 
-```jsx
+```jsx_demo
 {/* Uses a transparent header that draws on top of the layout's background */}
 <div style={{height: '300px', position: 'relative'}}>
     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
@@ -34,7 +34,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* No header, and the drawer stays open on larger screens (fixed drawer). */}
 <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedDrawer>
@@ -51,7 +51,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* Always shows a header, even in smaller screens. */}
 <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader>
@@ -76,7 +76,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* The drawer is always open in large screens. The header is always shown, even in small screens. */}
 <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader fixedDrawer>
@@ -102,7 +102,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* Uses a header that scrolls with the text, rather than staying locked at the top */}
 <div className="demo-big-content">
     <Layout>
@@ -129,7 +129,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* Uses a header that contracts as the page scrolls down. */}
 <div className="demo-big-content">
     <Layout>
@@ -167,7 +167,7 @@ title: Layout
 </div>
 ```
 
-```jsx
+```jsx_demo
 {/* Hide the top part of the header when scrolling down */}
 <div className="demo-big-content">
     <Layout>
@@ -239,7 +239,7 @@ class Demo extends React.Component {
 }
 ```
 
-```jsx
+```jsx_demo
 {/* Simple header with fixed tabs. */}
 <div style={{height: '300px', position: 'relative'}}>
     <Layout fixedHeader fixedTabs>
@@ -278,7 +278,7 @@ class Demo extends React.Component {
 
 ### Footer
 
-```jsx
+```jsx_demo
 <Footer size="mega">
     <FooterSection type="middle">
         <FooterDropDownSection title="Features">
@@ -322,7 +322,7 @@ class Demo extends React.Component {
 </Footer>
 ```
 
-```jsx
+```jsx_demo
 <Footer size="mini">
     <FooterSection type="left" logo="Title">
         <FooterLinkList>

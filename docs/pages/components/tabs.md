@@ -4,15 +4,6 @@ title: Tabs
 
 ## Demo
 
-```css_demo
-.demo-tabs {
-    width: 70%;
-    margin: auto;
-}
-.demo-tabs .content {
-    height: 100px;
-}
-```
 ```jsx_demo_class
 // Simple header with scrollable tabs
 class Demo extends React.Component {

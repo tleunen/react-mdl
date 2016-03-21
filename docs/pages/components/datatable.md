@@ -6,7 +6,7 @@ title: DataTable
 
 ### Simple table
 
-```jsx
+```jsx_demo
 <DataTable
     shadow={0}
     rows={[
@@ -22,7 +22,7 @@ title: DataTable
 ```
 
 ### Selectable Table with checkboxes
-```jsx
+```jsx_demo
 <DataTable
     selectable
     shadow={0}
@@ -40,7 +40,7 @@ title: DataTable
 ```
 
 ### Sortable table
-```jsx
+```jsx_demo
 <Table
     sortable
     shadow={0}

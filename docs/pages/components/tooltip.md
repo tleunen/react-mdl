@@ -4,7 +4,7 @@ title: Tooltip
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Simple tooltip */}
 <Tooltip label="Follow">
     <Icon name="add" />
@@ -15,7 +15,7 @@ title: Tooltip
     <Icon name="print" />
 </Tooltip>
 ```
-```jsx
+```jsx_demo
 {/* Rich Tooltip */}
 <Tooltip label={<span>Upload <strong>file.zip</strong></span>}>
     <Icon name="cloud_upload" />
@@ -26,7 +26,7 @@ title: Tooltip
     <Icon name="share" />
 </Tooltip>
 ```
-```jsx
+```jsx_demo
 {/* Right Tooltip */}
 <Tooltip label="Follow" position="right">
     <Icon name="arrow_forward" />

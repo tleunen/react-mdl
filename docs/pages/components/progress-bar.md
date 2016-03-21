@@ -4,15 +4,15 @@ title: Progress Bar
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Simple Progress Bar */}
 <ProgressBar progress={44} />
 ```
-```jsx
+```jsx_demo
 {/* Progress Bar with Indeterminate Progress */}
 <ProgressBar indeterminate />
 ```
-```jsx
+```jsx_demo
 {/* Progress Bar with Buffering */}
 <ProgressBar progress={33} buffer={87} />
 ```

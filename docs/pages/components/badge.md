@@ -4,7 +4,7 @@ title: Badge
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Number badge on icon */}
 <Badge text="1" overlap>
     <Icon name="account_box" />
@@ -16,7 +16,7 @@ title: Badge
 </Badge>
 ```
 
-```jsx
+```jsx_demo
 {/* Number badge on text */}
 <Badge text="4">Inbox</Badge>
 

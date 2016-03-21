@@ -4,7 +4,7 @@ title: Slider
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Default slider */}
 <Slider min={0} max={100} defaultValue={0} />
 

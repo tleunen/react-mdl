@@ -6,7 +6,7 @@ title: List
 
 ### Simple list
 
-```jsx
+```jsx_demo
 <List>
   <ListItem>Bryan Cranston</ListItem>
   <ListItem>Aaron Paul</ListItem>
@@ -16,7 +16,7 @@ title: List
 
 ### Simple list with icon
 
-```jsx
+```jsx_demo
 <List>
   <ListItem>
     <ListItemContent icon="person">Bryan Cranston</ListItemContent>
@@ -32,7 +32,7 @@ title: List
 
 ### List with avatar and simple action
 
-```jsx
+```jsx_demo
 <List style={{width: '300px'}}>
   <ListItem>
     <ListItemContent avatar="person">Bryan Cranston</ListItemContent>
@@ -57,7 +57,7 @@ title: List
 
 ### List with avatar and complex action
 
-```jsx
+```jsx_demo
 <List style={{width: '300px'}}>
   <ListItem>
     <ListItemContent avatar="person">Bryan Cranston</ListItemContent>
@@ -82,7 +82,7 @@ title: List
 
 ### Two line list
 
-```jsx
+```jsx_demo
 <List style={{width: '300px'}}>
   <ListItem twoLine>
     <ListItemContent avatar="person" subtitle="62 episodes">Bryan Cranston</ListItemContent>
@@ -107,7 +107,7 @@ title: List
 
 ### Three line list
 
-```jsx
+```jsx_demo
 <List style={{width: '650px'}}>
   <ListItem threeLine>
     <ListItemContent avatar="person" subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>

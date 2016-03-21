@@ -4,7 +4,7 @@ title: Spinner
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Simple spinner */}
 <Spinner />
 

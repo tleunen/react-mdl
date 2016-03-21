@@ -4,7 +4,7 @@ title: Cards
 
 ## Demo
 
-```jsx
+```jsx_demo
 <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
     <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Welcome</CardTitle>
     <CardText>
@@ -20,7 +20,7 @@ title: Cards
 </Card>
 ```
 
-```jsx
+```jsx_demo
 <Card shadow={0} style={{width: '320px', height: '320px', margin: 'auto'}}>
     <CardTitle expand style={{color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>
     <CardText>
@@ -33,7 +33,7 @@ title: Cards
 </Card>
 ```
 
-```jsx
+```jsx_demo
 <Card shadow={0} style={{width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto'}}>
     <CardTitle expand />
     <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
@@ -44,7 +44,7 @@ title: Cards
 </Card>
 ```
 
-```jsx
+```jsx_demo
 <Card shadow={0} style={{width: '256px', height: '256px', background: '#3E4EB8'}}>
     <CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
         <h4 style={{marginTop: '0'}}>

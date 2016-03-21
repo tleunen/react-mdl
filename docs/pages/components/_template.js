@@ -7,6 +7,8 @@ import {
     List, ListItem, Grid, Cell
 } from '../../../src/';
 
+import '../../css/demos.css';
+
 const propTypes = {
     location: PropTypes.object,
     route: PropTypes.object

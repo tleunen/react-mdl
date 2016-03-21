@@ -4,7 +4,7 @@ title: Icon Toggle
 
 ## Demo
 
-```jsx
+```jsx_demo
 <IconToggle ripple id="bold" name="format_bold" defaultChecked />
 
 <IconToggle id="italic" name="format_italic" />

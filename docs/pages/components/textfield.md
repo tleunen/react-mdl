@@ -4,7 +4,7 @@ title: Textfield
 
 ## Demo
 
-```jsx
+```jsx_demo
 {/* Simple textfield */}
 <Textfield
     onChange={() => {}}
@@ -22,7 +22,7 @@ title: Textfield
 />
 ```
 
-```jsx
+```jsx_demo
 {/* Textfield with floating label */}
 <Textfield
     onChange={() => {}}
@@ -41,7 +41,7 @@ title: Textfield
 />
 ```
 
-```jsx
+```jsx_demo
 {/* Floating Multiline Textfield */}
 <Textfield
     onChange={() => {}}
