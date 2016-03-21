@@ -7296,7 +7296,7 @@ input.mdl-button[type="submit"] {
   @media screen and (max-width: 1024px) {
     .mdl-layout__header {
       display: none; }
-    .mdl-layout--fixed-header > .mdl-layout__header {
+    .mdl-layout--fixed-header > .mdl-layout__inner-container > .mdl-layout__header {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }

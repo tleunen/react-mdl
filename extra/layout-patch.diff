@@ -1,5 +1,5 @@
 diff --git a/src/layout/_layout.scss b/src/layout/_layout.scss
-index de8fc0c..6d80d28 100644
+index de8fc0c..0768839 100644
 --- a/src/layout/_layout.scss
 +++ b/src/layout/_layout.scss
 @@ -39,14 +39,9 @@
@@ -70,6 +70,15 @@ index de8fc0c..6d80d28 100644
          .mdl-layout__header-row {
            padding-left: 40px;
          }
+@@ -309,7 +309,7 @@
+         display: none;
+       }
+ 
+-      .mdl-layout--fixed-header > & {
++      .mdl-layout--fixed-header > .mdl-layout__inner-container > & {
+         display: flex;
+       }
+     }
 @@ -450,20 +450,20 @@
      z-index: 1;
      -webkit-overflow-scrolling: touch;
