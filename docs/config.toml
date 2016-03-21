@@ -1,0 +1,27 @@
+siteTitle = "React-MDL: React Components for Material Design Lite UI"
+componentPages = [
+  "/components/badge/",
+  "/components/button/",
+  "/components/card/",
+  "/components/checkbox/",
+  "/components/datatable/",
+  "/components/dialog/",
+  "/components/grid/",
+  "/components/icon-toggle/",
+  "/components/layout/",
+  "/components/list/",
+  "/components/menu/",
+  "/components/progress-bar/",
+  "/components/radio-button/",
+  "/components/slider/",
+  "/components/snackbar/",
+  "/components/spinner/",
+  "/components/switch/",
+  "/components/tabs/",
+  "/components/textfield/",
+  "/components/tooltip/",
+]
+templatePages = [
+    "/templates/article/",
+    "/templates/text/",
+]
