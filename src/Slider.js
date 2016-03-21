@@ -8,12 +8,14 @@ class Slider extends React.Component {
         className: PropTypes.string,
         max: PropTypes.number.isRequired,
         min: PropTypes.number.isRequired,
-        onChange: PropTypes.func.isRequired,
-        value: PropTypes.number.isRequired
+        onChange: PropTypes.func,
+        value: PropTypes.number
     };
 
     componentDidUpdate() {
-        findDOMNode(this).MaterialSlider.change(this.props.value);
+        if (typeof this.props.value !== 'undefined') {
+            findDOMNode(this).MaterialSlider.change(this.props.value);
+        }
     }
 
     render() {

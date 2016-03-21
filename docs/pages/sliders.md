@@ -16,5 +16,5 @@
 |:-------------|:----------|:-------------|:-------------|
 | max          | Number    | Set the maximum value  | Required |
 | min          | Number    | Set the minimum value | Required |
-| onChange     | Function  | Callback taking 1 parameter with the new value | Required |
-| value        | Number    | Set the initial/current value | Required |
+| onChange     | Function  | Callback taking 1 parameter with the new value | Required when `value` is provided |
+| value        | Number    | Set the initial/current value | Optional |
