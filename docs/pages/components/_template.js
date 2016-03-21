@@ -7,6 +7,7 @@ import {
     List, ListItem, Grid, Cell
 } from '../../../src/';
 
+import '../../css/components.css';
 import '../../css/demos.css';
 
 const propTypes = {
@@ -26,8 +27,10 @@ const Template = (props) => {
     });
 
     return (
-        <Grid>
-            <Cell component={List} col={2}>{sidebarItems}</Cell>
+        <Grid noSpacing>
+            <Cell component={'aside'} className="sidebar-components mdl-shadow--4dp" col={2}>
+                <List>{sidebarItems}</List>
+            </Cell>
             <Cell col={10}>
                 {props.children}
             </Cell>

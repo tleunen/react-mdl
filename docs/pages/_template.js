@@ -24,8 +24,8 @@ const Template = (props) => (
                 </a>
             </Navigation>
         </Header>
-        <Content className="mdl-color-text--grey-600">
-            <Grid>
+        <Content className="mdl-color-text--grey-600 mdl-color--grey-50">
+            <Grid noSpacing>
                 <Cell col={12}>
                     {props.children}
                 </Cell>
