@@ -2,6 +2,16 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.5.2]
+
+### Fixes
+- Fixes layout `Header` in small screens ([#264])
+- Fixes uncontrolled `Slider` ([#263])
+
+[1.5.2]: https://github.com/tleunen/react-mdl/compare/v1.5.1...v1.5.2
+[#264]: https://github.com/tleunen/react-mdl/issues/264
+[#263]: https://github.com/tleunen/react-mdl/issues/263
+
 ## [1.5.1]
 
 ### Fixes
