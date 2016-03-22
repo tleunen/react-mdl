@@ -95,6 +95,6 @@
     "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
     "release": "./scripts/release.sh",
-    "release-docs": "gh-pages -d out/docs/ -m 'Updates v'$npm_package_version"
+    "release-docs": "gh-pages -d docs/public/ -m 'Updates v'$npm_package_version"
   }
 }

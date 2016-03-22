@@ -13,6 +13,10 @@ const DocHtml = props => {
         ? props.title
         : DocumentTitle.rewind();
 
+    const cssLink = (process.env.NODE_ENV === 'production')
+        ? <link rel="stylesheet" href={link('/styles.css')} />
+        : null;
+
     return (
         <html lang="en">
             <head>
@@ -24,6 +28,7 @@ const DocHtml = props => {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
                 <script src="https://npmcdn.com/dialog-polyfill/dialog-polyfill.js"></script>
                 <link rel="stylesheet" type="text/css" href="https://npmcdn.com/dialog-polyfill/dialog-polyfill.css" />
+                {cssLink}
             </head>
             <body>
                 <div id="react-mount" dangerouslySetInnerHTML={{ __html: props.body }} />
