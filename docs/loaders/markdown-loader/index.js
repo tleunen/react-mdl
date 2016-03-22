@@ -33,6 +33,10 @@ function getDemoCode(lang, token) {
     return '';
 }
 
+md.renderer.rules.table_open = function () {
+    return '<table class="mdl-data-table mdl-shadow--2dp">\n';
+};
+
 // const defaultFenceRenderer = md.renderer.rules.fence;
 // https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js#L31
 md.renderer.rules.fence = (tokens, idx, options) => {
