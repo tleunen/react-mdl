@@ -1,3 +1,14 @@
+/******** LAYOUT ********/
+.demo-big-content {
+    position: relative;
+    height: 300px;
+}
+
+.demo-big-content .page-content {
+    height: 600px;
+}
+
+
 /******** GRID ********/
 .demo-grid-ruler .mdl-cell,
 .demo-grid-1 .mdl-cell,

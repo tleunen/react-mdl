@@ -44,3 +44,37 @@ img[alt="react logo"] {
     padding: 8px;
     margin: 8px;
 }
+
+pre {
+    position: relative;
+}
+.codepen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.codepen-mover-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#react-mount > .mdl-layout > .mdl-layout__inner-container > .mdl-layout__drawer .drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+}
+
+#react-mount > .mdl-layout > .mdl-layout__inner-container > .mdl-layout__drawer .mdl-navigation span.mdl-navigation__link {
+    color: #3f51b5;
+}
+
+#react-mount > .mdl-layout > .mdl-layout__inner-container > .mdl-layout__drawer .mdl-navigation a.mdl-navigation__link.active {
+    font-weight: 600;
+}
+
+#react-mount .mdl-data-table {
+    max-width: 100%;
+    margin: auto;
+    white-space: initial;
+}
