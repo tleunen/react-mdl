@@ -1,0 +1,25 @@
+/******** GRID ********/
+.demo-grid-ruler .mdl-cell,
+.demo-grid-1 .mdl-cell,
+.demo-grid-2 .mdl-cell,
+.demo-grid-3 .mdl-cell {
+    box-sizing: border-box;
+    background-color: #BDBDBD;
+    height: 100px;
+    padding-left: 8px;
+    padding-top: 4px;
+    color: white;
+}
+.demo-grid-ruler.demo-grid-ruler .mdl-cell {
+    height: 50px;
+}
+
+
+/******** TABS ********/
+.demo-tabs {
+    width: 70%;
+    margin: auto;
+}
+.demo-tabs .content {
+    height: 100px;
+}

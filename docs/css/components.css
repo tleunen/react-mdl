@@ -1,0 +1,46 @@
+img[alt="react logo"] {
+    width: 175px;
+    height: 175px;
+}
+
+.center {
+    text-align: center;
+}
+
+.sidebar-components {
+    display: inline-block;
+    background: #fff;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 24px 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.sidebar-components .mdl-list__item {
+    margin-left: 8px;
+    display: block;
+    padding: 0;
+}
+.sidebar-components .mdl-list__item:hover {
+    background: #fafafa;
+}
+
+.sidebar-components a {
+    color: #000;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+}
+
+.sidebar-components a {
+    color: #000;
+    text-decoration: none;
+}
+
+.markdown {
+    padding: 8px;
+    margin: 8px;
+}
