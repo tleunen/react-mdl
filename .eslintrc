@@ -13,7 +13,6 @@
         "react/jsx-indent-props": [2, 4]
     },
     "globals": {
-        "componentHandler": true,
-        "Prism": true
+        "componentHandler": true
     }
 }
