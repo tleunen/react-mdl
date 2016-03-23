@@ -2,8 +2,14 @@
 title: Components
 ---
 
-React-MDL is a React wrapper for [Material Design Lite](http://www.getmdl.io), a set of material components maintained by Google.
+React-MDL is a set of React Components for [Material Design Lite](http://www.getmdl.io), often called "MDL", a library of vanilla components maintained by Google.
 
-This documentation is actually built entirely with React-MDL. You'll find examples of the available components.
+The current implementation of React-MDL (v1.x) uses the entire MDL library provided by Google. This includes both the MDL css and the MDL javascript. Therefore, for you to use the library, you have to also require the original MDL files. And we suggest you to use the files we provide in the `/extra` directory of the repository.
 
-If you want to experiment using codepen for example, you can find the React-MDL [bundle JS file](https://npmcdn.com/react-mdl/out/ReactMDL.js) and its [minified version](https://npmcdn.com/react-mdl/out/ReactMDL.min.js). Don't forget to include React and React-DOM for your demos.
+```html
+<link rel="stylesheet" href="material.css">
+<script src="material.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+```
+
+The next major version (2.x) will remove the MDL css and js dependency.

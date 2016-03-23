@@ -1,12 +1,21 @@
+<div class="center">
 
-## Inops magnis Acrisius remisit Circes
+![react logo](./react.svg)
 
-Lorem markdownum *formasque* terram, fatum adnuit memores, stipulis
-virgine,
-ullo vires, potiere proles. Modo [nec Aesacon](http://gifctrl.com/) et
-vultum
-praeter fata gemitus panda. Factaque sibi repressit saltem, flammaeque
-ille per
-et opus flecti tellus inter: curru sidus. O iunxit ita erat, frondes,
-hac proles
-inritaturque?
+# React-MDL
+## React Components for Material Design Lite
+
+<pre><code>
+npm install --save react-mdl
+</code></pre>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=tleunen&repo=react-mdl&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=tleunen&repo=react-mdl&type=fork&count=true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+
+--
+
+See the components list to see what you can start using.
+
+And the templates to have real examples.
+
+</div>

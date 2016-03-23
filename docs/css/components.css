@@ -1,3 +1,12 @@
+img[alt="react logo"] {
+    width: 175px;
+    height: 175px;
+}
+
+.center {
+    text-align: center;
+}
+
 .sidebar-components {
     display: inline-block;
     background: #fff;

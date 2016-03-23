@@ -1,4 +1,4 @@
-siteTitle = "React-MDL: React Components for Material Design Lite UI"
+siteTitle = "React-MDL: React Components for Material Design Lite"
 componentPages = [
   "/components/badge/",
   "/components/button/",
