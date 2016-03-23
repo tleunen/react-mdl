@@ -91,7 +91,7 @@
     "lint": "eslint docs src scripts",
     "compile": "rm -rf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "gatsby develop docs",
-    "build-docs": "gatsby build docs",
+    "build-docs": "gatsby build docs --prefix-links",
     "build-umd": "NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
     "release": "./scripts/release.sh",

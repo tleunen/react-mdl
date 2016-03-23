@@ -1,4 +1,5 @@
 siteTitle = "React-MDL: React Components for Material Design Lite"
+linkPrefix = "/react-mdl"
 componentPages = [
   "/components/badge/",
   "/components/button/",
