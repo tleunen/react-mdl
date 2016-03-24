@@ -18,5 +18,5 @@ title: Slider
 |:-------------|:----------|:-------------|:-------------|
 | max          | Number    | Set the maximum value  | Required |
 | min          | Number    | Set the minimum value | Required |
-| onChange     | Function  | Callback taking 1 parameter with the new value | Required when `value` is provided |
+| onChange     | Function  | Callback taking 1 parameter, the Change Event. New value retrivable via `event.target.value`| Required when `value` is provided |
 | value        | Number    | Set the initial/current value | Optional |
