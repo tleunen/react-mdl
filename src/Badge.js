@@ -1,20 +1,20 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-class Badge extends React.Component {
-    static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.element,
-            PropTypes.string
-        ]),
-        text: PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.number
-        ]),
-        overlap: PropTypes.bool,
-        noBackground: PropTypes.bool
-    };
+const propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.string
+    ]),
+    text: PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+    ]),
+    overlap: PropTypes.bool,
+    noBackground: PropTypes.bool
+};
 
+class Badge extends React.Component {
     render() {
         const { children, text, overlap, noBackground } = this.props;
 
@@ -37,5 +37,7 @@ class Badge extends React.Component {
         });
     }
 }
+
+Badge.propTypes = propTypes;
 
 export default Badge;

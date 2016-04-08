@@ -3,14 +3,14 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class ProgressBar extends React.Component {
-    static propTypes = {
-        buffer: PropTypes.number,
-        className: PropTypes.string,
-        indeterminate: PropTypes.bool,
-        progress: PropTypes.number
-    };
+const propTypes = {
+    buffer: PropTypes.number,
+    className: PropTypes.string,
+    indeterminate: PropTypes.bool,
+    progress: PropTypes.number
+};
 
+class ProgressBar extends React.Component {
     componentDidMount() {
         this._setProgress(this.props.progress);
         this._setBuffer(this.props.buffer);
@@ -43,5 +43,7 @@ class ProgressBar extends React.Component {
         return <div className={classes} {...otherProps}></div>;
     }
 }
+
+ProgressBar.propTypes = propTypes;
 
 export default mdlUpgrade(ProgressBar);

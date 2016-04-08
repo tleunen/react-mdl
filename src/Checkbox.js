@@ -3,16 +3,16 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Checkbox extends React.Component {
-    static propTypes = {
-        checked: PropTypes.bool,
-        className: PropTypes.string,
-        disabled: PropTypes.bool,
-        label: PropTypes.string,
-        onChange: PropTypes.func,
-        ripple: PropTypes.bool
-    };
+const propTypes = {
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    label: PropTypes.string,
+    onChange: PropTypes.func,
+    ripple: PropTypes.bool
+};
 
+class Checkbox extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
@@ -43,5 +43,7 @@ class Checkbox extends React.Component {
         );
     }
 }
+
+Checkbox.propTypes = propTypes;
 
 export default mdlUpgrade(Checkbox);

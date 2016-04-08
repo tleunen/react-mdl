@@ -15,13 +15,13 @@ if (typeof window !== 'undefined') {
     }
 }
 
+const propTypes = {
+    route: PropTypes.object,
+    location: PropTypes.object
+};
+
 /* eslint-disable no-eval */
 class MarkdownWrapper extends React.Component {
-    static propTypes = {
-        route: PropTypes.object,
-        location: PropTypes.object
-    };
-
     componentDidMount() {
         this.initDemos();
     }
@@ -63,5 +63,7 @@ class MarkdownWrapper extends React.Component {
         );
     }
 }
+
+MarkdownWrapper.propTypes = propTypes;
 
 export default MarkdownWrapper;

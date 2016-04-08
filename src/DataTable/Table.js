@@ -6,22 +6,22 @@ import TableHeader from './TableHeader';
 import makeSelectable from './Selectable';
 import makeSortable from './Sortable';
 
-class Table extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        columns: (props, propName, componentName) => (
-            props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
-        ),
-        data: (props, propName, componentName) => (
-            props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
-        ),
-        rowKeyColumn: PropTypes.string,
-        rows: PropTypes.arrayOf(
-            PropTypes.object
-        ).isRequired,
-        shadow: PropTypes.number
-    };
+const propTypes = {
+    className: PropTypes.string,
+    columns: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
+    ),
+    data: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
+    ),
+    rowKeyColumn: PropTypes.string,
+    rows: PropTypes.arrayOf(
+        PropTypes.object
+    ).isRequired,
+    shadow: PropTypes.number
+};
 
+class Table extends React.Component {
     renderCell(column, row, idx) {
         const className = !column.numeric ? 'mdl-data-table__cell--non-numeric' : '';
         return (
@@ -74,6 +74,8 @@ class Table extends React.Component {
         );
     }
 }
+
+Table.propTypes = propTypes;
 
 export default makeSortable(makeSelectable(Table));
 export const UndecoratedTable = Table;

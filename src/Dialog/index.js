@@ -1,6 +1,6 @@
 import basicClassCreator from '../utils/basicClassCreator';
 
-export Dialog from './Dialog';
-export DialogTitle from './DialogTitle';
+export { default as Dialog } from './Dialog';
+export { default as DialogTitle } from './DialogTitle';
 export const DialogContent = basicClassCreator('DialogContent', 'mdl-dialog__content');
-export DialogActions from './DialogActions';
+export { default as DialogActions } from './DialogActions';

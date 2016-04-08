@@ -6,20 +6,20 @@ import classNames from 'classnames';
 // a way to make it easy to use with React.
 const ANIMATION_LENGTH = 250;
 
+const propTypes = {
+    action: PropTypes.string,
+    active: PropTypes.bool.isRequired,
+    className: PropTypes.string,
+    onActionClick: PropTypes.func,
+    onTimeout: PropTypes.func.isRequired,
+    timeout: PropTypes.number
+};
+
+const defaultProps = {
+    timeout: 2750
+};
+
 class Snackbar extends React.Component {
-    static propTypes = {
-        action: PropTypes.string,
-        active: PropTypes.bool.isRequired,
-        className: PropTypes.string,
-        onActionClick: PropTypes.func,
-        onTimeout: PropTypes.func.isRequired,
-        timeout: PropTypes.number
-    };
-
-    static defaultProps = {
-        timeout: 2750
-    };
-
     constructor(props) {
         super(props);
         this.clearTimer = this.clearTimer.bind(this);
@@ -84,5 +84,8 @@ class Snackbar extends React.Component {
         );
     }
 }
+
+Snackbar.propTypes = propTypes;
+Snackbar.defaultProps = defaultProps;
 
 export default Snackbar;

@@ -20,8 +20,7 @@ describe('Tabs', () => {
             [].slice.call(tabBar.children).forEach((tab, i) => {
                 if (i === 1) {
                     expect(tab.className).toInclude('is-active');
-                }
-                else {
+                } else {
                     expect(tab.className).toExclude('is-active');
                 }
             });

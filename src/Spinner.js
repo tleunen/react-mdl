@@ -2,12 +2,13 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Spinner extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        singleColor: PropTypes.bool
-    };
+const propTypes = {
+    className: PropTypes.string,
+    singleColor: PropTypes.bool
+};
 
+// eslint-disable-next-line react/prefer-stateless-function
+class Spinner extends React.Component {
     render() {
         const { className, singleColor, ...otherProps } = this.props;
 
@@ -18,5 +19,7 @@ class Spinner extends React.Component {
         return <div className={classes} {...otherProps}></div>;
     }
 }
+
+Spinner.propTypes = propTypes;
 
 export default mdlUpgrade(Spinner);

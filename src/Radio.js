@@ -3,20 +3,20 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Radio extends React.Component {
-    static propTypes = {
-        checked: PropTypes.bool,
-        className: PropTypes.string,
-        disabled: PropTypes.bool,
-        name: PropTypes.string,
-        onChange: PropTypes.func,
-        ripple: PropTypes.bool,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ]).isRequired
-    };
+const propTypes = {
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    name: PropTypes.string,
+    onChange: PropTypes.func,
+    ripple: PropTypes.bool,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired
+};
 
+class Radio extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
@@ -49,5 +49,7 @@ class Radio extends React.Component {
         );
     }
 }
+
+Radio.propTypes = propTypes;
 
 export default mdlUpgrade(Radio);

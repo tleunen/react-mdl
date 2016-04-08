@@ -10,21 +10,21 @@ function initState(props) {
     };
 }
 
-export default Component =>
-    class Sortable extends React.Component {
-        static propTypes = {
-            columns: (props, propName, componentName) => (
-                props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
-            ),
-            data: (props, propName, componentName) => (
-                props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
-            ),
-            rows: PropTypes.arrayOf(
-                PropTypes.object
-            ).isRequired,
-            sortable: PropTypes.bool
-        };
+const propTypes = {
+    columns: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
+    ),
+    data: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
+    ),
+    rows: PropTypes.arrayOf(
+        PropTypes.object
+    ).isRequired,
+    sortable: PropTypes.bool
+};
 
+export default Component => {
+    class Sortable extends React.Component {
         constructor(props) {
             super(props);
 
@@ -63,16 +63,6 @@ export default Component =>
                 : b.localeCompare(a);
         }
 
-        handleClickColumn(e, columnName) {
-            const isAsc = this.state.sortHeader === columnName ? !this.state.isAsc : true;
-            const rows = this.getSortedRowsForColumn(isAsc, columnName, this.state.rows);
-            this.setState({
-                sortHeader: columnName,
-                isAsc,
-                rows
-            });
-        }
-
         getSortedRowsForColumn(isAsc, columnName, rows) {
             const columns = !!this.props.children
                 ? React.Children.map(this.props.children, child => child.props)
@@ -93,6 +83,16 @@ export default Component =>
                     isAsc
                 )
             );
+        }
+
+        handleClickColumn(e, columnName) {
+            const isAsc = this.state.sortHeader === columnName ? !this.state.isAsc : true;
+            const rows = this.getSortedRowsForColumn(isAsc, columnName, this.state.rows);
+            this.setState({
+                sortHeader: columnName,
+                isAsc,
+                rows
+            });
         }
 
         renderTableHeaders() {
@@ -133,4 +133,6 @@ export default Component =>
             );
         }
     }
-;
+    Sortable.propTypes = propTypes;
+    return Sortable;
+};

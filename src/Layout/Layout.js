@@ -2,14 +2,15 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from '../utils/mdlUpgrade';
 
-class Layout extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        fixedDrawer: PropTypes.bool,
-        fixedHeader: PropTypes.bool,
-        fixedTabs: PropTypes.bool
-    };
+const propTypes = {
+    className: PropTypes.string,
+    fixedDrawer: PropTypes.bool,
+    fixedHeader: PropTypes.bool,
+    fixedTabs: PropTypes.bool
+};
 
+// eslint-disable-next-line react/prefer-stateless-function
+class Layout extends React.Component {
     render() {
         const { className, fixedDrawer, fixedHeader, fixedTabs, ...otherProps } = this.props;
 
@@ -26,5 +27,7 @@ class Layout extends React.Component {
         );
     }
 }
+
+Layout.propTypes = propTypes;
 
 export default mdlUpgrade(Layout);

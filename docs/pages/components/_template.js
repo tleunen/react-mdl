@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { link } from 'gatsby-helpers';
+import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
 import {
@@ -21,7 +21,7 @@ const Template = (props) => {
         // const isActive = link(page.path) === props.location.pathname;
         return (
             <ListItem key={page.path}>
-                <Link to={link(page.path)}>{page.data.title}</Link>
+                <Link to={prefixLink(page.path)}>{page.data.title}</Link>
             </ListItem>
         );
     });

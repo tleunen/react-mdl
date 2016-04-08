@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+const propTypes = {
+    activeTab: PropTypes.number,
+    className: PropTypes.string,
+    cssPrefix: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
+};
+
+const defaultProps = {
+    activeTab: 0
+};
+
 class TabBar extends React.Component {
-    static propTypes = {
-        activeTab: PropTypes.number,
-        className: PropTypes.string,
-        cssPrefix: PropTypes.string.isRequired,
-        onChange: PropTypes.func,
-    };
-
-    static defaultProps = {
-        activeTab: 0
-    };
-
     constructor(props) {
         super(props);
 
@@ -48,5 +48,8 @@ class TabBar extends React.Component {
         );
     }
 }
+
+TabBar.propTypes = propTypes;
+TabBar.defaultProps = defaultProps;
 
 export default TabBar;

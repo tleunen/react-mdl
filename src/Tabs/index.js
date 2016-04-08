@@ -1,3 +1,3 @@
-export Tabs from './Tabs';
-export TabBar from './TabBar';
-export Tab from './Tab';
+export { default as Tabs } from './Tabs';
+export { default as TabBar } from './TabBar';
+export { default as Tab } from './Tab';

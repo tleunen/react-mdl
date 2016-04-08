@@ -30,9 +30,11 @@ describe('ListItemAction', () => {
 
     it('should have an info span if info is defined', () => {
         const output = renderDOM((
-            <ListItemAction info="Avatar">
-                <a href="#"><Icon name="avatar" /></a>
-            </ListItemAction>
+            <div>
+                <ListItemAction info="Avatar">
+                    <a href="#"><Icon name="avatar" /></a>
+                </ListItemAction>
+            </div>
         ));
 
         expect(output.querySelector('.mdl-list__item-secondary-info')).toExist();

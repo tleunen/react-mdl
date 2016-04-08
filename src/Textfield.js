@@ -3,29 +3,29 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Textfield extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        disabled: PropTypes.bool,
-        error: PropTypes.node,
-        expandable: PropTypes.bool,
-        expandableIcon: PropTypes.string,
-        floatingLabel: PropTypes.bool,
-        id: PropTypes.string,
-        inputClassName: PropTypes.string,
-        label: PropTypes.string.isRequired,
-        maxRows: PropTypes.number,
-        onChange: PropTypes.func,
-        pattern: PropTypes.string,
-        required: PropTypes.bool,
-        rows: PropTypes.number,
-        style: PropTypes.object,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ])
-    };
+const propTypes = {
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    error: PropTypes.node,
+    expandable: PropTypes.bool,
+    expandableIcon: PropTypes.string,
+    floatingLabel: PropTypes.bool,
+    id: PropTypes.string,
+    inputClassName: PropTypes.string,
+    label: PropTypes.string.isRequired,
+    maxRows: PropTypes.number,
+    onChange: PropTypes.func,
+    pattern: PropTypes.string,
+    required: PropTypes.bool,
+    rows: PropTypes.number,
+    style: PropTypes.object,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ])
+};
 
+class Textfield extends React.Component {
     componentDidMount() {
         if (this.props.error && !this.props.pattern) {
             this.setAsInvalid();
@@ -105,5 +105,7 @@ class Textfield extends React.Component {
         );
     }
 }
+
+Textfield.propTypes = propTypes;
 
 export default mdlUpgrade(Textfield);

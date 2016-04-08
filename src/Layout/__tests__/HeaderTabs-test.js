@@ -47,6 +47,7 @@ describe('Layout', () => {
                 done();
             };
 
+            // eslint-disable-next-line react/prefer-stateless-function
             class MDLWrapper extends React.Component {
                 render() {
                     return (

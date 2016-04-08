@@ -2,19 +2,17 @@ import React, { PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 
-const prevent = (event) => event.preventDefault();
+const propTypes = {
+    className: PropTypes.string,
+    onCancel: PropTypes.func,
+    open: PropTypes.bool
+};
+
+const defaultProps = {
+    onCancel: e => e.preventDefault()
+};
 
 class Dialog extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        onCancel: PropTypes.func,
-        open: PropTypes.bool
-    };
-
-    static defaultProps = {
-        onCancel: prevent
-    };
-
     componentDidMount() {
         this.refs.dialog.addEventListener('cancel', this.props.onCancel);
         if (this.props.open) {
@@ -33,8 +31,7 @@ class Dialog extends React.Component {
                 const dialogHeight = this.refs.dialog.clientHeight;
                 this.refs.dialog.style.position = 'fixed';
                 this.refs.dialog.style.top = `${(bodyHeight - dialogHeight) / 2}px`;
-            }
-            else {
+            } else {
                 findDOMNode(this).close();
             }
         }
@@ -59,5 +56,8 @@ class Dialog extends React.Component {
         );
     }
 }
+
+Dialog.propTypes = propTypes;
+Dialog.defaultProps = defaultProps;
 
 export default Dialog;

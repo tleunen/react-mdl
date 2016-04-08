@@ -9,11 +9,11 @@ import { Layout, Header, HeaderRow, HeaderTabs, Tab, Content, Grid, Cell,
     FooterDropDownSection } from '../../../../src/';
 import { getColorClass, getTextColorClass } from '../../../../src/utils/palette';
 
-class Text extends React.Component {
-    static propTypes = {
-        route: PropTypes.object
-    };
+const propTypes = {
+    route: PropTypes.object
+};
 
+class Text extends React.Component {
     constructor(props) {
         super(props);
 
@@ -259,6 +259,8 @@ class Text extends React.Component {
         );
     }
 }
+
+Text.propTypes = propTypes;
 
 export default makeTemplate('Text template', Text, `
 html, body {

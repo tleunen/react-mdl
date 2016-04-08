@@ -4,16 +4,16 @@ import classNames from 'classnames';
 import Icon from './Icon';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class IconToggle extends React.Component {
-    static propTypes = {
-        checked: PropTypes.bool,
-        className: PropTypes.string,
-        disabled: PropTypes.bool,
-        name: PropTypes.string.isRequired,
-        onChange: PropTypes.func,
-        ripple: PropTypes.bool
-    };
+const propTypes = {
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
+    ripple: PropTypes.bool
+};
 
+class IconToggle extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
@@ -44,5 +44,7 @@ class IconToggle extends React.Component {
         );
     }
 }
+
+IconToggle.propTypes = propTypes;
 
 export default mdlUpgrade(IconToggle);

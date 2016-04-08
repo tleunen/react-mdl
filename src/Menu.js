@@ -3,20 +3,21 @@ import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 import basicClassCreator from './utils/basicClassCreator';
 
+const propTypes = {
+    align: PropTypes.oneOf(['left', 'right']),
+    className: PropTypes.string,
+    ripple: PropTypes.bool,
+    target: PropTypes.string.isRequired,
+    valign: PropTypes.oneOf(['bottom', 'top'])
+};
+
+const defaultProps = {
+    align: 'left',
+    valign: 'bottom'
+};
+
+// eslint-disable-next-line react/prefer-stateless-function
 class Menu extends React.Component {
-    static propTypes = {
-        align: PropTypes.oneOf(['left', 'right']),
-        className: PropTypes.string,
-        ripple: PropTypes.bool,
-        target: PropTypes.string.isRequired,
-        valign: PropTypes.oneOf(['bottom', 'top'])
-    };
-
-    static defaultProps = {
-        align: 'left',
-        valign: 'bottom'
-    };
-
     render() {
         const { align, children, className, ripple,
             target, valign, ...otherProps } = this.props;
@@ -33,6 +34,9 @@ class Menu extends React.Component {
         );
     }
 }
+
+Menu.propTypes = propTypes;
+Menu.defaultProps = defaultProps;
 
 export default mdlUpgrade(Menu);
 export const MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');

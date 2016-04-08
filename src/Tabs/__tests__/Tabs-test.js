@@ -41,11 +41,13 @@ describe('Tabs', () => {
         };
 
         const element = (
-            <Tabs onChange={cb}>
-                <Tab>Tab1</Tab>
-                <Tab>Tab2</Tab>
-                <Tab>Tab3</Tab>
-            </Tabs>
+            <div>
+                <Tabs onChange={cb}>
+                    <Tab>Tab1</Tab>
+                    <Tab>Tab2</Tab>
+                    <Tab>Tab3</Tab>
+                </Tabs>
+            </div>
         );
 
         const el = renderDOM(element);
@@ -55,11 +57,13 @@ describe('Tabs', () => {
     it('should be throw any error when clicking on a tab', () => {
         expect(() => {
             const element = (
-                <Tabs>
-                    <Tab>Tab1</Tab>
-                    <Tab>Tab2</Tab>
-                    <Tab>Tab3</Tab>
-                </Tabs>
+                <div>
+                    <Tabs>
+                        <Tab>Tab1</Tab>
+                        <Tab>Tab2</Tab>
+                        <Tab>Tab3</Tab>
+                    </Tabs>
+                </div>
             );
 
             const el = renderDOM(element);

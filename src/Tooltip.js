@@ -13,8 +13,7 @@ const Tooltip = (props) => {
     let element;
     if (typeof children === 'string') {
         element = <span>{children}</span>;
-    }
-    else {
+    } else {
         element = React.Children.only(children);
     }
 

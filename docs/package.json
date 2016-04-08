@@ -1,17 +1,19 @@
 {
   "private": true,
   "dependencies": {
-    "babel-plugin-react-transform": "^1.1.1",
-    "react": "^0.14.7",
-    "react-document-title": "^2.0.1",
-    "react-dom": "^0.14.7",
-    "react-router": "^2.0.0",
-    "react-transform-catch-errors": "^1.0.0",
-    "react-transform-hmr": "^1.0.0"
+    "react": "0.14.8",
+    "react-document-title": "2.0.1",
+    "react-dom": "0.14.8",
+    "react-router": "2.0.0"
   },
   "devDependencies": {
-    "front-matter": "^2.0.6",
-    "markdown-it": "^6.0.0",
-    "prismjs": "^1.4.1"
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-transform": "2.0.2",
+    "front-matter": "2.0.6",
+    "gatsby": "0.9.0",
+    "markdown-it": "6.0.1",
+    "prismjs": "1.4.1",
+    "react-transform-catch-errors": "1.0.0",
+    "react-transform-hmr": "1.0.0"
   }
 }

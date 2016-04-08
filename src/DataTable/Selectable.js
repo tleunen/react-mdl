@@ -3,29 +3,29 @@ import classNames from 'classnames';
 import TableHeader from './TableHeader';
 import Checkbox from '../Checkbox';
 
-export default Component =>
+const propTypes = {
+    columns: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
+    ),
+    data: (props, propName, componentName) => (
+        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
+    ),
+    onSelectionChanged: PropTypes.func,
+    rowKeyColumn: PropTypes.string,
+    rows: PropTypes.arrayOf(
+        PropTypes.object
+    ).isRequired,
+    selectable: PropTypes.bool
+};
+
+const defaultProps = {
+    onSelectionChanged: () => {
+        // do nothing
+    }
+};
+
+export default Component => {
     class Selectable extends React.Component {
-        static propTypes = {
-            columns: (props, propName, componentName) => (
-                props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
-            ),
-            data: (props, propName, componentName) => (
-                props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
-            ),
-            onSelectionChanged: PropTypes.func,
-            rowKeyColumn: PropTypes.string,
-            rows: PropTypes.arrayOf(
-                PropTypes.object
-            ).isRequired,
-            selectable: PropTypes.bool
-        };
-
-        static defaultProps = {
-            onSelectionChanged: () => {
-                // do nothing
-            }
-        };
-
         constructor(props) {
             super(props);
 
@@ -85,8 +85,7 @@ export default Component =>
 
             if (rowChecked) {
                 selectedRows.push(rowId);
-            }
-            else {
+            } else {
                 const idx = selectedRows.indexOf(rowId);
                 selectedRows.splice(idx, 1);
             }
@@ -139,4 +138,7 @@ export default Component =>
             );
         }
     }
-;
+    Selectable.propTypes = propTypes;
+    Selectable.defaultProps = defaultProps;
+    return Selectable;
+};

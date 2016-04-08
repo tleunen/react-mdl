@@ -2,22 +2,23 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Button extends React.Component {
-    static propTypes = {
-        accent: PropTypes.bool,
-        className: PropTypes.string,
-        colored: PropTypes.bool,
-        component: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.element,
-            PropTypes.func
-        ]),
-        href: PropTypes.string,
-        primary: PropTypes.bool,
-        raised: PropTypes.bool,
-        ripple: PropTypes.bool
-    };
+const propTypes = {
+    accent: PropTypes.bool,
+    className: PropTypes.string,
+    colored: PropTypes.bool,
+    component: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.func
+    ]),
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    raised: PropTypes.bool,
+    ripple: PropTypes.bool
+};
 
+// eslint-disable-next-line react/prefer-stateless-function
+class Button extends React.Component {
     render() {
         const { accent, className, colored,
             primary, raised, ripple, component, href,
@@ -38,5 +39,7 @@ class Button extends React.Component {
         }, children);
     }
 }
+
+Button.propTypes = propTypes;
 
 export default mdlUpgrade(Button);

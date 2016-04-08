@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { link } from 'gatsby-helpers';
+import { prefixLink } from 'gatsby-helpers';
 
 import {
     Layout, Header, Content, Navigation,
@@ -14,10 +14,10 @@ import '../css/prism.css';
 
 const Template = (props) => (
     <Layout fixedHeader style={{ zIndex: 100001 }}>
-        <Header title={<Link to={link('/')} style={{ color: '#fff', textDecoration: 'none' }}>React-MDL</Link>}>
+        <Header title={<Link to={prefixLink('/')} style={{ color: '#fff', textDecoration: 'none' }}>React-MDL</Link>}>
             <Navigation>
-                <Link to={link('/components/')}>Components</Link>
-                <Link to={link('/templates/')}>Templates</Link>
+                <Link to={prefixLink('/components/')}>Components</Link>
+                <Link to={prefixLink('/templates/')}>Templates</Link>
                 <a href="https://github.com/tleunen/react-mdl">
                     <Icon name="link" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
                     GitHub

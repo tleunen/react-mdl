@@ -3,15 +3,15 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
 
-class Switch extends React.Component {
-    static propTypes = {
-        checked: PropTypes.bool,
-        className: PropTypes.string,
-        disabled: PropTypes.bool,
-        onChange: PropTypes.func,
-        ripple: PropTypes.bool
-    };
+const propTypes = {
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func,
+    ripple: PropTypes.bool
+};
 
+class Switch extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.disabled !== prevProps.disabled) {
             const fnName = this.props.disabled ? 'disable' : 'enable';
@@ -42,5 +42,7 @@ class Switch extends React.Component {
         );
     }
 }
+
+Switch.propTypes = propTypes;
 
 export default mdlUpgrade(Switch);
