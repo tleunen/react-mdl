@@ -7465,6 +7465,10 @@ input.mdl-button[type="submit"] {
     overflow: hidden;
     width: 100%; }
 
+.mdl-layout > .mdl-layout__content {
+  display: block;
+}
+
 .mdl-layout__tab-bar-container {
   position: relative;
   height: 48px;
