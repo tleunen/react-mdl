@@ -47,15 +47,17 @@ class Textfield extends React.Component {
             findDOMNode(this).MaterialTextfield.change(this.props.value);
         }
         if (this.props.error && !this.props.pattern) {
+            // Every time the input gets updated by MDL (checkValidity() or change())
+            // its invalid class gets reset. We have to put it again if the input is specifically set as "invalid"
             this.setAsInvalid();
         }
     }
 
     setAsInvalid() {
-        // At every re-render, mdl will set 'is-invalid' class according to the 'pattern' props validity
-        // If we want to force the error display, we have to override mdl 'is-invalid' value.
         const elt = findDOMNode(this);
-        elt.className = classNames(elt.className, 'is-invalid');
+        if (elt.className.indexOf('is-invalid') < 0) {
+            elt.className = classNames(elt.className, 'is-invalid');
+        }
     }
 
     render() {
