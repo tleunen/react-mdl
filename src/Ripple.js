@@ -6,14 +6,14 @@ import classNames from 'classnames';
 const INITIAL_SCALE = 'scale(0.0001, 0.0001)';
 const FINAL_SCALE = '';
 
+const propTypes = {
+    ripple: PropTypes.bool
+};
+
 export default (Component, options = {}) => {
     const { prefix, center } = options;
 
-    return class Ripple extends React.Component {
-        static propTypes = {
-            ripple: PropTypes.bool
-        };
-
+    class Ripple extends React.Component {
         constructor(props) {
             super(props);
             this.blurComponent = this.blurComponent.bind(this);
@@ -38,13 +38,26 @@ export default (Component, options = {}) => {
             };
         }
 
+        setRippleStyles(start) {
+            if (this.props.ripple) {
+                const scale = start ? INITIAL_SCALE : FINAL_SCALE;
+                const offset = !start && center
+                    ? `translate(${this.boundWidth / 2}px, ${this.boundHeight / 2}px)`
+                    : `translate(${this.x}px, ${this.y}px)`;
+
+                this.setState({
+                    rippleAnimating: !start,
+                    rippleTransform: `translate(-50%, -50%) ${offset} ${scale}`
+                });
+            }
+        }
+
         animFrameHandler() {
             if (!this.props.ripple) return;
 
             if (this.frameCount-- > 0) {
                 requestAnimationFrame(this.animFrameHandler);
-            }
-            else {
+            } else {
                 this.setRippleStyles(false);
             }
         }
@@ -79,8 +92,7 @@ export default (Component, options = {}) => {
 
             if (event.type === 'mousedown' && this.ignoringMouseDown_) {
                 this.ignoringMouseDown = false;
-            }
-            else {
+            } else {
                 if (event.type === 'touchstart') {
                     this.ignoringMouseDown = true;
                 }
@@ -95,8 +107,7 @@ export default (Component, options = {}) => {
                 if (event.clientX === 0 && event.clientY === 0) {
                     this.x = Math.round(bound.width / 2);
                     this.y = Math.round(bound.height / 2);
-                }
-                else {
+                } else {
                     const clientX = event.clientX ? event.clientX : event.touches[0].clientX;
                     const clientY = event.clientY ? event.clientY : event.touches[0].clientY;
                     this.x = Math.round(clientX - bound.left);
@@ -115,20 +126,6 @@ export default (Component, options = {}) => {
             if (event && event.detail !== 2) {
                 this.setState({
                     rippleVisible: false
-                });
-            }
-        }
-
-        setRippleStyles(start) {
-            if (this.props.ripple) {
-                const scale = start ? INITIAL_SCALE : FINAL_SCALE;
-                const offset = !start && center
-                    ? `translate(${this.boundWidth / 2}px, ${this.boundHeight / 2}px)`
-                    : `translate(${this.x}px, ${this.y}px)`;
-
-                this.setState({
-                    rippleAnimating: !start,
-                    rippleTransform: `translate(-50%, -50%) ${offset} ${scale}`
                 });
             }
         }
@@ -183,5 +180,8 @@ export default (Component, options = {}) => {
                 </Component>
             );
         }
-    };
+    }
+
+    Ripple.propTypes = propTypes;
+    return Ripple;
 };
