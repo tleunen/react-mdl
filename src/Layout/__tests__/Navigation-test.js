@@ -39,5 +39,17 @@ describe('Layout', () => {
             expect(output.props.children[2].props.className)
                 .toInclude('mdl-navigation__link');
         });
+
+        it('should work with false/null child', () => {
+            const element = (
+                <Navigation>
+                    <a href="#"></a>
+                    { false }
+                    { null }
+                </Navigation>
+            );
+
+            expect(() => render(element)).toNotThrow();
+        });
     });
 });
