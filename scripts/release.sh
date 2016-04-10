@@ -32,7 +32,6 @@ update_version 'package.json' $next_version
 
 npm run clean
 npm run compile
-npm run build-docs
 npm run build-umd
 npm run build-min
 
