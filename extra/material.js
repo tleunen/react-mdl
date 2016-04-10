@@ -3141,6 +3141,7 @@ componentHandler.register({
    */
 var MaterialLayout = function MaterialLayout(element) {
     this.element_ = element;
+    this.innerContainer_ = element.querySelector('.' + this.CssClasses_.INNER_CONTAINER);
     // Initialize instance.
     this.init();
 };
@@ -3342,7 +3343,7 @@ MaterialLayout.prototype.resetPanelState_ = function (panels) {
   * @public
   */
 MaterialLayout.prototype.toggleDrawer = function () {
-    var drawerButton = this.element_.querySelector('.' + this.CssClasses_.DRAWER_BTN);
+    var drawerButton = this.innerContainer_.querySelector('.' + this.CssClasses_.DRAWER_BTN);
     this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
     this.obfuscator_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
     // Set accessibility properties.
@@ -3364,7 +3365,7 @@ MaterialLayout.prototype.init = function () {
         if (focusedElement) {
             focusedElement.focus();
         }
-        var directChildren = this.element_.childNodes;
+        var directChildren = this.innerContainer_.childNodes;
         var numChildren = directChildren.length;
         for (var c = 0; c < numChildren; c++) {
             var child = directChildren[c];
@@ -3382,9 +3383,9 @@ MaterialLayout.prototype.init = function () {
             if (e.persisted) {
                 // when page is loaded from back/forward cache
                 // trigger repaint to let layout scroll in safari
-                this.element_.style.overflowY = 'hidden';
+                this.innerContainer_.style.overflowY = 'hidden';
                 requestAnimationFrame(function () {
-                    this.element_.style.overflowY = '';
+                    this.innerContainer_.style.overflowY = '';
                 }.bind(this));
             }
         }.bind(this), false);
@@ -3450,11 +3451,11 @@ MaterialLayout.prototype.init = function () {
             if (this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)) {
                 this.header_.insertBefore(drawerButton, this.header_.firstChild);
             } else {
-                this.element_.insertBefore(drawerButton, this.content_);
+                this.innerContainer_.insertBefore(drawerButton, this.content_);
             }
             var obfuscator = document.createElement('div');
             obfuscator.classList.add(this.CssClasses_.OBFUSCATOR);
-            this.element_.appendChild(obfuscator);
+            this.innerContainer_.appendChild(obfuscator);
             obfuscator.addEventListener('click', this.drawerToggleHandler_.bind(this));
             this.obfuscator_ = obfuscator;
             this.drawer_.addEventListener('keydown', this.keyboardEventHandler_.bind(this));
@@ -3534,12 +3535,6 @@ MaterialLayout.prototype.init = function () {
                 new MaterialLayoutTab(tabs[i], tabs, panels, this);
             }
         }
-        var innerContainer = document.createElement('div');
-        innerContainer.classList.add(this.CssClasses_.INNER_CONTAINER);
-        while (this.element_.firstChild) {
-            innerContainer.appendChild(this.element_.firstChild);
-        }
-        this.element_.appendChild(innerContainer);
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };

@@ -22,7 +22,9 @@ class Layout extends React.Component {
 
         return (
             <div className={classes} {...otherProps}>
-                {this.props.children}
+                <div className="mdl-layout__inner-container">
+                    {this.props.children}
+                </div>
             </div>
         );
     }
