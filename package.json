@@ -58,7 +58,7 @@
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.3.0",
     "expect": "^1.16.0",
-    "gatsby": "^0.9.0",
+    "gatsby": "^0.9.1",
     "gh-pages": "^0.11.0",
     "isparta": "^4.0.0",
     "isparta-instrumenter-loader": "^1.0.0",

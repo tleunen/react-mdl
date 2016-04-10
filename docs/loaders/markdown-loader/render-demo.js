@@ -1,6 +1,5 @@
 const babel = require('babel-core');
 
-
 function renderSimpleDemo(containerId, jsxCode) {
     let code = jsxCode.replace(/{\/\*.*\*\/}\n/g, '');
 

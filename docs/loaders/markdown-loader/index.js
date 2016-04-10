@@ -4,6 +4,7 @@ const markdownItUtils = require('markdown-it/lib/common/utils');
 const Prism = require('prismjs');
 require('prismjs/components/prism-jsx');
 const renderDemo = require('./render-demo');
+const renderCodePenButton = require('./render-codepen-button');
 
 const md = markdownIt({
     html: true,
@@ -23,14 +24,22 @@ const demoLanguagesMap = new Map([
     ['jsx_demo_class', 'jsx'],
 ]);
 
-function getDemoCode(lang, token) {
+function getCode(lang, token, fn) {
     if (lang === 'jsx_demo') {
-        return renderDemo(token.content);
+        return fn(token.content);
     }
     if (lang === 'jsx_demo_class') {
-        return renderDemo(token.content, true);
+        return fn(token.content, true);
     }
     return '';
+}
+
+function getCodePenCode(lang, token) {
+    return getCode(lang, token, renderCodePenButton);
+}
+
+function getDemoCode(lang, token) {
+    return getCode(lang, token, renderDemo);
 }
 
 md.renderer.rules.table_open = () => '<table class="mdl-data-table mdl-shadow--2dp">\n';
@@ -48,7 +57,7 @@ md.renderer.rules.fence = (tokens, idx, options) => {
 
     const demo = getDemoCode(langName, token);
     const prefix = `<pre class="language-${realLangName}"><code class="language-${realLangName}">`;
-    const suffix = '</code></pre>';
+    const suffix = `</code>${getCodePenCode(langName, token)}</pre>`;
     return demo + prefix + highlighted + suffix;
 };
 
