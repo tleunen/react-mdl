@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import addRipple from './Ripple';
+import addRipple from '../Ripple';
 
 const propTypes = {
     checked: PropTypes.bool,

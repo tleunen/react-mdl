@@ -4,7 +4,10 @@ let customStyleId = 0;
 
 export default (title, Component, css) => {
     class Template extends React.Component {
-        styleId = customStyleId++;
+        constructor(props) {
+            super(props);
+            this.styleId = customStyleId++;
+        }
 
         componentDidMount() {
             const styleNode = document.createElement('style');

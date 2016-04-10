@@ -4,7 +4,7 @@ import chaiEnzyme from 'chai-enzyme';
 import { shallow } from 'enzyme';
 import React from 'react';
 import Badge from '../Badge';
-import Icon from '../Icon';
+import Icon from '../../Icon';
 
 chai.use(chaiEnzyme());
 
