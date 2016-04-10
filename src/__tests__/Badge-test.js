@@ -41,6 +41,26 @@ describe('Badge', () => {
         expect(output.props.children).toBe('Inbox');
     });
 
+    it('should allow custom className on the badge itself', () => {
+        const element = (
+            <Badge text="3" className="my-class">NEW</Badge>
+        );
+
+        const output = render(element);
+        expect(output.props.className).toInclude('my-class');
+    });
+
+    it('should retain the class on the child', () => {
+        const element = (
+            <Badge text="3">
+                <div className="my-div-class">NEW</div>
+            </Badge>
+        );
+
+        const output = render(element);
+        expect(output.props.className).toInclude('my-div-class');
+    });
+
     describe('should not render badge', () => {
         it('when no children', () => {
             const output = render(<Badge text="4" />);

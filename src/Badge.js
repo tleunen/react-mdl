@@ -6,6 +6,7 @@ const propTypes = {
         PropTypes.element,
         PropTypes.string
     ]),
+    className: PropTypes.string,
     text: PropTypes.oneOfType([
         React.PropTypes.string,
         React.PropTypes.number
@@ -16,7 +17,7 @@ const propTypes = {
 
 class Badge extends React.Component {
     render() {
-        const { children, text, overlap, noBackground } = this.props;
+        const { children, className, text, overlap, noBackground } = this.props;
 
         // No badge if no children
         if (!React.Children.count(children)) return null;
@@ -29,7 +30,7 @@ class Badge extends React.Component {
         if (text === null || typeof text === 'undefined') return element;
 
         return React.cloneElement(element, {
-            className: classNames('mdl-badge', {
+            className: classNames(className, element.props.className, 'mdl-badge', {
                 'mdl-badge--overlap': !!overlap,
                 'mdl-badge--no-background': !!noBackground
             }),
