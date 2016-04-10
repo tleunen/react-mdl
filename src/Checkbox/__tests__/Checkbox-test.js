@@ -34,7 +34,7 @@ describe('Checkbox', () => {
     });
 
     it('should be checked', () => {
-        const wrapper = mount(<Checkbox checked />);
+        const wrapper = mount(<Checkbox checked onChange={() => {}} />);
 
         expect(wrapper).to.have.className('is-checked');
 
