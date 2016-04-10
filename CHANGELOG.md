@@ -2,6 +2,28 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.5.3]
+
+### New
+- New documentation using [gatsby]
+
+### Fixes
+- Fixes `Slider` documentation ([#268])
+- Fixes react export names in the bundle files ([#267])
+- Fixes multiple `is-invalid` clasname on `Textfield` ([#277])
+- Fixes `Navigation` not working with null/false children ([#278])
+- Fixes `Badge` not retaining classnames from its child ([#279])
+- Fixes `Layout` invariant violation error ([#280])
+
+[1.5.3]: https://github.com/tleunen/react-mdl/compare/v1.5.2...v1.5.3
+[gatsby]: https://github.com/gatsbyjs/gatsby
+[#267]: https://github.com/tleunen/react-mdl/issues/267
+[#268]: https://github.com/tleunen/react-mdl/issues/268
+[#277]: https://github.com/tleunen/react-mdl/issues/277
+[#278]: https://github.com/tleunen/react-mdl/issues/278
+[#279]: https://github.com/tleunen/react-mdl/issues/279
+[#280]: https://github.com/tleunen/react-mdl/issues/280
+
 ## [1.5.2]
 
 ### Fixes
