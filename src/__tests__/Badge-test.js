@@ -45,8 +45,8 @@ describe('Badge', () => {
             <Badge text="3" className="my-class">NEW</Badge>
         );
 
-        const output = render(element);
-        expect(output.props.className).toInclude('my-class');
+        const wrapper = shallow(element);
+        expect(wrapper).to.have.className('my-class');
     });
 
     it('should retain the class on the child', () => {
@@ -56,8 +56,8 @@ describe('Badge', () => {
             </Badge>
         );
 
-        const output = render(element);
-        expect(output.props.className).toInclude('my-div-class');
+        const wrapper = shallow(element);
+        expect(wrapper).to.have.className('my-div-class');
     });
 
     describe('should not render badge', () => {

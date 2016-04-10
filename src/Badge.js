@@ -16,7 +16,7 @@ const propTypes = {
 };
 
 const Badge = (props) => {
-    const { children, text, overlap, noBackground } = props;
+    const { children, className, text, overlap, noBackground } = props;
 
     // No badge if no children
     if (!React.Children.count(children)) return null;
@@ -29,7 +29,7 @@ const Badge = (props) => {
     if (text === null || typeof text === 'undefined') return element;
 
     return React.cloneElement(element, {
-		className: classNames(className, element.props.className, 'mdl-badge', {
+        className: classNames(className, element.props.className, 'mdl-badge', {
             'mdl-badge--overlap': !!overlap,
             'mdl-badge--no-background': !!noBackground
         }),
@@ -37,5 +37,6 @@ const Badge = (props) => {
     });
 };
 
+Badge.propTypes = propTypes;
 
 export default Badge;
