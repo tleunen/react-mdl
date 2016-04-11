@@ -273,7 +273,9 @@ class Demo extends React.Component {
 | Header    | transparent  | Boolean   | Makes header transparent | Optional |
 | Header    | waterfall    | Boolean   | Allows a "waterfall" effect with multiple header lines | Optional |
 | Header    | hideTop      | Boolean   | Hide the top part of the header when used with `waterfall` | Optional |
+| Header    | hideSpacer   | Boolean   | Removes the spacer from the header | Optional |
 | HeaderRow | title        | Any       | Set the layout title | Optional |
+| HeaderRow | hideSpacer   | Boolean   | Removes the spacer from the header | Optional |
 | Content   | component    | String, Element, Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 
 ### Footer
