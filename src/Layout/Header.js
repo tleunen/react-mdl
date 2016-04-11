@@ -5,7 +5,7 @@ import HeaderTabs from './HeaderTabs';
 
 const Header = props => {
     const { className, scroll, seamed, title, transparent,
-            waterfall, hideTop, children, ...otherProps } = props;
+            waterfall, hideTop, hideSpacer, children, ...otherProps } = props;
 
     const classes = classNames('mdl-layout__header', {
         'mdl-layout__header--scroll': scroll,
@@ -25,7 +25,7 @@ const Header = props => {
     return (
         <header className={classes} {...otherProps}>
             {isRowOrTab ? children : (
-                <HeaderRow title={title}>{children}</HeaderRow>
+                <HeaderRow title={title} hideSpacer={hideSpacer}>{children}</HeaderRow>
             )}
         </header>
     );
@@ -37,7 +37,8 @@ Header.propTypes = {
     title: PropTypes.node,
     transparent: PropTypes.bool,
     waterfall: PropTypes.bool,
-    hideTop: PropTypes.bool
+    hideTop: PropTypes.bool,
+    hideSpacer: PropTypes.bool
 };
 
 export default Header;

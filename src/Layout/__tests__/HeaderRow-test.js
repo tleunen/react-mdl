@@ -45,5 +45,23 @@ describe('Layout', () => {
             expect(output.props.children[1]).toEqual(undefined);
             expect(output.props.children[2]).toEqual(<div>React-MDL</div>);
         });
+
+        it('should render a spacer if hideSpacer is set to false ', () => {
+            const output = render(<HeaderRow title="React-MDL" hideSpacer={false} />);
+
+            expect(output.props.children[1].type).toBe(Spacer);
+        });
+
+        it('should not render a spacer if hideSpacer is set to true ', () => {
+            const output = render(<HeaderRow title="React-MDL" hideSpacer><div>React-MDL</div></HeaderRow>);
+
+            expect(output.props.children[0].type).toBe('span');
+            expect(output.props.children[0].props.className)
+                .toBe('mdl-layout-title');
+            expect(output.props.children[0].props.children)
+                .toBe('React-MDL');
+            expect(output.props.children[1]).toNotBe(Spacer);
+            expect(output.props.children[2]).toEqual(<div>React-MDL</div>);
+        });
     });
 });
