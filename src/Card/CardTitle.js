@@ -14,7 +14,7 @@ const CardTitle = props => {
     }, className);
 
     const title = typeof children === 'string'
-        ? React.createElement('h2', { className: 'mdl-card__title-text' }, children)
+        ? <h2 className="mdl-card__title-text">{children}</h2>
         : children;
 
     return (

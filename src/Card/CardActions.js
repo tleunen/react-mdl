@@ -1,6 +1,11 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+const propTypes = {
+    border: PropTypes.bool,
+    className: PropTypes.string
+};
+
 const CardActions = (props) => {
     const { className, border, children, ...otherProps } = props;
 
@@ -15,9 +20,6 @@ const CardActions = (props) => {
     );
 };
 
-CardActions.propTypes = {
-    border: PropTypes.bool,
-    className: PropTypes.string
-};
+CardActions.propTypes = propTypes;
 
 export default CardActions;
