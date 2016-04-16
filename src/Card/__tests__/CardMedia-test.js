@@ -25,14 +25,14 @@ describe('CardMedia', () => {
     it('should render with the children', () => {
         const element = (
             <CardMedia>
-                <img src="test.png" />
+                <img src="test.png" alt="" />
             </CardMedia>
         );
 
         const wrapper = shallow(element);
 
         expect(wrapper).to.contain(
-            <img src="test.png" />
+            <img src="test.png" alt="" />
         );
     });
 });
