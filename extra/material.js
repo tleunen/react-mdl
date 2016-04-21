@@ -58,8 +58,10 @@ var componentHandler = {
    */
   upgradeElements: function(elements) {},
   /**
-   * Upgrades all registered components found in the current DOM. This is
-   * automatically called on window load.
+   * Upgrades all registered components found in the current DOM.
+   * This is automatically called on window load, unless the flag
+   * `mdlSuppressAutoUpgrade` is present on `window` and has a truthy
+   * value, in which case you should invoke this function youself.
    */
   upgradeAllRegistered: function() {},
   /**
@@ -471,7 +473,6 @@ window['componentHandler'] = componentHandler;
 
 window.addEventListener('load', function() {
   'use strict';
-
   /**
    * Performs a "Cutting the mustard" test. If the browser supports the features
    * tested, adds a mdl-js class to the <html> element. It then upgrades all MDL
@@ -481,7 +482,10 @@ window.addEventListener('load', function() {
       'querySelector' in document &&
       'addEventListener' in window && Array.prototype.forEach) {
     document.documentElement.classList.add('mdl-js');
-    componentHandler.upgradeAllRegistered();
+
+    if (! window.mdlSuppressAutoUpgrade) {
+      componentHandler.upgradeAllRegistered();
+    }
   } else {
     /**
      * Dummy function to avoid JS errors.
@@ -491,6 +495,10 @@ window.addEventListener('load', function() {
      * Dummy function to avoid JS errors.
      */
     componentHandler.register = function() {};
+    /**
+     * Dummy function to avoid JS errors.
+     */
+    componentHandler.upgradeAllRegistered = function() {};
   }
 });
 
