@@ -1,7 +1,7 @@
 ;(function() {
 "use strict";
 
-if (typeof window === 'undefined') return ;
+if (typeof window === 'undefined') return;
 
 /**
  * @license
@@ -58,7 +58,8 @@ var componentHandler = {
    */
   upgradeElements: function(elements) {},
   /**
-   * Upgrades all registered components found in the current DOM.
+   * Upgrades all registered components found in the current DOM. This is
+   * automatically called on window load.
    */
   upgradeAllRegistered: function() {},
   /**
