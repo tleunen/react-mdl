@@ -2,6 +2,20 @@
 
 All notable changes to the project will be documented in this file.
 
+## [1.5.4]
+
+### New
+- Adds `hideSpacer` prop on the `Header` and `HeaderRow` ([#282])
+
+### Fixes
+- Fixes the generated bundled React-MDL files ([#301])
+- Fixes/Removes the default upgrade elements by MDL since it's done by our components ([#302])
+
+[1.5.4]: https://github.com/tleunen/react-mdl/compare/v1.5.3...v1.5.4
+[#282]: https://github.com/tleunen/react-mdl/issues/282
+[#301]: https://github.com/tleunen/react-mdl/issues/301
+[#302]: https://github.com/tleunen/react-mdl/issues/302
+
 ## [1.5.3]
 
 ### New
