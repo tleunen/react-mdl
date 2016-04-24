@@ -22,7 +22,9 @@ class Checkbox extends React.Component {
         this.handleChange = this.handleChange.bind(this);
 
         this.state = {
-            checked: props.checked || props.defaultChecked
+            checked: typeof this.props.checked === 'boolean'
+                ? props.checked
+                : !!props.defaultChecked
         };
     }
 
