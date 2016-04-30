@@ -60,7 +60,6 @@ class Checkbox extends React.Component {
         return (
             <label className={classes} {...otherProps}>
                 <input
-                    ref="input"
                     type="checkbox"
                     className="mdl-checkbox__input"
                     onChange={this.handleChange}

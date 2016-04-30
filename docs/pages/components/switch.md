@@ -5,9 +5,9 @@ title: Switch
 ## Demo
 
 ```jsx_demo
-<Switch ripple id="switch1" defaultChecked>Ripple switch</Switch>
+<Switch label="Ripple switch" ripple id="switch1" defaultChecked />
 
-<Switch id="switch2">Switch</Switch>
+<Switch label="Switch" id="switch2" />
 ```
 
 #### Configuration
@@ -16,5 +16,6 @@ title: Switch
 |:-------------|:----------|:-------------|:-------------|
 | checked      | Boolean   | Defines the checkbox as "checked"  | Optional |
 | disabled     | Boolean   | Defines the checkbox as "disabled" | Optional |
+| label        | String    | Defines the label | Optional |
 | onChange     | Function  | Callback to receive the change event | Optional |
 | ripple       | Boolean   | Applies the ripple effect | Optional |
