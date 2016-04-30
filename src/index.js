@@ -5,6 +5,7 @@ export { default as MDLComponent } from './utils/MDLComponent';
 export { default as Badge } from './Badge';
 export { default as Button } from './Button';
 export { default as FABButton } from './Button/Fab';
+export { default as IconButton } from './Button/Icon';
 export {
     Card, CardTitle, CardActions,
     CardMedia, CardText, CardMenu
@@ -21,7 +22,6 @@ export {
 } from './Footer';
 export { default as Grid, Cell } from './Grid';
 export { default as Icon } from './Icon';
-export { default as IconButton } from './IconButton';
 export { default as IconToggle } from './IconToggle';
 export {
     Layout, Header, Drawer,

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Button from './Button';
-import Icon from './Icon';
+import Icon from '../Icon';
 
 const IconButton = (props) => {
     const { className, name, ...otherProps } = props;
