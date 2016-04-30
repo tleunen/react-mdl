@@ -41,7 +41,7 @@ class Snackbar extends React.Component {
             clearTimeout(this.timeoutId);
         }
 
-        if (this.props.active) {
+        if (this.state.open) {
             this.timeoutId = setTimeout(this.clearTimer, this.props.timeout);
         }
     }
