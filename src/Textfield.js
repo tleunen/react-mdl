@@ -12,7 +12,7 @@ const propTypes = {
     floatingLabel: PropTypes.bool,
     id: PropTypes.string,
     inputClassName: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
     pattern: PropTypes.string,
@@ -60,6 +60,20 @@ class Textfield extends React.Component {
         }
     }
 
+    labelElement(customId) {
+      const { label } = this.props
+
+      if (typeof label === 'string') {
+        return (
+          <label className="mdl-textfield__label" htmlFor={customId}>
+            {label}
+          </label>
+        )
+      } else if (typeof label === 'object') {
+        return label
+      }
+    }
+
     render() {
         const { className, inputClassName, id,
               error, expandable, expandableIcon,
@@ -67,6 +81,9 @@ class Textfield extends React.Component {
               rows, style, ...otherProps } = this.props;
 
         const hasRows = !!rows;
+        if (!id && typeof label === 'object') {
+          throw new Error('You must provide an id to Textfield when the label is an element');
+        }
         const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
         const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
@@ -79,7 +96,7 @@ class Textfield extends React.Component {
         };
 
         const input = React.createElement(inputTag, inputProps);
-        const labelContainer = <label className="mdl-textfield__label" htmlFor={customId}>{label}</label>;
+        const labelContainer = this.labelElement(customId);
         const errorContainer = !!error && <span className="mdl-textfield__error">{error}</span>;
 
         const containerClasses = classNames('mdl-textfield mdl-js-textfield', {

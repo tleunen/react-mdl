@@ -7,7 +7,7 @@ const propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     onChange: PropTypes.func,
     ripple: PropTypes.bool
 };
@@ -24,6 +24,18 @@ class Checkbox extends React.Component {
         }
     }
 
+    labelElement() {
+      const { label } = this.props
+
+      if (!label) {
+        return null
+      } else if (typeof label === 'string') {
+        return <span className="mdl-checkbox__label">{label}</span>
+      } else if (typeof label === 'object') {
+        return label
+      }
+    }
+
     render() {
         const { className, label, ripple, ...inputProps } = this.props;
 
@@ -38,7 +50,7 @@ class Checkbox extends React.Component {
                     className="mdl-checkbox__input"
                     { ...inputProps }
                 />
-                {label && <span className="mdl-checkbox__label">{label}</span>}
+                {this.labelElement()}
             </label>
         );
     }

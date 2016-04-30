@@ -51,6 +51,14 @@ describe('Textfield', () => {
             .toInclude('mdl-textfield--floating-label');
     });
 
+    it('should render with a label as an element', () => {
+        const labelElement = <div className="my-class"></div>;
+        const output = render(<Textfield id="my-id" label={labelElement} />);
+
+        expect(output.props.children[1].props.className)
+            .toInclude('my-class');
+    });
+
     it('should not render any error message by default', () => {
         const output = render(<Textfield label="label" />);
 
