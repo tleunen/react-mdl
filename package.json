@@ -84,7 +84,7 @@
   },
   "config": {
     "istanbul": "-x **/*-test.js -x tests.setup.js --report lcov --report json --report text --report html",
-    "mocha": "--compilers js:babel-register -r tests.setup.js src/**/+(Badge|Button|Card*|Cell|Checkbox|Grid|IconToggle|Snackbar|Switch)-test.js"
+    "mocha": "--compilers js:babel-register -r tests.setup.js src/!(__tests__)/**/+(Badge|Button|Card*|Cell|Checkbox|Grid|Icon|IconToggle|Snackbar|Switch)-test.js"
   },
   "scripts": {
     "clean": "rimraf coverage lib out",
