@@ -9,5 +9,8 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 script:
   - npm test
-after_script:
-  - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+after_success:
+  # report coverage to coveralls
+  - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  # report coverage to codecov.io
+  - bash <(curl https://codecov.io/bash)
