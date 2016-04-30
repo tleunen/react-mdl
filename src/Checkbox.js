@@ -25,15 +25,17 @@ class Checkbox extends React.Component {
     }
 
     labelElement() {
-      const { label } = this.props
+        const { label } = this.props;
 
-      if (!label) {
-        return null
-      } else if (typeof label === 'string') {
-        return <span className="mdl-checkbox__label">{label}</span>
-      } else if (typeof label === 'object') {
-        return label
-      }
+        if (!label) {
+            return null;
+        } else if (typeof label === 'string') {
+            return <span className="mdl-checkbox__label">{label}</span>;
+        } else if (typeof label === 'object') {
+            return label;
+        }
+
+        return null;
     }
 
     render() {

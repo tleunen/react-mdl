@@ -61,17 +61,19 @@ class Textfield extends React.Component {
     }
 
     labelElement(customId) {
-      const { label } = this.props
+        const { label } = this.props;
 
-      if (typeof label === 'string') {
-        return (
-          <label className="mdl-textfield__label" htmlFor={customId}>
-            {label}
-          </label>
-        )
-      } else if (typeof label === 'object') {
-        return label
-      }
+        if (typeof label === 'string') {
+            return (
+                <label className="mdl-textfield__label" htmlFor={customId}>
+                    {label}
+                </label>
+            );
+        } else if (typeof label === 'object') {
+            return label;
+        }
+
+        return null;
     }
 
     render() {
@@ -82,7 +84,7 @@ class Textfield extends React.Component {
 
         const hasRows = !!rows;
         if (!id && typeof label === 'object') {
-          throw new Error('You must provide an id to Textfield when the label is an element');
+            throw new Error('You must provide an id to Textfield when the label is an element');
         }
         const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
         const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
