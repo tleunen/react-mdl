@@ -84,7 +84,7 @@
   },
   "config": {
     "istanbul": "-x **/*-test.js -x tests.setup.js --report lcov --report json --report text --report html",
-    "mocha": "--compilers js:babel-register -r tests.setup.js src/**/Badge-test.js src/**/Card*-test.js src/**/Button-test.js src/**/Checkbox-test.js"
+    "mocha": "--compilers js:babel-register -r tests.setup.js src/**/+(Badge|Button|Card*|Checkbox|IconToggle)-test.js"
   },
   "scripts": {
     "clean": "rimraf coverage lib out",
@@ -92,11 +92,12 @@
     "react:14": "npm run react:clean && npm i react@0.14 react-dom@0.14 react-addons-test-utils@0.14",
     "react:15": "npm run react:clean && npm i react@15 react-dom@15 react-addons-test-utils@15",
     "test:react:14": "npm run react:14 && npm run test:suite",
-    "test:react:15": "npm run react:15 && npm run test:suite",
-    "test:suite": "istanbul cover $npm_package_config_istanbul _mocha -- $npm_package_config_mocha",
+    "test:react:15": "npm run react:15 && npm run test:suite:cov",
+    "test:suite": "mocha --compilers js:babel-register $npm_package_config_mocha",
+    "test:suite:cov": "istanbul cover $npm_package_config_istanbul _mocha -- $npm_package_config_mocha",
     "pretest": "npm run lint",
     "test": "npm run test:react:14 && npm run test:react:15",
-    "test:watch": "mocha --compilers js:babel-register $npm_package_config_mocha --watch",
+    "test:watch": "npm run test:suite -- --watch",
     "lint": "eslint docs src scripts",
     "compile": "rimraf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "cd docs && ./node_modules/.bin/gatsby develop",

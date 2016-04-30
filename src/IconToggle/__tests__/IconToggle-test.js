@@ -4,59 +4,53 @@ import chaiEnzyme from 'chai-enzyme';
 import chaiSpies from 'chai-spies';
 import { mount } from 'enzyme';
 import React from 'react';
-import Checkbox from '../Checkbox';
+import IconToggle from '../';
+import Icon from '../../Icon';
 
 chai.use(chaiEnzyme());
 chai.use(chaiSpies);
 
-describe('Checkbox', () => {
+describe('IconToggle', () => {
     it('should render an input checkbox inside a <label> ', () => {
-        const wrapper = mount(<Checkbox />);
+        const wrapper = mount(<IconToggle name="add" />);
 
-        expect(wrapper).to.have.tagName('label');
-        expect(wrapper).to.have.className('mdl-checkbox');
-
-        expect(wrapper).to.have.descendants('input');
+        expect(wrapper)
+            .to.have.tagName('label')
+            .that.have.className('mdl-icon-toggle')
+            .that.have.descendants('input');
         expect(wrapper.find('input')).to.have.attr('type', 'checkbox');
     });
 
-    it('should not render the checkbox label', () => {
-        const wrapper = mount(<Checkbox />);
+    it('should render an Icon inside the <label> ', () => {
+        const wrapper = mount(<IconToggle name="add" />);
 
-        expect(wrapper.childAt(1)).to.be.blank();
-    });
+        expect(wrapper)
+            .to.have.tagName('label')
+            .that.have.className('mdl-icon-toggle');
 
-    it('should render the label', () => {
-        const wrapper = mount(<Checkbox label="My checkbox" />);
-
-        const label = wrapper.childAt(1);
-        expect(label).to.have.tagName('span');
-        expect(label).to.have.className('mdl-checkbox__label');
-        expect(label).to.have.text('My checkbox');
+        expect(wrapper.find(Icon))
+            .to.have.length(1)
+            .that.have.prop('name', 'add');
     });
 
     it('should be disabled', () => {
-        const wrapper = mount(<Checkbox disabled />);
+        const wrapper = mount(<IconToggle name="add" disabled />);
 
         expect(wrapper).to.have.className('is-disabled');
-
-        const input = wrapper.find('input');
-        expect(input).to.be.disabled();
+        expect(wrapper.find('input')).to.be.disabled();
     });
 
     describe('"controlled" input', () => {
         it('should be checked', () => {
-            const wrapper = mount(<Checkbox checked onChange={() => {}} />);
+            const wrapper = mount(<IconToggle name="add" checked onChange={() => {}} />);
 
             expect(wrapper).to.have.className('is-checked');
-
-            const input = wrapper.find('input');
-            expect(input).to.be.checked();
+            expect(wrapper.find('input')).to.be.checked();
         });
 
         it('should allow to be changed', () => {
             const onChange = chai.spy();
-            const wrapper = mount(<Checkbox checked={false} onChange={onChange} />);
+            const wrapper = mount(<IconToggle name="add" checked={false} onChange={onChange} />);
             const input = wrapper.find('input');
 
             expect(input).to.not.be.checked();
@@ -70,16 +64,14 @@ describe('Checkbox', () => {
 
     describe('"uncontrolled" input', () => {
         it('should be checked', () => {
-            const wrapper = mount(<Checkbox defaultChecked />);
+            const wrapper = mount(<IconToggle name="add" defaultChecked />);
 
             expect(wrapper).to.have.className('is-checked');
-
-            const input = wrapper.find('input');
-            expect(input).to.be.checked();
+            expect(wrapper.find('input')).to.be.checked();
         });
 
         it('should change to checked', () => {
-            const wrapper = mount(<Checkbox />);
+            const wrapper = mount(<IconToggle name="add" />);
             const input = wrapper.find('input');
 
             input.simulate('change');
@@ -87,7 +79,7 @@ describe('Checkbox', () => {
         });
 
         it('should change to unchecked', () => {
-            const wrapper = mount(<Checkbox defaultChecked />);
+            const wrapper = mount(<IconToggle name="add" defaultChecked />);
             const input = wrapper.find('input');
 
             input.simulate('change');
@@ -95,7 +87,7 @@ describe('Checkbox', () => {
         });
 
         it('should stay checked after receiving a prop', () => {
-            const wrapper = mount(<Checkbox defaultChecked />);
+            const wrapper = mount(<IconToggle name="add" defaultChecked />);
             const input = wrapper.find('input');
 
             wrapper.setProps('className', 'new-class');
