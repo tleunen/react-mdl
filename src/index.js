@@ -4,6 +4,7 @@ export { default as MDLComponent } from './utils/MDLComponent';
 // components
 export { default as Badge } from './Badge';
 export { default as Button } from './Button';
+export { default as FABButton } from './Button/Fab';
 export {
     Card, CardTitle, CardActions,
     CardMedia, CardText, CardMenu
@@ -14,7 +15,6 @@ export {
     Dialog, DialogTitle, DialogContent,
     DialogActions
 } from './Dialog';
-export { default as FABButton } from './FABButton';
 export {
     Footer, FooterSection, FooterDropDownSection,
     FooterLinkList
