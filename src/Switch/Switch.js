@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import Icon from '../Icon';
 import addRipple from '../Ripple';
 
 const propTypes = {
@@ -8,7 +7,7 @@ const propTypes = {
     className: PropTypes.string,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
-    name: PropTypes.string.isRequired,
+    label: PropTypes.string,
     onChange: PropTypes.func
 };
 
@@ -16,7 +15,7 @@ const defaultProps = {
     onChange: () => {}
 };
 
-class IconToggle extends React.Component {
+class Switch extends React.Component {
     constructor(props) {
         super(props);
 
@@ -48,11 +47,10 @@ class IconToggle extends React.Component {
     }
 
     render() {
-        const { children, className,
-            disabled, name, ...otherProps } = this.props;
+        const { children, className, disabled, label, ...otherProps } = this.props;
         const { checked } = this.state;
 
-        const classes = classNames('mdl-icon-toggle is-upgraded', {
+        const classes = classNames('mdl-switch is-upgraded', {
             'is-focused': false,
             'is-disabled': disabled,
             'is-checked': checked
@@ -62,19 +60,23 @@ class IconToggle extends React.Component {
             <label className={classes} {...otherProps}>
                 <input
                     type="checkbox"
-                    className="mdl-icon-toggle__input"
+                    className="mdl-switch__input"
                     onChange={this.handleChange}
                     checked={checked}
                     disabled={disabled}
                 />
-                <Icon className="mdl-icon-toggle__label" name={name} />
+                {label && <span className="mdl-switch__label">{label}</span>}
+                <div className="mdl-switch__track" />
+                <div className="mdl-switch__thumb">
+                    <span className="mdl-switch__focus-helper" />
+                </div>
                 {children}
             </label>
         );
     }
 }
 
-IconToggle.propTypes = propTypes;
-IconToggle.defaultProps = defaultProps;
+Switch.propTypes = propTypes;
+Switch.defaultProps = defaultProps;
 
-export default addRipple(IconToggle, { prefix: 'mdl-icon-toggle', center: true });
+export default addRipple(Switch, { prefix: 'mdl-switch', center: true });
