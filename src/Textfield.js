@@ -69,18 +69,6 @@ class Textfield extends React.Component {
         }
     }
 
-    formatLabel(label, customId) {
-        if (typeof label === 'string') {
-            return (
-                <label className="mdl-textfield__label" htmlFor={customId}>
-                    {label}
-                </label>
-            );
-        }
-
-        return label;
-    }
-
     render() {
         const { className, inputClassName, id,
               error, expandable, expandableIcon,
@@ -100,7 +88,7 @@ class Textfield extends React.Component {
         };
 
         const input = React.createElement(inputTag, inputProps);
-        const labelContainer = this.formatLabel(label, customId);
+        const labelContainer = <label className="mdl-textfield__label" htmlFor={customId}>{label}</label>;
         const errorContainer = !!error && <span className="mdl-textfield__error">{error}</span>;
 
         const containerClasses = classNames('mdl-textfield mdl-js-textfield', {

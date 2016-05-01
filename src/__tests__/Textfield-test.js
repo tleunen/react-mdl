@@ -55,7 +55,7 @@ describe('Textfield', () => {
         const labelElement = <div className="my-class"></div>;
         const output = render(<Textfield id="my-id" label={labelElement} />);
 
-        expect(output.props.children[1].props.className)
+        expect(output.props.children[1].props.children.props.className)
             .toInclude('my-class');
     });
 

@@ -24,14 +24,6 @@ class Checkbox extends React.Component {
         }
     }
 
-    formatLabel(label) {
-        if (typeof label === 'string') {
-            return <span className="mdl-checkbox__label">{label}</span>;
-        }
-
-        return label;
-    }
-
     render() {
         const { className, label, ripple, ...inputProps } = this.props;
 
@@ -46,7 +38,7 @@ class Checkbox extends React.Component {
                     className="mdl-checkbox__input"
                     { ...inputProps }
                 />
-                {label && this.formatLabel(label)}
+                {label && <span className="mdl-checkbox__label">{label}</span>}
             </label>
         );
     }

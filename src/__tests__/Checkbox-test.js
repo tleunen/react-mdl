@@ -41,9 +41,9 @@ describe('Checkbox', () => {
 
         expect(output.props.children.length).toBe(2);
 
-        const checkboxLabel = output.props.children[1];
-        expect(checkboxLabel.type).toBe('p');
-        expect(checkboxLabel.props.children).toBe('This is a p tag');
+        const checkboxLabelContent = output.props.children[1].props.children;
+        expect(checkboxLabelContent.type).toBe('p');
+        expect(checkboxLabelContent.props.children).toBe('This is a p tag');
     });
 
     it('should be unchecked by default', () => {
