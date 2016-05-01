@@ -10,7 +10,16 @@ const propTypes = {
     expandable: PropTypes.bool,
     expandableIcon: PropTypes.string,
     floatingLabel: PropTypes.bool,
-    id: PropTypes.string,
+    id: (props, propName, componentName) => {
+        const { id } = props;
+        if (id && typeof id !== 'string') {
+            return new Error(`Invalid prop \`${propName}\` supplied to \`${componentName}\`. \`${propName}\` should be a string. Validation failed.`);
+        }
+        if (!id && typeof props.label !== 'string') {
+            return new Error(`Invalid prop \`${propName}\` supplied to \`${componentName}\`. \`${propName}\` is required when label is an element. Validation failed.`);
+        }
+        return null;
+    },
     inputClassName: PropTypes.string,
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     maxRows: PropTypes.number,
@@ -60,20 +69,16 @@ class Textfield extends React.Component {
         }
     }
 
-    labelElement(customId) {
-        const { label } = this.props;
-
+    formatLabel(label, customId) {
         if (typeof label === 'string') {
             return (
                 <label className="mdl-textfield__label" htmlFor={customId}>
                     {label}
                 </label>
             );
-        } else if (typeof label === 'object') {
-            return label;
         }
 
-        return null;
+        return label;
     }
 
     render() {
@@ -83,9 +88,6 @@ class Textfield extends React.Component {
               rows, style, ...otherProps } = this.props;
 
         const hasRows = !!rows;
-        if (!id && typeof label === 'object') {
-            throw new Error('You must provide an id to Textfield when the label is an element');
-        }
         const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
         const inputTag = hasRows || maxRows > 1 ? 'textarea' : 'input';
 
@@ -98,7 +100,7 @@ class Textfield extends React.Component {
         };
 
         const input = React.createElement(inputTag, inputProps);
-        const labelContainer = this.labelElement(customId);
+        const labelContainer = this.formatLabel(label, customId);
         const errorContainer = !!error && <span className="mdl-textfield__error">{error}</span>;
 
         const containerClasses = classNames('mdl-textfield mdl-js-textfield', {
