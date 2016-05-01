@@ -4,12 +4,6 @@ import TableHeader from './TableHeader';
 import Checkbox from '../Checkbox';
 
 const propTypes = {
-    columns: (props, propName, componentName) => (
-        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
-    ),
-    data: (props, propName, componentName) => (
-        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
-    ),
     onSelectionChanged: PropTypes.func,
     rowKeyColumn: PropTypes.string,
     rows: PropTypes.arrayOf(
@@ -19,9 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-    onSelectionChanged: () => {
-        // do nothing
-    }
+    onSelectionChanged: () => {}
 };
 
 export default Component => {
@@ -43,18 +35,17 @@ export default Component => {
 
         componentWillReceiveProps(nextProps) {
             if (nextProps.selectable) {
-                const { rows, data, rowKeyColumn } = nextProps;
-                const rrows = rows || data;
+                const { rows, rowKeyColumn } = nextProps;
 
                 // keep only existing rows
                 const selectedRows = this.state.selectedRows
-                    .filter(k => rrows
+                    .filter(k => rows
                         .map((row, i) => row[rowKeyColumn] || row.key || i)
                         .indexOf(k) > -1
                     );
 
                 this.setState({
-                    headerSelected: selectedRows.length === rrows.length,
+                    headerSelected: selectedRows.length === rows.length,
                     selectedRows
                 });
 
@@ -63,10 +54,10 @@ export default Component => {
         }
 
         handleChangeHeaderCheckbox(e) {
-            const { rowKeyColumn, rows, data } = this.props;
+            const { rowKeyColumn, rows } = this.props;
             const selected = e.target.checked;
             const selectedRows = selected
-                ? (rows || data).map((row, idx) => row[rowKeyColumn] || row.key || idx)
+                ? rows.map((row, idx) => row[rowKeyColumn] || row.key || idx)
                 : [];
 
             this.setState({
@@ -78,7 +69,7 @@ export default Component => {
         }
 
         handleChangeRowCheckbox(e) {
-            const { rows, data } = this.props;
+            const { rows } = this.props;
             const rowId = JSON.parse(e.target.dataset.reactmdl).id;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
@@ -91,7 +82,7 @@ export default Component => {
             }
 
             this.setState({
-                headerSelected: (rows || data).length === selectedRows.length,
+                headerSelected: rows.length === selectedRows.length,
                 selectedRows
             });
 
@@ -112,10 +103,10 @@ export default Component => {
         }
 
         render() {
-            const { rows, data, selectable, children, rowKeyColumn, ...otherProps } = this.props;
+            const { rows, selectable, children, rowKeyColumn, ...otherProps } = this.props;
 
             const realRows = selectable
-                ? (rows || data).map((row, idx) => {
+                ? rows.map((row, idx) => {
                     const rowKey = row[rowKeyColumn] || row.key || idx;
                     return {
                         ...row,
@@ -124,7 +115,7 @@ export default Component => {
                         }, row.className)
                     };
                 })
-                : (rows || data);
+                : rows;
 
             return (
                 <Component rows={realRows} {...otherProps}>

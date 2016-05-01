@@ -1,22 +1,15 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import TableHeader from './TableHeader';
 
 function initState(props) {
     return {
-        rows: (props.rows || props.data).slice(),
+        rows: props.rows.slice(),
         sortHeader: null,
         isAsc: true
     };
 }
 
 const propTypes = {
-    columns: (props, propName, componentName) => (
-        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use the component \`TableHeader\` instead.`)
-    ),
-    data: (props, propName, componentName) => (
-        props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
-    ),
     rows: PropTypes.arrayOf(
         PropTypes.object
     ).isRequired,
@@ -37,7 +30,7 @@ export default Component => {
 
         componentWillReceiveProps(nextProps) {
             if (nextProps.sortable) {
-                const realRows = nextProps.rows || nextProps.data;
+                const realRows = nextProps.rows;
                 const rows = this.state.sortHeader
                     ? this.getSortedRowsForColumn(this.state.isAsc, this.state.sortHeader, realRows)
                     : realRows;
@@ -64,9 +57,7 @@ export default Component => {
         }
 
         getSortedRowsForColumn(isAsc, columnName, rows) {
-            const columns = !!this.props.children
-                ? React.Children.map(this.props.children, child => child.props)
-                : this.props.columns;
+            const columns = React.Children.map(this.props.children, child => child.props);
 
             let sortFn = this.getDefaultSortFn;
             for (let i = 0; i < columns.length; i++) {
@@ -96,35 +87,22 @@ export default Component => {
         }
 
         renderTableHeaders() {
-            const { children, columns, sortable } = this.props;
+            const { children, sortable } = this.props;
 
             if (sortable) {
-                return children
-                    ? React.Children.map(children, child =>
-                        React.cloneElement(child, {
-                            className: this.getColumnClass(child.props),
-                            onClick: this.handleClickColumn
-                        })
-                    )
-                    : columns.map((column) =>
-                        <TableHeader
-                            key={column.name}
-                            className={this.getColumnClass(column)}
-                            name={column.name}
-                            numeric={column.numeric}
-                            tooltip={column.tooltip}
-                            onClick={this.handleClickColumn}
-                        >
-                            {column.label}
-                        </TableHeader>
-                    );
+                return React.Children.map(children, child =>
+                    React.cloneElement(child, {
+                        className: this.getColumnClass(child.props),
+                        onClick: this.handleClickColumn
+                    })
+                );
             }
             return children;
         }
 
         render() {
-            const { rows, data, ...otherProps } = this.props;
-            const realRows = (this.state && this.state.rows) || rows || data;
+            const { rows, ...otherProps } = this.props;
+            const realRows = (this.state && this.state.rows) || rows;
 
             return (
                 <Component rows={realRows} {...otherProps}>
