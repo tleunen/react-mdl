@@ -4,7 +4,7 @@ import MDLComponent from './utils/MDLComponent';
 
 const Tooltip = (props) => {
     const { label, large, children, position, ...otherProps } = props;
-    const id = Math.random().toString(36).substr(2);
+    let id = Math.random().toString(36).substr(2);
 
     const newLabel = (typeof label === 'string')
         ? <span>{label}</span>
@@ -15,6 +15,7 @@ const Tooltip = (props) => {
         element = <span>{children}</span>;
     } else {
         element = React.Children.only(children);
+        id = element.props.id || id;
     }
 
     return (
