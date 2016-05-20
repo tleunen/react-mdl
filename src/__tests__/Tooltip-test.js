@@ -45,6 +45,21 @@ describe('Tooltip', () => {
         expect(child.props.id).toBe(label.props.htmlFor);
     });
 
+    it('should use the id of child if this have', () => {
+        const element = (
+            <Tooltip label="my tooltip">
+                <div id="test_id">text</div>
+            </Tooltip>
+        );
+        const output = render(element);
+
+        const child = output.props.children[0];
+        const label = output.props.children[1].props.children;
+
+
+        expect(child.props.id).toBe(label.props.htmlFor);
+    });
+
     it('should work with a complex child', () => {
         const element = (
             <Tooltip label={<div>my tooltip</div>}>
