@@ -17,12 +17,15 @@ const propTypes = {
     hideDesktop: PropTypes.bool,
     hidePhone: PropTypes.bool,
     hideTablet: PropTypes.bool,
-    shadow: PropTypes.number
+    shadow: PropTypes.number,
+    grid: PropTypes.bool,
+    noSpacing: PropTypes.bool
 };
 
 const Cell = (props) => {
     const { align, className, children, col, phone, tablet, component,
-        hideDesktop, hidePhone, hideTablet, shadow, ...otherProps } = props;
+        hideDesktop, hidePhone, hideTablet, shadow, grid, noSpacing,
+        ...otherProps } = props;
 
     const hasShadow = typeof shadow !== 'undefined';
     const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
@@ -35,7 +38,9 @@ const Cell = (props) => {
         'mdl-cell--hide-desktop': hideDesktop,
         'mdl-cell--hide-phone': hidePhone,
         'mdl-cell--hide-tablet': hideTablet,
-        [shadows[shadowLevel]]: hasShadow
+        [shadows[shadowLevel]]: hasShadow,
+        'mdl-grid': grid,
+        'mdl-grid--no-spacing': grid && noSpacing
     }, className);
 
     return React.createElement(component || 'div', {

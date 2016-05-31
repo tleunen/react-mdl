@@ -54,3 +54,5 @@ title: Grid
 | Cell      | phone        | Number[1..12]    | Set the column size in phone mode | Optional |
 | Cell      | tablet       | Number[1..12]    | Set the column size in tablet mode | Optional |
 | Cell      | shadow       | Number    | Defines the shadow depth | Optional, Default 0. Must be between 0 and 6 |
+| Cell      | grid         | Boolean   | Make this cell a grid, too | Optional |
+| Cell      | noSpacing    | Boolean   | Removes the margins between the subcells. | Optional, ignored if `grid` is not set |
