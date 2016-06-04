@@ -35,7 +35,7 @@ Grid.propTypes = {
 const Cell = (props) => {
     const { align, className, children, col, phone, tablet, component,
         hideDesktop, hidePhone, hideTablet, shadow, offset, offsetDesktop,
-        offsetTablet, offsetPhone ...otherProps } = props;
+        offsetTablet, offsetPhone, ...otherProps } = props;
 
     const isDefined = data => return typeof data !== 'undefined';
 
