@@ -37,7 +37,7 @@ const Cell = (props) => {
         hideDesktop, hidePhone, hideTablet, shadow, offset, offsetDesktop,
         offsetTablet, offsetPhone, ...otherProps } = props;
 
-    const isDefined = data => return typeof data !== 'undefined';
+    const isDefined = data =>{ return typeof data !== 'undefined' };
 
     const hasShadow = typeof shadow !== 'undefined';
     const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
