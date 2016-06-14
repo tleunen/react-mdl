@@ -1,12 +1,14 @@
-From d81d2eb2fa62dc4e40aaa309519c4da5275acafc Mon Sep 17 00:00:00 2001
+From e580fb0ebfe58278dae2a9d7dff3de5fa0ca3812 Mon Sep 17 00:00:00 2001
 From: Tommy Leunen <tommy.leunen+github@gmail.com>
 Date: Mon, 21 Mar 2016 16:28:22 -0400
 Subject: [PATCH] 1.1.3
 
+Signed-off-by: Tommy Leunen <tommy.leunen+github@gmail.com>
 ---
- src/layout/_layout.scss | 34 +++++++++++++++++-----------------
- src/layout/layout.js    | 48 +++++++++++++++++++-----------------------------
- 2 files changed, 36 insertions(+), 46 deletions(-)
+ src/layout/_layout.scss    | 34 ++++++++++++++++----------------
+ src/layout/layout.js       | 48 ++++++++++++++++++----------------------------
+ src/mdlComponentHandler.js |  3 ++-
+ 3 files changed, 38 insertions(+), 47 deletions(-)
 
 diff --git a/src/layout/_layout.scss b/src/layout/_layout.scss
 index de8fc0c..0768839 100644
@@ -233,6 +235,24 @@ index b479f90..5288d87 100644
          obfuscator.addEventListener('click',
              this.drawerToggleHandler_.bind(this));
          this.obfuscator_ = obfuscator;
+diff --git a/src/mdlComponentHandler.js b/src/mdlComponentHandler.js
+index 843a5ac..2fd3542 100644
+--- a/src/mdlComponentHandler.js
++++ b/src/mdlComponentHandler.js
+@@ -1,3 +1,5 @@
++if (typeof window === 'undefined') return;
++
+ /**
+  * @license
+  * Copyright 2015 Google Inc. All Rights Reserved.
+@@ -476,7 +478,6 @@ window.addEventListener('load', function() {
+       'querySelector' in document &&
+       'addEventListener' in window && Array.prototype.forEach) {
+     document.documentElement.classList.add('mdl-js');
+-    componentHandler.upgradeAllRegistered();
+   } else {
+     /**
+      * Dummy function to avoid JS errors.
 -- 
 2.8.1
 

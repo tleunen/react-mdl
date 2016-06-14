@@ -1,4 +1,4 @@
-# [React-MDL][react-mdl-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
+# [React-MDL][react-mdl-url] [![Build Status][ci-image]][ci-url] [![Coverage Status][coverage-image]][coverage-url]
 
 React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url] v1.1.3
 
@@ -38,9 +38,10 @@ import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 MIT, see [LICENSE.md](/LICENSE.md) for details.
 
 [react-mdl-url]: https://tleunen.github.io/react-mdl/
-[travis-image]: https://travis-ci.org/tleunen/react-mdl.svg?branch=master
-[travis-url]: https://travis-ci.org/tleunen/react-mdl
-[coveralls-image]: https://coveralls.io/repos/tleunen/react-mdl/badge.svg?branch=master&service=github
-[coveralls-url]: https://coveralls.io/github/tleunen/react-mdl?branch=master
+
+[ci-image]: https://circleci.com/gh/tleunen/react-mdl.svg?style=shield
+[ci-url]: https://circleci.com/gh/tleunen/react-mdl
+[coverage-image]: https://codecov.io/gh/tleunen/react-mdl/branch/master/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/tleunen/react-mdl
 [google-mdl-url]: https://github.com/google/material-design-lite
 [discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5

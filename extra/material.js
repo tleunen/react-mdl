@@ -1,7 +1,7 @@
 ;(function() {
 "use strict";
 
-if (typeof window === 'undefined') return ;
+if (typeof window === 'undefined') return;
 
 /**
  * @license
@@ -481,7 +481,6 @@ window.addEventListener('load', function() {
       'querySelector' in document &&
       'addEventListener' in window && Array.prototype.forEach) {
     document.documentElement.classList.add('mdl-js');
-    componentHandler.upgradeAllRegistered();
   } else {
     /**
      * Dummy function to avoid JS errors.
