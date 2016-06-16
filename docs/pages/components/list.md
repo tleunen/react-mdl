@@ -135,7 +135,7 @@ title: List
 | Element   | Prop         | Type      | Effect       | Remarks      |
 |:----------|:-------------|:----------|:-------------|:-------------|
 | ListItem  | twoLine    | Boolean   | Set item to have 2 lines  | Optional. Cannot be set alongside `threeline` |
-| ListItem  | twoLine    | Boolean   | Set item to have 3 lines  | Optional. Cannot be set alongside `twoLine` |
+| ListItem  | threeLine  | Boolean   | Set item to have 3 lines  | Optional. Cannot be set alongside `twoLine` |
 | ListItemContent  | avatar    | string, Element   | Set the item left avatar  | Optional |
 | ListItemContent  | icon    | string, Element   | Set the item left icon  | Optional |
 | ListItemContent  | subtitle    | string   | Set the item subtitle  | Optional |
