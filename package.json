@@ -71,17 +71,17 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "react": "^15.0.1",
-    "react-addons-test-utils": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.1.0",
+    "react-addons-test-utils": "^15.1.0",
+    "react-dom": "^15.1.0",
     "react-router": "^2.0.1",
     "rimraf": "^2.5.2",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": "0.14.x || ^15.0.0-rc",
-    "react-dom": "0.14.x || ^15.0.0-rc"
+    "react": "0.14.x || ^15.1.0",
+    "react-dom": "0.14.x || ^15.1.0"
   },
   "scripts": {
     "clean": "rimraf coverage lib out",
