@@ -51,6 +51,10 @@ title: Grid
 | Cell      | hideDesktop  | Boolean    | Hide the cell in desktop mode | Optional |
 | Cell      | hidePhone    | Boolean    | Hide the cell in phone mode | Optional |
 | Cell      | hideTablet   | Boolean    | Hide the cell in tablet mode | Optional |
+| Cell      | offset       | Number[1..7]    | Adds N columns of whitespace before the cell | Optional |
+| Cell      | offsetDesktop| Number[1..7]    | Adds N columns of whitespace before the cell in desktop mode | Optional |
+| Cell      | offsetPhone  | Number[1..7]    | Adds N columns of whitespace before the cell in phone mode | Optional |
+| Cell      | offsetTablet | Number[1..7]    | Adds N columns of whitespace before the cell in tablet mode | Optional |
 | Cell      | phone        | Number[1..12]    | Set the column size in phone mode | Optional |
 | Cell      | tablet       | Number[1..12]    | Set the column size in tablet mode | Optional |
 | Cell      | shadow       | Number    | Defines the shadow depth | Optional, Default 0. Must be between 0 and 6 |

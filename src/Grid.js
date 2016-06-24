@@ -31,15 +31,15 @@ Grid.propTypes = {
     shadow: PropTypes.number
 };
 
+function isDefined(data) {
+    return typeof(data !== 'undefined');
+}
+
 /* eslint-disable react/no-multi-comp */
 const Cell = (props) => {
     const { align, className, children, col, phone, tablet, component,
         hideDesktop, hidePhone, hideTablet, shadow, offset, offsetDesktop,
         offsetTablet, offsetPhone, ...otherProps } = props;
-
-    function isDefined(data) {
-        return typeof(data !== 'undefined');
-    }
 
     const hasShadow = isDefined(shadow);
     const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
