@@ -34,16 +34,28 @@ Grid.propTypes = {
 /* eslint-disable react/no-multi-comp */
 const Cell = (props) => {
     const { align, className, children, col, phone, tablet, component,
-        hideDesktop, hidePhone, hideTablet, shadow, ...otherProps } = props;
+        hideDesktop, hidePhone, hideTablet, shadow, offset, offsetDesktop,
+        offsetTablet, offsetPhone, ...otherProps } = props;
 
-    const hasShadow = typeof shadow !== 'undefined';
+    function isDefined(data) {
+        return typeof(data !== 'undefined');
+    }
+
+    const hasShadow = isDefined(shadow);
     const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
 
     const classes = classNames('mdl-cell', {
+        // columns
         [`mdl-cell--${col}-col`]: true,
-        [`mdl-cell--${phone}-col-phone`]: typeof phone !== 'undefined',
-        [`mdl-cell--${tablet}-col-tablet`]: typeof tablet !== 'undefined',
-        [`mdl-cell--${align}`]: typeof align !== 'undefined',
+        [`mdl-cell--${phone}-col-phone`]: isDefined(phone),
+        [`mdl-cell--${tablet}-col-tablet`]: isDefined(tablet),
+        // alignment and offsets
+        [`mdl-cell--${align}`]: isDefined(align),
+        [`mdl-cell--${offset}-offset`]: isDefined(offset),
+        [`mdl-cell--${offsetDesktop}-offset-desktop`]: isDefined(offsetDesktop),
+        [`mdl-cell--${offsetTablet}-offset-tablet`]: isDefined(offsetTablet),
+        [`mdl-cell--${offsetPhone}-offset-phone`]: isDefined(offsetPhone),
+        // utils
         'mdl-cell--hide-desktop': hideDesktop,
         'mdl-cell--hide-phone': hidePhone,
         'mdl-cell--hide-tablet': hideTablet,
@@ -67,6 +79,10 @@ Cell.propTypes = {
     ]),
     phone: PropTypes.number,
     tablet: PropTypes.number,
+    offset: PropTypes.number,
+    offsetDesktop: PropTypes.number,
+    offsetTablet: PropTypes.number,
+    offsetPhone: PropTypes.number,
     hideDesktop: PropTypes.bool,
     hidePhone: PropTypes.bool,
     hideTablet: PropTypes.bool,
