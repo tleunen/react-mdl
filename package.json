@@ -1,6 +1,6 @@
 {
   "name": "react-mdl",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "React Components for Material Design Lite",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
