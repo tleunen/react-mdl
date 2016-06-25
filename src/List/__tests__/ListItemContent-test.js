@@ -40,7 +40,7 @@ describe('ListItemContent', () => {
     });
 
     it('should have a "complex" icon', () => {
-        const iconElement = <img src="something" />;
+        const iconElement = <img src="something" alt="" />;
         const output = render(<ListItemContent icon={iconElement} />);
 
         const [icon] = output.props.children;
@@ -58,7 +58,7 @@ describe('ListItemContent', () => {
     });
 
     it('should have a "complex" avatar', () => {
-        const iconElement = <img src="something" />;
+        const iconElement = <img src="something" alt="" />;
         const output = render(<ListItemContent avatar={iconElement} />);
 
         const [icon] = output.props.children;

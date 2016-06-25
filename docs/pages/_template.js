@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 
 import {
     Layout, Header, Content, Navigation,

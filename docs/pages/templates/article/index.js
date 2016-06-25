@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import DocumentTitle from 'react-document-title';
-import { config } from 'config';
+import { config } from '../../../config.toml';
 import makeTemplate from '../_templateHelper';
 import { Layout, Header, Textfield, Content, Grid, Cell,
     Footer, FooterSection, FooterLinkList } from '../../../../src/';
@@ -21,12 +21,12 @@ const Article = props => {
         <DocumentTitle title={title}>
             <Layout className={classNames('demo-layout', getColorClass('grey', 100))} fixedHeader>
                 <Header className={classNames('demo-header', getColorClass('grey', 100), getTextColorClass('grey', 800))} title="Material Design Lite" scroll>
-                <Textfield
-                    value=""
-                    label="Search"
-                    expandable
-                    expandableIcon="search"
-                />
+                    <Textfield
+                        value=""
+                        label="Search"
+                        expandable
+                        expandableIcon="search"
+                    />
                 </Header>
                 <div className="demo-ribbon" />
                 <Content className="demo-main">

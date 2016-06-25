@@ -16,10 +16,10 @@ class TabBar extends React.Component {
     constructor(props) {
         super(props);
 
-        this._handleClickTab = this._handleClickTab.bind(this);
+        this.handleClickTab = this.handleClickTab.bind(this);
     }
 
-    _handleClickTab(tabId) {
+    handleClickTab(tabId) {
         if (this.props.onChange) {
             this.props.onChange(tabId);
         }
@@ -40,7 +40,7 @@ class TabBar extends React.Component {
                         cssPrefix,
                         tabId,
                         active: tabId === activeTab,
-                        onTabClick: this._handleClickTab
+                        onTabClick: this.handleClickTab
                     })
                 )}
 

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
-import { config } from 'config';
+import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
+import { config } from '../../config.toml';
 
 import {
     List, ListItem, Grid, Cell

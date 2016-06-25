@@ -24,14 +24,14 @@ describe('Card', () => {
         it('should render with the children', () => {
             const element = (
                 <CardMedia>
-                    <img src="test.png" />
+                    <img src="test.png" alt="" />
                 </CardMedia>
             );
 
             const output = render(element);
 
             expect(output.props.children)
-                .toEqual(<img src="test.png" />);
+                .toEqual(<img src="test.png" alt="" />);
         });
     });
 });

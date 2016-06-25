@@ -1,18 +1,16 @@
 import React, { PropTypes } from 'react';
 import ReactDOM, { findDOMNode } from 'react-dom';
 import DocumentTitle from 'react-document-title';
-import { config } from 'config';
+import { config } from '../config.toml';
 import * as ReactMDL from '../../src/';
 
 if (typeof window !== 'undefined') {
     window.React = React;
     window.ReactDOM = ReactDOM;
     // export all ReactMDL into global so we can generate demos
-    for (const component in ReactMDL) {
-        if (ReactMDL.hasOwnProperty(component)) {
-            window[component] = ReactMDL[component];
-        }
-    }
+    Object.keys(ReactMDL).forEach(component => {
+        window[component] = ReactMDL[component];
+    });
 }
 
 const propTypes = {

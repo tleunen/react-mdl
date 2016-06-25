@@ -44,8 +44,8 @@ describe('Layout', () => {
             const element = (
                 <Navigation>
                     <a href="#"></a>
-                    { false }
-                    { null }
+                    {false}
+                    {null}
                 </Navigation>
             );
 

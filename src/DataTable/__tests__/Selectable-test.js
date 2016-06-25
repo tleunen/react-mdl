@@ -23,11 +23,11 @@ describe('Selectable Table', () => {
         };
 
         return (
-                <Table {...pp}>
-                    <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
-                    <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
-                    <TableHeader numeric name="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
-                </Table>
+            <Table {...pp}>
+                <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
+                <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
+                <TableHeader numeric name="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
+            </Table>
         );
     }
 
