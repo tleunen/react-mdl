@@ -96,7 +96,7 @@
     "pretest": "npm run lint",
     "test": "npm run test:react:14 && npm run test:react:15",
     "test:watch": "karma start --auto-watch",
-    "lint": "eslint docs src scripts",
+    "lint": "eslint src scripts",
     "compile": "rimraf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "cd docs && ./node_modules/.bin/gatsby develop",
     "build-docs": "cd docs && ./node_modules/.bin/gatsby build --prefix-links",
