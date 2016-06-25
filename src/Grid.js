@@ -32,7 +32,7 @@ Grid.propTypes = {
 };
 
 function isDefined(data) {
-    return typeof(data !== 'undefined');
+    return typeof data !== 'undefined';
 }
 
 /* eslint-disable react/no-multi-comp */
