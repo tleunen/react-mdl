@@ -117,6 +117,10 @@ export default Component => {
         render() {
             const { rows, data, selectable, children, rowKeyColumn, ...otherProps } = this.props;
 
+            // remove unwatned props
+            // see https://github.com/Hacker0x01/react-datepicker/issues/517#issuecomment-230171426
+            delete otherProps.onSelectionChanged;
+
             const realRows = selectable
                 ? (rows || data).map((row, idx) => {
                     const rowKey = row[rowKeyColumn] || row.key || idx;
