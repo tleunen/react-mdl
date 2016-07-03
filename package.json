@@ -43,7 +43,8 @@
   "license": "MIT",
   "dependencies": {
     "clamp": "^1.0.1",
-    "classnames": "^2.2.3"
+    "classnames": "^2.2.3",
+    "lodash.isequal": "^4.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
