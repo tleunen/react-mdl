@@ -4,6 +4,13 @@
     "react"
   ],
   "plugins": [
-      "transform-object-rest-spread",
-  ]
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "__coverage__"
+      ]
+    }
+  }
 }
