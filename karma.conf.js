@@ -50,7 +50,7 @@ module.exports = function karma(config) {
                     {
                         test: /\.js$/,
                         exclude: /(__tests__|node_modules)\//,
-                        loader: 'isparta-instrumenter-loader'
+                        loader: 'isparta'
                     }
                 ],
                 loaders: [

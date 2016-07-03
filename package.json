@@ -63,7 +63,7 @@
     "gatsby": "^0.11.6",
     "gh-pages": "^0.11.0",
     "isparta": "^4.0.0",
-    "isparta-instrumenter-loader": "^1.0.0",
+    "isparta-loader": "^2.0.0",
     "karma": "^1.0.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-cli": "^1.0.0",
