@@ -46,7 +46,7 @@ const Cell = (props) => {
 
     const classes = classNames('mdl-cell', {
         // columns
-        [`mdl-cell--${col}-col`]: true,
+        [`mdl-cell--${col}-col`]: isDefined(col),
         [`mdl-cell--${phone}-col-phone`]: isDefined(phone),
         [`mdl-cell--${tablet}-col-tablet`]: isDefined(tablet),
         // alignment and offsets
@@ -71,7 +71,7 @@ const Cell = (props) => {
 Cell.propTypes = {
     align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
     className: PropTypes.string,
-    col: PropTypes.number.isRequired,
+    col: PropTypes.number,
     component: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,

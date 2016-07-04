@@ -26,19 +26,19 @@ describe('Grid', () => {
 
     describe('Cell', () => {
         it('should render a <div>', () => {
-            const output = render(<Cell col={1} />);
+            const output = render(<Cell />);
 
             expect(output.type).toBe('div');
         });
 
         it('should have mdl grid css class', () => {
-            const output = render(<Cell col={1} />);
+            const output = render(<Cell />);
 
             expect(output.props.className).toInclude('mdl-cell');
         });
 
         it('should allow custom css class', () => {
-            const output = render(<Cell col={1} className="my-cell" />);
+            const output = render(<Cell className="my-cell" />);
 
             expect(output.props.className).toInclude('my-cell');
         });
