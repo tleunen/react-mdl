@@ -90,7 +90,7 @@ Cell.propTypes = {
 };
 
 Cell.defaultProps = {
-	col: 12
+    col: 12
 };
 
 export default Grid;
