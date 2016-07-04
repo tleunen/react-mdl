@@ -1,3 +1,7 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
 dependencies:
   pre:
     - case $CIRCLE_NODE_INDEX in 0) NODE_VERSION=4 ;; 1) NODE_VERSION=5 ;; 2) NODE_VERSION=stable ;; esac; nvm install $NODE_VERSION && nvm alias default $NODE_VERSION

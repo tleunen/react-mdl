@@ -16,19 +16,10 @@ If you're worried about the changes we made, you can take a look at the [patch n
 
 ## How to use the components
 
-### import the entire library
 ```js
-import ReactMDL from 'react-mdl';
-
-var Button = ReactMDL.Button;
-var Card = ReactMDL.Card
-
-// or
 import { Button, Card, CardText } from 'react-mdl';
-```
 
-### import a specific component
-```js
+// or...
 import Button from 'react-mdl/lib/Button';
 import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 ```
