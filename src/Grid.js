@@ -71,7 +71,7 @@ const Cell = (props) => {
 Cell.propTypes = {
     align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
     className: PropTypes.string,
-    col: PropTypes.number.isRequired,
+    col: PropTypes.number,
     component: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,
@@ -87,6 +87,10 @@ Cell.propTypes = {
     hidePhone: PropTypes.bool,
     hideTablet: PropTypes.bool,
     shadow: PropTypes.number
+};
+
+Cell.defaultProps = {
+	col: 12
 };
 
 export default Grid;
