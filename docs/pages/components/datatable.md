@@ -52,7 +52,6 @@ title: DataTable
 >
     <TableHeader
         name="material"
-        sortable
         sortFn={(a, b, isAsc) => (isAsc ? a : b).match(/\((.*)\)/)[1].localeCompare((isAsc ? b : a).match(/\((.*)\)/)[1])}
         tooltip="The amazing material name"
     >
@@ -67,7 +66,6 @@ title: DataTable
     </TableHeader>
     <TableHeader
         numeric
-        sortable
         name="price"
         cellFormatter={(price) => `\$${price.toFixed(2)}`}
         tooltip="Price pet unit"

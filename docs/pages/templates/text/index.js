@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import DocumentTitle from 'react-document-title';
-import { config } from 'config';
+import { config } from '../../../config.toml';
 import makeTemplate from '../_templateHelper';
 import { Layout, Header, HeaderRow, HeaderTabs, Tab, Content, Grid, Cell,
     Button, FABButton, IconButton, Icon, Card, CardText, CardActions,

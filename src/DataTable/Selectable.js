@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import isEqual from 'lodash.isequal';
 import TableHeader from './TableHeader';
 import Checkbox from '../Checkbox';
 
@@ -46,19 +47,21 @@ export default Component => {
                 const { rows, data, rowKeyColumn } = nextProps;
                 const rrows = rows || data;
 
-                // keep only existing rows
-                const selectedRows = this.state.selectedRows
-                    .filter(k => rrows
-                        .map((row, i) => row[rowKeyColumn] || row.key || i)
-                        .indexOf(k) > -1
-                    );
+                if (!isEqual(this.props.rows || this.props.data, rrows)) {
+                    // keep only existing rows
+                    const selectedRows = this.state.selectedRows
+                        .filter(k => rrows
+                            .map((row, i) => row[rowKeyColumn] || row.key || i)
+                            .indexOf(k) > -1
+                        );
 
-                this.setState({
-                    headerSelected: selectedRows.length === rrows.length,
-                    selectedRows
-                });
+                    this.setState({
+                        headerSelected: selectedRows.length === rrows.length,
+                        selectedRows
+                    });
 
-                nextProps.onSelectionChanged(selectedRows);
+                    nextProps.onSelectionChanged(selectedRows);
+                }
             }
         }
 
@@ -114,6 +117,10 @@ export default Component => {
         render() {
             const { rows, data, selectable, children, rowKeyColumn, ...otherProps } = this.props;
 
+            // remove unwatned props
+            // see https://github.com/Hacker0x01/react-datepicker/issues/517#issuecomment-230171426
+            delete otherProps.onSelectionChanged;
+
             const realRows = selectable
                 ? (rows || data).map((row, idx) => {
                     const rowKey = row[rowKeyColumn] || row.key || idx;
@@ -130,7 +137,11 @@ export default Component => {
                 <Component rows={realRows} {...otherProps}>
                     {selectable && (
                         <TableHeader name="mdl-header-select" cellFormatter={this.builRowCheckbox}>
-                            <Checkbox className="mdl-data-table__select" checked={this.state.headerSelected} onChange={this.handleChangeHeaderCheckbox} />
+                            <Checkbox
+                                className="mdl-data-table__select"
+                                checked={this.state.headerSelected}
+                                onChange={this.handleChangeHeaderCheckbox}
+                            />
                         </TableHeader>
                     )}
                     {children}

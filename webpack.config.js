@@ -11,7 +11,7 @@ module.exports = {
             commonjs2: 'react-dom',
             commonjs: 'react-dom',
             amd: 'react-dom'
-		}
+        }
     },
     devtool: 'sourcemap',
     module: {

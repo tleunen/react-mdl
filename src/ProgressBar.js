@@ -12,22 +12,22 @@ const propTypes = {
 
 class ProgressBar extends React.Component {
     componentDidMount() {
-        this._setProgress(this.props.progress);
-        this._setBuffer(this.props.buffer);
+        this.setProgress(this.props.progress);
+        this.setBuffer(this.props.buffer);
     }
 
     componentDidUpdate() {
-        this._setProgress(this.props.progress);
-        this._setBuffer(this.props.buffer);
+        this.setProgress(this.props.progress);
+        this.setBuffer(this.props.buffer);
     }
 
-    _setProgress(progress) {
+    setProgress(progress) {
         if (!this.props.indeterminate && progress !== undefined) {
             findDOMNode(this).MaterialProgress.setProgress(progress);
         }
     }
 
-    _setBuffer(buffer) {
+    setBuffer(buffer) {
         if (buffer !== undefined) {
             findDOMNode(this).MaterialProgress.setBuffer(buffer);
         }

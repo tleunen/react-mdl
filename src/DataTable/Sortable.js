@@ -126,6 +126,9 @@ export default Component => {
             const { rows, data, ...otherProps } = this.props;
             const realRows = (this.state && this.state.rows) || rows || data;
 
+            // remove unwanted props
+            delete otherProps.sortable;
+
             return (
                 <Component rows={realRows} {...otherProps}>
                     {this.renderTableHeaders()}

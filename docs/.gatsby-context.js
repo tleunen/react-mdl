@@ -1,5 +1,6 @@
 'use strict';
 
+/*  weak */
 // This file is auto-written and used by Gatsby to require
 // files from your pages directory.
 module.exports = function (callback) {

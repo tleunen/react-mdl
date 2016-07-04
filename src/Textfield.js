@@ -64,7 +64,7 @@ class Textfield extends React.Component {
         const { className, inputClassName, id,
               error, expandable, expandableIcon,
               floatingLabel, label, maxRows,
-              rows, style, ...otherProps } = this.props;
+              rows, style, children, ...otherProps } = this.props;
 
         const hasRows = !!rows;
         const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
@@ -97,12 +97,14 @@ class Textfield extends React.Component {
                     {labelContainer}
                     {errorContainer}
                 </div>
+				{children}
             </div>
         ) : (
             <div className={containerClasses} style={style}>
                 {input}
                 {labelContainer}
                 {errorContainer}
+				{children}
             </div>
         );
     }

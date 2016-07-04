@@ -10,7 +10,7 @@ module.exports = function karma(config) {
         },
 
         browsers: ['Chrome'],
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'chai'],
         files: [
             'extra/material.js',
             // 'src/**/*-test.js'
@@ -21,6 +21,7 @@ module.exports = function karma(config) {
             'karma-chrome-launcher',
             'karma-mocha',
             'karma-mocha-reporter',
+            'karma-chai',
             'karma-coverage',
             'karma-sourcemap-loader',
             'karma-webpack'
@@ -50,7 +51,7 @@ module.exports = function karma(config) {
                     {
                         test: /\.js$/,
                         exclude: /(__tests__|node_modules)\//,
-                        loader: 'isparta-instrumenter-loader'
+                        loader: 'isparta'
                     }
                 ],
                 loaders: [
@@ -58,14 +59,20 @@ module.exports = function karma(config) {
                         test: /\.js$/,
                         exclude: /(node_modules)/,
                         loader: 'babel'
-                    }
+                    },
+                    { test: /\.json$/, loader: 'json' }
                 ]
             },
             plugins: [
                 new webpack.DefinePlugin({
                     'process.env.NODE_ENV': JSON.stringify('test')
                 })
-            ]
+            ],
+            externals: {
+                'react/addons': true,
+                'react/lib/ExecutionEnvironment': true,
+                'react/lib/ReactContext': true
+            }
         },
 
         webpackMiddleware: {

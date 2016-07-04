@@ -15,7 +15,7 @@ describe('Selectable Table', () => {
         { material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35 }
     ];
 
-    function getSortableTable(props) {
+    function getSelectableTable(props) {
         const pp = {
             rows,
             ...props,
@@ -23,11 +23,11 @@ describe('Selectable Table', () => {
         };
 
         return (
-                <Table {...pp}>
-                    <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
-                    <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
-                    <TableHeader numeric name="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
-                </Table>
+            <Table {...pp}>
+                <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
+                <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
+                <TableHeader numeric name="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
+            </Table>
         );
     }
 
@@ -44,7 +44,7 @@ describe('Selectable Table', () => {
 
 
     it('should add a checkbox column in the head', () => {
-        const el = renderDOM(getSortableTable());
+        const el = renderDOM(getSelectableTable());
 
 
         const checkboxColumn = el.querySelectorAll('thead th')[0];
@@ -52,7 +52,7 @@ describe('Selectable Table', () => {
     });
 
     it('should add a checkbox column in every data row', () => {
-        const el = renderDOM(getSortableTable());
+        const el = renderDOM(getSelectableTable());
 
         const rowsRendered = el.querySelectorAll('tbody tr');
         [].slice.call(rowsRendered).forEach(row => {
@@ -63,15 +63,15 @@ describe('Selectable Table', () => {
 
     it('should check the clicked checkbox', () => {
         const onChange = expect.createSpy();
-        const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+        const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
         Simulate.change(getElementByRowId(el, 0), { target: { checked: true, dataset: { reactmdl: '{"id":0}' } } });
-        // expect(getElementByRowId(el, 0).checked).toBe(true);
+        expect(getElementByRowId(el, 0).checked).toBe(true);
     });
 
     it('should uncheck the clicked checkbox', () => {
         const onChange = expect.createSpy();
-        const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+        const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
         Simulate.change(getElementByRowId(el, 0), { target: { checked: true, dataset: { reactmdl: '{"id":0}' } } });
         Simulate.change(getElementByRowId(el, 0), { target: { checked: false, dataset: { reactmdl: '{"id":0}' } } });
@@ -80,7 +80,7 @@ describe('Selectable Table', () => {
 
     it('should send the selected row in the onChange handler', () => {
         const onChange = expect.createSpy();
-        const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+        const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
         Simulate.change(getElementByRowId(el, 0), { target: { checked: true, dataset: { reactmdl: '{"id":0}' } } });
         expect(onChange).toHaveBeenCalledWith([0]);
@@ -88,7 +88,7 @@ describe('Selectable Table', () => {
 
     it('should send all the selected rows in the onChange handler', () => {
         const onChange = expect.createSpy();
-        const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+        const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
         Simulate.change(getElementByRowId(el, 0), { target: { checked: true, dataset: { reactmdl: '{"id":0}' } } });
         Simulate.change(getElementByRowId(el, 2), { target: { checked: true, dataset: { reactmdl: '{"id":2}' } } });
@@ -97,7 +97,7 @@ describe('Selectable Table', () => {
 
     it('should not send a previously selected row in the onChange handler', () => {
         const onChange = expect.createSpy();
-        const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+        const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
         Simulate.change(getElementByRowId(el, 0), { target: { checked: true, dataset: { reactmdl: '{"id":0}' } } });
         Simulate.change(getElementByRowId(el, 1), { target: { checked: true, dataset: { reactmdl: '{"id":1}' } } });
@@ -112,7 +112,7 @@ describe('Selectable Table', () => {
     describe('when the checkbox in the header is clicked', () => {
         it('should check the header checkbox', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
             expect(el.querySelector('th .mdl-checkbox__input').checked).toBe(true);
@@ -120,7 +120,7 @@ describe('Selectable Table', () => {
 
         it('should check all the rows', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
             expect(getElementByRowId(el, 0).checked).toBe(true);
@@ -130,7 +130,7 @@ describe('Selectable Table', () => {
 
         it('should send all the selected rows in the onChange handler', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
             expect(onChange).toHaveBeenCalledWith([0, 1, 2]);
@@ -138,7 +138,7 @@ describe('Selectable Table', () => {
 
         it('should not send the previously selected rows in the onChange handler', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange }));
 
             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: true } });
             Simulate.change(el.querySelector('th .mdl-checkbox__input'), { target: { checked: false } });
@@ -155,56 +155,56 @@ describe('Selectable Table', () => {
 
         it('should keep the existing selected rows selected after appending a new row', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
 
             Simulate.change(getElementByRowId(el, 1001), { target: { checked: true, dataset: { reactmdl: '{"id":1001}' } } });
 
-            ReactDOM.render(getSortableTable({ onSelectionChanged: onChange, rows: newRows, rowKeyColumn: 'id' }), el.parentNode);
+            ReactDOM.render(getSelectableTable({ onSelectionChanged: onChange, rows: newRows, rowKeyColumn: 'id' }), el.parentNode);
             expect(getElementByRowId(el, 1001).checked).toBe(true);
         });
 
         it('should removed the old selected row', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
 
             Simulate.change(getElementByRowId(el, 1001), { target: { checked: true, dataset: { reactmdl: '{"id":1001}' } } });
             Simulate.change(getElementByRowId(el, 1002), { target: { checked: true, dataset: { reactmdl: '{"id":1002}' } } });
 
             const nRows = oldRows.slice();
             nRows.splice(2, 1);
-            ReactDOM.render(getSortableTable({ onSelectionChanged: onChange, rows: nRows, rowKeyColumn: 'id' }), el.parentNode);
+            ReactDOM.render(getSelectableTable({ onSelectionChanged: onChange, rows: nRows, rowKeyColumn: 'id' }), el.parentNode);
             expect(onChange).toHaveBeenCalledWith([1001]);
         });
 
-        it('should removed the checked marked on the heaer checkbox', () => {
+        it('should removed the checked marked on the header checkbox', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
 
             Simulate.change(getElementByRowId(el, 1000), { target: { checked: true, dataset: { reactmdl: '{"id":1000}' } } });
             Simulate.change(getElementByRowId(el, 1001), { target: { checked: true, dataset: { reactmdl: '{"id":1001}' } } });
             Simulate.change(getElementByRowId(el, 1002), { target: { checked: true, dataset: { reactmdl: '{"id":1002}' } } });
 
             const checkbox = el.querySelector('thead .mdl-checkbox__input');
-            expect(checkbox.checked).toExist();
+            expect(checkbox.checked).toBe(true);
 
-            ReactDOM.render(getSortableTable({ onSelectionChanged: onChange, rows: newRows, rowKeyColumn: 'id' }), el.parentNode);
-            expect(checkbox.checked).toNotExist();
+            ReactDOM.render(getSelectableTable({ onSelectionChanged: onChange, rows: newRows, rowKeyColumn: 'id' }), el.parentNode);
+            expect(checkbox.checked).toBe(false);
         });
 
         it('should mark the header checkbox checked', () => {
             const onChange = expect.createSpy();
-            const el = renderDOM(getSortableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
+            const el = renderDOM(getSelectableTable({ onSelectionChanged: onChange, rows: oldRows, rowKeyColumn: 'id' }));
 
             Simulate.change(getElementByRowId(el, 1000), { target: { checked: true, dataset: { reactmdl: '{"id":1000}' } } });
             Simulate.change(getElementByRowId(el, 1002), { target: { checked: true, dataset: { reactmdl: '{"id":1002}' } } });
 
             const checkbox = el.querySelector('thead .mdl-checkbox__input');
-            expect(checkbox.checked).toNotExist();
+            expect(checkbox.checked).toBe(false);
 
             const nRows = oldRows.slice();
             nRows.splice(1, 1);
-            ReactDOM.render(getSortableTable({ onSelectionChanged: onChange, rows: nRows, rowKeyColumn: 'id' }), el.parentNode);
-            expect(checkbox.checked).toExist();
+            ReactDOM.render(getSelectableTable({ onSelectionChanged: onChange, rows: nRows, rowKeyColumn: 'id' }), el.parentNode);
+            expect(checkbox.checked).toBe(true);
         });
     });
 });
