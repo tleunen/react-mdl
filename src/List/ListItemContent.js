@@ -7,6 +7,7 @@ const propTypes = {
         PropTypes.string,
         PropTypes.element
     ]),
+    children: PropTypes.node,
     className: PropTypes.string,
     icon: PropTypes.oneOfType([
         PropTypes.string,

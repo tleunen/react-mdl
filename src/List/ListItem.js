@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import ListItemContent from './ListItemContent';
 
 const propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     twoLine: PropTypes.bool,
     threeLine: PropTypes.bool
@@ -22,7 +23,6 @@ const ListItem = props => {
         }
         if (child.type === ListItemContent) {
             return cloneElement(child, {
-                ...child.props,
                 useBodyClass: !!threeLine
             });
         }
