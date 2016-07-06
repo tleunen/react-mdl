@@ -76,6 +76,9 @@ class Snackbar extends React.Component {
             'mdl-snackbar--active': open
         }, className);
 
+        delete otherProps.onTimeout;
+        delete otherProps.timeout;
+
         return (
             <div ref="snackbar" className={classes} aria-hidden={!open} {...otherProps}>
                 <div className="mdl-snackbar__text">{active && children}</div>
