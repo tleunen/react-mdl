@@ -1,3 +1,17 @@
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/tleunen/react-mdl/compare/v1.6.0...v1.6.1) (2016-07-07)
+
+
+### Bug Fixes
+
+* **DataTable:** Fix infinite loop with onSelectionChanged ([4d6b95d](https://github.com/tleunen/react-mdl/commit/4d6b95d)), closes [#339](https://github.com/tleunen/react-mdl/issues/339)
+* **DataTable:** Fix react unknown property warning ([c7d7a7a](https://github.com/tleunen/react-mdl/commit/c7d7a7a))
+* **List:** Fix children proptype ([7b1a5ee](https://github.com/tleunen/react-mdl/commit/7b1a5ee)), closes [#329](https://github.com/tleunen/react-mdl/issues/329)
+* **Shadows:** Fix incorrect shadow level ([7d3bdce](https://github.com/tleunen/react-mdl/commit/7d3bdce)), closes [#314](https://github.com/tleunen/react-mdl/issues/314)
+* **Snackbar:** Prevent unknown prop warning (#343) ([a9b2a70](https://github.com/tleunen/react-mdl/commit/a9b2a70))
+
+
+
 ## [1.5.4]
 
 ### New
