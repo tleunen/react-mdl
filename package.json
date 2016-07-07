@@ -47,6 +47,7 @@
     "lodash.isequal": "^4.2.0"
   },
   "devDependencies": {
+    "add-stream": "^1.0.0",
     "babel-cli": "^6.7.5",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
@@ -57,6 +58,7 @@
     "babel-preset-react": "^6.5.0",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.0",
+    "conventional-changelog": "^1.1.0",
     "cross-env": "^1.0.8",
     "enzyme": "^2.3.0",
     "eslint": "^2.7.0",

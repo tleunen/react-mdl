@@ -35,6 +35,8 @@ npm run compile
 npm run build-umd
 npm run build-min
 
+node ./scripts/changelog.js
+
 git commit -am "Version $next_version"
 
 git tag $next_ref
