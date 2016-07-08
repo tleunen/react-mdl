@@ -1,35 +1,37 @@
 /* eslint-env mocha */
-import expect from 'expect';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { render } from '../../__tests__/render';
 import { Card } from '../';
+
+chai.use(chaiEnzyme());
 
 describe('Card', () => {
     it('should render a div with the card css class', () => {
-        const output = render(<Card />);
+        const wrapper = shallow(<Card />);
 
-        expect(output.type).toBe('div');
-        expect(output.props.className).toInclude('mdl-card');
+        expect(wrapper).to.have.tagName('div');
+        expect(wrapper).to.have.className('mdl-card');
     });
 
     it('should allow custom css classes', () => {
-        const output = render(<Card className="my-card" />);
+        const wrapper = shallow(<Card className="my-card" />);
 
-        expect(output.props.className)
-            .toInclude('mdl-card')
-            .toInclude('my-card');
+        expect(wrapper).to.have.className('mdl-card');
+        expect(wrapper).to.have.className('my-card');
     });
 
     it('should render without shadows by default', () => {
-        const output = render(<Card />);
+        const wrapper = shallow(<Card />);
 
-        expect(output.props.className).toExclude('mdl-shadow--');
+        expect(wrapper).to.not.have.className('mdl-shadow--4dp');
     });
 
     it('should render with a shadow when specified', () => {
-        const output = render(<Card shadow={2} />);
+        const wrapper = shallow(<Card shadow={2} />);
 
-        expect(output.props.className).toInclude('mdl-shadow--');
+        expect(wrapper).to.have.className('mdl-shadow--4dp');
     });
 
     it('should render with the children', () => {
@@ -38,9 +40,9 @@ describe('Card', () => {
                 <div className="inner">Inner text</div>
             </Card>
         );
-        const output = render(element);
-
-        expect(output.props.children)
-            .toEqual(<div className="inner">Inner text</div>);
+        const wrapper = shallow(element);
+        expect(wrapper).to.contain(
+            <div className="inner">Inner text</div>
+        );
     });
 });

@@ -3,6 +3,11 @@ import classNames from 'classnames';
 import clamp from 'clamp';
 import shadows from '../utils/shadows';
 
+const propTypes = {
+    className: PropTypes.string,
+    shadow: PropTypes.number
+};
+
 const Card = (props) => {
     const { className, shadow, children, ...otherProps } = props;
 
@@ -19,9 +24,7 @@ const Card = (props) => {
         </div>
     );
 };
-Card.propTypes = {
-    className: PropTypes.string,
-    shadow: PropTypes.number
-};
+
+Card.propTypes = propTypes;
 
 export default Card;
