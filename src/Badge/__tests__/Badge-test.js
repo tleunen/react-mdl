@@ -3,7 +3,7 @@ import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Badge from '../Badge';
+import Badge from '../';
 import Icon from '../../Icon';
 
 chai.use(chaiEnzyme());
