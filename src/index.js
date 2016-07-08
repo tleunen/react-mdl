@@ -19,7 +19,7 @@ export {
     Footer, FooterSection, FooterDropDownSection,
     FooterLinkList
 } from './Footer';
-export { default as Grid, Cell } from './Grid';
+export { Grid, Cell } from './Grid';
 export { default as Icon } from './Icon';
 export { default as IconButton } from './IconButton';
 export { default as IconToggle } from './IconToggle';

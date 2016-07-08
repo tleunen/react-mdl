@@ -1,33 +1,26 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import clamp from 'clamp';
-import shadows from './utils/shadows';
+import shadows from '../utils/shadows';
 
-const Grid = (props) => {
-    const { noSpacing, className, children, component, shadow, ...otherProps } = props;
-
-    const hasShadow = typeof shadow !== 'undefined';
-    const shadowLevel = clamp(shadow || 0, 0, shadows.length - 1);
-
-    const classes = classNames('mdl-grid', {
-        'mdl-grid--no-spacing': noSpacing,
-        [shadows[shadowLevel]]: hasShadow
-    }, className);
-
-    return React.createElement(component || 'div', {
-        className: classes,
-        ...otherProps
-    }, children);
-};
-
-Grid.propTypes = {
+const propTypes = {
+    align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
     className: PropTypes.string,
+    col: PropTypes.number,
     component: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,
         PropTypes.func
     ]),
-    noSpacing: PropTypes.bool,
+    phone: PropTypes.number,
+    tablet: PropTypes.number,
+    offset: PropTypes.number,
+    offsetDesktop: PropTypes.number,
+    offsetTablet: PropTypes.number,
+    offsetPhone: PropTypes.number,
+    hideDesktop: PropTypes.bool,
+    hidePhone: PropTypes.bool,
+    hideTablet: PropTypes.bool,
     shadow: PropTypes.number
 };
 
@@ -35,7 +28,6 @@ function isDefined(data) {
     return typeof data !== 'undefined';
 }
 
-/* eslint-disable react/no-multi-comp */
 const Cell = (props) => {
     const { align, className, children, col, phone, tablet, component,
         hideDesktop, hidePhone, hideTablet, shadow, offset, offsetDesktop,
@@ -68,26 +60,6 @@ const Cell = (props) => {
     }, children);
 };
 
-Cell.propTypes = {
-    align: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
-    className: PropTypes.string,
-    col: PropTypes.number,
-    component: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-        PropTypes.func
-    ]),
-    phone: PropTypes.number,
-    tablet: PropTypes.number,
-    offset: PropTypes.number,
-    offsetDesktop: PropTypes.number,
-    offsetTablet: PropTypes.number,
-    offsetPhone: PropTypes.number,
-    hideDesktop: PropTypes.bool,
-    hidePhone: PropTypes.bool,
-    hideTablet: PropTypes.bool,
-    shadow: PropTypes.number
-};
+Cell.propTypes = propTypes;
 
-export default Grid;
-export { Cell };
+export default Cell;
