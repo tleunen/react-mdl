@@ -10,7 +10,7 @@ module.exports = function karma(config) {
         },
 
         browsers: ['Chrome'],
-        frameworks: ['mocha', 'chai'],
+        frameworks: ['mocha', 'chai', 'sinon'],
         files: [
             'extra/material.js',
             // 'src/**/*-test.js'
@@ -22,6 +22,7 @@ module.exports = function karma(config) {
             'karma-mocha',
             'karma-mocha-reporter',
             'karma-chai',
+            'karma-sinon',
             'karma-coverage',
             'karma-sourcemap-loader',
             'karma-webpack'
@@ -69,6 +70,7 @@ module.exports = function karma(config) {
                 })
             ],
             externals: {
+                sinon: 'sinon',
                 'react/addons': true,
                 'react/lib/ExecutionEnvironment': true,
                 'react/lib/ReactContext': true

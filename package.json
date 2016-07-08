@@ -79,6 +79,7 @@
     "karma-coverage": "^1.0.0",
     "karma-mocha": "^1.0.1",
     "karma-mocha-reporter": "^2.0.0",
+    "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
@@ -87,6 +88,7 @@
     "react-dom": "^15.0.1",
     "react-router": "^2.0.1",
     "rimraf": "^2.5.2",
+    "sinon": "^1.17.4",
     "standard-version": "^2.3.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
