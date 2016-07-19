@@ -14,7 +14,14 @@ If you're worried about the changes we made, you can take a look at the [patch n
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
-## How to use the components
+## Installation
+
+`npm install --save react-mdl`
+
+
+## Usage
+
+You can use React-MDL through a bundler like [webpack][webpack-url] or [browserify][browserify-url] by importing `react-mdl` in your application:
 
 ```js
 import { Button, Card, CardText } from 'react-mdl';
@@ -24,11 +31,23 @@ import Button from 'react-mdl/lib/Button';
 import { Card, CardText, CardActions } from 'react-mdl/lib/Card';
 ```
 
+Alternatively, you can include `node_modules/react-mdl/out/ReactMDL.js` as a script, but you'll likely want to copy it to a folder outside of `node_modules` first, such as `lib` or `vendor`. Then a global `ReactMDL` will be available:
+
+```js
+const { Button, Card, CardText } = ReactMDL;
+```
+
+For a listing of available components, as well as specific usage information, check out the [Components][react-mdl-components-url] page on the website.
+
 ## License
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
 
+
 [react-mdl-url]: https://tleunen.github.io/react-mdl/
+[react-mdl-components-url]: https://tleunen.github.io/react-mdl/components/
+[webpack-url]: https://webpack.github.io/
+[browserify-url]: http://browserify.org/
 
 [ci-image]: https://circleci.com/gh/tleunen/react-mdl.svg?style=shield
 [ci-url]: https://circleci.com/gh/tleunen/react-mdl
