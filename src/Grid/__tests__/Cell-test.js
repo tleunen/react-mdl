@@ -24,7 +24,7 @@ describe('Cell', () => {
             .to.have.className('my-cell');
     });
 
-    it('should have the specicic column css class', () => {
+    it('should have the specific column css class', () => {
         for (let i = 1; i < 13; i++) {
             const wrapper = shallow(<Cell col={i} />);
 
@@ -34,7 +34,7 @@ describe('Cell', () => {
         }
     });
 
-    it('should have the specicic phone column css class when specified', () => {
+    it('should have the specific phone column css class when specified', () => {
         for (let i = 1; i < 4; i++) {
             const wrapper = shallow(<Cell col={1} phone={i} />);
 
@@ -44,7 +44,7 @@ describe('Cell', () => {
         }
     });
 
-    it('should have the specicic tablet column css class when specified', () => {
+    it('should have the specific tablet column css class when specified', () => {
         for (let i = 1; i < 8; i++) {
             const wrapper = shallow(<Cell col={1} tablet={i} />);
 
@@ -54,7 +54,7 @@ describe('Cell', () => {
         }
     });
 
-    it('should have the specicic alignment css class when specified', () => {
+    it('should have the specific alignment css class when specified', () => {
         ['top', 'middle', 'bottom', 'stretch'].forEach(align => {
             const wrapper = shallow(<Cell col={1} align={align} />);
 
