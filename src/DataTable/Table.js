@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import getIteratorFn from 'react/lib/getIteratorFn';
 import classNames from 'classnames';
 import clamp from 'clamp';
 import shadows from '../utils/shadows';
@@ -15,9 +16,15 @@ const propTypes = {
         props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
     ),
     rowKeyColumn: PropTypes.string,
-    rows: PropTypes.arrayOf(
-        PropTypes.object
-    ).isRequired,
+    rows: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.object),
+        (props, propName, componentName) => {
+            if (!getIteratorFn(props[propName])) {
+                return new Error(`Invalid prop \`${propName}\` supplied to ${componentName}. Validation failed.`);
+            }
+            return undefined;
+        },
+    ]).isRequired,
     shadow: PropTypes.number
 };
 

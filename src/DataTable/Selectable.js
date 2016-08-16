@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import getIteratorFn from 'react/lib/getIteratorFn';
 import classNames from 'classnames';
 import isEqual from 'lodash.isequal';
 import TableHeader from './TableHeader';
@@ -13,9 +14,15 @@ const propTypes = {
     ),
     onSelectionChanged: PropTypes.func,
     rowKeyColumn: PropTypes.string,
-    rows: PropTypes.arrayOf(
-        PropTypes.object
-    ).isRequired,
+    rows: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.object),
+        (props, propName, componentName) => {
+            if (!getIteratorFn(props[propName])) {
+                return new Error(`Invalid prop \`${propName}\` supplied to ${componentName}. Validation failed.`);
+            }
+            return undefined;
+        },
+    ]).isRequired,
     selectable: PropTypes.bool
 };
 
