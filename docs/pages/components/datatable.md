@@ -84,4 +84,4 @@ title: DataTable
 | rowKeyColumn | String    | Will define the `key` for each row based on the content of the column specified (will often be `id` or `uid`) | Optional, but recommended |
 | rows       | Array of object   | Set the rows data | Required. The properties of each object should be the "name" of each column |
 | selectable | Boolean | Adds checkboxes in front of each rows to select it | Optional. |
-| shadow       | Number    | Defines the shadow depth | Optional, Default 0. Must be between 0 and 6 |
+| shadow       | Number    | Defines the shadow depth | Optional. If provided, must be between 0 and 6 inclusive. If omitted, table will not have any shadow. |
