@@ -74,7 +74,7 @@ class Textfield extends React.Component {
             className: classNames('mdl-textfield__input', inputClassName),
             id: customId,
             rows,
-            ref: (c) => (this.input = c),
+            ref: (c) => (this.inputRef = c),
             ...otherProps
         };
 
