@@ -27,10 +27,10 @@ class Dialog extends React.Component {
 
                 // display the dialog at the right location
                 // needed for the polyfill, otherwise it's not at the right position
-                const bodyHeight = document.body.clientHeight;
+                const windowHeight = window.innerHeight;
                 const dialogHeight = this.refs.dialog.clientHeight;
                 this.refs.dialog.style.position = 'fixed';
-                this.refs.dialog.style.top = `${(bodyHeight - dialogHeight) / 2}px`;
+                this.refs.dialog.style.top = `${(windowHeight - dialogHeight) / 2}px`;
             } else {
                 findDOMNode(this).close();
             }
