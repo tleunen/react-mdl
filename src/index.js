@@ -9,6 +9,7 @@ export {
     CardMedia, CardText, CardMenu
 } from './Card';
 export { default as Checkbox } from './Checkbox';
+export { Chip, ChipContact } from './Chip';
 export { default as DataTable, Table, TableHeader } from './DataTable';
 export {
     Dialog, DialogTitle, DialogContent,
