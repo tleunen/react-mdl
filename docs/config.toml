@@ -5,6 +5,7 @@ componentPages = [
   "/components/button/",
   "/components/card/",
   "/components/checkbox/",
+  "/components/chip/",
   "/components/datatable/",
   "/components/dialog/",
   "/components/grid/",
