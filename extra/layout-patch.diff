@@ -1,3 +1,14 @@
+From d80b2b024533a0807cc9e51a56dca54ebca25cef Mon Sep 17 00:00:00 2001
+From: Tommy Leunen <tommy.leunen+github@gmail.com>
+Date: Sat, 20 Aug 2016 12:35:46 -0400
+Subject: [PATCH] react mdl 1.2.0
+
+---
+ src/layout/_layout.scss    | 34 +++++++++++++++++-----------------
+ src/layout/layout.js       | 26 ++++++++++----------------
+ src/mdlComponentHandler.js |  3 ++-
+ 3 files changed, 29 insertions(+), 34 deletions(-)
+
 diff --git a/src/layout/_layout.scss b/src/layout/_layout.scss
 index 13a5156..d4e21b9 100644
 --- a/src/layout/_layout.scss
@@ -219,3 +230,30 @@ index e4e6523..5d3c1a8 100644
    } else {
      /**
       * Dummy function to avoid JS errors.
+2.9.3
+
+From d54f216cabacee65cdd687a78b5abbe0739f7253 Mon Sep 17 00:00:00 2001
+From: Tommy Leunen <tommy.leunen+github@gmail.com>
+Date: Sat, 20 Aug 2016 12:45:29 -0400
+Subject: [PATCH] Fix fake tab click
+
+---
+ src/layout/layout.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/layout/layout.js b/src/layout/layout.js
+index c4574ef..369f585 100644
+--- a/src/layout/layout.js
++++ b/src/layout/layout.js
+@@ -525,7 +525,7 @@
+      */
+     function selectTab() {
+       var href = tab.href.split('#')[1];
+-      var panel = layout.content_.querySelector('#' + href);
++      var panel = layout.header_.querySelector('#' + href);
+       layout.resetTabState_(tabs);
+       layout.resetPanelState_(panels);
+       tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+-- 
+2.9.3
+
