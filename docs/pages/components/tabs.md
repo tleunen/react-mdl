@@ -31,9 +31,13 @@ class Demo extends React.Component {
 
 #### Configuration
 
-| Element   | Prop         | Type      | Effect       | Remarks      |
-|:----------|:-------------|:----------|:-------------|:-------------|
-| Tabs      | activeTab    | Number    | Set the active tab  | Optional, default 0 |
-| Tabs      | onChange     | Function  | Set the change callback | Optional |
-| Tabs      | ripple       | Boolean   | Applies ripples effect on tabs | Optional |
-| Tabs      | tabBarProps  | Object    | Pass Props to the TabBar Element | Optional |
+| Element   | Prop         | Type      | Effect                                          | Remarks             |
+|:----------|:-------------|:----------|:------------------------------------------------|:--------------------|
+| Tabs      | activeTab    | Number    | Set the active tab                              | Optional, default 0 |
+| Tabs      | onChange     | Function  | Set the change callback                         | Optional            |
+| Tabs      | ripple       | Boolean   | Applies ripples effect on tabs                  | Optional            |
+| Tabs      | tabBarProps  | Object    | Pass Props to the TabBar Element                | Optional            |
+| Tab       | active       | bool      | If this is the active tab                       | Optional            |
+| Tab       | component    | string / element / function | Tag/component that should be used | Optional, default `a` |
+| Tab       | onTabClick   | function(tabId) | Binds to the onClick event on the Tab     | Optional            |
+| Tab       | tabId        | number    | Overrides the default tab identification number | Optional            |
