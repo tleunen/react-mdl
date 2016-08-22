@@ -80,7 +80,7 @@ class Snackbar extends React.Component {
         delete otherProps.timeout;
 
         return (
-            <div ref="snackbar" className={classes} aria-hidden={!open} {...otherProps}>
+            <div className={classes} aria-hidden={!open} {...otherProps}>
                 <div className="mdl-snackbar__text">{active && children}</div>
                 {active && action && <button className="mdl-snackbar__action" type="button" onClick={onActionClick}>{action}</button>}
             </div>
