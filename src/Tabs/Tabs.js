@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Tab from './Tab';
 import TabBar from './TabBar';
+import mdlUpgrade from '../utils/mdlUpgrade';
 
 const TabPropType = (props, propName, componentName) => {
     const prop = props[propName];
@@ -17,13 +18,16 @@ const propTypes = {
     className: PropTypes.string,
     onChange: PropTypes.func,
     tabBarProps: PropTypes.object,
+    ripple: PropTypes.bool,
 };
 
 const Tabs = props => {
     const { activeTab, className, onChange,
-        children, tabBarProps, ...otherProps } = props;
+        children, tabBarProps, ripple, ...otherProps } = props;
 
-    const classes = classNames('mdl-tabs is-upgraded', className);
+    const classes = classNames('mdl-tabs mdl-js-tabs is-upgraded', {
+        'mdl-js-ripple-effect': ripple
+    }, className);
 
     return (
         <div className={classes} {...otherProps}>
@@ -36,4 +40,4 @@ const Tabs = props => {
 
 Tabs.propTypes = propTypes;
 
-export default Tabs;
+export default mdlUpgrade(Tabs);

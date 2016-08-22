@@ -1,3 +1,26 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/tleunen/react-mdl/compare/v1.6.1...v1.7.0) (2016-08-21)
+
+
+### Bug Fixes
+
+* **Cell:** Remove required col prop ([3ed1749](https://github.com/tleunen/react-mdl/commit/3ed1749))
+* **Dialog:** Using window height instead of body.clientHeight (#373) ([b6c1a71](https://github.com/tleunen/react-mdl/commit/b6c1a71)), closes [#370](https://github.com/tleunen/react-mdl/issues/370)
+* **ProgressBar:** Fix unknown props ([4547085](https://github.com/tleunen/react-mdl/commit/4547085))
+* **Tabs:** Fix js error when clicking on a tab (#376) ([ca9309e](https://github.com/tleunen/react-mdl/commit/ca9309e)), closes [#376](https://github.com/tleunen/react-mdl/issues/376) [#347](https://github.com/tleunen/react-mdl/issues/347)
+
+
+### Features
+
+* Update MDL lib to version 1.2.0 (#375) ([9ab92f9](https://github.com/tleunen/react-mdl/commit/9ab92f9))
+* **Chip:** Add Chip component (#378) ([c4ddfe7](https://github.com/tleunen/react-mdl/commit/c4ddfe7)), closes [#377](https://github.com/tleunen/react-mdl/issues/377)
+
+
+
 <a name="1.6.1"></a>
 ## [1.6.1](https://github.com/tleunen/react-mdl/compare/v1.6.0...v1.6.1) (2016-07-07)
 

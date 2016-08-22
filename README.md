@@ -1,6 +1,6 @@
 # [React-MDL][react-mdl-url] [![Build Status][ci-image]][ci-url] [![Coverage Status][coverage-image]][coverage-url]
 
-React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url] v1.1.3
+React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url] v1.2.0
 
 Join the #react-mdl channel of the [Reactiflux Discord][discord-url] community.
 

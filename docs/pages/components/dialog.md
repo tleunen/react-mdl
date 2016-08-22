@@ -122,7 +122,7 @@ class Demo extends React.Component {
   render() {
     return (
       <div>
-        <Button colored onClick={this.handleOpenDialog} onCancel={this.handleCloseDialog} raised ripple>Show Dialog</Button>
+        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>
         <Dialog open={this.state.openDialog} onCancel={this.handleCloseDialog}>
           <DialogTitle>Allow data collection?</DialogTitle>
           <DialogContent>

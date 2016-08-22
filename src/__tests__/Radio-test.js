@@ -2,6 +2,7 @@
 import expect from 'expect';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import sinon from 'sinon';
 import { render, renderDOM } from './render';
 import Radio from '../Radio';
 
@@ -45,15 +46,28 @@ describe('Radio', () => {
     });
 
     describe('should update the Radio after the first render', () => {
-        it('when `checked` has changed', () => {
+        it('going from `checked` to `unchecked`', () => {
+            const el = renderDOM(<Radio value="1" checked />);
+
+            expect(el.className).toInclude('is-checked');
+
+            sinon.spy(el.MaterialRadio, 'uncheck');
+            ReactDOM.render(<Radio value="1" />, el.parentNode);
+
+            expect(el.MaterialRadio.uncheck.calledOnce).toBe(true);
+            el.MaterialRadio.uncheck.restore();
+        });
+
+        it('going from `unchecked` to `ckecked`', () => {
             const el = renderDOM(<Radio />);
 
             expect(el.className).toExclude('is-checked');
 
-            ReactDOM.render(<Radio checked />, el.parentNode);
-            expect(el.className).toInclude('is-checked');
-            ReactDOM.render(<Radio />, el.parentNode);
-            expect(el.className).toExclude('is-checked');
+            sinon.spy(el.MaterialRadio, 'check');
+            ReactDOM.render(<Radio value="1" checked />, el.parentNode);
+
+            expect(el.MaterialRadio.check.calledOnce).toBe(true);
+            el.MaterialRadio.check.restore();
         });
 
         it('when `disable` has changed', () => {

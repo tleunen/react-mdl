@@ -34,7 +34,11 @@ class ProgressBar extends React.Component {
     }
 
     render() {
-        const { className, indeterminate, ...otherProps } = this.props;
+        const {
+            className, indeterminate,
+            buffer, progress, // eslint-disable-line no-unused-vars
+            ...otherProps
+        } = this.props;
 
         const classes = classNames('mdl-progress mdl-js-progress', {
             'mdl-progress__indeterminate': indeterminate

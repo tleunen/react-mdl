@@ -234,8 +234,8 @@ componentHandler = (function() {
 
       var ev;
       if ('CustomEvent' in window && typeof window.CustomEvent === 'function') {
-        ev = new Event('mdl-componentupgraded', {
-          'bubbles': true, 'cancelable': false
+        ev = new CustomEvent('mdl-componentupgraded', {
+          bubbles: true, cancelable: false
         });
       } else {
         ev = document.createEvent('Events');
@@ -253,10 +253,10 @@ componentHandler = (function() {
    */
   function upgradeElementsInternal(elements) {
     if (!Array.isArray(elements)) {
-      if (typeof elements.item === 'function') {
-        elements = Array.prototype.slice.call(/** @type {Array} */ (elements));
-      } else {
+      if (elements instanceof Element) {
         elements = [elements];
+      } else {
+        elements = Array.prototype.slice.call(elements);
       }
     }
     for (var i = 0, n = elements.length, element; i < n; i++) {
@@ -365,13 +365,14 @@ componentHandler = (function() {
 
       var ev;
       if ('CustomEvent' in window && typeof window.CustomEvent === 'function') {
-        ev = new Event('mdl-componentdowngraded', {
-          'bubbles': true, 'cancelable': false
+        ev = new CustomEvent('mdl-componentdowngraded', {
+          bubbles: true, cancelable: false
         });
       } else {
         ev = document.createEvent('Events');
         ev.initEvent('mdl-componentdowngraded', true, true);
       }
+      component.element_.dispatchEvent(ev);
     }
   }
 
@@ -1794,7 +1795,7 @@ MaterialRadio.prototype['enable'] = MaterialRadio.prototype.enable;
    */
 MaterialRadio.prototype.check = function () {
     this.btnElement_.checked = true;
-    this.updateClasses_();
+    this.onChange_(null);
 };
 MaterialRadio.prototype['check'] = MaterialRadio.prototype.check;
 /**
@@ -1804,7 +1805,7 @@ MaterialRadio.prototype['check'] = MaterialRadio.prototype.check;
    */
 MaterialRadio.prototype.uncheck = function () {
     this.btnElement_.checked = false;
-    this.updateClasses_();
+    this.onChange_(null);
 };
 MaterialRadio.prototype['uncheck'] = MaterialRadio.prototype.uncheck;
 /**
@@ -3050,16 +3051,16 @@ MaterialTooltip.prototype.handleMouseEnter_ = function (event) {
     if (this.element_.classList.contains(this.CssClasses_.LEFT) || this.element_.classList.contains(this.CssClasses_.RIGHT)) {
         left = props.width / 2;
         if (top + marginTop < 0) {
-            this.element_.style.top = 0;
-            this.element_.style.marginTop = 0;
+            this.element_.style.top = '0';
+            this.element_.style.marginTop = '0';
         } else {
             this.element_.style.top = top + 'px';
             this.element_.style.marginTop = marginTop + 'px';
         }
     } else {
         if (left + marginLeft < 0) {
-            this.element_.style.left = 0;
-            this.element_.style.marginLeft = 0;
+            this.element_.style.left = '0';
+            this.element_.style.marginLeft = '0';
         } else {
             this.element_.style.left = left + 'px';
             this.element_.style.marginLeft = marginLeft + 'px';
@@ -3077,11 +3078,11 @@ MaterialTooltip.prototype.handleMouseEnter_ = function (event) {
     this.element_.classList.add(this.CssClasses_.IS_ACTIVE);
 };
 /**
-   * Handle mouseleave for tooltip.
+   * Hide tooltip on mouseleave or scroll
    *
    * @private
    */
-MaterialTooltip.prototype.handleMouseLeave_ = function () {
+MaterialTooltip.prototype.hideTooltip_ = function () {
     this.element_.classList.remove(this.CssClasses_.IS_ACTIVE);
 };
 /**
@@ -3089,7 +3090,7 @@ MaterialTooltip.prototype.handleMouseLeave_ = function () {
    */
 MaterialTooltip.prototype.init = function () {
     if (this.element_) {
-        var forElId = this.element_.getAttribute('for');
+        var forElId = this.element_.getAttribute('for') || this.element_.getAttribute('data-mdl-for');
         if (forElId) {
             this.forElement_ = document.getElementById(forElId);
         }
@@ -3099,11 +3100,12 @@ MaterialTooltip.prototype.init = function () {
                 this.forElement_.setAttribute('tabindex', '0');
             }
             this.boundMouseEnterHandler = this.handleMouseEnter_.bind(this);
-            this.boundMouseLeaveHandler = this.handleMouseLeave_.bind(this);
+            this.boundMouseLeaveAndScrollHandler = this.hideTooltip_.bind(this);
             this.forElement_.addEventListener('mouseenter', this.boundMouseEnterHandler, false);
             this.forElement_.addEventListener('touchend', this.boundMouseEnterHandler, false);
-            this.forElement_.addEventListener('mouseleave', this.boundMouseLeaveHandler, false);
-            window.addEventListener('touchstart', this.boundMouseLeaveHandler);
+            this.forElement_.addEventListener('mouseleave', this.boundMouseLeaveAndScrollHandler, false);
+            window.addEventListener('scroll', this.boundMouseLeaveAndScrollHandler, true);
+            window.addEventListener('touchstart', this.boundMouseLeaveAndScrollHandler);
         }
     }
 };
@@ -3423,15 +3425,18 @@ MaterialLayout.prototype.init = function () {
         }
         // Add drawer toggling button to our layout, if we have an openable drawer.
         if (this.drawer_) {
-            var drawerButton = document.createElement('div');
-            drawerButton.setAttribute('aria-expanded', 'false');
-            drawerButton.setAttribute('role', 'button');
-            drawerButton.setAttribute('tabindex', '0');
-            drawerButton.classList.add(this.CssClasses_.DRAWER_BTN);
-            var drawerButtonIcon = document.createElement('i');
-            drawerButtonIcon.classList.add(this.CssClasses_.ICON);
-            drawerButtonIcon.innerHTML = this.Constant_.MENU_ICON;
-            drawerButton.appendChild(drawerButtonIcon);
+            var drawerButton = this.innerContainer_.querySelector('.' + this.CssClasses_.DRAWER_BTN);
+            if (!drawerButton) {
+                drawerButton = document.createElement('div');
+                drawerButton.setAttribute('aria-expanded', 'false');
+                drawerButton.setAttribute('role', 'button');
+                drawerButton.setAttribute('tabindex', '0');
+                drawerButton.classList.add(this.CssClasses_.DRAWER_BTN);
+                var drawerButtonIcon = document.createElement('i');
+                drawerButtonIcon.classList.add(this.CssClasses_.ICON);
+                drawerButtonIcon.innerHTML = this.Constant_.MENU_ICON;
+                drawerButton.appendChild(drawerButtonIcon);
+            }
             if (this.drawer_.classList.contains(this.CssClasses_.ON_LARGE_SCREEN)) {
                 //If drawer has ON_LARGE_SCREEN class then add it to the drawer toggle button as well.
                 drawerButton.classList.add(this.CssClasses_.ON_LARGE_SCREEN);
@@ -3552,7 +3557,7 @@ function MaterialLayoutTab(tab, tabs, panels, layout) {
      */
     function selectTab() {
         var href = tab.href.split('#')[1];
-        var panel = layout.content_.querySelector('#' + href);
+        var panel = layout.header_.querySelector('#' + href);
         layout.resetTabState_(tabs);
         layout.resetPanelState_(panels);
         tab.classList.add(layout.CssClasses_.IS_ACTIVE);
