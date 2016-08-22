@@ -14,7 +14,7 @@ const defaultProps = {
 
 class Dialog extends React.Component {
     componentDidMount() {
-        this.refs.dialog.addEventListener('cancel', this.props.onCancel);
+        this.dialogRef.addEventListener('cancel', this.props.onCancel);
         if (this.props.open) {
             findDOMNode(this).showModal();
         }
@@ -28,9 +28,11 @@ class Dialog extends React.Component {
                 // display the dialog at the right location
                 // needed for the polyfill, otherwise it's not at the right position
                 const windowHeight = window.innerHeight;
-                const dialogHeight = this.refs.dialog.clientHeight;
-                this.refs.dialog.style.position = 'fixed';
-                this.refs.dialog.style.top = `${(windowHeight - dialogHeight) / 2}px`;
+                if (this.dialogRef) {
+                    const dialogHeight = this.dialogRef.clientHeight;
+                    this.dialogRef.style.position = 'fixed';
+                    this.dialogRef.style.top = `${(windowHeight - dialogHeight) / 2}px`;
+                }
             } else {
                 findDOMNode(this).close();
             }
@@ -38,7 +40,7 @@ class Dialog extends React.Component {
     }
 
     componentWillUnmount() {
-        this.refs.dialog.removeEventListener('cancel', this.props.onCancel);
+        this.dialogRef.removeEventListener('cancel', this.props.onCancel);
     }
 
     render() {
@@ -50,7 +52,7 @@ class Dialog extends React.Component {
         const classes = classNames('mdl-dialog', className);
 
         return (
-            <dialog ref="dialog" className={classes} {...otherProps}>
+            <dialog ref={(c) => (this.dialogRef = c)} className={classes} {...otherProps}>
                 {children}
             </dialog>
         );

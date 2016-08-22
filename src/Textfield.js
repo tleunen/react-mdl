@@ -43,7 +43,7 @@ class Textfield extends React.Component {
         if (this.props.disabled !== prevProps.disabled) {
             findDOMNode(this).MaterialTextfield.checkDisabled();
         }
-        if (this.props.value !== prevProps.value && this.refs.input !== document.activeElement) {
+        if (this.props.value !== prevProps.value && this.inputRef !== document.activeElement) {
             findDOMNode(this).MaterialTextfield.change(this.props.value);
         }
         if (this.props.error && !this.props.pattern) {
@@ -74,7 +74,7 @@ class Textfield extends React.Component {
             className: classNames('mdl-textfield__input', inputClassName),
             id: customId,
             rows,
-            ref: 'input',
+            ref: (c) => (this.inputRef = c),
             ...otherProps
         };
 
