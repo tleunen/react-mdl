@@ -1,13 +1,14 @@
-From d80b2b024533a0807cc9e51a56dca54ebca25cef Mon Sep 17 00:00:00 2001
+From 9bccac92f24ab45d834974866e97e218bb915001 Mon Sep 17 00:00:00 2001
 From: Tommy Leunen <tommy.leunen+github@gmail.com>
 Date: Sat, 20 Aug 2016 12:35:46 -0400
 Subject: [PATCH] react mdl 1.2.0
 
 ---
  src/layout/_layout.scss    | 34 +++++++++++++++++-----------------
- src/layout/layout.js       | 26 ++++++++++----------------
+ src/layout/layout.js       | 36 ++++++++++++------------------------
  src/mdlComponentHandler.js |  3 ++-
- 3 files changed, 29 insertions(+), 34 deletions(-)
+ src/tabs/tabs.js           |  4 ----
+ 4 files changed, 31 insertions(+), 46 deletions(-)
 
 diff --git a/src/layout/_layout.scss b/src/layout/_layout.scss
 index 13a5156..d4e21b9 100644
@@ -116,7 +117,7 @@ index 13a5156..d4e21b9 100644
          overflow-x: hidden;
        }
 diff --git a/src/layout/layout.js b/src/layout/layout.js
-index 9e1e4e6..c4574ef 100644
+index 9e1e4e6..54955a1 100644
 --- a/src/layout/layout.js
 +++ b/src/layout/layout.js
 @@ -28,6 +28,7 @@
@@ -212,6 +213,32 @@ index 9e1e4e6..c4574ef 100644
          obfuscator.addEventListener('click',
              this.drawerToggleHandler_.bind(this));
          this.obfuscator_ = obfuscator;
+@@ -530,12 +524,8 @@
+      * Auxiliary method to programmatically select a tab in the UI.
+      */
+     function selectTab() {
+-      var href = tab.href.split('#')[1];
+-      var panel = layout.content_.querySelector('#' + href);
+       layout.resetTabState_(tabs);
+-      layout.resetPanelState_(panels);
+       tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+-      panel.classList.add(layout.CssClasses_.IS_ACTIVE);
+     }
+ 
+     if (layout.tabBar_.classList.contains(
+@@ -550,10 +540,8 @@
+     }
+ 
+     tab.addEventListener('click', function(e) {
+-      if (tab.getAttribute('href').charAt(0) === '#') {
+-        e.preventDefault();
+-        selectTab();
+-      }
++      e.preventDefault();
++      selectTab();
+     });
+ 
+     tab.show = selectTab;
 diff --git a/src/mdlComponentHandler.js b/src/mdlComponentHandler.js
 index e4e6523..5d3c1a8 100644
 --- a/src/mdlComponentHandler.js
@@ -230,30 +257,23 @@ index e4e6523..5d3c1a8 100644
    } else {
      /**
       * Dummy function to avoid JS errors.
-2.9.3
-
-From d54f216cabacee65cdd687a78b5abbe0739f7253 Mon Sep 17 00:00:00 2001
-From: Tommy Leunen <tommy.leunen+github@gmail.com>
-Date: Sat, 20 Aug 2016 12:45:29 -0400
-Subject: [PATCH] Fix fake tab click
-
----
- src/layout/layout.js | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/src/layout/layout.js b/src/layout/layout.js
-index c4574ef..369f585 100644
---- a/src/layout/layout.js
-+++ b/src/layout/layout.js
-@@ -525,7 +525,7 @@
-      */
-     function selectTab() {
-       var href = tab.href.split('#')[1];
--      var panel = layout.content_.querySelector('#' + href);
-+      var panel = layout.header_.querySelector('#' + href);
-       layout.resetTabState_(tabs);
-       layout.resetPanelState_(panels);
-       tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+diff --git a/src/tabs/tabs.js b/src/tabs/tabs.js
+index 3f4d005..c85a4af 100644
+--- a/src/tabs/tabs.js
++++ b/src/tabs/tabs.js
+@@ -141,12 +141,8 @@
+ 
+       tab.addEventListener('click', function(e) {
+         e.preventDefault();
+-        var href = tab.href.split('#')[1];
+-        var panel = ctx.element_.querySelector('#' + href);
+         ctx.resetTabState_();
+-        ctx.resetPanelState_();
+         tab.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
+-        panel.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
+       });
+ 
+     }
 -- 
 2.9.3
 
