@@ -41,10 +41,8 @@ class TabBar extends React.Component {
                         tabId,
                         active: tabId === activeTab,
                         onTabClick: this.handleClickTab,
-                        href: '#react-mdl-tabs-hack',
                     })
                 )}
-                <span id="react-mdl-tabs-hack" />
             </div>
         );
     }

@@ -2719,12 +2719,8 @@ function MaterialTab(tab, ctx) {
         }
         tab.addEventListener('click', function (e) {
             e.preventDefault();
-            var href = tab.href.split('#')[1];
-            var panel = ctx.element_.querySelector('#' + href);
             ctx.resetTabState_();
-            ctx.resetPanelState_();
             tab.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
-            panel.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
         });
     }
 }
@@ -3556,12 +3552,8 @@ function MaterialLayoutTab(tab, tabs, panels, layout) {
      * Auxiliary method to programmatically select a tab in the UI.
      */
     function selectTab() {
-        var href = tab.href.split('#')[1];
-        var panel = layout.header_.querySelector('#' + href);
         layout.resetTabState_(tabs);
-        layout.resetPanelState_(panels);
         tab.classList.add(layout.CssClasses_.IS_ACTIVE);
-        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
     }
     if (layout.tabBar_.classList.contains(layout.CssClasses_.JS_RIPPLE_EFFECT)) {
         var rippleContainer = document.createElement('span');
@@ -3573,10 +3565,8 @@ function MaterialLayoutTab(tab, tabs, panels, layout) {
         tab.appendChild(rippleContainer);
     }
     tab.addEventListener('click', function (e) {
-        if (tab.getAttribute('href').charAt(0) === '#') {
-            e.preventDefault();
-            selectTab();
-        }
+        e.preventDefault();
+        selectTab();
     });
     tab.show = selectTab;
 }
