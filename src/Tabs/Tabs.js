@@ -25,7 +25,7 @@ const Tabs = props => {
     const { activeTab, className, onChange,
         children, tabBarProps, ripple, ...otherProps } = props;
 
-    const classes = classNames('mdl-tabs mdl-js-tabs is-upgraded', {
+    const classes = classNames('mdl-tabs mdl-js-tabs', {
         'mdl-js-ripple-effect': ripple
     }, className);
 

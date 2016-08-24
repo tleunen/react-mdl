@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import TabBar from '../Tabs/TabBar';
+import mdlUpgrade from '../utils/mdlUpgrade';
 
 const HeaderTabs = props => {
     const { className, ripple, children, ...otherProps } = props;
@@ -22,4 +23,4 @@ HeaderTabs.propTypes = {
     ripple: PropTypes.bool
 };
 
-export default HeaderTabs;
+export default mdlUpgrade(HeaderTabs);

@@ -219,7 +219,7 @@ class Demo extends React.Component {
                 <Layout fixedHeader>
                     <Header>
                         <HeaderRow title="Title" />
-                        <HeaderTabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })}>
+                        <HeaderTabs ripple activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })}>
                             <Tab>Tab1</Tab>
                             <Tab>Tab2</Tab>
                             <Tab>Tab3</Tab>
