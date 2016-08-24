@@ -1,10 +1,10 @@
 /* eslint-env mocha */
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { spy } from 'sinon';
 import React from 'react';
-import { Chip, ChipContact } from '../';
+import { Chip, ChipContact, ChipText } from '../';
 
 chai.use(chaiEnzyme());
 
@@ -43,7 +43,7 @@ describe('Chip', () => {
     });
 
     it('should render the contact before the text', () => {
-        const wrapper = shallow(
+        const wrapper = mount(
             <Chip>
                 <ChipContact>A</ChipContact>
                 Contact Chip
@@ -52,6 +52,18 @@ describe('Chip', () => {
 
         expect(wrapper.children()).to.have.length(2);
         expect(wrapper.childAt(0).type()).to.equal(ChipContact);
-        expect(wrapper.childAt(1)).to.contain('Contact Chip');
+        expect(wrapper.find(ChipText)).to.have.text('Contact Chip');
+    });
+
+    it('should render the content without any contact icon', () => {
+        const val = 15;
+        const wrapper = mount(
+            <Chip>
+                Value {val}
+            </Chip>
+        );
+
+        expect(wrapper.children()).to.have.length(1);
+        expect(wrapper).to.have.text('Value 15');
     });
 });
