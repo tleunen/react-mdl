@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/tleunen/react-mdl/compare/v1.7.0...v1.7.1) (2016-08-30)
+
+
+### Bug Fixes
+
+* **Chip:** Allow Chip to have more than 1 child (#385) ([7616167](https://github.com/tleunen/react-mdl/commit/7616167)), closes [#384](https://github.com/tleunen/react-mdl/issues/384)
+* **HeaderTabs:** Fix ripple effect ([6034345](https://github.com/tleunen/react-mdl/commit/6034345)), closes [#380](https://github.com/tleunen/react-mdl/issues/380)
+* **Tabs:** Remove the hack href "react-mdl-tabs-hack" ([967be52](https://github.com/tleunen/react-mdl/commit/967be52)), closes [#381](https://github.com/tleunen/react-mdl/issues/381)
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/tleunen/react-mdl/compare/v1.6.1...v1.7.0) (2016-08-21)
 
