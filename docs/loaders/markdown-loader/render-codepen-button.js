@@ -1,13 +1,13 @@
 const jsExternal = [
-    'https://npmcdn.com/react/dist/react.js',
-    'https://npmcdn.com/react-dom/dist/react-dom.js',
-    'https://npmcdn.com/react-mdl/extra/material.js',
-    'https://npmcdn.com/react-mdl/out/ReactMDL.js',
-    'https://npmcdn.com/dialog-polyfill/dialog-polyfill.js'
+    'https://unpkg.com/react/dist/react.js',
+    'https://unpkg.com/react-dom/dist/react-dom.js',
+    'https://unpkg.com/react-mdl/extra/material.js',
+    'https://unpkg.com/react-mdl/out/ReactMDL.js',
+    'https://unpkg.com/dialog-polyfill/dialog-polyfill.js'
 ];
 const cssExternal = [
-    'https://npmcdn.com/react-mdl/extra/material.css',
-    'https://npmcdn.com/dialog-polyfill/dialog-polyfill.css'
+    'https://unpkg.com/react-mdl/extra/material.css',
+    'https://unpkg.com/dialog-polyfill/dialog-polyfill.css'
 ];
 
 function getSimpleDemoCode(jsxCode) {

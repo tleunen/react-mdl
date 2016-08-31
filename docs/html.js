@@ -26,8 +26,8 @@ const DocHtml = props => {
                 <title>{title}</title>
                 {props.favicon && <link rel="shortcut icon" href={props.favicon} />}
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-                <script src="https://npmcdn.com/dialog-polyfill/dialog-polyfill.js"></script>
-                <link rel="stylesheet" type="text/css" href="https://npmcdn.com/dialog-polyfill/dialog-polyfill.css" />
+                <script src="https://unpkg.com/dialog-polyfill/dialog-polyfill.js"></script>
+                <link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill/dialog-polyfill.css" />
                 {cssLink}
             </head>
             <body>
