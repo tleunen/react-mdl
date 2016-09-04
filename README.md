@@ -14,6 +14,22 @@ If you're worried about the changes we made, you can take a look at the [patch n
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
+### Create React App
+
+The above instructions won’t work if you use [Create React App](https://github.com/facebookincubator/create-react-app) with `react-scripts` higher than `0.4.0`.  
+If you use it, add only this one line to your HTML:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+```
+
+Then add these lines to `src/index.js`:
+
+```js
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+```
+
 ## Installation
 
 `npm install --save react-mdl`
