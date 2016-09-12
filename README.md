@@ -1,8 +1,7 @@
-# [React-MDL][react-mdl-url] [![Build Status][ci-image]][ci-url] [![Coverage Status][coverage-image]][coverage-url]
+# [React-MDL][react-mdl-url]
+[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status Linux][circleci-image]][circleci-url] [![Coverage Status][coverage-image]][coverage-url] [![React MDL Reactiflux][discord-image]][discord-url]
 
-React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url] v1.2.1
-
-Join the #react-mdl channel of the [Reactiflux Discord][discord-url] community.
+React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url]<sup>v1.2.1</sup>
 
 ## Requirements
 Instead of using the official `material.css` and `material.js` files from the MDL project, you should use the files we provide in [/extra](/extra/). The reason to that is because the official `Layout` component is not fully compatible with React. We made a patch and we re-exported everything so people can still use it.
@@ -59,15 +58,24 @@ For a listing of available components, as well as specific usage information, ch
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
 
-
 [react-mdl-url]: https://tleunen.github.io/react-mdl/
+[google-mdl-url]: https://github.com/google/material-design-lite
+
+[discord-image]: https://img.shields.io/badge/discord-react--mdl%40reactiflux-738bd7.svg
+[discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
+
+[status-image]: https://img.shields.io/badge/status-maintained-brightgreen.svg
+[status-url]: https://github.com/tleunen/react-mdl
+
+[npm-image]: https://img.shields.io/npm/v/react-mdl.svg
+[npm-url]: https://www.npmjs.com/package/react-mdl
+
+[circleci-image]: https://img.shields.io/circleci/project/tleunen/react-mdl/master.svg
+[circleci-url]: https://circleci.com/gh/tleunen/react-mdl
+
+[coverage-image]: https://codecov.io/gh/tleunen/react-mdl/branch/master/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/tleunen/react-mdl
+
 [react-mdl-components-url]: https://tleunen.github.io/react-mdl/components/
 [webpack-url]: https://webpack.github.io/
 [browserify-url]: http://browserify.org/
-
-[ci-image]: https://circleci.com/gh/tleunen/react-mdl.svg?style=shield
-[ci-url]: https://circleci.com/gh/tleunen/react-mdl
-[coverage-image]: https://codecov.io/gh/tleunen/react-mdl/branch/master/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/tleunen/react-mdl
-[google-mdl-url]: https://github.com/google/material-design-lite
-[discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
