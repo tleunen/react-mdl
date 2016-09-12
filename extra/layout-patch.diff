@@ -1,7 +1,7 @@
-From 9bccac92f24ab45d834974866e97e218bb915001 Mon Sep 17 00:00:00 2001
+From 6bee05490698ddb98cbc46e92c6eedd9f368208f Mon Sep 17 00:00:00 2001
 From: Tommy Leunen <tommy.leunen+github@gmail.com>
-Date: Sat, 20 Aug 2016 12:35:46 -0400
-Subject: [PATCH] react mdl 1.2.0
+Date: Sun, 11 Sep 2016 20:28:07 -0400
+Subject: [PATCH] react mdl 1.2.1
 
 ---
  src/layout/_layout.scss    | 34 +++++++++++++++++-----------------
@@ -11,7 +11,7 @@ Subject: [PATCH] react mdl 1.2.0
  4 files changed, 31 insertions(+), 46 deletions(-)
 
 diff --git a/src/layout/_layout.scss b/src/layout/_layout.scss
-index 13a5156..d4e21b9 100644
+index 05a317a..440eed8 100644
 --- a/src/layout/_layout.scss
 +++ b/src/layout/_layout.scss
 @@ -39,14 +39,9 @@
@@ -58,7 +58,7 @@ index 13a5156..d4e21b9 100644
        }
      }
 @@ -217,7 +217,7 @@
-       line-height: $layout-header-desktop-row-height;
+       line-height: 54px;
  
        .mdl-layout--no-desktop-drawer-button &,
 -      .mdl-layout--fixed-drawer > &,
@@ -275,5 +275,5 @@ index 3f4d005..c85a4af 100644
  
      }
 -- 
-2.9.3
+2.10.0
 
