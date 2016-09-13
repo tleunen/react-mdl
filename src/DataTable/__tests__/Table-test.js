@@ -96,5 +96,19 @@ describe('Table', () => {
         });
     });
 
+    it('should set the style for each row data element if provided', () => {
+        const newRows = rows.map(elt => ({
+            ...elt,
+            style: { fontWeight: 'bold' }
+        }));
+
+        const wrapper = mount(getDataTable({ rows: newRows }));
+
+        const bodyTr = wrapper.find('tbody').find('tr');
+        bodyTr.forEach(row => {
+            expect(row).to.have.style('font-weight', 'bold');
+        });
+    });
+
     // TODO write test for rowKeyColumn
 });

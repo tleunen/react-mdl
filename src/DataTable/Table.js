@@ -65,7 +65,7 @@ class Table extends React.Component {
                 </thead>
                 <tbody>
                     {realRows.map((row, idx) =>
-                        <tr key={row[rowKeyColumn] || row.key || idx} className={row.className}>
+                        <tr key={row[rowKeyColumn] || row.key || idx} className={row.className} style={row.style}>
                             {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
                         </tr>
                     )}
