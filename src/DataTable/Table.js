@@ -21,23 +21,6 @@ const propTypes = {
     shadow: PropTypes.number
 };
 
-const isString = (s) => typeof(s) === 'string' || s instanceof String;
-
-const getCustomRowProps = (row) => {
-    const mdlRowProps = row.mdlRowProps || {};
-
-    const style = mdlRowProps.style instanceof Object ?
-        mdlRowProps.style : {};
-
-    const className = isString(mdlRowProps.className) ?
-        mdlRowProps.className : '';
-
-    const onClick = mdlRowProps.onClick instanceof Function ?
-        mdlRowProps.onClick : null;
-
-    return { className, style, onClick };
-};
-
 class Table extends React.Component {
     renderCell(column, row, idx) {
         const className = !column.numeric ? 'mdl-data-table__cell--non-numeric' : '';
@@ -82,14 +65,13 @@ class Table extends React.Component {
                 </thead>
                 <tbody>
                     {realRows.map((row, idx) => {
-                        const customRowProps = getCustomRowProps(row);
+                        const { style, className: mdlRowPropsClassName, onClick } = row.mdlRowProps || {};
 
                         return (
                             <tr
                                 key={row[rowKeyColumn] || row.key || idx}
-                                style={customRowProps.style}
-                                className={customRowProps.className}
-                                onClick={customRowProps.onClick}
+                                className={classNames(row.className, mdlRowPropsClassName)}
+                                {...{ style, onClick }}
                             >
                                 {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
                             </tr>

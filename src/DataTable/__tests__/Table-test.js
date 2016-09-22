@@ -147,6 +147,38 @@ describe('Table', () => {
             });
         });
 
+        it('should add a className to the previous className for each row data element when provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                className: 'previous',
+                mdlRowProps: {
+                    className: 'mdlRowProps',
+                },
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.className('previous');
+                expect(row).to.have.className('mdlRowProps');
+            });
+        });
+
+        it('should keep the previous className for each row data element if not provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                className: 'previous',
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.className('previous');
+            });
+        });
+
         it('should set the onClick for each row data element if provided', () => {
             let testControl = 0;
             const onClickHandler = () => testControl++;
@@ -165,26 +197,6 @@ describe('Table', () => {
                 expect(row).to.have.prop('onClick');
                 row.simulate('click');
                 expect(testControl).to.equal(index + 1);
-            });
-        });
-
-        it('should use default values if bad types are provided', () => {
-            const newRows = rows.map(elt => ({
-                ...elt,
-                mdlRowProps: {
-                    style: '',
-                    className: {},
-                    onClick: '',
-                },
-            }));
-
-            const wrapper = mount(getDataTable({ rows: newRows }));
-
-            const bodyTr = wrapper.find('tbody').find('tr');
-            bodyTr.forEach(row => {
-                expect(row.props().style).to.deep.equal({});
-                expect(row.props().className).to.equal('');
-                expect(row.props().onClick).to.equal(null);
             });
         });
     });
