@@ -15,6 +15,7 @@ const propTypes = {
     label: PropTypes.string.isRequired,
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
+    onBlur: PropTypes.func,
     pattern: PropTypes.string,
     required: PropTypes.bool,
     rows: PropTypes.number,
