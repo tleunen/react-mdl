@@ -65,13 +65,13 @@ class Table extends React.Component {
                 </thead>
                 <tbody>
                     {realRows.map((row, idx) => {
-                        const { style, className: mdlRowPropsClassName, onClick } = row.mdlRowProps || {};
+                        const { className: mdlRowPropsClassName, ...remainingMdlRowProps } = row.mdlRowProps || {};
 
                         return (
                             <tr
                                 key={row[rowKeyColumn] || row.key || idx}
                                 className={classNames(row.className, mdlRowPropsClassName)}
-                                {...{ style, onClick }}
+                                {...remainingMdlRowProps}
                             >
                                 {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
                             </tr>
