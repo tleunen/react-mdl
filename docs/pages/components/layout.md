@@ -138,7 +138,7 @@ title: Layout
                 <Textfield
                     value=""
                     onChange={() => {}}
-                    label="Search"
+                    label="Search2"
                     expandable
                     expandableIcon="search"
                 />
@@ -176,7 +176,7 @@ title: Layout
                 <Textfield
                     value=""
                     onChange={() => {}}
-                    label="Search"
+                    label="Search3"
                     expandable
                     expandableIcon="search"
                 />
