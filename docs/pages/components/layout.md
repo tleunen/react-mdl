@@ -15,18 +15,18 @@ title: Layout
     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
         <Header transparent title="Title" style={{color: 'white'}}>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -40,10 +40,10 @@ title: Layout
     <Layout fixedDrawer>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -57,18 +57,18 @@ title: Layout
     <Layout fixedHeader>
         <Header title={<span><span style={{ color: '#ddd' }}>Area / </span><strong>The Title</strong></span>}>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -91,10 +91,10 @@ title: Layout
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -108,18 +108,18 @@ title: Layout
     <Layout>
         <Header title="Title" scroll>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
@@ -145,19 +145,19 @@ title: Layout
             </HeaderRow>
             <HeaderRow>
                 <Navigation>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
                 </Navigation>
             </HeaderRow>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
@@ -183,19 +183,19 @@ title: Layout
             </HeaderRow>
             <HeaderRow>
                 <Navigation>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
                 </Navigation>
             </HeaderRow>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
