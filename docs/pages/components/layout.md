@@ -7,7 +7,7 @@ title: Layout
 
 ## Demo
 
-### Navigation Layout
+### <a name="navigation-layout">Navigation Layout</a>
 
 ```jsx_demo
 {/* Uses a transparent header that draws on top of the layout's background */}
@@ -278,7 +278,7 @@ class Demo extends React.Component {
 | HeaderRow | hideSpacer   | Boolean   | Removes the spacer from the header | Optional |
 | Content   | component    | String, Element, Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 
-### Footer
+### <a name="footer">Footer</a>
 
 ```jsx_demo
 <Footer size="mega">
