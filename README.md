@@ -58,24 +58,24 @@ For a listing of available components, as well as specific usage information, ch
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
 
-[react-mdl-url]: https://tleunen.github.io/react-mdl/
+[react-mdl-url]: https://react-mdl.github.io/react-mdl/
 [google-mdl-url]: https://github.com/google/material-design-lite
 
 [discord-image]: https://img.shields.io/badge/discord-react--mdl%40reactiflux-738bd7.svg
 [discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
 
 [status-image]: https://img.shields.io/badge/status-maintained-brightgreen.svg
-[status-url]: https://github.com/tleunen/react-mdl
+[status-url]: https://github.com/react-mdl/react-mdl
 
 [npm-image]: https://img.shields.io/npm/v/react-mdl.svg
 [npm-url]: https://www.npmjs.com/package/react-mdl
 
 [circleci-image]: https://img.shields.io/circleci/project/tleunen/react-mdl/master.svg
-[circleci-url]: https://circleci.com/gh/tleunen/react-mdl
+[circleci-url]: https://circleci.com/gh/react-mdl/react-mdl
 
 [coverage-image]: https://codecov.io/gh/tleunen/react-mdl/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/tleunen/react-mdl
 
-[react-mdl-components-url]: https://tleunen.github.io/react-mdl/components/
+[react-mdl-components-url]: https://react-mdl.github.io/react-mdl/components/
 [webpack-url]: https://webpack.github.io/
 [browserify-url]: http://browserify.org/
