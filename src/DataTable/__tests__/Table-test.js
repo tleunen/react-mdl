@@ -97,4 +97,107 @@ describe('Table', () => {
     });
 
     // TODO write test for rowKeyColumn
+
+    describe('The optional mdlRowProps attribute', () => {
+        it('should be optional', () => {
+            const newRows = rows.map(({ ...elt, mdlRowProps }, idx) => ({
+                ...elt,
+                key: `elt${idx}`,
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach((row, i) => {
+                expect(row.key()).to.equal(`elt${i}`);
+            });
+        });
+
+        it('should set the style for each row data element if provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                mdlRowProps: {
+                    style: {
+                        fontWeight: 'bold',
+                    },
+                },
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.style('font-weight', 'bold');
+            });
+        });
+
+        it('should set the className for each row data element if provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                mdlRowProps: {
+                    className: 'mdlRowProps',
+                },
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.className('mdlRowProps');
+            });
+        });
+
+        it('should add a className to the previous className for each row data element when provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                className: 'previous',
+                mdlRowProps: {
+                    className: 'mdlRowProps',
+                },
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.className('previous');
+                expect(row).to.have.className('mdlRowProps');
+            });
+        });
+
+        it('should keep the previous className for each row data element if not provided', () => {
+            const newRows = rows.map(elt => ({
+                ...elt,
+                className: 'previous',
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach(row => {
+                expect(row).to.have.className('previous');
+            });
+        });
+
+        it('should set the onClick for each row data element if provided', () => {
+            let testControl = 0;
+            const onClickHandler = () => testControl++;
+            const newRows = rows.map((elt, id) => ({
+                ...elt,
+                id,
+                mdlRowProps: {
+                    onClick: onClickHandler,
+                },
+            }));
+
+            const wrapper = mount(getDataTable({ rows: newRows }));
+
+            const bodyTr = wrapper.find('tbody').find('tr');
+            bodyTr.forEach((row, index) => {
+                expect(row).to.have.prop('onClick');
+                row.simulate('click');
+                expect(testControl).to.equal(index + 1);
+            });
+        });
+    });
 });

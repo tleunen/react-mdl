@@ -64,11 +64,19 @@ class Table extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {realRows.map((row, idx) =>
-                        <tr key={row[rowKeyColumn] || row.key || idx} className={row.className}>
-                            {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
-                        </tr>
-                    )}
+                    {realRows.map((row, idx) => {
+                        const { className: mdlRowPropsClassName, ...remainingMdlRowProps } = row.mdlRowProps || {};
+
+                        return (
+                            <tr
+                                key={row[rowKeyColumn] || row.key || idx}
+                                className={classNames(row.className, mdlRowPropsClassName)}
+                                {...remainingMdlRowProps}
+                            >
+                                {columnChildren.map((child) => this.renderCell(child.props, row, idx))}
+                            </tr>
+                        );
+                    })}
                 </tbody>
             </table>
         );
