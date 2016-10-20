@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import MDLComponent from './MDLComponent';
 
-export default Component => {
+function patchComponentClass(Component) {
     const render = Component.prototype.render;
 
     Component.prototype.render = function rendr() { // eslint-disable-line no-param-reassign
@@ -10,4 +10,20 @@ export default Component => {
     };
 
     return Component;
-};
+}
+
+function patchSFC(component) {
+    const patchedComponent = props => <MDLComponent>{component(props)}</MDLComponent>;
+
+    Object.defineProperty(patchedComponent, 'name', {
+        value: component.name
+    });
+
+    return patchedComponent;
+}
+
+export default Component => (
+    (Component.prototype && Component.prototype.isReactComponent) ?
+        patchComponentClass(Component) :
+        patchSFC(Component)
+);
