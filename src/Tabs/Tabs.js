@@ -40,4 +40,4 @@ const Tabs = props => {
 
 Tabs.propTypes = propTypes;
 
-export default mdlUpgrade(Tabs);
+export default mdlUpgrade(Tabs, true);

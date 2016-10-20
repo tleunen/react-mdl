@@ -1,19 +1,25 @@
 import * as React from 'react';
 import MDLComponent from './MDLComponent';
 
-function patchComponentClass(Component) {
-    const render = Component.prototype.render;
+function patchComponentClass(Component, recursive) {
+    const oldRender = Component.prototype.render;
 
-    Component.prototype.render = function rendr() { // eslint-disable-line no-param-reassign
-        const renderBound = render.bind(this);
-        return <MDLComponent>{renderBound()}</MDLComponent>;
+    Component.prototype.render = function render() { // eslint-disable-line no-param-reassign
+        return (
+            <MDLComponent recursive={recursive}>
+                {oldRender.call(this)}
+            </MDLComponent>
+        );
     };
 
     return Component;
 }
 
-function patchSFC(component) {
-    const patchedComponent = props => <MDLComponent>{component(props)}</MDLComponent>;
+function patchSFC(component, recursive) {
+    const patchedComponent = props =>
+        <MDLComponent recursive={recursive}>
+            {component(props)}
+        </MDLComponent>;
 
     Object.defineProperty(patchedComponent, 'name', {
         value: component.name
@@ -22,8 +28,8 @@ function patchSFC(component) {
     return patchedComponent;
 }
 
-export default Component => (
+export default (Component, recursive = false) => (
     (Component.prototype && Component.prototype.isReactComponent) ?
-        patchComponentClass(Component) :
-        patchSFC(Component)
+        patchComponentClass(Component, recursive) :
+        patchSFC(Component, recursive)
 );
