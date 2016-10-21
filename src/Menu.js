@@ -38,5 +38,5 @@ class Menu extends React.Component {
 Menu.propTypes = propTypes;
 Menu.defaultProps = defaultProps;
 
-export default mdlUpgrade(Menu);
+export default mdlUpgrade(Menu, true);
 export const MenuItem = basicClassCreator('MenuItem', 'mdl-menu__item', 'li');
