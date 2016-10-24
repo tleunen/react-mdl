@@ -54,6 +54,8 @@ const { Button, Card, CardText } = ReactMDL;
 
 For a listing of available components, as well as specific usage information, check out the [Components][react-mdl-components-url] page on the website.
 
+Some extra components can be found in the [react-mdl-extra](https://github.com/HriBB/react-mdl-extra) package.
+
 ## License
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
