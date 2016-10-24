@@ -45,4 +45,4 @@ class Switch extends React.Component {
 
 Switch.propTypes = propTypes;
 
-export default mdlUpgrade(Switch);
+export default mdlUpgrade(Switch, true);

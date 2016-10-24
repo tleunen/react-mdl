@@ -52,4 +52,4 @@ class Radio extends React.Component {
 
 Radio.propTypes = propTypes;
 
-export default mdlUpgrade(Radio);
+export default mdlUpgrade(Radio, true);

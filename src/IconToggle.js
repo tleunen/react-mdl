@@ -47,4 +47,4 @@ class IconToggle extends React.Component {
 
 IconToggle.propTypes = propTypes;
 
-export default mdlUpgrade(IconToggle);
+export default mdlUpgrade(IconToggle, true);
