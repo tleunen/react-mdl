@@ -32,4 +32,4 @@ class Layout extends React.Component {
 
 Layout.propTypes = propTypes;
 
-export default mdlUpgrade(Layout);
+export default mdlUpgrade(Layout, true);
