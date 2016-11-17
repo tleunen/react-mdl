@@ -7,7 +7,8 @@ const HeaderTabs = props => {
     const { className, ripple, children, ...otherProps } = props;
 
     const classes = classNames({
-        'mdl-js-ripple-effect': ripple
+        'mdl-js-ripple-effect': ripple,
+        'mdl-js-ripple-effect--ignore-events': ripple
     }, className);
 
     return (

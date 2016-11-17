@@ -32,7 +32,7 @@ title: Menu
 {/* Top left */}
 <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-top-left" />
-    <Menu target="demo-menu-top-left" valign="top">
+    <Menu target="demo-menu-top-left" valign="top" ripple>
         <MenuItem>Some Action</MenuItem>
         <MenuItem>Another Action</MenuItem>
         <MenuItem disabled>Disabled Action</MenuItem>
@@ -43,7 +43,7 @@ title: Menu
 {/* Top right */}
 <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-top-right" />
-    <Menu target="demo-menu-top-right" valign="top" align="right">
+    <Menu target="demo-menu-top-right" valign="top" align="right" ripple>
         <MenuItem>Some Action</MenuItem>
         <MenuItem>Another Action</MenuItem>
         <MenuItem disabled>Disabled Action</MenuItem>

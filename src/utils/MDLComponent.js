@@ -1,9 +1,13 @@
-import { Children, Component } from 'react';
+import { Children, Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 
 export default class MDLComponent extends Component {
     componentDidMount() {
-        window.componentHandler.upgradeElement(findDOMNode(this));
+        if (this.props.recursive) {
+            window.componentHandler.upgradeElements(findDOMNode(this));
+        } else {
+            window.componentHandler.upgradeElement(findDOMNode(this));
+        }
     }
 
     componentWillUnmount() {
@@ -13,4 +17,9 @@ export default class MDLComponent extends Component {
     render() {
         return Children.only(this.props.children);
     }
+
 }
+
+MDLComponent.propTypes = {
+    recursive: PropTypes.bool
+};

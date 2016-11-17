@@ -46,4 +46,4 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = propTypes;
 
-export default mdlUpgrade(Checkbox);
+export default mdlUpgrade(Checkbox, true);

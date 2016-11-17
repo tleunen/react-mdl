@@ -38,8 +38,6 @@ class MarkdownWrapper extends React.Component {
         const demoJs = document.querySelectorAll('.demo-js');
         Array.from(demoJs).forEach(code => eval(code.innerHTML));
 
-        window.componentHandler.upgradeElements(findDOMNode(this));
-
         const dialogs = document.querySelectorAll('dialog');
         [].slice.call(dialogs).forEach(dialog => window.dialogPolyfill.registerDialog(dialog));
     }
