@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/tleunen/react-mdl/compare/v1.7.2...v1.8.0) (2016-11-17)
+
+
+### Bug Fixes
+
+* pass the values of `mdlRowProps` on the row (#398) ([a405631](https://github.com/tleunen/react-mdl/commit/a405631))
+
+
+### Features
+
+* **Badge:** Allow other props on Badge (#422) ([af8c4eb](https://github.com/tleunen/react-mdl/commit/af8c4eb))
+
+
+
 <a name="1.7.2"></a>
 ## [1.7.2](https://github.com/tleunen/react-mdl/compare/v1.7.1...v1.7.2) (2016-09-12)
 
