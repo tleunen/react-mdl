@@ -1,5 +1,6 @@
 export { default as mdlUpgrade } from './utils/mdlUpgrade';
 export { default as MDLComponent } from './utils/MDLComponent';
+export { getColorClass, getTextColorClass } from './utils/palette';
 
 // components
 export { default as Badge } from './Badge';
