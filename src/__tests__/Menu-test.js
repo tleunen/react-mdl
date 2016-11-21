@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import { render } from './render';
+import { render, renderDOM } from './render';
 import Menu from '../Menu';
 
 describe('Menu', () => {
@@ -34,5 +34,36 @@ describe('Menu', () => {
 
         expect(output.props.className)
             .toInclude('mdl-js-ripple-effect');
+    });
+
+    it('should unmount cleanly', () => {
+        let removeMenuCallback;
+
+        class Testbed extends React.Component {
+            constructor(props, ctx) {
+                super(props, ctx);
+
+                this.state = {
+                    showMenu: true
+                };
+
+                removeMenuCallback = () => this.setState({ showMenu: false });
+            }
+
+            render() {
+                return (
+                    <div>
+                        {this.state.showMenu ? <Menu className="test-menu" /> : <span />}
+                    </div>
+                );
+            }
+        }
+
+        const node = renderDOM(<Testbed />);
+
+        expect(node.querySelectorAll('.test-menu').length).toBe(1);
+        expect(removeMenuCallback).toBeTruthy();
+        expect(removeMenuCallback).toNotThrow();
+        expect(node.querySelectorAll('.test-menu').length).toBe(0);
     });
 });
