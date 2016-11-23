@@ -21,9 +21,13 @@ function patchSFC(component, recursive) {
             {component(props)}
         </MDLComponent>;
 
-    Object.defineProperty(patchedComponent, 'name', {
-        value: component.name
-    });
+    // Attempt to change the function name for easier debugging, but don't die
+    // if the browser doesn't support it
+    try {
+        Object.defineProperty(patchedComponent, 'name', {
+            value: component.name
+        });
+    } catch (e) {} // eslint-disable-line no-empty
 
     return patchedComponent;
 }
