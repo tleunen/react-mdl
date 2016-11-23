@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/tleunen/react-mdl/compare/v1.8.0...v1.9.0) (2016-11-23)
+
+
+### Bug Fixes
+
+* Don't die if function::name is not configurable. (#437) ([929534f](https://github.com/tleunen/react-mdl/commit/929534f))
+* **Menu:** Restore menu DOM after downgrade in order to allow react to cleanly unmount the component. (#435) ([0069600](https://github.com/tleunen/react-mdl/commit/0069600)), closes [#426](https://github.com/tleunen/react-mdl/issues/426)
+
+
+### Features
+
+* exports from palette (#433) ([5563865](https://github.com/tleunen/react-mdl/commit/5563865)), closes [#399](https://github.com/tleunen/react-mdl/issues/399)
+
+
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/tleunen/react-mdl/compare/v1.7.2...v1.8.0) (2016-11-17)
 
