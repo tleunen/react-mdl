@@ -58,11 +58,12 @@ describe('ListItemContent', () => {
     });
 
     it('should have a "complex" avatar', () => {
-        const iconElement = <img src="something" alt="" />;
+        const iconElement = <img src="something" className="avatar-own-class" alt="" />;
         const output = render(<ListItemContent avatar={iconElement} />);
 
         const [icon] = output.props.children;
         expect(icon.type).toBe('img');
         expect(icon.props.className).toInclude('mdl-list__item-avatar');
+        expect(icon.props.className).toInclude('avatar-own-class');
     });
 });
