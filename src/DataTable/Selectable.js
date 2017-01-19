@@ -82,7 +82,7 @@ export default Component => {
 
         handleChangeRowCheckbox(e) {
             const { rows, data } = this.props;
-            const rowId = JSON.parse(e.target.dataset.reactmdl).id;
+            const rowId = JSON.parse(e.target.dataset ? e.target.dataset.reactmdl: e.target.getAttribute('data-reactmdl')).id;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
 
