@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import getIteratorFn from 'react/lib/getIteratorFn';
 import classNames from 'classnames';
 import TableHeader from './TableHeader';
 
@@ -17,9 +18,15 @@ const propTypes = {
     data: (props, propName, componentName) => (
         props[propName] && new Error(`${componentName}: \`${propName}\` is deprecated, please use \`rows\` instead. \`${propName}\` will be removed in the next major release.`)
     ),
-    rows: PropTypes.arrayOf(
-        PropTypes.object
-    ).isRequired,
+    rows: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.object),
+        (props, propName, componentName) => {
+            if (!getIteratorFn(props[propName])) {
+                return new Error(`Invalid prop \`${propName}\` supplied to ${componentName}. Validation failed.`);
+            }
+            return undefined;
+        },
+    ]).isRequired,
     sortable: PropTypes.bool
 };
 
