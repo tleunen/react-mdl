@@ -37,7 +37,7 @@ export default Component => {
             if (props.selectable) {
                 this.state = {
                     headerSelected: false,
-                    selectedRows: []
+                    selectedRows: props.selectedRows || []
                 };
             }
         }
@@ -47,9 +47,10 @@ export default Component => {
                 const { rows, data, rowKeyColumn } = nextProps;
                 const rrows = rows || data;
 
-                if (!isEqual(this.props.rows || this.props.data, rrows)) {
+                if (!isEqual(this.props.rows || this.props.data, rrows) ||
+                    !isEqual(this.props.selectedRows, nextProps.selectedRows)) {
                     // keep only existing rows
-                    const selectedRows = this.state.selectedRows
+                    const selectedRows = (nextProps.selectedRows || this.state.selectedRows)
                         .filter(k => rrows
                             .map((row, i) => row[rowKeyColumn] || row.key || i)
                             .indexOf(k) > -1
@@ -60,7 +61,7 @@ export default Component => {
                         selectedRows
                     });
 
-                    nextProps.onSelectionChanged(selectedRows);
+                    !nextProps.selectedRows && nextProps.onSelectionChanged(selectedRows);
                 }
             }
         }

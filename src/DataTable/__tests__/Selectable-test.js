@@ -229,5 +229,17 @@ describe('Selectable Table', () => {
             wrapper.setProps({ rows: nRows });
             expect(headerCheckbox).to.be.checked();
         });
+
+        it('should accept selected rows as prop', () => {
+            const wrapper = mount(getSortableTable({
+                rows: oldRows,
+                rowKeyColumn: 'id',
+                selectedRows: [1001, 1002]
+            }));
+
+            expect(getElementByRowId(wrapper, 1000)).to.not.be.checked();
+            expect(getElementByRowId(wrapper, 1001)).to.be.checked();
+            expect(getElementByRowId(wrapper, 1002)).to.be.checked();
+        })
     });
 });
