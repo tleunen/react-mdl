@@ -14,6 +14,8 @@ const defaultProps = {
 
 class Dialog extends React.Component {
     componentDidMount() {
+        const dialog = findDOMNode(this);
+        
         if (!dialog.showModal) {
             if (window.dialogPolyfill) {
                 window.dialogPolyfill.registerDialog(dialog);
