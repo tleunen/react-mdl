@@ -14,6 +14,12 @@ const defaultProps = {
 
 class Dialog extends React.Component {
     componentDidMount() {
+        if (!dialog.showModal) {
+            if (window.dialogPolyfill) {
+                window.dialogPolyfill.registerDialog(dialog);
+            }            
+        }
+
         this.dialogRef.addEventListener('cancel', this.props.onCancel);
         if (this.props.open) {
             findDOMNode(this).showModal();
