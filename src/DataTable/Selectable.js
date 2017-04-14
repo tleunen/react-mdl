@@ -17,7 +17,8 @@ const propTypes = {
     rows: PropTypes.arrayOf(
         PropTypes.object
     ).isRequired,
-    selectable: PropTypes.bool
+    selectable: PropTypes.bool,
+    selectedRows: PropTypes.array
 };
 
 const defaultProps = {
@@ -62,7 +63,9 @@ export default Component => {
                         selectedRows
                     });
 
-                    !nextProps.selectedRows && nextProps.onSelectionChanged(selectedRows);
+                    if (!nextProps.selectedRows) {
+                        nextProps.onSelectionChanged(selectedRows);
+                    }
                 }
             }
         }
@@ -84,7 +87,10 @@ export default Component => {
 
         handleChangeRowCheckbox(e) {
             const { rows, data } = this.props;
-            const rowId = JSON.parse(e.target.dataset ? e.target.dataset.reactmdl: e.target.getAttribute('data-reactmdl')).id;
+            const rowId = JSON.parse(e.target.dataset
+                ? e.target.dataset.reactmdl
+                : e.target.getAttribute('data-reactmdl')
+            ).id;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
 

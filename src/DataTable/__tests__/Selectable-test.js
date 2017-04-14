@@ -240,6 +240,6 @@ describe('Selectable Table', () => {
             expect(getElementByRowId(wrapper, 1000)).to.not.be.checked();
             expect(getElementByRowId(wrapper, 1001)).to.be.checked();
             expect(getElementByRowId(wrapper, 1002)).to.be.checked();
-        })
+        });
     });
 });
