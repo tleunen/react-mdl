@@ -11,9 +11,18 @@ const propTypes = {
     expandable: PropTypes.bool,
     expandableIcon: PropTypes.string,
     floatingLabel: PropTypes.bool,
-    id: PropTypes.string,
+    id: (props, propName, componentName) => {
+        const { id } = props;
+        if (id && typeof id !== 'string') {
+            return new Error(`Invalid prop \`${propName}\` supplied to \`${componentName}\`. \`${propName}\` should be a string. Validation failed.`);
+        }
+        if (!id && typeof props.label !== 'string') {
+            return new Error(`Invalid prop \`${propName}\` supplied to \`${componentName}\`. \`${propName}\` is required when label is an element. Validation failed.`);
+        }
+        return null;
+    },
     inputClassName: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
     pattern: PropTypes.string,

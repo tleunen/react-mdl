@@ -8,7 +8,7 @@ const propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     onChange: PropTypes.func,
     ripple: PropTypes.bool
 };
