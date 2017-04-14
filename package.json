@@ -44,7 +44,8 @@
   "dependencies": {
     "clamp": "^1.0.1",
     "classnames": "^2.2.3",
-    "lodash.isequal": "^4.4.0"
+    "lodash.isequal": "^4.4.0",
+    "prop-types": "^15.5.0"
   },
   "devDependencies": {
     "add-stream": "^1.0.0",
