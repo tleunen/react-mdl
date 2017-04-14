@@ -14,6 +14,7 @@ const propTypes = {
     id: PropTypes.string,
     inputClassName: PropTypes.string,
     label: PropTypes.string.isRequired,
+    maxlength: PropTypes.number,
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
     pattern: PropTypes.string,
