@@ -9,6 +9,7 @@ const propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
+    id: PropTypes.string,
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     ripple: PropTypes.bool
