@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../Icon';
 
@@ -21,7 +22,9 @@ function createIcon(type, icon) {
     if (typeof icon === 'string') {
         return <Icon className={`mdl-list__item-${type}`} name={icon} />;
     }
-    return React.cloneElement(icon, { className: `mdl-list__item-${type}` });
+    const { className } = icon.props;
+    const classes = classNames(`mdl-list__item-${type}`, className);
+    return React.cloneElement(icon, { className: classes });
 }
 
 const ListItemContent = props => {

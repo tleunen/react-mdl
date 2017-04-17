@@ -1,6 +1,12 @@
 # [React-MDL][react-mdl-url]
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status Linux][circleci-image]][circleci-url] [![Coverage Status][coverage-image]][coverage-url] [![React MDL Reactiflux][discord-image]][discord-url]
 
+### Deprecation notice
+
+This library is now deprecated. It's higly recommended to use [Material Design Components](https://github.com/material-components/material-components-web) instead.
+
+## Description
+
 React-MDL is a set of React components build on top of [Material Design Lite][google-mdl-url]<sup>v1.2.1</sup>
 
 ## Requirements
@@ -66,7 +72,7 @@ MIT, see [LICENSE.md](/LICENSE.md) for details.
 [discord-image]: https://img.shields.io/badge/discord-react--mdl%40reactiflux-738bd7.svg
 [discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
 
-[status-image]: https://img.shields.io/badge/status-maintained-brightgreen.svg
+[status-image]: https://img.shields.io/maintenance/yes/2016.svg
 [status-url]: https://github.com/react-mdl/react-mdl
 
 [npm-image]: https://img.shields.io/npm/v/react-mdl.svg

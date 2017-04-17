@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import isEqual from 'lodash.isequal';
 import TableHeader from './TableHeader';
@@ -16,7 +17,8 @@ const propTypes = {
     rows: PropTypes.arrayOf(
         PropTypes.object
     ).isRequired,
-    selectable: PropTypes.bool
+    selectable: PropTypes.bool,
+    selectedRows: PropTypes.array
 };
 
 const defaultProps = {
@@ -37,7 +39,7 @@ export default Component => {
             if (props.selectable) {
                 this.state = {
                     headerSelected: false,
-                    selectedRows: []
+                    selectedRows: props.selectedRows || []
                 };
             }
         }
@@ -47,9 +49,10 @@ export default Component => {
                 const { rows, data, rowKeyColumn } = nextProps;
                 const rrows = rows || data;
 
-                if (!isEqual(this.props.rows || this.props.data, rrows)) {
+                if (!isEqual(this.props.rows || this.props.data, rrows) ||
+                    !isEqual(this.props.selectedRows, nextProps.selectedRows)) {
                     // keep only existing rows
-                    const selectedRows = this.state.selectedRows
+                    const selectedRows = (nextProps.selectedRows || this.state.selectedRows)
                         .filter(k => rrows
                             .map((row, i) => row[rowKeyColumn] || row.key || i)
                             .indexOf(k) > -1
@@ -60,7 +63,9 @@ export default Component => {
                         selectedRows
                     });
 
-                    nextProps.onSelectionChanged(selectedRows);
+                    if (!nextProps.selectedRows) {
+                        nextProps.onSelectionChanged(selectedRows);
+                    }
                 }
             }
         }
@@ -82,7 +87,10 @@ export default Component => {
 
         handleChangeRowCheckbox(e) {
             const { rows, data } = this.props;
-            const rowId = JSON.parse(e.target.dataset.reactmdl).id;
+            const rowId = JSON.parse(e.target.dataset
+                ? e.target.dataset.reactmdl
+                : e.target.getAttribute('data-reactmdl')
+            ).id;
             const rowChecked = e.target.checked;
             const selectedRows = this.state.selectedRows;
 

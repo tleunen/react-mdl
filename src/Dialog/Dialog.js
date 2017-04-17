@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 
@@ -45,7 +46,7 @@ class Dialog extends React.Component {
 
     render() {
         // We cannot set the `open` prop on the Dialog if we manage its state manually with `showModal`,
-        // this the disabled eslint rule
+        // thus the disabled eslint rule
         // eslint-disable-next-line no-unused-vars
         const { className, open, onCancel, children, ...otherProps } = this.props;
 

@@ -7,7 +7,7 @@ title: Layout
 
 ## Demo
 
-### Navigation Layout
+### <a name="navigation-layout">Navigation Layout</a>
 
 ```jsx_demo
 {/* Uses a transparent header that draws on top of the layout's background */}
@@ -15,18 +15,18 @@ title: Layout
     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
         <Header transparent title="Title" style={{color: 'white'}}>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -40,10 +40,10 @@ title: Layout
     <Layout fixedDrawer>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -57,18 +57,18 @@ title: Layout
     <Layout fixedHeader>
         <Header title={<span><span style={{ color: '#ddd' }}>Area / </span><strong>The Title</strong></span>}>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -91,10 +91,10 @@ title: Layout
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content />
@@ -108,18 +108,18 @@ title: Layout
     <Layout>
         <Header title="Title" scroll>
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
@@ -138,26 +138,26 @@ title: Layout
                 <Textfield
                     value=""
                     onChange={() => {}}
-                    label="Search"
+                    label="Search2"
                     expandable
                     expandableIcon="search"
                 />
             </HeaderRow>
             <HeaderRow>
                 <Navigation>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
                 </Navigation>
             </HeaderRow>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
@@ -176,26 +176,26 @@ title: Layout
                 <Textfield
                     value=""
                     onChange={() => {}}
-                    label="Search"
+                    label="Search3"
                     expandable
                     expandableIcon="search"
                 />
             </HeaderRow>
             <HeaderRow>
                 <Navigation>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a href="">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
                 </Navigation>
             </HeaderRow>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
-                <a href="">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </Navigation>
         </Drawer>
         <Content>
@@ -278,7 +278,7 @@ class Demo extends React.Component {
 | HeaderRow | hideSpacer   | Boolean   | Removes the spacer from the header | Optional |
 | Content   | component    | String, Element, Function   | Specify the custom component to use to render the element | Optional. Default 'div' |
 
-### Footer
+### <a name="footer">Footer</a>
 
 ```jsx_demo
 <Footer size="mega">

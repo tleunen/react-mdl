@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/tleunen/react-mdl/compare/v1.9.0...v1.10.0) (2017-04-14)
+
+
+### Bug Fixes
+
+* **DataTable:** Selected rows as props (#477) ([900bdba](https://github.com/tleunen/react-mdl/commit/900bdba)), closes [#404](https://github.com/tleunen/react-mdl/issues/404)
+* IE10 dataTable selectable not able to use HTML5 data attributes (#457) ([e1cc1dc](https://github.com/tleunen/react-mdl/commit/e1cc1dc))
+* Remove warnings by using the prop-types package for PropTypes (#484) ([b9c6c1f](https://github.com/tleunen/react-mdl/commit/b9c6c1f))
+* **ListItemContent:** prevent the item to override the icon css classes (#449) ([4414085](https://github.com/tleunen/react-mdl/commit/4414085)), closes [#445](https://github.com/tleunen/react-mdl/issues/445)
+
+
+### Features
+
+* **Textfield:** enable element in checkbox and textfield (#311) ([e74bbc1](https://github.com/tleunen/react-mdl/commit/e74bbc1))
+
+
+
 <a name="1.9.0"></a>
 # [1.9.0](https://github.com/tleunen/react-mdl/compare/v1.8.0...v1.9.0) (2016-11-23)
 

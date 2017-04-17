@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import mdlUpgrade from './utils/mdlUpgrade';
@@ -7,7 +8,7 @@ const propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     onChange: PropTypes.func,
     ripple: PropTypes.bool
 };
