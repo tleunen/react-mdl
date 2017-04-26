@@ -9,8 +9,8 @@ const propTypes = {
     ]),
     className: PropTypes.string,
     text: PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.number
+        PropTypes.string,
+        PropTypes.number
     ]),
     overlap: PropTypes.bool,
     noBackground: PropTypes.bool
