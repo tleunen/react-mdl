@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.1"></a>
+## [1.10.1](https://github.com/tleunen/react-mdl/compare/v1.10.0...v1.10.1) (2017-04-26)
+
+
+### Bug Fixes
+
+* use `PropTypes` instead of `React.PropTypes` (#485) ([d769b01](https://github.com/tleunen/react-mdl/commit/d769b01))
+
+
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/tleunen/react-mdl/compare/v1.9.0...v1.10.0) (2017-04-14)
 
