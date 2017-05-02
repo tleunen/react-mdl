@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.2"></a>
+## [1.10.2](https://github.com/tleunen/react-mdl/compare/v1.10.1...v1.10.2) (2017-05-02)
+
+
+### Bug Fixes
+
+* **Tabs:** Fix assign to readonly property (#486) ([cf138c5](https://github.com/tleunen/react-mdl/commit/cf138c5)), closes [#486](https://github.com/tleunen/react-mdl/issues/486)
+
+
+
 <a name="1.10.1"></a>
 ## [1.10.1](https://github.com/tleunen/react-mdl/compare/v1.10.0...v1.10.1) (2017-04-26)
 
