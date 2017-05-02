@@ -29,12 +29,12 @@ const Tab = (props) => {
         'is-active': active
     }, className);
 
-    style.cursor = 'pointer';
+    const finalStyle = { ...style, cursor: 'pointer' };
 
     return React.createElement(component || 'a', {
         className: classes,
         onClick: () => onTabClick(tabId),
-        style,
+        style: finalStyle,
         ...otherProps
     }, children);
 };
