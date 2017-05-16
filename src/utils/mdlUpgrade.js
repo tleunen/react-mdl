@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import MDLComponent from './MDLComponent';
 
 function patchComponentClass(Component, recursive) {
