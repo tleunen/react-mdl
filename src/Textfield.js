@@ -26,6 +26,7 @@ const propTypes = {
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
     pattern: PropTypes.string,
+    password: PropTypes.bool,
     required: PropTypes.bool,
     rows: PropTypes.number,
     style: PropTypes.object,
@@ -74,7 +75,7 @@ class Textfield extends React.Component {
         const { className, inputClassName, id,
               error, expandable, expandableIcon,
               floatingLabel, label, maxRows,
-              rows, style, children, ...otherProps } = this.props;
+              rows, style, children, password, ...otherProps } = this.props;
 
         const hasRows = !!rows;
         const customId = id || `textfield-${label.replace(/[^a-z0-9]/gi, '')}`;
@@ -87,6 +88,10 @@ class Textfield extends React.Component {
             ref: (c) => (this.inputRef = c),
             ...otherProps
         };
+
+        if (inputTag === 'input' && password) {
+            inputProps.type = 'password';
+        }
 
         const input = React.createElement(inputTag, inputProps);
         const labelContainer = <label className="mdl-textfield__label" htmlFor={customId}>{label}</label>;
