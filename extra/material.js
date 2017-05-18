@@ -58,8 +58,7 @@ var componentHandler = {
    */
   upgradeElements: function(elements) {},
   /**
-   * Upgrades all registered components found in the current DOM. This is
-   * automatically called on window load.
+   * Upgrades all registered components found in the current DOM.
    */
   upgradeAllRegistered: function() {},
   /**
