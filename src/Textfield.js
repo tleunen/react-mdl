@@ -25,6 +25,7 @@ const propTypes = {
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     maxRows: PropTypes.number,
     onChange: PropTypes.func,
+    onBlur: PropTypes.func,
     pattern: PropTypes.string,
     required: PropTypes.bool,
     rows: PropTypes.number,
