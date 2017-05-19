@@ -7,7 +7,7 @@ title: DataTable
 ### Simple table
 
 ```jsx_demo
-<DataTable
+<Table
     shadow={0}
     rows={[
         {material: 'Acrylic (Transparent)', quantity: 25, price: 2.90},
@@ -18,12 +18,12 @@ title: DataTable
     <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
     <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
     <TableHeader numeric name="price" cellFormatter={(price) => `\$${price.toFixed(2)}`} tooltip="Price pet unit">Price</TableHeader>
-</DataTable>
+</Table>
 ```
 
 ### Selectable Table with checkboxes
 ```jsx_demo
-<DataTable
+<Table
     selectable
     shadow={0}
     rowKeyColumn="id"
@@ -36,7 +36,7 @@ title: DataTable
     <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
     <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
     <TableHeader numeric name="price" cellFormatter={(price) => `\$${price.toFixed(2)}`} tooltip="Price pet unit">Price</TableHeader>
-</DataTable>
+</Table>
 ```
 
 ### Sortable table
