@@ -1,5 +1,5 @@
 # [React-MDL][react-mdl-url]
-[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status Linux][circleci-image]][circleci-url] [![Coverage Status][coverage-image]][coverage-url] [![React MDL Reactiflux][discord-image]][discord-url]
+[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status Linux][circleci-image]][circleci-url] [![Coverage Status][coverage-image]][coverage-url]
 
 ### Deprecation notice
 
@@ -68,9 +68,6 @@ MIT, see [LICENSE.md](/LICENSE.md) for details.
 
 [react-mdl-url]: https://react-mdl.github.io/react-mdl/
 [google-mdl-url]: https://github.com/google/material-design-lite
-
-[discord-image]: https://img.shields.io/badge/discord-react--mdl%40reactiflux-738bd7.svg
-[discord-url]: https://discord.gg/0ZcbPKXt5bWTpxL5
 
 [status-image]: https://img.shields.io/maintenance/yes/2016.svg
 [status-url]: https://github.com/react-mdl/react-mdl
