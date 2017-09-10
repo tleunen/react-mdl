@@ -45,7 +45,7 @@ class Table extends React.Component {
         }, className);
 
         const columnChildren = !!children
-            ? React.Children.toArray(children)
+            ? React.Children.toArray(children).filter(Boolean)
             : columns.map(column =>
                 <TableHeader
                     key={column.name}
