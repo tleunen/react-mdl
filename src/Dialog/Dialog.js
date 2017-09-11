@@ -6,6 +6,7 @@ import classNames from 'classnames';
 const propTypes = {
     className: PropTypes.string,
     onCancel: PropTypes.func,
+    onBackdropClick: PropTypes.func,
     open: PropTypes.bool
 };
 
@@ -15,6 +16,8 @@ const defaultProps = {
 
 class Dialog extends React.Component {
     componentDidMount() {
+        this.backdropClickCallback = this.onDialogClick.bind(this);
+        this.dialogRef.addEventListener('click', this.backdropClickCallback);
         this.dialogRef.addEventListener('cancel', this.props.onCancel);
         if (this.props.open) {
             findDOMNode(this).showModal();
@@ -42,13 +45,31 @@ class Dialog extends React.Component {
 
     componentWillUnmount() {
         this.dialogRef.removeEventListener('cancel', this.props.onCancel);
+        this.dialogRef.removeEventListener('click', this.backdropClickCallback);
+    }
+
+    onDialogClick(event) {
+        // http://stackoverflow.com/a/26984690
+        if (this.props.onBackdropClick && event.target === this.dialogRef) {
+            const rect = this.dialogRef.getBoundingClientRect();
+            const insideDialog = (
+                rect.top <= event.clientY &&
+                event.clientY <= rect.top + rect.height &&
+                rect.left <= event.clientX &&
+                event.clientX <= rect.left + rect.width
+            );
+
+            if (!insideDialog) {
+                this.props.onBackdropClick();
+            }
+        }
     }
 
     render() {
         // We cannot set the `open` prop on the Dialog if we manage its state manually with `showModal`,
         // thus the disabled eslint rule
         // eslint-disable-next-line no-unused-vars
-        const { className, open, onCancel, children, ...otherProps } = this.props;
+        const { className, open, onCancel, children, onBackdropClick, ...otherProps } = this.props;
 
         const classes = classNames('mdl-dialog', className);
 
