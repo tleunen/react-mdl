@@ -128,7 +128,7 @@ export default Component => {
             // remove unwatned props
             // see https://github.com/Hacker0x01/react-datepicker/issues/517#issuecomment-230171426
             delete otherProps.onSelectionChanged;
-            delete otherProps.selectedProps;
+            delete otherProps.selectedRows;
 
             const realRows = selectable
                 ? (rows || data).map((row, idx) => {
