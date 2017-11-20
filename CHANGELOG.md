@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/tleunen/react-mdl/compare/v1.10.3...v1.11.0) (2017-11-20)
+
+
+### Bug Fixes
+
+* react warning: Unknown prop `selectedRows` ([#499](https://github.com/tleunen/react-mdl/issues/499)) ([47a93db](https://github.com/tleunen/react-mdl/commit/47a93db))
+* Table preact compatibility ([#501](https://github.com/tleunen/react-mdl/issues/501)) ([d6ffb3d](https://github.com/tleunen/react-mdl/commit/d6ffb3d))
+
+
+### Features
+
+* Add `onBackdropClick` on `Dialog` ([#475](https://github.com/tleunen/react-mdl/issues/475)) ([ead6920](https://github.com/tleunen/react-mdl/commit/ead6920))
+
+
+
 <a name="1.10.3"></a>
 ## [1.10.3](https://github.com/tleunen/react-mdl/compare/v1.10.2...v1.10.3) (2017-05-16)
 
