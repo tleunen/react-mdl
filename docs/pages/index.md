@@ -9,8 +9,8 @@
 npm install --save react-mdl
 </code></pre>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=tleunen&repo=react-mdl&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=tleunen&repo=react-mdl&type=fork&count=true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=react-mdl&repo=react-mdl&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=react-mdl&repo=react-mdl&type=fork&count=true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
 
 --
 

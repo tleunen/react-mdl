@@ -4,7 +4,7 @@
   "description": "React Components for Material Design Lite",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "repository": "tleunen/react-mdl",
+  "repository": "react-mdl/react-mdl",
   "keywords": [
     "react",
     "react-component",
@@ -112,7 +112,7 @@
     "lint": "eslint src scripts",
     "compile": "rimraf lib && babel src --ignore __tests__ --out-dir lib",
     "serve-docs": "cd docs && ./node_modules/.bin/gatsby develop",
-    "build-docs": "cd docs && ./node_modules/.bin/gatsby build --prefix-links",
+    "build-docs": "cd docs && npm i && ./node_modules/.bin/gatsby build --prefix-links",
     "build-umd": "cross-env NODE_ENV=production webpack src/index.js out/ReactMDL.js --output-library ReactMDL --output-library-target umd",
     "build-min": "cross-env NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
     "release": "./scripts/release.sh",

@@ -14,7 +14,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/tleunen/react-mdl/issues) is
+The [issue tracker](https://github.com/react-mdl/react-mdl/issues) is
 the preferred channel for
 [bug reports](#bugs-reports),
 [feature requests](#feature-requests)

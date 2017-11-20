@@ -75,11 +75,11 @@ MIT, see [LICENSE.md](/LICENSE.md) for details.
 [npm-image]: https://img.shields.io/npm/v/react-mdl.svg
 [npm-url]: https://www.npmjs.com/package/react-mdl
 
-[circleci-image]: https://img.shields.io/circleci/project/tleunen/react-mdl/master.svg
+[circleci-image]: https://img.shields.io/circleci/project/react-mdl/react-mdl/master.svg
 [circleci-url]: https://circleci.com/gh/react-mdl/react-mdl
 
-[coverage-image]: https://codecov.io/gh/tleunen/react-mdl/branch/master/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/tleunen/react-mdl
+[coverage-image]: https://codecov.io/gh/react-mdl/react-mdl/branch/master/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/react-mdl/react-mdl
 
 [react-mdl-components-url]: https://react-mdl.github.io/react-mdl/components/
 [webpack-url]: https://webpack.github.io/

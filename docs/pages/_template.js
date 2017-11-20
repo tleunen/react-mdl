@@ -18,7 +18,7 @@ const Template = (props) => (
             <Navigation>
                 <Link to={prefixLink('/components/')}>Components</Link>
                 <Link to={prefixLink('/templates/')}>Templates</Link>
-                <a href="https://github.com/tleunen/react-mdl">
+                <a href="https://github.com/react-mdl/react-mdl">
                     <Icon name="link" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
                     GitHub
                 </a>
