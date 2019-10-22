@@ -1,10 +1,10 @@
 {
-  "name": "react-mdl",
+  "name": "@dmchurch/react-mdl",
   "version": "1.11.0",
   "description": "React Components for Material Design Lite",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "repository": "react-mdl/react-mdl",
+  "repository": "dmchurch/react-mdl",
   "keywords": [
     "react",
     "react-component",
