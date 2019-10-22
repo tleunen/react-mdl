@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import { render, renderDOM } from '../../__tests__/render';
 import { HeaderTabs } from '../';
 import { Tab, TabBar } from '../../Tabs/';

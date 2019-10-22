@@ -23,7 +23,7 @@ describe('Slider', () => {
         expect(output.props.className).toInclude('my-slider');
     });
 
-    describe('should have the backgrund aligned with the thumb', () => {
+    it('should have the backgrund aligned with the thumb', () => {
         const onChange = expect.createSpy();
         const el = renderDOM(<Slider min={0} max={100} value={25} onChange={onChange} />);
 
@@ -31,13 +31,14 @@ describe('Slider', () => {
         expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toMatch(/^0.75 .*/);
     });
 
-    describe('should update with the new value', () => {
+    it('should update with the new value', () => {
         const onChange = expect.createSpy();
         const el = renderDOM(<Slider min={0} max={100} value={25} onChange={onChange} />);
+        const parent = el.parentNode;
 
-        ReactDOM.render(<Slider min={0} max={100} value={50} onChange={onChange} />, el.parentNode);
+        ReactDOM.render(<Slider min={0} max={100} value={50} onChange={onChange} />, parent);
 
-        expect(el.parentElement.querySelector('.mdl-slider__background-lower').style.flex).toMatch(/^0.5 .*/);
-        expect(el.parentElement.querySelector('.mdl-slider__background-upper').style.flex).toMatch(/^0.5 .*/);
+        expect(parent.querySelector('.mdl-slider__background-lower').style.flex).toMatch(/^0.5 .*/);
+        expect(parent.querySelector('.mdl-slider__background-upper').style.flex).toMatch(/^0.5 .*/);
     });
 });

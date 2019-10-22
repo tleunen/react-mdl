@@ -21,7 +21,7 @@ describe('Badge', () => {
         const child = <Icon name="account_box" />;
         const wrapper = shallow(<Badge text="8">{child}</Badge>);
 
-        expect(wrapper.node.type).to.equal(Icon);
+        expect(wrapper.getElement().type).to.equal(Icon);
         expect(wrapper).to.have.className('mdl-badge');
         expect(wrapper).to.have.prop('data-badge', '8');
     });
