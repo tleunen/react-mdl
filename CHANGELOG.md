@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/dmchurch/react-mdl/compare/v1.11.0...v2.0.0) (2019-10-23)
+
+
+* refactor(react-16)!: Updating deps and tests for React 16 ([53863a4](https://github.com/dmchurch/react-mdl/commit/53863a4))
+
+
+### Features
+
+* **react-16:** Updating to use new React 16 lifecycle methods ([0971b62](https://github.com/dmchurch/react-mdl/commit/0971b62))
+
+
+### BREAKING CHANGES
+
+* Dropping support for React 0.14 and React 15
+
+
+
 <a name="1.11.0"></a>
 # [1.11.0](https://github.com/tleunen/react-mdl/compare/v1.10.3...v1.11.0) (2017-11-20)
 
