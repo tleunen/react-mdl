@@ -89,6 +89,7 @@ devDependencies:
   rimraf: ^2.7.1
   sinon: ^2.1.0
   standard-version: ^4.4.0
+  wallaby-webpack: ^3.9.15
   webpack: ^1.13.2
   webpack-dev-server: ^1.14.1
 peerDependencies:
