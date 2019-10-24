@@ -10,7 +10,7 @@ const propTypes = {
     col: PropTypes.number,
     component: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.element,
+        PropTypes.elementType,
         PropTypes.func
     ]),
     phone: PropTypes.number,

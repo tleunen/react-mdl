@@ -7,7 +7,7 @@ const propTypes = {
     className: PropTypes.string,
     component: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.element,
+        PropTypes.elementType,
         PropTypes.func
     ]),
     cssPrefix: PropTypes.string,
