@@ -37,12 +37,10 @@ export default Component => {
             this.handleChangeRowCheckbox = this.handleChangeRowCheckbox.bind(this);
             this.builRowCheckbox = this.builRowCheckbox.bind(this);
 
-            if (props.selectable) {
-                this.state = {
-                    headerSelected: false,
-                    selectedRows: props.selectedRows || []
-                };
-            }
+            this.state = {
+                headerSelected: false,
+                selectedRows: props.selectedRows || []
+            };
         }
 
         static getDerivedStateFromProps(nextProps, state) {

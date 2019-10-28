@@ -35,6 +35,12 @@ export default Component => {
 
             if (props.sortable) {
                 this.state = initState(props);
+            } else {
+                this.state = {
+                    rows: undefined,
+                    sortHeader: undefined,
+                    isAsc: undefined,
+                };
             }
         }
 
