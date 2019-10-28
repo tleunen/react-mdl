@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/dmchurch/react-mdl/compare/v2.0.0...v2.0.1) (2019-10-28)
+
+
+### Bug Fixes
+
+* react warning for component={ClassComponent} ([5d0be63](https://github.com/dmchurch/react-mdl/commit/5d0be63))
+* react warning on undefined initial state ([c117b8c](https://github.com/dmchurch/react-mdl/commit/c117b8c))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/dmchurch/react-mdl/compare/v1.11.0...v2.0.0) (2019-10-23)
 
