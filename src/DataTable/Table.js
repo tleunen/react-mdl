@@ -25,9 +25,10 @@ const propTypes = {
 class Table extends React.Component {
     renderCell(column, row, idx) {
         const className = !column.numeric ? 'mdl-data-table__cell--non-numeric' : '';
+        const field = column.field || column.name;
         return (
             <td key={column.name} className={className}>
-                {column.cellFormatter ? column.cellFormatter(row[column.name], row, idx) : row[column.name]}
+                {column.cellFormatter ? column.cellFormatter(row[field], row, idx) : row[field]}
             </td>
         );
     }
