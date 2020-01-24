@@ -1,5 +1,5 @@
 name: react-mdl
-version: 2.0.2
+version: 2.1.0
 description: React Components for Material Design Lite
 main: lib/index.js
 jsnext:main: src/index.js
@@ -113,3 +113,7 @@ scripts:
     --output-library ReactMDL --output-library-target umd
   release: ./scripts/release.sh
   release-docs: gh-pages -d docs/public/ -m 'Updates v'$npm_package_version
+standard-version:
+  scripts:
+    prebump: npm package-yaml
+    postbump: npm package-yaml use-json

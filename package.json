@@ -117,5 +117,11 @@
     "build-min": "cross-env NODE_ENV=production webpack -p src/index.js out/ReactMDL.min.js --output-library ReactMDL --output-library-target umd",
     "release": "./scripts/release.sh",
     "release-docs": "gh-pages -d docs/public/ -m 'Updates v'$npm_package_version"
+  },
+  "standard-version": {
+    "scripts": {
+      "prebump": "npm package-yaml",
+      "postbump": "npm package-yaml use-json"
+    }
   }
 }
