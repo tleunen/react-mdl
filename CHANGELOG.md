@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/react-mdl/react-mdl/compare/v2.0.2...v2.1.0) (2020-01-24)
+
+
+### Features
+
+* add `field` on `TableHeader` to separate column name from data field ([83cba81](https://github.com/react-mdl/react-mdl/commit/83cba81))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/react-mdl/react-mdl/compare/v2.0.1...v2.0.2) (2020-01-06)
 
