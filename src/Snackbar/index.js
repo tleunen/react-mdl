@@ -21,6 +21,7 @@ const defaultProps = {
 };
 
 class Snackbar extends React.Component {
+    // eslint-disable-next-line react/sort-comp
     constructor(props) {
         super(props);
         this.clearTimer = this.clearTimer.bind(this);
@@ -31,10 +32,13 @@ class Snackbar extends React.Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            open: nextProps.active
-        });
+    static getDerivedStateFromProps(nextProps, state) {
+        if (state.open !== nextProps.active) {
+            return {
+                open: nextProps.active
+            };
+        }
+        return null;
     }
 
     componentDidUpdate() {

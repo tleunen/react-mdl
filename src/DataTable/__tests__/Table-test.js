@@ -27,6 +27,9 @@ describe('Table', () => {
                 <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
                 <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
                 <TableHeader numeric name="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
+                <TableHeader name="material2" field="material" tooltip="The amazing material name">Material</TableHeader>
+                <TableHeader numeric name="quantity2" field="quantity" tooltip="Number of materials">Quantity</TableHeader>
+                <TableHeader numeric name="price2" field="price" cellFormatter={priceFormatter} tooltip="Price pet unit">Price</TableHeader>
             </Table>
         );
     }
@@ -50,7 +53,7 @@ describe('Table', () => {
     it('should contain the specific columns', () => {
         const wrapper = mount(getDataTable());
 
-        expect(wrapper.find(TableHeader)).to.have.length(3);
+        expect(wrapper.find(TableHeader)).to.have.length(6);
     });
 
     it('should contain the specific data', () => {
@@ -61,11 +64,14 @@ describe('Table', () => {
 
         bodyTr.forEach((row, i) => {
             const tds = row.find('td');
-            expect(tds).to.have.length(3);
+            expect(tds).to.have.length(6);
 
             expect(tds.at(0)).to.have.text(rows[i].material);
             expect(tds.at(1)).to.have.text(rows[i].quantity);
             expect(tds.at(2)).to.have.text(`\$${rows[i].price.toFixed(2)}`);
+            expect(tds.at(3)).to.have.text(rows[i].material);
+            expect(tds.at(4)).to.have.text(rows[i].quantity);
+            expect(tds.at(5)).to.have.text(`\$${rows[i].price.toFixed(2)}`);
         });
     });
 
@@ -79,6 +85,9 @@ describe('Table', () => {
             expect(tds.at(0)).to.have.className('mdl-data-table__cell--non-numeric');
             expect(tds.at(1)).to.not.have.className('mdl-data-table__cell--non-numeric');
             expect(tds.at(2)).to.not.have.className('mdl-data-table__cell--non-numeric');
+            expect(tds.at(3)).to.have.className('mdl-data-table__cell--non-numeric');
+            expect(tds.at(4)).to.not.have.className('mdl-data-table__cell--non-numeric');
+            expect(tds.at(5)).to.not.have.className('mdl-data-table__cell--non-numeric');
         });
     });
 

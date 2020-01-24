@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/react-mdl/react-mdl/compare/v2.0.2...v2.1.0) (2020-01-24)
+
+
+### Features
+
+* add `field` on `TableHeader` to separate column name from data field ([83cba81](https://github.com/react-mdl/react-mdl/commit/83cba81))
+
+
+
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/react-mdl/react-mdl/compare/v2.0.1...v2.0.2) (2020-01-06)
+
+
+### Bug Fixes
+
+* edge-case exception thrown when DOM element is removed before componentWillUnmount ([6c99bdf](https://github.com/react-mdl/react-mdl/commit/6c99bdf))
+
+
+
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/dmchurch/react-mdl/compare/v2.0.0...v2.0.1) (2019-10-28)
+
+
+### Bug Fixes
+
+* react warning for component={ClassComponent} ([5d0be63](https://github.com/dmchurch/react-mdl/commit/5d0be63))
+* react warning on undefined initial state ([c117b8c](https://github.com/dmchurch/react-mdl/commit/c117b8c))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/dmchurch/react-mdl/compare/v1.11.0...v2.0.0) (2019-10-23)
+
+
+* refactor(react-16)!: Updating deps and tests for React 16 ([53863a4](https://github.com/dmchurch/react-mdl/commit/53863a4))
+
+
+### Features
+
+* **react-16:** Updating to use new React 16 lifecycle methods ([0971b62](https://github.com/dmchurch/react-mdl/commit/0971b62))
+
+
+### BREAKING CHANGES
+
+* Dropping support for React 0.14 and React 15
+
+
+
 <a name="1.11.0"></a>
 # [1.11.0](https://github.com/tleunen/react-mdl/compare/v1.10.3...v1.11.0) (2017-11-20)
 

@@ -9,7 +9,7 @@ const propTypes = {
     colored: PropTypes.bool,
     component: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.element,
+        PropTypes.elementType,
         PropTypes.func
     ]),
     href: PropTypes.string,

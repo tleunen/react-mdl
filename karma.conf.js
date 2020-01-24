@@ -30,7 +30,7 @@ module.exports = function karma(config) {
 
         preprocessors: {
             // 'src/**/*-test.js': ['webpack']
-            'tests.webpack.js': ['webpack']
+            'tests.webpack.js': ['webpack', 'sourcemap']
         },
 
         reporters: ['mocha', 'coverage'],

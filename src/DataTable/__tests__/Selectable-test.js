@@ -34,7 +34,7 @@ describe('Selectable Table', () => {
     }
 
     function getElementByRowId(wrapper, id) {
-        const elts = wrapper.find('[data-reactmdl]');
+        const elts = wrapper.find('[data-reactmdl]').hostNodes();
         for (let i = 0; i < elts.length; i++) {
             if (elts.at(i).prop('data-reactmdl') === JSON.stringify({ id })) {
                 return elts.at(i);

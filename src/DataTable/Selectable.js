@@ -29,6 +29,7 @@ const defaultProps = {
 
 export default Component => {
     class Selectable extends React.Component {
+        // eslint-disable-next-line react/sort-comp
         constructor(props) {
             super(props);
 
@@ -36,38 +37,37 @@ export default Component => {
             this.handleChangeRowCheckbox = this.handleChangeRowCheckbox.bind(this);
             this.builRowCheckbox = this.builRowCheckbox.bind(this);
 
-            if (props.selectable) {
-                this.state = {
-                    headerSelected: false,
-                    selectedRows: props.selectedRows || []
-                };
-            }
+            this.state = {
+                headerSelected: false,
+                selectedRows: props.selectedRows || []
+            };
         }
 
-        componentWillReceiveProps(nextProps) {
+        static getDerivedStateFromProps(nextProps, state) {
+            const { rows, data, rowKeyColumn } = nextProps;
+            const rrows = rows || data;
             if (nextProps.selectable) {
-                const { rows, data, rowKeyColumn } = nextProps;
-                const rrows = rows || data;
-
-                if (!isEqual(this.props.rows || this.props.data, rrows) ||
-                    !isEqual(this.props.selectedRows, nextProps.selectedRows)) {
-                    // keep only existing rows
-                    const selectedRows = (nextProps.selectedRows || this.state.selectedRows)
+                const selectedRows = (nextProps.selectedRows || state.selectedRows)
                         .filter(k => rrows
                             .map((row, i) => row[rowKeyColumn] || row.key || i)
                             .indexOf(k) > -1
                         );
-
-                    this.setState({
-                        headerSelected: selectedRows.length === rrows.length,
-                        selectedRows
-                    });
-
-                    if (!nextProps.selectedRows) {
+                const headerSelected = selectedRows.length === rrows.length;
+                const update = { };
+                if (headerSelected !== state.headerSelected) {
+                    update.headerSelected = headerSelected;
+                }
+                if (!nextProps.selectedRows) {
+                    if (!isEqual(state.selectedRows, selectedRows)) {
+                        update.selectedRows = selectedRows;
                         nextProps.onSelectionChanged(selectedRows);
                     }
                 }
+                if (Object.keys(update).length) {
+                    return update;
+                }
             }
+            return null;
         }
 
         handleChangeHeaderCheckbox(e) {
@@ -92,7 +92,7 @@ export default Component => {
                 : e.target.getAttribute('data-reactmdl')
             ).id;
             const rowChecked = e.target.checked;
-            const selectedRows = this.state.selectedRows;
+            const selectedRows = this.props.selectedRows || this.state.selectedRows;
 
             if (rowChecked) {
                 selectedRows.push(rowId);
@@ -111,7 +111,7 @@ export default Component => {
 
         builRowCheckbox(content, row, idx) {
             const rowKey = row[this.props.rowKeyColumn] || row.key || idx;
-            const isSelected = this.state.selectedRows.indexOf(rowKey) > -1;
+            const isSelected = (this.props.selectedRows || this.state.selectedRows).indexOf(rowKey) > -1;
             return (
                 <Checkbox
                     className="mdl-data-table__select"
@@ -136,7 +136,7 @@ export default Component => {
                     return {
                         ...row,
                         className: classNames({
-                            'is-selected': this.state.selectedRows.indexOf(rowKey) > -1
+                            'is-selected': (this.props.selectedRows || this.state.selectedRows).indexOf(rowKey) > -1
                         }, row.className)
                     };
                 })

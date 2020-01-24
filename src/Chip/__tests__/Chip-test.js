@@ -48,7 +48,7 @@ describe('Chip', () => {
                 <ChipContact>A</ChipContact>
                 Contact Chip
             </Chip>
-        );
+        ).childAt(0);
 
         expect(wrapper.children()).to.have.length(2);
         expect(wrapper.childAt(0).type()).to.equal(ChipContact);
@@ -61,7 +61,7 @@ describe('Chip', () => {
             <Chip>
                 Value {val}
             </Chip>
-        );
+        ).childAt(0);
 
         expect(wrapper.children()).to.have.length(1);
         expect(wrapper).to.have.text('Value 15');

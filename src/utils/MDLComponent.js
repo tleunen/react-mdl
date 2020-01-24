@@ -12,7 +12,12 @@ export default class MDLComponent extends Component {
     }
 
     componentWillUnmount() {
-        window.componentHandler.downgradeElements(findDOMNode(this));
+        const node = findDOMNode(this);
+        if (node) {
+            // Not sure what causes this but sometimes there is no node here, which
+            // causes componentHandler to throw up
+            window.componentHandler.downgradeElements(node);
+        }
     }
 
     render() {

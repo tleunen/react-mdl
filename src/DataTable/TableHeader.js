@@ -7,6 +7,7 @@ const propTypes = {
     cellFormatter: PropTypes.func, // Used by the Table component to format the cell content for this "column"
     className: PropTypes.string,
     name: PropTypes.string.isRequired,
+    field: PropTypes.string,
     numeric: PropTypes.bool,
     onClick: PropTypes.func,
     nosort: PropTypes.bool,
@@ -22,6 +23,7 @@ const TableHeader = props => {
     // see https://github.com/Hacker0x01/react-datepicker/issues/517#issuecomment-230171426
     delete otherProps.cellFormatter;
     delete otherProps.sortFn;
+    delete otherProps.field;
 
     const classes = classNames({
         'mdl-data-table__cell--non-numeric': !numeric

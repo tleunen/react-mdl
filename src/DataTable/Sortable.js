@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import isEqual from 'lodash.isequal';
 import TableHeader from './TableHeader';
 
 function initState(props) {
@@ -26,6 +27,7 @@ const propTypes = {
 
 export default Component => {
     class Sortable extends React.Component {
+        // eslint-disable-next-line react/sort-comp
         constructor(props) {
             super(props);
 
@@ -33,20 +35,28 @@ export default Component => {
 
             if (props.sortable) {
                 this.state = initState(props);
+            } else {
+                this.state = {
+                    rows: undefined,
+                    sortHeader: undefined,
+                    isAsc: undefined,
+                };
             }
         }
 
-        componentWillReceiveProps(nextProps) {
+        // eslint-disable-next-line react/sort-comp
+        static getDerivedStateFromProps(nextProps, state) {
             if (nextProps.sortable) {
                 const realRows = nextProps.rows || nextProps.data;
-                const rows = this.state.sortHeader
-                    ? this.getSortedRowsForColumn(this.state.isAsc, this.state.sortHeader, realRows)
+                const rows = state.sortHeader
+                    ? Sortable.getSortedRowsForColumn(nextProps, state.isAsc, state.sortHeader, realRows)
                     : realRows;
 
-                this.setState({
-                    rows
-                });
+                if (!isEqual(rows, state.rows)) {
+                    return { rows };
+                }
             }
+            return null;
         }
 
         getColumnClass(column) {
@@ -58,18 +68,18 @@ export default Component => {
             });
         }
 
-        getDefaultSortFn(a, b, isAsc) {
+        static getDefaultSortFn(a, b, isAsc) {
             return isAsc
                 ? a.localeCompare(b)
                 : b.localeCompare(a);
         }
 
-        getSortedRowsForColumn(isAsc, columnName, rows) {
-            const columns = !!this.props.children
-                ? React.Children.map(this.props.children, child => child.props)
-                : this.props.columns;
+        static getSortedRowsForColumn(props, isAsc, columnName, rows) {
+            const columns = !!props.children
+                ? React.Children.map(props.children, child => child.props)
+                : props.columns;
 
-            let sortFn = this.getDefaultSortFn;
+            let sortFn = Sortable.getDefaultSortFn;
             for (let i = 0; i < columns.length; i++) {
                 if (columns[i].name === columnName && columns[i].sortFn) {
                     sortFn = columns[i].sortFn;
@@ -88,7 +98,7 @@ export default Component => {
 
         handleClickColumn(e, columnName) {
             const isAsc = this.state.sortHeader === columnName ? !this.state.isAsc : true;
-            const rows = this.getSortedRowsForColumn(isAsc, columnName, this.state.rows);
+            const rows = Sortable.getSortedRowsForColumn(this.props, isAsc, columnName, this.state.rows);
             this.setState({
                 sortHeader: columnName,
                 isAsc,

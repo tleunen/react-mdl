@@ -1,4 +1,5 @@
-import { createRenderer, renderIntoDocument } from 'react-addons-test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
+import { renderIntoDocument } from 'react-dom/test-utils';
 import { findDOMNode } from 'react-dom';
 import MDLComponent from '../utils/MDLComponent';
 
