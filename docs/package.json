@@ -12,7 +12,7 @@
     "front-matter": "2.1.0",
     "gatsby": "0.11.6",
     "markdown-it": "7.0.0",
-    "prismjs": "1.5.1",
+    "prismjs": "1.23.0",
     "react-transform-catch-errors": "1.0.2",
     "react-transform-hmr": "1.0.4"
   }
